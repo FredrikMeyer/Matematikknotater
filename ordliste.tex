@@ -32,6 +32,18 @@
 A variety $X$ is Fano if the \hyperref[anticanonical]{anticanonical sheaf} $\omega_X^{-1}$ is \hyperref[amplelinebundle]{ample}. 
 
 \subsection{Results and theorems}
+\subsubsection{Bertini's Theorem}
+\label{bertini}
+Let $X$ be a nonsingular closed subvariety of $\PP_k^n$, where $k=\bar k$. Then the set of of hyperplanes $H \subseteq \PP_k^n$ such that $H \cap X$ is regular at every point) and such that $H\not  \subseteq X$ is a dense open subset of the complete linear system $|H|$. See \cite[Thm II.8.18]{hartshorne}.
+
+\subsubsection{Euler sequence}
+\label{eulersequence}
+If $A$ is a ring and $\PP_A^n$ is projective $n$-space over $A$, then there is an exact sequence of sheaves on $X$:
+\[
+0 \to \Omega_{\PP^n_A/A} \to \OO_{\PP^n_A}(-1)^{n+1} \to \OO_{\PP_A^n} \to 0.
+\]
+See \cite[Thm II.8.13]{hartshorne}.
+
 \subsubsection{Kodaira vanishing}
 \label{kodairavanishing}
 If $k$ is a field of characteristic zero, $X$ is a smooth and projective $k$-scheme of dimension $d$, and $\LL$ is an \hyperref[amplelinebundle]{ample} invertible sheaf on $X$, then ${H^q(X,{\LL \otimes_{\OO_X} \Omega^p_{X/k}})=0}$ for $p+q > d$. In addition, $H^q(X,\LL^{-1} \otimes_{\OO_X} \Omega_{X/k}^p)=0$ for $p+q < d$. 
@@ -43,11 +55,12 @@ The \textbf{Riemann-Roch theorem} relates the number of sections of a line bundl
 \[
 h^0(C,\LL) - h^0(C, \LL^{-1} \otimes_{\OO_{C}} \omega_C) = \deg(\LL) +1 -g.
 \]
+This is \cite[Theorem IV.1.3]{hartshorne}.
 
 \subsubsection{Serre vanishing}
 \label{serrevanishing}
 
-One form of Serre vanishing states that if $X$ is a proper scheme over a noetherian ring $A$, and $\LL$ is an \hyperref[amplelinebundle]{ample} sheaf, then for any coherent sheaf $\FF$ on $X$, there exists an integer $n_0$ such that for each $i > 0$ and $n \geq n_0$ the group $H^i(X, \FF \otimes_{\OO_X} \LL^n)=0$ vanishes. 
+One form of Serre vanishing states that if $X$ is a proper scheme over a noetherian ring $A$, and $\LL$ is an \hyperref[amplelinebundle]{ample} sheaf, then for any coherent sheaf $\FF$ on $X$, there exists an integer $n_0$ such that for each $i > 0$ and $n \geq n_0$ the group $H^i(X, \FF \otimes_{\OO_X} \LL^n)=0$ vanishes. See \cite[Proposition III.5.3]{hartshorne}.
 
 \subsection{Sheaves and bundles}
 \subsubsection{Ample line bundle}
@@ -56,7 +69,7 @@ A line bundle $\LL$ is \textbf{ample} if for any coherent sheaf $\FF$ on $X$, th
 
 \subsubsection{Very ample line bundle}
 \label{veryample}
-A line bundle $\LL$ is \textbf{very ample} if there is an embedding $i:X \hookrightarrow \PP_S^n$ such that the pullback of $\OO_{\PP_S^n}(1)$ is isomorphic to $\LL$. In other words, there should be an isomorphism $i^\ast \OO_{\PP^n_S} \simeq \LL$.
+A line bundle $\LL$ is \textbf{very ample} if there is an embedding $i:X \hookrightarrow \PP_S^n$ such that the pullback of $\OO_{\PP_S^n}(1)$ is isomorphic to $\LL$. In other words, there should be an isomorphism $i^\ast \OO_{\PP^n_S}(1) \simeq \LL$.
 
 
 \subsubsection{Anticanonical sheaf}
@@ -127,5 +140,8 @@ Let $R$ be a ring and $M,N$ be $R$-modules. Then $\Ext_R^i(M,N)$ is the right-de
 \subsubsection{Tor}
 \label{tor}
 Let $R$ be a ring and $M,N$ be $R$-modules. Then $\Tor_R^i(M,N)$ is the right-derived functors of the $- \otimes_R N$-functor. In particular $\Tor_R^i(M,N)$ can be computed by taking a projective resolution of $M$, tensoring with $N$, and then taking homology.
+
+\bibliographystyle{plain}
+\bibliography{bibliografi}
 
 \end{document}
