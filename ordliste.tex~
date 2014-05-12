@@ -17,22 +17,21 @@
 \usepackage{hyperref}
 \usepackage{mystyle} % stilfilen      
 
-\title{Algebraic Geometry Buzzlist}
+\title{Dictionary}
 \author{Fredrik Meyer}
 \date{}
 \begin{document}
 \maketitle
 
 \section{Algebraic Geometry}
+
+\subsection{General properties}
+\subsubsection{Fano variety}
+\label{fano}
+
+A variety $X$ is Fano if the \hyperref[anticanonical]{anticanonical sheaf} $\omega_X^{-1}$ is \hyperref[amplelinebundle]{ample}. 
+
 \subsection{Results and theorems}
-\subsubsection{Adjunction formula}
-\label{adjunction}
-
-Let $X$ be a smooth algebraic variety $Y$ a smooth subvariety. Let $i:Y \hookrightarrow X$ be the inclusion map, and let $\mathcal I$ be the corresponding ideal sheaf. Then $\omega_Y = i^\ast \omega_X \otimes_{\OO_X} \det(\mathcal I/\mathcal I^2)^\vee$, where $\omega_Y$ is the \hyperref[canonicaldivisor]{canonical sheaf} of $Y$.
-
-In terms of canonical classes, the formula says that $K_D = \restr{(K_X + D)}{D}$. 
-
-
 \subsubsection{Bertini's Theorem}
 \label{bertini}
 Let $X$ be a nonsingular closed subvariety of $\PP_k^n$, where $k=\bar k$. Then the set of of hyperplanes $H \subseteq \PP_k^n$ such that $H \cap X$ is regular at every point) and such that $H\not  \subseteq X$ is a dense open subset of the complete linear system $|H|$. See \cite[Thm II.8.18]{hartshorne}.
@@ -48,10 +47,6 @@ See \cite[Thm II.8.13]{hartshorne}.
 \subsubsection{Kodaira vanishing}
 \label{kodairavanishing}
 If $k$ is a field of characteristic zero, $X$ is a smooth and projective $k$-scheme of dimension $d$, and $\LL$ is an \hyperref[amplelinebundle]{ample} invertible sheaf on $X$, then ${H^q(X,{\LL \otimes_{\OO_X} \Omega^p_{X/k}})=0}$ for $p+q > d$. In addition, $H^q(X,\LL^{-1} \otimes_{\OO_X} \Omega_{X/k}^p)=0$ for $p+q < d$. 
-
-\subsubsection{Lefschetz hyperplane theorem}
-\label{lefschetz} 
-Let $X$ be an $n$-dimensional complex projective algebraic variety in $\PP_\C^n$ and let $Y$ be a hyperplane section of $X$ such that $U=X \bs Y$ is smooth. Then the natural map $H^k(X,\Z) \to H^k(Y,\Z)$ in singular cohomology is an isomorphism for $k<n-1$ and injective for $k=n-1$.
 
 \subsubsection{Riemann-Roch for curves}
 \label{riemannroch}
@@ -95,22 +90,6 @@ If $X$ is a smooth algebraic variety of dimension $n$, then the canonical sheaf 
 \subsection{Toric geometry}
 \subsubsection{Polarized toric variety}
 A toric variety equipped with an \hyperref[amplelinebundle]{ample} $T$-invariant divisor.
-
-\subsection{Types of varieties}
-\subsubsection{Calabi-Yau variety}
-
-In algebraic geometry, a \textbf{Calabi-Yau} variety is a smooth, proper variety $X$ over a field $k$ such that the \hyperref[canonicaldivisor]{canonical sheaf} is trivial, that is, $\omega_X \simeq \OO_X$, and such that $H^j(X,\OO_X)=0$ for $1 \leq j \leq n-1$. 
-
-\subsubsection{Fano variety}
-\label{fano}
-
-A variety $X$ is \textbf{Fano} if the \hyperref[anticanonical]{anticanonical sheaf} $\omega_X^{-1}$ is \hyperref[amplelinebundle]{ample}. 
-
-\subsubsection{K3 surface}
-\label{k3}
-
-A \textbf{K3 surface} is a complex algebraic surface $X$ such that the \hyperref[canonicaldivisor]{canonical sheaf} is trivial, $\omega_X \simeq \OO_X$, and such that $H^1(X,\OO_X)=0$. These conditions completely determine the Hodge numbers of $X$.
-
 
 \section{Commutative algebra}
 \subsection{Modules}
