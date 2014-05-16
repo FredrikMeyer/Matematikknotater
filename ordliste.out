@@ -42,11 +42,12 @@
 \BOOKMARK [2][-]{subsection.3.1}{Cones}{section.3}% 42
 \BOOKMARK [3][-]{subsubsection.3.1.1}{Gorenstein cone}{subsection.3.1}% 43
 \BOOKMARK [3][-]{subsubsection.3.1.2}{Simplicial cone}{subsection.3.1}% 44
-\BOOKMARK [2][-]{subsection.3.2}{Polyhedra}{section.3}% 45
-\BOOKMARK [3][-]{subsubsection.3.2.1}{Dual \(polar\) polyhedron}{subsection.3.2}% 46
+\BOOKMARK [2][-]{subsection.3.2}{Polytopes}{section.3}% 45
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Dual \(polar\) polytope}{subsection.3.2}% 46
 \BOOKMARK [3][-]{subsubsection.3.2.2}{Gorenstein polytope of index r}{subsection.3.2}% 47
-\BOOKMARK [3][-]{subsubsection.3.2.3}{Reflexive polytope}{subsection.3.2}% 48
-\BOOKMARK [1][-]{section.4}{Homological algebra}{}% 49
-\BOOKMARK [2][-]{subsection.4.1}{Derived functors}{section.4}% 50
-\BOOKMARK [3][-]{subsubsection.4.1.1}{Ext}{subsection.4.1}% 51
-\BOOKMARK [3][-]{subsubsection.4.1.2}{Tor}{subsection.4.1}% 52
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Nef partition}{subsection.3.2}% 48
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Reflexive polytope}{subsection.3.2}% 49
+\BOOKMARK [1][-]{section.4}{Homological algebra}{}% 50
+\BOOKMARK [2][-]{subsection.4.1}{Derived functors}{section.4}% 51
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Ext}{subsection.4.1}% 52
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Tor}{subsection.4.1}% 53

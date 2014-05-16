@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.17)  16 MAY 2014 15:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.17)  16 MAY 2014 15:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -928,20 +928,20 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 ) (./ordliste.aux)
 \openout1 = `ordliste.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
  ABD: EveryShipout initializing macros
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -971,24 +971,24 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 23.
+LaTeX Font Info:    Try loading font information for U+msa on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 23.
+LaTeX Font Info:    Try loading font information for U+msb on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 23.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Package xypdf Info: Line width: 0.43799pt on input line 23.
+Package xypdf Info: Line width: 0.43799pt on input line 28.
 \AtBeginShipoutBox=\box45
-Package hyperref Info: Link coloring ON on input line 23.
+Package hyperref Info: Link coloring ON on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -998,9 +998,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count154
 )
-LaTeX Info: Redefining \ref on input line 23.
-LaTeX Info: Redefining \pageref on input line 23.
-LaTeX Info: Redefining \nameref on input line 23.
+LaTeX Info: Redefining \ref on input line 28.
+LaTeX Info: Redefining \pageref on input line 28.
+LaTeX Info: Redefining \nameref on input line 28.
 
 (./ordliste.out) (./ordliste.out)
 \@outlinefile=\write5
@@ -1009,7 +1009,7 @@ LaTeX Info: Redefining \nameref on input line 23.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (29.00937pt too wide) in paragraph at lines 77--78
+Overfull \hbox (29.00937pt too wide) in paragraph at lines 82--83
 \T1/cmr/m/n/10.95 di-men-sion $\OML/cmm/m/it/10.95 d$\T1/cmr/m/n/10.95 , and $\
 OMS/cmsy/m/n/10.95 L$ \T1/cmr/m/n/10.95 is an [][]am-ple[][] in-vert-ible sheaf
  on $\OML/cmm/m/it/10.95 X$\T1/cmr/m/n/10.95 , then $[]$
@@ -1017,45 +1017,38 @@ OMS/cmsy/m/n/10.95 L$ \T1/cmr/m/n/10.95 is an [][]am-ple[][] in-vert-ible sheaf
 
 [2]
 LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
-(Font)              scaled to size 15.76802pt on input line 114.
+(Font)              scaled to size 15.76802pt on input line 119.
 LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
-(Font)              scaled to size 17.28003pt on input line 114.
+(Font)              scaled to size 17.28003pt on input line 119.
  [3] [4]
-LaTeX Font Info:    Try loading font information for U+euf on input line 176.
+LaTeX Font Info:    Try loading font information for U+euf on input line 181.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [5]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 203.
+(hyperref)                removing `math shift' on input line 208.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 203.
+(hyperref)                removing `math shift' on input line 208.
 
 [6] (./ordliste.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 229.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
  [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 229.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
  (./ordliste.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 229.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 229.
-
-
-Package rerunfilecheck Warning: File `ordliste.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `ordliste.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  EA07C8C1D2D12542D53985679F90FAF7;3750.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 229.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 238.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
+Package rerunfilecheck Info: File `ordliste.out' has not changed.
+(rerunfilecheck)             Checksum: 935F02CE5C793011D33A1A8940B955FF;3821.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 238.
  ) 
 Here is how much of TeX's memory you used:
- 18585 strings out of 493304
- 304909 string characters out of 6139871
- 429351 words of memory out of 5000000
- 21545 multiletter control sequences out of 15000+600000
+ 18641 strings out of 493304
+ 305967 string characters out of 6139871
+ 429399 words of memory out of 5000000
+ 21600 multiletter control sequences out of 15000+600000
  22007 words of font info for 68 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,12n,55p,3257b,347s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1077,10 +1070,10 @@ ublic/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1
 texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/pu
 blic/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti10
 95.pfb>
-Output written on ordliste.pdf (7 pages, 250398 bytes).
+Output written on ordliste.pdf (7 pages, 254793 bytes).
 PDF statistics:
- 216 PDF objects out of 1000 (max. 8388607)
- 186 compressed objects within 2 object streams
- 64 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 380 PDF objects out of 1000 (max. 8388607)
+ 348 compressed objects within 4 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 437 words of extra memory for PDF output out of 10000 (max. 10000000)
 
