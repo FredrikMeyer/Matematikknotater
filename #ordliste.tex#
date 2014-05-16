@@ -16,7 +16,7 @@
 \usepackage{wrapfig} % for float right
 \usepackage[colorlinks=true]{hyperref}
 \usepackage{mystyle} % stilfilen      
- 
+
 \title{Algebraic Geometry Buzzlist}
 \author{Fredrik Meyer}
 \date{}
@@ -202,11 +202,13 @@ If $\Delta$ is a polyhedron, its dual $\Delta^\circ$ is defined by
 
 \subsubsection{Reflexive polytope}
 
-A polytope $\Delta$ is reflexive if the following two conditions hold:
+A polytope $\Delta$ is \textbf{reflexive} if the following two conditions hold:
 \begin{enumerate}
 \item All facets $\Gamma$ of $\Delta$ are supported by affine hyperplanes of the form $\{ m \in M_{\R} \mid \langle m,v_\Gamma \rangle \}$ for some $v_\Gamma \in N$.
 \item The only interior point of $\Delta$ is $0$, that is: $\mathrm{Int}(\Delta) \cap M = \{0\}$.
 \end{enumerate}
+
+We say that 
 
 \section{Homological algebra}
 \subsection{Derived functors}
