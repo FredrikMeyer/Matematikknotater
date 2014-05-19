@@ -1,5 +1,18 @@
 \begin{thebibliography}{1}
 
+\bibitem{mirrorsymalggeo}
+David~A. Cox and Sheldon Katz.
+\newblock {\em Mirror symmetry and algebraic geometry}, volume~68 of {\em
+  Mathematical Surveys and Monographs}.
+\newblock American Mathematical Society, Providence, RI, 1999.
+
+\bibitem{eisenbud}
+David Eisenbud.
+\newblock {\em Commutative algebra}, volume 150 of {\em Graduate Texts in
+  Mathematics}.
+\newblock Springer-Verlag, New York, 1995.
+\newblock With a view toward algebraic geometry.
+
 \bibitem{hartshorne}
 Robin Hartshorne.
 \newblock {\em Algebraic geometry}.
