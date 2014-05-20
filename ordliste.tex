@@ -36,7 +36,7 @@ Let $X$ be an  integral, \hyperref[separated]{separated} scheme over a field $k$
 
 \subsubsection{Crepant resolution}
 \label{crepantresolution}
-A \textbf{crepant resolution} is a resolution of singularities $f:X \to Y$ that does not change the \hyperref[canonicaldivisor]{canonical bundle}, i.e. such that $\omega_X \simeq f^\ast (\omega_Y)$.
+A \textbf{crepant resolution} is a resolution of singularities $f:X \to Y$ that does not change the \hyperref[canonicalsheaf]{canonical bundle}, i.e. such that $\omega_X \simeq f^\ast (\omega_Y)$.
 
 \subsubsection{Hodge numbers}
 \label{hodgenumbers}
@@ -65,9 +65,9 @@ Let $f:X \to Y$ be a morphism of schemes. Let $\Delta:X \to X \X_Y X$ be the dia
 \subsubsection{Adjunction formula}
 \label{adjunction}
 
-Let $X$ be a smooth algebraic variety $Y$ a smooth subvariety. Let $i:Y \hookrightarrow X$ be the inclusion map, and let $\mathcal I$ be the corresponding ideal sheaf. Then $\omega_Y = i^\ast \omega_X \otimes_{\OO_X} \det(\mathcal I/\mathcal I^2)^\vee$, where $\omega_Y$ is the \hyperref[canonicaldivisor]{canonical sheaf} of $Y$.
+Let $X$ be a smooth algebraic variety $Y$ a smooth subvariety. Let $i:Y \hookrightarrow X$ be the inclusion map, and let $\mathcal I$ be the corresponding ideal sheaf. Then $\omega_Y = i^\ast \omega_X \otimes_{\OO_X} \det(\mathcal I/\mathcal I^2)^\vee$, where $\omega_Y$ is the \hyperref[canonicalsheaf]{canonical sheaf} of $Y$.
 
-In terms of canonical classes, the formula says that $K_D = \restr{(K_X + D)}{D}$. 
+In terms of \hyperref[canonicaldivisor]{canonical classes}, the formula says that $K_D = \restr{(K_X + D)}{D}$. 
 
 
 \subsubsection{Bertini's Theorem}
@@ -123,10 +123,10 @@ A locally free sheaf of rank 1 is called \textbf{invertible}. If $X$ is \hyperre
 
 The \textbf{anticanonical sheaf} $\omega_X^{-1}$ is the inverse of the \hyperref[canonicalsheaf]{canonical sheaf} $\omega_X$, that is $\omega_X^{-1} = \Shom_{\OO_X}(\omega_X,\OO_X)$.
 
-\subsubsection{Canonical divisor}
+\subsubsection{Canonical class}
 \label{canonicaldivisor}
 
-The \textbf{canonical divisor} $K_X$ is the class of the \hyperref[canonicalsheaf]{canonical sheaf} $\omega_X$ in the divisor class group.
+The \textbf{canonical class} $K_X$ is the class of the \hyperref[canonicalsheaf]{canonical sheaf} $\omega_X$ in the divisor class group.
 
 \subsubsection{Canonical sheaf}
 \label{canonicalsheaf} 
@@ -160,6 +160,11 @@ A toric variety equipped with an \hyperref[amplelinebundle]{ample} $T$-invariant
 \subsubsection{Calabi-Yau variety}
 
 In algebraic geometry, a \textbf{Calabi-Yau} variety is a smooth, proper variety $X$ over a field $k$ such that the \hyperref[canonicaldivisor]{canonical sheaf} is trivial, that is, $\omega_X \simeq \OO_X$, and such that $H^j(X,\OO_X)=0$ for $1 \leq j \leq n-1$. 
+
+\subsubsection{del Pezzo surface}
+\label{delpezzo}
+
+A \textbf{del Pezzo} surface is a $2$-dimensional \hyperref[fano]{Fano variety}. In other words, they are complete non-singular surfaces with ample anticanonical bundle. The \emph{degree} of the del Pezzo surface $X$ is by definition the self intersection number $K.K$ of its \hyperref[canonicaldivisor]{canonical class} $K$. 
 
 \subsubsection{Fano variety}
 \label{fano}
