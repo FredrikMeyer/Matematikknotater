@@ -255,6 +255,16 @@ A polytope $\Delta$ is \textbf{reflexive} if the following two conditions hold:
 \label{ext}
 Let $R$ be a ring and $M,N$ be $R$-modules. Then $\Ext_R^i(M,N)$ is the right-derived functors of the $\Hom(M,-)$-functor. In particular, $\Ext^i_R(M,N)$ can be computed as follows: choose a projective resolution $C_.$ of $N$ over $R$. Then apply the left-exact functor $\Hom_R(M,-)$ to the resolution and take homology. Then $\Ext_R^i(M,N)=h^i(C_.)$.
 
+\subsubsection{Local cohomology}
+\label{localcohomology}
+Let $R$ be a ring and $I \subset R$ an ideal. Let $\Gamma_I(-)$ be the following functor on $R$-modules:
+\[
+\Gamma_I(M) = \left\{ f \in M \mid \exists n \in \N, s.t. I^n f = 0 \right \}.
+\]
+Then $H_I^i(-)$ is by definition the $i$th right derived functor of $\Gamma_I$.  In the case that $R$ is noetherian, we have $H_I^i(M) = \varinjlim \Ext^i_R(R/I_n,M)$.
+
+See \cite{eisenbud} and \cite{weibel} for more details. 
+
 \subsubsection{Tor}
 \label{tor}
 Let $R$ be a ring and $M,N$ be $R$-modules. Then $\Tor_R^i(M,N)$ is the right-derived functors of the $- \otimes_R N$-functor. In particular $\Tor_R^i(M,N)$ can be computed by taking a projective resolution of $M$, tensoring with $N$, and then taking homology.

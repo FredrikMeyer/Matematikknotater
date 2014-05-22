@@ -10,7 +10,7 @@
 \usepackage{mathrsfs}
 \usepackage{url}
 \usepackage{thmtools}
-\usepackage{enumerate}  % lister $
+\usepackage{enumerate}  % lister $  
 \usepackage{float}
 \usepackage{tikz}
 \usepackage[all]{xy}   % for comm.diagram
@@ -553,6 +553,7 @@ This is a sensible definition: it uses both the topological \emph{and} the diffe
 
 Here's an \textbf{exercise}:
 \begin{prop}
+\label{proprank}
 If $f:M \to N$ has constant rank $k$ in a neighbourhood of $f^{-1}(y)$, then $f^{-1}(y)$ is a closed submanifold of $M$.
 \end{prop}
 \begin{proof}
@@ -1206,7 +1207,7 @@ We have
 The last equality is by definition, the one before that follows from the propostion, since $p$ is onto.
 \end{proof}
 
-\subsection{The boundary $\partial c$ of a chain}
+\subsection{The boundary of a chain}
 
 One should think of $1$-chains as sums of ``paths'' on $M$. Then the boundary $\partial c$ is just the $c(1)-c(0)$, the formal difference of the end points. For a $2$-form $c$, one should think of $c$ as some ``surface'' lying on $M$, and $\partial c$ as the oriented boundary of $c$.
 
@@ -1248,9 +1249,9 @@ We say that a chain is \emph{closed} if $\partial c =0$.
 
 The integration map descends to homology:
 \begin{prop}
-We have a pairing:
+We have a map:
 \[
-\int: H_k(M,\R) \times H_{dR}^k(M) \to \R.
+\int: H_k(M,\R) \otimes H_{dR}^k(M) \to \R.
 \]
 \end{prop}
 \begin{proof}
@@ -1264,6 +1265,55 @@ Now assume $\omega = d \eta$. Then
 \]
 since $\partial c = 0$. 
 \end{proof}
+
+\subsection{Connection to the fundamental group}
+
+It is a fact of topology that $\pi_1(M)/[\pi_1(M),\pi_1(M)] \approx H^1(M)$. We will prove something weaker.
+\begin{prop}
+If $\pi_1(M)$ is finite, then $H^1(M)=0$.
+\end{prop}
+For this, we need a lemma.
+\begin{lemma}
+  Suppose $M$ is connected. Let $\omega \in Z^1(M)$ and suppose $[\omega] \neq 0$ in $H^1(M)$. Then there exists a loop $\gamma:S^1 \to M$ such that
+\[
+\omega(\gamma) := \int_{S^1} \gamma^\ast \omega \neq 0.
+\]
+\end{lemma}
+\begin{proof}
+Assume on the contrary that $\omega(\gamma)=0$ for all $\gamma:S^1\to M$. Choose a base point $x_0 \in M$. We want to define $f$ such that $\d f=\omega$.
+
+Suppose $\gamma_1,\gamma_2:[0,1] \to M$ are two paths, both starting at $x_0$ and ending at $x$. Then $\gamma_1 \circ \gamma_2^{-1}:S^1 \to M$ is a loop. Then by the assumption:\[ \omega(\gamma_1 \circ \gamma_ 2^{-1})=\int_0^1 \gamma_1^\ast \omega - \int_0^1 \gamma_2 ^\ast \omega = 0 \]
+
+This shows that the function
+\[
+f(x) := \int_0^1 \gamma^\ast \omega
+\]
+for any $\gamma$ a path starting at $x_0$, ending at $x$ is a well-defined function.
+
+Now we claim that $\d f = \omega$. For this, choose a chart $(U,x)$ around $x$, and write $\omega = \sum_{i=1}^n a^i \d x^i$. We can suppose that $x=0$ in this chart. Write $\d f(0) $ as $\sum_{i=1}^n \restr{\dd{f}{x^i}}{0} \d x^i$. Then we want to check that each of the terms are equal. Let us compute $\restr{\dd{f}{x^i}}{0}$:
+\begin{align*}
+\restr{\dd{f}{x^i}}{0} &= \lim_{h \to 0} \frac 1h \left( f(h,0,\cdots,0)-f(0) \right) \\
+&= \lim_{h \to 0} \frac 1h \left( \int_0^1 \gamma^\ast \omega + \int_0^1 \tau_h^\ast \omega -\int_0^1 \gamma^\ast \omega \right) \\
+&= \lim_{h \to 0} \frac 1h \int_0^1 \tau_h^\ast \omega .
+\end{align*}
+Here $\tau_h$ is the path starting at $0$ and ending at $h$, given simply by $ht\vec{e_1}$, where $\vec{e_1}$ is the first unit vector in $\R^n$. Then $\tau_h^\ast \omega = h a^1(ht,0,\cdots,0) \d x^1$. Thus the last integral is simply
+\begin{align*}
+\lim_{h \to 0} \frac 1h \int_0^1 \tau_h^\ast \omega &=  \lim_{h \to 0} \frac 1h \int_0^1h a^1(ht,0,\cdots,0) \d x^1 = \lim_{h \to 0} \int_0^1 a^1(ht,0,\cdots,0) \d t \\
+&= \int_0^1 a^1(0,\cdots,0) \d t = a^1(0,\cdots,0).
+\end{align*}
+As wanted. But this means that $[\omega] = 0$ in $H^1(M)$, contrary to assumption.
+\end{proof}
+
+\begin{proof}[Proof of the Proposition]
+If $\pi_1(M)$ is finite, then for all $[\gamma] \in \pi_1(M)$, there is an integer $n$ such that $[\pi]^n = [0]$. This means that for the $n$-fold concatenation $\Gamma := \gamma \cdot \ldots \cdot \gamma$, there is a homotopy $H:S^1 \times [0,1] \to M$ such that $\restr{H}{0}=\Gamma$ and $\restr{H}{1}=k$, a constant function. 
+
+Now let $\omega in \Omega^1(M)$ be a $1$-form with $\d \omega = 0$. Then by Stoke's theorem
+\[
+\int_{S^1 \times [0,1]} F^\ast \d \omega = \int_{S^1} (\gamma \cdots \gamma)^\ast \omega - \int_{S^1} k^\ast \omega = n \int_{S^1} \gamma^\ast \omega = 0.
+\]
+Thus all curves integrate to zero on all forms, and then by the Lemma, we must have $H^1(M)=0$.
+\end{proof}
+
 
 
 \newpage
@@ -1493,8 +1543,71 @@ L_XY &= \sum_{i=1}^n \sum_{j=1}^n \left( a^j \dd{b^i}{x^j}-b^i \dd{a^j}{x^i}\rig
 
 There is a natural pairing $\Gamma(TM) \times \Gamma(T^\ast M) \to C^\infty(M)$, given by $(X,\omega) \mapsto \left(p \mapsto \omega(p)(X_p) \right)$.
 
-\section{Connections with  algebraic geometry}
 
-Every smooth algebraic variety (over $\R$ or $\CC$) is also a smooth manifold.
+\section{A concrete exercise}
+This will be a solution to a mandatory assignment given in 2013. 
+
+Let $M(3)$ be the real vector space of $3 \times 3$ matrices. Let $\mathrm{Sym}(3)$ by the subspace of symmetric matrices ($A^T=A$) and $\mathrm{Skew}(3)$ be the subspace of skew-symmetric matrices.  Note that $\mathrm{Sym}(3) \simeq \R^6$ and $\mathrm{Skew}(3)=\R^3$. Let $f:M(3) \to \mathrm{Sym}(3)$ be the smooth map given by $f(A)=AA^T$. Let $O(3)$ be the orthogonal group, i.e. the set $\{ A \in M(3) \mid A A^T=I \}$, and notice that it is the kernel of the map $f$. 
+
+\begin{exc}
+Show that $f_{\ast A}:T_AM(3) \to T_{f(A)}\mathrm{Sym}(3)$ is given by
+\[
+f_{\ast A}(C) = AC^T+CA^T.
+\]
+\end{exc}
+\begin{sol}
+Consider the curve $c(t)=A + tC$ in $M(3)$ through $A$ with tangent vector $C$. Then we want to compute $(f \circ c)_\ast (\restr{\dd{}{t}}{0})$. The composition $f \circ c$ is given by
+\[
+(f \circ c)(t) = AA^T+tAC^T+tCA^T+t^2CC^T.
+\]
+Now derivation with respect to $t$ gives $(f \circ c)_{\ast A}(C) = AC^T+CA^T$.z
+\end{sol}
+
+\begin{exc}
+Show that $I$ is a regular value of $f$.
+\end{exc}
+\begin{sol}
+Recall that $p$ is a regular value if $p$ the differential $f_{\ast p}$ is surjective.
+
+So let $D \in T_{I}\mathrm{Sym}(3)$. Then $f_{\ast I}(C) = C^T+ C$. Then $\frac 12 D$ is mapped to $D$, since $D$ is symmetric.
+\end{sol}
+
+\begin{exc}
+ Show that $O(3)$ is a smooth submanifold of $M(3)$, and determine its dimension.
+\end{exc}
+\begin{sol}
+This is immediate from Proposition \ref{proprank}. The dimension is easily seen to be $9-6=3$. This is intuitively clear because $O(3)$ is the set of orthogonal transformation of $\R^3$. The orientation-preserving elements of $O(3)$ are given by rotation about a line. Choosing a line is a $2$-dimensional choice (equivalent to picking a point in $\PP_\R^2$), and rotation is a $1$-dimensional choice. 
+\end{sol}
+
+Now let $k:\hookrightarrow M(3)$ denote the inclusion map. 
+\begin{exc}
+  Prove that the image of $k_{\ast A}:T_AO(3) \hookrightarrow T_AM(3) \approx M(3)$ is equal to the subspace $K:= \{ C \in M(3) \mid AC^T + CA^T=0 \}$. 
+\end{exc}
+\begin{sol}
+Note that the exercise is equivalent to the exactness of the sequence
+\[
+\xymatrix{
+0 \ar[r] & T_AO(3) \ar[r]^{k_{\ast A}} & T_AM(3) \ar[r]^{f_{\ast A}} & T_{f(A)}\mathrm{Sym}(3) \ar[r] & 0 
+}
+\]
+The only non-trivial part is exactness in the middle. Since $f$ is constant on elements of $O(3)$, the composite $f_\ast \circ k_\ast = (f \circ k)_\ast$ is zero. Hence $\im k_\ast \subseteq \ker f_\ast$.
+
+Consider the map $\mathrm{Skew}(3) \to K$ given by $S \mapsto SA^{-1,T}$ ($A$ inverse, transposed). This is a bijection since $A$ is invertible, hence $K$ has dimension $3$. Thus the dimensions are equal, and the sequence is exact.
+\end{sol}
+
+Thus we can identify $T_AO(3)$ with this subspace of $M(3)$. In particular, $k_{\ast I}$ identifies $T_IO(3)$ with $\mathrm{Skew}(3)$. 
+
+For each $C \in \mathrm{Skew}(3)$, let $X(C):O(3) \to TO(3)$ be the vector field given by $X(C)_A=AC$ in $T_AO(3)$, for each $A \in O(3)$.
+
+\begin{exc}
+  Show that $X=X(C)$ is left invariant, in the sense that $\ell_\ast X = X$ for each diffeomorphism $\ell:O(3) \to O(3)$ given by left multiplication with elements $B \in O(3)$.
+\end{exc}
+\begin{sol}
+ The map $\ell$ is the restriction of a linear map, hence its derivative is given simply by multiplication by $B$. Then, by definition
+\[
+(\ell_\ast X)_D = B(B^{-1}DC)=DC
+\]
+But also $X_D=DC$.
+\end{sol}
 
 \end{document}
