@@ -1257,7 +1257,7 @@ But $(c_{(j+1,\beta)})_{(i,\alpha)$ appear with opposite sign as $(c_{(i,\alpha)
 
 The homology groups gives the \emph{singular smooth  homology groups of $M$ (with coefficients in $\R$)}, and are denoted simply by $H_{\infty}^k(M,\R)$. By applying $\Hom(-,\R)$ to the complex, we get the dual complex, and thus the \emph{singular smooth cohomology groups of $M$}, denoted by $H_{\infty}^k(M,\R)$.
 
-We say that a chain is \emph{closed} if $\partial c =0$.
+We say that a chain is \emph{closed} if $\partial c =0$. A chain $c$ is a \emph{boundary} if $c=\partial b$ for some $b \in C^{k+1}(M)$.
 
 \begin{thm}[Stoke's Theorem]
   If $\omega$ is a $(k-1)$-form on $M$ and $c$ is a $k$-chain in $M$, then
