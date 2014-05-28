@@ -1,0 +1,31 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduction; topological manifolds}{2}{section.1}
+\contentsline {section}{\numberline {2}Differentiable manifolds}{6}{section.2}
+\contentsline {section}{\numberline {3}Sard's theorem and the Inverse Function Theorem}{12}{section.3}
+\contentsline {subsection}{\numberline {3.1}The Inverse Function Theorem}{13}{subsection.3.1}
+\contentsline {section}{\numberline {4}Rank theorems}{15}{section.4}
+\contentsline {section}{\numberline {5}Embeddings}{18}{section.5}
+\contentsline {section}{\numberline {6}Bump functions and partitions of unity}{21}{section.6}
+\contentsline {subsection}{\numberline {6.1}Useful functions}{21}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Partition of unity}{24}{subsection.6.2}
+\contentsline {section}{\numberline {7}The tangent bundle}{27}{section.7}
+\contentsline {subsection}{\numberline {7.1}Operations on vector fields}{32}{subsection.7.1}
+\contentsline {section}{\numberline {8}Tensors}{33}{section.8}
+\contentsline {subsection}{\numberline {8.1}Miscellany on the exterior algebra}{33}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}The cotangent bundle}{33}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}General tensor fields}{34}{subsection.8.3}
+\contentsline {section}{\numberline {9}Vector fields and differential equations}{35}{section.9}
+\contentsline {subsection}{\numberline {9.1}Lie derivatives}{38}{subsection.9.1}
+\contentsline {section}{\numberline {10}Differential forms}{40}{section.10}
+\contentsline {subsection}{\numberline {10.1}Basic theorems}{40}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}The de Rham complex}{40}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}The Poincar\IeC {\'e} Lemma}{41}{subsection.10.3}
+\contentsline {section}{\numberline {11}Integration}{45}{section.11}
+\contentsline {subsection}{\numberline {11.1}The boundary of a chain}{47}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.2}Connection to the fundamental group}{49}{subsection.11.2}
+\contentsline {section}{\numberline {A}Definitions}{51}{appendix.A}
+\contentsline {section}{\numberline {B}Formulas}{52}{appendix.B}
+\contentsline {subsection}{\numberline {B.1}Local description of (co-)vector fields}{52}{subsection.B.1}
+\contentsline {subsection}{\numberline {B.2}Pullbacks and pushforwards}{53}{subsection.B.2}
+\contentsline {subsection}{\numberline {B.3}Lie derivatives}{54}{subsection.B.3}
+\contentsline {section}{\numberline {C}A concrete exercise}{57}{appendix.C}

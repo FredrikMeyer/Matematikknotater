@@ -4,20 +4,27 @@
 \BOOKMARK [2][-]{subsection.3.1}{The Inverse Function Theorem}{section.3}% 4
 \BOOKMARK [1][-]{section.4}{Rank theorems}{}% 5
 \BOOKMARK [1][-]{section.5}{Embeddings}{}% 6
-\BOOKMARK [1][-]{section.6}{Useful functions and partitions of unity}{}% 7
+\BOOKMARK [1][-]{section.6}{Bump functions and partitions of unity}{}% 7
 \BOOKMARK [2][-]{subsection.6.1}{Useful functions}{section.6}% 8
 \BOOKMARK [2][-]{subsection.6.2}{Partition of unity}{section.6}% 9
 \BOOKMARK [1][-]{section.7}{The tangent bundle}{}% 10
 \BOOKMARK [2][-]{subsection.7.1}{Operations on vector fields}{section.7}% 11
 \BOOKMARK [1][-]{section.8}{Tensors}{}% 12
-\BOOKMARK [1][-]{section.9}{Vector fields and differential equations}{}% 13
-\BOOKMARK [1][-]{section.10}{Differential forms}{}% 14
-\BOOKMARK [1][-]{section.11}{Integration}{}% 15
-\BOOKMARK [2][-]{subsection.11.1}{The boundary of a chain}{section.11}% 16
-\BOOKMARK [2][-]{subsection.11.2}{Connection to the fundamental group}{section.11}% 17
-\BOOKMARK [1][-]{appendix.A}{Formulas}{}% 18
-\BOOKMARK [2][-]{subsection.A.1}{Local description of \(co-\)vector fields}{appendix.A}% 19
-\BOOKMARK [2][-]{subsection.A.2}{Pullbacks and pushforwards}{appendix.A}% 20
-\BOOKMARK [2][-]{subsection.A.3}{Lie derivatives}{appendix.A}% 21
-\BOOKMARK [2][-]{subsection.A.4}{Miscellaneous}{appendix.A}% 22
-\BOOKMARK [1][-]{appendix.B}{A concrete exercise}{}% 23
+\BOOKMARK [2][-]{subsection.8.1}{Miscellany on the exterior algebra}{section.8}% 13
+\BOOKMARK [2][-]{subsection.8.2}{The cotangent bundle}{section.8}% 14
+\BOOKMARK [2][-]{subsection.8.3}{General tensor fields}{section.8}% 15
+\BOOKMARK [1][-]{section.9}{Vector fields and differential equations}{}% 16
+\BOOKMARK [2][-]{subsection.9.1}{Lie derivatives}{section.9}% 17
+\BOOKMARK [1][-]{section.10}{Differential forms}{}% 18
+\BOOKMARK [2][-]{subsection.10.1}{Basic theorems}{section.10}% 19
+\BOOKMARK [2][-]{subsection.10.2}{The de Rham complex}{section.10}% 20
+\BOOKMARK [2][-]{subsection.10.3}{The Poincar\351 Lemma}{section.10}% 21
+\BOOKMARK [1][-]{section.11}{Integration}{}% 22
+\BOOKMARK [2][-]{subsection.11.1}{The boundary of a chain}{section.11}% 23
+\BOOKMARK [2][-]{subsection.11.2}{Connection to the fundamental group}{section.11}% 24
+\BOOKMARK [1][-]{appendix.A}{Definitions}{}% 25
+\BOOKMARK [1][-]{appendix.B}{Formulas}{}% 26
+\BOOKMARK [2][-]{subsection.B.1}{Local description of \(co-\)vector fields}{appendix.B}% 27
+\BOOKMARK [2][-]{subsection.B.2}{Pullbacks and pushforwards}{appendix.B}% 28
+\BOOKMARK [2][-]{subsection.B.3}{Lie derivatives}{appendix.B}% 29
+\BOOKMARK [1][-]{appendix.C}{A concrete exercise}{}% 30
