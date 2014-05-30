@@ -23,9 +23,10 @@
 \contentsline {section}{\numberline {11}Integration}{45}{section.11}
 \contentsline {subsection}{\numberline {11.1}The boundary of a chain}{47}{subsection.11.1}
 \contentsline {subsection}{\numberline {11.2}Connection to the fundamental group}{49}{subsection.11.2}
-\contentsline {section}{\numberline {A}Definitions}{51}{appendix.A}
-\contentsline {section}{\numberline {B}Formulas}{52}{appendix.B}
-\contentsline {subsection}{\numberline {B.1}Local description of (co-)vector fields}{52}{subsection.B.1}
-\contentsline {subsection}{\numberline {B.2}Pullbacks and pushforwards}{53}{subsection.B.2}
-\contentsline {subsection}{\numberline {B.3}Lie derivatives}{54}{subsection.B.3}
-\contentsline {section}{\numberline {C}A concrete exercise}{57}{appendix.C}
+\contentsline {subsection}{\numberline {11.3}Cohomology of the sphere}{50}{subsection.11.3}
+\contentsline {section}{\numberline {A}Definitions}{52}{appendix.A}
+\contentsline {section}{\numberline {B}Formulas}{53}{appendix.B}
+\contentsline {subsection}{\numberline {B.1}Local description of (co-)vector fields}{53}{subsection.B.1}
+\contentsline {subsection}{\numberline {B.2}Pullbacks and pushforwards}{54}{subsection.B.2}
+\contentsline {subsection}{\numberline {B.3}Lie derivatives}{55}{subsection.B.3}
+\contentsline {section}{\numberline {C}A concrete exercise}{58}{appendix.C}

@@ -1541,6 +1541,35 @@ Thus all curves integrate to zero on all forms, and then by the Lemma, we must h
 \end{proof}
 
 
+\subsection{Cohomology of the sphere}
+
+We will compute the cohomology of the sphere differently than what is done in the book, which uses a partition of unity argument.
+
+For this, we will need the Mayer-Vietoris-sequence.
+
+\begin{prop}[Mayer-Vietoris]
+Let $M=U \cup V$ be covered by two open sets. Then we have an exact sequence
+\[
+ \cdots H^{k-1}(U \cap V) \to H^k(M) \to H^k(U) \oplus H^k(V) \to H^k(U \cap V) \to H^{k+1}(M) \to \cdots
+\]
+\end{prop}
+\begin{proof}
+  First note that we have short exact sequence of complexes:
+\[
+0 \to \Omega^\circ(U \cup V) \to \Omega^\circ(U) \oplus \Omega^\circ(V) \to \Omega^\circ(U \cap V) \to 0
+\]
+This gives the long exact sequence.
+\end{proof}
+
+\begin{corr}
+For $M=S^n$ and $n \geq 1$ we have $H^0(S^n)=\R$,$H^n(S^n)=\R$ and $H^k(S^n)=0$ for $0 < k < n$. 
+\end{corr}
+\begin{proof}
+We can cover $S^n$ by two open sets as follows. Let $U=S^n\{ N\}$, removing the north pole. Similarly, remove the south pole to get $V$. Then $U \cap V \approx \R^n \bs \{ 0 \}$. But this is homotopic to the $n-1$-sphere as follows:
+\[
+t \vec x + (1-t) \frac{\vec x}{\mid \vec x \mid }.
+\]
+\end{proof}
 
 \newpage
 \appendix
