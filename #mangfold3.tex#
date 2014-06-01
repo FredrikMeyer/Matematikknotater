@@ -46,6 +46,7 @@
 \date{}
 \begin{document}
 \maketitle
+\tableofcontents 
 \section{Introduction; topological manifolds}
 
 Manifolds are geometric objects that locally look like some $\R^n$ for some natural number $n$. In that respect, they are very easy to understand. The interesting things happen when we glue several pieces of $\R^n$ together.
@@ -54,7 +55,7 @@ In Calculus, manifolds (in those rare occasions they were encountered) usually a
 
 We start with the definition of a \emph{topological manifold}.
 
-\begin{defi}
+\begin{defi}[Intuitive definition]
 A \emph{topological manifold} $M$ is a topological space such that each $x \in M$ has a neighbourhood $U$ such that $U$ is homeomorphic to $\R^n$.
 \end{defi}
 
@@ -143,18 +144,49 @@ Let $M$ be a topological space. We say that $M$ is a \emph{manifold with boundar
 
 We call the $n$ in the definition the \emph{dimension} of the manifold. However, to prove that the dimension is well-defined, reduces to proving that if $\R^n \approx \R^m$, then $m=n$. This is a very non-trivial problem, best proved with tools from algebraic topology, using such tools as homology groups and long exact sequences.
 
+\begin{proof}[Proof of invariance of domain]
+Let us pretend we know the machinery of singular homology. Then the proof of invariance of domain go like this: Suppose we have two non-empty open sets $U \subset \R^n$ and $V \subset \R^m$ and a homeomorphism $U \approx V$. Suppose $x \in U$. By excision, we have $H_k(U,U \bs \{x \}) \approx H_k(\R^n, \R^n \bs \{ x\})$. By the long exact sequence for the pair $(\R^n,\R^n \bs \{ x \})$, we get $H_k(\R^n,\R^n \bs \{x \}) \approx \tilde{H}_{k-1}(\R^n \bs \{x\})$. But this latter space deformation retracts onto $S^{m-1}$, so we conclude that $H_k(U, U \bs \{x\}) \neq 0$ if and only if $k=n$ or $k=0$. But since homeomorphisms induce isomorphisms on homology, we must have $k=m$ as well. 
+\end{proof}
+
+\subsection{Problems with the naïve definition}
+
+Requiring just that a topological manifold $M$ is locally Euclidean is not enough. For example, this does not guarantuee that it is Hausdorff, as being Hausdorff is not a local property. For example, consider the \emph{line with two origins}:
+
+\begin{example}[Line with two origins]
+Start with two copies of the real line $X_1=\R$ and $X_2=\R$. Let $U,V$ be the subsets $\R \bs \{ 0\}$ of $X_1,X_2$, respectively. Glue them together with the identity map and let $X$ be the quotient space. Then obviously every point $x \in X \bs \{ 0\}$ has a neighbourhood homeomorphic to an interval in $\R$, by construction. But notice that $X$ has two points that we want to call $0$, one for each copy of $\R$. So let us call them $0$ and $0^\prime$. Both $0$ and $0^\prime$ have neighbourhoods homeomorphic to an interval in $\R$.
+
+But it is not Hausdorff. Every neighbourhood of $0$ intersects every neighbourhood of $0^\prime$.\footnote{Almost exactly the same construction is used as the prime example of a non-separated scheme in algebraic geometry.} 
+\end{example}
+
+Thus, we want to demand also that $M$ is Hausdorff. But this is not enough to get a good theory. We also want to demand that $M$ is \emph{paracompact}, meaning that every open cover has an open refinement that is locally finite.
+
+A counterexample is given by \emph{the long line} $\mathbb L$. It is constructed by glueing together uncountably many intervals $[0,1)$ along their endpoints. Thus $\mathbb L$ is Hausdorff and locally Euclidean. It can however be shown that $\mathbb L$ is not paracompact.
+
+Thus we arrive at our more technical definition of a topological manifold:
+\begin{defi}
+ A \emph{topological manifold} is a topological space $M$ such that every $x \in M$ has a neighbourhood homeomorphic to an open set in $\R^n$ for some $n$, and such that $M$ is Hausdorff and paracompact.
+\end{defi}
+
+In fact, we have the following theorem from point set topology:
+\begin{thm}
+ Let $X$ be a paracompact Hausdorff space. Let $\{ U_\alpha\}_{\alpha \in J}$ be an open cover of $X$. Then there exists a partition of unity on $X$ subordinate to $\{ U_\alpha\}_{\alpha \in J}$. 
+\end{thm}
+For a proof, see Munkres, page 259. 
+
+
 \newpage
 \section{Differentiable manifolds}
 
-To get a course worth something, one has to have something more than just a topological manifold. We do this by adding structure to $M$, thereby defining the notion of a \emph{differentiable} manifold.
+We add more structure to $M$, thereby defining the notion of a \emph{differentiable} manifold.
 
 Given two open subsets $U,V$ of $M$ and homeomorphisms $x:U \to x(U) \subseteq \R^n$ and $y:V \to y(V) \subseteq \R^n$, one has transition maps on the intersection $U \cap V$:
 \[
 \xymatrix{
  U \cap V \ar[d]_x \ar[r]^-y & y(U \cap V)  \subseteq \R^n \\
-\R^n \supseteq  x(U \cap V) \ar[ur]^{x \circ y^{-1}}
+\R^n \supseteq  x(U \cap V) \ar[ur]_{x \circ y^{-1}}
 }
 \]
+
 We say that the two charts $(x,U)$ and $(y,V)$ are \emph{$C^\infty$-related} if the map $x \circ y^{-1}$ and the map $y \circ x^{-1}$ are $C^\infty$-maps as maps between subsets of $\R^n$.
 
 Furthermore, we say that a set of charts $\{ (x_i, U_i)\}_{i \in I}$ is an \emph{$C^\infty$-atlas} for $M$ if all the $x_i,x_j$ are $C^\infty$-related and the union $\bigcup_i U_i$ cover $M$.
@@ -165,7 +197,7 @@ Here a uniqueness result:
 Given an atlas $\mathscr{A}$ on $M$, there exists a unique maximal atlas $\mathscr{A}^\prime$ containing $\mathscr A$.
 \end{lemma}
 \begin{proof}
-Define $\mathscr A$ to be the set of all charts $y$ which are $C^\infty$-related to all charts $x \in A$. Then $\mathscr A$ contains two types of charts: those who belonged to $\mathscr A$, and possibly new ones. Every two charts in $\mathscr A$ are $C^\infty$-related, by definition of atlas, and every pair with one in each are $C^\infty$-related by definition of $\mathscr A^\prime$. Further, evert pair of charts with both in $\mathscr A^\prime$ are $C^\infty$-related: one can intersect their domains with a chart in $\mathscr A$, compose, and conclude.
+Define $\mathscr A$ to be the set of all charts $y$ which are $C^\infty$-related to all charts $x \in A$. Then $\mathscr A$ contains two types of charts: those who belonged to $\mathscr A$, and possibly new ones. Every two charts in $\mathscr A$ are $C^\infty$-related, by definition of atlas, and every pair with one in each are $C^\infty$-related by definition of $\mathscr A^\prime$. Further, every pair of charts with both in $\mathscr A^\prime$ are $C^\infty$-related: one can intersect their domains with a chart in $\mathscr A$, compose, and conclude.
 
 Clearly $\mathscr A^\prime$ is the unique maximal atlas containing $\mathscr A$.
 \end{proof}
@@ -183,7 +215,7 @@ Here's an example (and probably the only explicit calculation we will do in the 
 \begin{example}
 Recall that $S^2$ (the zero set of the equation $x_1^2+x_2^2+x_3^2=1$ in $\R^3$) can be covered by two charts, by stereographic projection (see Figure \ref{stereographic}), by first projecting from the north pole, and then from the south pole. Call these maps $\varphi$ and $\psi$, respectively. We are going to compute the transition maps, to verify that this atlas is actually a $C^\infty$-atlas.
 
-We need to find explicit formulae for $\varphi$ and $\psi$. The first map has domain $\S^2 \bs \{ N \}$ and image $\R^2$. But we want to compute $\psi \circ \varphi^{-1}$, so we start with a point $(a,b)$ in the plane $\R^2$ (embedded in $\R^3$ by $z=0$). We want to connect it with the north pole $(0,0,1)$ by a line, and compute its intersection with the $2$-sphere. The line is given parametrically as \[t(a,b,0)+(1-t)(0,0,1)=(at,bt,1-t).\]
+We need to find explicit formulae for $\varphi$ and $\psi$. The first map has domain $S^2 \bs \{ N \}$ and image $\R^2$. But we want to compute $\psi \circ \varphi^{-1}$, so we start with a point $(a,b)$ in the plane $\R^2$ (embedded in $\R^3$ by $z=0$). We want to connect it with the north pole $(0,0,1)$ by a line, and compute its intersection with the $2$-sphere. The line is given parametrically as \[t(a,b,0)+(1-t)(0,0,1)=(at,bt,1-t).\]
 To find the intersection with the sphere, we must compute when the right hand side has norm $1$:
 \[
 a^2 t^2+b^2 t^2+1-2t+t^2 = 1
@@ -214,10 +246,10 @@ Finally, we can compute the composition $\psi \circ \varphi^{-1}$:
 &= \left ( \frac{a}{\| a \|} , \frac{b}{\| a \|}\right).
 \end{align*}
 
-So the transition maps are just inversion about the origin in the $(a,b)$-plane. These are clearly $C^\infty$ functions.
+So the transition maps are just inversion about the origin in the $(a,b)$-plane (with the origin removed). These are clearly $C^\infty$ functions.
 \end{example}
 
-The moral of the story is that we could just as well defined $S^2$ as two copies of $\R^2 \{ 0\}$ glued together with the inversion map, because that's exactly how the differentiable structure is defined, and that is all we care about.
+The moral of the story is that we could just as well defined $S^2$ as two copies of $\R^2 \bs \{ 0\}$ glued together with the inversion map, because that's exactly how the differentiable structure is defined, and that is all we care about.
 
 Here's another example:
 
@@ -225,7 +257,7 @@ Here's another example:
 Recall that we could write the projective plane $\PP_\R^2$ as the union of three open sets $U_i$, defined by the non-vanishing of one of the homogeneous coordinates. Here one computes (easily) that the transition maps $\varphi_1 \circ \varphi_0^{-1}:\R^2_{(a,b)} \bs \{ a = 0 \}  \to \R^2_{(a,b)} \bs \{ a = 0\}$ are given by \[(a,b) \mapsto \left (\frac{1}{a}, \frac{b}{a} \right).\]
 \end{example}
 
-Now we have defined (and become somewhat familiar with) the objects we're going to work it. It is time to define \emph{maps} between them.
+It is time to define \emph{maps} between them.
 
 \begin{defi}
 Let $M^n,N^m$ be manifolds (of dimension $n,m$, respectively), and let $f:M \to N$ be a continous map between them. We say that $f$ is \emph{differentiable at $p$} if for all charts $(x,U)$ with $p \in U$ and for all charts $(y,V)$ with $f(p) \in V$, the function $y \circ \restr fU \circ x^{-1}$ is differentiable (as a function between open subsets of $\R^n$ and $\R^m$).
@@ -238,19 +270,19 @@ x(U) \ar[ur]^{x^{-1}} \ar[rrr]_{y \circ f \circ x^{-1}}  & && y(V)
 If $f$ is differentiable at all points $p \in M$, then we say that $f$ is \emph{differentiable}.
 \end{defi}
 
-Thus we have a category $\Diff$ of differentiable manifolds. Its objects are the differentiable manifolds and the maps are differentiable maps. This gives us at once the notion of an \emph{isomorphism} of manifolds: it is just a pair of differentiable maps that compose to the identity in each direction.
+Thus we have a category $\Diff$ of differentiable manifolds. Its objects are  differentiable manifolds and the maps are differentiable maps. This gives us at once the notion of an \emph{isomorphism} of manifolds: it is just a pair of differentiable maps that compose to the identity in each direction.
 
 We want to define some properties of maps in $\Diff$. To start off, we introduce some notation. Let $f:\R^n\to\R$ be differentiable map, then we define
 \[
-D_i f(a) = \lim_{h \to 0} \frac{f(a^1,\dotsc, a^i + h,\dotsc, a^n)}{h}.
+D_i (f)(a) = \lim_{h \to 0} \frac{f(a^1,\dotsc, a^i + h,\dotsc, a^n)}{h}.
 \]
 
-This is nothing but the $i$'th partial derivative. The reason we're not using the usual Leibniz notation is because we want to reserve it for something else. Having established the $D_i$ notation, one recalls the chain rule: Given two maps $g:\R^m \to R^n$ and $f:\R^n \to \R$, the $D_j$ of the composite is given as
+This is nothing but the $i$'th partial derivative. The reason we're not using the usual Leibniz notation is because we want to reserve it for later use. Having established the $D_i$ notation, one recalls the chain rule: Given two maps $g:\R^m \to \R^n$ and $f:\R^n \to \R$, the $D_j$ of the composite is given as:
 \[
-D_j(f \circ g)(a) = \sum_{i=1}^n  D_i\left(f\left(g\left(a\right)\right)\right) \cdot D_j\left(g^i\left(a\right)\right)
+D_j(f \circ g)(a) = \sum_{i=1}^n  D_i\left(f \circ g\right)(f(g(a))) \cdot D_j(g^i)(a).
 \]
 
-The classical Leibniz notation will be reserved for tangent fields on manifolds. So let $f:M \to \R$ be a map from a manifold to the real line, and let $(x,U)$ be a chart, and let $p \in U$. Then we define
+The classical Leibniz notation will be reserved for tangent vectors on manifolds. So let $f:M \to \R$ be a map from a manifold to the real line, and let $(x,U)$ be a chart, and let $p \in U$. Then we define
 \[
 \frac{\partial f}{\partial  x^i} (p) = \restr{\frac{\partial f}{\partial x^i}}p := D_i(f \circ x^{-1})(x(p))
 \]
@@ -271,13 +303,20 @@ Or in matrix notation:
 \]
 \end{prop}
 \begin{proof}
-For now, see Spivak.
+This is a definition-chase and the chain rule. Explicitly, by definition:
+\begin{align*}
+ \restr{\dd{f}{y^i}}{p} &= D_i(f \circ y^{-1})(y(p)) = D_i((f \circ x^{-1}) \circ (x \circ y^{-1}))(y(p)) \\
+&= \sum
+_{j=1}^n D_j(f \circ x^{-1})(x(p)) D_i((x \circ y^{-1})^j)(y(p)) \\
+&= \sum_{j=1}^n \restr{\dd{f}{x^j}}{p} \cdot  \restr{\dd{x^j}{y^i}}{p}
+\end{align*}
+The chain rule appear in the middle.
 \end{proof}
 \begin{remark}
 From now on, all maps will be differentiable, unless otherwise stated. Thus, when referring to a ``map'' above, it should be read as ``differentiable map'' (or better, ``a map in the category $\Diff$'').
 \end{remark}
 
-Let $f:M \to N$ be a map of manifolds, and let $(x,U),(y,V)$ be charts on $M,N$, respectively. One can define the \emph{Jacobian matrix of $f$ at $p$} (if $p \in U$):
+Let $f:M \to N$ be a map of manifolds, and let $(x,U),(y,V)$ be charts on $M,N$, respectively. One can define the \emph{Jacobian matrix of $f$ at $p$} (with respecto the charts $(x,U)$ and $(y,V)$):
 \[
 J_f(p) := \left[ \restr{\dd{(y^i \circ f)}{x^j}}p \right].
 \]
@@ -287,7 +326,7 @@ Then we define the \emph{rank} of $f:M \to N$ to be the rank of the Jacobian mat
 The rank is well-defined.
 \end{prop}
 \begin{proof}
- \textbf{Exercise:} Suppose $(x^\prime,U^\prime)$ is another chart containing $p$, and $(y^\prime,V^\prime)$ is another chart containing $f(p)$. Then by restricting both $x$ and $x^\prime$ to $U \cap U^\prime$, we can assume that $U=U^\prime$ and $V=V^\prime$. Then the rank of $f$ at $p$ is both the rank of the Jacobian
+Suppose $(x^\prime,U^\prime)$ is another chart containing $p$, and $(y^\prime,V^\prime)$ is another chart containing $f(p)$. Then by restricting both $x$ and $x^\prime$ to $U \cap U^\prime$, we can assume that $U=U^\prime$ and $V=V^\prime$. Then the rank of $f$ at $p$ is both the rank of the Jacobian
 \[
 \left[ \restr{\dd{(y^i \circ f)}{x^j}}p \right]
 \]
@@ -306,7 +345,7 @@ Consider the diagram:
 Then $xx^{\prime -1}$, $yfx^{-1}$, and $y y^{\prime -1}$ are maps from (open subsets of) $\R^n$ to $\R^n$. Consider the composition $(y^\prime y^{-1}) \circ (yfx^{-1}) \circ (xx^{\prime -1})=y^\prime f x^{\prime -1}$. Applying the chain rule, we get that the second Jacobian matrix is just a conjugate of the first Jacobian by invertible matrices. These have the same rank.
 \end{proof}
 
-We say that a point $p \in M$ is \emph{critical for $f$} if $\rank f < m$ (the dimension of $N$). Otherwise it is \emph{regular}. We say that a point $q \in N$ is regular if all the points in the preimage $f^{-1}(q)$ are regular points.
+We say that a point $p \in M$ is \emph{critical for $f$} if $\rank_p f < m$ (the dimension of $N$). Otherwise it is \emph{regular}. We say that a point $q \in N$ is regular if all the points in the preimage $f^{-1}(q)$ are regular points.
 
 \begin{example}
 Let $M=N=\R$ and let $f:M \to N$. Then a point $p \in \R$ is regular if and only if $f^\prime(p) \neq 0$. In other words, critical points correspond to either maxima, minima or plateaus of the graph of $f$ inside $\R^2$.
@@ -322,7 +361,7 @@ One can also think of critical points as points where the inverse function theor
 \label{criticalpoints}
 \end{figure}
 
-\pagebreak
+\newpage
 \section{Sard's theorem and the Inverse Function Theorem}
 
 Last time we spoke about critical points, i.e. those points where the Jacobian of a map had non-maximal rank (the maximal rank of a map $\R^n \to \R^m$ is $n$). Sard's theorem says that most points $p \in M$ are non-critical (=regular).
@@ -343,14 +382,13 @@ Consider the real line $\{ y = 0 \} \subseteq \R^2$. Intuitively, this has zero 
 so choosing $a < \frac{6 \epsilon}{\pi^2}$, gives total volume less than $\epsilon$.
 \end{example}
 
-Now, a subset $A$  of a manifold $M$ has \emph{measure 0} if there exists a countable sequence of charts $(x_i, U_i)$  with $A \subseteq \bigcup U_i$ such that each $x_i(A \cap U_i)$ has measure $0$. To see that this notion is well-defined, one turns to Lemma 6 in Spivak, which says that smooth functions take measure 0 sets to measure 0 sets. [[perhaps a proof will come here later]]
+Now, a subset $A$  of a manifold $M$ has \emph{measure 0} if there exists a countable sequence of charts $(x_i, U_i)$  with $A \subseteq \bigcup U_i$ such that each $x_i(A \cap U_i)$ has measure $0$. To see that this notion is well-defined, one turns to Lemma 6 in Spivak, which says that smooth functions take measure 0 sets to measure 0 sets.
 
-Now, Sard's theorem says the following:
-\begin{thm}
-If $f:M \to N$ is a $C^\infty$-map of $n$-manifolds, and $M$ has at most countably many components (e.g. one), then the critical values of $f$ form a set of measure zero in $N$.
+\begin{thm}[Sard's theorem]
+If $f:M \to N$ is a $C^\infty$-map of $n$-manifolds, and $M$ has at most countably many components, then the critical values of $f$ form a set of measure zero in $N$.
 \end{thm}
 
-This, in some sense, is similar to a theorem in algebraic geometry, which says that the smooth points of a variety are dense in the Zariski topology.
+This, is similar to a theorem in algebraic geometry, which says that the smooth points of a variety are dense in the Zariski topology.
 
 We will not prove Sard's theorem here, but just note that it is at least intuitively plausable.
 
@@ -392,24 +430,15 @@ J_{\restr fV^{-1}}(f(p)) = J_f(p)^{-1}.
 \]
 \end{thm}
 
+For a proof, see for example Spivak's book ``Calculus on Manifolds''.
+
 In words (that will have meaning later), this says that if the tangent map is an isomorphism at a point $p$, then $f$ is locally a diffeomorphism near $p$. This is a theorem special to differential geometry. Similar situations does not occur in algebraic or complex geometry, because inverse functions are usually not algebraic/complex.
 
-%\begin{example}
-%Let $S^1$ be the unit circle sitting inside $\R^2$ in the usual way, and consider the projection map %$p:S^1 \to \R^1$ given by $(x,y) \mapsto x$. Choose the chart $(x,U)$ obtained by stereographic %projection from the north pole, so that $x^{-1}(a)=\left( \frac{2a}{a^2+1} %,\frac{a^2-1}{a^2+1}\right)$. In this chart, the projection map looks like $ p \circ %x^{-1}(a)=\frac{2a}{a^2+1}$. The derivative of this function is
-%\[
-%\frac{2(a^2+1)-4a^2}{(a^2+1)^2} = \frac{2}{a^2+1}.
-%\]
-%This expression is never zero, so the theorem says that
-%\end{example}
-
-\begin{proof}
-We skip this for now. It is in the MAT1110 book.
-\end{proof}
 
 \pagebreak
 \section{Rank theorems}
 
-In this lecture we will elaborate on some ``structure theorems'' on maps $f:M \to N$, given restrictions on the rank of $f$, the first one being the following:
+In this lecture we will elaborate on some ``structure theorems'' on maps $f\colon M \to N$, given restrictions on the rank of $f$, the first one being the following:
 
 \begin{thm}
 Let $f:M^n\to N^m$ be a map of manifolds.
@@ -528,7 +557,7 @@ Consider the zero set of the equation $y^2=x^3$, or equivalently, the image of t
 \begin{figure}[th]
 \centering
 \includegraphics{node}
-\caption{A node}
+\caption{A nodal curve.}
 \label{node}
 \end{figure}
 
@@ -548,10 +577,10 @@ An \emph{embedding} is a map that is both an immersion and a homeomorphism onto 
 \end{defi}
 We call the image of an embedding a \emph{submanifold}.
 \begin{remark}
-This is a sensible definition: it uses both the topological \emph{and} the differentiable structure of the manifolds, whereas the first definition used only the differentiable structure. A similar situation occurs in algebraic geometry, where a map of schemes is defined not just as a map of the underlying topological spaces, but as a \emph{pair} $(f,f^{\#})$, where the first is a map of topological spaces, and the second is map of sheaves $f^{\#}:f^\ast \OO_Y \to \OO_X$.
+This is a sensible definition: it uses both the topological \emph{and} the differentiable structure of the manifolds, whereas the first definition used only the differentiable structure. A similar situation occurs in algebraic geometry, where a closed immersion of schemes is defined not just as a i closed inclusion of the underlying topological spaces, but as a \emph{pair} $(f,f^{\#})$, where the first is a map of topological spaces, and the second is \emph{surjetive} map of sheaves $f^{\#}:f^\ast \OO_Y \to \OO_X$.
 \end{remark}
 
-Here's an \textbf{exercise}:
+Here's an important result:
 \begin{prop}
 \label{proprank}
 If $f:M \to N$ has constant rank $k$ in a neighbourhood of $f^{-1}(y)$, then $f^{-1}(y)$ is a closed submanifold of $M$.
@@ -559,7 +588,7 @@ If $f:M \to N$ has constant rank $k$ in a neighbourhood of $f^{-1}(y)$, then $f^
 \begin{proof}
 To give $f^{-1}(y)$ the structure of a manifold, it is enough to give charts and glueing maps. Since $f$ has rank $k$ everywhere in $f^{-1}(y)$, there exists charts $(x,U) \subset M^n$ and $(y,V) \subset N^m$ such that $y \circ f \circ x^{-1} = (x_1,\cdots,x_n) \mapsto (x_1,\cdots,x_k,0,\cdots,0)$.
 
-We may assume that $y(y)=0$, so that $x(U \cap f^{-1}(y)) = \{ x_1 = x_2 = \cdots = x_k = \}$. This is an $n-k$-dimensional closed subspace of $U$.
+We may assume that $y(y)=0$, so that $x(U \cap f^{-1}(y)) = \{ x_1 = x_2 = \cdots = x_k =0 \}$. This is an $n-k$-dimensional closed subspace of $U$.
 \end{proof}
 
 \begin{example}
@@ -578,9 +607,9 @@ Let $f:\R^2 \to \R$ be the map $f(x,y)=x^2+y^2-1$. It has constant rank $1$ as l
 \end{example}
 
 \newpage
-\section{Useful functions and partitions of unity}
+\section{Bump functions and partitions of unity}
 
-In this section we introduce some useful $C^\infty$-functions that will be useful later on. They are in some sense the secret ingredient of differential geometry, as their existence allows for many constructions that are completely unthinkable in other categories, such as the analytic or algebraic category.
+What makes differential geometry ``taste'' differently than complex or algebraic geometry is the existence of ``bump functions'' and partition of unity.
 
 \subsection{Useful functions}
 Recall that the \emph{support} of a function $f:X \to \R$ is the closure of the set $\{ x \, | \, f(x) \neq 0 \}$.
@@ -624,7 +653,7 @@ l(x) = \frac{\int_0^x k(x) \mathrm{dx}}{ \int_0^\delta k(x) \mathrm{dx}}.
 
 \begin{example}
 \label{ex:constant}
-  By mirroring the function $l(x)$ from the previous example around $x=\delta+1$, we get a function $f(x)$  which is constantly equal to $1$ on $(\delta,\delta+1)$, and has support $[0,\2\delta + 1]$. By affine transformations, the function can be made to be $1$ on any bounded interval $K$ and support on any interval containing $K$.
+  By mirroring the function $l(x)$ from the previous example around $x=\delta+1$, we get a function $f(x)$  which is constantly equal to $1$ on $(\delta,\delta+1)$, and has support $[0,2\delta + 1]$. By affine transformations, the function can be made to be $1$ on any bounded interval $K$ and support on any interval containing $K$.
 \end{example}
 
 \begin{example}
@@ -645,7 +674,7 @@ we get a function which is constantly equal to one on a closed, bounded square, 
 The last example can be generalized to general manifolds:
 \begin{prop}
 \label{prop:suppfunc}
-Let $M$ be a smooth manifold and $K$ a compact subset of $M$ and $U$ an open subset containing $K$. Then there exists a smooth function $\beta:M \to [0,1]$ that is constant equal to $1$ on $K$ and compact support contained in $U$.
+Let $M$ be a smooth manifold and $K$ a compact subset of $M$ and $U$ an open subset containing $K$. Then there exists a smooth function $\beta\colon M \to [0,1]$ that is constant equal to $1$ on $K$ and compact support contained in $U$.
 \end{prop}
 \begin{proof}
 We first do the case $M=\R^n$. In this case, $K$ is compact, so it is closed and bounded. For each $p \in K$, let $U_p$ be an open square of radius $\epsilon_p$ centered at $p$ and contained in $U$. The set of all these $U_p$ is an open cover of $K$, and since $K$ is compact, we can choose finitely many such $p$. By translation, the function in the last example, can be made such that $f_p$ is positive in the interior of $U_p$ and zero outside (so its support is $\bar{U_p}$), and constant $1$ on $K \cap U_p$. Now define the following function:
@@ -693,8 +722,9 @@ Moreover, we can choose these $\UU^\prime$ in such a way that $\UU^\prime \appro
 We skip the proof. Now it's time to note that we are hiding details under carpets: for this theorem to be true, we must assume that $M$ is $\sigma$-compact, meaning that we can write $M$ as a countable union of compact subsets. In particular, this is clearly true if $M$ itself is compact. Note also that all subsets of $\R^n$ have this property.
 \end{remark}
 
-\begin{thm}
-Let $\UU$ be an open cover of $M$. Then it is possible to choose for each $U \in \UU$ an open set $U^\prime$ with $\bar{U^\prime} subset U$ in such a way that the new collection $\{ U^\prime \}$ is also an open cover $M$. 
+\begin{thm}[Shrinking Lemma]
+\label{shrinkinglemma}
+Let $\UU$ be an open cover of $M$. Then it is possible to choose for each $U \in \UU$ an open set $U^\prime$ with $\bar{U^\prime} \subset U$ in such a way that the new collection $\{ U^\prime \}$ is also an open cover $M$. 
 \end{thm}
 
 \begin{remark}
@@ -710,7 +740,6 @@ Let $\UU$ be an open locally finite cover of a manifold $M$. Then there is a col
 \end{enumerate}
 \end{thm}
 
-You should think of this theorem as saying that open covers of a manifold can be separated by continous functions. (?)
 
 \begin{defi}
   A collection $\{ \varphi_i:M \to [0,1] \}$ is called a \emph{partition of unity} if (1) the collection $\{ p \, | \, \varphi_i(p) \neq 0 \}$ is locally finite and (2) if $\sum_i \varphi_i(p)=1$ for all $p \in M$. 
@@ -729,8 +758,19 @@ Then the partition of unity looks like the graph above. Notice that it sums to $
 \end{example}
 
 \begin{thm}
-  Let $M^n$ be a compact manifold. Then there exists an embedding $f:M \to R^N$ for some $N$.
+  Let $M^n$ be a compact manifold. Then there exists an embedding $f:M \to \R^N$ for some $N$.
 \end{thm}
+\begin{proof}
+By compactness we can choose a finite number of coordinate systems $\{ (x_i,U_i) \}_{i=1,\ldots,k}$, covering $M$. By the Shrinking Lemma \ref{shrinkinglemma}, choose $U_i^\prime \subseteq U_i$, and by Partition of Unity, choose functions $\psi_i\colon M \to [0,1]$ that are $1$ on $\bar{U_i^\prime}$ and have support contained in $U_i$. This can be done by Proposition \ref{prop:suppfunc}.
+
+Define $f:M \to \R^N$, where $N=k(n+1)$, by
+\[
+f = \left(\psi_1 \cdot x_1, \ldots, \psi_k \cdot x_k, \psi_1,\ldots, \psi_k\right).
+\] 
+This is an immersion: any point $p \in M$ is contained in some $U_i^\prime$, and on $U_i^\prime$, where $\psi_i=1$, the $N \times n$ Jacobian matrix contains the identity matrix $\left(\dd{x_i^\alpha}{x_i^\beta}\right)$.
+
+The map is also one-one. For suppose that $f(p)=f(q)$. There is some $i$ with $p \in U_i^\prime$. But then $q \in U_i$ since the support of $\psi_i$ is contained in that set. Moreover, $\psi_i \cdot x_i(p)=\psi_i x_i(q)$, so $p=q$, since $x_i$ is $1-1$.
+\end{proof}
 \begin{remark}
 Note that this embedding is highly non-canonical. It contains several layers of choices. The proof begins by \emph{choosing} a finite open cover, and then \emph{choosing} a refinement, and then choosing a partition of unity. None of these choices are natural in any sense.
 \end{remark} 
@@ -741,11 +781,11 @@ Note that this embedding is highly non-canonical. It contains several layers of 
 
 Think of a surface $S \subseteq \R^3$ and let $p$ be a point on $S$. Then the tangent plane of $S$ is a linear subspace of $\R^3$. Thus, in the case of embedded manifold, it is easy to assign a ``tangent space'' to each point $p \in S$. However, for general manifolds, we are not given an embedding anywhere. What we want is some rule that assigns to each point $p \in S$ a vector space of the same dimension as $S$, called the ``tangent space''. Also, we want this rule to reflect the global structure of $S$ in a natural way.
 
-More formally, we want a functor from manifolds to vector bundles, such that its restriction to chart domains, the result is just $\R^n$, as a vector space. To carry this out, we first formally introduce the ``tangent space'' of $R^n$ (or open subsets thereof).
+More formally, we want a functor from manifolds to vector bundles, such that its restriction to chart domains, the result is just $\R^n$, as a vector space. To carry this out, we first formally introduce the ``tangent space'' of $\R^n$ (or open subsets thereof).
 
 We define $T(\R^n) := \R^n \times \R^n$, and we write its elements as $(p,v)$ or $v_p$, where we think of the left factor as the \emph{manifold} $\R^n$, and the right factor as the \emph{vector space} $\R^n$. Thus, to each \emph{point} $p$ in $\R^n$, we attach a \emph{vector} $v_p$.
 
-So far so good. Now we have defined the functor $T$ on objects. Now we define it on morphisms, so let $f:\R^n \to \R^m$ be a smooth function. Then we define $Tf:T(\R^n) \to T(\R^m)$ by $Tf(p,v)=(f(p),Df(p)(v))$. By the chain rule, this is really a functor, because if $g:\R^m \to \R^k$ is another smooth function, we have
+Now we have defined the functor $T$ on objects. Now we define it on morphisms, so let $f:\R^n \to \R^m$ be a smooth function. Then we define $Tf:T(\R^n) \to T(\R^m)$ by $Tf(p,v)=(f(p),Df(p)(v))$. By the chain rule, this is really a functor, because if $g:\R^m \to \R^k$ is another smooth function, we have
 \begin{align*}
 T(g) \circ T(f) (p,v) &= T(g)(f(p),Df(p)(v)) \\
 &= \left( g(f(p)) , Dg(f(p))(Df(p)(v))\right) \\
@@ -820,7 +860,6 @@ Then the non-triviality of $TS^2$ follows from the the Hairy Ball Theorem, which
 \sum_{i} \mathrm{index}_{x_i}(X) = \chi,
 \]
 where the left-hand-side is a certain sum ranging over the zeros of the vector field $X$, and the right-hand-side is the Euler characteristic of the sphere, which is two - so $X$ must have at least one zero.
-
 \end{example}
 
 The construction of the tangent space here is the most intuitive one: locally it looks like $U \times \R^n$. However, there are other views one can take. One is to consider points of $TM$ as equivalence classes of curves, as follows: let $[x,v]_p \in T_pM$. Then we say that this corresponds to a curve $x^{-1} \circ \gamma$ where $\gamma$ is a curve in $\R^n$ with $\gamma^\prime(0) = v$ (here $x$ is a coordinate chart). It is not so difficult to see for every vector $v$ in $T_pM$, there is a curve with derivative $v$. Taking equivalence classes resolves uniqueness.
@@ -848,12 +887,19 @@ Thus $\ell(f)(q)=0$ for all $q \in W$, hence $\ell(f)=0$.
 
 Here's a lemma:
 \begin{lemma}
-Let $f \in \OO(U)$ \footnote{From now on, unless otherwise stated, the notation $\OO(U)$ will denote the set of $C^\infty$-functions from $U$ to $\R$.}, where $U \subset \R^n$ and $U$ is convex. Then there are $C^\infty$ functions $g_i: U \to \R$ with
+Let $f \in \OO(U)$ \footnote{From now on, unless otherwise stated, the notation $\OO(U)$ will denote the set of $C^\infty$-functions from $U$ to $\R$.} with $f(0)=0$, where $U \subset \R^n$ and $U$ is convex. Then there are $C^\infty$ functions $g_i: U \to \R$ with
 \begin{enumerate}
 \item $f(x^1,\cdots,x^n) = \sum_{i=1} ^n x^i g_i(x^1,\cdots, x^n)$ for all $x \in U$.
 \item $g_i(0) = D_i(f)(0)$.
 \end{enumerate}
 \end{lemma}
+\begin{proof}
+ Define a new function $h_x:[0,1] \to \R$ for each $x \in U$ as $h_x(t)=f(tx)$. This makes sense since $U$ is assumed to be convex. Then
+\[
+f(x)=f(x)-f(0) = \int_0^1 h_x^\prime (t) \d t = \int_0 ^ 1 \sum_{i=1} ^n D_if(tx) x^i \d t.
+\]
+Therefore we can let $g_i(x)=\int_0^1 D_i f(tx) \d t$. 
+\end{proof}
 
 Note that if $(x,U)$ is a chart domain of $M$ around $p$, then $\restr{\dd{}{x^i}}{p}$ is a derivation at $p$. In fact, the derivations $\restr{\dd{}{x^i}}{p}$ span the space of derivations at $p$. 
 
@@ -867,6 +913,13 @@ span this vector space, and any derivation $\ell$ can be written
 \ell = \sum_{i=1}^n \ell(x^i) \cdot \restr{\dd{}{x^i}}{p}.
 \]
 \end{thm}
+\begin{proof}
+We can clearly assume $M=\R^n$. Then using the Lemma, we see that any $\ell(f)$, where $\ell$ is a derivation, can be written as
+\[
+\ell(f) = \sum_{i=1} ^n \ell(x^i) \dd{f}{x^i}(0).
+\]
+Thus they span the space of derivations, and they are clearly linearly independent. 
+\end{proof}
 
 If $(y,V)$ is another coordinate system, then we know that $\restr{\dd{}{y^i}}{p} = \sum_{j=1}^n \restr{\dd{x^j}{y^i}}{p} \restr{\dd{}{x^j}}{p}$, so the derivations transform exactly the same way as the charts of $TM$. So we identify them.
 
@@ -890,11 +943,11 @@ fX(p) = f(p) X(p).
 \]
 
 Thus we see that the set of vector fields, $\Gamma(TM)$, is a module over the $C^\infty$-functions $C^\infty(M)=\Gamma(\OO_
-M)$. In fact, we get a coherent sheaf $\mathcal{TM}$ over $\OO_M$.
+M)$.
 
-If $f: M \to \R$ is a function and $X$ is a vector field, then we can define a new function $\bar{X}(f):M \to \R$ by letting $X$ operate on $f$ at each point:
+If $f: M \to \R$ is a function and $X$ is a vector field, then we can define a new function ${X}(f):M \to \R$ by letting $X$ operate on $f$ at each point:
 \[
-\bar{X}(f)(p) = X_p(f).
+X(f)(p) = X_p(f).
 \]
 
 \begin{example}
@@ -907,9 +960,22 @@ X(f) = x \dd{f}{x} + y \dd{f}{y} = 2x^2+2y^2.
 \newpage
 \section{Tensors}
 
+ \subsection{Miscellany on the exterior algebra}
 The construction of the tangent bundle can be generalized to give other types of vector bundles: each fiber $TM_p$ can be dualized to give $T^\ast M_p$, the dual vector space. These spaces glue to give the \emph{cotangent bundle}, denoted by $T^\ast M$. It has a basis consisting of \emph{differentials}.
 
-Every function $f:M \to \R$ give rise to a section $df:M \to T^\ast M$ of the cotangent bundle as follows: we must say how $df(p)$ acts on tangent vectors: $df(p)(X) := X(f) \in \R$. To see this in coordinates, see the Appendix.
+Now each of the $T^\ast M_p$ are finite-dimensional vector spaces, and as such, we can form the \emph{exterior algebra} $\bigwedge T^\ast M_p$. This is the quotient of the tensor algebra on $T^\ast M_p$ by the two-sided ideal generated by elements of the form $v_1 \otimes \cdots \otimes v_k$ with $v_i=v_{i+1}$ for some $i$.  This is a graded algebra, so we write $\bigwedge T^\ast M_p = \bigoplus_{k=0}^n \bigwedge^k T^\ast M_p$. The sum is finite, since $\bigwedge^{n+1} T^\ast M_p=0$, as is easily seen (here $n$ is the dimension of $M$). Elements of $\bigwedge^p T^\ast M_p$ are called $p$-forms, and we will see later that they are what one integrates over.
+
+Since we have a canonical isomorphism (for vector spaces $V$) $\bigwedge V^\ast \simeq (\bigwedge V)^\ast$, we think of the exterior algebra as parametrizing multilinear maps $T_pM \times \ldots \times T_pM \to \R$.
+
+\subsection{The cotangent bundle}
+
+Given a map $f:M \to \R$, we can produce a section of the cotangent bundle:
+\begin{defi}
+We define a section $\d f: M \to T^\ast M$ as follows: $\d f(p)$ should act on tangent vectors, so given a tangent vector $X_p \in T_pM$, we define \[
+\d f(p) (X_p) := X_p(f)
+\]
+\end{defi}
+To see how this looks like in a chart, see the Appendix.
 
 The cotangent bundle have better functorial properties than the tangent bundle. In the case of the tangent bundle, there were no way to push tangent fields forward nor pull them back via a map $f:M \to N$. However, it is possible to pull back cotangent fields (this is sort of a miracle, as the cotagent bundle does not appear all that different from the tangent bundle). Given a map $f:M \to N$, and a section $\omega:N \to T^\ast N$, we can define a new section $f^\ast \omega:M \to T^\ast M$ as follows: we must say how it acts on vectors $X_p \in T_pM$:
 \[
@@ -920,16 +986,27 @@ The idea is clear: tangent vectors can be pushed forward, and this allows us to 
 Wikipedia has a good article on pullbacks: \url{http://en.wikipedia.org/wiki/Pullback_(differential_geometry)}. 
 
 \begin{example}
-Let $M=S^1$, considered as a subset of $\C$. Then $\sin$ can be considered as a function $S^1 \to \R$, by mapping $S^1 \ni e^{i\theta} \mapsto \frac{1}{2i}(e^{i\theta}-e^{-i\theta})=\sin \theta$. For small values of $\theta$, the map $e^{i\theta} \mapsto \theta$ is a chart $U \to (\theta-c,\theta+c)$. In this chart, $d\sin \theta = \cos \theta d\theta$.
-\end{example}
-
-\begin{example}
-Let $M=\R^3$. Let $\omega$ be the section of the cotangent bundle defined by $z dx-dz$. Let $X=y \dd{}{x}+x \dd{}{y}$. Then 
+Let $M=\R^3$. Let $\omega$ be the section of the cotangent bundle defined by $z \d x-\d z$. Let $X=y \dd{}{x}+x \dd{}{y}$. Then 
 \[
 \omega(X) = z.
 \]
-Here we use only that $dx^i$ and $\dd{}{x^i}$ are dual bases.
+Here we use only that $\d x^i$ and $\dd{}{x^i}$ are dual bases.
 \end{example}
+
+\begin{example}
+Let $c:S^1 \to \R^2$ be given by $\theta \mapsto (\sin \theta, \cos \theta)$ and let $\omega = y \d x - x \d y$ be a differential form on $\R^2$. Then $c^\ast \omega$ is given by
+\[
+c^\ast \omega = \cos \theta \dd{c^1}{\theta} \d \theta -\sin \theta \dd{c^2}{\theta} \d \theta
+ = \left( \cos^2 \theta + \sin^2 \theta  \right) \d \theta = \d \theta.
+\]
+\end{example}
+
+\subsection{General tensor fields}
+
+\begin{prop}
+The smooth bilinear pairing $\Gamma(TM) \times \Gamma(T^\ast M) \to C^\infty (M)$ given by $(X,\omega) \mapsto \omega(X)$ defines an isomorphism $\Gamma(T^\ast M) \approx \Gamma(TM)^\ast$. 
+\end{prop}
+Thus to give a tensor field is the same as giving a multilinear map from tangent vectors. This is really a theorem, and relies heavily on the existence of bump functions.
  
 
 \newpage
@@ -1076,17 +1153,94 @@ For proof, see Spivak. To get a sense of what this theorem is about, image $X$ b
 
 The map $t \mapsto \phi_t$ above is called a \emph{1-parameter group of diffeomorphisms} and is \emph{generated by $X$}. If $\mathrm{Diff}(M)$ is the group of diffeomorphisms of $M$, then the above tells us that each vector field $X$ gives us a map $\R \to \mathrm{Diff}(M)$, given by $t \mapsto \phi_t$. 
 
+\begin{thm}
+  Let $X$ be a smooth vector field on $M$ with $X(p) \neq 0$. Then there is a coordinate system $(x,U)$ around $p$ such that
+\[
+X = \dd{}{x^1}.
+\]
+\end{thm}
+
+\subsection{Lie derivatives}
+
+Here are some definitions that are really different instances of the same definition: 
+\begin{align*}
+  L_Xf &= X(f) = \lim_{h \to 0} \frac 1h \left[ f \circ \phi_h - f \right] \\ 
+L_X \omega &= \lim_{h \to 0} \frac 1h \left[ (\phi_h^\ast \omega)-\omega \right] \\
+L_XY &= \lim_{h \to 0} \frac 1h \left[ Y-(\phi_{h\ast}Y)_p \right]
+\end{align*}
+
+\begin{prop}
+Let $X,Y_1,Y_2$ be vector fields and $\omega_1,\omega_2$ be covector fields. Then
+\begin{enumerate}
+\item $L_x(Y_1 +Y_2) = L_XY_1+L_XY_2$.
+\item $L_X(\omega_1+\omega_2)=L_X\omega_1+L_X\omega_2$.
+\item $L_X(fY) = Xf \cdot Y + f \cdot L_XY$.
+\item $L_X(f \cdot \omega) = Xf \cdot \omega + f \cdot L_X \omega$.
+\end{enumerate}
+\end{prop}
+
+If we let $[X,Y]$ denote the vector field given by $[X,Y]_p(f)=X_p(Yf)-Y_p(Xf)$, then one sees that
+\[
+L_XY = [X,Y].
+\]
+
+Now it follows, almost trivially, that
+\[
+L_XY = -L_YX
+\]
+and
+\[
+L_XX=0.
+\]
+We also have the Jacobi identity:
+\[
+[X,[Y,Z]] + [Y,[Z,X]]+[Z,[X,Y]] = 0.
+\]
+
+Recall: If we have a diffeomorphism, we can push forward vector fields by defining $(\alpha_\ast X)_q = \alpha_\ast X_{\alpha^{-1}(q)}$.
+
+\begin{lemma}
+ Let $\alpha:M \to N$ be a diffeomorphism and $X$ a vector field on $M$ which generates $\{ \phi_t \}$. Then $\alpha_\ast X$ generated $\{ \alpha \circ \phi_t \circ \alpha^{-1}\}$.
+\end{lemma}
+
+\begin{corr}
+  If $\alpha:M \to M$, then $\alpha_\ast X = X$ if and only if $\phi_t \circ \alpha = \alpha \circ \phi_t$ for all $t$.
+\end{corr}
+
+\begin{lemma}
+ Let $X$ generate $\{ \phi_t \}$ and $Y$ generate $\{ \psi_t \}$. Then $[X,Y]=0$ if and only if $\phi_t \circ \psi_s = \psi_s \circ \phi_t$ for all $s,t$.
+\end{lemma}
+
+\begin{thm}
+ If $X_1,\cdots,X_k$ are linearly independent $C^\infty$ vector fields around $p$ and $[X_i,X_j]=0$ for all $i,j$, then there is a coordinate system $(x,U)$ around $p$ such that
+\[
+X_\alpha = \dd{}{x^i}
+\]
+for $i=1,\cdots,n$. 
+\end{thm}
+
 \newpage
 \section{Differential forms}
 
-[[ something about the exterior algebra etc]]
+Depending upon taste, there are several ways to define differential forms. This has already been mentioned in an earlier chapter. Perhaps this is the time to reflect upon the strange order of things in Spivak's book?
 
-Recall that we have defined a map $d:\Gamma(\OO_M) \to \Gamma(T^\ast M)$ by sending a function $f$ to its differential $df$, that is, $df:=X(f)$. In a coordinate system we can write this as 
+Suffice it to say that the only thing that is needed of the exterior algebra, regardless of the particular construction, is the anticommutativitiy property, mimicking determinants (or if you're so inclined: defining determinants).
+
+\subsection{Basic theorems}
+
+\begin{thm}
+ Let $f:M \to N$ be a map between $n$-manifolds of the same dimension $n$. Let $(x,U)$ be a coordinate system around $p \in M$ and $(y,V)$ be a coordinate system around $q=f(p) \in N$. Then
 \[
-\d f  = \sum_{i=1}^n \dd{f}{x^j} \d x^j.
+f^\ast(g\,  \d y^1 \wedge \ldots \wedge \d y^n) = (g \circ f) \cdot \det \left( \dd{y^i \circ f}{x^j} \right) \d x^1 \wedge \ldots \wedge \d x^n.
 \]
+\end{thm}
 
-We can generalize this to $k$-forms. Namely, write $\omega$ as 
+\begin{thm}
+ A manifold $M$ is orientable if and only if there exists a non-vanishing form $\omega \in \Omega^n(M)$. 
+\end{thm}
+
+\subsection{The de Rham complex}
+If
 \[
 \omega = \sum_I \omega_I dx^I.
 \]
@@ -1122,17 +1276,102 @@ The above proposition says that for each coordinate system $(x,U)$, we have a un
 \[
 \d \omega(p) = \d (\omega_{U})(p).
 \]
-This proves the claim. \footnote{However, I don't see why. If $U^prime$ is another coordinate chart, how does one see that $d_{U^\prime}(\omega |U^\prime)(p)$ gives the same number?}
+This proves the claim. \footnote{However, I don't see why. If $U^\prime$ is another coordinate chart, how does one see that $d_{U^\prime}(\omega |U^\prime)(p)$ gives the same number?}
 
 \end{proof}
 
 \begin{prop}
+\label{pullbackcomm}
 If $f:M \to N$ is $C^\infty$ and $\omega$ is a $k$-form on $N$, then 
 \[
 f^\ast (d \omega) = d(f^\ast \omega).
  \]
-6
+
  \end{prop}
+
+\subsection{The Poincaré Lemma}
+
+Recall that a manifold $M$ is \emph{smoothly contractible to a point $p_0 \in M$} if there is a map $H:M \times [0,1] \to M$ such that $\restr{H}{1}=\id_M$ and $\restr{H}{0}$ is the constant map mapping to $p_0$. 
+
+\begin{example}
+The canonical example is $\R^n$: a contraction to $\vec 0 \in \R^n$ is defined just by $t \vec x $. More generally, any convex region in $\R^n$ is contractible. Even more generally, every star-shaped region in $\R^n$ is contractible. 
+
+Even more generally, any region homotopic to a starshaped (hence convex) region is contractible.
+\end{example}
+
+The Poincaré Lemma states that if $\omega$ is a closed form on a contractible manifold $M$, then $M$ is exact. In short, $H^k_{dR}(M)=0$ for $k > 0$. In fact, we will prove something more general. To do that, we need some terminology:
+
+For any $t \in [0,1]$ we have natural maps $i_t: M \hookrightarrow M \times [0,1]$. Thus for each $t$, we have pullback maps $i_t^\ast: \Omega_{M \times [0,1]}^k \to \Omega_M^k$. By Proposition \ref{pullbackcomm}, this induces maps on cohomology. We will prove that they in fact define the \emph{same} map on cohomology. In fact, they are chain homotopic. We will construct a map $I:\Omega_{M \times [0,1]}^{k+1} \to \Omega_M^k$ for all $k$, such that $\d (I \omega)+I(\d \omega) = i_1^\ast \omega - i_2^\ast \omega$. By standard homological algebra, this implies that the maps on cohomology are equal.
+
+We have the following diagram:
+\[
+\xymatrix{
+\Omega_M^{k-1} \ar[r]^d & \Omega_M^k & \\
+\Omega_{M \times [0,1]}^{k-1} \ar@<-0.5ex>[u]_{i_1^\ast} \ar@<0.5ex>[u]^{i_0^\ast } \ar[r]^d &
+\Omega_{M \times[0,1]}^k \ar@<-0.5ex>[u]_{i_1^\ast} \ar@<0.5ex>[u]^{i_0^\ast } \ar[r]^d  \ar[ul]_I &
+\Omega_{M \times[0,1]}^{k+1} \ar[ul]_I
+}
+\]
+We want to show the relation $\d(I \omega)+I(\d \omega)=i_1^\ast \omega - i_2^\ast \omega$ for some $I$ that will be defined now.
+
+Recall that if $V$ is a vector space that is the tensor product of two vector spaces $A,B$, then $\bigwedge^k V = \bigoplus_{i+j=k} \bigwedge^i A \otimes \bigwedge^j B$. Applying this to $\Omega_{M \times [0,1]}^k$ gives that we have a canonical decomposition as abelian groups
+
+\[
+\Omega_{M \times [0,1]}^k \approx \Omega_M^k \oplus \Omega_{[0,1]}^1 \otimes \Omega_M^{k-1} \approx \Omega_M^k \oplus \Omega_M^{k-1},
+\]
+where the last isomorphism is non-canonical, and can be seen after choosing bases. In particular, this says that any $k$-form $\omega \in \Omega_{M \times [0,1]}^k$ can be written uniquely (after choosing bases) as $\omega_1 + (\d t \wedge \eta)$ for some $\eta \in \Omega_{M \times [0,1]}^{k-1}$.\footnote{As it stands, this is not precise. There exists a canonical splitting, but not as stated. Both factors are still $C^\infty(M \times [0,1])$-modules, and this is not reflected in the notation.} 
+
+Having written $\omega$ in this way, we define $I$ as follows:
+\[
+I\omega(p)(X_1,\cdots,X_{k-1}) := \int_0^1 \eta(p,t)(i_{t\ast} X_1,\ldots, i_{t\ast}X_{k-1}) \d t.
+\]
+In coordinates, this works as follows: Suppose $(x,U)$ is a coordinate chart. Then we can write $\omega= \sum_I a^I dx^I + \sum_J a^J \d t \wedge dx^J$ where $I$ ranges over $k$-subsets of $\{1,\cdots,n\}$, and $J$ ranges over $(k-1)$-subsets of $\{1,\cdots, n\}$. Then $\eta=\sum_J a^J dx^J$. Thus
+\[
+I\omega(p) = \sum_J \int_0^1 a^J(p,t) \d t \, dx^J.
+\]
+
+Here's the theorem:
+\begin{thm}
+ For any $k$-form $\omega$ on $M \times [0,1]$, we have
+\[
+i_1^\ast \omega - i_0^\ast \omega = \d (I\omega) + I(\d \omega).
+\]
+\end{thm}
+\begin{proof}
+ Since all maps involved are linear, there are basically just two cases. \textbf{Case A} is when $\omega= \omega_1$ (in the notation above), involving no $\d t$-terms, say $\omega = f dx^I$. In this case $I\omega =0$, so we need to prove that $i_1^\ast \omega - i_0^\ast \omega = I(\d \omega)$. The left hand side is just
+\[
+i_1^\ast \omega(p) - i_0^\ast \omega(p) = f(p,1) dx^I - f(p,0) dx^I=\left(f(p,1)-f(p,0)\right) \d x^I.
+\]
+The right hand side is
+\begin{align*}
+I(d(f \d x^I)) &= I\left(\left( \sum_i \dd{f}{x^i} dx^i + \dd{f}{t}\right) \wedge dx^I\right) \\
+&=\left( \int_0^1 \dd{f}{t} \d t \right) dx^I
+\end{align*}
+But these two expressions are equal by the fundamental theorem of calculus.
+
+Now for \textbf{Case B}. Here $\omega = f \d t \wedge \d x^J$. In this case $i_t^\ast \omega = 0$ for all $t$, so we want to prove that $\d (I \omega) = - I(\d \omega)$:
+\begin{align*}
+\d (I \omega)(p) &= \d \,  \left( \int_0^1 f(p,t) \d t \wedge dx^J \right) \\
+&= \sum_{i=1}^n \dd{}{x^i}\left( \int_0^1 f(p,t)\right) \d x^i \wedge dx^J \\
+I(\d \omega)(p) &= I\left(\sum_{i=1}^n \dd{f}{x^i} \d x^i \wedge \d t \wedge \d x^J\right) \\
+&=I\left( - \sum_{i=1}^n \dd{f}{x^i} \d t \wedge \d x^i \wedge \d x^J\right) \\
+&= -\sum_{i=1}^n \left(\int_0^1 \dd{f}{x^i} \d t \right) \d x^i \wedge \d x^J.
+\end{align*}
+Thus the proof is complete.
+\end{proof}
+
+The Poincaré Lemma now follows as an easy corollary:
+\begin{lemma}[Poincaré\footnote{Though it is not clear if Poincaré actually proved it.}]
+
+If $M$ is contractible, then $H^k_{dR}(M)=0$ for $k > 0$. 
+\end{lemma}
+
+\begin{proof}
+Let $\omega$ be such that $d \omega =0$.  We are given a $H:M \times [0,1] \to M$ as above. I.e. such that $H \circ i_0 = p_0$ (the constant map to $p_0$), and $H \circ i_1 = \id_M$. Thus \[\omega = \id_M^\ast \omega = (H \circ i_1)^\ast \omega = i_1^\ast (H^\ast \omega) \] and also \[ 0 = (H \circ i_0)^\ast(\omega) = i_0^\ast (H^\ast \omega)\] 
+This last pullback is zero because every form on a point-space vanishes. But also $\d (H^\ast \omega) = H^\ast( \d \omega)=H^\ast(0)=0$, by Proposition \ref{pullbackcomm}. 
+But then $\omega = i_1^\ast(H^\ast \omega) = d(I(H^\ast \omega))$ by the Theorem. Thus $\omega$ is a boundary, and so $H^k=0$. 
+\end{proof}
+
 
 \newpage
 \section{Integration}
@@ -1252,7 +1491,7 @@ Thus $(I_{(i,\alpha)}^n)_{(j,\beta)}=(I_{(j+1,\beta}^n)_{(i,\alpha)}$ for $i \le
 \partial \partial(c) &= \partial(\sum_{i=1}^n \sum_{\alpha} (-1)^{i+\alpha} c_{(i,\alpha)}) \\
 &= \sum_{i=1}^n \sum_{\alpha} \sum_\beta \sum_{j=1}^{n-1} (-1)^{i+j+\alpha+\beta}(c_{(i,\alpha)})_{(j,\beta)}.  
 \end{align*}
-But $(c_{(j+1,\beta)})_{(i,\alpha)$ appear with opposite sign as $(c_{(i,\alpha)})_{(j,\beta)}$, so all terms cancel!
+But $(c_{(j+1,\beta)})_{(i,\alpha)}$ appear with opposite sign as $(c_{(i,\alpha)})_{(j,\beta)}$, so all terms cancel!
 \end{proof}
 
 The homology groups gives the \emph{singular smooth  homology groups of $M$ (with coefficients in $\R$)}, and are denoted simply by $H_{\infty}^k(M,\R)$. By applying $\Hom(-,\R)$ to the complex, we get the dual complex, and thus the \emph{singular smooth cohomology groups of $M$}, denoted by $H_{\infty}^k(M,\R)$.
@@ -1334,9 +1573,54 @@ Thus all curves integrate to zero on all forms, and then by the Lemma, we must h
 \end{proof}
 
 
+\subsection{Cohomology of the sphere}
+
+We will compute the cohomology of the sphere differently than what is done in the book, which uses a partition of unity argument.
+
+For this, we will need the Mayer-Vietoris-sequence.
+
+\begin{prop}[Mayer-Vietoris]
+Let $M=U \cup V$ be covered by two open sets. Then we have an exact sequence
+\[
+ \cdots H^{k-1}(U \cap V) \to H^k(M) \to H^k(U) \oplus H^k(V) \to H^k(U \cap V) \to H^{k+1}(M) \to \cdots
+\]
+\end{prop}
+\begin{proof}
+  First note that we have short exact sequence of complexes:
+\[
+0 \to \Omega^\circ(U \cup V) \to \Omega^\circ(U) \oplus \Omega^\circ(V) \to \Omega^\circ(U \cap V) \to 0
+\]
+This gives the long exact sequence.
+\end{proof}
+
+\begin{corr}
+For $M=S^n$ and $n \geq 1$ we have $H^0(S^n)=\R$,$H^n(S^n)=\R$ and $H^k(S^n)=0$ for $0 < k < n$. 
+\end{corr}
+\begin{proof}
+We can cover $S^n$ by two open sets as follows. Let $U=S^n\{ N\}$, removing the north pole. Similarly, remove the south pole to get $V$. Then $U \cap V \approx \R^n \bs \{ 0 \}$. But this is homotopic to the $n-1$-sphere as follows:
+\[
+t \vec x + (1-t) \frac{\vec x}{\mid \vec x \mid }.
+\]
+\end{proof}
 
 \newpage
 \appendix
+\newpage
+\section{Definitions}
+Here $f:M \to N$ is a map. $\alpha:M \to N$ is a diffeomorphism. $X$ is a vector field. $\{ \phi_h \}$ is the $1$-parameter subgroup generated by $X$.
+\begin{align*}
+  (f_\ast X_p)(g) &= X_p(g \circ f) \\
+(f^\ast \omega)(p)(X_p) &= \omega(f(p))(f_\ast X_p) \\
+(\alpha_\ast X)_p &= \alpha_\ast(X_{\alpha^{-1}(p)}) \\
+L_X f &= Xf \\
+L_X \omega &= \lim_{h \to 0} \frac 1h \left[ \phi_h^\ast \omega -\omega \right] \\
+L_XY &= \lim_{h \to 0} \frac 1h \left[Y - \phi_{h \ast} Y \right] = [X,Y](p) \\
+\phi^\ast(df)(Y) &= Y(f \circ \phi) \\
+df(p)(X_p) &= X_p(f) \\
+L_X \d f &= d(L_X f) = d(Xf) \\ 
+\end{align*}
+
+\newpage
 \section{Formulas}
  
 \subsection{Local description of (co-)vector fields}
@@ -1555,12 +1839,6 @@ L_XY &= \sum_{i=1}^n \sum_{j=1}^n \left( a^j \dd{b^i}{x^j}-b^i \dd{a^j}{x^i}\rig
 \end{align*}
 
 \end{proof}
-
-
-
-\subsection{Miscellaneous}
-
-There is a natural pairing $\Gamma(TM) \times \Gamma(T^\ast M) \to C^\infty(M)$, given by $(X,\omega) \mapsto \left(p \mapsto \omega(p)(X_p) \right)$.
 
 
 \section{A concrete exercise}

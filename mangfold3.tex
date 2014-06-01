@@ -55,7 +55,7 @@ In Calculus, manifolds (in those rare occasions they were encountered) usually a
 
 We start with the definition of a \emph{topological manifold}.
 
-\begin{defi}
+\begin{defi}[Intuitive definition]
 A \emph{topological manifold} $M$ is a topological space such that each $x \in M$ has a neighbourhood $U$ such that $U$ is homeomorphic to $\R^n$.
 \end{defi}
 
@@ -144,18 +144,49 @@ Let $M$ be a topological space. We say that $M$ is a \emph{manifold with boundar
 
 We call the $n$ in the definition the \emph{dimension} of the manifold. However, to prove that the dimension is well-defined, reduces to proving that if $\R^n \approx \R^m$, then $m=n$. This is a very non-trivial problem, best proved with tools from algebraic topology, using such tools as homology groups and long exact sequences.
 
+\begin{proof}[Proof of invariance of domain]
+Let us pretend we know the machinery of singular homology. Then the proof of invariance of domain go like this: Suppose we have two non-empty open sets $U \subset \R^n$ and $V \subset \R^m$ and a homeomorphism $U \approx V$. Suppose $x \in U$. By excision, we have $H_k(U,U \bs \{x \}) \approx H_k(\R^n, \R^n \bs \{ x\})$. By the long exact sequence for the pair $(\R^n,\R^n \bs \{ x \})$, we get $H_k(\R^n,\R^n \bs \{x \}) \approx \tilde{H}_{k-1}(\R^n \bs \{x\})$. But this latter space deformation retracts onto $S^{m-1}$, so we conclude that $H_k(U, U \bs \{x\}) \neq 0$ if and only if $k=n$ or $k=0$. But since homeomorphisms induce isomorphisms on homology, we must have $k=m$ as well. 
+\end{proof}
+
+\subsection{Problems with the naïve definition}
+
+Requiring just that a topological manifold $M$ is locally Euclidean is not enough. For example, this does not guarantuee that it is Hausdorff, as being Hausdorff is not a local property. For example, consider the \emph{line with two origins}:
+
+\begin{example}[Line with two origins]
+Start with two copies of the real line $X_1=\R$ and $X_2=\R$. Let $U,V$ be the subsets $\R \bs \{ 0\}$ of $X_1,X_2$, respectively. Glue them together with the identity map and let $X$ be the quotient space. Then obviously every point $x \in X \bs \{ 0\}$ has a neighbourhood homeomorphic to an interval in $\R$, by construction. But notice that $X$ has two points that we want to call $0$, one for each copy of $\R$. So let us call them $0$ and $0^\prime$. Both $0$ and $0^\prime$ have neighbourhoods homeomorphic to an interval in $\R$.
+
+But it is not Hausdorff. Every neighbourhood of $0$ intersects every neighbourhood of $0^\prime$.\footnote{Almost exactly the same construction is used as the prime example of a non-separated scheme in algebraic geometry.} 
+\end{example}
+
+Thus, we want to demand also that $M$ is Hausdorff. But this is not enough to get a good theory. We also want to demand that $M$ is \emph{paracompact}, meaning that every open cover has an open refinement that is locally finite.
+
+A counterexample is given by \emph{the long line} $\mathbb L$. It is constructed by glueing together uncountably many intervals $[0,1)$ along their endpoints. Thus $\mathbb L$ is Hausdorff and locally Euclidean. It can however be shown that $\mathbb L$ is not paracompact.
+
+Thus we arrive at our more technical definition of a topological manifold:
+\begin{defi}
+ A \emph{topological manifold} is a topological space $M$ such that every $x \in M$ has a neighbourhood homeomorphic to an open set in $\R^n$ for some $n$, and such that $M$ is Hausdorff and paracompact.
+\end{defi}
+
+In fact, we have the following theorem from point set topology:
+\begin{thm}
+ Let $X$ be a paracompact Hausdorff space. Let $\{ U_\alpha\}_{\alpha \in J}$ be an open cover of $X$. Then there exists a partition of unity on $X$ subordinate to $\{ U_\alpha\}_{\alpha \in J}$. 
+\end{thm}
+For a proof, see Munkres, page 259. 
+
+
 \newpage
 \section{Differentiable manifolds}
 
-To get a course worth something, one has to have something more than just a topological manifold. We do this by adding structure to $M$, thereby defining the notion of a \emph{differentiable} manifold.
+We add more structure to $M$, thereby defining the notion of a \emph{differentiable} manifold.
 
 Given two open subsets $U,V$ of $M$ and homeomorphisms $x:U \to x(U) \subseteq \R^n$ and $y:V \to y(V) \subseteq \R^n$, one has transition maps on the intersection $U \cap V$:
 \[
 \xymatrix{
  U \cap V \ar[d]_x \ar[r]^-y & y(U \cap V)  \subseteq \R^n \\
-\R^n \supseteq  x(U \cap V) \ar[ur]^{x \circ y^{-1}}
+\R^n \supseteq  x(U \cap V) \ar[ur]_{x \circ y^{-1}}
 }
 \]
+
 We say that the two charts $(x,U)$ and $(y,V)$ are \emph{$C^\infty$-related} if the map $x \circ y^{-1}$ and the map $y \circ x^{-1}$ are $C^\infty$-maps as maps between subsets of $\R^n$.
 
 Furthermore, we say that a set of charts $\{ (x_i, U_i)\}_{i \in I}$ is an \emph{$C^\infty$-atlas} for $M$ if all the $x_i,x_j$ are $C^\infty$-related and the union $\bigcup_i U_i$ cover $M$.
@@ -166,7 +197,7 @@ Here a uniqueness result:
 Given an atlas $\mathscr{A}$ on $M$, there exists a unique maximal atlas $\mathscr{A}^\prime$ containing $\mathscr A$.
 \end{lemma}
 \begin{proof}
-Define $\mathscr A$ to be the set of all charts $y$ which are $C^\infty$-related to all charts $x \in A$. Then $\mathscr A$ contains two types of charts: those who belonged to $\mathscr A$, and possibly new ones. Every two charts in $\mathscr A$ are $C^\infty$-related, by definition of atlas, and every pair with one in each are $C^\infty$-related by definition of $\mathscr A^\prime$. Further, evert pair of charts with both in $\mathscr A^\prime$ are $C^\infty$-related: one can intersect their domains with a chart in $\mathscr A$, compose, and conclude.
+Define $\mathscr A$ to be the set of all charts $y$ which are $C^\infty$-related to all charts $x \in A$. Then $\mathscr A$ contains two types of charts: those who belonged to $\mathscr A$, and possibly new ones. Every two charts in $\mathscr A$ are $C^\infty$-related, by definition of atlas, and every pair with one in each are $C^\infty$-related by definition of $\mathscr A^\prime$. Further, every pair of charts with both in $\mathscr A^\prime$ are $C^\infty$-related: one can intersect their domains with a chart in $\mathscr A$, compose, and conclude.
 
 Clearly $\mathscr A^\prime$ is the unique maximal atlas containing $\mathscr A$.
 \end{proof}
@@ -184,7 +215,7 @@ Here's an example (and probably the only explicit calculation we will do in the 
 \begin{example}
 Recall that $S^2$ (the zero set of the equation $x_1^2+x_2^2+x_3^2=1$ in $\R^3$) can be covered by two charts, by stereographic projection (see Figure \ref{stereographic}), by first projecting from the north pole, and then from the south pole. Call these maps $\varphi$ and $\psi$, respectively. We are going to compute the transition maps, to verify that this atlas is actually a $C^\infty$-atlas.
 
-We need to find explicit formulae for $\varphi$ and $\psi$. The first map has domain $\S^2 \bs \{ N \}$ and image $\R^2$. But we want to compute $\psi \circ \varphi^{-1}$, so we start with a point $(a,b)$ in the plane $\R^2$ (embedded in $\R^3$ by $z=0$). We want to connect it with the north pole $(0,0,1)$ by a line, and compute its intersection with the $2$-sphere. The line is given parametrically as \[t(a,b,0)+(1-t)(0,0,1)=(at,bt,1-t).\]
+We need to find explicit formulae for $\varphi$ and $\psi$. The first map has domain $S^2 \bs \{ N \}$ and image $\R^2$. But we want to compute $\psi \circ \varphi^{-1}$, so we start with a point $(a,b)$ in the plane $\R^2$ (embedded in $\R^3$ by $z=0$). We want to connect it with the north pole $(0,0,1)$ by a line, and compute its intersection with the $2$-sphere. The line is given parametrically as \[t(a,b,0)+(1-t)(0,0,1)=(at,bt,1-t).\]
 To find the intersection with the sphere, we must compute when the right hand side has norm $1$:
 \[
 a^2 t^2+b^2 t^2+1-2t+t^2 = 1
@@ -215,7 +246,7 @@ Finally, we can compute the composition $\psi \circ \varphi^{-1}$:
 &= \left ( \frac{a}{\| a \|} , \frac{b}{\| a \|}\right).
 \end{align*}
 
-So the transition maps are just inversion about the origin in the $(a,b)$-plane. These are clearly $C^\infty$ functions.
+So the transition maps are just inversion about the origin in the $(a,b)$-plane (with the origin removed). These are clearly $C^\infty$ functions.
 \end{example}
 
 The moral of the story is that we could just as well defined $S^2$ as two copies of $\R^2 \bs \{ 0\}$ glued together with the inversion map, because that's exactly how the differentiable structure is defined, and that is all we care about.
@@ -239,19 +270,19 @@ x(U) \ar[ur]^{x^{-1}} \ar[rrr]_{y \circ f \circ x^{-1}}  & && y(V)
 If $f$ is differentiable at all points $p \in M$, then we say that $f$ is \emph{differentiable}.
 \end{defi}
 
-Thus we have a category $\Diff$ of differentiable manifolds. Its objects are the differentiable manifolds and the maps are differentiable maps. This gives us at once the notion of an \emph{isomorphism} of manifolds: it is just a pair of differentiable maps that compose to the identity in each direction.
+Thus we have a category $\Diff$ of differentiable manifolds. Its objects are  differentiable manifolds and the maps are differentiable maps. This gives us at once the notion of an \emph{isomorphism} of manifolds: it is just a pair of differentiable maps that compose to the identity in each direction.
 
 We want to define some properties of maps in $\Diff$. To start off, we introduce some notation. Let $f:\R^n\to\R$ be differentiable map, then we define
 \[
 D_i (f)(a) = \lim_{h \to 0} \frac{f(a^1,\dotsc, a^i + h,\dotsc, a^n)}{h}.
 \]
 
-This is nothing but the $i$'th partial derivative. The reason we're not using the usual Leibniz notation is because we want to reserve it for something else. Having established the $D_i$ notation, one recalls the chain rule: Given two maps $g:\R^m \to \R^n$ and $f:\R^n \to \R$, the $D_j$ of the composite is given as
+This is nothing but the $i$'th partial derivative. The reason we're not using the usual Leibniz notation is because we want to reserve it for later use. Having established the $D_i$ notation, one recalls the chain rule: Given two maps $g:\R^m \to \R^n$ and $f:\R^n \to \R$, the $D_j$ of the composite is given as:
 \[
-D_j(f \circ g)(a) = \sum_{i=1}^n  D_i\left(f \circ g\right)(f(g(a))) \cdot D_j(g^i)(a)
+D_j(f \circ g)(a) = \sum_{i=1}^n  D_i\left(f \circ g\right)(f(g(a))) \cdot D_j(g^i)(a).
 \]
 
-The classical Leibniz notation will be reserved for tangent fields on manifolds. So let $f:M \to \R$ be a map from a manifold to the real line, and let $(x,U)$ be a chart, and let $p \in U$. Then we define
+The classical Leibniz notation will be reserved for tangent vectors on manifolds. So let $f:M \to \R$ be a map from a manifold to the real line, and let $(x,U)$ be a chart, and let $p \in U$. Then we define
 \[
 \frac{\partial f}{\partial  x^i} (p) = \restr{\frac{\partial f}{\partial x^i}}p := D_i(f \circ x^{-1})(x(p))
 \]
@@ -285,7 +316,7 @@ The chain rule appear in the middle.
 From now on, all maps will be differentiable, unless otherwise stated. Thus, when referring to a ``map'' above, it should be read as ``differentiable map'' (or better, ``a map in the category $\Diff$'').
 \end{remark}
 
-Let $f:M \to N$ be a map of manifolds, and let $(x,U),(y,V)$ be charts on $M,N$, respectively. One can define the \emph{Jacobian matrix of $f$ at $p$} (if $p \in U$):
+Let $f:M \to N$ be a map of manifolds, and let $(x,U),(y,V)$ be charts on $M,N$, respectively. One can define the \emph{Jacobian matrix of $f$ at $p$} (with respecto the charts $(x,U)$ and $(y,V)$):
 \[
 J_f(p) := \left[ \restr{\dd{(y^i \circ f)}{x^j}}p \right].
 \]
@@ -1459,7 +1490,7 @@ Thus $(I_{(i,\alpha)}^n)_{(j,\beta)}=(I_{(j+1,\beta}^n)_{(i,\alpha)}$ for $i \le
 \partial \partial(c) &= \partial(\sum_{i=1}^n \sum_{\alpha} (-1)^{i+\alpha} c_{(i,\alpha)}) \\
 &= \sum_{i=1}^n \sum_{\alpha} \sum_\beta \sum_{j=1}^{n-1} (-1)^{i+j+\alpha+\beta}(c_{(i,\alpha)})_{(j,\beta)}.  
 \end{align*}
-But $(c_{(j+1,\beta)})_{(i,\alpha)$ appear with opposite sign as $(c_{(i,\alpha)})_{(j,\beta)}$, so all terms cancel!
+But $(c_{(j+1,\beta)})_{(i,\alpha)}$ appear with opposite sign as $(c_{(i,\alpha)})_{(j,\beta)}$, so all terms cancel!
 \end{proof}
 
 The homology groups gives the \emph{singular smooth  homology groups of $M$ (with coefficients in $\R$)}, and are denoted simply by $H_{\infty}^k(M,\R)$. By applying $\Hom(-,\R)$ to the complex, we get the dual complex, and thus the \emph{singular smooth cohomology groups of $M$}, denoted by $H_{\infty}^k(M,\R)$.

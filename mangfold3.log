@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  30 MAY 2014 17:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  1 JUN 2014 13:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1061,120 +1061,122 @@ LaTeX Info: Redefining \nameref on input line 47.
 \openout6 = `mangfold3.toc'.
 
 Package hyperref Info: bookmark level for unknown defi defaults to 0 on input l
-ine 59.
+ine 58.
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
 t line 65.
-
-<stereographic.jpg, id=174, 511.9125pt x 276.03125pt>
+ [2]
+<stereographic.jpg, id=204, 511.9125pt x 276.03125pt>
 File: stereographic.jpg Graphic file (type jpg)
  <use stereographic.jpg>
 Package pdftex.def Info: stereographic.jpg used on input line 88.
 (pdftex.def)             Requested size: 256.0748pt x 138.07845pt.
 
-[2]
 Overfull \hbox (4.65465pt too wide) in paragraph at lines 99--100
 [][]\T1/cmr/bx/n/10.95 Example 1.9. []\T1/cmr/m/n/10.95 The \T1/cmr/m/it/10.95 
 non-orientable \T1/cmr/m/n/10.95 man-i-folds. An ex-am-ple of a non-orientable
  []
 
-[3 <./stereographic.jpg>] <connected.png, id=217, 446.66875pt x 82.3075pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3 <./stereographic.jpg>] <connected.png, id=222, 446.66875pt x 82.3075pt>
 File: connected.png Graphic file (type png)
 
 <use connected.png>
 Package pdftex.def Info: connected.png used on input line 126.
 (pdftex.def)             Requested size: 223.33382pt x 41.15364pt.
- [4 <./connected.png>] [5] <xymatrix 2x2 140>
+ [4 <./connected.png>] [5]
+Package hyperref Info: bookmark level for unknown thm defaults to 0 on input li
+ne 172.
+ [6] <xymatrix 2x2 140>
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 166.
- [6] [7]
-<xymatrix 4x2 194> [8]
+line 197.
+ [7]
+[8] <xymatrix 4x2 194> [9]
 Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
-ine 263.
- [9]
+ine 294.
+ [10]
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
- line 285.
- <xymatrix 4x3 479> [10]
-<criticalpoints.png, id=279, 566.5968pt x 422.0568pt>
+ line 316.
+ <xymatrix 4x3 479> [11]
+<criticalpoints.png, id=300, 566.5968pt x 422.0568pt>
 File: criticalpoints.png Graphic file (type png)
  <use criticalpoints.png>
-Package pdftex.def Info: criticalpoints.png used on input line 327.
+Package pdftex.def Info: criticalpoints.png used on input line 358.
 (pdftex.def)             Requested size: 396.61505pt x 295.43773pt.
 
-Overfull \hbox (36.61505pt too wide) in paragraph at lines 327--328
+Overfull \hbox (36.61505pt too wide) in paragraph at lines 358--359
  [] 
  []
 
-[11] [12 <./criticalpoints.png>]
-Package hyperref Info: bookmark level for unknown thm defaults to 0 on input li
-ne 358.
- [13] <xymatrix 3x1 144> <xymatrix 3x1 144>
-[14] [15] [16] [17] <cusp.png, id=335, 158.994pt x 277.5168pt>
+[12] [13 <./criticalpoints.png>] [14] <xymatrix 3x1 144> <xymatrix 3x1 144>
+[15] [16] [17] [18] <cusp.png, id=355, 158.994pt x 277.5168pt>
 File: cusp.png Graphic file (type png)
  <use cusp.png>
-Package pdftex.def Info: cusp.png used on input line 504.
+Package pdftex.def Info: cusp.png used on input line 535.
 (pdftex.def)             Requested size: 108.0011pt x 188.50989pt.
 
-<node.png, id=337, 173.448pt x 277.5168pt>
+<node.png, id=357, 173.448pt x 277.5168pt>
 File: node.png Graphic file (type png)
  <use node.png>
-Package pdftex.def Info: node.png used on input line 527.
+Package pdftex.def Info: node.png used on input line 558.
 (pdftex.def)             Requested size: 173.44757pt x 277.51611pt.
- [18 <./cusp.png>]
-<contours.png, id=358, 278.2395pt x 277.5168pt>
+ [19 <./cusp.png>]
+<contours.png, id=379, 278.2395pt x 277.5168pt>
 File: contours.png Graphic file (type png)
  <use contours.png>
-Package pdftex.def Info: contours.png used on input line 566.
+Package pdftex.def Info: contours.png used on input line 597.
 (pdftex.def)             Requested size: 194.76631pt x 194.26042pt.
- [19 <./node.png>] [20 <./contours.png>] <hx.png, id=377, 276.7941pt x 203.8014
+ [20 <./node.png>] [21 <./contours.png>] <hx.png, id=397, 276.7941pt x 203.8014
 pt>
 File: hx.png Graphic file (type png)
 
 <use hx.png>
-Package pdftex.def Info: hx.png used on input line 594.
+Package pdftex.def Info: hx.png used on input line 625.
 (pdftex.def)             Requested size: 249.11237pt x 183.41954pt.
- <jx.png, id=378, 277.5168pt x 203.8014pt>
+ <jx.png, id=398, 277.5168pt x 203.8014pt>
 File: jx.png Graphic file (type png)
  <use jx.png>
-Package pdftex.def Info: jx.png used on input line 608.
+Package pdftex.def Info: jx.png used on input line 639.
 (pdftex.def)             Requested size: 249.7628pt x 183.41954pt.
- [21 <./hx.png>] <lx.png, id=388, 277.5168pt x 203.8014pt>
+ [22 <./hx.png>] <lx.png, id=408, 277.5168pt x 203.8014pt>
 File: lx.png Graphic file (type png)
  <use lx.png>
-Package pdftex.def Info: lx.png used on input line 618.
+Package pdftex.def Info: lx.png used on input line 649.
 (pdftex.def)             Requested size: 249.7628pt x 183.41954pt.
- [22 <./jx.png> <./lx.png>] [23] [24] <partition.png, id=425, 277.5168pt x 204.
+ [23 <./jx.png> <./lx.png>] [24] [25] <partition.png, id=447, 277.5168pt x 204.
 5241pt>
 File: partition.png Graphic file (type png)
 
 <use partition.png>
-Package pdftex.def Info: partition.png used on input line 723.
+Package pdftex.def Info: partition.png used on input line 754.
 (pdftex.def)             Requested size: 277.51611pt x 204.52357pt.
- [25 <./partition.png>] [26] <xymatrix 2x2 182> [27]
-[28] <xymatrix 2x2 182> [29] [30]
-Overfull \hbox (42.71443pt too wide) in paragraph at lines 892--893
+ [26 <./partition.png>] [27] <xymatrix 2x2 182> [28]
+[29] <xymatrix 2x2 182> [30] [31]
+Overfull \hbox (42.71443pt too wide) in paragraph at lines 923--924
 []\T1/cmr/m/n/10.95 If $\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 y; V\OT1/cmr/m/
 n/10.95 )$ \T1/cmr/m/n/10.95 is an-other co-or-di-nate sys-tem, then we know th
 at $[] \OT1/cmr/m/n/10.95 = [][] [][]$\T1/cmr/m/n/10.95 ,
  []
 
-[31] [32] [33]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 954.
+[32] [33] [34]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 985.
 
 
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [34]
-[35]
+) [35]
+[36]
 \c@enumTemp=\count155
- <xymatrix 2x2 86> <xymatrix 2x1 44> <xymatrix 2x2 86> [36] <xymatrix 2x1
-44> [37] [38]
+ <xymatrix 2x2 86> <xymatrix 2x1 44> <xymatrix 2x2 86> [37] <xymatrix 2x1
+44> [38] [39]
 Package hyperref Info: bookmark level for unknown corr defaults to 0 on input l
-ine 1175.
- [39] [40] <xymatrix 3x2 399> [41] [42]
+ine 1206.
+ [40] [41] <xymatrix 3x2 399> [42] [43]
 ! Argument of \@begintheorem has an extra }.
 <inserted text> 
                 \par 
-l.1332 ...clear if Poincaré actually proved it.}]
+l.1363 ...clear if Poincaré actually proved it.}]
                                                   
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -1188,26 +1190,14 @@ Runaway argument?
 ! Paragraph ended before \@begintheorem was complete.
 <to be read again> 
                    \par 
-l.1332 ...clear if Poincaré actually proved it.}]
+l.1363 ...clear if Poincaré actually proved it.}]
                                                   
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-[43] [44] [45] [46] [47]
-! Missing } inserted.
-<inserted text> 
-                }
-l.1462 But $(c_{(j+1,\beta)})_{(i,\alpha)$
-                                           appear with opposite sign as $(c_...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-[48] [49]
-Overfull \hbox (15.37227pt too wide) detected at line 1554
+[44] [45] [46] [47] [48] [49] [50]
+Overfull \hbox (15.37227pt too wide) detected at line 1585
 [] \OML/cmm/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 U \OMS/cmsy/m
 /n/10.95 \ \OML/cmm/m/it/10.95 V\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ! \OML
 /cmm/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 M\OT1/cmr/m/n/10.95 
@@ -1220,13 +1210,13 @@ T1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 V\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95
 ) \OMS/cmsy/m/n/10.95 ! []
  []
 
-[50] [51] [52] [53] [54] [55] [56] [57]
+[51] [52] [53] [54] [55] [56] [57] [58]
 Package hyperref Info: bookmark level for unknown exc defaults to 0 on input li
-ne 1818.
+ne 1849.
 Package hyperref Info: bookmark level for unknown sol defaults to 0 on input li
-ne 1824.
- [58] <xymatrix 5x1 172> [59]
-Overfull \hbox (18.39818pt too wide) in paragraph at lines 1888--1889
+ne 1855.
+ [59] <xymatrix 5x1 172> [60]
+Overfull \hbox (18.39818pt too wide) in paragraph at lines 1919--1920
 \T1/cmr/m/n/10.95 man-i-fold $\OML/cmm/m/it/10.95 O\OT1/cmr/m/n/10.95 (3) \OMS/
 cmsy/m/n/10.95 ^^Z \OML/cmm/m/it/10.95 M\OT1/cmr/m/n/10.95 (3)$\T1/cmr/m/n/10.9
 5 . But this is easy: if $\OML/cmm/m/it/10.95 C \OMS/cmsy/m/n/10.95 2 []\OT1/cm
@@ -1235,7 +1225,7 @@ r/m/n/10.95 (3)$\T1/cmr/m/n/10.95 , then $[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/1
  []
 
 
-Overfull \hbox (12.77888pt too wide) detected at line 1909
+Overfull \hbox (12.77888pt too wide) detected at line 1940
 \OML/cmm/m/it/10.95 ^^^[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 A\OT1/cmr/m/n/
 10.95 ) = \OML/cmm/m/it/10.95 A []\OT1/cmr/m/n/10.95 ((\OML/cmm/m/it/10.95 s \O
 T1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 t\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95
@@ -1247,8 +1237,8 @@ n/10.95 ) [](\OML/cmm/m/it/10.95 tC\OT1/cmr/m/n/10.95 ) = \OML/cmm/m/it/10.95 ^
 /it/10.95 A\OT1/cmr/m/n/10.95 ))\OML/cmm/m/it/10.95 :
  []
 
-[60] [61]
-Overfull \hbox (4.40454pt too wide) in paragraph at lines 1989--1990
+[61] [62]
+Overfull \hbox (4.40454pt too wide) in paragraph at lines 2020--2021
 [][]\T1/cmr/bx/n/10.95 Exercise 12. []\T1/cmr/m/n/10.95 Com-pute the com-mu-ta-
 tors $\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 C; D\OT1/cmr/m/n/10.95 ]\OML/cmm/
 m/it/10.95 ; \OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 D; E\OT1/cmr/m/n/10.95 ]$ 
@@ -1256,22 +1246,22 @@ m/it/10.95 ; \OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 D; E\OT1/cmr/m/n/10.95 ]$
 /10.95 ]$ \T1/cmr/m/n/10.95 in $[]\OT1/cmr/m/n/10.95 (3)$\T1/cmr/m/n/10.95 .
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2000.
-[62]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2000.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2031.
+[63]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2031.
  (./mangfold3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2000.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2000.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2031.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2031.
 
 Package rerunfilecheck Info: File `mangfold3.out' has not changed.
-(rerunfilecheck)             Checksum: 18F4195EB93964694BC80FD8FF748800;2061.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2000.
+(rerunfilecheck)             Checksum: DB10C4467F1D892587DD135735CDFA85;2148.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2031.
  ) 
 Here is how much of TeX's memory you used:
- 19216 strings out of 493308
- 320344 string characters out of 6135157
+ 19228 strings out of 493308
+ 320561 string characters out of 6135157
  432329 words of memory out of 5000000
- 21810 multiletter control sequences out of 15000+600000
+ 21813 multiletter control sequences out of 15000+600000
  26731 words of font info for 82 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,18n,55p,3277b,870s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1315,10 +1305,10 @@ o-texmf/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></opt/app-sync/texlive
 /uio-texmf/texmf-dist/fonts/type1/public/xypic/xybsql10.pfb></opt/app-sync/texl
 ive/uio-texmf/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb></opt/app-sync/t
 exlive/uio-texmf/texmf-dist/fonts/type1/public/xypic/xydash10.pfb>
-Output written on mangfold3.pdf (62 pages, 778413 bytes).
+Output written on mangfold3.pdf (63 pages, 783868 bytes).
 PDF statistics:
- 1027 PDF objects out of 1200 (max. 8388607)
- 898 compressed objects within 9 object streams
- 409 named destinations out of 1000 (max. 500000)
- 317 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1046 PDF objects out of 1200 (max. 8388607)
+ 915 compressed objects within 10 object streams
+ 418 named destinations out of 1000 (max. 500000)
+ 325 words of extra memory for PDF output out of 10000 (max. 10000000)
 
