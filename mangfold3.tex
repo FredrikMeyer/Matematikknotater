@@ -345,7 +345,7 @@ Consider the diagram:
 Then $xx^{\prime -1}$, $yfx^{-1}$, and $y y^{\prime -1}$ are maps from (open subsets of) $\R^n$ to $\R^n$. Consider the composition $(y^\prime y^{-1}) \circ (yfx^{-1}) \circ (xx^{\prime -1})=y^\prime f x^{\prime -1}$. Applying the chain rule, we get that the second Jacobian matrix is just a conjugate of the first Jacobian by invertible matrices. These have the same rank.
 \end{proof}
 
-We say that a point $p \in M$ is \emph{critical for $f$} if $\rank f < m$ (the dimension of $N$). Otherwise it is \emph{regular}. We say that a point $q \in N$ is regular if all the points in the preimage $f^{-1}(q)$ are regular points.
+We say that a point $p \in M$ is \emph{critical for $f$} if $\rank_p f < m$ (the dimension of $N$). Otherwise it is \emph{regular}. We say that a point $q \in N$ is regular if all the points in the preimage $f^{-1}(q)$ are regular points.
 
 \begin{example}
 Let $M=N=\R$ and let $f:M \to N$. Then a point $p \in \R$ is regular if and only if $f^\prime(p) \neq 0$. In other words, critical points correspond to either maxima, minima or plateaus of the graph of $f$ inside $\R^2$.
@@ -384,12 +384,11 @@ so choosing $a < \frac{6 \epsilon}{\pi^2}$, gives total volume less than $\epsil
 
 Now, a subset $A$  of a manifold $M$ has \emph{measure 0} if there exists a countable sequence of charts $(x_i, U_i)$  with $A \subseteq \bigcup U_i$ such that each $x_i(A \cap U_i)$ has measure $0$. To see that this notion is well-defined, one turns to Lemma 6 in Spivak, which says that smooth functions take measure 0 sets to measure 0 sets.
 
-Now, Sard's theorem says the following:
-\begin{thm}
-If $f:M \to N$ is a $C^\infty$-map of $n$-manifolds, and $M$ has at most countably many components (e.g. one), then the critical values of $f$ form a set of measure zero in $N$.
+\begin{thm}[Sard's theorem]
+If $f:M \to N$ is a $C^\infty$-map of $n$-manifolds, and $M$ has at most countably many components, then the critical values of $f$ form a set of measure zero in $N$.
 \end{thm}
 
-This, in some sense, is similar to a theorem in algebraic geometry, which says that the smooth points of a variety are dense in the Zariski topology.
+This, is similar to a theorem in algebraic geometry, which says that the smooth points of a variety are dense in the Zariski topology.
 
 We will not prove Sard's theorem here, but just note that it is at least intuitively plausable.
 
@@ -430,6 +429,8 @@ Then there exists a neighbourhood $V$ of $p$ such that $\restr fV$ is invertible
 J_{\restr fV^{-1}}(f(p)) = J_f(p)^{-1}.
 \]
 \end{thm}
+
+For a proof, see for example Spivak's book ``Calculus on Manifolds''.
 
 In words (that will have meaning later), this says that if the tangent map is an isomorphism at a point $p$, then $f$ is locally a diffeomorphism near $p$. This is a theorem special to differential geometry. Similar situations does not occur in algebraic or complex geometry, because inverse functions are usually not algebraic/complex.
 
@@ -608,7 +609,7 @@ Let $f:\R^2 \to \R$ be the map $f(x,y)=x^2+y^2-1$. It has constant rank $1$ as l
 \newpage
 \section{Bump functions and partitions of unity}
 
-What makes differential geometry ``taste'' differently than complex or algebraic geometry is the existence of ``bump functions''.
+What makes differential geometry ``taste'' differently than complex or algebraic geometry is the existence of ``bump functions'' and partition of unity.
 
 \subsection{Useful functions}
 Recall that the \emph{support} of a function $f:X \to \R$ is the closure of the set $\{ x \, | \, f(x) \neq 0 \}$.
@@ -1177,6 +1178,20 @@ Let $X,Y_1,Y_2$ be vector fields and $\omega_1,\omega_2$ be covector fields. The
 \item $L_X(f \cdot \omega) = Xf \cdot \omega + f \cdot L_X \omega$.
 \end{enumerate}
 \end{prop}
+\begin{proof}
+Number 1 and 2 are trivial from the definition. Let us prove number 3. By definition:
+\begin{align}
+L_X(fY)(p) &= \lim_{h \to} \frac 1h \left[ f(p)Y_p - \phi_{h \ast} (fY)_p \right] \\
+&= \lim_{h \to 0} \frac 1h \left[ f(p)Y_p - \phi_{h \ast}(f(\phi_{-h}(p)Y_{\phi_{-h(p)}})) \right] \\
+&= \lim_{h \to 0} \frac 1h \left[ f(p)Y_p - f(\phi_{-h}(p)) \phi_{h \ast}(Y_{\phi_{-h}(p)})\right]
+\end{align}
+Standard trick (remove the $\lim_{h \to 0} \frac 1h$ symbol for space)
+\begin{align}
+&= f(p)Y_p-f(\phi_{-h}(p))Y_p + f(\phi_{-h}(p))Y_p - f(\phi_{-h}(p))\phi_{h \ast}(Y_{\phi_{-h}(p)}) \\
+&= \left( f(p)-f \circ \phi_{-h}(p) \right) Y_p + f(\phi_{-h}(p))\left( Y_p - \phi_{h\ast}(Y)_p\right)
+\end{align}
+Now letting $h \to 0$ (and putting $\lim_{h \to 0} \frac 1h$ back again) gives the result.
+\end{proof}
 
 If we let $[X,Y]$ denote the vector field given by $[X,Y]_p(f)=X_p(Yf)-Y_p(Xf)$, then one sees that
 \[
@@ -1196,16 +1211,63 @@ We also have the Jacobi identity:
 [X,[Y,Z]] + [Y,[Z,X]]+[Z,[X,Y]] = 0.
 \]
 
+The notation $[X,Y]$ is obviously not chosen without reason. In fact:
+
+\begin{thm}
+We have $(L_XY)(f) = [X,Y](f) = X(Yf)-Y(Xf)$.
+\end{thm}
+\begin{proof}
+ One way to do this is to do it in a coordinate system and check that the expressions agree. Another proof is given the appendix. Here's yet another proof. It builds on a lemma (not proven here), saying the following: if $f:(-\epsilon, \epsilon) \times M \to \R$ is smooth and $f(0,p)=0$ for all $p \in M$, then there is a smooth function $g:(-\epsilon,\epsilon) \times M \to \R$ such that
+\begin{align*}
+f(t,p) &= tg(t,p) \\
+\restr{\dd{f}{t}}{(0,p)}&= g(0,p).
+\end{align*}
+Note that this is just a multidimensional version of a Taylor expression to first order. 
+
+Now we can prove the statement. So let $f:M \to \R$ be arbitrary. Let $X$ generate $\{ \phi_t \}$, for $t \in (-\epsilon,\epsilon)$. By the Lemma there is a family of smooth functions $g_t$ such that
+\begin{align}
+  f \circ \phi_t &= f + t g_t \\
+g_0 &= Xf.
+\end{align}
+Then we have the following equalities:
+\begin{align*}
+  (\phi_{h \ast}Y)_p(f) &= \phi_{h \ast}(Y_{\phi_{-h}(p)})(f) \\
+&= Y_{\phi_{-h}(p)}(f \circ \phi_h) \\
+&= Y_{\phi_{-h}(p)}(f+ hg_h).
+\end{align*}
+Thus
+\begin{align*}
+(L_XY)(f) =  \lim_{h \to 0} \frac 1h  \left[ Y - (\phi_{h \ast}Y) \right](f) &= \lim_{h \to 0}\frac 1h  \left[ (Yf)-Yf \circ \phi_{-h} \right] -\lim_{h\to 0}(Yg_h \circ \phi_{-h}) \\
+&= L_X(Yf) -Y(g_0) \\
+&= X(Yf) - Y(Xf). 
+\end{align*}
+\end{proof}
+
 Recall: If we have a diffeomorphism, we can push forward vector fields by defining $(\alpha_\ast X)_q = \alpha_\ast X_{\alpha^{-1}(q)}$.
 
 \begin{lemma}
- Let $\alpha:M \to N$ be a diffeomorphism and $X$ a vector field on $M$ which generates $\{ \phi_t \}$. Then $\alpha_\ast X$ generated $\{ \alpha \circ \phi_t \circ \alpha^{-1}\}$.
+ Let $\alpha:M \to N$ be a diffeomorphism and $X$ a vector field on $M$ which generates $\{ \phi_t \}$. Then $\alpha_\ast X$ generates $\{ \alpha \circ \phi_t \circ \alpha^{-1}\}$.
 \end{lemma}
+\begin{proof}
+ This is just definitions. Let $f:M \to \R$ be a test function and $q \in M$. Then:
+ \begin{align*}
+ (\alpha_\ast X)_q(f) &= \alpha_{\ast q}(X_{\alpha^{-1}(q)})(f) \\
+&= X_{\alpha^{-1}(q)}(f \circ \alpha) \\
+&= \lim_{h \to 0}\frac 1h \left[ (f \circ \alpha)(\phi_h ( \alpha^{-1}(q))) - (f \circ \alpha)(\alpha^{-1}(q))  \right] \\
+&= \lim_{h \to 0}\frac 1h \left[ f ((\alpha \circ \phi_h \circ \alpha^{-1})(q))- f(q) \right]
+ \end{align*}
+By uniqueness of flow, it follows that $\alpha_\ast X$ generates the flow $\alpha \circ \phi_h \circ \alpha^{-1}$. 
+\end{proof}
 
 \begin{corr}
   If $\alpha:M \to M$, then $\alpha_\ast X = X$ if and only if $\phi_t \circ \alpha = \alpha \circ \phi_t$ for all $t$.
 \end{corr}
+\begin{proof}
+  Two vector fields are equal if and only if their flows are equal. But $X$ as flow $\{ \phi_t \}$, and $\alpha_\ast X$ has flow $\alpha \circ \phi_t \circ \alpha^{-1}$ by the Proposition.
+\end{proof}
 
+
+Here are two more results:
 \begin{lemma}
  Let $X$ generate $\{ \phi_t \}$ and $Y$ generate $\{ \psi_t \}$. Then $[X,Y]=0$ if and only if $\phi_t \circ \psi_s = \psi_s \circ \phi_t$ for all $s,t$.
 \end{lemma}
@@ -1218,6 +1280,8 @@ X_\alpha = \dd{}{x^i}
 for $i=1,\cdots,n$. 
 \end{thm}
 
+Thus the bracket $[X,Y]$ (or equivalently, the Lie derivative $L_XY$) measures, in some sense, the extent to which the integral curves of vector fields can be used to make coordinate lines on $M$.
+
 \newpage
 \section{Differential forms}
 
@@ -1226,6 +1290,7 @@ Depending upon taste, there are several ways to define differential forms. This 
 Suffice it to say that the only thing that is needed of the exterior algebra, regardless of the particular construction, is the anticommutativitiy property, mimicking determinants (or if you're so inclined: defining determinants).
 
 \subsection{Basic theorems}
+Suppose now that we have constructed the alternating algebra (in one way or another). Then we have the following results.
 
 \begin{thm}
  Let $f:M \to N$ be a map between $n$-manifolds of the same dimension $n$. Let $(x,U)$ be a coordinate system around $p \in M$ and $(y,V)$ be a coordinate system around $q=f(p) \in N$. Then
@@ -1233,12 +1298,43 @@ Suffice it to say that the only thing that is needed of the exterior algebra, re
 f^\ast(g\,  \d y^1 \wedge \ldots \wedge \d y^n) = (g \circ f) \cdot \det \left( \dd{y^i \circ f}{x^j} \right) \d x^1 \wedge \ldots \wedge \d x^n.
 \]
 \end{thm}
+\begin{proof}
+ We can assume that $g= \id_M$ for simplicity. We have the following:
+ \begin{align*}
+f ^\ast(dy^1 \wedge \cdots \wedge dy^n)(p)\left(\restr{ \dd{}{x^1}}{p},\cdots,\restr{\dd{}{x^n}}{p}\right)\\
+=dy^1(f(p)) \wedge \cdots \wedge dy^n(f(p))\left(f_\ast \restr{\dd{}{x^1}}{p},\cdots,f_\ast\restr{\dd{}{x^n}}{p}\right) \\
+=dy^1(f(p)) \wedge \cdots \wedge dy^n(f(p))\left( \sum_{i=1}^n \restr{\dd{(y^i \circ f)}{x^1}}{p} \restr{\dd{}{y^i}}{f(p)},\ldots,\sum_{i=1}^n \restr{\dd{(y^i \circ f)}{x^1}}{p} \restr{\dd{}{y^i}}{p} \right)
+ \end{align*}
+But now it is clear by the transformation properties of the determinant that this latter expression is equal to $\det \left( \restr{\dd{(y^i \circ f)}{x^j}}{p} \right)$.
+\end{proof}
 
 \begin{thm}
  A manifold $M$ is orientable if and only if there exists a non-vanishing form $\omega \in \Omega^n(M)$. 
 \end{thm}
+\begin{proof}
+Recall that an orientation of a manifold consisted of a covering of $M$ such that the Jacobian of the coordinate change matrices all had positive determinant. So suppose there exists $\omega \in \Omega^n(M)$ with $\omega(p) > 0$ for all $p$. Then it follows that the transition maps all have positive determinant by the previous Theorem with $f=\id_M$.
+
+Conversely, suppose that $M$ is orientable. Then there exists a open cover $\OO$ of $M$ by coordinate systems $(x,U)$ and a partition of unity subordinate to $\OO$. For each $(x,U)$, choose an $n$-form $\omega_U$ on $U$ such that if $v_1,\cdots,v_n \in M_p$ ($p \in U$), we have $\omega_U(v_1,\cdots,v_n) > 0$ if and only if the $v_i$'s are oriented positively. Now let 
+\[
+\omega = \sum_{U \in \OO} \phi_U \omega_U.
+\]
+Then $\omega$ is a smooth $n$-form defined on all of $M$. Morever, for every $p$, if $v_1,\cdots,v_n$ are positively oriented , then each 
+\[
+(\phi_U \omega_U)(p)(v_1,\cdots,v_n) \geq 0
+\]
+We have strict inequality for at least one $U$, and so $\omega(p) > 0$.
+\end{proof}
+
+\begin{remark}
+  This shows that $\Omega^n(M)$ is trivial if and only if $M$ is orientable.
+\end{remark}
 
 \subsection{The de Rham complex}
+If $f:M \to \R$ is a function, then its differential is abstractly defined as $\d f(X)=X(f)$. In coordinates, we have
+\[
+\d f = \sum_{i=1}^n \dd{f}{x^i} \d x^i.
+\]
+We can generalize this to $k$-forms.
 If
 \[
 \omega = \sum_I \omega_I dx^I.
@@ -1285,8 +1381,29 @@ If $f:M \to N$ is $C^\infty$ and $\omega$ is a $k$-form on $N$, then
 \[
 f^\ast (d \omega) = d(f^\ast \omega).
  \]
-
  \end{prop}
+\begin{proof}
+To prove this, it helps to work in coordinates. We can assume that $\omega=g dx^1 \wedge \cdots dx^k$. We will prove the statement by induction on $k$. If $k=0$, we have
+\[
+f^\ast (dg)_p(X_p) = (dg)(f(p))(f_\ast X_p) = (f_\ast X_p)(g) = X_p(g \circ f) = d(g \circ f)(X_p)
+\]
+This is precisely how we want to interpret $f^\ast g$. Assume now the statement is proven for $k-1$. Then
+\begin{align*}
+  d(f^\ast \omega) &= d((f^\ast g dx^1 \wedge \cdots \wedge dx^{k-1}) \wedge f^\ast dx^k) \\
+&= d(f^\ast(g dx^1 \wedge \cdots \wedge dx^{k-1}) \wedge f^\ast dx^k + 0 \\
+&= f^\ast (d(g dx^1 \wedge \cdots \wedge dx^{k-1})) \wedge f^\ast dx^k \\
+&= f^\ast (dg \wedge dx^1 \wedge \cdots \wedge dx^{k-1}) \wedge f^\ast dx^k \\
+&= f^\ast(dg \wedge dx^1 \wedge \cdots \wedge dx^k) = f^\ast (d \omega).
+\end{align*}
+\end{proof} 
+
+We now define the \emph{de Rham} complex: It is given as
+\[
+0 \to \Omega^0(M) \to \Omega^1(M) \to \cdots \to \Omega^n(M) \to 0
+\]
+where the arrows are the differentials $\d$. It is a complex since $d^2=0$. Then the \emph{de Rham cohomology groups} are given as $H_{dR}^i(M)$ as the homology of the complex.
+
+For example, $H_{dR}^0(M)$ is just the number of components of $M$ 
 
 \subsection{The Poincaré Lemma}
 
