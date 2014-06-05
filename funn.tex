@@ -30,8 +30,43 @@
 Let $\K=D_6 \ast D_6$ be the join of two $6$-gons, and let $A_\K$ be its Stanley-Reisner ring, and $\PP(\K)$ its associated projective scheme. 
 
 \begin{lemma}
-The $f$-vector of $\K$ is $f=(1,12,
+The $f$-vector of $\K$ is $f=(1,12,48,72,36,1)$. 
 \end{lemma}
+
+The tangent and obstruction modules $T^i(\PP(\K))$ can be described as follows: 
+
+\begin{prop}
+\[
+\dim_\C T^1 = 72+12 = 84
+\]
+\[
+\dim_\C T^2 = ?
+\]
+\end{prop}
+
+Here's an observation: Let $\mathcal G = D_6 \ast \{ v \}$. Then $\PP(\mathcal G)$ can be smoothed to a del Pezzo surface of degree $6$. This follows because $\mathbb G$ triangulates the associated polytope (the Minkowski sum of three line segments). It follows that $D_6$ can be smoothed as well, because it is embedded as a complete intersection in $\mathcal G$.
+
+\begin{prop}
+Also $\PP(\K)$ can be smoothed.
+\end{prop}
+\begin{proof}
+Now let $\mathcal G=(D_6 \ast \{v \}) \ast (D_6 \ast \{w \})$ for two vertices $v,w$. Then using the above trick, $\mathcal G$ can be deformed to the projective join $T$ of two del Pezzo surfaces of degree $6$. The ideal is just given by the sum of the ideal of each del Pezzo surface, in disjoint variables. Since $\K$ is a complete intersection in $\mathcal G$, it follows that $X_0=\PP(\K)$ deforms as well, say to $X_t$.. However, $T$ has a singular locus of dimension $2$. By Bertini, it follows that $X_t$ have isolated singularities.
+
+However: it is possible to computationally, by brute force, futher deforma $T$ to a variety having singular locus of dimension $1$. This implies that $X_t$ deforms to something smooth.
+\end{proof}
+
+It would be nice to find a non-computational argument for the existence of the smoothing. Maybe a toric deformation? It would also be nice to know if the generic fiber of $X_0$ over $Def(X_0)$ is smooth, and if not, what is the smoothing component? 
+
+\section{Mirror symmetry}
+
+Recall the Batyrev-Borisov construction for mirrors of complete intersections in toric varieties. 
+
+...
+
+\begin{lemma}
+The Hodge numbers are $h^{12}=h^{22}=19$. 
+\end{lemma}
+
 
 
 
