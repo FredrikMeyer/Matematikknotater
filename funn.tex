@@ -13,6 +13,7 @@
 \usepackage{enumerate}  % lister $  
 \usepackage{float}
 \usepackage{tikz}
+\usetikzlibrary{calc}
 \usepackage[all]{xy}   % for comm.diagram
 \usepackage{wrapfig} % for float right
 \usepackage{hyperref}
@@ -59,12 +60,113 @@ It would be nice to find a non-computational argument for the existence of the s
 
 \section{Mirror symmetry}
 
-Recall the Batyrev-Borisov construction for mirrors of complete intersections in toric varieties. 
+\subsection{Notation and preliminaries}
 
-...
+Since $X_t$ above degenerates to a sphere, it is a Calabi-Yau-manifold, and in fact, the description of it is a complete intersection of two hyperplanes corresponds to a socalled nef partition of the polytope associated to $T$ above. We recall the Batyrev-Borisov construction for mirrors of complete intersections in toric varieties. 
+
+Let $N \approx \Z^n$ be a lattice and let $M=N^\vee$ be the dual lattice (the ``equation lattice''). Let $\Delta \subset N_\R$ be a reflexive polytope and $\Delta^\circ$ its polar polytope (which is also reflexive). Let $T:=N \otimes_\Z \C^\ast$ be the $n$-dimensional torus. We denote by $\PP_\Delta$ the toric variety associated to the polytope $\Delta$.   It can be described as the closure of the map $T_N \to \PP^{s-1}$ (here $s$ is the number of vertices of lattice points of $\Delta$) given by
+\[
+t \mapsto \left( .... \right)
+\]
+[[ THIS MUST BE FILLED IN ]]
+
+Let the vertex set $V$ of $\Delta$ be partitioned into a disjoint union of subsets $V_1 \sqcup V_2 \sqcup \cdots \sqcup V_r$ with corresponding polytopes $\Delta_i := \Conv( V_i \cup \{ 0\})$. We say that this partition is a \emph{nef partition} if the Minkowski sum $ \Delta_1 +\ldots+\Delta_r$ is also a reflexive polytope, which we will denote by $\nabla^\circ \subset N_\R$ (so $\nabla \subset M_\R$) (we say that the nef partition is \emph{indecomposable} if no Minkowski sum of any proper subset of the partition gives a reflexive polytope).
+
+The associated \emph{Cayley polytope} $P^\ast \subset N_\R \times \R^r$ of dimension $n+r-1$ is given by 
+\[
+P^\ast = \Conv \left( \bigcup_{i=1}^r \Delta_i \times e_i \right),
+\]
+where of course $\{e_i\}_{i=1}^r$ is the standard basis of $\R^r$. The cone over the Cayley polytope is the \emph{Cayley cone} $C^\ast := \Cone(P^\ast)$ with \emph{dual Cayley cone} $C \subset M_\R \times \R^r$. The cone $C^\ast$ is a reflexive Gorenstein cone of index $r$.
+
+The intersections of $P$ with affine subspaces given by intersections of hyperplanes $x_i=1,x_j=0$ for $i,j \in \{n+1,\ldots, n+r\}$, and $i\neq j$ are polytopes $\nabla_1^\prime,\ldots, \nabla_r^\prime$. Then $\nabla_i = \pi(\nabla_i^\prime)$, the projection of $\nabla_i^\prime$ to $N_\R$. These polytopes correspond to the dual nef partition, such that $\nabla = \Conv(\nabla_1 \cup \cdots \cup \nabla_r)$ and $\Delta^\circ = \nabla_1 + \ldots + \nabla_r$. 
+
+To sum up, we have the following sets of polytopes:
+
+\begin{center}
+\begin{tabular}{l l}
+  $N_\R$ & $M_\R$ \\
+\hline
+ $\Delta=\Conv(\{\Delta_1,\ldots,\Delta_r\})$ & $\Delta^\circ=\nabla_1+\ldots+\nabla_r$ \\
+$\nabla^\circ = \Delta_1+\ldots+\Delta_r$ & $\nabla=\Conv(\{\nabla_1,\ldots,\nabla_r\})$ \\
+
+\end{tabular}
+\end{center}
+
+This is the mirror duality of Batyrev-Borisov.
+
+\subsection{Applied to our case}
+
+Recall that the polytope associated to the del Pezzo surface of degree $6$ is the polytope $H$ depicted in \ref{fig:hexagon}. 
+
+\begin{figure}[ht]
+\label{fig:hexagon}
+\centering
+\begin{tikzpicture}
+  \draw (0, 0) grid (4, 4); 
+
+\draw [fill=black]  (1, 1) circle (0.1);
+\draw [fill=black]  (2, 1) circle (0.1);
+\draw [fill=black]  (3, 2) circle (0.1);
+\draw [fill=black]  (3, 3) circle (0.1);
+\draw [fill=black]  (2, 3) circle (0.1);
+\draw [fill=black]  (1, 2) circle (0.1);
+\draw [fill=black]  (2, 2) circle (0.12);
+
+\draw [very thick, color=blue, fill=green, fill opacity=0.2]
+(1,1) -- (2,1) -- (3,2) -- (3,3) -- (2,3) -- (1,2) -- cycle;
+
+\end{tikzpicture}
+\caption{The hexagon, a.k.a the polytope associated to a degree 6 del Pezzo surface.}
+\end{figure}
+ 
+Since we have a total of $7$ points in $H \cap N$, the del Pezzo surface is naturally embedded in $\PP^6$. Taking the projective join of two such, we get the (singular) toric variety $T$ in $\PP^{11}$. The polytope associated to this variety is $H \ast H$, the \emph{join} of $H$ with itself. This is obtained by placing each copy of $H$ in disjoint hyperplanes and taking the convex hull. Explicitly, the join of two polytopes $P_1 \subset N_\R$ and $P_2 \subset N_\R$ can be defined in the following way: embed $P_i$ in $N_\R \times N_\R \times \R^2$ as $P_i \times \{e_i\}$. Then take the convex hull of $P_1$ and $P_2$. In our case, we consider the convex hull of the columns of the  matrix
+
+\[
+P^\prime = \Conv \left( \left[
+\begin{array}{*{14}c}
+0 & 1 & 1 & 2 & 2 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 1 & 2 & 2 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 2 & 2 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 2 & 2 & 1 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1
+\end{array} \right] \right)
+\]
+Note however that $P^\prime$ is not a reflexive polytope anymore. The origin is a vertex, and there are no interior points. This is solved by considering $P := 2 \cdot P^\prime - (1,1,1,1,1)$. This polytope is now reflexive. Since a polytope and any of its multiples have the same normal fan, we can just as well consider $P$ as the polytope associated to $T$.
+
+%In fact: [[[[[ find proof??? ]]]]
+%\begin{lemma}
+%If $P_1$ and $P_2$ are reflexive polytopes, then $2 \cdot (P_1 \ast P_2)$ is also reflexive.
+%\end{lemma}
+
+$P$ lives in $N_\R$, so to get the same setup as in the previous section, we define $\Delta$ to be its polar $P^\circ$. Now $\Delta$ is the convex hull of the columns of the matrix:
+\[
+\Delta = \Conv \left(
+\left[\begin{array}{rrrrrrrrrrrr}
+0  & 0  & 0 & 0 & 0 & 0 &  0 & 1 & -1 & 0  & -1 & 1 \\
+0  & 0  & 0 & 0 & 0 & 0 &  1 & 0 & 0  & -1 & 1  & -1 \\
+0  & -1 & 1 & -1& 0 & 1 &  0 & 0 & 0  & 0  & 0  & 0 \\
+-1 & 0  &-1 & 1 & 1 & 0 &  0 & 0 & 0  & 0  & 0  & 0 \\
+2  & 2  & 1 & 1 & 1 & 0 &  0 & 0 & -2 & -2 & -1 & -1
+\end{array}\right]\right)
+\]
+
+Using the program PALP, which is implemented in SAGE, one finds that if one takes $\Delta_1$ (resp. $\Delta_2$) to be convex hull of the first six columns (resp. six last) and the origin, then $\Delta_1+\Delta_2$ is reflexive, which we will, as above, denote by $\nabla^\circ$.
 
 \begin{lemma}
-The Hodge numbers are $h^{12}=h^{22}=19$. 
+  The $f$-vector of $\nabla^\circ$ is $f=(1, 48, 156, 194, 108, 24, 1)$. 
+\end{lemma}
+
+The associated Cayley polytope $P^\ast$ is as above the convex hull of $\Delta_1 \times \{ e_1\}$ and $\Delta_2 \times \{ e_2\} $ in $N_\R \times \R^2$. Explicitly, it is given by the same matrix as $\Delta$, but with $(1,0)$ after the first six columns and $(0,1)$ after the last six.
+
+The Cayley cone $C^\ast$ is just the $7$-dimensional cone supported on $P^\ast$. To find $P$, one just takes the convex hull of the ray generators of $C=(C^\ast)^\ast$. As above, one find $\nabla_1,\nabla_2$ by intersecting with hyperplanes, and then projecting back to $M_\R$. 
+
+\begin{lemma}
+$\nabla_1$ and $\nabla_2$ are isomorphic lattice polytopes, differing by a translation in the lattice. In particular, they have the same normal fan.   
+\end{lemma}
+
+A calculation in PALP gives the following:
+\begin{lemma}
+The Hodge numbers associated to this nef partition are $h^{12}=h^{22}=19$ (and consequently, they are the same for the dual nef partition).
 \end{lemma}
 
 
