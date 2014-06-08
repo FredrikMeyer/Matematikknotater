@@ -66,9 +66,9 @@ Since $X_t$ above degenerates to a sphere, it is a Calabi-Yau-manifold, and in f
 
 Let $N \approx \Z^n$ be a lattice and let $M=N^\vee$ be the dual lattice (the ``equation lattice''). Let $\Delta \subset N_\R$ be a reflexive polytope and $\Delta^\circ$ its polar polytope (which is also reflexive). Let $T:=N \otimes_\Z \C^\ast$ be the $n$-dimensional torus. We denote by $\PP_\Delta$ the toric variety associated to the polytope $\Delta$.   It can be described as the closure of the map $T_N \to \PP^{s-1}$ (here $s$ is the number of vertices of lattice points of $\Delta$) given by
 \[
-t \mapsto \left( .... \right)
+t \mapsto \left( \chi^{m_1}(t), \ldots, \chi^{m_s}(t) \right).
 \]
-[[ THIS MUST BE FILLED IN ]]
+An equivalent (?) description more suitable for computations is the following: embed $\Delta$ in $M_\R \times \R$ as $\Delta \times \{1\}$. Let $C$ be the cone over $\Delta \times \{1\}$, and consider the semigrup ring $\C[C \cap (M \times \Z)]$. This is a graded ring, so we define $\PP_\Delta$ to be $\Proj \C[C \cap (M \times \Z)]$.
 
 Let the vertex set $V$ of $\Delta$ be partitioned into a disjoint union of subsets $V_1 \sqcup V_2 \sqcup \cdots \sqcup V_r$ with corresponding polytopes $\Delta_i := \Conv( V_i \cup \{ 0\})$. We say that this partition is a \emph{nef partition} if the Minkowski sum $ \Delta_1 +\ldots+\Delta_r$ is also a reflexive polytope, which we will denote by $\nabla^\circ \subset N_\R$ (so $\nabla \subset M_\R$) (we say that the nef partition is \emph{indecomposable} if no Minkowski sum of any proper subset of the partition gives a reflexive polytope).
 
@@ -169,8 +169,24 @@ A calculation in PALP gives the following:
 The Hodge numbers associated to this nef partition are $h^{12}=h^{22}=19$ (and consequently, they are the same for the dual nef partition).
 \end{lemma}
 
+Here's a summary of the data of all the polytopes found so far:
 
 
+\begin{center}
+  \begin{tabular}{l| c c c c c}
+Polytope & Dimension & Lattice points & Interior points & Reflexive & f-vector \\
+\hline 
+$\Delta$ & $5$ & $15$ & $1$ & Yes & $(12, 48, 74, 48, 12)$ \\
+$\Delta^\circ$ & $5$ & $87$ & $1$ & Yes & $(12, 48, 74, 48, 12)$ \\
+$\Delta_1$ & $3$ & $8$ & $0$ & No (2) & $(7, 12, 7)$ \\
+$\Delta_2$ & $3$ & $8$ & $0$ & No (2) & $(7, 12, 7)$ \\
+$\nabla$ & $5$ & $27$ & $1$ & Yes & $(24, 108, 194, 156, 48)$ \\
+$\nabla^\circ$ & $5$ & $63$ & $1$ & Yes & $(48, 156, 194, 108, 24)$ \\
+$\nabla_1$ & $5$ & $14$ & $0$ & No (2)& $(12, 48, 74, 48, 12)$ \\
+$\nabla_2$ & $5$ & $14$ & $0$ & No (2)& $(12, 48, 74, 48, 12)$ \\
+\end{tabular}
+\end{center}
+By ``No (2)'' is ment that $2 \cdot P$ is reflexive. 
 
 
 \end{document}

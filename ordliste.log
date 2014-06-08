@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  4 JUN 2014 12:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  8 JUN 2014 13:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1068,30 +1068,30 @@ OMS/cmsy/m/n/10.95 L$ \T1/cmr/m/n/10.95 is an [][]am-ple[][] in-vert-ible sheaf
  []
 
 [3] [4] [5] [6]
-LaTeX Font Info:    Try loading font information for U+euf on input line 227.
+LaTeX Font Info:    Try loading font information for U+euf on input line 232.
 
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-[7] [8] (./ordliste.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 301.
- [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 301.
+[7] [8] (./ordliste.bbl [9])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 306.
+ [10]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 306.
  (./ordliste.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 301.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 301.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 306.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 306.
 Package rerunfilecheck Info: File `ordliste.out' has not changed.
-(rerunfilecheck)             Checksum: C541860B30C1B09F65F2D7AB3D54BCAA;4657.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 301.
+(rerunfilecheck)             Checksum: 67B955B7B304B0A5DCC937EA110B01E3;4755.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 306.
  ) 
 Here is how much of TeX's memory you used:
- 18713 strings out of 493308
- 313362 string characters out of 6135157
- 429832 words of memory out of 5000000
- 21656 multiletter control sequences out of 15000+600000
+ 18720 strings out of 493308
+ 313427 string characters out of 6135157
+ 429862 words of memory out of 5000000
+ 21661 multiletter control sequences out of 15000+600000
  18741 words of font info for 62 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,15n,55p,3276b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,15n,55p,3276b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/enc/dvips/cm-super/cm-super
 -t1.enc}</opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmex10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/a
@@ -1114,10 +1114,10 @@ c/cm-super/sfbx1440.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1
 /type1/public/cm-super/sfrm1200.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist
 /fonts/type1/public/cm-super/sfrm1728.pfb></opt/app-sync/texlive/uio-texmf/texm
 f-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on ordliste.pdf (9 pages, 268397 bytes).
+Output written on ordliste.pdf (10 pages, 269586 bytes).
 PDF statistics:
- 453 PDF objects out of 1000 (max. 8388607)
- 418 compressed objects within 5 object streams
- 81 named destinations out of 1000 (max. 500000)
- 525 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 461 PDF objects out of 1000 (max. 8388607)
+ 425 compressed objects within 5 object streams
+ 83 named destinations out of 1000 (max. 500000)
+ 533 words of extra memory for PDF output out of 10000 (max. 10000000)
 
