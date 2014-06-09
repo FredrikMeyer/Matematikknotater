@@ -23,10 +23,10 @@
 \title{Findings}
 \author{FM}
 \date{}
-\begin{document}
+\begin{document} 
 \maketitle
 %\tableofcontents 
-\section{Smoothing}
+\section{Existence of a smoothing}
 
 Let $\K=D_6 \ast D_6$ be the join of two $6$-gons, and let $A_\K$ be its Stanley-Reisner ring, and $\PP(\K)$ its associated projective scheme. 
 
@@ -38,31 +38,38 @@ The tangent and obstruction modules $T^i(\PP(\K))$ can be described as follows:
 
 \begin{prop}
 \[
-\dim_\C T^1 = 72+12 = 84
+\dim_\C T^1(\K) = 12+72 = 84
 \]
 \[
-\dim_\C T^2 = ?
+\dim_\C T^2(\K) = 72
 \]
 \end{prop}
+\begin{proof}
+We use the results of \cite{deforming_christophersen}. A basis of $T^1$ come in two orbits. They can be described as follows: let $\lk(\K,v_1)$ be the link of a vertex in $\K$. This is double pyramid over a hexagon, and this contributes with one dimension to $T^1$, by the results in \cite{deforming_christophersen}. There are $12$ vertices.
 
-Here's an observation: Let $\mathcal G = D_6 \ast \{ v \}$. Then $\PP(\mathcal G)$ can be smoothed to a del Pezzo surface of degree $6$. This follows because $\mathbb G$ triangulates the associated polytope (the Minkowski sum of three line segments). It follows that $D_6$ can be smoothed as well, because it is embedded as a complete intersection in $\mathcal G$.
+For the other type, let $v_i$ be one of the first six vertices and $v_j$ be one of the last six. Then $\lk(\K,v_iv_j)$ is a square, which contributes $2$ to $T^1$. In total, there are $6 \times 6$ choices, hence $2 \times 36=72$ dimensions to account for. In total $\dim_\C T^1(\K) = 84$.
+
+For $T^2$, all contributions are of the same form as those for $D_6$, namely the crossing diagonals. There are three of them, so in total, we have $\dim_\C T^2_2=6$. However, each one of them can be multiplied by monomials to give something of degree $0$. Thus there are in total $3 \times 4 \times 6=72$ contributions to $T^2$.
+\end{proof}
+
+Here's an observation: Let $\mathcal G = D_6 \ast \{ v \}$. Then $\PP(\mathcal G)$ can be smoothed to a del Pezzo surface of degree $6$. This follows because $\mathcal G$ triangulates the associated polytope (a hexagon), by standard ``Sturmfels theory''. It follows that $D_6$ can be smoothed as well, because it is embedded as a complete intersection in $\mathcal G$.
 
 \begin{prop}
-Also $\PP(\K)$ can be smoothed.
+There exists a smoothing of $\PP(\K)$ to a complete intersection of two hyperplanes in a deformation of a toric variety.
 \end{prop}
 \begin{proof}
 Now let $\mathcal G=(D_6 \ast \{v \}) \ast (D_6 \ast \{w \})$ for two vertices $v,w$. Then using the above trick, $\mathcal G$ can be deformed to the projective join $T$ of two del Pezzo surfaces of degree $6$. The ideal is just given by the sum of the ideal of each del Pezzo surface, in disjoint variables. Since $\K$ is a complete intersection in $\mathcal G$, it follows that $X_0=\PP(\K)$ deforms as well, say to $X_t$.. However, $T$ has a singular locus of dimension $2$. By Bertini, it follows that $X_t$ have isolated singularities.
 
-However: it is possible to computationally, by brute force, futher deforma $T$ to a variety having singular locus of dimension $1$. This implies that $X_t$ deforms to something smooth.
+However: it is possible to computationally, by brute force, futher deform $T$ to a variety having singular locus of dimension $1$. This implies that $X_t$ deforms to something smooth.
 \end{proof}
 
-It would be nice to find a non-computational argument for the existence of the smoothing. Maybe a toric deformation? It would also be nice to know if the generic fiber of $X_0$ over $Def(X_0)$ is smooth, and if not, what is the smoothing component? 
+It would be nice to find a non-computational argument for the existence of the smoothing. Maybe a toric deformation? It would also be nice to know if the generic fiber of $X_0$ over $Def(X_0)$ is smooth, and if not, what is the smoothing component? From computational experiments, it looks like the total base space is way to complicated to approach directly. 
 
 \section{Mirror symmetry}
 
 \subsection{Notation and preliminaries}
 
-Since $X_t$ above degenerates to a sphere, it is a Calabi-Yau-manifold, and in fact, the description of it is a complete intersection of two hyperplanes corresponds to a socalled nef partition of the polytope associated to $T$ above. We recall the Batyrev-Borisov construction for mirrors of complete intersections in toric varieties. 
+Since $X_t$ above degenerates to a sphere, it is a Calabi-Yau-manifold, and in fact, the description of it is a complete intersection of two hyperplanes corresponds to a socalled nef partition of the polytope associated to $T$ above. We recall the Batyrev-Borisov construction for mirrors of complete intersections in toric varieties. We follow the description in \cite{doran_hodgenos}.
 
 Let $N \approx \Z^n$ be a lattice and let $M=N^\vee$ be the dual lattice (the ``equation lattice''). Let $\Delta \subset N_\R$ be a reflexive polytope and $\Delta^\circ$ its polar polytope (which is also reflexive). Let $T:=N \otimes_\Z \C^\ast$ be the $n$-dimensional torus. We denote by $\PP_\Delta$ the toric variety associated to the polytope $\Delta$.   It can be described as the closure of the map $T_N \to \PP^{s-1}$ (here $s$ is the number of vertices of lattice points of $\Delta$) given by
 \[
@@ -184,9 +191,11 @@ $\nabla$ & $5$ & $27$ & $1$ & Yes & $(24, 108, 194, 156, 48)$ \\
 $\nabla^\circ$ & $5$ & $63$ & $1$ & Yes & $(48, 156, 194, 108, 24)$ \\
 $\nabla_1$ & $5$ & $14$ & $0$ & No (2)& $(12, 48, 74, 48, 12)$ \\
 $\nabla_2$ & $5$ & $14$ & $0$ & No (2)& $(12, 48, 74, 48, 12)$ \\
-\end{tabular}
-\end{center}
+\end{tabular} 
+\end{center} 
 By ``No (2)'' is ment that $2 \cdot P$ is reflexive. 
 
+\bibliographystyle{alpha} 
+\bibliography{bibliografi}
 
 \end{document}
