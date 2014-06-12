@@ -43,6 +43,11 @@ A \textbf{crepant resolution} is a resolution of singularities $f:X \to Y$ that 
 
 A rational map $f:X \rmap Y$ is  \textbf{dominant} if its image (or precisely: the image of one of its representatives) is dense in $Y$. 
 
+\subsubsection{Étale map}
+\label{etalemap}
+
+A morphism of schemes of finite type $f:X \to Y$ is \textbf{étale} if it is smooth of dimension zero. This is equivalent to $f$ being flat and $\Omega_{X/Y}=0$. This again is equivalent to $f$ being flat and unramified.
+
 \subsubsection{Genus}
 \label{genus}
  
@@ -52,6 +57,11 @@ The \textbf{geometric genus} of a smooth, algebraic variety, is defined as the n
 \label{hodgenumbers}
 
 If $X$ is a complex manifold, then the \textbf{Hodge numbers $h^{pg}$} of $X$ are defined as the dimension of the cohomology groups $H^p(X,\Omega_X^q)$.
+
+\subsubsection{Linear series}
+\label{linearseries}
+
+A \textbf{linear series} on a smooth curve $C$ is the data $(\LL,V)$ of a line bundle on $C$ and a vector subspace $V \subseteq H^0(C,\LL)$. We say that the linear series $(\LL,V)$ have \emph{degree} $\deg \LL$ and \emph{rank} $\dim V - 1$. 
 
 \subsubsection{Normal variety}
 \label{normalvariety}
@@ -69,6 +79,37 @@ A morphism $f:X \to Y$ is a \textbf{resolution of singularities of $Y$} if $X$ i
 \subsubsection{Separated morphism}
 \label{separated}
 Let $f:X \to Y$ be a morphism of schemes. Let $\Delta:X \to X \X_Y X$ be the diagonal morphism. We say that $f$ is \textbf{separated} if $\Delta$ is a closed immersion. 
+
+\subsection{Moduli theory and stacks} 
+
+\subsubsection{Étale site}
+\label{etalesite}
+
+Let $S$ be a scheme. Then the \textbf{small étale site over $S$} is the \hyperref[site]{site}, denoted by $\Et S$ that consists of all étale morphisms $U \to S$ (morphisms being commutative triangles). Let $\Cov(U \to S)$ consist of all collections $\{ U_i \to U \}_{i \in I}$ such that
+\[
+\coprod_{i \in I} U_i \to U
+\]
+is surjective.
+
+\subsubsection{Grothendieck topology}
+\label{grothendiecktopology}
+
+Let $\CC$ be a category. A \textbf{Grothendieck topology} on $\CC$ consists of a set $\Cov(X)$ of sets of morphisms $\{ X_i \to X\}_{i \in I}$ for each $X$ in $\mathrm{Ob}(\CC)$, satisfying the following axioms:
+\begin{enumerate}
+\item If $V \xrightarrow{\approx} X$ is an isomorphism, then $\{ V \to X\} \in \Cov(X)$.
+\item If $\{X_i \to X\}_{i \in I} \in \Cov(X)$ and $Y \to X$ is a morphism in $\CC$, then the fiber products $X_i \times_X Y$ exists and ${\{ X_i \times_X Y \to Y\}_{i \in I} \in \Cov(Y)}$.
+\item If $\{X_i \in X\}_{i \in I} \in \Cov(X)$, and for each $i \in I$, $\{ V_{ij} \to X_i\}_{j \in J} \in  \Cov(X_i)$, then
+\[
+\{ V_{ij} \to X_i \to X\}_{i \in I, j \in J} \in \Cov(X).
+\]
+\end{enumerate}
+
+The easiest example is this: Let $\CC$ be the category of open sets on a topological space $X$, the morphisms being only the inclusions. Then for each $U \in \mathrm{Ob}(\CC)$, define $\Cov(U)$ to be the set of all coverings $\{ U_i \to U \}_{i \in I}$ such that $U = \bigcup_{i\in I} U_i$. Then it is easily checked that this defines a Grothendieck topology.
+
+\subsubsection{Site}
+\label{site}
+
+A \textbf{site} is a category equipped with a \hyperref[grothendiecktopology]{Grothendieck topology}.
 
 
 \subsection{Results and theorems}
