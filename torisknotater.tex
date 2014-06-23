@@ -1,0 +1,76 @@
+\documentclass[11pt, english]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}   % S P R A A K
+%%
+%% husk 
+%% git pull origin 
+%% git add *
+%% git commit -m "..."
+%% git push
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs,calligra}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $
+\usepackage{float}
+\usepackage{tikz}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for flo<at right
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{mystyle} % stilfilen      
+ 
+\title{Notes toric}
+\author{FM}
+\date{}
+\begin{document}
+\maketitle
+
+\section{The torus}
+
+Toric geometry is about the \emph{algebraic torus}, and not the
+\emph{topological torus}. The latter is a product of copies of $S^1$,
+and the latter is a product of copies of $\mathbb{C}^\ast$. They are
+not completely dissimilar: the algebraic torus deformation retracts
+onto the topological torus, so they do have the same topological
+cohomology groups.
+
+From now on, the word ``torus'' will always mean the algebraic torus.
+
+What are the functions on the torus? Since we have the inclusion
+$(K^\ast)^n \subseteq K^n$, we have an inclusion $K[\mathbb A^n]
+\subseteq K[(K^\ast)^n]$. A short moment's thought tells that the
+remaining functions are precisely the monomials. Thus we can say that
+$K[(K^\ast)^n]=K[\Z^n]$.
+
+The invertible functions are the monomials. Those that map $1_T
+\mapsto 1_{K^\ast}$ are the monomials with coefficent $1$, the
+\emph{characters}: $\{ \chi^u \mid u \in \Z^n \}$. 
+
+What are maps between tori? That is, we want to describe
+$\Hom(T,T^\prime)$.  We want the maps to preserve units. We can
+compose in any coordinate direction $T \to T^\prime \to K^\ast$. A
+moment's thought tells that the invertibility preserving maps are
+precisely the maps between the character lattices of the tori (in the
+opposite direction).
+
+This is contravariant, and we would want to have a covariant
+correspondence. Introduce the \emph{dual lattice}, namely
+$N=\Hom(M,\Z)$. Thus we see that maps between tori $T \to T^\prime$ correspond
+bijectively naturally to maps between the dual lattices $N \to N^\prime$.
+
+The lattice is $N$ is often called the lattice of $1$-parameter
+subgrous $K^\ast \to T$.
+
+\begin{defi}
+A \emph{toric variety} is a normal equivariant partial
+compactification of the torus $T$.
+\end{defi}
+
+Normality means that the coordinate ring of an affine patch is
+integrally closed in its fraction field. This is equivalent to Serre's
+famous ``R1+S2'' condition. 
+
+\end{document}
