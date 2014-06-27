@@ -29,7 +29,46 @@
 \maketitle
 
 \section{Algebraic Geometry}
-\subsection{General properties}
+\subsection{General terms}
+\subsubsection{Cartier divisor}
+\label{cartierdivisor}
+
+Let $\mathcal K_X$ be the \emph{sheaf of total quotients} on $X$, and let $\OO_X^\ast$ be the sheaf of non-zero divisors on $X$. We have an exact sequence 
+\[
+1 \to \OO_X^\ast \to \mathcal K_X \to \mathcal K_X/\OO_X^\ast \to 1.
+\]
+Then a \textbf{Cartier divisor} is a global section of the quotient sheaf at the right.
+
+\subsubsection{Categorical quotient}
+\label{categoricalquotient}
+
+Let $X$ be a scheme and $G$ a group. A \textbf{categorical quotient} is a morphism $\pi:X \to Y$ that satisfies the following two properties:
+\begin{enumerate}
+\item It is invariant, in the sense that $\pi \circ \sigma = \pi \circ p_2$ where $\sigma:G \times X \to X$ is the group action, and $p_2:G \times X \to X$ is the projection. That is, the following diagram should commute:
+\[
+\xymatrix{
+G \times X \ar[r]^\sigma \ar[d]_{p_2} \ar[r] & X \ar[d]^{\pi} \\
+X \ar[r]_{\pi} & Y
+} 
+\]
+\item The map $\pi$ should be \emph{universal}, in the following sense: If $\pi^\prime:X \to Z$ is any morphism satisfying the previous condition, it should uniquely factor through $\pi$. That is:
+\[
+\xymatrix{
+X \ar[d]_{\pi^\prime}\ar[r]^{\pi}  & Y \\
+Z \ar[ur]_{\exists ! h}
+}
+\]
+\end{enumerate}
+
+Note: A categorical quotient need not be surjective.
+
+\subsubsection{Chow group}
+\label{chowgroup}
+Let $X$ be an algebraic variety. Let $Z_r(X)$ be the group of $r$-dimension cycles on $X$, a \emph{cycle} being a $\Z$-linear combination of $r$-dimensional subvarieties of $X$. If $V \subset X$ is a subvariety of dimension $r+1$ and $f:X \rmap \Aa^1$ is a rational function on $X$, then there is an integer $\ord_W(f)$ for each codimension one subvariety of $V$, the order of vanishing of $f$. For a given $f$, there will only be finitely many subvarieties $W$ for which this number is non-zero. Thus we can define an element $[\div(f)]$ in $Z_r(X)$ by $\sum \ord_W(f) [W]$.
+
+We say that two $r$-cycles $U_1,U_2$  are \emph{rationally equivalent} if there exist $r+1$-dimensional subvarieties $V_1,V_2$ together with rational functions $f_1\colon V_1 \rmap \Aa^1$, $f_2 \colon V_2 \rmap \Aa^1$ such that $U_1 - U_2 = sum_i [\div(f_i)]$. The quotient group is called the \textbf{Chow group} of $r$-dimensional cycles on $X$, and denoted by $A_r(X)$. 
+
+
 \subsubsection{Complete variety}
 \label{completevariety}
 Let $X$ be an  integral, \hyperref[separated]{separated} scheme over a field $k$. Then $X$ is  \textbf{complete} if is \hyperref[proper]{proper}.
@@ -52,6 +91,17 @@ A morphism of schemes of finite type $f:X \to Y$ is \textbf{étale} if it is smo
 \label{genus}
  
 The \textbf{geometric genus} of a smooth, algebraic variety, is defined as the number of sections of the \hyperref[canonicalsheaf]{canonical sheaf}, that is, as $H^0(V,\omega_X)$. This is often denoted $p_X$.
+
+\subsubsection{Geometric quotient}
+\label{geometricquotient}
+
+Let $X$ be an algebraic variety and $G$ an algebraic group. Then a \textbf{geometric quotient} is a morphism of varieties $\pi:X \to Y$ such that
+\begin{enumerate}
+\item For each $y \in Y$, the fiber $\pi^{-1}(y)$ is an orbit of $G$.
+\item The topology of $Y$ is the quotient topology: a subset $U$ of $Y$ is open if and only if $\pi^{-1}(U)$ is open.
+\item For any open subset $U \subset Y$, $\pi^\ast: k[U] \to k[\pi^{-1}(U)]^G$ is an isomorphism of $k$-algebras.
+\end{enumerate}
+The last condition may be rephrased as an isomorphism of strcture sheaves: $\OO_Y \simeq (\pi_\ast \OO_X)^G$.   
 
 \subsubsection{Hodge numbers}
 \label{hodgenumbers}
@@ -230,6 +280,15 @@ A line bundle $\LL$ is \textbf{very ample} if there is an embedding $i:X \hookri
 
 \subsection{Toric geometry}
 
+\subsubsection{Chow group of a toric variety}
+\label{chowtoric}
+
+The \hyperref[chowgroup]{Chow group} $A_{n-1}(X)$ of a toric variety can be computed directly from its fan. Let $\Sigma(1)$ be the set of rays in $\Sigma$, the fan of $X$. Then we have an exact sequence
+\[
+ 0 \to M \to \Z^{\Sigma(1)} \to A_{n-1}(X) \to 0.
+\] 
+The first map is given by sending $m \in M$ to $(\langle m,v_p \rangle )_{\rho \in \Sigma(1)}$, where $v_p$ is the unique generator of the semigroup $\rho \cap N$. The second map is given by sending $(a_\rho)_{\rho \in \Sigma(1)}$ to the divisor class of $\sum_\rho  a_\rho D_\rho$. 
+
 \subsubsection{Polarized toric variety}
 A toric variety equipped with an \hyperref[amplelinebundle]{ample} $T$-invariant divisor.
 
@@ -261,6 +320,15 @@ An \textbf{elliptic curve} is a smooth, projective curve of genus $1$. They can 
 \label{fano}
 
 A variety $X$ is \textbf{Fano} if the \hyperref[anticanonical]{anticanonical  sheaf} $\omega_X^{-1}$ is \hyperref[amplelinebundle]{ample}.  
+
+\subsubsection{Jacobian variety}
+\label{jacobianvariety}
+
+Let $X$ be a curve of genus $g$ over $k$. The \textbf{Jacobian variety} of $X$ is a scheme $J$ of finite type over $k$, together with an element $\LL \in \Pic^\circ(X/J)$, with the following universal property: for any scheme $T$ of finite type over $k$ and for any $\mathcal M \in \Pic^\circ(X/T)$, there is a unique morphism $f:T \to J$ such that $f^\ast \LL \simeq \mathcal M$ in $\Pic^\circ (X/T)$. This just says that $J$ represents the functor $T \mapsto \Pic^\circ(X/T)$. 
+
+If $J$ exists, its closed points are in $1-1$ correspondence with elements of $\Pic^\circ (X)$.
+
+It can be checked that $J$ is actually a group scheme. For details, see \cite[Ch. IV.4]{hartshorne}.
 
 \subsubsection{K3 surface}
 \label{k3}
