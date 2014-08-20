@@ -58,9 +58,9 @@ Here's an observation: Let $\mathcal G = D_6 \ast \{ v \}$. Then $\PP(\mathcal G
 There exists a smoothing of $\PP(\K)$ to a complete intersection of two hyperplanes in a deformation of a toric variety.
 \end{prop}
 \begin{proof}
-Now let $\mathcal G=(D_6 \ast \{v \}) \ast (D_6 \ast \{w \})$ for two vertices $v,w$. Then using the above trick, $\mathcal G$ can be deformed to the projective join $T$ of two del Pezzo surfaces of degree $6$. The ideal is just given by the sum of the ideal of each del Pezzo surface, in disjoint variables. Since $\K$ is a complete intersection in $\mathcal G$, it follows that $X_0=\PP(\K)$ deforms as well, say to $X_t$.. However, $T$ has a singular locus of dimension $2$. By Bertini, it follows that $X_t$ have isolated singularities.
+Now let $\mathcal G=(D_6 \ast \{v \}) \ast (D_6 \ast \{w \})$ for two vertices $v,w$. Then using the above trick, $\mathcal G$ can be deformed to the projective join $T$ of two del Pezzo surfaces of degree $6$. The ideal is just given by the sum of the ideal of each del Pezzo surface, in disjoint   variables. Since $\K$ is a complete intersection in $\mathcal G$, it follows that $X_0=\PP(\K)$ deforms as well, say to $X_t$. However, $T$ has a singular locus of dimension $2$. By Bertini, it follows that $X_t$ have isolated singularities.
 
-However: it is possible to computationally, by brute force, futher deform $T$ to a variety having singular locus of dimension $1$. This implies that $X_t$ deforms to something smooth.
+However: it is possible to computationally, by brute force in \verb|Macaulay2|, further deform $T$ to a variety having singular locus of dimension $1$. This implies that $X_t$ deforms to something smooth.
 \end{proof}
 
 It would be nice to find a non-computational argument for the existence of the smoothing. Maybe a toric deformation? It would also be nice to know if the generic fiber of $X_0$ over $Def(X_0)$ is smooth, and if not, what is the smoothing component? From computational experiments, it looks like the total base space is way to complicated to approach directly. 
@@ -85,7 +85,7 @@ P^\ast = \Conv \left( \bigcup_{i=1}^r \Delta_i \times e_i \right),
 \]
 where of course $\{e_i\}_{i=1}^r$ is the standard basis of $\R^r$. The cone over the Cayley polytope is the \emph{Cayley cone} $C^\ast := \Cone(P^\ast)$ with \emph{dual Cayley cone} $C \subset M_\R \times \R^r$. The cone $C^\ast$ is a reflexive Gorenstein cone of index $r$.
 
-The intersections of $P$ with affine subspaces given by intersections of hyperplanes $x_i=1,x_j=0$ for $i,j \in \{n+1,\ldots, n+r\}$, and $i\neq j$ are polytopes $\nabla_1^\prime,\ldots, \nabla_r^\prime$. Then $\nabla_i = \pi(\nabla_i^\prime)$, the projection of $\nabla_i^\prime$ to $N_\R$. These polytopes correspond to the dual nef partition, such that $\nabla = \Conv(\nabla_1 \cup \cdots \cup \nabla_r)$ and $\Delta^\circ = \nabla_1 + \ldots + \nabla_r$. 
+The intersections of $C$ with affine subspaces given by intersections of hyperplanes $x_i=1,x_j=0$ for $i,j \in \{n+1,\ldots, n+r\}$, and $i\neq j$ are polytopes $\nabla_1^\prime,\ldots, \nabla_r^\prime$. Then $\nabla_i = \pi(\nabla_i^\prime)$, the projection of $\nabla_i^\prime$ to $N_\R$. These polytopes correspond to the dual nef partition, such that $\nabla = \Conv(\nabla_1 \cup \cdots \cup \nabla_r)$ and $\Delta^\circ = \nabla_1 + \ldots + \nabla_r$. 
 
 To sum up, we have the following sets of polytopes:
 
