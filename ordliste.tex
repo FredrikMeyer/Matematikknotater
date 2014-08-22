@@ -145,9 +145,11 @@ A morphism $f:X \to Y$ is \textbf{proper} if it \hyperref[separated]{separated},
 
 A morphism $f:X \to Y$ is a \textbf{resolution of singularities of $Y$} if $X$ is non-singular and $f$ is birational and \hyperref[proper]{proper}. 
 
-\subsubsection{Separated morphism}
+\subsubsection{Separated}
 \label{separated}
-Let $f:X \to Y$ be a morphism of schemes. Let $\Delta:X \to X \X_Y X$ be the diagonal morphism. We say that $f$ is \textbf{separated} if $\Delta$ is a closed immersion. 
+Let $f:X \to Y$ be a morphism of schemes. Let $\Delta:X \to X \X_Y X$ be the diagonal morphism. We say that $f$ is \textbf{separated} if $\Delta$ is a closed immersion. We say that $X$ is \textbf{separated} if the unique morphism $f:X \to \Spec \Z$ is separated.
+
+This is equivalent to the following: for all open affines $U,V \subset X$, the intersection $U \cap V$ is affine and $\OO_X(U)$ and $\OO_X(V)$ generate $\OO_X(U \cap V)$. For example: let $X=\PP^1$ and let $U_1=\{ [x:1] \}$ and $U_2= \{ [1:y] \}$. Then $\OO_X(U_1)=\Spec k[x]$ and $\OO_X(U_2)=\Spec k[y]$. The glueing map is given on the ring level as $x \mapsto \frac 1y$. Then $\OO_X(U_1 \cap U_2) = k[y,\frac 1y]$. 
 
 \subsection{Moduli theory and stacks} 
 
@@ -300,7 +302,7 @@ There are several ways to do this. Here is one: Let $\Delta \subset M_\R$ be a c
 \subsubsection{Abelian variety}
 \label{abelianvar}
 
-A variety $X$ is an \textbf{abelian variety} if it is a connected and complete algebraic group over a field $k$. Examples include \hyperref[ellipticc]{elliptic curves} and for special lattices $\Lambda \subset \C^{2g}$, the quotient $\C^{2g}/\Lambda$ is an abelian variety.
+A variety $X$ is an \textbf{abelian variety} if it is a connected and \hyperref[completevariety]{complete} algebraic group over a field $k$. Examples include \hyperref[ellipticc]{elliptic curves} and for special lattices $\Lambda \subset \C^{2g}$, the quotient $\C^{2g}/\Lambda$ is an abelian variety.
 
 \subsubsection{Calabi-Yau variety}
 

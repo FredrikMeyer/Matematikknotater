@@ -1,0 +1,33 @@
+\documentclass[11pt, english]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}   % S P R A A K
+
+
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+
+\title{Triangulations of $\CC \PP^2$ and deformations}
+
+\section{Approach 1}
+
+Let $X \subseteq \PP^5$ we a cubic hypersurface, and let $F_1(X)$ be its Fano variety of lines. The latter is a reducible subvariety of the Grassmannian $\Gr(2,6)$.
+
+\section{Approach 2}
+
+The article [[ref]] presents a triangulation of $\CC \PP^2$ having $15$ vertices 
+
+\end{document}

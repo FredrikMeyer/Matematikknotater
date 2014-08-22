@@ -1,0 +1,81 @@
+\documentclass[11pt, english]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}   % S P R A A K
+
+
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+\begin{document}
+\title{Triangulations of $\C \PP^2$ and deformations}
+\author{Fredrik Meyer}
+\maketitle 
+
+\section{Approach 1}
+
+Let $X \subseteq \PP^5$ we a smooth pfaffian cubic hypersurface, and let $F_1(X)$ be its Fano variety of lines. The latter is a reducible subvariety of the Grassmannian $\Gr(2,6)$.
+
+If we assume that $X$ is smooth, then it is known [[ref]] that $F_1(X)$ is deformation equivalent to the Hilbert scheme $S^{[2]}$ of pairs of points on $S$, where $S$ is a K3 surface of degree $14$ in $\PP^8$. By standard theory, a Stanley-Reisner degeneration of a K3 surface is a triangulated sphere, or just $\PP_\C^1$. Thus, a Stanley-Reisner degeneration of $S^{[2]}$ should give a triangulation of  $\PP^1_\C \ast \PP_\C^1 \approx \PP^2_\C$, the complex projective plane, as topological spaces.
+
+Since $F_1(X)$ is embedded in $\PP^{14}$ as a closed subscheme of the Grassmannian, finding such a triangulation is equivalent to finding a square-free initial ideal of the ideal of this embedding. 
+
+Since smooth hypersurfaces have too computationally consuming equations, we start naïvely with a singular hypersurface $X =V(f)= V(x_0x_2x_4-x_1x_3x_5)$. This is both a toric variety and a pfaffian hypersurface. However, because of the form of $f$, $F_1(X)$ is reducible:
+
+\begin{prop}
+If $X=V(x_0x_2x_4-x_1x_3x_5)$, the variety of lines $F_1(X)$ is reducible. It decomposes into $15$ components: $9$ of them are copies of $\Gr(2,4)$, and the $6$ other are toric varieties, all of them isomorphic.
+\end{prop}
+\begin{proof}
+The Grassmannian components are easy to see: if one of the even numbered coordinates are zero, then one of the odd must be too. Thus $X$ contains $3 \times 3$ special copies of $\PP^3$. Lines in $\PP^3$ are parametrized by Grassmannian $\Gr(2,4)$. This have dimension $4$. 
+
+The other components are not that easy: Consider the  rational map $\psi:\PP^2_{abc} \times \PP^2_{xyz} \rmap X$ given by sending $(a:b:c) \times (x:y:z)$ to $(ax:bx:by:cy:cz:az)$. Then this map is well-defined outside the points $(1:0:0) \times (0:1:0)$, $(0:1:0)\times (0:0:1)$ and $(0:0:1)\times(1:0:0)$. Resolving the locuf of indeterminacy give an isomorphism of a desingularization of $X$ with the blowup of $\PP^2 \times \PP^2$ in $3$ points. There are six ways of choosing the map $\psi$, which gives the six different toric components of $X$. 
+
+Since the map is of bidegree $(1,1)$, we have a well-defined induced map $(\PP^2)^\wedge \times \PP^2 \rmap F_1(X)$ given by
+\[
+\ell \times p \mapsto \ell_p := \big[\psi(x,p),\psi(y,p)\big]_{x,y \in \ell},
+\]
+where $\ell_p$ denotes the line connecting $\psi(x,p)$ and $\psi(y,p)$ in $\PP^5$. This gives one of the components in $F_1(X)$.
+
+
+That these are all components can either be checked on a computer, or by degree considerations. [[unsure of the latter]]
+\end{proof}
+
+The equations of $F_1(X)$ inside $\PP^{14}$ are rather messy. The embedding is of degree $108$ and there are $70$ equations ($15$ quadrics corresponding to the inclusion in $\Gr(2,6)$ and $55$ cubics, of which $6$ are monomials). 
+
+However, the Hilbert polynomial is $h(t) =\frac 92 t^4 + \frac {15}2 i^2  + 3$, giving a topological Euler characteristic of $3$, which agrees with the Euler characteristic of (the topological space) $\C \PP^2$.
+
+Thus, it is at least not totally unreasonable to predict that a Stanley-Reisner degeneration of $F_1(X)$ would correspond to a triangulation of $ \C \PP ^ 2$. 
+
+
+\section{Bad er good news}
+
+The article [[ref]] presents a triangulation $T$ of $\C \PP^2$ having $15$ vertices, \emph{and} the same $f$-vector as the triangulation we're looking for. This gives us a Stanley-Reisner scheme $X_T$ living in the same Hilbert scheme as $F_1(X)$. [[see the reference (for now) for a description]]
+
+Now, the Hilbert scheme is a terribly lonely place, so it could be that this new triangulation lives in a completely different component than the one $F_1(X)$ lives in. However, if they do - we could hope for one particularly nice situation: $F_1(X)$ degenerates to $X_T$, and we would have another ``algebro-geometric'' explanation of the existence of $T$.
+
+One way to find a degeneration is to try to deform $X_T$. First: $\CC \PP^2$ have a cell structure consisting of three $4$-cells, where their intersections are $3$ different filled tori. The triple intersection is a $2$-torus. Here's a surprising result:
+
+\begin{prop}
+ There exists a deformation of $X_T$, the Stanley-Reisner scheme of the triangulation of $T$, to the union of three toric varieties. Their pairwise intersections are Stanley-Reisner schemes of affine dimension $4$, corresponding to the product of two tori. [[... FILL IN THIS...]] 
+\end{prop}
+
+The question is now of course if this union of toric varieties is smoothable, and if so, does it smooth to $F_1(X)$? 
+
+Here is some information about the equations of the deformation: its degree is of course $108$. The ideal is generated by $37$ elements, a lot less than the $70$ of $F_1(X)$. There are $15$ quadrics (as with $F_1(X)$) and $22$ cubics. The natural question now is of course: what can we say about the number of defining equations for deformation equivalent objects?
+
+\begin{remark}
+ The quadric equations have four terms, whereas the Grassmannian terms in $F_1(X)$ have three terms. Unless there is some change of coordinate to decrease the number of terms, there is no way (?) this can deform to the Grassmannian.
+\end{remark}
+\end{document}
