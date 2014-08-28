@@ -26,13 +26,13 @@
 
 \section{Approach 1}
 
-Let $X \subseteq \PP^5$ we a smooth pfaffian cubic hypersurface, and let $F_1(X)$ be its Fano variety of lines. The latter is a reducible subvariety of the Grassmannian $\Gr(2,6)$.
+Let $X \subseteq \PP^5$ we a smooth pfaffian cubic hypersurface, and let $F_1(X)$ be its Fano variety of lines. The latter is a subvariety of the Grassmannian $\Gr(2,6)$.
 
-If we assume that $X$ is smooth, then it is known [[ref]] that $F_1(X)$ is deformation equivalent to the Hilbert scheme $S^{[2]}$ of pairs of points on $S$, where $S$ is a K3 surface of degree $14$ in $\PP^8$. By standard theory, a Stanley-Reisner degeneration of a K3 surface is a triangulated sphere, or just $\PP_\C^1$. Thus, a Stanley-Reisner degeneration of $S^{[2]}$ should give a triangulation of  $\PP^1_\C \ast \PP_\C^1 \approx \PP^2_\C$, the complex projective plane, as topological spaces.
+If we assume that $X$ is smooth, then it is known \cite{cp2_beauville} that $F_1(X)$ is deformation equivalent to the Hilbert scheme $S^{[2]}$ of pairs of points on $S$, where $S$ is a K3 surface of degree $14$ in $\PP^8$. By standard theory, a Stanley-Reisner degeneration of a K3 surface is a triangulated sphere, or just $\PP_\C^1$. Thus, a Stanley-Reisner degeneration of $S^{[2]}$ should give a triangulation of  $\PP^1_\C \ast \PP_\C^1 \approx \PP^2_\C$, the complex projective plane, as topological spaces.
 
 Since $F_1(X)$ is embedded in $\PP^{14}$ as a closed subscheme of the Grassmannian, finding such a triangulation is equivalent to finding a square-free initial ideal of the ideal of this embedding. 
 
-Since smooth hypersurfaces have too computationally consuming equations, we start naïvely with a singular hypersurface $X =V(f)= V(x_0x_2x_4-x_1x_3x_5)$. This is both a toric variety and a pfaffian hypersurface. However, because of the form of $f$, $F_1(X)$ is reducible:
+Since smooth hypersurfaces have too computationally consuming equations, we start naïvely with a singular hypersurface $X =V(f)= V(x_0x_2x_4-x_1x_3x_5)$. This happens to be both a toric variety and a pfaffian hypersurface. However, because of the form of $f$, $F_1(X)$ is reducible:
 
 \begin{prop}
 If $X=V(x_0x_2x_4-x_1x_3x_5)$, the variety of lines $F_1(X)$ is reducible. It decomposes into $15$ components: $9$ of them are copies of $\Gr(2,4)$, and the $6$ other are toric varieties, all of them isomorphic.
@@ -40,9 +40,9 @@ If $X=V(x_0x_2x_4-x_1x_3x_5)$, the variety of lines $F_1(X)$ is reducible. It de
 \begin{proof}
 The Grassmannian components are easy to see: if one of the even numbered coordinates are zero, then one of the odd must be too. Thus $X$ contains $3 \times 3$ special copies of $\PP^3$. Lines in $\PP^3$ are parametrized by Grassmannian $\Gr(2,4)$. This have dimension $4$. 
 
-The other components are not that easy: Consider the  rational map $\psi:\PP^2_{abc} \times \PP^2_{xyz} \rmap X$ given by sending $(a:b:c) \times (x:y:z)$ to $(ax:bx:by:cy:cz:az)$. Then this map is well-defined outside the points $(1:0:0) \times (0:1:0)$, $(0:1:0)\times (0:0:1)$ and $(0:0:1)\times(1:0:0)$. Resolving the locuf of indeterminacy give an isomorphism of a desingularization of $X$ with the blowup of $\PP^2 \times \PP^2$ in $3$ points. There are six ways of choosing the map $\psi$, which gives the six different toric components of $X$. 
+The other components are not that easy: Consider the  rational map $\psi:\PP^2_{abc} \times \PP^2_{xyz} \rmap X$ given by sending $(a:b:c) \times (x:y:z)$ to $(ax:bx:by:cy:cz:az)$. Then this map is well-defined outside the points $(1:0:0) \times (0:1:0)$, $(0:1:0)\times (0:0:1)$ and $(0:0:1)\times(1:0:0)$. Resolving the locus of indeterminacy give an isomorphism of a desingularization of $X$ with the blowup of $\PP^2 \times \PP^2$ in $3$ points. There are six ways of choosing the map $\psi$.
 
-Since the map is of bidegree $(1,1)$, we have a well-defined induced map $(\PP^2)^\wedge \times \PP^2 \rmap F_1(X)$ given by
+Since the map is of bidegree $(1,1)$, we have a well-defined induced map $(\PP^2)^\vee \times \PP^2 \rmap F_1(X)$ given by
 \[
 \ell \times p \mapsto \ell_p := \big[\psi(x,p),\psi(y,p)\big]_{x,y \in \ell},
 \]
@@ -61,21 +61,53 @@ Thus, it is at least not totally unreasonable to predict that a Stanley-Reisner 
 
 \section{Bad er good news}
 
-The article [[ref]] presents a triangulation $T$ of $\C \PP^2$ having $15$ vertices, \emph{and} the same $f$-vector as the triangulation we're looking for. This gives us a Stanley-Reisner scheme $X_T$ living in the same Hilbert scheme as $F_1(X)$. [[see the reference (for now) for a description]]
+The article \cite{gaifullin_triangulation} presents a triangulation $T$ of $\C \PP^2$ having $15$ vertices, \emph{and} the same $f$-vector as the triangulation we're looking for. This gives us a Stanley-Reisner scheme $X_T$ living in the same Hilbert scheme as $F_1(X)$.
 
-Now, the Hilbert scheme is a terribly lonely place, so it could be that this new triangulation lives in a completely different component than the one $F_1(X)$ lives in. However, if they do - we could hope for one particularly nice situation: $F_1(X)$ degenerates to $X_T$, and we would have another ``algebro-geometric'' explanation of the existence of $T$.
+Now, the Hilbert scheme is a terribly lonely place, so it could be that this new triangulation lives in a completely different component than the one $F_1(X)$ lives in. However, if they do -- we could hope for one particularly nice situation: $F_1(X)$ degenerates to $X_T$, and we would have another ``algebro-geometric'' explanation of the existence of $T$.
 
-One way to find a degeneration is to try to deform $X_T$. First: $\CC \PP^2$ have a cell structure consisting of three $4$-cells, where their intersections are $3$ different filled tori. The triple intersection is a $2$-torus. Here's a surprising result:
+One way to find a degeneration is to try to deform $X_T$.
+
+\begin{remark}
+The complex projective plane $\C \PP^2$ can be divided into three four-dimensional cells as follows:
+\begin{align*}
+  B_1 &= \{ (z_1:z_2:z_3) \mid \lvert z_1 \rvert \geq \lvert z_2 \rvert, \lvert z_1 \rvert \geq  \lvert z_3 \rvert \} \\
+  B_2 &= \{ (z_1:z_2:z_3) \mid \lvert z_2 \rvert \geq \lvert z_1 \rvert, \lvert z_2 \rvert \geq  \lvert z_3 \rvert \} \\
+  B_3 &= \{ (z_1:z_2:z_3) \mid \lvert z_3 \rvert \geq \lvert z_1 \rvert, \lvert z_3 \rvert \geq  \lvert z_2 \rvert \}.
+\end{align*}
+The intersections $B_i \cap B_j$ are solid tori, and the intersection $B_1 \cap B_2 \cap B_3$ is a $2$-dimensional torus. A triangulation of $\C \PP^2$ is an \emph{equilibrium triangulation} if the complexes $B_i$ are subcomplexes of the triangulation. See the introduction of \cite{gaifullin_triangulation} for details and references therein.
+\end{remark} 
+
+Here's a surprising result. Recall that (nice) toric varieties degenerates to Stanley-Reisner spheres: their degenerations are triangulations of polytopes. 
 
 \begin{prop}
- There exists a deformation of $X_T$, the Stanley-Reisner scheme of the triangulation of $T$, to the union of three toric varieties. Their pairwise intersections are Stanley-Reisner schemes of affine dimension $4$, corresponding to the product of two tori. [[... FILL IN THIS...]] 
+\label{defT}
+ There exists a deformation of $X_T$, the Stanley-Reisner scheme of the triangulation of $T$, to the union of three toric varieties $T_1,T_2,T_3$. Their intersections $T_{ij}$ are the Stanley-Reisner schemes of solid tori, and the triple intersection $T_{123}$ is a solid torus. 
 \end{prop}
+Thus it seems that this particular triangulation somehow remembers the cell structure.
 
-The question is now of course if this union of toric varieties is smoothable, and if so, does it smooth to $F_1(X)$? 
+The question is now of course if this union of toric varieties is smoothable, and if so, does it smooth to $F_1(X)$? It could of course be that if it smooths, it smooths to $F_1(Y)$ for some other cubic hypersurface. To answer the question of the existence of a smoothing, it would be nice to be able to calcute $T^1$ of the deformed $X_T$, but that requires other methods than by computer. 
 
 Here is some information about the equations of the deformation: its degree is of course $108$. The ideal is generated by $37$ elements, a lot less than the $70$ of $F_1(X)$. There are $15$ quadrics (as with $F_1(X)$) and $22$ cubics. The natural question now is of course: what can we say about the number of defining equations for deformation equivalent objects?
 
 \begin{remark}
- The quadric equations have four terms, whereas the Grassmannian terms in $F_1(X)$ have three terms. Unless there is some change of coordinate to decrease the number of terms, there is no way (?) this can deform to the Grassmannian.
+ The quadratic equations have four terms, whereas the Grassmannian terms in $F_1(X)$ have three terms. Unless there is some change of coordinate to decrease the number of terms, there is no way (?) this can deform to the Grassmannian.
 \end{remark}
+
+\section{Calabi-Yau stuff}
+
+The triangulation $T$ of $\C \PP^2$ above  have three special vertices. Their links are joins of hectagons, $D_6 \ast D_6$, having their own Stanley-Reisner schemes. In particular, by a standard result in Stanley-Reisner theory, we have that the homogeneous localization of $\PP(T)$ at $x_0$ (one of the special vertices) correspond to the Stanley-Reisner scheme of $(D_6 \ast D_6) \ast \{ x_0 \}$. In particular, $\PP(D_6 \ast D_6)$ is embedded as a hyperplane cut in $\PP(T)_{x_0}$. 
+
+Now, it turns out the whole deformation from Proposition \ref{defT} is reducible, and the decomposition respects the localization above. [[to be made more precise]] In particular, it induces a deformation of $\PP(T)_{x_0}$ into one of the three toric components. This is great news, because that in turn induces a deformation of $\PP(D_6 \ast D_6)$.
+
+\begin{lemma}
+There is a deformation $Y$ of $\PP(D_6 \ast D_6)$ to a hyperplane cut in a toric variety, which is a deformation of $\PP(D_6 \ast D_6 \ast \{x_0 \})$.
+
+In fact, $Y$ has isolated singularities.  
+\end{lemma}
+
+Now, $D_6 \ast D_6$ is a sphere, an by general results, it follows that $Y$ is in fact a Calabi-Yau variety. This is often called the \emph{Batyrev-Borisov construction}.
+
+\bibliographystyle{plain}
+\bibliography{bibliografi} 
+
 \end{document}
