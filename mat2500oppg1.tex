@@ -1,0 +1,66 @@
+\documentclass[11pt, norsk]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}   % S P R A A K
+
+
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+\begin{document}
+\title{Oppgaver MAT2500}
+\author{Fredrik Meyer}
+\maketitle 
+
+\begin{oppg}
+Bruk cosinus-setningen til å se at definisjonen av vinkel i planet blir riktig.
+\end{oppg}
+\begin{losn}
+??
+\end{losn}
+
+\begin{oppg}
+Vis at $d(\vec x, \vec y) = 0$ hvis og bare hvis $\vec x = \vec y$. Vis at en funksjon $m:E^n \to E^n$ som bevarer avstand nødvendigvis er injektiv.
+
+Altså holder det å kreve at en isometri er surjektiv.
+\end{oppg}
+\begin{losn}
+Husk at avstanden mellom to vektorer $\vec x$ og $\vec y$ er definert som $$d(\vec x,\vec y) \stackrel{def}{=} \sqrt{ \sum_{i=1}^n (x_i-y_i)^2 }.$$
+
+Her er altså $\vec x = (x_1,\cdots,x_n)$ og $\vec y = (y_1,\cdots,y_n)$. Så anta først at $\vec x = \vec y$. Det betyr at $x_i=y_i$ for $i=1,\cdots,n$. Så hvert ledd i summen er null, så summen er null, så kvadratroten er null, så $d(\vec x, \vec y)=0$. Dette var ene retningen av implikasjonen.
+
+Andre retningen. Anta så at $d(\vec x, \vec y)=0$. Vi skal vise at da må $\vec x = \vec y$. Hvis $d(\vec x,\vec y)=0$, betyr det at 
+\[
+\sum_{i=1}^n (x_i-y_i)^2 = 0,
+\]
+siden vi alltid kan kvadrere begge sidene. Men $x_i,y_i$ er relle tall, og kvadrater er alltid positive, så hvert ledd er $\geq 0$. Det betyr at hvis ett ledd var positivt, ville summen også vært positiv. Vi konkluderer med at da må alle $(x_i-y_i)^2=0$. Men dette betyr at $x_i=y_i$ for alle $i$, så $\vec x = \vec y$.
+\end{losn}
+
+\begin{oppg}
+Vis at mengden av symmetrier av en delmengde $F \subseteq E^n$ er en undergruppe av $\mathrm{Isom}_n$.
+\end{oppg}
+\begin{losn}
+La oss første minne oss på noen definisjoner:
+\begin{defi}
+En \textbf{gruppe} er en mengde $G$ sammen med en multiplikasjon $\times$ (altså en funksjon som tar par av elementer fra $G$ og produserer et nytt). Vi dropper stort sett $\times$ og skriver $gh$ i stedet for $g \times h$. Denne multiplikasjonen skal tilfredsstille følgende regler:
+\begin{enumerate}
+\item \textbf{Assosiativitet:} $(gh)k=g(hk)$.
+\item \textbf{Identitetselement:} Det skal finnes et nøytralt element, som vi kaller $e$. Denne tilfredsstiller for alle $g \in G$: $$eg=ge=g.$$
+\item \textbf{Inverser:} For hver $g$ skal det finnes en invers. Det vil si et element $g^{-1} \in G$ slik at $$g^{-1}g = gg^{-1} = e.$$
+\end{enumerate}
+\end{defi}
+\end{losn}
+
+\end{document}
