@@ -28,7 +28,27 @@
 Bruk cosinus-setningen til å se at definisjonen av vinkel i planet blir riktig.
 \end{oppg}
 \begin{losn}
-??
+Dette er en litt rar oppgave.
+
+Husk at cosinus-setningen sier at hvis vi har en trekant $ABC$ med sider $a,b,c$ ($a$ er den motsatte siden av hjørnet $A$, osv), så har vi at 
+\[
+c^2 = a^2+b^2-2ab \cos (\gamma),
+\]
+hvor $\gamma$ er vinkelen $\angle ACB$.
+
+Vi skal sjekke at definisjonen vår stemmer for en vilkårlig trekant. Siden vinkler er bevart under isometrier og skaleringer, kan vi like gjerne anta at segmentet $O\vec{e_1}=\vec (1,0)$ er en av sidene i trekanten. Vi kan så anta at den andre siden er $\vec y = (p,q)$. Da sier definisjonen vår at vinkelen mellom $\vec x$ og $\vec y$ er gitt ved 
+\[
+\cos ^{-1}\left( \frac{p}{\sqrt{p^2+q^2}} \right).
+\]
+Vi skal regne ut sidene i trekanten $\vec 0, \vec x, \vec y$. Vi får at, om vi velger $A=(1,0)$, $B=\vec y$ og $C=\vec 0$, at $a=\sqrt{p^2+q^2}$, og at $b=1$ og at $c=AB=\| \vec x - \vec y \|=\sqrt{(p-1)^2+q^2}$. Alt dette kan vi plugge inn i cosinus-setningen og få:
+\begin{align*}
+VS &= c^2 = (p-1)^2+q^2 \\
+HS &= a^2+b^2-2ab \cos \gamma \\
+&= p^2+q^2+1-2\sqrt{p^2+q^2}\cos \left( \cos^{-1}\left( \frac{p}{\sqrt{p^2+q^2}} \right)\right) \\
+&= p^2+q^2+1-2\sqrt{p^2+q^2} \frac{p}{\sqrt{p^2+q^2}} \\
+&= p^2+q^2+1-2p.
+\end{align*}
+Vi ser at venstreside er lik høyreside, så definisjone gir ihvertfall mening.
 \end{losn}
 
 \begin{oppg}
@@ -61,6 +81,136 @@ En \textbf{gruppe} er en mengde $G$ sammen med en multiplikasjon $\times$ (alts�
 \item \textbf{Inverser:} For hver $g$ skal det finnes en invers. Det vil si et element $g^{-1} \in G$ slik at $$g^{-1}g = gg^{-1} = e.$$
 \end{enumerate}
 \end{defi}
+Eksempler på grupper:
+\begin{itemize}
+\item Heltallene, $\Z$ hvor ``multiplikasjonen'' er vanlig addisjon.
+\item De rasjonale tallene $\Q$, hvor multiplikasjonen er vanlig multiplikasjon. 
+\item Mengden av invertible $n \times n$-matriser. Dette er ekvivalent med å kreve at $\det M \neq 0$. Denne mengden kalles også $GL_n(\R)$.
+\item Mengden av isometrier av $E^n=\R^n$.
+\end{itemize}
+En \textbf{undergruppe} $H$ av en gruppe $G$ er en \emph{delmengde} av $G$ slik at:
+\begin{itemize}
+\item Mengden er lukket under gruppeoperasjonen. Det vil si: hvis $h,k \in H$, så er også $hk \in H$.
+\item $H$ skal inneholde identitetselementet, altså $e \in H$.
+\item $H$ skal inneholde alle sine inverser. Det vil si, hvis $h \in H$, så skal også $h^{-1} \in H$.
+\end{itemize}
+Eksempler på undergrupper:
+\begin{itemize}
+\item La $G=(\Z,+)$. Da kan vi la $H=\{ 2n \mid n \in \Z\}$. $H$ består altså av alle multipler av to. Det er lett å se at summen av to partall er partall. I tillegg er $0 \in H$, så $H$ er en undergruppe av $G$.
+\item La $G=\GL_n(\R)$, altså mengden av invertible $n \times n$-matriser. La $H = \{M \in \GL_n(\R) \mid \det M = 1 \}$. $H$ er altså mengden av invertible matriser med determinant $1$. Det er lett å se at det er en undergruppe: hvis to matriser $M,N$ har determinant $1$, så har også $MN$ determinant $1$ siden $\det(MN)=\det M  \cdot \det N$. I tillegg er $I_n \in H$. 
+\item La $G=\mathrm{Isom}_n$, mengden av isometrier av $\R^n$, og la $H= \{ t_{\vec a} \mid \vec a \in \R^n \}$. $H$ er altså mengden av translasjoner. Disse er alle isometrier (å flytte rundt på en ting endrer ikke avstand). Sammensetningen av to translasjoner er en translasjon: $t_{\vec a} \circ t_{\vec b}(\vec x)= t_{\vec a}(\vec x + \vec b)=\vec x + \vec b + \vec a =t_{\vec a + \vec b}(\vec x)$, så $t_{\vec a}\circ t_{\vec b}=t_{\vec a + \vec b}$. I tillegg er $t_{\vec 0} = id$, så identitetselementet er med i $H$. Så $H$ er en (viktig) undergruppe av $\mathrm{Isom}_n$.
+\end{itemize}
+Husk at $\mathrm{Isom}_n$ var mengden av avstandsbevarende bijeksjoner $m:\R^n \to \R^n$. Dette er en gruppe hvor ``multiplikasjonen'' er å sette sammen funksjoner. Hvis $m,n$ er to avstandsbevarende bijeksjoner, så er $mn$ gitt ved $mn(x) \stackrel{def}{=} m(n(x))$.
+
+Nå kan vi begynne på selve oppgaven. La nå
+\[
+H := \left\{ m \in \mathrm{Isom}_n \mid m(H)=H \right\}.
+\]
+Først sjekker vi at hvis $m,n \in H$, så er også $mn \in H$. Men dette er lett:
+\[
+mn(H) = m(n(H)) \stackrel{n \in H}= m(H) \stackrel{m \in H}= H.
+\]
+At $id \in H$ er også åpenbart. Identitetselementet flytter ingenting, så da flytter det heller ikke $H$, så $\id(H)=H$. Så må vi vise at inverser er med i $H$. La $m \in H$. Vi vil vise at $m^{-1}(H)=H$, altså at hvis $h \in H$, så er $m^{-1}(h) \in H$. Vi må også vise andre veien, nemlig at hvis $h \in H$, så finnes $h^{\prime} \in H$ med $m^{-1}(h^\prime)=h$. Men dette er det samme å si at hvis $h \in H$, så finnes $h^\prime \in H$ med $m(h)=h^\prime$. Men dette er det samme som inklusjonen $m(H) \subseteq H$, som vi allerede vet stemmer. Det var andre retningen.
+
+For den første, så må vi vise at hvis $h \in H$, så er $m^{-1}(h) \in H$. Men dette er det samme å si at hvis $h \in H$, så er $h \in m(H)$, men dette er det samme som inklusjonen $H \subseteq m(H)$. Vi konkluderer med at $m^{-1}(H)=H$. Så $H$ er en undergruppe.
 \end{losn}
+
+\begin{oppg}
+  Trekanten med hjørner 
+\[
+(0,1), \left( \frac{\sqrt 3}2 , -\frac 12 \right), \left( - \frac{\sqrt 3}2, -\frac 12 \right)
+\]
+er likesidet med senter i $(0,0)$ (sjekk dette!). Skriv opp elementene i symmetrigruppen som ortogonale matriser. Gjør det samme for kvadratet med hjørner $(1,1),(-1,1),(-1,-1),(1,-1)$. 
+\end{oppg}
+\begin{losn}
+Første punkt er selvsagt å tegne trekanten. Gjør dette. En likesidet trekanten har $6$ symmetrier, og symmetrigruppen kalles ofte for $D_3$ (noen kaller den for $D_6$). Vi har for det første identitetselementet. I tillegg kan vi speile trekanten om en linje fra hvert hjørne til midtpunktet på den motsatte siden (altså symmetrien som bevarer ett hjørne, men bytter om på to andre). Og vi kan rotere $120^\circ$ mot venstre. Dette gir til sammen seks symmetrier, og oppgaven er å skrive opp matrisene til dem.
+
+Vi begynner med rotasjonen. Husk at en rotasjonsmatrise $R_\theta$ med vinkel $\theta$ kan skrives som 
+\[
+R_\theta = \begin{bmatrix}
+\cos \theta & -\sin \theta \\
+\sin \theta & \cos \theta
+\end{bmatrix}.
+\]
+Her er $\theta = \frac{2 \pi}{3}$, og for dem som kan sin trigonometri, ser vi da at
+\[
+R = \begin{bmatrix}
+-\frac 12 & \frac 12 \sqrt 3 \\
+\frac 12 \sqrt 3  & - \frac 12
+\end{bmatrix}.
+\]
+Vi regner da ut $R^2$, ved enten å bruke samme formel med vinkel $\theta = \frac{4\pi}{3}$, eller bare med å gange $R$ med seg selv.
+
+I tillegg har vi en refleksjon $S$, som fikserer $(0,1)$, men som bytter om de to andre punktene. Dette er bare å fiksere $y$-aksen og å sende $\vec e_1$ til $-\vec e_1$. Denne har matrise:
+\[
+\begin{bmatrix}
+-1 & 0 \\ 0 & 1
+\end{bmatrix}.
+\]
+Så langt har vi funnet $4$ elementer. Vi får de to andre ved å regne ut $SR$ og $SR^2$. Til sammmen får vi
+\begin{align*}
+I &= \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} & R &= \begin{bmatrix} - \frac 12 & -\frac 12 \sqrt{3} \\ \frac 12 \sqrt 3 & - \frac 12 \end{bmatrix} \\
+R^2 &=  \begin{bmatrix} -\frac 12 & \frac 12 \sqrt{3}  \\ -\frac 12 \sqrt 3 & -\frac 12 \end{bmatrix} &
+S &=  \begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix} \\
+SR &=  \begin{bmatrix} \frac 12  & \frac 12 \sqrt 3 \\ \frac 12 \sqrt 3 & - \frac 12 \end{bmatrix} &
+SR^2 &=  \begin{bmatrix} \frac 12  & -\frac 12 \sqrt 3 \\ - \frac 12 \sqrt 3 & - \frac 12 \end{bmatrix}.
+\end{align*}
+Dette er alle elementene i symmetrigruppen til trekanten. Vi kan sjekke at $R^3=I$ og at $RSR^{-1}=S$. Disse to relasjonene er nok til å beskrive gruppen helt. Vi sier at vi $\langle R,S \mid R^3=I, RSR^{-1}=S \rangle$ er en \emph{presentasjon} av gruppen.
+
+
+Å finne symmetrigruppa til firkanten er litt enklere. Igjen består den av rotasjoner og speilinger, men nå er rotasjonene enklere å skrive opp. Den består av fire rotasjoner. Den første på $90^\circ$. I tillegg har vi speilinger fra to av hjørnene (som fikserer motstående hjørner, men bytter om på de to andre), og vi kan speile langs enten $y$-aksen eller $x$-aksen. Dette gir til sammen $8$ symmetrier. Rotasjonene blir da:
+\[
+\begin{bmatrix}
+1 & 0 \\ 0 & 1
+\end{bmatrix},
+\begin{bmatrix}
+ 0 & -1 \\ 1 & 0 
+\end{bmatrix},
+\begin{bmatrix}
+  -1 & 0 \\ 0 & -1
+\end{bmatrix},
+\begin{bmatrix}
+0 & 1 \\ -1 & 0
+\end{bmatrix}.
+\]
+Siden vi vet fra neste oppgave at $D_4$ er generert av rotasjoner og en vilkårlig speiling, holder det å skrive opp matrisen til én speiling, og så gange denne med hver av rotasjonene for å få alle elementene. Én speiling, er å reflektere gjennom $y$-aksen, og da kan vi bruke $S$ som i forrige del av oppgaven. Nå må man bare regne ut $SR,SR^2,SR^3$, og så har vi alle elementene i gruppen.
+\end{losn}
+\begin{oppg}
+Vis at $D_n$ er generert av to elementer: én rotasjon på $\frac {2\pi}n$ og en vilkårlig speiling.  
+\end{oppg}
+\begin{losn}
+Husk at $D_n$ er symmetrigruppen til en regulær $n$-kant.
+
+En symmetri må sende hjørner til hjørner. Kall hjørnene for $v_1,\cdots,v_n$, skrevet i rekkefølge mot klokka. En symmetri kan ikke bytte om på den innbyrdes rekkefølgen på hjørnene, så betrakt $v_1, v_2$. La $s$ være speilingen som fikserer $v_1$, men bytter om $v_2$ og $v_n$ (og så videre). La $m$ være en symmetri av $n$-kanten. Da vil $v_1$ sendes til $v_k$ og $v_2$ sendes til enten $v_{k+1}$ eller $v_{k-1}$. Om det første skjer, må $m$ være en rotasjon på $\frac{2\pi k}m$.
+
+Om det andre skjer, betrakt $sm$, sammensetningen av $s$ og $m$. Nå vil $v_1$ først sendes til $v_k$ og så til $v_{-k+2}$ (her er indeksen modulo $n$). Og $v_2$ sendes først til $v_{k-1}$ og så til $v_{-k+1+2}=v_{-k+3}$. Så $sm$ sender $v_1,v_2$ til noe i samme rekkefølge, så dette må være en rotasjon, for eksempel $r^{-k+2}$. Dermed er $sm=r^{-k+2}$, så $m=s^{-1}r^{-k+2}=sr^{-k+2}$. Så $m$ er sammensetningen av en speiling og en rotasjon.
+
+Vi konkluderer med at alle elementer i $D_n$ kan skrives som en sammensetning av en rotasjon og en speiling.
+\end{losn}
+
+\begin{oppg}
+  Alle isometrier av planet $\R^2$ kan skrives på formen $t_{\vec a} \rho_\theta$ eller $t_{\vec a}\rho_{\theta}s$, hvor $s$ er en speiling. Skriv $\rho_\theta t_{\vec a}$, $st_{\vec a}$, $s\rho_\theta$ på en slik form.
+\end{oppg}
+\begin{losn}
+Her holder det å skrive ut hva de forskjellige transformasjonene faktisk gjør. Vi starter med den første. La $\vec x \in \R^2$.
+\begin{align*}
+\rho_\theta t_{\vec a} (\vec x) &= \rho_\theta(\vec x + \vec a) \\
+&= \rho_\theta(\vec x) + \rho_\theta(\vec a) \\
+&= t_{\rho_\theta (\vec a)}(\rho_\theta(x)) \\
+&= t_{\rho_\theta(\vec a)}\rho_\theta(x).
+\end{align*}
+Vi konkluderer med at $\rho_\theta t_{\vec a}=t_{\rho_\theta(\vec a)} \rho_\theta$. Hva skjer så med $s t_{\vec a}$?. Siden $s$ setter andrekoordinaten til vektorer til sitt negative, skriv $\vec a = (a_1,a_2)^T$ og $\vec x = (x_1,x_2)^T$. Da er:
+\begin{align*}
+ st_{\vec a}(x) &= s(\vec x +\vec a) \\
+&= s(\vec x) + s(\vec a) \\
+&= t_{s\vec a}(s (\vec x)) \\
+&= t_{s \vec a}s (\vec x) \\
+&= t_{s \vec a}\rho_0 s (\vec x).
+\end{align*}
+Vi konkluderer med at $st_{\vec a} = t_{s \vec a}\rho_0 s$, hvor $\rho_0$ er å rotere null grader. 
+
+Den siste er litt verre. Her hjelper det å tegne en tegning (gjør det!). Man burde da være i stand til å se at en speiling sender en vinkel $\theta$ til den negative vinkelen $-\theta$. Da kan man se at $s\rho_\theta(x)=\rho_{-\theta}s(x)$, så vi konkluderer med at $s\rho_\theta = \rho_{-\theta}s = t_{\vec 0} \rho_{-\theta}s$.
+\end{losn}
+
 
 \end{document}
