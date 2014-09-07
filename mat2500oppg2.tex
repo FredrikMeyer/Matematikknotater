@@ -19,6 +19,7 @@
 \usepackage{hyperref}
 \usepackage{mystyle} % stilfilen      
 
+
 \begin{document}
 \title{Oppgaver MAT2500}
 \author{Fredrik Meyer}
@@ -35,12 +36,14 @@ Dermed er
 m^2 &= (t_{\vec a} \rho_\theta s)(t_{\vec a} \rho_\theta s) \\
 &= t_{\vec a} \rho_\theta s t_{\vec a} \rho_\theta s \\
 &\stackrel{*}{=} t_{\vec a} s \rho_{-\theta} t_{\vec a} \rho_\theta s \\
-&\stackrel{**}{=} t_{\vec a} s \rho_{-\theta} \rho_{\theta}t_{\rho_\theta(t_{\vec a})} s \\
-&\stackrel{***}{=} 
+&\stackrel{**}{=} t_{\vec a} s \rho_{-\theta} \rho_{\theta}t_{\rho_{-\theta}(\vec a)} s \\
+&\stackrel{***}{=} t_{\vec a} s t_{\rho_{-\theta}(\vec a)} s \\
+&\stackrel{****}{=} t_{\vec a} t_{s\rho_{-\theta}(\vec a)} s^2 \\
+&= t_{\vec a + s\rho_{-\theta}(\vec a)} 
 \end{align*}
-Litt forklaring. Første likhet er bare å fjerne parenteser. I (*) brukte vi at $\rho_\theta t_{\vec a} = t_{\rho_\theta \vec a}\rho_\theta$, som vi viste i forrige oppgave. I (**) brukte vi at to translasjoner satt sammen er en translasjon ($t_{\vec a}t_{\vec b} = t_{\vec a + \vec b}$). I (***) brukte vi at $s\rho_\theta = \rho_{-\theta s}$, og i (****) brukte vi at $\rho_\theta \rho_{-\theta}=id$ og $s^2=id$ (å rotere først $-\theta$ og så $\theta$ er det samme som å rotere ingenting, og å speile to ganger er det samme som å gjøre ingenting). 
+Litt forklaring. Første likhet er bare å fjerne parenteser. I (*) bruker vi, som vi lærte i forrige oppgave, at $\rho_\theta s = s \rho_{-\theta}$. I (**) bruker vi at $t_{\vec a} \rho_\theta = \rho_\theta t_{\rho_{-\theta}(\vec a)}$. I (***) bruker vi at $\rho_{-\theta}\rho_\theta=id$, og i (****) bruker vi at $t_{\vec b}s = s t_{s(\vec b)}$. Til slutt bruker vi at $s^2=id$.
 
-Vi ender opp med $t_{\vec b}$ hvor $\vec b=\vec a + \rho_\theta \vec a$, så $m^2$ er en translasjon.
+Vi står igjen med noe som bare er en translasjon.
 \end{losn}
 
 \begin{oppg}
@@ -53,36 +56,49 @@ Her hjelper det veldig å tegne en tegning.
 
 La $l$ være linjen utspent av vektoren $\vec v$. Siden $\R^2$ er $2$-dimensjonal, er $\{ \vec v, \vec v^\perp \}$ en basis for $\R^2$. Så vi kan skrive $\vec a = (\vec a \cdot \vec v) \vec v + (\vec a \cdot \vec v^\perp) \vec v^\perp$. La $\vec w_1 \stackrel{def}{=} (\vec a \cdot \vec v) \vec v$ og $\vec w_2 \stackrel{def}{=} (\vec a \cdot \vec v^\perp) \vec v^\perp$. La $l^\prime$ være linja $\{ \frac 12 \vec w_2 + \lambda \vec v \mid \lambda \in \R\}$. 
 
-Da påstår vi først at $s_{l^\prime} = t_{\frac 12 \vec w_2} s_l t_{-\frac 12 \vec w_2}$. Skriv $\vec x \in \R^2$ som $\vec x = c_1 \vec w_1 + c_2 \vec w_2$. Da kan vi anvende isometriene over på $\vec x$ og håpe vi får det samme:
-\begin{align*}
-  s_{l'}(\vec x) &= s_{l^\prime}(c_1 \vec w_1 + c_2 \vec w_2) \\
-&= c_1 \vec w_1 + (1-c_2) \vec w_2 \\
-&= c_1 \vec w_1 + \vec w_2 -c_2 \vec w_2
-\end{align*}
-Også:
-\begin{align*}
-  t_{\frac 12 \vec w_2} s_l t_{-\frac 12 \vec w_2}(\vec x) &= t_{\frac 12 \vec w_2} s_l \left(c_1 \vec w_1+c_2 \vec w_2 -\frac 12 \vec w_2\right) \\
-&= t_{\frac 12 \vec w_2} \left(c_1 \vec w_1 -c_2 \vec w_2+\frac 12 \vec w_2\right) \\
-&= c_1 \vec w_1 -c_2 \vec w_2 + \vec w_2.
-\end{align*}
-Så høyresiden er lik venstresiden og alt er fint. 
 
-Neste steg er å se at $s_l t_{-\frac 12 \vec w_2} = t_{\frac 12 \vec w_2} s_l$. Dette er ikke så vanskelig å se geometrisk. Her er en algebraisk måte å se det på:
-\begin{align*}
-  s_l t_{-\frac 12 \vec w_2}(\vec x) &=   s_l t_{-\frac 12 \vec w_2}(c_1 \vec w_1 + c_2 \vec w_2) \\
-&= s_l \left(c_1 \vec w_1 + c_2 \vec w_2 - \frac 12 \vec w_2 \right)\\
-&= c_1 \vec w_1 - c_2 \vec w_2 + \frac 12 \vec w_2.
-\end{align*}
-Dette var altså venstresiden (merk at å speile i $l$ er det samme som å sette alle koeffisienter av $\vec w_2$ til det negative).
+\begin{figure}[h]
+\begin{center}
+\begin{tikzpicture}
+   % Draw axes
+    \draw [<->,thick] (0,5) node (yaxis) [above] {}
+        |- (7,0) node (xaxis) [right] {$l$};
+    % Draw two intersecting lines
+    \draw[dashed] (0,4) coordinate (w2) -- (4,4) coordinate (w22) node[anchor=south] {$\vec a$};
+    \node at (-0.5,4) {$\vec w_2$};
+        \node at (4,-0.5) {$\vec w_1$};
+    \draw[dashed] (4,0) coordinate (w1) -- (4,4) coordinate (w12) ;
+    \draw[ultra thick, ->, draw=red] (0,0) coordinate (v1) -- (5,0) coordinate (v2) node[anchor=north] {$\vec v$};
+    \fill (4,4) circle  (2pt);
+    \draw[thin] (-1,2) -- (7,2) node[anchor=south] {$l^\prime$};
+\end{tikzpicture}
+\end{center}
+\end{figure}
+Se på illustrasjonen over. Den første påstanden i beviset er at
+$$s_{l^\prime} =  t_{\frac 12 \vec w_2} s_l t_{-\frac 12 \vec w_2}.$$
 
-Så for høyresiden:
-\begin{align*}
-  t_{\frac 12 \vec w_2}s_l(c_1 \vec w_1 + c_2 \vec w_2) &= t_{\frac 12 \vec w_2}(c_1 \vec w_1 - c_2\vec w_2) \\
-&= c_1 \vec w_1 -c_2 \vec w_2 + \frac 12 \vec w_2.
-\end{align*}
-Så venstresiden er lik høyresiden og alt er fint.
+I ord sier dette at å speile gjennom linja $l^\prime$ er det samme som først å flytte hele planet ned med vektoren $-\frac 12 \vec w_2$ (slik at $l^\prime$ blir sendt på $l$), reflektere, og så translatere opp igjen. 
 
-Siste likhet som ble brukt i beviset var at $t_{\vec w_1}t_{\frac 12 \vec w_2}t_{\frac 12 \vec w_2}=t_{\vec a}$, men dette er åpenbart når vi husker at $\vec a = \vec w_1 + \vec w_2$.
+La $\{\vec w_1, \vec w_2\}$ være standardbasis for $\R^2$. Da er det ikke så gærnt å se fra tegningen at $s_{l^\prime}$ er gitt som
+$$
+\binom{x_1}{x_2} \mapsto \binom{x_1}{-x_2} + \binom{0}{1}.
+$$
+Men dette kan vi skrive om til
+\begin{align*}
+\binom{x_1}{x_2} &\mapsto \binom{x_1}{-x_2} + \binom{0}{\frac 12} + \binom{0}{\frac 12} \\
+&= s_l(\binom{x_1}{x_2}) + s_l(-\binom{0}{\frac 12}) + \binom{0}{\frac 12} \\
+&= s_l( \binom{x_1}{x_2} - \binom{0}{\frac 12}) + \binom{0}{\frac 12} \\
+&= t_{\frac 12 \vec w_2}s_lt_{-\frac 12 \vec w_2}(\vec x).
+\end{align*}
+
+Så vi konkluderer med at $s_{l^\prime} = t_{\frac 12 \vec w_2}s_lt_{-\frac 12 \vec w_2}$.
+
+Neste likhet i beviset er $s_l t_{-\frac 12 \vec w_2} = t_{\frac 12} s_l$. Husk at $\vec w_2$ er ortogonal på $l$, så å speile i $l$ vil sende $\vec w_2$ på $-\vec w_2$. Dermed har vi at
+$$ s_l t_{-\frac 12 \vec w_2}(\vec x) = s_l(\vec x - \frac 12 \vec w_2) = s_l(\vec x) + \frac 12 \vec w_2 = t_{\vec w_2}s_l(\vec x).$$
+
+Her brukte vi at siden $s_l$ sender origo på origo, så er $s_l$ lineær.
+
+Siste likheten i beviset er at $t_{\vec w_1}t_{\frac 12\vec w_2}t_{\frac 12 \vec w_2} = t_{\vec a}$. Dette er åpenbart siden alltid $t_{\vec a}t_{\vec b}=t_{\vec a + \vec b}$ og $\vec a = \vec w_1 + \vec w_2$. 
 \end{losn}
 
 \begin{oppg}
@@ -90,13 +106,44 @@ Siste likhet som ble brukt i beviset var at $t_{\vec w_1}t_{\frac 12 \vec w_2}t_
 \end{oppg}
 
 \begin{losn}
-For det første: vi kan bytte ut $m$ med $mt_{-\vec a}$. Da blir $\restr{m}{l}=id$, siden det ikke er noen translasjon langs linjen lenger. Så problemet blir nå: gitt at vi skal holde en hel linje fast, hvordan kan vi da flytte rundt på planet? Det er da ``klart'' at eneste mulighet er å speile om linja $l$ (rotasjon og translasjon går ihvertfall ikke).
+For det første: la $m^\prime$ være $mt_{-\vec a}$. Da blir $\restr{m^\prime}{l}=id$, siden det ikke er noen translasjon langs linjen lenger. Så problemet blir nå: gitt at vi skal holde en hel linje fast, hvordan kan vi da flytte rundt på planet? Vi vet at alle isometrier av planet enten er translasjoner, rotasjoner, speilinger eller glidespeilinger. $m^\prime$ kan ikke være en translasjon, siden translasjoner ikke har fikspunkter, og $m^\prime$ fikserer origo. $m^\prime$ kan heller ikke være en rotasjon, siden den skal fiksere linja $l$ (det kunne muligens ha vært en rotasjon på $180^\circ$, men da ville ikke $\restr{m^\prime}l = id$). $m^\prime$ kan heller ikke være en glidespeiling, siden glidespeilinger ikke har fikspunkter. Vi konkluderer med at eneste mulighet er at $m^\prime$ er enten en speiling om linja $l$ eller identiteten. 
 
-Konklusjon: om $\vec a=0$, var dette allerede en speiling eller bare identitet. Om $\vec a \neq 0$, var dette enten en glidespeiling eller translasjon, avhengig om vi valgte å speile.
+Med andre ord: siden $m^\prime= mt_{-\vec a}$, er $m = m^\prime t_{\vec a}$. $m^\prime=s$ eller $id$, så $m$ er lik $st_{\vec a}$ eller $t_{\vec a}$. Siden $\vec a$ enten er $\vec 0$ eller en vektor parallell med $l$, er $m$ lik enten identiteten, en speiling, eller en glidespeiling.
 \end{losn}
 
 \begin{oppg}
-  
+Bruk Setning 2.4 til å vise at sammensetningen av to rotasjoner om to forskjellige punkter er enten en rotasjon om et tredje punkt eller en translasjon. Når er det en translasjon?  
 \end{oppg}
+\begin{losn}
+Å rotere om et punkt $P$ er det samme som å først translatere $P$ til origo, rotere om origo, og så translatere tilbake til $P$. Dermed har vi at en rotasjon med $\theta$ grader om $P$, og så en rotasjon med $\theta^\prime$ grader om $Q$ kan skrives som
+$$
+t_P \rho_\theta t_{-P} t_Q \rho_{\theta^\prime} t_{-Q}.
+$$
+Ved å  gjentatte ganger bruke at $t_{\vec a} \rho_{\theta} = \rho_{-\theta}$, kan dette "forenkles" til følgende uttrykk: 
+$$
+t_{P-\rho_\theta(P)+\rho_\theta(Q)-\rho_{\theta+\theta^\prime}(Q)} \rho_{\theta+\theta^\prime}.
+$$
+Dette er en rotasjon hvis og bare hvis $\theta+\theta^\prime \not \equiv 0 \pmod {2\pi}$.
+\end{losn}
+
+
+\begin{oppg}
+Hva slags isometri er sammensetningen av to speilinger om ikke parallelle linjer? Hva slags isometri er sammensetningen av to speilinger om parallelle linjer?
+\end{oppg}
+
+\begin{losn}
+Første tilfellet er enklest. For det første: setter vi sammen to orienteringsreverserende isometrier er resultatet orienteringsbevarende. I tillegg har sammensetningen et fikspunkt: de to linjene møtes et punkt, og dette blir da et fikspunkt for speilingen. Vi vet fra tidligere at en orienteringsbevarende isometri med et fikspunkt er en rotasjon.
+
+Men vi kan si mer! Nå vet vi at sammensetningen er en rotasjon om et punkt, som vi likegodt kan anta er origo, altså kan vi skrive den som $\rho_\theta$ for en eller annen $\theta$. Tegner vi en tegning som under ser vi da at dette blir en rotasjon med vinkel dobbelte av vinkelen mellom linjene.
+\begin{figure}[h]
+\begin{center}
+\begin{tikzpicture}
+   % Draw axes
+    \draw[thin] (-1,-1) -- (4,3) node[anchor=south] {$l^\prime$};
+    \draw[thin] (-1,1) -- (4,1) node[anchor=south] {$l$};
+\end{tikzpicture}
+\end{center}
+\end{figure}
+\end{losn}
 
 \end{document}
