@@ -145,8 +145,13 @@ Men vi kan si mer! Nå vet vi at sammensetningen er en rotasjon om et punkt, som
 \coordinate (D) at (-1,0);
 \coordinate (E) at (-1,-3./4);
 \coordinate (X) at (3,0);
+\coordinate (XX) at (21/25, 72/25);
 
 
+\fill (X) circle[radius=2pt] node[below] {$X$};
+\fill (XX) circle[radius=2pt] node[left] {$s_{l^\prime}(X)$};
+\draw[dotted] (X) -- (XX);
+\draw[thin] (A) -- (XX);
 
 \draw[thin] (B) node[right] {$l$} -- (A) -- (C) node[right] {$l^\prime$} ;
 \draw[thin] (D) -- (A);
@@ -154,14 +159,73 @@ Men vi kan si mer! Nå vet vi at sammensetningen er en rotasjon om et punkt, som
 \path[clip] (C) -- (A) -- (B);
 \fill[yellow, opacity=0.5, draw=black] (A) circle (5mm);
 \node at ($(A)+(14:8mm)$) {$\theta$};
-
-\fill (X) circle[radius=2pt];
-
-
 \end{tikzpicture}
 \end{center}
 \end{figure}
-For å finne hvilken vinkel vi roterer med, er det nok å se hvor mye ett enkelt punkt blir rotert. Velg da dette punktet til å ligge på $l$. 
+For å finne hvilken vinkel vi roterer med, er det nok å se hvor mye ett enkelt punkt blir rotert. Velg da dette punktet til å ligge på $l$. Da ser vi at origo (der vinkelen $\theta$ ligger) er toppen i en likebeint trekant med punktet $X$ og $s_{l^\prime}(X)$ som hjørner. Siden $l^\prime$ deler trekanten i to, må vinkelen være $2\theta$.
+
+Til slutt: hva er sammensetningen av to speilinger om parallelle linjer? Kall linjene $l$ og $l^\prime$. De ligger da over hverandre i en avstand $\vec a$. Vi kan anta at den nederste linjen er $x$-aksen. Da blir også $s_l(\vec a)=-\vec a$. Legg merke til at om $l^\prime$ er "øverst", så er $s_{l^\prime}=t_{\vec a}s_l t_{-\vec a}$. Dermed er
+$$
+s s_{l^\prime} = s t_{\vec a} st_{-\vec a} = s^2 t_{s(\vec a)} t_{-\vec a} = t_{s(\vec a) - \vec a}=t_{-2\vec a}.
+$$
+Vi konkluderer med at en sammensetning av to speilinger er det samme som å translatere med en avstand det dobbelte av avstanden mellom linjene.
+\end{losn}
+
+\begin{oppg}
+La $\ell$ være linjen gjennom origo med retningsvektor $(a,b)$ ($b > 0$). Skriv standardmatrisen til speilingen $s_{\ell}$. 
+\end{oppg}
+\begin{losn}
+Vi tar først for oss tilfellet når $\ell$ er $x$-aksen. I det tilfellet er bare speilingen gitt ved 
+$$ 
+S = \begin{bmatrix}
+1 & 0 \\ 0 & -1
+\end{bmatrix}.
+$$
+Så strategien blir å først rotere linjen $\ell$ slik at den sammenfaller med $x$-aksen, og så bruke $S$, og så rotere tilbake til $\ell$.
+
+Det er lett å se at matrisen 
+$$ 
+M_\theta = \frac{1}{\sqrt{a^2+b^2}} \begin{bmatrix}
+a & -b \\ b & a
+\end{bmatrix}.
+$$
+tar $x$-aksen på linjen $\ell$, er ortogonal og har determinant $1$. Dermed er $M_\theta$ en rotasjonsmatrise. Det er også greit å se at
+$$ 
+M_\theta^{-1} = M_{-\theta} = \frac{1}{\sqrt{a^2+b^2}} \begin{bmatrix}
+a & b \\ -b & a
+\end{bmatrix}.
+$$
+
+Vi regner dermed ut at speilingen gjennom linjen $\ell$ er gitt ved
+$$
+M_\theta S M_{-\theta} = \frac{1}{a^2+b^2} \begin{bmatrix}
+a^2-b^2 & 2ab \\ 
+2ab & b^2-a^2
+\end{bmatrix}.
+$$
+PS: Om en slår opp på Wikipedia ser en at en formel for en slik speiling er gitt ved 
+$$
+\vec x \mapsto 2 \frac{\vec v \cdot \vec x}{\vec v \cdot \vec v} \vec v - \vec x,
+$$
+der $\vec v = (a,b)$. Men ved å se hva som skjer med enhetsvektorer er det lett å se at dette faktisk er samme formel.
+\end{losn}
+
+\begin{oppg}
+Beskriv symmetrigruppene til:
+\begin{enumerate}[a]
+\item En likebeint trekant.
+\item En likesidet trekant.
+\end{enumerate}
+\end{oppg}
+
+\begin{losn}
+\begin{enumerate}[a]
+\item \textbf{En likebeint trekant}: Vi antar trekanten er likebeint, men ikke side likesidet. En slik trekant har bare to symmetrier: som alltid identiteten, og speiling gjennom en høyde.
+\item \textbf{En likesidet trekant}: En likesidet trekant er den trekanten med flest symmetrier. Vi kan rotere $120^\circ$, og vi kan reflektere om hvert hjørne. Til sammen får vi seks symmetrier, den fulle trekantgruppen $D_3$.
+\item \textbf{En parabel}: En parabel har heller ikke mange symmetrier. I det enkleste tilfellet er den gitt som $y=x^2$, og da ser vi at $x \mapsto -x$ er en symmetri, som svarer til speiling om $y$-aksen. Dette er da også den eneste symmetrien, og dette gjelder generelt (alle parabler kan ved hjelp av et koordinatskifte skrives om til noe på formen $y=x^2$). 
+\item \textbf{Et parallellogram}: Vi antar parallellogrammet ikke er en rombe (det vil si, siden er av forskjellig lengde). Vi kan også anta at vi ikke har et rektangel. 
+\end{enumerate}
+
 \end{losn}
 
 \end{document}
