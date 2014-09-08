@@ -132,18 +132,36 @@ Hva slags isometri er sammensetningen av to speilinger om ikke parallelle linjer
 \end{oppg}
 
 \begin{losn}
-Første tilfellet er enklest. For det første: setter vi sammen to orienteringsreverserende isometrier er resultatet orienteringsbevarende. I tillegg har sammensetningen et fikspunkt: de to linjene møtes et punkt, og dette blir da et fikspunkt for speilingen. Vi vet fra tidligere at en orienteringsbevarende isometri med et fikspunkt er en rotasjon.
+Første tilfellet er enklest. For det første: setter vi sammen to orienteringsreverserende isometrier er resultatet orienteringsbevarende. I tillegg har sammensetningen et fikspunkt: de to linjene møtes i ett punkt, og dette blir da et fikspunkt for speilingen. Vi vet fra tidligere at en orienteringsbevarende isometri med et fikspunkt er en rotasjon.
 
 Men vi kan si mer! Nå vet vi at sammensetningen er en rotasjon om et punkt, som vi likegodt kan anta er origo, altså kan vi skrive den som $\rho_\theta$ for en eller annen $\theta$. Tegner vi en tegning som under ser vi da at dette blir en rotasjon med vinkel dobbelte av vinkelen mellom linjene.
 \begin{figure}[h]
 \begin{center}
 \begin{tikzpicture}
    % Draw axes
-    \draw[thin] (-1,-1) -- (4,3) node[anchor=south] {$l^\prime$};
-    \draw[thin] (-1,1) -- (4,1) node[anchor=south] {$l$};
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (C) at (4,3);
+\coordinate (D) at (-1,0);
+\coordinate (E) at (-1,-3./4);
+\coordinate (X) at (3,0);
+
+
+
+\draw[thin] (B) node[right] {$l$} -- (A) -- (C) node[right] {$l^\prime$} ;
+\draw[thin] (D) -- (A);
+\draw[thin] (E) -- (A);
+\path[clip] (C) -- (A) -- (B);
+\fill[yellow, opacity=0.5, draw=black] (A) circle (5mm);
+\node at ($(A)+(14:8mm)$) {$\theta$};
+
+\fill (X) circle[radius=2pt];
+
+
 \end{tikzpicture}
 \end{center}
 \end{figure}
+For å finne hvilken vinkel vi roterer med, er det nok å se hvor mye ett enkelt punkt blir rotert. Velg da dette punktet til å ligge på $l$. 
 \end{losn}
 
 \end{document}
