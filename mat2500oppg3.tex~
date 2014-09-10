@@ -1,0 +1,39 @@
+\documentclass[11pt, norsk]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}   % S P R A A K
+
+
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+
+\begin{document}
+\title{Oppgaver MAT2500}
+\author{Fredrik Meyer}
+\maketitle 
+
+\begin{oppg}
+La $\{p_1,\cdots,p_n\}$ være hjørnene til en regulær $n$-kant med senter i origo. Vis at definisjonen av \emph{tyngdepunktet} som 
+$$T := \frac 1n \sum_{i=1}^n p_i $$
+``stemmer''. Det vil, si, vis at $T= \vec 0$, origo.
+\end{oppg}
+\begin{losn}
+  
+\end{losn}
+
+
+
+\end{document}

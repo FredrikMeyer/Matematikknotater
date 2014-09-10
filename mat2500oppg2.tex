@@ -119,7 +119,7 @@ Bruk Setning 2.4 til å vise at sammensetningen av to rotasjoner om to forskjell
 $$
 t_P \rho_\theta t_{-P} t_Q \rho_{\theta^\prime} t_{-Q}.
 $$
-Ved å  gjentatte ganger bruke at $t_{\vec a} \rho_{\theta} = \rho_{-\theta}$, kan dette "forenkles" til følgende uttrykk: 
+Ved å  gjentatte ganger bruke at $t_{\vec a} \rho_{\theta} = \rho_{\theta} t_{\rho_{-\theta}(\vec a)}$, kan dette ``forenkles'' til følgende uttrykk: 
 $$
 t_{P-\rho_\theta(P)+\rho_\theta(Q)-\rho_{\theta+\theta^\prime}(Q)} \rho_{\theta+\theta^\prime}.
 $$
@@ -212,18 +212,28 @@ der $\vec v = (a,b)$. Men ved å se hva som skjer med enhetsvektorer er det lett
 
 \begin{oppg}
 Beskriv symmetrigruppene til:
-\begin{enumerate}[a]
+\begin{enumerate}[a)]
 \item En likebeint trekant.
 \item En likesidet trekant.
+\item En parabel.
+\item Et parallellogram.
+\item En rombe.
+\item Et rektangel.
+\item En ellipse.
 \end{enumerate}
 \end{oppg}
 
 \begin{losn}
-\begin{enumerate}[a]
+\begin{enumerate}[a)]
 \item \textbf{En likebeint trekant}: Vi antar trekanten er likebeint, men ikke side likesidet. En slik trekant har bare to symmetrier: som alltid identiteten, og speiling gjennom en høyde.
 \item \textbf{En likesidet trekant}: En likesidet trekant er den trekanten med flest symmetrier. Vi kan rotere $120^\circ$, og vi kan reflektere om hvert hjørne. Til sammen får vi seks symmetrier, den fulle trekantgruppen $D_3$.
 \item \textbf{En parabel}: En parabel har heller ikke mange symmetrier. I det enkleste tilfellet er den gitt som $y=x^2$, og da ser vi at $x \mapsto -x$ er en symmetri, som svarer til speiling om $y$-aksen. Dette er da også den eneste symmetrien, og dette gjelder generelt (alle parabler kan ved hjelp av et koordinatskifte skrives om til noe på formen $y=x^2$). 
-\item \textbf{Et parallellogram}: Vi antar parallellogrammet ikke er en rombe (det vil si, siden er av forskjellig lengde). Vi kan også anta at vi ikke har et rektangel. 
+\item \textbf{Et parallellogram}: Vi antar parallellogrammet ikke er en rombe (det vil si, siden er av forskjellig lengde). Vi kan også anta at vi ikke har et rektangel. Men da er det lett å se at et parallellogram ikke har noen symmetrier.
+\item \textbf{En rombe}: En rombe er et parallellogram hvor siden er like lange. I dette tilfellet er speiling lov: velg et hjørne, og speil gjennom linjen som går gjennom to hjørner. Dette gir til sammen fire symmetrier: identiteten, speiling i to nabohjørner hjørner, og sammensetningen av disse.
+\item \textbf{Et rektangel}: Hvis rektangelet ikke er et kvadrat, er det bare speilinger vi kan gjøre. Så svaret blir 
+akkurat det samme som med romben.
+\item \textbf{En ellipse}: En ellipse har fire symmetrier, akkurat som rektangelet og romben. Grunnen til dette er at 
+alle tre har to ``symmetriakser''.
 \end{enumerate}
 
 \end{losn}
