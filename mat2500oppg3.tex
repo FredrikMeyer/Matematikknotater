@@ -120,12 +120,12 @@ Men $z^n = e^{2\pi i}=1$, så $T=0$, akkurat som vi ønsket.
 
 \fill (A) circle (2pt);
 \draw (B) --(E) -- (D) -- (C)-- (F)-- (G) --(B);
-\draw[dotted] (A) -- (B);
-\draw[dotted] (A) -- (C);
-\draw[dotted] (A) -- (D);
-\draw[dotted] (A) -- (E);
-\draw[dotted] (A) -- (F);
-\draw[dotted] (A) -- (G);
+\draw[dotted] (A) -- (B) node[right] {$\vec x$};
+\draw[dotted] (A) -- (C) node[left] {$-\vec x$};
+\draw[dotted] (A) -- (D) node[below] {$-\vec y$};
+\draw[dotted] (A) -- (E) node[below] {$\vec x - \vec y$};
+\draw[dotted] (A) -- (F) node[above] {$\vec y - \vec x$};
+\draw[dotted] (A) -- (G) node[above]{$\vec y$};
 \end{tikzpicture}
 \end{center}
 \caption{Dirichlet-området i c).}
@@ -155,7 +155,25 @@ For å vise at $D_G$ er et fundamentalområde må vi vise to ting: Det ene er at
 
 Først: Kall vektorene i gitteret for $\vec x$ og $\vec y$. La $\vec a = (a,b) \in \R^2$. Siden $\vec x,\vec y$ utgjør en basis, kan vi skrive $\vec a = r_1 \vec x + r_2 \vec y$ for noen $r_1,r_2 \in \R$. Nå, skriv $r_1$ og $r_2$ som en sum av heltall pluss et tall i intervallet $[-\frac 12,\frac 12)$ (dette kan vi alltid gjøre, og til og med unikt), altså som $r_1=n_1 + s_1, r_2=n_2+s_2$, der $n_1,n_2$ er heltall, og $s_1,s_2$ er i intervallet over. Da er $\vec x = t_{n_1 \vec x}t_{n_2 \vec y}(s_1 \vec x + s_2 \vec y)$.
 
-Nå påstår jeg at $s_1 \vec x + s_2 \vec y$ ligger innenfor Dirichlet-området til $G$.
+Nå påstår jeg at $s_1 \vec x + s_2 \vec y$ ligger innenfor Dirichlet-området til $G$. Men å ligge innenfor Dirichlet-området er det samme som å ligge innenfor alle midtnormalene til trekantene i fundamentalheksagonet. Så om $s_1 \geq 0$ og $s_2 \geq 0$, er vi automatisk i den første trekanten. Anta nå $s_1 < 0$ og $s_2 > 0$. Om $s_1+s_2 < \frac 12$, kan vi skrive
+\[
+s_1 \vec x + s_2 \vec y = s_1 \vec x -s_1 \vec y +s_1 \vec y + s_2 \vec y = (-s_1)(\vec y - \vec x) + (s_1+s_2) \vec y.
+\]
+Dermed er $s_1 \vec x + s_2 \vec y$ i den øverste trekanten. Om $s_1 + s_2 > \frac 12$ kan vi skrive
+\[
+s_1 \vec x + s_2 \vec y = (-s_1-s_1)(-\vec x) + s_2(\vec y- \vec x).
+\]
+Da er $s_1 \vec x + s_2 \vec y$ i den øvre, venstre trekanten.
+
+Repeter samme argumenter for $s_2 < 0$, og konkluder med at hvert element $\vec a \in \R^2$ kan skrives som et element i $D_G$, pluss heltallskombinasjoner av $\vec x,\vec y$. Dette er det samme som å si at $\R^2 = \cup_{g \in G} g(D_G)$.
+
+Det andre kravet for å være et fundamentalområde var at om $g \neq h$, så hadde vi at $g(D_G) \cap h(D_G)$ ikke hadde noe indre. Men dette er klart: det ``verste'' som kan skje er at $g(D_G)$ og $h(D_G)$ er naboer, men da snitter de kun i randen.
 \end{losn}
 
+PS: Til slutt en formel jeg måtte bruke for å lage noen av diagrammene i løsningsforslaget. Vi skulle finne omsenteret til en trekant. Anta ene hjørnet er origo, og andre er $(a,b)$, og tredje er $(c,d)$. Da kan vi regne ut at omsenteret har koordinater:
+\[
+\frac{1}{2(bc-ad)} \left( a^2d-d^2b+b^2d-c^2b, a^2c + b^2c - ac^2- ad^2 \right)
+\]
+Hvordan jeg fant denne formelen: la $\ell$ være linjen $\frac 12 \vec a + t \vec a^\perp$ (altså linjen som står ortogonalt på $\vec a$ og går ut fra midtpunktet). La $\ell^\prime$ være den tilsvarende linjen for $\vec b$. Da kan man regne ut skjæringspunktet mellom disse linjene, og dette er omsenteret (engelsk \emph{circumcenter}).
 \end{document}
+ 
