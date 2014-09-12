@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  27 AUG 2014 15:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  12 SEP 2014 14:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1057,44 +1057,48 @@ LaTeX Info: Redefining \nameref on input line 28.
 \@outlinefile=\write5
 \openout5 = `ordliste.out'.
 
- <xymatrix 2x2 216> <xymatrix 2x2 137>
-[1
+ (./ordliste.toc)
+\tf@toc=\write6
+\openout6 = `ordliste.toc'.
+
+ [1
 
 {/opt/app-sync/texlive/uio-texmf/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
- [2] [3] [4] [5]
-Overfull \hbox (29.00937pt too wide) in paragraph at lines 220--221
+ <xymatrix 2x2
+216> <xymatrix 2x2 137> [2] [3] [4] [5] [6]
+Overfull \hbox (29.00937pt too wide) in paragraph at lines 243--244
 \T1/cmr/m/n/10.95 di-men-sion $\OML/cmm/m/it/10.95 d$\T1/cmr/m/n/10.95 , and $\
 OMS/cmsy/m/n/10.95 L$ \T1/cmr/m/n/10.95 is an [][]am-ple[][] in-vert-ible sheaf
  on $\OML/cmm/m/it/10.95 X$\T1/cmr/m/n/10.95 , then $[]$
  []
 
-[6]
+[7] [8]
 LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
-(Font)              scaled to size 15.76802pt on input line 257.
+(Font)              scaled to size 15.76802pt on input line 289.
 LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
-(Font)              scaled to size 17.28003pt on input line 257.
- [7] [8] [9] [10]
-LaTeX Font Info:    Try loading font information for U+euf on input line 367.
+(Font)              scaled to size 17.28003pt on input line 289.
+ [9] [10] [11]
+LaTeX Font Info:    Try loading font information for U+euf on input line 404.
 
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-[11] [12] [13] (./ordliste.bbl [14])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 474.
- [15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 474.
+[12] [13] [14] [15] (./ordliste.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 511.
+ [16]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 511.
  (./ordliste.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 474.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 474.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 511.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 511.
 Package rerunfilecheck Info: File `ordliste.out' has not changed.
-(rerunfilecheck)             Checksum: B2EDE1C2634E4522F757AC6B5A81FE9B;6493.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 474.
+(rerunfilecheck)             Checksum: 3D46ED11202388BC61F756F3C389FE8A;1189.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 511.
  ) 
 Here is how much of TeX's memory you used:
- 18835 strings out of 493308
- 315019 string characters out of 6135157
- 432007 words of memory out of 5000000
- 21733 multiletter control sequences out of 15000+600000
+ 18779 strings out of 493308
+ 313742 string characters out of 6135157
+ 433223 words of memory out of 5000000
+ 21668 multiletter control sequences out of 15000+600000
  22912 words of font info for 71 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,15n,55p,3276b,472s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1126,10 +1130,10 @@ nc/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></opt/
 app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></o
 pt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
 
-Output written on ordliste.pdf (15 pages, 335369 bytes).
+Output written on ordliste.pdf (16 pages, 342172 bytes).
 PDF statistics:
- 621 PDF objects out of 1000 (max. 8388607)
- 574 compressed objects within 6 object streams
- 121 named destinations out of 1000 (max. 500000)
- 717 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 442 PDF objects out of 1000 (max. 8388607)
+ 396 compressed objects within 4 object streams
+ 127 named destinations out of 1000 (max. 500000)
+ 165 words of extra memory for PDF output out of 10000 (max. 10000000)
 

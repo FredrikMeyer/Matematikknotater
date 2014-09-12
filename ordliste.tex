@@ -29,6 +29,11 @@
 \maketitle
 
 \section{Algebraic Geometry}
+ 
+\setcounter{tocdepth}{2} 
+\tableofcontents
+
+
 \subsection{General terms}
 \subsubsection{Cartier divisor}
 \label{cartierdivisor}
@@ -75,7 +80,7 @@ Let $X$ be an  integral, \hyperref[separated]{separated} scheme over a field $k$
 
 \subsubsection{Crepant resolution}
 \label{crepantresolution}
-A \textbf{crepant resolution} is a resolution of singularities $f:X \to Y$ that does not change the \hyperref[canonicalsheaf]{canonical bundle}, i.e. such that $\omega_X \simeq f^\ast (\omega_Y)$.
+A \textbf{crepant resolution} is a resolution of singularities $f:X \to Y$ that does not change the \hyperref[canonicalsheaf]{canonical bundle}, i.e. such that $\omega_X \simeq f^\ast \omega_Y$.
 
 \subsubsection{Dominant map}
 \label{dominantmap}
@@ -207,6 +212,13 @@ Thus $X$ is an example of a \hyperref[k3]{K3 surface}.
 \label{bertini}
 Let $X$ be a nonsingular closed subvariety of $\PP_k^n$, where $k=\bar k$. Then the set of of hyperplanes $H \subseteq \PP_k^n$ such that $H \cap X$ is regular at every point) and such that $H\not  \subseteq X$ is a dense open subset of the complete linear system $|H|$. See \cite[Thm II.8.18]{hartshorne}.
 
+\subsubsection{Chow's lemma}
+\label{chowslemma}
+
+Chow's lemma says that if $X$ is a scheme that is proper over $k$, then it is ``fairly close'' to being projective. Specifically, we have that there exists a projective $k$-scheme $X^\prime$ and morphism $f:X^\prime \to X$ that is birational.
+
+So every scheme proper over $k$ is birational to a projective scheme. For a proof, see for example the Wikipedia page.
+
 \subsubsection{Euler sequence}
 \label{eulersequence}
 If $A$ is a ring and $\PP_A^n$ is projective $n$-space over $A$, then there is an exact sequence of sheaves on $X$:
@@ -214,6 +226,17 @@ If $A$ is a ring and $\PP_A^n$ is projective $n$-space over $A$, then there is a
 0 \to \Omega_{\PP^n_A/A} \to \OO_{\PP^n_A}(-1)^{n+1} \to \OO_{\PP_A^n} \to 0.
 \]
 See \cite[Thm II.8.13]{hartshorne}.
+
+\subsubsection{Hurwitz' formula}
+\label{hurwitzformula}
+
+Let $X,Y$ be smooth curves in the sense of Hartshorne. That is, they are integral $1$-dimensional schemes, proper over a field $k$ (with $\bar k = k$), all of whose local rings are regular.
+
+Then Hurwitz' formula says that if $f:X \to Y$ is a separable morphism and $n= \deg f$, then
+\[
+2(g_X-1) = 2n(g_Y-1) + \deg R,
+\]
+where $R$ is the ramification divisor of $f$, and $g_X,g_Y$ are the genera of $X$ and $Y$, respectively.
 
 \subsubsection{Kodaira vanishing}
 \label{kodairavanishing}
@@ -226,7 +249,7 @@ Let $X$ be an $n$-dimensional complex projective algebraic variety in $\PP_\C^n$
 \subsubsection{Riemann-Roch for curves}
 \label{riemannroch}
 
-The \textbf{Riemann-Roch theorem} relates the number of sections of a line bundle with the genus of a smooth curve $C$. Let $\LL$ be a line bundle $\omega_C$ the canonical sheaf on $C$. Then
+The \textbf{Riemann-Roch theorem} relates the number of sections of a line bundle with the genus of a smooth proper curve $C$. Let $\LL$ be a line bundle $\omega_C$ the canonical sheaf on $C$. Then
 \[
 h^0(C,\LL) - h^0(C, \LL^{-1} \otimes_{\OO_{C}} \omega_C) = \deg(\LL) +1 -g.
 \]
@@ -236,6 +259,15 @@ This is \cite[Theorem IV.1.3]{hartshorne}.
 \label{semicontinuity}
 
 Let $f:X \to Y$ be a projective morphism of noetherian schemes, and let $\FF$ be a coherent sheaf on $X$, flat over $Y$. Then for each $i \geq 0$, the function $h^i(y,\FF)=\dim_{k(y)} H^i(X_y,\FF_y)$ is an upper semicontinuous function on $Y$. See \cite[Chapter III, Theorem 12.8]{hartshorne}.
+
+\subsubsection{Serre duality}
+\label{serreduality}
+
+Let $X$ be a projective Cohen-Macaulay scheme of equidimension $n$. Then for any locally free sheaf $\mathcal F$ on $X$ there are natural isomorphisms
+\[
+H^i(X,\mathcal F) \simeq H^{n-i}(X, \mathcal F^\vee \otimes \omega_X^\circ).
+\]
+Here $\omega_X^\circ$ is a \emph{dualizing sheaf} for $X$. In the case that $X$ is nonsingular, we have that $\omega_X^\circ \simeq \omega_X$, the canonical sheaf on $X$ (see \cite[Chapter III, Corollary 7.12]{hartshorne}). 
 
 \subsubsection{Serre vanishing}
 \label{serrevanishing}
@@ -341,6 +373,11 @@ It can be checked that $J$ is actually a group scheme. For details, see \cite[Ch
 \label{k3}
 
 A \textbf{K3 surface} is a complex algebraic surface $X$ such that the \hyperref[canonicaldivisor]{canonical sheaf} is trivial, $\omega_X \simeq \OO_X$, and such that $H^1(X,\OO_X)=0$. These conditions completely determine the Hodge numbers of $X$.
+
+\subsubsection{Toric variety}
+\label{toricvariety}
+
+A \textbf{toric variety} $X$ is an integral scheme containing the torus $(k^\ast)^n$ as a dense open subset, such that the action of the torus on itself extends to an action $(k^\ast)^n \times X \to X$.
 
 %%%%%%%%%%%%%%
 \section{Commutative algebra}
