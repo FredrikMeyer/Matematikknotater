@@ -137,13 +137,13 @@ Men $z^n = e^{2\pi i}=1$, så $T=0$, akkurat som vi ønsket.
 Vis at en diskret undergruppe av $SO(2)$ er endelig.
 \end{oppg}
 \begin{losn}
-Husk at $SO(2)$ er gruppen av ortogonale operatorer på $\R^2$. Konkret er dette mengden av ortogonale $2 \times 2$-matriser. Disse kan alle dekomponeres som $M=SM_\theta$, der $S$ er matrisen til speiling om $x$-aksen og $M_\theta$ er en rotasjon på $\theta$ grader om origo.
+Husk at $SO(2)$ er gruppen av ortogonale orienteringsbevarende operatorer på $\R^2$. Konkret er dette mengden av ortogonale $2 \times 2$-matriser med determinant $1$. Disse kan alle skrives som $M_\theta$, der $M_\theta$ er matrisen til en rotasjon på $\theta$ grader om origo.
 
 Husk at en undergruppe $G$ av $SO(2)$ er \emph{diskret} hvis det finnes en $\epsilon > 0$ slik at for hver rotasjon $M_\theta$ i $G$, så er $\lvert \theta \rvert \geq \epsilon$ (om $\theta \neq 0$). På mer forståelig norsk betyr dette at alle rotasjonene i $G$ roterer mer enn $\epsilon$ grader.
 
 Nå påstår jeg at dette impliserer at om $M_\theta,M_\varphi$ er to rotasjoner i $G$, så er $\lvert\theta - \varphi\rvert \geq \epsilon$. Siden $G$ er en gruppe, er også $M_\varphi^{-1} \in G$, og følgelig også $M_{\theta}M_{\varphi}^{-1} = M_\theta M_{-\varphi}=M_{\theta-\varphi}$. Men siden $G$ er diskret, følger det at $\lvert \theta - \varphi\rvert \geq \epsilon$.
 
-Dermed har alle rotasjonene i $G$ en avstand på større enn $\epsilon$, noe som betyr at vi maksimalt kan ha $\frac{2\pi}{\epsilon}$ rotasjoner i $G$. Så en diskret undergruppe av $SO(2)$ kan bare inneholde endelig mange rotasjoner, og siden $SM_\theta = M_{-\theta}S$, følger det at maksimal størrelse på $G$ er $\frac{4\pi}{\epsilon}$ (ved å putte inn maksimalt antall speilinger).
+Dermed har alle rotasjonene i $G$ en avstand på større enn $\epsilon$, noe som betyr at vi maksimalt kan ha $\frac{2\pi}{\epsilon}$ rotasjoner i $G$. Så en diskret undergruppe av $SO(2)$ kan bare inneholde endelig mange rotasjoner.
 \end{losn}
 
 \begin{oppg}
@@ -155,13 +155,13 @@ For å vise at $D_G$ er et fundamentalområde må vi vise to ting: Det ene er at
 
 Først: Kall vektorene i gitteret for $\vec x$ og $\vec y$. La $\vec a = (a,b) \in \R^2$. Siden $\vec x,\vec y$ utgjør en basis, kan vi skrive $\vec a = r_1 \vec x + r_2 \vec y$ for noen $r_1,r_2 \in \R$. Nå, skriv $r_1$ og $r_2$ som en sum av heltall pluss et tall i intervallet $[-\frac 12,\frac 12)$ (dette kan vi alltid gjøre, og til og med unikt), altså som $r_1=n_1 + s_1, r_2=n_2+s_2$, der $n_1,n_2$ er heltall, og $s_1,s_2$ er i intervallet over. Da er $\vec x = t_{n_1 \vec x}t_{n_2 \vec y}(s_1 \vec x + s_2 \vec y)$.
 
-Nå påstår jeg at $s_1 \vec x + s_2 \vec y$ ligger innenfor Dirichlet-området til $G$. Men å ligge innenfor Dirichlet-området er det samme som å ligge innenfor alle midtnormalene til trekantene i fundamentalheksagonet. Så om $s_1 \geq 0$ og $s_2 \geq 0$, er vi automatisk i den første trekanten. Anta nå $s_1 < 0$ og $s_2 > 0$. Om $s_1+s_2 < \frac 12$, kan vi skrive
+Nå påstår jeg at $s_1 \vec x + s_2 \vec y$ ligger innenfor Dirichlet-området til $G$. Men å ligge innenfor Dirichlet-området er det samme som å ligge innenfor alle midtnormalene til trekantene i fundamentalheksagonet. Så om $s_1 \geq 0$ og $s_2 \geq 0$, er vi automatisk i den første trekanten. Anta nå $s_1 < 0$ og $s_2 > 0$. Om $s_1+s_2 > 0$, kan vi skrive
 \[
 s_1 \vec x + s_2 \vec y = s_1 \vec x -s_1 \vec y +s_1 \vec y + s_2 \vec y = (-s_1)(\vec y - \vec x) + (s_1+s_2) \vec y.
 \]
-Dermed er $s_1 \vec x + s_2 \vec y$ i den øverste trekanten. Om $s_1 + s_2 > \frac 12$ kan vi skrive
+Dermed er $s_1 \vec x + s_2 \vec y$ i den øverste trekanten. Om $s_1 + s_2 < 0$ kan vi skrive
 \[
-s_1 \vec x + s_2 \vec y = (-s_1-s_1)(-\vec x) + s_2(\vec y- \vec x).
+s_1 \vec x + s_2 \vec y = (-s_1-s_2)(-\vec x) + s_2(\vec y- \vec x).
 \]
 Da er $s_1 \vec x + s_2 \vec y$ i den øvre, venstre trekanten.
 
