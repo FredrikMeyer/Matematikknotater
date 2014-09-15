@@ -505,6 +505,24 @@ A $2n$-dimensional manifold $M$ is \textbf{symplectic} if it is compact and orie
 
 \subsection{Results and theorems}
 
+\section{Worked examples}
+\subsection{Algebraic geometry}
+\subsubsection{Hurwitz formula and Kähler differentials}
+
+Let $X$ be the conic in $\PP^2$ given with ideal sheaf $\langle xz-y^2 \rangle$. Let $Y$ be $\PP^1$, and consider the map $f:X \to Y$ given by projection onto the $xz$-line. $X$ is covered by two affine pieces, namely $X= U_x \cup U_z$, the spectra of the homogeneous localizations at $x,z$, respectively. Let $U_x=\Spec A$ for $A=k[z]$ and $U_z = \Spec B$ for $B=k[x]$. Then the map is locally given by $A \to k[y,z]/(z-y^2)$ where $z \mapsto \bar z$, and similarly for $B$. We have an isomorphism $k[y,z]/(z-y^2) \simeq k[t]$, given by $y \mapsto t$ and $z \mapsto t^2$, so that locally the map is given by $k[z] \to k[t], z \mapsto t^2$.
+
+This is a map of smooth projective curves, so we can apply Hurwitz' formula. Both $X,Y$ are $\PP^1$, so both have genus zero. Hence Hurwitz formula says that
+\[
+-2 = -n \cdot 2+ \deg R,
+\]
+where $R$ is the ramification divisor and $n$ is the degree of the map. The degree of the map can be defined locally, and it is the degree of the field extension $k(Y) \hookrightarrow k(X)$. But (the image of) $k(Y) = k(t^2)$ and $k(X)=k(t)$, so that $[k(Y):k(X)]=2$. Hence by Hurwitz' formula, we should have $\deg R = 2$. Since $R = \sum_{P \in X} \length \, {\Omega_{X/Y}}_P \cdot P$, we should look at the sheaf of relative differentials $\Omega_{Y/X}$.
+
+First we look in the chart $U_z$. We compute that $\Omega_{k[t]/k[t^2]} = k[t]/(t)$. This follows from the relation $d(t^2)=2dt$, implying that $dt=0$ in $\Omega_{k[t]/k[t^2]}$. This module is zero localized at all primes but $(t)$, where it is $k$. Thus for $P=(0:0:1)$, we have $\length \, {\Omega_{X/Y}}_P = 1$.
+
+The situation is symmetric with $z \leftrightarrow x$, so that we have $R = (0:0:1) + (1:0:0)$, confirming that $\deg R=2$.  
+
+
+
 \bibliographystyle{plain}
 \bibliography{bibliografi}
 
