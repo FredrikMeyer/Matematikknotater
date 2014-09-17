@@ -1,0 +1,51 @@
+\documentclass[11pt, norsk]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}   % S P R A A K
+
+
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+
+\begin{document}
+\title{Oppgaver MAT2500}
+\author{Fredrik Meyer}
+\maketitle 
+\begin{oppg}
+Beskriv et polyeder med $5$ hjørner og $6$ sider der alle sidene er trekanter. Beskriv to polyedre med $6$ hjørner og $8$ sider der alle sidene er trekanter.
+\end{oppg}
+\begin{losn}
+ \begin{tikzpicture}[line join=bevel,z=-5.5]
+\coordinate (A1) at (0,0,-1);
+\coordinate (A2) at (-1,0,0);
+\coordinate (A3) at (0,0,1);
+\coordinate (A4) at (1,0,0);
+\coordinate (B1) at (0,1,0);
+\coordinate (C1) at (0,-1,0);
+
+\draw (A1) -- (A2) -- (B1) -- cycle;
+\draw (A4) -- (A1) -- (B1) -- cycle;
+\draw (A1) -- (A2) -- (C1) -- cycle;
+\draw (A4) -- (A1) -- (C1) -- cycle;
+\draw [fill opacity=0.7,fill=green!80!blue] (A2) -- (A3) -- (B1) -- cycle;
+\draw [fill opacity=0.7,fill=orange!80!black] (A3) -- (A4) -- (B1) -- cycle;
+\draw [fill opacity=0.7,fill=green!30!black] (A2) -- (A3) -- (C1) -- cycle;
+\draw [fill opacity=0.7,fill=purple!70!black] (A3) -- (A4) -- (C1) -- cycle;
+\end{tikzpicture}
+\end{losn}
+
+
+\end{document}

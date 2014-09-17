@@ -1,0 +1,147 @@
+\documentclass[11pt, norsk]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}   % S P R A A K
+
+
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{tikz-3dplot}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+
+\begin{document}
+\title{Oppgaver MAT2500}
+\author{Fredrik Meyer}
+\maketitle 
+\begin{oppg}
+Beskriv et polyeder med $5$ hjørner og $6$ sider der alle sidene er trekanter. Beskriv to polyedre med $6$ hjørner og $8$ sider der alle sidene er trekanter.
+\end{oppg}
+\begin{losn}
+Vi vet fra Eulers formel at det alltid gjelder at
+\[
+v-e+f = 2
+\]
+for konvekse polyedre. Her er $v$ antall hjørner, $e$ er antall kanter, og $f$ er antall flater. Dermed finner vi at den første figuren må ha $9$ kanter. Dette gir oss en ide om hva det kan være, og etter litt tenking skjønner vi at et svar er den rette dobbelpyramiden på en trekant. Se Figur 1.
+
+På samme måte ser vi at et polyeder med $6$ hjørner og $8$ sider må ha $12$ kanter. Ett slikt polyeder er oktaeder, som vi har tegnet i Figur 2. 
+
+\begin{figure}[h]
+\begin{center}
+
+\tdplotsetmaincoords{81}{127}
+  \begin{tikzpicture}[scale=5,tdplot_main_coords]
+
+    \draw[thick,->] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
+    \draw[thick,->] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
+    \draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
+
+   \coordinate (A) at (-0.5,-{sqrt(3)/6},0);
+   \coordinate (B) at (0.5,-{sqrt(3)/6},0);
+   \coordinate (C) at (0,{sqrt(3)/3},0);
+   \coordinate (E) at (0,0,{sqrt(2/3)});
+   \coordinate (F) at (0,0,-{sqrt(2/3)});
+
+\draw[dashed, red] (A) -- (B);
+\draw[thick, red] (B) -- (E);
+\draw[dashed, red] (E) -- (A);
+\draw[thick, red]  (B) -- (F);
+\draw[dashed, red]  (A) -- (F);
+\draw[thick, red] (C) -- (F);
+\draw[thick, red] (C)  -- (E);
+\draw[dashed, red] (C)  -- (A);
+\draw[thick, red] (C)  -- (B);
+
+  \end{tikzpicture}
+\end{center}
+\caption{Den rette bipyramiden på en regulær trekant.}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+
+\tdplotsetmaincoords{81}{127}
+  \begin{tikzpicture}[scale=3,tdplot_main_coords]
+
+%    \draw[thick,->] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
+%    \draw[thick,->] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
+%    \draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z$}; 
+
+   \coordinate (A) at (1,1,0);
+   \coordinate (B) at (-1,1,0);
+   \coordinate (C) at (-1,-1,0);
+   \coordinate (D) at (1,-1,0);
+   \coordinate (E) at (0,0,1);
+   \coordinate (F) at (0,0,-1);
+
+\draw[red] (D) -- (A) -- (B);
+\draw[dashed, red] (B) -- (C) -- (D);
+\draw[red] (E) -- (A);
+\draw[red] (E) -- (B);
+\draw[dotted,red] (E) -- (C);
+\draw[red] (E) -- (D);
+\draw[red] (F) -- (A);
+\draw[red] (F) -- (B);
+\draw[dotted,red] (F) -- (C);
+\draw[red] (F) -- (D);
+
+  \end{tikzpicture}
+\end{center}
+\caption{Den rette bipyramiden på en regulær trekant.}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+
+\tdplotsetmaincoords{100}{200}
+  \begin{tikzpicture}[scale=3,tdplot_main_coords]
+
+%    \draw[thick,->] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
+%    \draw[thick,->] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
+%    \draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z$}; 
+
+   \coordinate (A) at ({(1/4)*sqrt(10+2*sqrt(5))},{0.25*(sqrt(5)-1)},0);
+   \coordinate (B) at (0,1.1,-0.1);
+   \coordinate (C) at (-{(1/4)*sqrt(10+2*sqrt(5))},{0.25*(sqrt(5)-1)},0);
+   \coordinate (E) at (-{(1/4)*sqrt(10+2*sqrt(5))},{-0.25*(sqrt(5)-1)},0);
+   \coordinate (F) at ({(1/4)*sqrt(10+2*sqrt(5))},{-0.25*(sqrt(5)-1)},0);
+   \coordinate (D) at (0,0,1);
+
+\draw[thick, red] (A) -- (B) -- (C) -- (E) -- (F) -- cycle;
+\fill[green, opacity=0.2] (A) -- (B) -- (C) -- (E) -- (F) -- cycle;
+\fill[blue, opacity=0.2] (D) -- (E) -- (F) -- cycle;
+\fill[red, opacity=0.2] (D) -- (E) -- (C) -- cycle;
+\fill[orange, opacity=0.2] (D) -- (C) -- (B) -- cycle;
+\fill[yellow, opacity=0.2] (D) -- (B) -- (A) -- cycle;
+\fill[pink, opacity=0.2] (D) -- (A) -- (F) -- cycle;
+\fill[black, opacity=0.2] (B) -- (C) -- (E) -- cycle;
+\fill[black, opacity=0.2] (B) -- (E) -- (F) -- cycle;
+\fill[black, opacity=0.2] (B) -- (F) -- (A) -- cycle;
+\draw (D) node[above] {T} -- (A);
+\draw (D) -- (B);
+\draw (D) -- (C);
+\draw (D) -- (E);
+\draw (D) -- (F);
+\draw (B) -- (E);
+\draw (B) -- (F);
+
+  \end{tikzpicture}
+\end{center}
+\caption{Pentagon med én side lenger enn de andre.}
+\end{figure}
+
+\end{losn}
+
+
+\end{document}

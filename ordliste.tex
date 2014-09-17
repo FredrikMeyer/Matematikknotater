@@ -71,12 +71,14 @@ Note: A categorical quotient need not be surjective.
 \label{chowgroup}
 Let $X$ be an algebraic variety. Let $Z_r(X)$ be the group of $r$-dimension cycles on $X$, a \emph{cycle} being a $\Z$-linear combination of $r$-dimensional subvarieties of $X$. If $V \subset X$ is a subvariety of dimension $r+1$ and $f:X \rmap \Aa^1$ is a rational function on $X$, then there is an integer $\ord_W(f)$ for each codimension one subvariety of $V$, the order of vanishing of $f$. For a given $f$, there will only be finitely many subvarieties $W$ for which this number is non-zero. Thus we can define an element $[\div(f)]$ in $Z_r(X)$ by $\sum \ord_W(f) [W]$.
 
-We say that two $r$-cycles $U_1,U_2$  are \emph{rationally equivalent} if there exist $r+1$-dimensional subvarieties $V_1,V_2$ together with rational functions $f_1\colon V_1 \rmap \Aa^1$, $f_2 \colon V_2 \rmap \Aa^1$ such that $U_1 - U_2 = sum_i [\div(f_i)]$. The quotient group is called the \textbf{Chow group} of $r$-dimensional cycles on $X$, and denoted by $A_r(X)$. 
+We say that two $r$-cycles $U_1,U_2$  are \emph{rationally equivalent} if there exist $r+1$-dimensional subvarieties $V_1,V_2$ together with rational functions $f_1\colon V_1 \rmap \Aa^1$, $f_2 \colon V_2 \rmap \Aa^1$ such that $U_1 - U_2 = \sum_i [\div(f_i)]$. The quotient group is called the \textbf{Chow group} of $r$-dimensional cycles on $X$, and denoted by $A_r(X)$. 
 
 
 \subsubsection{Complete variety}
 \label{completevariety}
 Let $X$ be an  integral, \hyperref[separated]{separated} scheme over a field $k$. Then $X$ is  \textbf{complete} if is \hyperref[proper]{proper}.
+
+Then $\PP^n$ is proper over any field, and $\Aa^n$ is never proper.
 
 \subsubsection{Crepant resolution}
 \label{crepantresolution}
@@ -227,6 +229,15 @@ If $A$ is a ring and $\PP_A^n$ is projective $n$-space over $A$, then there is a
 \]
 See \cite[Thm II.8.13]{hartshorne}.
 
+\subsubsection{Hirzebruch-Riemann-Roch formula}
+\label{hirzebruchriemannroch}
+
+Let $X$ be a nonsingular variety and let $\mathscr T_X$ be its tangent bundle. Let $\mathscr E$ be a locally free sheaf on $X$. Then
+\[
+\chi(\mathscr E) = \deg {\left( \mathrm{ch}(\mathscr E) \cdot \mathrm{td}(\mathscr T) \right)}_{n},
+\]
+where $\chi$ is the Euler characteristic, $\mathrm{ch}$ denotes the Chern class, and $\mathrm{td}$ denotes the Todd class. See \cite[Appendix A]{hartshorne}.
+
 \subsubsection{Hurwitz' formula}
 \label{hurwitzformula}
 
@@ -236,7 +247,7 @@ Then Hurwitz' formula says that if $f:X \to Y$ is a separable morphism and $n= \
 \[
 2(g_X-1) = 2n(g_Y-1) + \deg R,
 \]
-where $R$ is the ramification divisor of $f$, and $g_X,g_Y$ are the genera of $X$ and $Y$, respectively.
+where $R$ is the ramification divisor of $f$, and $g_X,g_Y$ are the genera of $X$ and $Y$, respectively. See Example \ref{exhurwitz}. 
 
 \subsubsection{Kodaira vanishing}
 \label{kodairavanishing}
@@ -308,6 +319,11 @@ If $X$ is a complex manifold, then the \textbf{sheaf of of holomorphic $p$-forms
 
 Let $Y \hookrightarrow X$ be a closed immersion of schemes, and let $\mathcal I \subseteq \OO_X$ be the ideal sheaf of $Y$ in $X$. Then $\mathcal I/\mathcal I^2$ is a sheaf on $Y$, and we define the sheaf $\mathcal N_{Y/X}$ by $\Shom_{\OO_Y}(\mathcal I/\mathcal I^2, \mathcal \OO_Y)$.
 
+\subsubsection{Rank of a coherent sheaf}
+\label{ranksheaf}
+
+Given a coherent sheaf $\mathscr F$ on an irreducible variety $X$, form the sheaf ${\mathscr F \otimes_{\OO_X} \mathscr K_X}$. Its global sections is a finite dimensional vector space, and we say that $\mathscr F$ has rank $r$ if $\dim_k \Gamma(X,\mathscr F \otimes_{\OO_X} \mathscr K_X) = r$.
+
 \subsubsection{Reflexive sheaf}
 \label{reflexivesheaf}
 
@@ -373,6 +389,16 @@ It can be checked that $J$ is actually a group scheme. For details, see \cite[Ch
 \label{k3}
 
 A \textbf{K3 surface} is a complex algebraic surface $X$ such that the \hyperref[canonicaldivisor]{canonical sheaf} is trivial, $\omega_X \simeq \OO_X$, and such that $H^1(X,\OO_X)=0$. These conditions completely determine the Hodge numbers of $X$.
+
+\subsubsection{Stanley-Reisner scheme}
+\label{srscheme}
+
+A \textbf{Stanley-Reisner scheme} is a projective variety associated to a simplicial complex as follows. Let $\K$ be a simplicial complex. Then we define an ideal $I_\K \subseteq k[x_v \mid v \in V(\K)] = k[\mathbf x]$ (here $V(\K)$ denotes the vertex set of $\K$) by
+\[
+I_\K = \langle x_{v_{i_1}}x_{v_{i_2}}\cdots x_{v_{i_k}} \mid v_{i_1}v_{i_2}\cdots v_{i_k} \not \in \K \rangle.
+\]
+
+We get a projective scheme $\PP(\K)$ defined by $\Proj \left (k[ \mathbf x]/I_\K \right)$, together with an embedding into $\PP^{\# V(\K)-1}$. It can be shown that $H^p(\PP(\K),\OO_{\PP(\K)}) \simeq H^p(\K;k)$, where the right-hand-side denotes the cohomology group of the simplicial complex.
 
 \subsubsection{Toric variety}
 \label{toricvariety}
@@ -508,6 +534,7 @@ A $2n$-dimensional manifold $M$ is \textbf{symplectic} if it is compact and orie
 \section{Worked examples}
 \subsection{Algebraic geometry}
 \subsubsection{Hurwitz formula and Kähler differentials}
+\label{exhurwitz}
 
 Let $X$ be the conic in $\PP^2$ given with ideal sheaf $\langle xz-y^2 \rangle$. Let $Y$ be $\PP^1$, and consider the map $f:X \to Y$ given by projection onto the $xz$-line. $X$ is covered by two affine pieces, namely $X= U_x \cup U_z$, the spectra of the homogeneous localizations at $x,z$, respectively. Let $U_x=\Spec A$ for $A=k[z]$ and $U_z = \Spec B$ for $B=k[x]$. Then the map is locally given by $A \to k[y,z]/(z-y^2)$ where $z \mapsto \bar z$, and similarly for $B$. We have an isomorphism $k[y,z]/(z-y^2) \simeq k[t]$, given by $y \mapsto t$ and $z \mapsto t^2$, so that locally the map is given by $k[z] \to k[t], z \mapsto t^2$.
 
@@ -519,7 +546,9 @@ where $R$ is the ramification divisor and $n$ is the degree of the map. The degr
 
 First we look in the chart $U_z$. We compute that $\Omega_{k[t]/k[t^2]} = k[t]/(t)$. This follows from the relation $d(t^2)=2dt$, implying that $dt=0$ in $\Omega_{k[t]/k[t^2]}$. This module is zero localized at all primes but $(t)$, where it is $k$. Thus for $P=(0:0:1)$, we have $\length \, {\Omega_{X/Y}}_P = 1$.
 
-The situation is symmetric with $z \leftrightarrow x$, so that we have $R = (0:0:1) + (1:0:0)$, confirming that $\deg R=2$.  
+The situation is symmetric with $z \leftrightarrow x$, so that we have $R = (0:0:1) + (1:0:0)$, confirming that $\deg R=2$. 
+
+In fact, the curve $C$ is isomorphic to $\PP^1$ via the map $\PP^1 \to C$ given by $(s:t) \mapsto (s^2:st:t^2)$. Identifying $C$ with $\PP^1$, we thus see that $C \to \PP^1$ correspond to the map $\PP^1 \to \PP^1$ given by $(s:t) \mapsto (s^2:t^2)$. 
 
 
 
