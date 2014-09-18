@@ -15,6 +15,7 @@
 \usepackage{tikz}
 \usetikzlibrary{calc}
 \usepackage{tikz-3dplot}
+\usepackage{subcaption}
 \usepackage[all]{xy}   % for comm.diagram
 \usepackage{wrapfig} % for float right
 \usepackage{hyperref}
@@ -37,7 +38,9 @@ for konvekse polyedre. Her er $v$ antall hjørner, $e$ er antall kanter, og $f$ 
 
 På samme måte ser vi at et polyeder med $6$ hjørner og $8$ sider må ha $12$ kanter. Ett slikt polyeder er oktaeder, som vi har tegnet i Figur 2. 
 
-\begin{figure}[h]
+Vi har derimot to muligheter. Den andre muligheten er ikke regulær, da det her finnes to hjørner som møter $5$ kanter (i oktaederet møter alle hjørner $4$ kanter). Se Figur 3.
+
+\begin{figure}
 \begin{center}
 
 \tdplotsetmaincoords{81}{127}
@@ -68,7 +71,7 @@ På samme måte ser vi at et polyeder med $6$ hjørner og $8$ sider må ha $12$ 
 \caption{Den rette bipyramiden på en regulær trekant.}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \begin{center}
 
 \tdplotsetmaincoords{81}{127}
@@ -82,8 +85,8 @@ På samme måte ser vi at et polyeder med $6$ hjørner og $8$ sider må ha $12$ 
    \coordinate (B) at (-1,1,0);
    \coordinate (C) at (-1,-1,0);
    \coordinate (D) at (1,-1,0);
-   \coordinate (E) at (0,0,1);
-   \coordinate (F) at (0,0,-1);
+   \coordinate (E) at (0,0,{sqrt(2)});
+   \coordinate (F) at (0,0,-{sqrt(2)});
 
 \draw[red] (D) -- (A) -- (B);
 \draw[dashed, red] (B) -- (C) -- (D);
@@ -98,10 +101,10 @@ På samme måte ser vi at et polyeder med $6$ hjørner og $8$ sider må ha $12$ 
 
   \end{tikzpicture}
 \end{center}
-\caption{Den rette bipyramiden på en regulær trekant.}
+\caption{Et oktaeder.}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \begin{center}
 
 \tdplotsetmaincoords{100}{200}
@@ -133,15 +136,210 @@ På samme måte ser vi at et polyeder med $6$ hjørner og $8$ sider må ha $12$ 
 \draw (D) -- (C);
 \draw (D) -- (E);
 \draw (D) -- (F);
-\draw (B) -- (E);
-\draw (B) -- (F);
+\draw[dashed] (B) -- (E);
+\draw[dashed] (B) -- (F);
 
   \end{tikzpicture}
 \end{center}
-\caption{Pentagon med én side lenger enn de andre.}
+\caption{Pyramide på et ``skjevt'' pentagon.}
 \end{figure}
-
 \end{losn}
 
+\begin{oppg}
+Tegn Schlegel-diagrammer for de $5$ platonske legemene.
+\end{oppg}
+
+\begin{losn}
+Å gjøre dette nøyaktig er en så tidkrevende jobb at selv datamaskiner puster tungt. Det som er interessant i Schlegel-diagrammet er den kombinatoriske strukturen til polytopene, og dette kan vi lett tegne inn. 
+
+Se Figurene 4,5,6. Teknikken for de to siste er slik: legg merke til at i alle hjørnene møtes et fast antall mangekanter. Dette bestemmer hele strukturen, og du kan arbeide deg innover. (prøv selv!)
+
+\begin{figure}
+\centering
+\begin{subfigure}[b]{0.3\textwidth}
+\begin{tikzpicture}[scale=0.8]
+\coordinate (A) at (2,0);
+\coordinate (B) at (-2,0);
+\coordinate (C) at (0,{2*sqrt(3)});
+\coordinate (D) at (0,{2*sqrt(3)/3});
+
+\draw (A) -- (B) -- (C) -- cycle;
+\draw (A) -- (D);
+\draw (B) -- (D);
+\draw (C) -- (D);
+
+\end{tikzpicture}
+\caption{Tetraeder.}
+\end{subfigure}
+\begin{subfigure}[b]{0.3\textwidth}
+  \begin{tikzpicture}
+ \coordinate (A) at (1.5,1.5);
+ \coordinate (B) at (-1.5,1.5);
+ \coordinate (C) at (-1.5,-1.5);
+ \coordinate (D) at (1.5,-1.5);
+ \coordinate (E) at (0.8,0.8);
+ \coordinate (F) at (-0.8,0.8);
+ \coordinate (G) at (-0.8,-0.8);
+ \coordinate (H) at (0.8,-0.8);
+
+\draw (A) -- (B) -- (C) -- (D) -- cycle;
+\draw (E) -- (F) -- (G) -- (H) -- cycle;
+\draw (A) -- (E);
+\draw (B) -- (F);
+\draw (C) -- (G);
+\draw (D) -- (H);
+  \end{tikzpicture}
+\caption{Kube.}
+\end{subfigure}
+\begin{subfigure}[b]{0.3\textwidth}
+  \begin{tikzpicture}[scale=0.8]
+\coordinate (A) at (2,0);
+\coordinate (B) at (-2,0);
+\coordinate (C) at (0,{2*sqrt(3)});
+\coordinate (D) at (0,{2*sqrt(3)/6});
+\coordinate (E) at (-0.5,{4*sqrt(3)/4});
+\coordinate (F) at (0.5,{4*sqrt(3)/4});
+
+\draw (A) -- (B) -- (C) -- cycle;
+\draw (A) -- (D);
+\draw (A) -- (F);
+\draw (B) -- (D);
+\draw (B) -- (E);
+\draw (C) -- (E);
+\draw (C) -- (F);
+\draw (D) -- (E) -- (F) -- cycle;
+
+  \end{tikzpicture}
+\caption{Oktaeder.}
+\end{subfigure}
+\caption{Schlegel-diagrammer for de tre første platonske legemene.}
+\end{figure}
+
+\begin{figure}
+\centering
+  \begin{tikzpicture}
+\coordinate (A) at ({(sqrt(10+2*sqrt(5)))},{(sqrt(5)-1)});
+\coordinate (B) at (0,4);
+\coordinate (C) at ({-(sqrt(10+2*sqrt(5)))},{(sqrt(5)-1)});
+\coordinate (D) at ({-(sqrt(10-2*sqrt(5)))},{-(sqrt(5)+1)});
+\coordinate (E) at ({(sqrt(10-2*sqrt(5)))},{-(sqrt(5)+1)});
+
+\coordinate (F) at ({0.5*(sqrt(10+2*sqrt(5)))},{0.5*(sqrt(5)-1)});
+\coordinate (G) at (0,2);
+\coordinate (H) at ({-0.5*(sqrt(10+2*sqrt(5)))},{0.5*(sqrt(5)-1)});
+\coordinate (I) at ({-0.5*(sqrt(10-2*sqrt(5)))},{-0.5*(sqrt(5)+1)});
+\coordinate (J) at ({(0.5*sqrt(10-2*sqrt(5)))},{-0.5*(sqrt(5)+1)});
+
+\coordinate (K) at ({-0.3*(sqrt(10+2*sqrt(5)))},{-0.3*(sqrt(5)-1)});
+\coordinate (L) at (0,-1.2);
+\coordinate (M) at ({0.3*(sqrt(10+2*sqrt(5)))},{-0.3*(sqrt(5)-1)});
+\coordinate (N) at ({0.3*(sqrt(10-2*sqrt(5)))},{0.3*(sqrt(5)+1)});
+\coordinate (O) at ({-0.3*(sqrt(10-2*sqrt(5)))},{0.3*(sqrt(5)+1)});
+
+\coordinate (P) at ({-0.2*(sqrt(10+2*sqrt(5)))},{-0.2*(sqrt(5)-1)});
+\coordinate (Q) at (0,-0.8);
+\coordinate (R) at ({0.2*(sqrt(10+2*sqrt(5)))},{-0.2*(sqrt(5)-1)});
+\coordinate (S) at ({0.2*(sqrt(10-2*sqrt(5)))},{0.2*(sqrt(5)+1)});
+\coordinate (T) at ({-0.2*(sqrt(10-2*sqrt(5)))},{0.2*(sqrt(5)+1)});
+
+
+\draw (A) -- (B) -- (C) -- (D) -- (E) -- cycle;
+\draw (A) -- (F);
+\draw (B) -- (G);
+\draw (C) -- (H);
+\draw (D) -- (I);
+\draw (E) -- (J);
+
+\draw (J) -- (L);
+\draw (J) -- (M);
+\draw (F) -- (M);
+\draw (F) -- (N);
+\draw (G) -- (N);
+\draw (G) -- (O);
+\draw (H) -- (O);
+\draw (H) -- (K);
+\draw (I) -- (K);
+\draw (I) -- (L);
+
+\draw (P) -- (Q) -- (R) -- (S) -- (T) -- cycle;
+\draw (P) -- (K);
+\draw (Q) -- (L);
+\draw (R) -- (M);
+\draw (S) -- (N);
+\draw (T) -- (O);
+
+  \end{tikzpicture}
+  \caption{Dodekaeder.}
+\end{figure}
+
+\begin{figure}
+\centering
+
+\begin{tikzpicture}[scale=2]
+\coordinate (A) at (-2,0);
+\coordinate (B) at (2,0);
+\coordinate (C) at (0,{2*sqrt(3)});
+\coordinate (D) at (-1,{sqrt(3)/3});
+\coordinate (E) at (1,{sqrt(3)/3});
+\coordinate (F) at (0,{4*sqrt(3)/3});
+\coordinate (G) at (0,{sqrt(3)/3});
+\coordinate (H) at (-0.5,{5*sqrt(3)/6});
+\coordinate (I) at (0.5,{5*sqrt(3)/6});
+\coordinate (J) at (0,{sqrt(3)/6});
+\coordinate (K) at (-3/4,{11*sqrt(3)/12});
+\coordinate (L) at (3/4,{11*sqrt(3)/12});
+
+\draw (A) -- (B) -- (C) -- cycle;
+\draw (A) -- (D);
+\draw (B) -- (E);
+\draw (C) -- (F);
+\draw (D) -- (E) -- (F) -- cycle;
+\draw (G) -- (H) -- (I) -- cycle;
+\draw (A) -- (J);
+\draw (A) -- (K);
+\draw (B) -- (J);
+\draw (B) -- (L);
+\draw (C) -- (K);
+\draw (C) -- (L);
+\draw (K) -- (F);
+\draw (K) -- (D);
+\draw (J) -- (D);
+\draw (J) -- (E);
+\draw (L) -- (E);
+\draw (L) -- (F);
+\draw (L) -- (I);
+\draw (K) -- (H);
+\draw (K) -- (H);
+\draw (J) -- (G);
+
+\end{tikzpicture}
+  \caption{Ikosaeder.}
+  
+\end{figure}
+\end{losn}
+
+\begin{oppg}
+La $\{ p,q\}$ være Schläfli-symbolet til et regulært polyeder $P$. Vis at hvis $e$ er antall kanter, så er 
+\[
+\frac 1e = \frac 1p + \frac 1q - \frac 12.
+\]
+\end{oppg}
+\begin{losn}
+For det første: hver flate ligger på $p$ kanter, og det er $f$ flater. Men hver kant ligger på to flater, så $pf = 2e$. For det andre: hvert hjørne møter $q$ kanter, men hver kant har to hjørner, så $qv=2e$. I tillegg har vi Eulers formel som sier at $v-e+f=2$. Vi ønsker å eliminere $v$ og $f$, og få et uttrykk med bare $e,p,q$.
+
+Vi har at $v = \frac{2e}{q}$ og at $f = \frac{2e}{p}$, så 
+\[
+\frac{2e}{q} - e + \frac{2e}{p} = 2.
+\]
+Gang uttrykket med $qp$ og få
+\[
+2ep - epq + 2eq = 2qp.
+\]
+Del på $2epq$:
+\[
+\frac{1}{q} - \frac{1}{2} + \frac{1}{p} = \frac{1}{e}.
+\]
+Som var det vi ønsket.
+\end{losn}
 
 \end{document}
