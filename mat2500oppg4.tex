@@ -342,4 +342,42 @@ Del på $2epq$:
 Som var det vi ønsket.
 \end{losn}
 
+\begin{oppg}
+  La $P$ være et tredimensjonalt polyeder og la $\Gamma$ være kantgrafen til $P$. La $v_k$ være antall hjørner i $\Gamma$ med grad $k$. Anta $P$ har bare trekanter som sideflater og vis at 
+\[
+\sum_k \left 1 - \frac k6 \right = 2.
+\]
+Generaliser, og vis at et polyeder med like kanter som sideflater bare kan ha enten trekanter, firkanter eller $5$-kanter som sideflater.
+\end{oppg}
+\begin{losn}
+For det første ser vi at $\sum_k v_k = v$, siden vi ender opp med å summere over alle hjørnene. Dermed ser venstresiden av uttrykket ut som 
+\[
+v - \frac 16 \sum_k kv_k 
+\]
+Vi evaluerer summen ved å telle antall flater. Hvert hjørne av grad $k$ grenser til $k$ flater. Dermed finnes $kv_k$ flater med et hjørne av grad $k$ i ``midten'', hvor vi muligens har telt samme ting flere ganger. Summerer vi over alle $k$, har vi telt alle flatene, men vi har telt hver flate $3$ ganger siden flatene har tre hjørner. Så summen er lik $3f$. Dermed er uttrykket lik $v-\frac 12 f$. 
+
+I tillegg: hver flate har $3$ kanter, så $3f$ teller alle flatene, men dobbelt opp (hver kant møter to flater), så $3f=2e$, og dermed er $-\frac 12 f = f - \frac 32  f = f - e$, slik at uttrykket vårt er lik $v+f-e$, som ved Eulers formel er lik $2$. Dermed har vi vist formelen.
+
+Om nå $P$ hadde vært et polyeder med bare $n$-kanter, ser vi ved å gå gjennom argumentene over at formelen ville blitt:
+\[
+\sum_k \left( 1 - \frac{(n-2)k}{2n} \right)v_k = 2.
+\]
+Om polyederet bare hadde bestått av $n$-kanter med $n > 5$ skjer følgende: for det første: minst tre $n$-kanter må møtes i et hjørne, så første (potensielle) ikke-null ledd i summen er
+\[
+v_k \left( 1- \frac{(n-2)3}{2n} \right) = v_k \left( \frac{6-n}{2n} \right).
+\]
+Men denne summen er ikke positiv om $n \geq 6$. På samme måte ser vi at om $n \geq 6$, så vil venstresiden være negativ, og dermed kan den umulig bli positiv lik $2$. 
+\end{losn}
+
+\begin{oppg}
+Finn $8$ punkter i $\R^3$ slik at den konvekse innhylningen av dem er en regulær kube. Bruk disse punktene til å finne koordinatene til hjørnene til et regulært tetraeder og et oktaeder.
+\end{oppg}
+\begin{losn}
+En regulær kube er for eksempel lik innhylningen til de åtte punktene $(\pm 1,\pm 1, \pm 1)$. 
+
+For å lage et tetraeder kan vi velge ett hjørne på kuben, for eksempel $(1,1,1)$. Langs diagonalene møter dette hjørnet tre andre hjørner. Eksplisitt er disse $(-1,1,1),(-1,-1,1)$ og $(-1,1,-1)$. (prøv og tegn!)
+
+For å lage et oktaeder, velger vi midtpunktene på hver flate, og tar den konvekse innhylningen. Da får vi seks hjørner, gitt ved $(0,0,\pm 1)$, $(\pm 1,0,0)$ og $(0,\pm 1, 0)$.
+\end{losn}
+
 \end{document}
