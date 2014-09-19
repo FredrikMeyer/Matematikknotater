@@ -49,15 +49,16 @@
 \contentsline {subsubsection}{\numberline {1.4.10}Very ample line bundle}{10}{subsubsection.1.4.10}
 \contentsline {subsection}{\numberline {1.5}Toric geometry}{10}{subsection.1.5}
 \contentsline {subsubsection}{\numberline {1.5.1}Chow group of a toric variety}{10}{subsubsection.1.5.1}
-\contentsline {subsubsection}{\numberline {1.5.2}Polarized toric variety}{10}{subsubsection.1.5.2}
-\contentsline {subsubsection}{\numberline {1.5.3}Toric variety associated to a polytope}{11}{subsubsection.1.5.3}
+\contentsline {subsubsection}{\numberline {1.5.2}Generalized Euler sequence}{10}{subsubsection.1.5.2}
+\contentsline {subsubsection}{\numberline {1.5.3}Polarized toric variety}{11}{subsubsection.1.5.3}
+\contentsline {subsubsection}{\numberline {1.5.4}Toric variety associated to a polytope}{11}{subsubsection.1.5.4}
 \contentsline {subsection}{\numberline {1.6}Types of varieties}{11}{subsection.1.6}
 \contentsline {subsubsection}{\numberline {1.6.1}Abelian variety}{11}{subsubsection.1.6.1}
 \contentsline {subsubsection}{\numberline {1.6.2}Calabi-Yau variety}{11}{subsubsection.1.6.2}
 \contentsline {subsubsection}{\numberline {1.6.3}del Pezzo surface}{11}{subsubsection.1.6.3}
 \contentsline {subsubsection}{\numberline {1.6.4}Elliptic curve}{11}{subsubsection.1.6.4}
-\contentsline {subsubsection}{\numberline {1.6.5}Fano variety}{11}{subsubsection.1.6.5}
-\contentsline {subsubsection}{\numberline {1.6.6}Jacobian variety}{11}{subsubsection.1.6.6}
+\contentsline {subsubsection}{\numberline {1.6.5}Fano variety}{12}{subsubsection.1.6.5}
+\contentsline {subsubsection}{\numberline {1.6.6}Jacobian variety}{12}{subsubsection.1.6.6}
 \contentsline {subsubsection}{\numberline {1.6.7}K3 surface}{12}{subsubsection.1.6.7}
 \contentsline {subsubsection}{\numberline {1.6.8}Stanley-Reisner scheme}{12}{subsubsection.1.6.8}
 \contentsline {subsubsection}{\numberline {1.6.9}Toric variety}{12}{subsubsection.1.6.9}
