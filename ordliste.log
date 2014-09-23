@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  19 SEP 2014 13:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  23 SEP 2014 15:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1066,7 +1066,7 @@ LaTeX Info: Redefining \nameref on input line 28.
 {/opt/app-sync/texlive/uio-texmf/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
  <xymatrix 2x2
 216> <xymatrix 2x2 137> [2] [3] [4] [5] [6] [7]
-Overfull \hbox (29.00937pt too wide) in paragraph at lines 254--255
+Overfull \hbox (29.00937pt too wide) in paragraph at lines 263--264
 \T1/cmr/m/n/10.95 di-men-sion $\OML/cmm/m/it/10.95 d$\T1/cmr/m/n/10.95 , and $\
 OMS/cmsy/m/n/10.95 L$ \T1/cmr/m/n/10.95 is an [][]am-ple[][] in-vert-ible sheaf
  on $\OML/cmm/m/it/10.95 X$\T1/cmr/m/n/10.95 , then $[]$
@@ -1074,31 +1074,38 @@ OMS/cmsy/m/n/10.95 L$ \T1/cmr/m/n/10.95 is an [][]am-ple[][] in-vert-ible sheaf
 
 [8]
 LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
-(Font)              scaled to size 15.76802pt on input line 300.
+(Font)              scaled to size 15.76802pt on input line 309.
 LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
-(Font)              scaled to size 17.28003pt on input line 300.
- [9] [10] [11] [12]
-LaTeX Font Info:    Try loading font information for U+euf on input line 439.
+(Font)              scaled to size 17.28003pt on input line 309.
+ [9] [10] [11] [12] <xymatrix 2x2 141>
+Overfull \hbox (47.49612pt too wide) in paragraph at lines 442--444
+\T1/cmr/m/n/10.95 is com-mu-ta-tive. Thus we have a nat-u-ral iso-mor-phism $[]
+[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 B; M\OT1/cmr/m/n/10.95 ) = [][](
+[]\OML/cmm/m/it/10.95 ; M\OT1/cmr/m/n/10.95 )$\T1/cmr/m/n/10.95 .
+ []
+
+[13] <xymatrix 3x1 96>
+LaTeX Font Info:    Try loading font information for U+euf on input line 473.
 
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-[13] [14] [15] [16] (./ordliste.bbl [17])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 567.
- [18]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 567.
+[14] [15] [16] [17] (./ordliste.bbl [18])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 602.
+ [19]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 602.
  (./ordliste.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 567.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 567.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 602.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 602.
 Package rerunfilecheck Info: File `ordliste.out' has not changed.
 (rerunfilecheck)             Checksum: B3C2DE885FC3C559C316433BF5E002C7;1308.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 567.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 602.
  ) 
 Here is how much of TeX's memory you used:
- 18804 strings out of 493308
- 314064 string characters out of 6135157
- 433597 words of memory out of 5000000
- 21680 multiletter control sequences out of 15000+600000
+ 18813 strings out of 493308
+ 314192 string characters out of 6135157
+ 433776 words of memory out of 5000000
+ 21685 multiletter control sequences out of 15000+600000
  23841 words of font info for 74 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,15n,55p,3276b,472s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1107,34 +1114,35 @@ Here is how much of TeX's memory you used:
 -type1/callig15.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmbx10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmex10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi10.pfb></opt/app-sync/texlive/uio-texmf/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/app-sync/texlive/uio-texmf
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/app-sync/texlive/uio
--texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/app-sync/texli
-ve/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/app-sync/
-texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/app-
-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></o
-pt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy6.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy8.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/
-amsfonts/euler/eufm10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/typ
-e1/public/amsfonts/symbols/msbm10.pfb></opt/app-sync/texlive/uio-texmf/texmf-di
-st/fonts/type1/public/rsfs/rsfs10.pfb></opt/app-sync/texlive/uio-texmf/texmf-di
-st/fonts/type1/public/cm-super/sfbx1095.pfb></opt/app-sync/texlive/uio-texmf/te
-xmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></opt/app-sync/texlive/uio-te
-xmf/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></opt/app-sync/texlive/
-uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></opt/app-sync/te
-xlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></opt/app-s
-ync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></opt
-/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb
-></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/xypic/xyatip10.
-pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/xypic/xybtip
-10.pfb>
-Output written on ordliste.pdf (18 pages, 363130 bytes).
+onts/type1/public/amsfonts/cmextra/cmex8.pfb></opt/app-sync/texlive/uio-texmf/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/app-sync/texlive/uio-
+texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/app-sync/texliv
+e/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/app-sync/
+texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/app
+-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></op
+t/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+s10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy6.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy8.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/ty
+pe1/public/amsfonts/euler/eufm10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></opt/app-sync/texlive/uio-tex
+mf/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></opt/app-sync/texlive/uio-tex
+mf/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></opt/app-sync/texlive/u
+io-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></opt/app-sync/tex
+live/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></opt/app-sy
+nc/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></opt/
+app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+</opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm172
+8.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/s
+fti1095.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/xypi
+c/xyatip10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/x
+ypic/xybtip10.pfb>
+Output written on ordliste.pdf (19 pages, 374863 bytes).
 PDF statistics:
- 476 PDF objects out of 1000 (max. 8388607)
- 426 compressed objects within 5 object streams
- 137 named destinations out of 1000 (max. 500000)
+ 491 PDF objects out of 1000 (max. 8388607)
+ 439 compressed objects within 5 object streams
+ 141 named destinations out of 1000 (max. 500000)
  181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
