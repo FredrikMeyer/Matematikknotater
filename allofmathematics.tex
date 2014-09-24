@@ -1,0 +1,104 @@
+\documentclass[11pt, norsk]{book}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}   % S P R A A K
+
+
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+
+\begin{document}
+\title{All matematikk}
+\author{Fredrik Meyer}
+\maketitle 
+
+\chapter{Sets}
+\section{Axioms}
+
+\chapter{Relations}
+
+\begin{defi}
+A  \emph{binary relation} is a map $S \times S \to $
+\end{defi}
+
+\chapter{Groups}
+
+\begin{defi}
+A \emph{group} is a triple $(G,\mu,\iota)$ where $G$ is a set and $\mu$ is a binary operation $G \times G \to G$ and $\iota$ is a function $G \to G$, satisfying the following axioms:
+\begin{itemize}
+\item Associativity: The following diagram commutes:
+\[
+\xymatrix{
+G \times G \times G \ar[r]^{\id \times \mu} \ar[d]_{\mu \times \id} & G \times G \ar[d]^\mu \\
+G \times G \ar[r]^\mu & G
+}
+\]
+\item Identity element. There exist an element $e \in G$ such that the following two diagrams commute:
+\[
+\xymatrix{
+\{ e \} \times G \ar[r]^{e \times \id} \ar[dr]_{\pi_2} & G \times G \ar[d]^{\mu} \\
+& G 
+}
+\]
+and
+\[
+\xymatrix{
+G \times \{e \} \ar[r]^{\id \times e} \ar[dr]_{\pi_2} & G \times G \ar[d]^{\mu} \\
+& G 
+}
+\]
+where the top maps are the natural inclusions.
+\item Inverse element. The following diagram is commutative:
+\[
+\xymatrix{
+G \ar[r]^{\id \times \iota} \ar[dr] & G \times G \ar[r]^\mu & G \\
+& \{e \} \ar@{^(->}[ur]
+}
+\]
+The same should also hold with $\id \times \iota$ replaces with $\iota \times \id$.
+\end{itemize}
+\end{defi}
+We will never write a group $G$ as a triple, but only refer to the group $(G,\mu,\iota)$ as just $G$, the maps being implicit. We will write $\iota(g)$ as $g^{-1}$, and $\mu(g,h)$ as $gh$.
+
+\begin{lemma}
+The identity element $e \in G$ is unique.
+\end{lemma}
+\begin{proof}
+Suppose $e^\prime$ is another identity element. Then $e e^\prime = e^\prime$ by the first diagram. But also $e e^\prime = e$ by the second diagram. Then $e=e^\prime$. Alternatively, the following is a commutative diagram:
+\[
+\xymatrix{
+& \{e \} \times \{ e^\prime \} \ar@{^(->}[dl] \ar[d]^\Delta \ar@{_(->}[dr] & \\
+\{ e\} \times G \ar[r]^{e \times \id} \ar[dr]_{\pi_2} & G \times G  \ar[d]^{\mu}& \{ e'\}  \times G  \ar[l]_{e^\prime \times \id} \ar[dl]^{\pi_2}\\
+& G
+} 
+\]
+\end{proof}
+
+\chapter{Rings}
+
+\chapter{Fields}
+
+\begin{defi}
+ A \emph{field} is a commutative ring $k$ with only one ideal.
+\end{defi}
+
+\section{Ordered fields}
+
+\chapter{The real numbers}
+
+\end{document} 

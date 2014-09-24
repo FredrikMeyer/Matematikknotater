@@ -1,0 +1,85 @@
+\documentclass[11pt, norsk]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}   % S P R A A K
+
+
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+
+\begin{document}
+\title{Oppgaver MAT2500}
+\author{Fredrik Meyer}
+\maketitle 
+
+\begin{oppg}
+  \begin{enumerate}[a)]
+  \item Vis at det å være kombinatorisk like er en ekvivalensrelasjon på mengden av polyedre.
+  \item Hvis $K$ er et simplisialt polyeder, uttrykk antall sideflater, $f$ som en funksjon av antall hjørner $v$. Gjør det samme for antall kanter $e$.
+  \end{enumerate}
+\end{oppg}
+\begin{losn}
+  \begin{enumerate}[a)]
+  \item Vi skal vise at det å være kombinatorisk lik er en ekvivalensrelasjon på mengen av polyedre. Skriv $P \sim Q$ om to polyedre $P$ og $Q$ er kombinatorisk like. Vi må vise tre ting: at $P \sim P$, at hvis $P \sim Q$, så er også $Q \sim P$, og til slutt at om $P \sim Q$ og $Q \sim R$, så er også $P \sim R$.
+
+Første først: ``Selvsagt'' finnes det bijeksjoner $V_P \to V_P$, $E_P \to E_P$ og $F_P \to F_P$. Vi velger bare alle avbildningene til å være identitetsavbildningene (dette går an, siden det er snakk om samme mengde).
+
+Anta nå at $P \sim Q$, det vil si, det finnes bijeksjoner $\phi_V:V_P \to V_Q$, $\phi_E:E_P \to E_Q$ og $\phi_F:F_p \to F_Q$. Dette er bijeksjoner, så det finnes inverser $\phi_V^{-1}:V_Q \to V_P$, $\phi_E^{-1}:E_Q \to E_P$ og $\phi_F^{-1}:F_Q \to F_P$. Nå har vi tre bijeksjoner mellom som i definisjonen, men vi må sjekke at de bevarer inklusjon: så la $h$ være et hjørne i $Q$ og $k$ en kant i $Q$. Vi ønsker å se at $\phi_v^{-1}(h) \in \phi_E^{-1}(k)$ hvis og bare hvis $h$ er med i $k$. Siden $P \sim Q$ er $h^\prime \in k'$ hvis og bare hvis $\phi_V(h') \in \phi_E(k')$, og dette skal gjelde for alle $h',k'$. Siden vi har bijeksjoner mellom hjørnemengdene og kantmengdene kan vi sette $h^\prime = \phi_V^{-1}(h)$ og $k' = \phi_E^{-1}(k)$. Dermed har vi at $\phi_V^{-1}(h) \in \phi_E^{-1}(k)$ hvis og bare hvis $h \in k$ siden $\phi_V(\phi_V^{-1}(h))=h$ og $\phi_E(\phi_E^{-1}(k))=k$. Dermed er $Q \sim P$.
+
+Anta nå at $P \sim Q$ og $Q \sim R$. Vi må vise at $P \sim R$. Vi er altså gitt bijeksjoner $\phi_V^{PQ}:V_P \to V_Q$, $\phi_V^{QR}:V_Q \to V_R$, og har lyst å finne en bijeksjon $V_P \to V_R$. Men dette klart: vi bruker $\phi_V^{QR} \circ \phi_V^{PQ}$, altså sammensetningen av de to bijeksjonene vi hadde. Det er klart at sammensetningen av to bijeksjoner er en bijeksjon. Vi gjør akkurat det samme for bijeksjonene av kant- og flatemengdene.
+
+Vi må vise at hvis $h,k$ er et hjørne og en kant i $P$, så er $h \in k$ hvis og bare hvis $\phi_V^{QR} \circ \phi_V^{PQ}(h) \in \phi_E^{QR} \circ \phi_V^{PQ}(h)$. Men dette er klart: $h \in k$ hvis og bare hvis $\phi_V^{PQ}(h) \in \phi_E^{PQ}(k)$, og siden $\phi_V^{PQ}(h)$ er et hjørne i $Q$ og $\phi_E^{PQ}(k)$ er en kant i $Q$, så gjelder dette hvis og bare hvis $\phi_V^{QR} \circ \phi_V^{PQ}(h) \in \phi_E^{QR} \circ \phi_V^{PQ}(h)$.
+
+
+\item Hvis $K$ er simplisial, betyr det per definisjon at alle flatene er trekanter. Det betyr at hver flate har tre hjørner som naboer, men fra hvert hjørne $v$ er det $\deg v$ flater, så vi har at \[
+3f = \sum_{v \in V_P} \deg v.
+\] 
+Men fra setning 3.2 vet vi at $\sum \deg v = 2e$, slik at vi har at $3f=2e$. Dermed er $f=\frac 23 e$. Men fra Eulers formel er $e=f+v-2$, og vi utleder at $f=2(v-2)$. 
+\item Et simplisialt polyeder med $4$ hjørner må nødvendigvis være ekvivalent med et tetraeder. Et simplisialt polyeder med $5$ hjørner må være en dobbelpyramide på en trekant. Med seks hjørner er det to muligheter. Den ene muligheten er et oktaeder, mens den andre muligheten er for eksempel å sette sammen tre irregulære trekanter i planet, og ta pyramiden over disse. Eventuelt se på eksemplet fra Figur 3 fra forrige gang.
+\item Dette har vi gjort før.
+  \end{enumerate}
+\end{losn}
+
+\begin{oppg}
+ La $G$ være en endelig gruppe som virker på en endelig mengde $X$. For en $g \in G$, la $X_g = \{x \in X \mid gx = x \}$.
+ \begin{enumerate}[a)]
+ \item Bruk en insidenskorrespondanse til å vise at
+\[
+\sum_{x \in X} \lvert G_x \rvert  = \sum_{g \in G} \lvert X_g \rvert.
+\]
+ \end{enumerate}
+\end{oppg}
+
+\begin{losn}
+  \begin{enumerate}[a)]
+  \item La oss telle antall løsninger av ``likningen'' $gx=x$. Mer presist: vi har lyst til å telle antall par $(x,g) \in X \times G$ slik at $gx=x$.
+
+Om vi fikserer $x \in X$, så er løsningene gitt ved nettopp de $g \in G$ som fikserer $x$, med andre ord, elementer i $G_x$. Dermed finner vi alle løsninger ved å gjøre dette for alle $x \in X$, slik at på den ene siden er antall slike par gitt ved 
+\[
+\sum_{x \in X} \lvert G_x \rvert .
+\]
+På den andre siden: fiksér $g \in G$. Da er de $x$ som tilfredsstiller $gx=x$ nettopp gitt ved elementer i $X_g$. Så for å telle slike par, må vi gjøre dette for alle $g \in G$, og vi får uttrykket
+\[
+\sum_{g \in G} \lvert X_g \rvert.
+\]
+Disse uttrykkene er like siden de teller samme ting.
+
+\item 
+  \end{enumerate}
+\end{losn}
+\end{document}

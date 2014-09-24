@@ -1,0 +1,53 @@
+\documentclass[11pt, norsk]{book}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}   % S P R A A K
+
+
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+
+\begin{document}
+\title{All matematikk}
+\author{Fredrik Meyer}
+\maketitle 
+
+\chapter{Sets}
+\section{Axioms}
+
+\chapter{Relations}
+
+\begin{defi}
+A  \emph{binary relation} is a map $S \times S \to $
+\end{defi}
+
+\chapter{Groups}
+
+\chapter{Rings}
+
+\chapter{Fields}
+
+\begin{defi}
+ A \emph{field} is a commutative ring $k$ with only one ideal.
+\end{defi}
+
+\section{Ordered fields}
+
+\chapter{The real numbers}
+
+\end{document} 
