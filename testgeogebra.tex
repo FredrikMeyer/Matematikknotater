@@ -1,0 +1,111 @@
+\documentclass[10pt]{article}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{uuuuuu}{rgb}{0.266666666667,0.266666666667,0.266666666667}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-4.33333333333,0.) -- (6.92,0.);
+\foreach \x in {-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-4.12) -- (0.,4.82666666667);
+\foreach \y in {-4.,-3.,-2.,-1.,1.,2.,3.,4.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-4.33333333333,-4.12) rectangle (6.92,4.82666666667);
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (2.,3.) -- (0.,0.) -- (3.,0.) -- cycle;
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (2.,3.) -- (-1.,3.) -- (-3.,0.) -- (-2.,-3.) -- (1.,-3.) -- (3.,0.) -- cycle;
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (-1.,3.) -- (2.,3.) -- (0.,0.) -- cycle;
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (-3.,0.) -- (-1.,3.) -- (0.,0.) -- cycle;
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (-3.,0.) -- (-2.,-3.) -- (0.,0.) -- cycle;
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (0.,0.) -- (1.,-3.) -- (-2.,-3.) -- cycle;
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (-1.5,1.16666666667) -- (0.5,1.83333333333) -- (1.5,1.16666666667) -- (1.5,-1.16666666667) -- (-0.5,-1.83333333333) -- (-1.5,-1.16666666667) -- cycle;
+\draw[line width=4.pt] (1.70666666667,3.46666666667) -- (4.37333333333,3.46666666667);
+\draw [color=zzttqq] (2.,3.)-- (0.,0.);
+\draw [color=zzttqq] (0.,0.)-- (3.,0.);
+\draw [color=zzttqq] (3.,0.)-- (2.,3.);
+\draw [color=zzttqq] (2.,3.)-- (-1.,3.);
+\draw [color=zzttqq] (-1.,3.)-- (-3.,0.);
+\draw [color=zzttqq] (-3.,0.)-- (-2.,-3.);
+\draw [color=zzttqq] (-2.,-3.)-- (1.,-3.);
+\draw [color=zzttqq] (1.,-3.)-- (3.,0.);
+\draw [color=zzttqq] (3.,0.)-- (2.,3.);
+\draw [color=zzttqq] (-1.,3.)-- (2.,3.);
+\draw [color=zzttqq] (2.,3.)-- (0.,0.);
+\draw [color=zzttqq] (0.,0.)-- (-1.,3.);
+\draw [color=zzttqq] (-3.,0.)-- (-1.,3.);
+\draw [color=zzttqq] (-1.,3.)-- (0.,0.);
+\draw [color=zzttqq] (0.,0.)-- (-3.,0.);
+\draw [color=zzttqq] (-3.,0.)-- (-2.,-3.);
+\draw [color=zzttqq] (-2.,-3.)-- (0.,0.);
+\draw [color=zzttqq] (0.,0.)-- (-3.,0.);
+\draw [color=zzttqq] (0.,0.)-- (1.,-3.);
+\draw [color=zzttqq] (1.,-3.)-- (-2.,-3.);
+\draw [color=zzttqq] (-2.,-3.)-- (0.,0.);
+\draw [color=zzttqq] (-1.5,1.16666666667)-- (0.5,1.83333333333);
+\draw [color=zzttqq] (0.5,1.83333333333)-- (1.5,1.16666666667);
+\draw [color=zzttqq] (1.5,1.16666666667)-- (1.5,-1.16666666667);
+\draw [color=zzttqq] (1.5,-1.16666666667)-- (-0.5,-1.83333333333);
+\draw [color=zzttqq] (-0.5,-1.83333333333)-- (-1.5,-1.16666666667);
+\draw [color=zzttqq] (-1.5,-1.16666666667)-- (-1.5,1.16666666667);
+\begin{scriptsize}
+\draw [fill=black] (3.04,3.46666666667) circle (2.5pt);
+\draw[color=black] (3.09333333333,3.77333333333) node {$a = 2$};
+\draw [fill=qqqqff] (3.,0.) circle (1.5pt);
+\draw[color=qqqqff] (3.09333333333,0.186666666667) node {$A$};
+\draw [fill=qqqqff] (0.,0.) circle (1.5pt);
+\draw[color=qqqqff] (0.0933333333333,0.186666666667) node {$C$};
+\draw [fill=qqqqff] (2.,3.) circle (1.5pt);
+\draw[color=qqqqff] (2.09333333333,3.18666666667) node {$B$};
+\draw [fill=qqqqff] (-2.,-3.) circle (1.5pt);
+\draw[color=qqqqff] (-1.86666666667,-2.81333333333) node {$B'$};
+\draw [fill=qqqqff] (-3.,0.) circle (1.5pt);
+\draw[color=qqqqff] (-2.86666666667,0.186666666667) node {$A'$};
+\draw [fill=qqqqff] (-1.,3.) circle (1.5pt);
+\draw[color=qqqqff] (-0.84,3.22666666667) node {$B'_1$};
+\draw [fill=qqqqff] (1.,-3.) circle (1.5pt);
+\draw[color=qqqqff] (1.09333333333,-2.81333333333) node {$D$};
+\draw[color=zzttqq] (0.88,1.77333333333) node {$a_2$};
+\draw[color=zzttqq] (1.53333333333,-0.106666666667) node {$b$};
+\draw[color=zzttqq] (2.73333333333,1.68) node {$c$};
+\draw [fill=uuuuuu] (1.5,1.16666666667) circle (1.5pt);
+\draw[color=uuuuuu] (1.6,1.36) node {$E$};
+\draw[color=zzttqq] (0.56,3.37333333333) node {$b_1$};
+\draw[color=zzttqq] (-2.08,1.77333333333) node {$b'_1$};
+\draw[color=zzttqq] (-2.62666666667,-1.45333333333) node {$a'$};
+\draw[color=zzttqq] (-0.426666666667,-3.10666666667) node {$b'$};
+\draw[color=zzttqq] (2.24,-1.46666666667) node {$d_1$};
+\draw[color=zzttqq] (2.76,1.72) node {$a_1$};
+\draw[color=zzttqq] (0.56,2.94666666667) node {$c_1$};
+\draw[color=zzttqq] (0.92,1.77333333333) node {$b'_2$};
+\draw[color=zzttqq] (-0.24,1.72) node {$b_2$};
+\draw[color=zzttqq] (-1.76,1.53333333333) node {$c_2$};
+\draw[color=zzttqq] (-0.6,1.58666666667) node {$a'_1$};
+\draw[color=zzttqq] (-1.4,0.36) node {$b'_3$};
+\draw[color=zzttqq] (-2.64,-1.41333333333) node {$c_3$};
+\draw[color=zzttqq] (-0.72,-1.46666666667) node {$a'_2$};
+\draw[color=zzttqq] (-1.4,0.36) node {$b'_4$};
+\draw[color=zzttqq] (0.4,-1.41333333333) node {$b'_5$};
+\draw[color=zzttqq] (-0.44,-2.64) node {$c_4$};
+\draw[color=zzttqq] (-0.76,-1.46666666667) node {$d_2$};
+\draw [fill=uuuuuu] (0.5,1.83333333333) circle (1.5pt);
+\draw[color=uuuuuu] (0.6,2.02666666667) node {$F$};
+\draw [fill=uuuuuu] (-1.5,1.16666666667) circle (1.5pt);
+\draw[color=uuuuuu] (-1.4,1.36) node {$G$};
+\draw [fill=uuuuuu] (1.5,-1.16666666667) circle (1.5pt);
+\draw[color=uuuuuu] (1.64,-0.986666666667) node {$G'$};
+\draw [fill=uuuuuu] (-1.5,-1.16666666667) circle (1.5pt);
+\draw[color=uuuuuu] (-1.36,-0.986666666667) node {$E'$};
+\draw [fill=uuuuuu] (-0.5,-1.83333333333) circle (1.5pt);
+\draw[color=uuuuuu] (-0.36,-1.65333333333) node {$F'$};
+\draw[color=zzttqq] (-0.373333333333,1.45333333333) node {$g_1$};
+\draw[color=zzttqq] (0.946666666667,1.48) node {$f_1$};
+\draw[color=zzttqq] (1.34666666667,0.146666666667) node {$e_1$};
+\draw[color=zzttqq] (0.506666666667,-1.18666666667) node {$g'$};
+\draw[color=zzttqq] (-0.813333333333,-1.21333333333) node {$f'$};
+\draw[color=zzttqq] (-1.21333333333,0.106666666667) node {$e'$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{document}
