@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  24 SEP 2014 20:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  25 SEP 2014 09:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1114,81 +1114,86 @@ Kapittel 1.
 ]
 Kapittel 2.
 Package hyperref Info: bookmark level for unknown defi defaults to 0 on input l
-ine 36.
+ine 40.
 [5] [6
 
 ]
 Kapittel 3.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 44.
+[7] [8
+
+]
+Kapittel 4.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 57.
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 44.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 57.
 
 <xymatrix 2x2 182> <xymatrix 2x2 141> <xymatrix 2x2 141> <xymatrix 3x2 172>
-[7]
+[9]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 79.
- <xymatrix 3x3 348> [8]
-Kapittel 4.
-[9
-
-] [10
-
-]
+line 92.
+ <xymatrix 3x3 341> [10]
 Kapittel 5.
-[11] [12
+[11
+
+] [12
 
 ]
 Kapittel 6.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 104.
-[13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 104.
+[13] [14
+
+]
+Kapittel 7.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
+[15]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 122.
  (./allofmathematics.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 104.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 104.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 122.
 Package rerunfilecheck Info: File `allofmathematics.out' has not changed.
-(rerunfilecheck)             Checksum: 873A2918B7DEEC7A9D0F55B61BF43929;368.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 104.
+(rerunfilecheck)             Checksum: 47F65FD3496FE6CF71D196331FA49F0B;418.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
  ) 
 Here is how much of TeX's memory you used:
- 20202 strings out of 493308
- 341211 string characters out of 6135157
+ 20211 strings out of 493308
+ 341313 string characters out of 6135157
  467132 words of memory out of 5000000
- 23172 multiletter control sequences out of 15000+600000
+ 23173 multiletter control sequences out of 15000+600000
  21937 words of font info for 64 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,13n,55p,3284b,576s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/enc/dvips/cm-super/cm-super
 -t1.enc}</opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi8.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr6.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr8.pfb></opt/app-sync/texlive/uio-texmf/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/app-sync/texlive/uio-texmf/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></opt/app-sync/texlive/uio-te
-xmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></opt/app-sync/texlive/
-uio-texmf/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></opt/app-s
-ync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></opt
-/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb
-></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx20
-74.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/
-sfbx2488.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-
-super/sfrm0800.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/publ
-ic/cm-super/sfrm1095.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type
-1/public/cm-super/sfrm1200.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/font
-s/type1/public/cm-super/sfrm1728.pfb></opt/app-sync/texlive/uio-texmf/texmf-dis
-t/fonts/type1/public/cm-super/sfsl1095.pfb></opt/app-sync/texlive/uio-texmf/tex
-mf-dist/fonts/type1/public/cm-super/sfti1095.pfb></opt/app-sync/texlive/uio-tex
-mf/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></opt/app-sync/texlive/uio-
-texmf/texmf-dist/fonts/type1/public/xypic/xybsql10.pfb></opt/app-sync/texlive/u
-io-texmf/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on allofmathematics.pdf (13 pages, 238572 bytes).
+/cm/cmex10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi8.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr6.pfb></opt/app-sync/texlive/uio-texmf/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/app-sync/texlive/uio-texmf/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/app-sync/texlive/uio-t
+exmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></opt/app-sync/texlive
+/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></opt/app-sync/t
+exlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></op
+t/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pf
+b></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx1
+440.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super
+/sfbx2074.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm
+-super/sfbx2488.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/pub
+lic/cm-super/sfrm0800.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/typ
+e1/public/cm-super/sfrm1095.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1200.pfb></opt/app-sync/texlive/uio-texmf/texmf-di
+st/fonts/type1/public/cm-super/sfrm1728.pfb></opt/app-sync/texlive/uio-texmf/te
+xmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></opt/app-sync/texlive/uio-te
+xmf/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></opt/app-sync/texlive/
+uio-texmf/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></opt/app-sync/texli
+ve/uio-texmf/texmf-dist/fonts/type1/public/xypic/xybsql10.pfb></opt/app-sync/te
+xlive/uio-texmf/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
+Output written on allofmathematics.pdf (15 pages, 256633 bytes).
 PDF statistics:
- 203 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 77 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 228 PDF objects out of 1000 (max. 8388607)
+ 186 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

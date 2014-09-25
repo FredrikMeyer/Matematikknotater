@@ -30,11 +30,24 @@
 \chapter{Sets}
 \section{Axioms}
 
+\begin{enumerate}
+\item There exists a set $\emptyset$.
+\end{enumerate}
+
 \chapter{Relations}
 
 \begin{defi}
-A  \emph{binary relation} is a map $S \times S \to $
+A \emph{function} between two sets $A,B$, written $f:A \to B$, is a subset $\Gamma$ of $A \times B$ such that the restriction of the first projection, $\restr{\pi_1}{\Gamma}:\Gamma \to A$ is injective.
 \end{defi}
+[[THIS IS CIRCULAR!!]]
+
+\begin{defi}
+A  \emph{binary operation} is a function $S \times S \to S$, where $S$ is a set.
+\end{defi}
+
+\chapter{Category theory}
+
+
 
 \chapter{Groups}
 
@@ -79,17 +92,22 @@ We will never write a group $G$ as a triple, but only refer to the group $(G,\mu
 The identity element $e \in G$ is unique.
 \end{lemma}
 \begin{proof}
-Suppose $e^\prime$ is another identity element. Then $e e^\prime = e^\prime$ by the first diagram. But also $e e^\prime = e$ by the second diagram. Then $e=e^\prime$. Alternatively, the following is a commutative diagram:
+The following is a commutative diagram:
 \[
 \xymatrix{
-& \{e \} \times \{ e^\prime \} \ar@{^(->}[dl] \ar[d]^\Delta \ar@{_(->}[dr] & \\
+& \{e \} \times \{ e^\prime \} \ar@{^(->}[dl] \ar@{^(->}[d] \ar@{_(->}[dr] & \\
 \{ e\} \times G \ar[r]^{e \times \id} \ar[dr]_{\pi_2} & G \times G  \ar[d]^{\mu}& \{ e'\}  \times G  \ar[l]_{e^\prime \times \id} \ar[dl]^{\pi_2}\\
 & G
 } 
 \]
+Following the left arrow gives $e^\prime$, and following the right arrow gives $e$.
 \end{proof}
 
 \chapter{Rings}
+
+\begin{defi}
+A (unitary) \emph{ring} $R$ is a set that is both an abelian group with identity element $0 \in R$ and a multiplicative group with identity element $1 \in R$. 
+\end{defi}
 
 \chapter{Fields}
 

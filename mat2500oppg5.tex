@@ -28,9 +28,24 @@
 \maketitle 
 
 \begin{oppg}
+La $K$ være et tredimensjonalt konvekst polyeder. La $V_K$ være mengden av hjørner, $E_K$ mengden av kanter, og $F_K$ mengden av sideflater. To $3$-dimensjonale konvekse polyedre $K$ og $K'$ kalles \emph{kombinatorisk like} det finnes bijeksjoner mellom hjørnemengdene $\phi_V:V_K \to V_{K^\prime}$, kantmengdene $\phi_{E}:V_E \to V_{E^\prime}$ og sidemengdene $\phi_F:F_K \to F_{K'}$ som bevarer inklusjon. Mer presist: vi krever at om et hjørne $h \in V_K$ og en kant $k \in E_K$, så er 
+\[
+h \in k \Leftrightarrow \phi_V(h) \in \phi_E(k).
+\]
+Det samme krever vi for kanter og sideflater. Altså hvis $k$ er en kant i $K$ og $f$ en sideflate i $K$, så er
+\[
+k \subset f \Leftrightarrow \phi_E(k) \subset \phi_F(f).
+\]
+
+Vi sier at et polyeder er \emph{simplisialt} om alle sideflatene er trekanter. Merk at den kombinatoriske typen til et simplisialt polyeder er bestemt av sideflatemengden. For eksempel kan hjørnene og kantene til tetraederet beskrives som alle undermengder av flatene
+\[
+\{ 1,2,3 \}, \{ 1,2,3\}, \{ 1,3,4\}, \{ 2,3,4 \}.
+\]
   \begin{enumerate}[a)]
   \item Vis at det å være kombinatorisk like er en ekvivalensrelasjon på mengden av polyedre.
   \item Hvis $K$ er et simplisialt polyeder, uttrykk antall sideflater, $f$ som en funksjon av antall hjørner $v$. Gjør det samme for antall kanter $e$.
+\item Beskriv alle kombinatoriske typer av simplisiale polyedre med antall hjørner mindre enn eller lik $6$.
+\item Realiser svaret over i $E^3$.
   \end{enumerate}
 \end{oppg}
 \begin{losn}
@@ -62,6 +77,15 @@ Men fra setning 3.2 vet vi at $\sum \deg v = 2e$, slik at vi har at $3f=2e$. Der
 \[
 \sum_{x \in X} \lvert G_x \rvert  = \sum_{g \in G} \lvert X_g \rvert.
 \]
+\item La $m$ være antall forskjellige baner for virkningen på $X$. Bruk Setning 3.8 til å vise at $\sum_{x \in X} \lvert G_x \rvert = m \cdot \lvert G \rvert$, og konkluder med at 
+\[
+m = \frac{1}{\lvert G \rvert } \sum_{g \in G} \lvert X_g \rvert.
+\]
+\item Tenk deg et kvadrat bygget av $4$ kanter i tre forskjellige farger. Hvor mange mulige kvadrater er det mulig å lage? 
+
+Vi ser på to kvadrater som like om de blir like etter en stiv bevegelse i rommet. Mer presist: vi ser på to fargekombinasjoner som like hvis det finnes et element i $D_4$ som sender den ene fargekombinasjonen på den andre.
+
+La så $X$ være mengden av fargekombinasjoner (det er $3^4$ av disse). Vi er da interessert i antall baner for virkningen av $D_4$ på $X$. 
  \end{enumerate}
 \end{oppg}
 
@@ -79,7 +103,41 @@ På den andre siden: fiksér $g \in G$. Da er de $x$ som tilfredsstiller $gx=x$ 
 \]
 Disse uttrykkene er like siden de teller samme ting.
 
-\item 
+\item Setning 3.8 sier at $\lvert G \rvert = \lvert G_x \rvert \cdot \lvert Gx \rvert$. Her er $G_x$ undergruppen av $G$ som fikserer $x$\footnote{Kalles ofte \emph{stabilisatoren}.}. $Gx$ er banen til $x$, altså mengden $\{ g \cdot x \mid g \in G \}$. Fra dette får vi at 
+\[
+\sum_{x \in X} \lvert G_x \rvert = \lvert G \rvert \sum_{x \in X} \frac{1}{\lvert Gx \rvert} .
+\]
+Men $\lvert Gx \rvert= \lvert Gy \rvert$ om $x$ og $y$ er i samme bane, så vi kan like godt summere over banene, og gange opp slik at vi summerer like mange ganger. Vi får
+\[
+\sum_{x \in X} \frac{1}{\lvert Gx \rvert} = \sum_{\text{baner} \OO} \frac{\lvert \OO \rvert}{\lvert \OO \rvert} = m.
+\]
+Dermed er $\sum_{x \in X} \lvert G_x \rvert = m \cdot \lvert G \rvert$. Vi deler på $\lvert G \rvert$ på begge sider og bruker a), og får det vi har lyst på.
+
+\item Denne oppgaven skal egentlig vise at en av styrkene til gruppeteori er at man gjøre telling på smarte måter. Dessverre viser det seg, som vi skal se, at bare å telle naivt er enklere enn å bruke forrige deloppgave.
+
+Hintet forklarer hvorfor vi har lyst til å finne antall baner av virkningen av $D_4$ på $X$ (mengden av fargede firkanter). Det vi må gjøre er å regne ut, for hvert element $g \in D_4$, hvor mange fargekombinasjoner som er fiksert av $g$.
+
+For det første: alle mulige kombinasjoner er fiksert av $e \in D_4$. Det er kun kombinasjonen hvor alle fargene er like som er fiksert av $\rho$ (rotasjon med $90^\circ$). Det er tre farger, så $\lvert X_\rho \rvert = 3$. Fargekombinasjoner fiksert av $\rho^2$ er de ensfargede (tre stykk) og de med samme farge på topp og bunn og samme venstre høyre. Dette gir $6$ mulige kombinasjoner med to forskjellige farger. Dermed er $\lvert X_{\rho^2} \rvert = 3+6=9$. 
+
+På samme måte finner vi at $\lvert X_{\rho^3} \rvert = 3$. La $s$ være speilingen om en diagonal. Igjen, konstante farginger er alltid bevart. En annen mulighet er at fargene er like i kantene som møter diagonalen vi speiler i. Dette gir igjen $3+6=9$ muligheter.
+
+For $s\rho$ er det flere muligheter. Vi har de ensfargede (tre stykk), og vi har $6$ mulige tofargede, og $6$ mulige trefargede. Til sammen $15$ muligheter.
+
+For $s\rho^2$ har vi $9$ muligheter.
+
+For $s \rho^3$ har vi igjen femten muligheter.
+
+Vi regner dermed ut at 
+\[
+m = \frac{1}{8} \left( 81+6 + 27+30\right) = \frac{144}{8} = 18.
+\]
+Dette ble mye telling, og det er ikke helt lett. Det hjelper å brette sammen et ark, og tegne fargede streker på det (det gjorde jeg).
+
+Her er en enklere måte: Vi teller først at det er $3$ mulige ensfargede firkanter. For tofargede har vi $6+6$ muligheter: enten to like farger møtes i et hjørne, eller to like farger på motsatt side. For trefargede har vi bare muligheten hvor det er samme farge på to motstående kanter, og forskjellig på de to andre. Dette gir $3$ muligheter. Til sammen får vi $3+3+6+6=18$. 
   \end{enumerate}
 \end{losn}
+
+\begin{oppg}
+Beskriv banene for virkningen av $G$ på mengden av poler når $G$ er rotasjonsgruppen til tetraederet, oktaederet og ikosaederet.
+\end{oppg}
 \end{document}
