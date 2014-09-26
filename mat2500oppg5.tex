@@ -144,8 +144,22 @@ Beskriv banene for virkningen av $G$ på mengden av poler når $G$ er rotasjonsg
 \begin{losn}
 Dette er ikke helt lett. Vi begynner med tetraederet.
 
-For hvert hjørne kan vi rotere ett hakk til venstre og ett hakk til høyre, og det er fire hjørner. Dermed får vi åtte symmetrier. Disse har poler i hjørnene til tetraederet og på diametralt motsatte sider. I tillegg kan vi rotere $180^\circ$ i en linje som går gjennom midtpunktene på motsatte kanter (tegn en tegning!). Dette gir tre nye mulige symmetrier. I tillegg har vi identitetssymmetrien. Til sammen har symmetrigruppa $12$ elementer. Legg merke til at polene kommer i tre grupper. Den ene gruppen er polene som svarer til hjørnene på tetraederet, og det er lett å se at gruppen virker transitivt på disse, så vi har én bane. I tillegg har vi de som er diametralt motsatt av hjørnene i tetraederet, og disse utgjør en bane. 
+\textbf{Tetraederet:} For hvert hjørne kan vi rotere ett hakk til venstre og ett hakk til høyre, og det er fire hjørner. Dermed får vi åtte symmetrier. Disse har poler i hjørnene til tetraederet og på diametralt motsatte sider. I tillegg kan vi rotere $180^\circ$ i en linje som går gjennom midtpunktene på motsatte kanter (tegn en tegning!). Dette gir tre nye mulige symmetrier. I tillegg har vi identitetssymmetrien. Til sammen har symmetrigruppa $12$ elementer. Legg merke til at polene kommer i tre grupper. Den ene gruppen er polene som svarer til hjørnene på tetraederet, og det er lett å se at gruppen virker transitivt på disse, så vi har én bane. I tillegg har vi de som er diametralt motsatt av hjørnene i tetraederet, og disse utgjør en bane. 
 
 I tillegg har vi de seks hjørnene som svarer til linjene mellom kantene. Disse utgjør også én bane. Til sammen er det tre baner (dette kunne vi også regnet ut med formelen i forrige oppgave).
+
+\textbf{Oktaederet:} Her hjelper det å ha en modell av oktaederet tilgjengelig (og kanskje en søkemotor som kan hjelpe deg å bekrefte at du har funnet alle rotasjonene...). For det første: i hvert gjørne kan vi rotere $90^\circ$. Rotasjonsaksen går gjennom et annet hjørne, så $3$ av de $6$ hjørnene bidrar med rotasjoner. Disse er på $90^\circ,180^\circ$ og $270^\circ$.  Vi har dermed $9$ rotasjoner i hjørner.
+
+I tillegg kan vi sette en rotasjonsakse gjennom midtpunktene på motstående kanter og rotere $180^\circ$. Det er $12$ kanter, så vi får $6$ rotasjoner på $180^\circ$.
+
+Til slutt kan vi rotere $120^\circ, 240^\circ$ i rotasjonsakser som går gjennom motstående flater. Det er åtte flater, så vi får $8/2 \cdot 2=8$ rotasjoner gjennom flater.
+
+I tillegg har vi identitetstransformasjonen, så til sammen har vi $1+9+6+8=24$ elementer, og disse utgjør hele symmetrigruppen. Denne er også gjent som $S_4$, gruppen av symmetrier på $4$ ``symboler''.
+
+Nå når vi vet gruppen er det ``lett'' å finne banene til polene. Polene er altså snittet av rotasjonsaksene med enhetssfæren, så de svarer til rotasjonene. Vi kan dermed snakke om ``orden'' til en pol: en pol har orden $n$ om $n$ er den største orden til en rotasjon med akse gjennom polen. Dermed ser vi at hjørnene til oktaederet ligger på poler av orden $4$, og at disse utgjør én bane. Det finnes også en bane bestående av poler av orden $2$, og en bane bestående av poler av tre (nemlig rotasjoner gjennom flatene). Dermed er det tre baner. 
+
+\textbf{Ikosaederet: } Igjen: her hjelper det veldig å ha en modell foran seg (til nød en modell på datamaskin en kan rotere på). Vi har $6$ rotasjonsakser som går gjennom motstående hjørner (husk, det er $12$ hjørner i ikosaederet), hvor vi kan rotere $360^\circ/5 = 72^\circ$. Dette gir til sammen $4 \cdot 6=24$ rotasjoner. I tillegg kan vi rotere gjennom motstående kanter, og da $180^\circ$. Det er $15$ par av kanter, så vi får $15$ stykk $180^\circ$-rotasjoner. I tillegg kan vi rotere $120^\circ,240^\circ$ med rotasjonsakser gjennom par av motstående flater, og det blir derfor $2 \cdot 20/2=20$ slike rotasjoner.
+
+Ved samme resonnering som over kommer vi til at det er tre baner. Den ene banen har $12$ elementer (hjørnene). Neste bane kommer fra $180^\circ$-rotasjonene, og disse svarer til kantene, så det er $30$ elementer i denne banen. Til slutt er det banen som svarer til flatene, og i denne er det $20$ elementer.
 \end{losn}
 \end{document}
