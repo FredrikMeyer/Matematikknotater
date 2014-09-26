@@ -1,0 +1,74 @@
+\documentclass[11pt, norsk]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}   % S P R A A K
+
+
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+
+\begin{document}
+\title{Algebraiske grupper og moduliteori}
+\author{Fredrik Meyer}
+\maketitle 
+
+\section{Representations of algebraic groups}
+
+Let $G = \Spec A$ be an affine algebraic group over a field $k$. 
+
+\begin{defi}
+ An \emph{algebraic representation of $G$} is a pair $(V,\mu_V)$ consisting of a $k$-vector space $V$ and a $k$-linear map $\mu_V: V \to V \otimes_k A$ satisfying the following two conditions:
+ \begin{enumerate}
+ \item The diagram
+\[
+\xymatrix{
+V \ar[dr]^\id \ar[r]^{\mu_V} & V \otimes_k A \ar[d]^{\id \otimes \epsilon} \\
+ & V \simeq V \otimes_k k
+}
+\]
+is commutative.
+\item The diagram
+\[
+\xymatrix{
+V \ar[r]^{\mu_V} \ar[d]_{\mu_V} & V \otimes_k A \ar[d]^{\mu_V \otimes \id_A} \\
+V \otimes_k A \ar[r]_{\id_V \otimes \mu_A} & V \otimes _k A \otimes_k A
+}
+\]
+is commutative. Here $\mu_A$ is the coproduct in the coordinate ring of $G$.
+ \end{enumerate}
+\end{defi}
+
+We often drop the subcript from $\mu_V$ unless confusion may arise. The same comment applies to tensor products. They will always be over the ground field unless otherwise stated. We will sometimes refer to a representation $(V,\mu_V)$ sometimes as ``a representation $\mu:V \to V \otimes A$'' and sometimes as just ``a representation $V$''.
+
+\begin{defi}
+Let $\mu:V \to V \otimes A$ be a representation of $G = \Spec A$. Then:
+\begin{enumerate}
+\item A vector $x \in V$ is said to be \emph{$G$-invariant} if $\mu(x) = x \otimes 1$.
+\item A subspace $U \subset V$ is called a \emph{subrepresentation} if $\mu(U) \subseteq U \otimes A$. 
+\end{enumerate}
+\end{defi}
+
+\begin{prop}
+Every representation $V$ of $G$ is locally finite-dimensional. Precisely: every $x \in V$ is contained in a finite-dimensional subrepresentation of $G$.
+\end{prop}
+
+\begin{proof}
+Write $\mu(x)$ as a finite sum $\sum_i x_i \otimes f_i$ for $x_i \in V$ and linearly independent $f_i \in A$. This we can always do, by definition of tensor product and bilinearity. Let $U$ be the subspace of $V$ spanned by the vectors $x_i$. 
+\end{proof}
+
+\end{document}

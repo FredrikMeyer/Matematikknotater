@@ -1,0 +1,48 @@
+\documentclass[11pt, norsk]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}   % S P R A A K
+
+
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+
+\begin{document}
+\title{Algebraiske grupper og moduliteori}
+\author{Fredrik Meyer}
+\maketitle 
+
+\section{Representations of algebraic groups}
+
+Let $G = \Spec A$ be an affine algebraic group over a field $k$. 
+
+\begin{defi}
+ An \emph{algebraic representation of $G$} is a pair $(V,\mu_V)$ consisting of a $k$-vector space $V$ and a $k$-linear map $\mu_V: V \to V \otimes_k A$ satisfying the following two conditions:
+ \begin{enumerate}
+ \item The diagram
+\[
+\xymatrix{
+V \ar[dr]^\id \ar[r]^{\mu_V} & V \otimes_k A \ar[d]^{\id \otimes \epsilon} \\
+ & V \otimes_k k \simeq V
+}
+\]
+is commutative.
+ \end{enumerate}
+\end{defi}
+
+\end{document}
