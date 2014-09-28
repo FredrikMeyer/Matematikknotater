@@ -27,6 +27,64 @@
 \author{Fredrik Meyer}
 \maketitle 
 
+\section{Representation theory in general}
+
+
+
+\section{Algebraic groups}
+
+\begin{defi}
+Let $A$ be a finitely generated $k$-algebra. An \emph{affine algebraic group} is a quadruple $(A,\mu_A,\epsilon,\iota)$ where $\mu_A:A \to A \otimes_k A$ (the \emph{coproduct}), $\epsilon:A \to k$ (the \emph{coidentity}), $\iota: A \to A$ (the \emph{coinverse}) are $k$-algebra homomorphisms, satisfying the following conditions:
+\begin{enumerate}
+\item Coassociativity. The following diagram commutes:
+\[
+\xymatrix{
+A \ar[r]^{\mu_A} \ar[d]_{\mu_A} & A \otimes_k A \ar[d]^{\id_A \otimes \mu_A} \\
+A \otimes_k A \ar[r]_{\mu_A \otimes \id_A} & A \otimes_k A \otimes_k A
+}
+\]
+\item The following diagram commutes:
+\[
+\xymatrix{
+ & & k \otimes_k A  \ar[dr]^{\simeq} \\
+A \ar[r]^\mu & A \otimes_k A \ar[ur]^{\epsilon \otimes \id_A} \ar[dr]_{\id_A \otimes \epsilon}  & & A \\
+ & & A \otimes_k k \ar[ur]_{\simeq}
+ }
+\]
+and is equal to the identity.
+\item Inverse. The following diagram commutes:
+\[
+\xymatrix{
+A \ar[d]^\mu \ar[rr]^\epsilon & & k \ar[d] \\
+A \otimes_k A \ar[r]_{\id_A \otimes \iota} & A \otimes_k A \ar[r]_\cdot & A
+}
+\]
+Here the right arrow is the morphism making $A$ a $k$-algebra. The last arrow in the lower sequence is multiplication in $A$.
+\end{enumerate}
+\end{defi}
+
+\begin{defi}
+\label{defaction}
+An \emph{action} of an affine algebraic group $G = \Spec A$ on an affine variety $X= \Spec R$ is a morphism $G \times X \to X$ defined dually by a $k$-algebra morphism $\mu_R : R \to R \otimes_k A$ satisfying the following two conditions.
+\begin{enumerate}
+\item  The following diagram is commutative:
+\[
+\xymatrix{
+R \ar[dr]^{\id_R} \ar[r]^{\mu_R} & R \otimes_k A \ar[d]^{\id_R \otimes \epsilon} \\
+ & R \simeq R \otimes_k k
+}
+\]
+\item The diagram
+\[
+\xymatrix{
+R \ar[r]^{\mu_R} \ar[d]_{\mu_R} & R \otimes_k A \ar[d]^{\mu_R \otimes \id_A} \\
+R \otimes_k A \ar[r]_{\id_R \otimes \mu_A} & R \otimes _k A \otimes_k A
+}
+\]
+\end{enumerate}
+\end{defi}
+
+
 \section{Representations of algebraic groups}
 
 Let $G = \Spec A$ be an affine algebraic group over a field $k$. 
@@ -35,12 +93,13 @@ Let $G = \Spec A$ be an affine algebraic group over a field $k$.
  An \emph{algebraic representation of $G$} is a pair $(V,\mu_V)$ consisting of a $k$-vector space $V$ and a $k$-linear map $\mu_V: V \to V \otimes_k A$ satisfying the following two conditions:
  \begin{enumerate}
  \item The diagram
-\[
+\begin{equation}
+\label{eq:algrep1}
 \xymatrix{
-V \ar[dr]^\id \ar[r]^{\mu_V} & V \otimes_k A \ar[d]^{\id \otimes \epsilon} \\
+V \ar[dr]^{\id_V} \ar[r]^{\mu_V} & V \otimes_k A \ar[d]^{\id_V \otimes \epsilon} \\
  & V \simeq V \otimes_k k
 }
-\]
+\end{equation}
 is commutative.
 \item The diagram
 \[
@@ -52,6 +111,10 @@ V \otimes_k A \ar[r]_{\id_V \otimes \mu_A} & V \otimes _k A \otimes_k A
 is commutative. Here $\mu_A$ is the coproduct in the coordinate ring of $G$.
  \end{enumerate}
 \end{defi}
+
+\begin{remark}
+In lieu of Definition \ref{defaction}, we see that any action of an algebraic group $G$ on an affine variety $X=\Spec R$ is a representation of $G$ on the infinite-dimensional $k$-vector space $R=\Gamma(X,\OO_X)$.
+\end{remark}
 
 We often drop the subcript from $\mu_V$ unless confusion may arise. The same comment applies to tensor products. They will always be over the ground field unless otherwise stated. We will sometimes refer to a representation $(V,\mu_V)$ sometimes as ``a representation $\mu:V \to V \otimes A$'' and sometimes as just ``a representation $V$''.
 
@@ -69,6 +132,25 @@ Every representation $V$ of $G$ is locally finite-dimensional. Precisely: every 
 
 \begin{proof}
 Write $\mu(x)$ as a finite sum $\sum_i x_i \otimes f_i$ for $x_i \in V$ and linearly independent $f_i \in A$. This we can always do, by definition of tensor product and bilinearity. Let $U$ be the subspace of $V$ spanned by the vectors $x_i$. 
+
+Now, by the commutativity of the diagram \eqref{eq:algrep1} it follows that $$ x = \sum_i \epsilon(f_i) x_i. $$
+
+By the commutativity of the second diagram in the definition, it follows that
+$$
+\sum_i \mu_V (x_i) \otimes f_i = \sum_i x_i \otimes \mu_A(f_i) \in U \otimes A_k \otimes_k A.
+$$
+
+Because each term of the right-hand-side is contained in $U \otimes A \otimes A$, it follows that $\mu_V(x_i)$ is contained in $U$ since the $f_i$ are linearly independent.
+
+Thus $x$ is contained in the finite-dimensional representation $\restr{\mu_V}{U}:U \to U \otimes A$.
 \end{proof}
+
+Repr. of $\mathbb G_m$.
+
+Euler operator.
+
+Characters.
+
+
 
 \end{document}
