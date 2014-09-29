@@ -191,6 +191,23 @@ Euler operator.
 
 Characters.
 
+\subsection{Linear reductivity}
+
+\begin{defi}
+An algebraic group $G$ is said to be \emph{linearly reductive} if, for every epimorphism $\varphi:V \to W$ of $G$-representations, the induced map of $G$-invariants $\varphi^G:V^G \to W^G$ is surjective.
+\end{defi}
+
+For the following proposition, assume that $char k$ does not divide $ \lvert G \rvert$.
+
+\begin{prop}
+Every finite group $G$ is linearly reductive.
+\end{prop}
+
+\begin{proof}
+Let $\varphi: V \to W$ be the given epimorphism of representations. Let $ R:V \to V^G \subset V$ be given by $v \mapsto \sum_{g \in G} g\cdot v$. Let $w \in W^G$. Then it is an easy calculation to check that $\varphi(R(v))=R(\varphi(v))$, from which it follows that $\varphi(R(v))=w$ (note that $\restr{R}{W^G}=\id_{W^G}$).
+\end{proof}
+
+The homomorphism $R$ above is called the \emph{Reynolds operator}.
 
 
 \end{document}
