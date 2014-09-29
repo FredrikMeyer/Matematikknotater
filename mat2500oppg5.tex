@@ -121,19 +121,83 @@ For det første: alle mulige kombinasjoner er fiksert av $e \in D_4$. Det er kun
 
 På samme måte finner vi at $\lvert X_{\rho^3} \rvert = 3$. La $s$ være speilingen om en diagonal. Igjen, konstante farginger er alltid bevart. En annen mulighet er at fargene er like i kantene som møter diagonalen vi speiler i. Dette gir igjen $3+6=9$ muligheter.
 
-For $s\rho$ er det flere muligheter. Vi har de ensfargede (tre stykk). For tofargede er det flere muligheter. Du kan velge tre av sidene til å ha samme farge og den siste siden en annen farge. Dette gir seks muligheter. I tillegg har vi den tofargede hvor det er samme farge på motstående side. Dette gir også seks muligheter. I tillegg har vi tre mulige trefargede, nemlig de gitt ved samme farge på motsatt side, og forskjellig farge på de to andre. Til sammen får vi $3+6+6+6=21$ muligheter.
+For $s\rho$ er det flere muligheter. Vi ser på banene til kantene. Det er tre baner, så det blir $3^3=27$ muligheter.
 
 For $s\rho^2$ har vi de ensfargede, $3$ stykk. I tillegg har vi de med to farger, samme farge møtes i motstående hjørner. Dette gir $6$ stykk. Så $9$.
 
-For $s \rho^3$ har vi igjen $21$ muligheter.
+For $s \rho^3$ har vi igjen $27$ muligheter.
 
 Vi regner dermed ut at 
 \[
-m = \frac{1}{8} \left( 81+6 + 27+30\right) = \frac{144}{8} = 18.
+m = \frac{1}{8} \left( 81+3+9+3+9+27+9+27\right) = \frac{168}{8} = 21.
 \]
 Dette ble mye telling, og det er ikke helt lett. Det hjelper å brette sammen et ark, og tegne fargede streker på det (det gjorde jeg).
 
-Her er en enklere måte: Vi teller først at det er $3$ mulige ensfargede firkanter. For tofargede har vi $6+6$ muligheter: enten to like farger møtes i et hjørne, eller to like farger på motsatt side. For trefargede har vi bare muligheten hvor det er samme farge på to motstående kanter, og forskjellig på de to andre. Dette gir $3$ muligheter. Til sammen får vi $3+3+6+6=18$. 
+Vi kan også telle direkte. Se Figur 1. For ensfargede er det bare tre muligheter (øvert til venstre i figuren). For tofargede er det tre ``typer''. Første typen er hvor tre like kanter møtes, og her er det $6$ muligheter. Vi kan også ha et to og to kanter er like. Her er det tre muligheter, fordi rekkefølge ikke har noe å si. For de trefargede er det også tre muligheter for hver av disse, siden når vi har bestemt én farge, er de to andre automatisk bestemt. Til sammen får vi 
+\[
+3+6+3+3+3+3 = 15+6 = 21
+\]
+muligheter, akkurat som over.
+\begin{figure}
+\begin{center}
+ 
+  \begin{tikzpicture}
+
+\coordinate (A) at (0,0);
+\coordinate (B) at (0,-1);
+\coordinate (C) at (1,-1);
+\coordinate (D) at (1,0);
+
+\coordinate (E) at (2,0);
+\coordinate (F) at (2,-1);
+\coordinate (G) at (3,-1);
+\coordinate (H) at (3,0);
+
+\coordinate (I) at (4,0);
+\coordinate (J) at (4,-1);
+\coordinate (K) at (5,-1);
+\coordinate (L) at (5,0);
+
+\coordinate (M) at (0,-2);
+\coordinate (N) at (0,-3);
+\coordinate (O) at (1,-3);
+\coordinate (P) at (1,-2);
+
+\coordinate (Q) at (2,-2);
+\coordinate (R) at (2,-3);
+\coordinate (S) at (3,-3);
+\coordinate (T) at (3,-2);
+
+\coordinate (U) at (4,-2);
+\coordinate (V) at (4,-3);
+\coordinate (W) at (5,-3);
+\coordinate (X) at (5,-2);
+
+\draw[color=red, thick] (A) -- (B) -- (C) -- (D) -- cycle;
+\draw[color=red, thick] (H) -- (E) -- (F) -- (G);
+\draw[color=blue, thick] (G) -- (H);
+\draw[color=red,thick] (L) --(I) -- (J);
+\draw[color=blue,thick] (J) --(K) -- (L);
+\draw[color=red,thick] (M) -- (P);
+\draw[color=red,thick] (N) -- (O);
+\draw[color=blue,thick] (N) -- (M);
+\draw[color=blue,thick] (O) -- (P);
+\draw[thick,color=red] (T) -- (Q) -- (R);
+\draw[thick,color=blue] (R) -- (S);
+\draw[thick,color=green] (S) -- (T);
+\draw[color=red,thick] (U) -- (X);
+\draw[color=red, thick] (V) -- (W);
+\draw[color=blue, thick] (V) -- (U);
+\draw[color=green, thick] (W) -- (X);
+
+
+
+
+  \end{tikzpicture}
+\end{center}
+\caption{De mulige kombinasjonene.}
+\end{figure}
+
   \end{enumerate}
 \end{losn}
 

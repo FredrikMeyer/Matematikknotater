@@ -29,9 +29,32 @@
 
 \section{Representation theory in general}
 
+Let $V$ be a vector space. Briefly, a \emph{representation} of any group $G$ on $V$ is just a group homomorphism $\rho:G \to \GL(V)$.
 
+\begin{example}
+The \emph{trivial representation} is given by sending every $g \in G$ to the identity transformation.
+\end{example}
+
+\begin{example}
+Suppose $G$ is a finite group. Then there is an embedding $G \hookrightarrow S_n$, and every element of $S_n$ can be represented by permutation matrices (that is, matrices $M_g$ such that $Me_i=e_{g(i)}$ for all $g \in G$). This defines a representation of $G$ in $k^n$. 
+\end{example}
+
+\begin{example}
+Suppose $G$ acts on a (finite) set $X$. Let $V$ be the vector space with basis identified with the elements of $X$. Then $G$ acts on $V$ by linearity: for each $g \in G$, $\rho(g)$ is the linear map sending $e_x$ to $e_{gx}$. Such representations are called \emph{permutation representations}.
+\end{example}
+
+A \emph{morphism of representations} $(\rho,V)$,$(\rho',W)$ consists of commutative diagrams
+\[
+\xymatrix{
+V \ar[r]^{\psi} \ar[d]_{\rho(g)}& W \ar[d]^{\rho'(g)} \\
+V \ar[r]_{\psi} & W
+}
+\]
+for each $g \in G$. Thus, if $\psi$ is invertible, this says that the linear operators $\rho(s),\rho'(s)$ are similar.
 
 \section{Algebraic groups}
+
+Algebraic groups are group objects in the category of affine varieties. More precisely:
 
 \begin{defi}
 Let $A$ be a finitely generated $k$-algebra. An \emph{affine algebraic group} is a quadruple $(A,\mu_A,\epsilon,\iota)$ where $\mu_A:A \to A \otimes_k A$ (the \emph{coproduct}), $\epsilon:A \to k$ (the \emph{coidentity}), $\iota: A \to A$ (the \emph{coinverse}) are $k$-algebra homomorphisms, satisfying the following conditions:
@@ -62,6 +85,23 @@ A \otimes_k A \ar[r]_{\id_A \otimes \iota} & A \otimes_k A \ar[r]_\cdot & A
 Here the right arrow is the morphism making $A$ a $k$-algebra. The last arrow in the lower sequence is multiplication in $A$.
 \end{enumerate}
 \end{defi}
+
+\begin{example}
+ Let $G$ be any group, and let $k[G]$ be its group ring. Let $A$ be its $k$-linear dual, that is $A=\Hom_k(k[G],k)$. This is a priori just another vector space, but we can give it the structure of a $k$-algebra by defining multiplication as follows: let $\lambda:k[G] \to k$,$\gamma:k[G] \to k$ be $k$-linear maps. It is enough to say what should happen on a basis, and a basis is given by the elements $g$ of $G$. Then, set $(\lambda \cdot \gamma)(g) = \lambda(g)\cdot \gamma(g)$.
+
+Then set $\mu:A \to A \otimes A$ to be the dual of the multiplication map on $k[G]$. Explicitly, let $m:k[G] \otimes_k k[G] \to k[G]$ denoted the multiplication map. Let $\lambda:k[G] \to k$ be an element of $A$. Then we can form $m^\ast \lambda = \lambda \circ m$, which is an element of $(k[G] \otimes k[G])^\vee$. For finite-dimensional vector spaces, this is isomorphic to $A \otimes A$, which gives our multiplication map $\mu$. The coidentity is given by sending $\lambda:k[G]\to k$ to $\lambda(1_G)$, where $1_G \in G \subseteq k[G]$.
+
+For example: let $G=C_n$ be the cyclic group of order $n$. Then $k[G] = k[t]/(t^n-1)$, and since this is finite-dimensional over $k$, we can find an isomorphism $k[G] \approx A$. Unwinding definitions, we see that [????] (I dont see this)
+\end{example}
+
+\begin{example}
+ Let $A=k[s]$ be the polynomial ring in one variable. This is the coordinate ring of $\Aa_k^1$. We can define 
+$$
+\mu(s) = s \otimes 1 + 1 \otimes s.
+$$
+Also, $\epsilon(s)=0$, and $\iota(s)=-s$. 
+\end{example}
+
 
 \begin{defi}
 \label{defaction}
