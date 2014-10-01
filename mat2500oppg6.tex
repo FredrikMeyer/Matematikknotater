@@ -45,4 +45,89 @@ Trikset her er dermed å bruke egenskapen over gjentatte ganger, og omskrive hve
 På grunn av masse kansellering.
 \end{losn}
 
+\begin{oppg}
+Vis følgende generalisering av Menelaos' setning: for en firkant $ABCD$ vil punktene $A',B',C',D'$ på linjene gjennom $AB, BC, CD$ og $DA$ være kollineære bare hvis 
+$$
+\frac{\ol{AA'}}{\ol{A'B}}\cdot \frac{\ol{BB'}}{\ol{B'C}} \cdot \frac{\ol{CC'}}{\ol{C'D}} \cdot \frac{\ol{DD'}}{\ol{D'A}} = 1
+$$ 
+\end{oppg}
+
+\begin{losn}
+Se på Figur 1.
+
+Trikset er å merke at enhver firkant er satt sammen av to trekanter. Vi skal bruke Menelaos' setning på trekantene $BCA$ og $CDA$.
+
+Fra Menelaos' setning har vi følgende likhet:
+$$
+\frac{\ol{BB'}}{\ol{B'C}} \cdot \frac{\ol{CE}}{\ol{EA}} \cdot
+\frac{\ol{AA'}}{\ol{A'B}} = -1,
+$$
+brukt på den nederste av de to trekantene. Vi har også likheten
+$$
+\frac{\ol{CC'}}{\ol{C'D}} \cdot
+\frac{\ol{DD'}}{\ol{D'A}} \cdot
+\frac{\ol{AE}}{\ol{EC}}
+= -1
+$$
+Ganger vi disse to uttrykkene sammen, får vi (etter litt omstokking):
+$$
+\frac{\ol{BB'}}{\ol{B'C}} \cdot
+\frac{\ol{AA'}}{\ol{A'B}} \cdot 
+\frac{\ol{CC'}}{\ol{C'D}} \cdot
+\frac{\ol{DD'}}{\ol{D'A}} \cdot
+\frac{-\ol{EC}}{-\ol{AE}} \cdot
+\frac{\ol{AE}}{\ol{EC}} = 1
+$$
+De to siste leddene kansellerer, og vi får uttrykket vi har lyst på.
+\begin{figure}
+\centering
+\definecolor{uuuuuu}{rgb}{0.266666666667,0.266666666667,0.266666666667}
+\definecolor{xdxdff}{rgb}{0.490196078431,0.490196078431,1.}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=2.0cm,y=2.0cm]
+\clip(0.684738292011,-1.30457300275) rectangle (6.49190082645,4.11691460055);
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (1.56628099174,2.73950413223) -- (1.37592286501,0.73305785124) -- (5.63239669421,0.844187327824) -- (4.62964187328,2.55217630854) -- cycle;
+\draw [color=zzttqq] (1.56628099174,2.73950413223)-- (1.37592286501,0.73305785124);
+\draw [color=zzttqq] (1.37592286501,0.73305785124)-- (5.63239669421,0.844187327824);
+\draw [color=zzttqq] (5.63239669421,0.844187327824)-- (4.62964187328,2.55217630854);
+\draw [color=zzttqq] (4.62964187328,2.55217630854)-- (1.56628099174,2.73950413223);
+\draw [dotted,domain=0.684738292011:6.49190082645] plot(\x,{(--8.68549780297-0.187327823691*\x)/3.06336088154});
+\draw [dotted,domain=0.684738292011:6.49190082645] plot(\x,{(--10.4665844015-1.70798898072*\x)/1.00275482094});
+\draw [dotted,domain=0.684738292011:6.49190082645] plot(\x,{(-2.96733597128-0.111129476584*\x)/-4.2564738292});
+\draw [dotted,domain=0.684738292011:6.49190082645] plot(\x,{(-2.6211717961--2.00644628099*\x)/0.190358126722});
+\draw [domain=0.684738292011:6.49190082645] plot(\x,{(-1.29484788515--0.903991457561*\x)/0.838941209326});
+\draw [line width=1.2pt] (1.56628099174,2.73950413223)-- (5.63239669421,0.844187327824);
+\begin{scriptsize}
+\draw [fill=qqqqff] (1.56628099174,2.73950413223) circle (1.5pt);
+\draw[color=qqqqff] (1.64341597796,2.89377410468) node {$A$};
+\draw [fill=qqqqff] (1.37592286501,0.73305785124) circle (1.5pt);
+\draw[color=qqqqff] (1.45608815427,0.88826446281) node {$B$};
+\draw [fill=qqqqff] (5.63239669421,0.844187327824) circle (1.5pt);
+\draw[color=qqqqff] (5.70953168044,0.998457300275) node {$C$};
+\draw [fill=qqqqff] (4.62964187328,2.55217630854) circle (1.5pt);
+\draw[color=qqqqff] (4.7067768595,2.70644628099) node {$D$};
+\draw[color=black] (-0.703691460055,2.80561983471) node {$e$};
+\draw[color=black] (3.18611570248,5.2408815427) node {$f$};
+\draw[color=black] (-0.703691460055,0.85520661157) node {$g$};
+\draw[color=black] (1.91889807163,5.2408815427) node {$h$};
+\draw [fill=xdxdff] (1.29202847507,-0.151220585355) circle (1.5pt);
+\draw[color=xdxdff] (1.40099173554,0.0067217630854) node {$A'$};
+\draw [fill=xdxdff] (2.1309696844,0.752770872205) circle (1.5pt);
+\draw[color=xdxdff] (2.23845730028,0.910303030303) node {$B'$};
+\draw[color=black] (6.11724517906,5.2408815427) node {$i$};
+\draw [fill=uuuuuu] (4.30851171113,3.09915625506) circle (1.5pt);
+\draw[color=uuuuuu] (4.42027548209,3.25741046832) node {$C'$};
+\draw [fill=uuuuuu] (3.84539823638,2.60013365324) circle (1.5pt);
+\draw[color=uuuuuu] (3.95746556474,2.75052341598) node {$D'$};
+\draw [fill=uuuuuu] (3.24748135009,1.95585518471) circle (1.5pt);
+\draw[color=uuuuuu] (3.32936639118,2.11140495868) node {$E$};
+\end{scriptsize}
+\end{tikzpicture}
+\caption{Oppgave 2.}
+\end{figure}
+\end{losn}
+
+
+
 \end{document}
