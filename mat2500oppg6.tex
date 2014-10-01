@@ -1,0 +1,48 @@
+\documentclass[11pt, norsk]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}   % S P R A A K
+
+
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+
+\begin{document}
+\title{Oppgaver MAT2500}
+\author{Fredrik Meyer}
+\maketitle 
+
+\begin{oppg}
+Vis at om $A,B,C,D$ er kollineære, så er 
+\[
+\overline{AB} \cdot \ol{BC}  + \ol{BD} \cdot \ol{CA} + \ol{CD} \cdot \ol{AB} = 0.
+\]
+\end{oppg}
+\begin{losn}
+ Her mener vi altså med $\ol{AB}$ \emph{fortegnslengden} til segmentet $AB$. For å gi en verdi til $\ol{AB}$ (etc.) må man velge en \emph{retning} langs linja (for hvordan skal en ellers si om $\ol{AB}$ er positiv eller negativ?). Det som holder uansett er nemlig at $\ol{AB} + \ol{BC} = \ol{AC}$ om $A,B,C$ er kollineære.
+
+Trikset her er dermed å bruke egenskapen over gjentatte ganger, og omskrive hver av lengdene over slik at de involverer $A$. For eksempel: $\ol{BC}$ kan skrive som $\ol{AC}-\ol{AB}$. $\ol{BD} = \ol{AD}-\ol{AB}$ og $\ol{CA} = -\ol{AC}$. Dermed er
+\begin{align*}
+& \overline{AB} \cdot \ol{BC}  + \ol{BD} \cdot \ol{CA} + \ol{CD} \cdot \ol{AB}. \\
+&= \overline{AD}\cdot (\ol{AC}-\ol{AB}) - (\ol{AD}-\ol{AB})\cdot \ol{AC} + (\ol{AD-AC}) \cdot \ol{AB} \\
+&= 0
+\end{align*}
+På grunn av masse kansellering.
+\end{losn}
+
+\end{document}

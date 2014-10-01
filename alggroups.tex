@@ -1,8 +1,8 @@
-\documentclass[11pt, norsk]{article}
+\documentclass[11pt, english]{article}
 %\usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[norsk]{babel}   % S P R A A K
+\usepackage[english]{babel}   % S P R A A K
 
 
 % \usepackage{graphicx}    % postscript graphics
@@ -23,9 +23,13 @@
 
 
 \begin{document}
-\title{Algebraiske grupper og moduliteori}
+\title{Algebraic groups and moduli theory}
 \author{Fredrik Meyer}
 \maketitle 
+
+\abstract{
+These are notes from the course Algebraic Geometry III.  
+}
 
 \section{Representation theory in general}
 
@@ -156,6 +160,10 @@ is commutative. Here $\mu_A$ is the coproduct in the coordinate ring of $G$.
 In lieu of Definition \ref{defaction}, we see that any action of an algebraic group $G$ on an affine variety $X=\Spec R$ is a representation of $G$ on the infinite-dimensional $k$-vector space $R=\Gamma(X,\OO_X)$.
 \end{remark}
 
+\begin{remark}
+Mumford calls this a \emph{dual action of $G$ on $V$}, in his 1965 book ``Geometric Invariant Theory''.
+\end{remark}
+
 We often drop the subcript from $\mu_V$ unless confusion may arise. The same comment applies to tensor products. They will always be over the ground field unless otherwise stated. We will sometimes refer to a representation $(V,\mu_V)$ sometimes as ``a representation $\mu:V \to V \otimes A$'' and sometimes as just ``a representation $V$''.
 
 \begin{defi}
@@ -185,11 +193,64 @@ Because each term of the right-hand-side is contained in $U \otimes A \otimes A$
 Thus $x$ is contained in the finite-dimensional representation $\restr{\mu_V}{U}:U \to U \otimes A$.
 \end{proof}
 
-Repr. of $\mathbb G_m$.
+We can classify representations of $\Gr_m$ easily. They are all direct sums of ``weight $m$''-representations, that is, representations of the form $$V \to V \otimes k[t, t^{-1}], v \mapsto v \otimes t^m.$$ 
 
-Euler operator.
+\begin{prop}
+ Every representation $V$ of $\Gr_m$ is a direct sum $V = \oplus_{m \in \Z} V_{(m)}$, where each $V_{(m)}$ is a subrepresentation of weight $m$. 
+\end{prop}
 
-Characters.
+\begin{proof}
+For each $m \in \Z$, define
+\[
+V_{(m)} = \{ v \in V \mid \mu(v) = v \otimes t^m \}.
+\]
+This is a subrepresentation of $V$: we must see that $\mu(V_{(m)}) \subset U \otimes A$, but this is true by construction. It is also clear that is has weight $m$. Next we show that $V = \oplus_{m \in \Z} V_{(m)}$. Write
+\[
+\mu(v) = \sum_{m \in \Z} v_m \otimes t^m \in V \otimes k[t,t^{-1}].
+\]
+
+Using the first condition in the definition of a representation, we get that $v = \sum_{m \in \Z} \epsilon(t^m)v_m$. It remains to check that each $v_m \in V_{(m)}$ (we can forget the scalars $\epsilon(t^m)$). But from definition ii), it follows that
+\[
+\sum \mu(v_m) \otimes t^m = \sum v_m \otimes t^m \otimes t^m,
+\]
+so that indeed $\mu(v_m)= v_m \otimes t^m$, as wanted.
+\end{proof}
+
+\begin{example}
+An action of $\Gr_m$ on $X = \Spec R$ is equivalent to specifying a grading
+\[
+\xymatrix{
+R = \oplus_{m \in \Z} R_{(m)} & R_{(m)}R_{(n)} \subset R_{(m+n)}.
+}
+\]
+The invariants under this action are thus the homogeneous elements of weight zero, that is, the subring $R_{(0)}$. Moreover, we have a special operator. There is a linear endomorphism $E$ of $R$ that sends $f = \sum f_m \mapsto \sum m f_m$, and it is a derivation of $R$, called the Euler operator. We have $R^{\Gr_m}=\ker E$.
+
+To see that $E$ is a derivation, we must check that $E(fg)=fE(g)+gE(f)$. The operator is homogeneous, so it is enough to check on homogeneous elements. So let $f_m,g_n$ be of degree $m,n$, respectively. Then
+\[
+E(f_mg_n)=(m+n)f_mg_n = g_n(mf_m)+f_m(ng_n)=g_nE(f_m)+f_mE(g_m),
+\]
+as wanted.
+\end{example}
+
+
+A character in regular representation theory is a homomorphism $G \to \C^\ast$, so do we have a corresponding notion of characters in this ``dual'' world:
+
+\begin{defi}
+Let $G=\Spec A$ be an affine algebraic group. A $1$-dimensional character of $G$ is a function $\chi \in A$ satisfying
+\[
+\xymatrix{
+\mu_A(\chi) = \chi \otimes \chi & \iota(\chi)\chi = 1.
+}
+\]
+\end{defi}
+
+\begin{lemma}
+The characters of the general linear group $\GL(n) = \Spec k[x_{ij}, \det X]$ are precisely the integer powers of the determinant $(\det X)^n$ for $n \in Z$.   
+\end{lemma}
+
+\begin{defi}
+  Let $\chi$ be a character of an affine algebraic group $G$, and let $V$ be a representation of $G$. A vector $v \in V$ satisfying $$\mu_V(v) = v \otimes \chi$$ is called a \emph{semi-invariant} of $G$ with weight $\chi$. The semi-invariants of $V$ belonging to a given character $\chi$ form a subrepresentation $V_\chi \subset V$ of $V$.
+\end{defi}
 
 \subsection{Linear reductivity}
 
