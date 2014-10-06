@@ -21,6 +21,7 @@
 \usepackage{hyperref}
 \usepackage{mystyle} % stilfilen      
 
+\usepackage[a5paper,margin=0.5in]{geometry}
 
 \begin{document}
 \title{Algebraic groups and moduli theory}
@@ -28,7 +29,7 @@
 \maketitle 
 
 \abstract{
-These are notes from the course Algebraic Geometry III.  
+These are notes from the course Algebraic Geometry III. We work over a field of characteristic zero.
 }
 
 \section{Representation theory in general}
@@ -175,6 +176,7 @@ Let $\mu:V \to V \otimes A$ be a representation of $G = \Spec A$. Then:
 \end{defi}
 
 \begin{prop}
+\label{propfinite}
 Every representation $V$ of $G$ is locally finite-dimensional. Precisely: every $x \in V$ is contained in a finite-dimensional subrepresentation of $G$.
 \end{prop}
 
@@ -196,6 +198,7 @@ Thus $x$ is contained in the finite-dimensional representation $\restr{\mu_V}{U}
 We can classify representations of $\Gr_m$ easily. They are all direct sums of ``weight $m$''-representations, that is, representations of the form $$V \to V \otimes k[t, t^{-1}], v \mapsto v \otimes t^m.$$ 
 
 \begin{prop}
+\label{propgm}
  Every representation $V$ of $\Gr_m$ is a direct sum $V = \oplus_{m \in \Z} V_{(m)}$, where each $V_{(m)}$ is a subrepresentation of weight $m$. 
 \end{prop}
 
@@ -252,13 +255,44 @@ The characters of the general linear group $\GL(n) = \Spec k[x_{ij}, \det X]$ ar
   Let $\chi$ be a character of an affine algebraic group $G$, and let $V$ be a representation of $G$. A vector $v \in V$ satisfying $$\mu_V(v) = v \otimes \chi$$ is called a \emph{semi-invariant} of $G$ with weight $\chi$. The semi-invariants of $V$ belonging to a given character $\chi$ form a subrepresentation $V_\chi \subset V$ of $V$.
 \end{defi}
 
+We will often change the point of view depending upon the situation. Sometimes we think of a representation of an algebraic group as a $k$-linear map $V \to V \otimes_k A$ satisfying some axioms, and sometimes we think of a representation as a group $G$ acting on a vector space $V$ in the usual fashion.
+
+\begin{prop}
+ Let $\mu: V \to V \otimes_k A$ be a representation of an algebraic group $G$. Let $g \in G(k)$ be a $k$-valued point and $\mm_g \subseteq A$ the corresponding maximal ideal. Denote by $\rho(g)$ the composition
+\[
+V \xrightarrow{\mu} V \otimes_k A \xrightarrow {\mod \mm_g} V \otimes_k k \simeq V.
+\]
+Then, if $A=\Gamma(G,\OO_G)$ is an integral domain, a vector $v \in V$ such that $\rho(g)(v)=v$ for all $g \in G(k)$ is a $G$-invariant.
+\end{prop}
+\begin{proof}
+We need to check that $\mu(v)=v \otimes 1$.  First, since $G$ is the spectrum of a finitely generated $k$-algebra, we can write $A$ as $k[y_1,\cdots,y_m]/I$ for some prime ideal $I$. Then the same trick as in the proof of Proposition \ref{propfinite} works. Write $\mu(v)=\sum v_i \otimes f_i$ with $f_i \in A$ for all $i$. Since the composition is the identity, we have that $f_i \equiv 1 \pmod{\mm_g}$ for all $g \in G$. This implies that $f_i-1$ is contained in the Jacobson radical of $A$. But $A$ is an integral domain, so $f_i-1=0$.
+\end{proof}
+Thus, in a sense, the two notions of $G$-invariance coincides.
+
+\subsection{Algebraic groups and their Lie spaces}
+
+[[something about local study]]
+
+\begin{defi}
+ Let $R$ be a $k$-algebra and $M$ an $R$-module. An \emph{$M$-valued derivation} is a $k$-linear map $D:R \to M$ satisfying the Leibniz rule $D(xy)=xD(y) + yD(x)$ for $x,y \in R$.
+\end{defi}
+
+The set of $M$-valued derivations is also an $R$-module, denoted by $\Der_k(R,M)$. This is used to define tangent spaces in algebraic geometry as follows: Let $p \in \Spec A=X$ be a closed point. Then we have a local ring $\OO_{X,p}$ and a quotient map $\OO_{X,p} \to k$ with kernel $\mm_p$. Then the $k$-module $(\mm_p/\mm_p^2)^\vee$ is called the \emph{Zariski tangent space} of $p \in X$. In fact:
+\begin{prop}
+We have an isomorphism of $A$-modules:
+$$ \Der_k(\OO_{X,p},k) \simeq (\mm_p/\mm_p^2)^\vee
+$$
+\end{prop}
+\begin{proof}
+sketch send $D$ to $\restr{D}{\mm_p}$. 
+\end{proof}
+[[ Also $\Hom_k(k[\epsilon],\OO_{X,p})$.
+
 \subsection{Linear reductivity}
 
 \begin{defi}
 An algebraic group $G$ is said to be \emph{linearly reductive} if, for every epimorphism $\varphi:V \to W$ of $G$-representations, the induced map of $G$-invariants $\varphi^G:V^G \to W^G$ is surjective.
 \end{defi}
-
-For the following proposition, assume that $char k$ does not divide $ \lvert G \rvert$.
 
 \begin{prop}
 Every finite group $G$ is linearly reductive.
@@ -270,5 +304,52 @@ Let $\varphi: V \to W$ be the given epimorphism of representations. Let $ R:V \t
 
 The homomorphism $R$ above is called the \emph{Reynolds operator}.
 
+\begin{prop}
+\label{proplinred}
+The following are equivalent:
+\begin{enumerate}[i)]
+\item $G$ is linearly reductive.
+\item For every epimorphism $V \to W$  of \emph{finite-dimensional} $G$-representations, the induced map $V^G \to W^G$ is surjective.
+\item If $V$ is any finite-dimensional representation and $U \subseteq$ is a proper subrepresentation and $\bar v \in V/U$ is $G$-invariant, then the coset $v + U$ (for any lifting of $\bar v$) contains a non-trivial $G$-invariant vector.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+$i) \Rightarrow ii)$ is trivial. For $ii) \Rightarrow iii)$, apply $ii)$ to the quotient map $V \to V/U$. Then $V^G \to (V/U)^G$ is surjective. This implies that for every nonzero $\bar v \in (V/U)^G$, there exists a $G$-invariant $v \in \pi^{-1}(v)=U+\bar v$.
+
+$iii) \Rightarrow i)$ is hardest. Suppose $\phi:V \to W$ is an epimorphism of representations (not necessarily finite-dimensional). Suppose $\phi(v)=w \in W^G$ for some $v \in V$. 
+
+By Proposition \ref{propfinite} there exists a finite-dimensional subrepresentation $V_0 \subseteq V$ containing $v$. Now $v \in V_0$ is $G$-invariant modulo $U_0 := V_0 \cap \ker \phi$ (since $V/\ker \phi \simeq W$ as $G$-representations), so by $iii)$, there exists a $G$-invariant vector $v' \in V_0$ such that $v'-v \in U_0$. But $\phi(v')=w$, so $\phi^G:V^G \to W^G$ is surjective.
+\end{proof}
+
+\begin{lemma}
+Direct products of linearly reductive groups are linearly reductive. If $H \subset G$ is a normal subgroup and $G$ is linearly reductive, then so is $G/H$. Moreover, if both $H$ and $G/H$ are linearly redutive, then so is $G$.
+\end{lemma}
+\begin{proof}
+Suppose given an endomorphism of representation of $G \times H$: $V \to W$. In particular, they are representations of $G,H$ separately, by the rule $g \cdot v = (g,e) \cdot v$. In particular, if an element $w \in W$ is $G \times H$-invariant, it is also $G,H$-invariant. Thus by assumption, there is an $G,H$-invariant $v \in V$ mapping to $w$. But if something is $G,H$-invariant, it is also $G \times H$-invariant, since $G,H$ commute in $G \times H$.
+
+Similarly, every $G/H$-representation gives a $G$-representation, by the rule $g \cdot v = \bar g \cdot v$, where $\bar g$ denotes the class of $g$ in $G/H$. Now if $w \in W^{G/H}$ is $G/H$-invariant, then it is by definition $G$-invariant, and by linearly reductivity of $G$, the map is surjective.
+
+Finally, if both $H$ and $G/H$ are linearly reductive, suppose $\phi:V \to W$ is a surjection of $G$-representations. This is also a surjection of $H$-representations, and since $H$ was linearly reductive, we get that $V^H \to W^H$ is surjective. It follows that the map $\phi$ and the vector spaces $V,W$ splits as $(\phi^H,\phi'):V^H \oplus V' \to W^H \oplus W'$, where $H$ acts trivially on the second factor. This implies that $G/H$ acts on $V',W'$, and it follows that $V' \to W'$ is surjective.
+\end{proof}
+
+\begin{prop}
+Every algebraic torus $(\Gr_m)^N$ is linearly reductive.
+\end{prop}
+\begin{proof}
+By the lemma, it suffices to prove this for $N=1$. We use Proposition \ref{proplinred} iii). By Proposition \ref{propgm}, we can write a representation $V$ and a subrepresentation $U$ as
+\begin{align*}
+V = \bigoplus_{m \in \Z} V_{(m)} & &\text{and}& & U = \bigoplus_{m \in \Z} U_{(m)}.
+\end{align*}
+Here $U_{(m)} \subset V_{(m)}$. An element $v \in V/U$ is $\Gr_m$-invariant if any lifting of $v$ to $V$ lies in $U_{(m)}$ for $m \neq 0$. Thus $v_{(0)}$ is $\Gr_m$-invariant and lies in the coset $v+U$.
+\end{proof}
+
+The classical example of a group that is not linearly reductive is the affine line $\Aa^1$ under addition:
+\begin{example}
+ Consider the $2$-dimensional representation given by
+\[
+\Gr_a \to \GL_2, \qquad t \mapsto \begin{pmatrix} 1 & t \\ 0 & 1 \end{pmatrix}.
+\]
+This is a representation by the rules of matrix multiplication. Algebraically, this as follows: let $x,y$ be a basis for $V$. Then we define a $k$-linear map $V \to V \otimes_k k[t]$ by $x \mapsto x \otimes 1$ and $y \mapsto x \otimes t + y \otimes 1$. This extends to a representation of $k[V]=k[x,y]$ in the obvious way. Then we can define an epimorphism of representations by sending $k[x,y] \to k[x,y]/(x) \simeq k[y]$. Taking invariants, we get that $k[x,y]^{\Gr_a} = k[x]$ but $k[y]^{\Gr_a}=k[y]$, but the map sends $x$ to $0$, so is not surjective.
+\end{example}
 
 \end{document}

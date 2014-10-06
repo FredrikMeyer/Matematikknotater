@@ -1,33 +1,22 @@
-\definecolor{uuuuuu}{rgb}{0.266666666667,0.266666666667,0.266666666667}
-\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{xdxdff}{rgb}{0.490196078431,0.490196078431,1.}
 \definecolor{qqqqff}{rgb}{0.,0.,1.}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.6929824561403509cm,y=0.68298cm]
-\clip(-4.3,-5.86) rectangle (18.5,6.3);
-\fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (5.46,2.18) -- (3.34,-0.22) -- (10.48,0.68) -- cycle;
-\draw [color=zzttqq] (5.46,2.18)-- (3.34,-0.22);
-\draw [color=zzttqq] (3.34,-0.22)-- (10.48,0.68);
-\draw [color=zzttqq] (10.48,0.68)-- (5.46,2.18);
-\draw(7.11810874704,-1.42099605989) ellipse (2.74726226069cm and 2.70760848587cm);
-\draw [domain=-4.3:18.5] plot(\x,{(-1.20310234831--1.65810874704*\x)/3.60099605989});
-\draw [domain=-4.3:18.5] plot(\x,{(-12.8831023483--3.77810874704*\x)/1.20099605989});
-\draw [domain=-4.3:18.5] plot(\x,{(--36.6612976517-3.36189125296*\x)/2.10099605989});
-\draw [dotted,domain=-4.3:18.5] plot(\x,{(-8.4824--2.4*\x)/2.12});
-\draw [dotted,domain=-4.3:18.5] plot(\x,{(--19.1336-1.5*\x)/5.02});
-\draw [dotted,domain=-4.3:18.5] plot(\x,{(--4.5768-0.9*\x)/-7.14});
-\draw (-0.9177585485,-0.756692254013)-- (4.22063945762,2.55032685529);
-\draw (4.22063945762,2.55032685529)-- (7.85099263739,4.8867841178);
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(0.307635644359,-4.30828377277) rectangle (15.2758321506,3.72101369082);
+\draw(6.09059529098,-0.219222567748) circle (2.59522457753cm);
+\draw (3.54,0.26)-- (8.62,-0.8);
+\draw (3.54,0.26)-- (7.08,2.18);
+\draw (3.54,0.26)-- (8.26020192559,-1.64330039528);
+\draw (8.26020192559,-1.64330039528)-- (7.08,2.18);
+\draw [domain=0.307635644359:15.2758321506] plot(\x,{(-7.55708786687--0.843300395284*\x)/0.35979807441});
 \begin{scriptsize}
-\draw [fill=qqqqff] (5.46,2.18) circle (1.5pt);
-\draw[color=qqqqff] (5.6,2.46) node {$A$};
-\draw [fill=qqqqff] (3.34,-0.22) circle (1.5pt);
-\draw[color=qqqqff] (3.48,0.06) node {$B$};
-\draw [fill=qqqqff] (10.48,0.68) circle (1.5pt);
-\draw[color=qqqqff] (10.62,0.96) node {$C$};
-\draw [fill=uuuuuu] (7.85099263739,4.8867841178) circle (1.5pt);
-\draw[color=uuuuuu] (8.,5.16) node {$D$};
-\draw [fill=uuuuuu] (-0.9177585485,-0.756692254013) circle (1.5pt);
-\draw[color=uuuuuu] (-0.78,-0.48) node {$E$};
-\draw [fill=uuuuuu] (4.22063945762,2.55032685529) circle (1.5pt);
-\draw[color=uuuuuu] (4.36,2.84) node {$F$};
+\draw [fill=qqqqff] (3.54,0.26) circle (1.5pt);
+\draw[color=qqqqff] (3.6118732837,0.41677605148) node {$A$};
+\draw [fill=qqqqff] (7.08,2.18) circle (1.5pt);
+\draw[color=qqqqff] (7.15842168326,2.3332338823) node {$B$};
+\draw [fill=qqqqff] (8.62,-0.8) circle (1.5pt);
+\draw[color=qqqqff] (8.70039924828,-0.640579993108) node {$C$};
+\draw [fill=xdxdff] (8.26020192559,-1.64330039528) circle (1.5pt);
+\draw[color=xdxdff] (8.33693310795,-1.48866765387) node {$D$};
+\draw[color=black] (10.352518068,3.64391481257) node {$g$};
 \end{scriptsize}
 \end{tikzpicture}

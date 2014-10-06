@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  30 SEP 2014 11:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  6 OCT 2014 18:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -248,15 +248,17 @@ Now handling font encoding U ...
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2013/10/10 3.9g The Babel package
 
-(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/babel-norsk/norsk.ldf
-Language: norsk 2012/08/06 v2.0i Norsk support from the babel system
-
-(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/babel/babel.def
+(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/babel-english/english.l
+df
+Language: english 2012/08/20 v3.3p English support from the babel system
+ (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2013/10/10 3.9g Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
-Package babel Info: Making " an active character on input line 113.
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
 ))
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -1013,37 +1015,53 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \c@losn=\count148
 \c@exc=\count149
 \c@sol=\count150
-) (./alggroups.aux)
+)
+(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+\Gm@cnth=\count151
+\Gm@cntv=\count152
+\c@Gm@tempcnt=\count153
+\Gm@bindingoffset=\dimen206
+\Gm@wd@mp=\dimen207
+\Gm@odd@mp=\dimen208
+\Gm@even@mp=\dimen209
+\Gm@layoutwidth=\dimen210
+\Gm@layoutheight=\dimen211
+\Gm@layouthoffset=\dimen212
+\Gm@layoutvoffset=\dimen213
+\Gm@dimlist=\toks52
+)
+(./alggroups.aux)
 \openout1 = `alggroups.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
  ABD: EveryShipout initializing macros
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count151
-\scratchdimen=\dimen206
+\scratchcounter=\count154
+\scratchdimen=\dimen214
 \scratchbox=\box44
-\nofMPsegments=\count152
-\nofMParguments=\count153
-\everyMPshowfont=\toks52
-\MPscratchCnt=\count154
-\MPscratchDim=\dimen207
-\MPnumerator=\count155
-\makeMPintoPDFobject=\count156
-\everyMPtoPDFconversion=\toks53
+\nofMPsegments=\count155
+\nofMParguments=\count156
+\everyMPshowfont=\toks53
+\MPscratchCnt=\count157
+\MPscratchDim=\dimen215
+\MPnumerator=\count158
+\makeMPintoPDFobject=\count159
+\everyMPtoPDFconversion=\toks54
 )
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/oberdiek/epstopdf-base.st
 y
@@ -1065,23 +1083,23 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 25.
+LaTeX Font Info:    Try loading font information for U+msa on input line 26.
  (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 25.
+LaTeX Font Info:    Try loading font information for U+msb on input line 26.
 
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 25.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 26.
 
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Package xypdf Info: Line width: 0.43799pt on input line 25.
+Package xypdf Info: Line width: 0.43799pt on input line 26.
 \AtBeginShipoutBox=\box45
-Package hyperref Info: Link coloring OFF on input line 25.
+Package hyperref Info: Link coloring OFF on input line 26.
 
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1090,55 +1108,121 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 .sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count157
+\c@section@level=\count160
 )
-LaTeX Info: Redefining \ref on input line 25.
-LaTeX Info: Redefining \pageref on input line 25.
-LaTeX Info: Redefining \nameref on input line 25.
+LaTeX Info: Redefining \ref on input line 26.
+LaTeX Info: Redefining \pageref on input line 26.
+LaTeX Info: Redefining \nameref on input line 26.
  (./alggroups.out) (./alggroups.out)
 \@outlinefile=\write5
 \openout5 = `alggroups.out'.
 
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a5paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(36.135pt, 348.8308pt, 36.135pt)
+* v-part:(T,H,B)=(36.135pt, 525.23788pt, 36.135pt)
+* \paperwidth=421.10078pt
+* \paperheight=597.50787pt
+* \textwidth=348.8308pt
+* \textheight=525.23788pt
+* \oddsidemargin=-36.135pt
+* \evensidemargin=-36.135pt
+* \topmargin=-73.135pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
-t line 39.
- <xymatrix 2x2 182> [1
+t line 40.
+<xymatrix 2x2 182> [1
 
 {/opt/app-sync/texlive/uio-texmf/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Package hyperref Info: bookmark level for unknown defi defaults to 0 on input l
-ine 64.
- <xymatrix 2x2
-182> <xymatrix 4x3 247> <xymatrix 3x2 224> [2] <xymatrix 2x2 141> <xymatrix
-2x2 182> <xymatrix 2x2 141> [3] <xymatrix 2x2 182>
+ine 65.
+ <xymatrix 2x2 182> <xymatrix 4x3 247> <xymatrix 3x2 224>
+[2] <xymatrix 2x2 141> <xymatrix 2x2 182> [3] <xymatrix 2x2 141> <xymatrix 2x2
+182>
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
- line 160.
+ line 161.
 Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
-ine 178.
+ine 179.
 
-Overfull \hbox (21.09027pt too wide) in paragraph at lines 178--179
-[][]\T1/cmr/bx/n/10 Proposition 3.3. []\T1/cmr/m/it/10 Eve-ry re-pre-sen-ta-tio
-n $\OML/cmm/m/it/10 V$ \T1/cmr/m/it/10 of $\OML/cmm/m/it/10 G$ \T1/cmr/m/it/10 
-is lo-cal-ly finite-dimensional.
+Overfull \hbox (15.05205pt too wide) in paragraph at lines 180--181
+\T1/cmr/m/it/10 dimensional. Pre-cisely: ev-ery $\OML/cmm/m/it/10 x \OMS/cmsy/m
+/n/10 2 \OML/cmm/m/it/10 V$ \T1/cmr/m/it/10 is con-tained in a finite-dimension
+al
  []
 
-[4] <xymatrix 2x1 10> [5] <xymatrix 2x1 10>
+[4]
+Overfull \hbox (5.12688pt too wide) in paragraph at lines 195--196
+[]\T1/cmr/m/n/10 Thus $\OML/cmm/m/it/10 x$ \T1/cmr/m/n/10 is con-tained in the 
+finite-dimensional rep-re-sen-ta-tion $[] \OT1/cmr/m/n/10 :
+ []
+
+[5] <xymatrix 2x1 10>
+Overfull \hbox (10.5196pt too wide) detected at line 234
+\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f[]g[]\OT1/cmr/m/n/10 ) = (
+\OML/cmm/m/it/10 m \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 n\OT1/cmr/m/n/10 )\OML/cm
+m/m/it/10 f[]g[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 (\OML/cm
+m/m/it/10 mf[]\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm
+/m/it/10 ng[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 g[]E\OT1/cmr/m/n/10 (\OML/cmm
+/m/it/10 f[]\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 f[]E\OT1/cmr/m/n/10 (\OML/cmm/
+m/it/10 g[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;
+ []
+
+<xymatrix 2x1 10>
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 248.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 274.
- [6] [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 274.
+line 251.
+ [6]
+LaTeX Font Info:    Try loading font information for U+euf on input line 261.
+
+(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+[7]
+Overfull \hbox (41.28084pt too wide) in paragraph at lines 312--313
+[]\T1/cmr/m/it/10 For ev-ery epi-mor-phism $\OML/cmm/m/it/10 V \OMS/cmsy/m/n/10
+ ! \OML/cmm/m/it/10 W$ \T1/cmr/m/it/10 of \T1/cmr/m/n/10 finite-dimensional $\O
+ML/cmm/m/it/10 G$\T1/cmr/m/it/10 -representations,
+ []
+
+[8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 355.
+ [9]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 355.
  (./alggroups.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 274.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 274.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 355.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 355.
 Package rerunfilecheck Info: File `alggroups.out' has not changed.
-(rerunfilecheck)             Checksum: 510EAFE397FF77A6E3415E8278421740;255.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 274.
+(rerunfilecheck)             Checksum: A098241CD0C65DF4E0802B3E261E3E00;341.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 355.
  ) 
 Here is how much of TeX's memory you used:
- 20211 strings out of 493308
- 341193 string characters out of 6135157
- 469621 words of memory out of 5000000
- 23155 multiletter control sequences out of 15000+600000
- 22514 words of font info for 73 fonts, out of 8000000 for 9000
+ 20635 strings out of 493308
+ 347527 string characters out of 6135157
+ 479418 words of memory out of 5000000
+ 23549 multiletter control sequences out of 15000+600000
+ 23222 words of font info for 76 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,14n,55p,3277b,612s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/enc/dvips/cm-super/cm-super
@@ -1152,27 +1236,29 @@ dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/app-sync/texlive/uio-texmf/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/app-sync/texlive/uio-
 texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></opt/app-sync/texliv
 e/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/app-sync/
-texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></o
-pt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
-bm10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfont
-s/symbols/msbm7.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/pub
-lic/rsfs/rsfs10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/pub
-lic/cm-super/sfbx1000.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/typ
-e1/public/cm-super/sfbx1200.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fon
-ts/type1/public/cm-super/sfbx1440.pfb></opt/app-sync/texlive/uio-texmf/texmf-di
-st/fonts/type1/public/cm-super/sfrm0700.pfb></opt/app-sync/texlive/uio-texmf/te
-xmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></opt/app-sync/texlive/uio-te
-xmf/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></opt/app-sync/texlive/
-uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></opt/app-sync/te
-xlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></opt/app-s
-ync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></opt
-/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></
-opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb
->
-Output written on alggroups.pdf (7 pages, 279198 bytes).
+texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></opt
+/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.
+pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/sym
+bols/msam10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/
+amsfonts/symbols/msbm10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/t
+ype1/public/amsfonts/symbols/msbm7.pfb></opt/app-sync/texlive/uio-texmf/texmf-d
+ist/fonts/type1/public/rsfs/rsfs10.pfb></opt/app-sync/texlive/uio-texmf/texmf-d
+ist/fonts/type1/public/cm-super/sfbx1000.pfb></opt/app-sync/texlive/uio-texmf/t
+exmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></opt/app-sync/texlive/uio-t
+exmf/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></opt/app-sync/texlive
+/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></opt/app-sync/t
+exlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></opt/app-
+sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></op
+t/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pf
+b></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1
+728.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super
+/sfti1000.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/xy
+pic/xyatip10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public
+/xypic/xybtip10.pfb>
+Output written on alggroups.pdf (9 pages, 305727 bytes).
 PDF statistics:
- 217 PDF objects out of 1000 (max. 8388607)
- 182 compressed objects within 2 object streams
- 58 named destinations out of 1000 (max. 500000)
- 45 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 263 PDF objects out of 1000 (max. 8388607)
+ 223 compressed objects within 3 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

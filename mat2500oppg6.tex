@@ -30,7 +30,7 @@
 \begin{oppg}
 Vis at om $A,B,C,D$ er kollineære, så er 
 \[
-\overline{AB} \cdot \ol{BC}  + \ol{BD} \cdot \ol{CA} + \ol{CD} \cdot \ol{AB} = 0.
+\overline{AD} \cdot \ol{BC}  + \ol{BD} \cdot \ol{CA} + \ol{CD} \cdot \ol{AB} = 0.
 \]
 \end{oppg}
 \begin{losn}
@@ -38,7 +38,7 @@ Vis at om $A,B,C,D$ er kollineære, så er
 
 Trikset her er dermed å bruke egenskapen over gjentatte ganger, og omskrive hver av lengdene over slik at de involverer $A$. For eksempel: $\ol{BC}$ kan skrive som $\ol{AC}-\ol{AB}$. $\ol{BD} = \ol{AD}-\ol{AB}$ og $\ol{CA} = -\ol{AC}$. Dermed er
 \begin{align*}
-& \overline{AB} \cdot \ol{BC}  + \ol{BD} \cdot \ol{CA} + \ol{CD} \cdot \ol{AB}. \\
+& \overline{AD} \cdot \ol{BC}  + \ol{BD} \cdot \ol{CA} + \ol{CD} \cdot \ol{AB}. \\
 &= \overline{AD}\cdot (\ol{AC}-\ol{AB}) - (\ol{AD}-\ol{AB})\cdot \ol{AC} + (\ol{AD-AC}) \cdot \ol{AB} \\
 &= 0
 \end{align*}
@@ -205,7 +205,7 @@ Dermed følger det fra Menelaos setning at $D,E,F$ er kollineære.
 \begin{losn}
 Dette er bare nok en anvendelse av Menelaos' setning og setningen om halveringslinjer. Faktisk er løsningen helt lik forrige oppgave, så jeg gidder ikke skrive ned detaljene.
 
-Trikset er at $(-1) \cdot (-1) \cdot (-1) = -1$. Se Figur 3, og legg merke til at $D,E,F$ er Menealaos-punkter her også.
+Trikset er at $(-1) \cdot (-1) \cdot (-1) = -1$. Se Figur 3, og legg merke til at $D,E,F$ er Menelaos-punkter her også.
 
 \begin{figure}
 \centering
@@ -253,23 +253,30 @@ Vis at tangentlinjene til den omskrevne sirkelen til en trekant i hjørnene skj�
 
 
 \begin{losn}
-  Igjen skal vi bruke Menelaos' setning. Vi skal kombinere den med setningen om punktets potens. Faktisk skal vi utvide setningen til også å gjelde når $A=B$ (i notasjonen til setningen i heftet).
+ Igjen skal vi bruke Menelaos' setning. Vi ønsker å vise at det vanlige uttrykket blir $1$ (eller $-1$...).
 
-Husk at setningen sier følgende: at om $P$ er et punkt utenfor sirkelen og om $\ell$ er en linje gjennom $P$ som skjærer sirkelen i to punkter $A,B$, så er produktet $\ol{PA}\cdot \ol{PB}$ uavhengig av linjen $\ell$. Lar vi nå linjen $\ell$ rotere slik at den blir en tangentlinje, vil $A$ gå mot $B$. Kall skjæringspunktet der (tangent-)linjen møter sirkelen for $C$. Da får vi at $\ol{PC}^2=\ol{PA} \cdot \ol{PB}$.
+Se på Figur 4. Vi skal bruke det vi vet om periferivinkler. Nemlig at to periferivinkler over samme bue er like store.
 
-Dette kan vi bruke sammen med Menelaos' setning. Se på Figur 4. Fra diskusjonen over får vi nå likhetene $\ol{EB}\cdot \ol{EC} = \ol{EA}^2$, $\ol{FA}\cdot\ol{FC} = \ol{FB}^2$, $\ol{DA}\cdot \ol{DB} = \ol{DC}^2$. 
-
-Vi kan dermed sette inn i Menelaos' setning og få:
+For det første: vinklene $\angle ABF$ og $\angle ACB$ spenner over samme bue. Dermed følger det at trekantene $BCF$ og $BFA$ er formlike. Dermed er (her bruker vi vanlig lengdemål, og ikke fortegnsmål)
 $$
-\frac{\ol{AD}}{\ol{DB}} \cdot
-\frac{\ol{BE}}{\ol{EC}} \cdot
-\frac{\ol{CF}}{\ol{FA}} = 
--\frac{\ol{DC}^2}{\ol{DB}^2} \cdot
--\frac{\ol{EA}^2}{\ol{EC}^2} \cdot
--\frac{\ol{FB}^2}{\ol{FA}^2}.
-$$ 
+\frac{BC}{AB}=\frac{CF}{BF} = \frac{BF}{AF}.
+$$
+Tilsvarende får vi for de andre to vinklene at:
+$$
+\frac{AB}{CA} = \frac{BE}{AE} = \frac{AE}{CE}
+$$
+og 
+$$
+\frac{AC}{BC} = \frac{AD}{CD} = \frac{CD}{BD}.
+$$
+Ganger vi de to siste likhetene i hver linje sammen, får vi dermed at
+\begin{align*}
+\frac{BC^2}{AB^2} = \frac{CF}{AF} && \frac{AB^2}{CA^2} = \frac{BE}{CE} &&  \frac{AC^2}{BC^2} = \frac{AD}{BD}.
+\end{align*}
+Dette er akkurat leddene i Menelaos-ligningen, så når vi ganger dem sammen, får vi $1$, akkurat som vi ønsket (som betyr at punktene ligger på linje).
 
-Men uttrykket til høyre er lik $-1$ fordi $DC=DB$, osv (tenk over hvorfor!).
+Grunnen til at vi dropper fortegnsmål her, er at vi vet at med fortegnsmål kommer svarer til å bli negativt, siden alle punktene $D,E,F$ ligger utenfor trekanten $ABC$. Dermed holder det å sjekke at vi får riktig absoluttverdi.
+
 
 \begin{figure}
 \centering  
@@ -309,5 +316,38 @@ Men uttrykket til høyre er lik $-1$ fordi $DC=DB$, osv (tenk over hvorfor!).
 \caption{Oppgave 5.}
 \end{figure}
 \end{losn}
+
+Til slutt en liten kommentar om periferivinkler. I beviset over brukte vi at $\angle ABF = \angle ACB$ fordi begge er periferivinkler med samme bue. Det er ikke helt åpenbart at dette faktisk er lov å konkludere med, siden setningen om periferivinkler ikke nødvendigvis gjelder når en av kordene er en tangent.
+
+Se på Figur 5. Ved setningen om periferivinkler er vinklene $\angle BAC$ og $\beta = \CDB$ like siden de spenner over samme bue. Med andre er funksjonen $\beta(D)$ konstant når vi beveger $D$ på sirkelen. Men når $D \to C$, vil linjen $DC$ gå mot tangentlinjen i punktet $C$. Men siden $\beta(D)$ er konstant som funksjon av $D$, er også $\lim_{D \to C} \beta(D)$ samme verdi. Dermed kan vi snakke om vinkelen mellom en korde og en tangentlinje. 
+
+Dette er ikke et hundre prosent rigorøst bevis. Det gir først mening når vi har innført en metrikk på $E^2$. Det kan antakelig bevises på en lignende måte som setningen om periferivinkler.
+
+\begin{figure}
+\centering
+\definecolor{xdxdff}{rgb}{0.490196078431,0.490196078431,1.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(0.307635644359,-4.30828377277) rectangle (15.2758321506,3.72101369082);
+\draw(6.09059529098,-0.219222567748) circle (2.59522457753cm);
+\draw (3.54,0.26)-- (8.62,-0.8);
+\draw (3.54,0.26)-- (7.08,2.18);
+\draw (3.54,0.26)-- (8.26020192559,-1.64330039528);
+\draw (8.26020192559,-1.64330039528)-- (7.08,2.18);
+\draw [domain=0.307635644359:15.2758321506] plot(\x,{(-7.55708786687--0.843300395284*\x)/0.35979807441});
+\begin{scriptsize}
+\draw [fill=qqqqff] (3.54,0.26) circle (1.5pt);
+\draw[color=qqqqff] (3.6118732837,0.41677605148) node {$A$};
+\draw [fill=qqqqff] (7.08,2.18) circle (1.5pt);
+\draw[color=qqqqff] (7.15842168326,2.3332338823) node {$B$};
+\draw [fill=qqqqff] (8.62,-0.8) circle (1.5pt);
+\draw[color=qqqqff] (8.70039924828,-0.640579993108) node[below] {$C$};
+\draw [fill=xdxdff] (8.26020192559,-1.64330039528) circle (1.5pt);
+\draw[color=xdxdff] (8.33693310795,-1.48866765387) node[below] {$D$};
+\draw[color=black] (10.352518068,3.64391481257);
+\end{scriptsize}
+\end{tikzpicture}
+\caption{Begrunnelse for periferivinkler og tangenter.}
+\end{figure}
 \end{document}
 
