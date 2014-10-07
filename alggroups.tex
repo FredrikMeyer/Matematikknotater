@@ -29,7 +29,7 @@
 \maketitle 
 
 \abstract{
-These are notes from the course Algebraic Geometry III. We work over a field of characteristic zero.
+These are notes from the course Algebraic Geometry III. We work over a field of characteristic zero. We start by doing some basic representation theory. Then we introduce algebraic groups. Then we study representations of algebraic groups. Finally we apply this to moduli problems. 
 }
 
 \section{Representation theory in general}
@@ -62,6 +62,7 @@ for each $g \in G$. Thus, if $\psi$ is invertible, this says that the linear ope
 Algebraic groups are group objects in the category of affine varieties. More precisely:
 
 \begin{defi}
+\label{defalggrp}
 Let $A$ be a finitely generated $k$-algebra. An \emph{affine algebraic group} is a quadruple $(A,\mu_A,\epsilon,\iota)$ where $\mu_A:A \to A \otimes_k A$ (the \emph{coproduct}), $\epsilon:A \to k$ (the \emph{coidentity}), $\iota: A \to A$ (the \emph{coinverse}) are $k$-algebra homomorphisms, satisfying the following conditions:
 \begin{enumerate}
 \item Coassociativity. The following diagram commutes:
@@ -80,7 +81,7 @@ A \ar[r]^\mu & A \otimes_k A \ar[ur]^{\epsilon \otimes \id_A} \ar[dr]_{\id_A \ot
  }
 \]
 and is equal to the identity.
-\item Inverse. The following diagram commutes:
+\item Coinverse. The following diagram commutes:
 \[
 \xymatrix{
 A \ar[d]^\mu \ar[rr]^\epsilon & & k \ar[d] \\
@@ -92,11 +93,15 @@ Here the right arrow is the morphism making $A$ a $k$-algebra. The last arrow in
 \end{defi}
 
 \begin{example}
- Let $G$ be any group, and let $k[G]$ be its group ring. Let $A$ be its $k$-linear dual, that is $A=\Hom_k(k[G],k)$. This is a priori just another vector space, but we can give it the structure of a $k$-algebra by defining multiplication as follows: let $\lambda:k[G] \to k$,$\gamma:k[G] \to k$ be $k$-linear maps. It is enough to say what should happen on a basis, and a basis is given by the elements $g$ of $G$. Then, set $(\lambda \cdot \gamma)(g) = \lambda(g)\cdot \gamma(g)$.
+If $G=\GL_n$, then $A=k[T_{ij},\det T]$. Then $\mu_A$ is given by
+\[
+T_{ij} \mapsto \sum_{h=1}^n T_{ih} \otimes T_{hj}.
+\]
+The coinverse is given by the usual Cramer's rule. Also $\epsilon(T_{ij})=\delta_{ij}$.
+\end{example}
 
-Then set $\mu:A \to A \otimes A$ to be the dual of the multiplication map on $k[G]$. Explicitly, let $m:k[G] \otimes_k k[G] \to k[G]$ denoted the multiplication map. Let $\lambda:k[G] \to k$ be an element of $A$. Then we can form $m^\ast \lambda = \lambda \circ m$, which is an element of $(k[G] \otimes k[G])^\vee$. For finite-dimensional vector spaces, this is isomorphic to $A \otimes A$, which gives our multiplication map $\mu$. The coidentity is given by sending $\lambda:k[G]\to k$ to $\lambda(1_G)$, where $1_G \in G \subseteq k[G]$.
-
-For example: let $G=C_n$ be the cyclic group of order $n$. Then $k[G] = k[t]/(t^n-1)$, and since this is finite-dimensional over $k$, we can find an isomorphism $k[G] \approx A$. Unwinding definitions, we see that [????] (I dont see this)
+\begin{example}
+If $G=\Gr_a=(\Aa^1,+)=\Spec k[X]$, then $\mu_A(X)=X \otimes 1 + 1 \otimes X$. The coidentity is $\epsilon(X)=0$, and the coinverse is $\iota(X)=-X$.
 \end{example}
 
 \begin{example}
@@ -277,16 +282,83 @@ Thus, in a sense, the two notions of $G$-invariance coincides.
  Let $R$ be a $k$-algebra and $M$ an $R$-module. An \emph{$M$-valued derivation} is a $k$-linear map $D:R \to M$ satisfying the Leibniz rule $D(xy)=xD(y) + yD(x)$ for $x,y \in R$.
 \end{defi}
 
-The set of $M$-valued derivations is also an $R$-module, denoted by $\Der_k(R,M)$. This is used to define tangent spaces in algebraic geometry as follows: Let $p \in \Spec A=X$ be a closed point. Then we have a local ring $\OO_{X,p}$ and a quotient map $\OO_{X,p} \to k$ with kernel $\mm_p$. Then the $k$-module $(\mm_p/\mm_p^2)^\vee$ is called the \emph{Zariski tangent space} of $p \in X$. In fact:
+The set of $M$-valued derivations is also an $R$-module, denoted by $\Der_k(R,M)$. This is used to define tangent spaces in algebraic geometry as follows: Let $p \in \Spec A=X$ be a closed point. Then we have a local ring $\OO_{X,p}$ and a quotient map $\OO_{X,p} \to \OO_{X,p}/\mm_p \simeq  k$. Then the $k$-module $(\mm_p/\mm_p^2)^\vee$ is called the \emph{Zariski tangent space} of $p \in X$. In fact:
 \begin{prop}
-We have an isomorphism of $A$-modules:
+\label{propzariski}
+We have an isomorphism of $\OO_{X,p}$-modules:
 $$ \Der_k(\OO_{X,p},k) \simeq (\mm_p/\mm_p^2)^\vee
 $$
 \end{prop}
 \begin{proof}
-sketch send $D$ to $\restr{D}{\mm_p}$. 
+Send $D \in \Der_k(\OO_{X,p},k)$ to $\restr{D}{\mm_p}$. This is well-defined if $D$ vanishes on $\mm_p^2$. But if $m_1,m_2 \in \mm_p$, then $$D(m_1m_2)=m_1D(m_2)+m_2D(m_1)=0 \in \OO_{X,p}/\mm_p.$$
+So the map is well-defined.
+
+We have a map in the opposite direction as well. Let $\ell:\mm_p/\mm_p^2 \to k$ be a linear functional on the $k$-vector space $\mm_p/\mm_p^2$. Define $D_\ell$ to be the $k$-linear map $D_\ell:\OO_{X,p} \to k$ given by
+$$
+D_\ell(f) = \begin{cases}
+0 & \text{if $f \in k$} \\
+\ell(f) & \text{if $f \in \mm_p$} \\
+0 & \text{if $f \in \mm_p^2$}.
+\end{cases}
+$$
+I know claim that this is a derivation. Write $f,g \in \OO_{X,p}$ as $c+m,c'+m'$ where $c$ is outside the maximal ideal and $m \in \mm_p$. Then
+$$
+D_\ell(fg)=D_\ell(cc'+cm'+c'm+m'm') = cD_\ell(m')+c'D_\ell(m),
+$$
+by definition of $D_\ell$.
+
+It is easy to check that these two maps are inverse to each other.
 \end{proof}
-[[ Also $\Hom_k(k[\epsilon],\OO_{X,p})$.
+
+In fact, the module of derivations is what is called a \emph{corepresentable functor}. There is an $R$-module $\Omega_{R/k}$ such that $\Der_k(R,M)=\Hom_R(\Omega_{R/k},M)$, functorially in $M$. This is the module of \emph{Kähler differentials}.
+
+A derivation is a $k$-linear map vanishing at $\mm_p^2$. The generalization of this are \emph{local distributions}:
+
+\begin{defi}
+Let $\mm_p \in Spec X$. A \emph{local distribution with support $\mm_p \in X$} is a $k$-linear map $\alpha:R \to k$ with the property that $\alpha(\mm_p^N)=0$ for some $N \in \N$.
+
+The minimal $N$ such that $\alpha(\mm_p^{N+1})=0$ is called the \emph{degree} of the distribution. Thus the distributions of degree $1$ are the derivations (up to isomorphism).
+\end{defi}
+
+We can identify the set of local distributions of degree $\leq d$ with $k$-module $(R/\mm_p^{d+1})^\vee$. The surjections $R/\mm_p^{d+1} \to R/\mm_p^{d}$ induce injections $(R/\mm_p^d)^\vee \hookrightarrow (R/\mm_p^{d+1})^\vee$. We can thus identify the set of distributions supported at $p$ with $\varinjlim R/\mm_p^i = \bigcup_i R/\mm_p^i$.
+
+\subsubsection{The distribution algebra}
+
+If now $G=\Spec A$ is an affine algebraic group with coordinate ring $A$, then denote by $\HH(G)$ the vector space of distributions $\alpha:A \to k$ supported at $e \in G$. The Zariski tangent space at $e \in G$ is called the \emph{Lie space} of $G$ and is denoted by $\g \subset \HH(G)$.
+
+\begin{defi}
+ Let $\alpha,\beta \in \HH(G)$. Then we define the \emph{convolution product} $\alpha \star \beta$ to be the composition
+$$
+A \xrightarrow{\mu_A} A \otimes_k A \xrightarrow{\alpha \otimes \beta} k \otimes_k k \simeq k.
+$$
+\end{defi}
+
+\begin{lemma}
+The convolution product $\alpha \star \beta$ is again a local distribution supported at the identity with
+$$
+\deg \alpha \star \beta \leq \deg \alpha + \deg \beta.
+$$
+\end{lemma}
+\begin{proof}
+ [comes later]
+\end{proof}
+
+\begin{lemma}
+The structure map $\epsilon:A \to k$ from Definition \ref{defalggrp} (``evaluation at the identity'') is an identity element for the convolution product.
+\end{lemma}
+\begin{proof}
+This follows from the following diagram:
+\[
+A \xrightarrow{\mu_A} A \otimes_k A \xrightarrow{\epsilon \otimes \id} k \otimes A \xrightarrow{\id \otimes \alpha} k \otimes k \simeq k.
+\]
+The composition is equal to $\epsilon \star \alpha$, but by Part 2 of Definition \ref{defalggrp}, it is also equal to $\alpha$.
+\end{proof}
+
+[...]
+
+\subsubsection{The Casimir operator}
+
+
 
 \subsection{Linear reductivity}
 
@@ -351,5 +423,15 @@ The classical example of a group that is not linearly reductive is the affine li
 \]
 This is a representation by the rules of matrix multiplication. Algebraically, this as follows: let $x,y$ be a basis for $V$. Then we define a $k$-linear map $V \to V \otimes_k k[t]$ by $x \mapsto x \otimes 1$ and $y \mapsto x \otimes t + y \otimes 1$. This extends to a representation of $k[V]=k[x,y]$ in the obvious way. Then we can define an epimorphism of representations by sending $k[x,y] \to k[x,y]/(x) \simeq k[y]$. Taking invariants, we get that $k[x,y]^{\Gr_a} = k[x]$ but $k[y]^{\Gr_a}=k[y]$, but the map sends $x$ to $0$, so is not surjective.
 \end{example}
+
+\section{Moduli theory}
+
+The problem of moduli theory is \emph{classification}. This can be made precise in various ways, depending upon the sophistication of the reader.
+
+Let $V$ be an $n$-dimensional vector space. Suppose you want to classify $k$-planes in $V$. Up to isomorphism, this is trivial, since all vector spaces are determined once the integer $k$ is given. In that sense, the moduli space is just the point $\{k \}$. However, let us instead look at the whole set
+$$ \Gr(k,n) = \{ L \mid \text{ L is a $k$-plane in $V$} \}.$$
+So far, this is just a set. What does it mean to give a $k$-plane? It is certainly sufficient to give a spanning set, i.e. $k$ linearly independent vectors in $V$. These are elements of an open subset $U$ of $\Aa^{kn}$. But this is redundant: we have an action of $G=\GL_d$ on $\Aa^{kn}$. Two elements $v,v' \in \Aa^{kn}$  represent the same $k$-plane if and only if $v =gv'$ for $g \in \GL_d$.
+
+We are thus led to ask for the existence of $U/\GL_d$. It turns out that this object exists. It is a projective variety called the Grassmannian $\Gr(k,n)$.
 
 \end{document}
