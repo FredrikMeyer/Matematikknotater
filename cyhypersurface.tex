@@ -1,0 +1,54 @@
+\documentclass[11pt, english]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}   % S P R A A K
+
+
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+\usepackage[a5paper,margin=0.5in]{geometry}
+
+\begin{document}
+\title{Calabi-Yau hypersurface and mirror symmetry}
+\author{Fredrik Meyer}
+\maketitle 
+
+\section{Preliminaries}
+
+\subsection{Mirror constructions}
+
+We first review the Batyrev-Borisov construction for hypersurfaces in toric varieties.
+
+Let $\Delta$ be a reflexive polytope of dimension $n$. Let $\PP_\Delta$ be the associated toric variety.
+
+\section{The deformation}
+
+Let $\K = D_6 \ast D_6 \ast \{ x_0 \}$, and let $\PP(\K)$ be the associated Stanley-Reisner scheme.
+
+Let $dP$ be the polytope associated to the del Pezzo surface of degree $6$.
+
+\begin{prop}
+There is a flat deformation of $\PP(\K)$ to the toric variety associated to the polar dual $(dP \times dP)^\circ$.
+\end{prop}
+
+\begin{corr}
+There is a flat deformation of $D_6 \ast D_6$ to a singular Calabi-Yau threefold $X_t$. It has $48$ singularities.
+\end{corr}
+
+
+\end{document}

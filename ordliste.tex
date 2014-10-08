@@ -528,9 +528,11 @@ This is equivalent to the toric divisor $D_j=\OO(\Delta_i)=\sum_{\rho \in \Delta
 
 A polytope $\Delta$ is \textbf{reflexive} if the following two conditions hold:
 \begin{enumerate}
-\item All facets $\Gamma$ of $\Delta$ are supported by affine hyperplanes of the form $\{ m \in M_{\R} \mid \langle m,v_\Gamma \rangle \}$ for some $v_\Gamma \in N$.
+\item All facets $\Gamma$ of $\Delta$ are supported by affine hyperplanes of the form $\{ m \in M_{\R} \mid \langle m,v_\Gamma \rangle = -1 \}$ for some $v_\Gamma \in N$.
 \item The only interior point of $\Delta$ is $0$, that is: $\mathrm{Int}(\Delta) \cap M = \{0\}$.
 \end{enumerate}
+
+It can be proved that a polytope $\Delta$ is reflexive if and only if the associated toric variety $\PP_\Delta$ is \hyperref[fano]{Fano}.
 
 \section{Homological algebra}
 \subsection{Derived functors}
