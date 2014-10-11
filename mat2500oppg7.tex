@@ -68,7 +68,32 @@ $$
 \frac{CP}{PD} \cdot \frac{DQ}{QA} \cdot \frac{AR}{RC} = 1.
 $$
 
-[[FORMLIKHETER...]]
+Strategien er å finne mange formlike trekanter. Vi ser at trekantene $\triangle PDA$ og $\triangle PCC'$ er formlike siden begge har vinkelen $\angle CPC'$ og at $\angle CC'P = \angle DAP$ (siden linjen $C'C$ er parallell med linjen $AD$). Dermed finner vi at
+$$
+\frac{CP}{PD} = \frac{CC'}{AD}.
+$$
+
+Vi finner også at $\triangle QAA'$ er formlik med $\triangle DQC$. Begge har vinkelen $\angle DQC=\angle AQA'$, og bunnen/toppen er kuttet ut av parallelle linjer. Dermed er:
+$$
+\frac{DQ}{QA} = \frac{CD}{AA'}.
+$$
+
+I tillegg finner vi at $\triangle ART$ er formlik med $\triangle CRD$. Dermed finner vi at
+$$
+\frac{AR}{RC}=\frac{AT}{CD}.
+$$
+
+Dette var de tre første formlikhetene. Vi har enda en. Trekantene $\triangle DAT$ og $\triangle DSD'$ er formlike. Dermed er:
+$$
+\frac{AT}{AD} = \frac{SD'}{SD} = \frac{AA'}{CC'}.
+$$
+Med alle disse likhetene i hånd kan vi regne ut Ceva-forholdet:
+$$
+\frac{CP}{PD} \cdot \frac{DQ}{QA} \cdot \frac{AR}{RC} = 
+\frac{CC'}{AD} \cdot \frac{CD}{AA'} \cdot \frac{AT}{CD} = 
+\frac{CC'}{AA'} \cdot \frac{AT}{AD} = 1.
+$$
+Første likhet brukte de tre første formlikhetene, og andre lihket brukte den siste vi fant. Dermed følger det fra Cevas setning at de tre Ceva-linjene $C'A$,$CA'$ og $DD'$ møtes i et punkt, og vi er ferdige. \footnote{Sammenlignet med den algebraiske måten var dette veldig vanskelig! Vi bør være veldig takknemlige for den innsatsen Descartes gjorde med innføringen av koordinater.}
 \begin{figure}
 \label{fig1}
 \definecolor{zzttqq}{rgb}{0.6,0.2,0.}
@@ -124,7 +149,7 @@ $$
 \draw[color=uuuuuu] (10.0231282808,0.0119679221537) node {$S$};
 \end{scriptsize}
 \end{tikzpicture}
-  \caption{Oppgave 6.}
+  \caption{Oppgave 1 (eller nummer 6 i heftet).}
   
 \end{figure}
 \end{losn}
@@ -134,7 +159,7 @@ La $AD,BE,CF$ være tre Ceva-linjer til en trekant $\triangle ABC$ som er konkur
 \end{oppg}
 
 \begin{losn}
-Dette er en kombinasjon av Menelaos' setning Cevas setning. Se Figur 1 for illustrasjon.
+Dette er en kombinasjon av Menelaos' setning Cevas setning. Se Figur 2 for illustrasjon.
 
 Det første vi legger merke til er at $F',D'$ og $E'$ er Menelaos-punkter for trekanten $\triangle ABC$. Så ved Menelaos' setning trenger vi å vise at
 $$
@@ -143,7 +168,7 @@ $$
 \frac{\ol{AF'}}{\ol{F'B}} = -1
 $$
   
-Siden $AD,BE,CF$ er konkurrente, vet vi fra Ceva at
+Siden linjene $AD,BE,CF$ er konkurrente, vet vi fra Ceva at
 
 $$
 \frac{\ol{BD}}{\ol{DC}} \cdot
@@ -159,7 +184,7 @@ $$
 \frac{\ol{AF'}}{\ol{F'B}} = -1.
 $$
 
-Tilsvarende har vi at $D,F,E'$ ligger på linje og er Menelaospunkter for $\triangle ABC$, og at $F,E,D'$ er Menelaos-punkter for $\triangle ABC$, så vi får at
+Tilsvarende har vi at $D,F,E'$ ligger på linje og er Menelaos-punkter for $\triangle ABC$, og at $F,E,D'$ er Menelaos-punkter for $\triangle ABC$, så vi får at
 $$
 \frac{\ol{AF}}{\ol{FB}} \cdot
 \frac{\ol{BD}}{\ol{DC}} \cdot
@@ -259,19 +284,19 @@ Løsningen går ut på å observere at flere trekanter er formlike, og kanseller
 \end{center}
 \end{lemma}
 \begin{proof}[Skisse av bevis:]
-Tegn en normal fra $\alpha$ ned til $\ell_2$. Siden $\ell_1,\ell_2$ er parallelle, får vi tok 90-gradersvinkler. Bruk nå at vinkelsummen er $180$ til å utlede at $\alpha=\beta$.
+Tegn en normal fra $\alpha$ ned til $\ell_2$. Siden $\ell_1,\ell_2$ er parallelle, får vi to 90-gradersvinkler. Bruk nå at vinkelsummen er $180^\circ$ til å utlede at $\alpha=\beta$.
 \end{proof}
 
-Tilbake til løsningen av oppgaven. Siden $AD$ og $FC$ er parallelle, og $DB$ skjærer begge, får vi at vinklene $\angle CDA$ og $\angle BCF$ er like. I tillegg er $\angle FAD=\angle BFC$. Det følger at trekantene $\triangle ABD$ og $\triangle FBC$ er formlike.
+Tilbake til løsningen av oppgaven. Følg med på Figur 3. Siden $AD$ og $FC$ er parallelle, og $BC$ skjærer begge, får vi at vinklene $\angle ADB$ og $\angle FCB$ er like. I tillegg er $\angle BAD=\angle AFC$. Det følger at trekantene $\triangle ABD$ og $\triangle FBC$ er formlike.
 
-På samme viset finner vi at $\triangle AFC$ er formlik med $\triangle ABE$ og at $\triangle ADC$ er formlik med $\triangle BEC$.
+Trekantene $\triangle ABE$ og $\triangle ACF$ er også formlike. Dette er fordi $\angle EAB=\angle CAF$ (disse er motstående vinkler). I tilegg er $\angle ABE=\angle BAD = \angle AFC$ (på grunn av parallelle linjer-lemmaet over). 
 
 Vi får dermed følgende liste med likheter:
-\begin{itemize}
+\begin{enumerate}
 \item $\frac{AF}{AB}=\frac{AC}{AE}=\frac{CF}{EB}$.
 \item $\frac{AB}{FB}=\frac{BD}{BC}=\frac{DA}{CF}$.
 \item $\frac{EB}{AD}=\frac{BC}{DC}=\frac{CE}{CA}$.
-\end{itemize}
+\end{enumerate}
 Ganger vi likhet nummer $1$ og $2$ sammen, får vi at
 $$
 \frac{AF}{FB} = \frac{CF \cdot DA}{EB \cdot CF} = \frac{DA}{EB}.
@@ -285,7 +310,7 @@ Ganger vi alle venstresidene sammen får vi forholdet vi var interessert i, mens
 Vi har ikke brukt fortegnsmål her. Men observer at for punktene $D,E,F$ vil alltid $2$ ligge utenfor trekanten, og én på en av sidene (for å overbevise deg om dette: forestill deg at du vrir på linja gjennom $A$. Med en gang $D$ forlater linjestykket $BC$ vil $E$ eller $F$ komme på innsiden av trekanten). Dermed er fortegnet alltid positivt.
 
 Og vi er ferdige.
-  \begin{figure}
+\begin{figure}
 \centering
 \definecolor{uuuuuu}{rgb}{0.266666666667,0.266666666667,0.266666666667}
 \definecolor{zzttqq}{rgb}{0.6,0.2,0.}
@@ -323,45 +348,40 @@ Og vi er ferdige.
 \end{losn}
 
 \begin{oppg}
- Bruk Cevas setning til å vise at
+ Bruk Cevas setning til å vise påstandene under:
  \begin{enumerate}[a)]
- \item  Høydene i en trekant er konkurrente.
+ \item Høydene i en trekant er konkurrente.
  \item Medianene i en trekant er konkurrente.
  \item Vinklenes halveringslinjer i en trekant er konkurrente.
  \end{enumerate}
 \end{oppg}
 \begin{losn}
-Vi gjør først a) og går rett på sak. Trekantene $\triangle BCF$ og $\triangle BDA$ er formlike, siden begge har vinkelen $\angle DBA$ og har en $90$-gradersvinkel. Dermed får vi at
+  \begin{enumerate}[a)]
+\item
+Vi gjør først a) og går rett på sak. Følg med i Figur 4. Trekantene $\triangle BCF$ og $\triangle BDA$ er formlike, siden begge har vinkelen $\angle DBA$ og har en $90$-gradersvinkel. Dermed får vi at
 $$
 \frac{AB}{BC}=\frac{BD}{BF}=\frac{AD}{CF}.
 $$
-Tilsvarende får vi at trekantene $\triangle CAD$ og $\triangle BCE$ er formlike. Og at $\triangle ABE$ er formlik med $ACF$. Dermed får vi:
+Tilsvarende får vi at trekantene $\triangle CAD$ og $\triangle BCE$ er formlike. Og at trekanten $\triangle ABE$ er formlik med trekanten $\triangle ACF$. Dermed får vi:
 \begin{align*}
  \frac{CB}{CA} &= \frac{BE}{AD}= \frac{EC}{DC} \\
  \frac{AC}{AB} &= \frac{CF}{BE} = \frac{FA}{EA}.
 \end{align*}
 
-Ganger vi sammen nummer én og nummer tre, får vi at 
+Ganger vi alle disse sammen uttrykkene sammen får vi
 $$
-\frac{AF}{FB} = \frac{AC}{BC}\cdot \frac{EA}{BD}.
-$$
-Ganger vi sammen én og to, får vi:
-$$
-\frac{BD}{DC} = \frac{AB}{CA} \cdot \frac{BF}{EC}
-$$
-Ganger vi sammen to og tre får vi:
-$$
-\frac{CE}{EA} = \frac{CB}{AB} \cdot \frac{DC}{FA}.
-$$
-Dermed blir Ceva-uttrykket:
-$$
-\frac{AF}{FB} \cdot \frac{BD}{DC} \frac{CE}{EA} = 1 pga kansellering [...]
+1 = \frac{AB}{BC} \cdot \frac{CB}{CA} \cdot \frac{AC}{AB} = \frac{BD}{BF} \cdot
+\frac{EC}{DC} \cdot \frac{FA}{EA}.
 $$
 
-b) er triviell ($AF=BF$ osv per definisjon av median)
+Men uttrykket til høyre er Ceva-uttrykket vi ville at skulle bli lik én, bare litt omstokket. Så vi konkluderer med at høydene er konkurrente.
 
-c) Dette følger fra setningen om halveringslinjer sammen med Ceva. (merk at vi ikke trenger sinus-setningen som er hint i oppgaven) 
+\item er triviell: medianene er linjene som fra hvert hjørne deler den motstående siden nøyaktig i to. Dermed er, per definisjon, $AF=FB$,$BD=DC$, og $CE=EA$, så alle leddene i Ceva-ligningen er allerede $1$. Så $1 \cdot 1 \cdot 1 = 1$.
 
+\item  Dette følger fra setningen om halveringslinjer sammen med Cevas setning. Husk at setningen om halveringslinjer sier at en linje $AD$ halverer vinkelen i hjørnet $C$ i en trekant $\triangle ABC$ hvis og bare hvis linjestykket $AB$ blir delt i forholdet $\frac{AC}{CB}$ av linjen $AD$. Men dette er det samme som å si at
+$$\frac{\ol{AD}}{\ol{DB}}=\frac{\ol{AC}}{\ol{CB}}$$
+med fortegnsmål. Men nå, akkurat som mange ganger tidligere, ser vi at dette impliserer at alle leddene Ceva-formelen kansellerer, og vi får $1$.
+\end{enumerate}
 
   \begin{figure}
 \centering
@@ -395,8 +415,7 @@ c) Dette følger fra setningen om halveringslinjer sammen med Ceva. (merk at vi 
 \draw[color=uuuuuu] (4.08,-0.88) node {$F$};
 \end{scriptsize}
 \end{tikzpicture}
-    \caption{Oppgave x}
-    
+    \caption{Oppgave 4.}    
   \end{figure}
 \end{losn}
 

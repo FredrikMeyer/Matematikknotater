@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  11 OCT 2014 17:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  11 OCT 2014 18:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**\nonstopmode\input mat2500oppg7.tex
-(./mat2500oppg7.tex
+**\nonstopmode\input mirrorsymmetry.tex
+(./mirrorsymmetry.tex
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/base/size11.clo
@@ -248,15 +248,17 @@ Now handling font encoding U ...
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2013/10/10 3.9g The Babel package
 
-(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/babel-norsk/norsk.ldf
-Language: norsk 2012/08/06 v2.0i Norsk support from the babel system
-
-(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/babel/babel.def
+(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/babel-english/english.l
+df
+Language: english 2012/08/20 v3.3p English support from the babel system
+ (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2013/10/10 3.9g Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
-Package babel Info: Making " an active character on input line 113.
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
 ))
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -1013,38 +1015,53 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \c@losn=\count148
 \c@exc=\count149
 \c@sol=\count150
-) (./mat2500oppg7.aux)
-\openout1 = `mat2500oppg7.aux'.
+)
+(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+\Gm@cnth=\count151
+\Gm@cntv=\count152
+\c@Gm@tempcnt=\count153
+\Gm@bindingoffset=\dimen206
+\Gm@wd@mp=\dimen207
+\Gm@odd@mp=\dimen208
+\Gm@even@mp=\dimen209
+\Gm@layoutwidth=\dimen210
+\Gm@layoutheight=\dimen211
+\Gm@layouthoffset=\dimen212
+\Gm@layoutvoffset=\dimen213
+\Gm@dimlist=\toks52
+)
+(./mirrorsymmetry.aux)
+\openout1 = `mirrorsymmetry.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-
-ABD: EveryShipout initializing macros
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+ ABD: EveryShipout initializing macros
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count151
-\scratchdimen=\dimen206
+\scratchcounter=\count154
+\scratchdimen=\dimen214
 \scratchbox=\box44
-\nofMPsegments=\count152
-\nofMParguments=\count153
-\everyMPshowfont=\toks52
-\MPscratchCnt=\count154
-\MPscratchDim=\dimen207
-\MPnumerator=\count155
-\makeMPintoPDFobject=\count156
-\everyMPtoPDFconversion=\toks53
+\nofMPsegments=\count155
+\nofMParguments=\count156
+\everyMPshowfont=\toks53
+\MPscratchCnt=\count157
+\MPscratchDim=\dimen215
+\MPnumerator=\count158
+\makeMPintoPDFobject=\count159
+\everyMPtoPDFconversion=\toks54
 )
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/oberdiek/epstopdf-base.st
 y
@@ -1066,23 +1083,23 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 25.
+LaTeX Font Info:    Try loading font information for U+msa on input line 26.
  (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 25.
+LaTeX Font Info:    Try loading font information for U+msb on input line 26.
 
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 25.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 26.
 
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Package xypdf Info: Line width: 0.43799pt on input line 25.
+Package xypdf Info: Line width: 0.43799pt on input line 26.
 \AtBeginShipoutBox=\box45
-Package hyperref Info: Link coloring OFF on input line 25.
+Package hyperref Info: Link coloring OFF on input line 26.
 
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1091,86 +1108,97 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 .sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count157
+\c@section@level=\count160
 )
-LaTeX Info: Redefining \ref on input line 25.
-LaTeX Info: Redefining \pageref on input line 25.
-LaTeX Info: Redefining \nameref on input line 25.
- (./mat2500oppg7.out) (./mat2500oppg7.out)
+LaTeX Info: Redefining \ref on input line 26.
+LaTeX Info: Redefining \pageref on input line 26.
+LaTeX Info: Redefining \nameref on input line 26.
+ (./mirrorsymmetry.out) (./mirrorsymmetry.out)
 \@outlinefile=\write5
-\openout5 = `mat2500oppg7.out'.
+\openout5 = `mirrorsymmetry.out'.
 
-Package hyperref Info: bookmark level for unknown oppg defaults to 0 on input l
-ine 31.
-Package hyperref Info: bookmark level for unknown losn defaults to 0 on input l
-ine 34.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a5paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(36.135pt, 348.8308pt, 36.135pt)
+* v-part:(T,H,B)=(36.135pt, 525.23788pt, 36.135pt)
+* \paperwidth=421.10078pt
+* \paperheight=597.50787pt
+* \textwidth=348.8308pt
+* \textheight=525.23788pt
+* \oddsidemargin=-36.135pt
+* \evensidemargin=-36.135pt
+* \topmargin=-73.135pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 35.
+(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 44.
  [1
 
 {/opt/app-sync/texlive/uio-texmf/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 44.
 
-Overfull \hbox (60.30133pt too wide) in paragraph at lines 151--152
-[][] 
- []
+(./mirrorsymmetry.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 44.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 44.
 
-[2] [3]
-Overfull \hbox (9.44704pt too wide) in paragraph at lines 248--249
- [] 
- []
 
-[4]
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 268.
- [5]
-Overfull \hbox (20.6798pt too wide) in paragraph at lines 344--345
- [][] 
- []
+Package rerunfilecheck Warning: File `mirrorsymmetry.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
-[6]
-Overfull \hbox (122.38586pt too wide) in paragraph at lines 417--418
- [][] 
- []
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 422.
-[7] [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 422.
- (./mat2500oppg7.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 422.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 422.
-Package rerunfilecheck Info: File `mat2500oppg7.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 422.
+Package rerunfilecheck Info: Checksums for `mirrorsymmetry.out':
+(rerunfilecheck)             Before: 1F2B9C3FB3B7F461555C55F0C63CE382;46
+(rerunfilecheck)             After:  0E5C85AE019EB0F64E07013039A5DFCB;96.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 44.
  ) 
 Here is how much of TeX's memory you used:
- 20797 strings out of 493308
- 355082 string characters out of 6135157
- 470734 words of memory out of 5000000
- 23755 multiletter control sequences out of 15000+600000
- 20528 words of font info for 70 fonts, out of 8000000 for 9000
+ 20498 strings out of 493308
+ 346065 string characters out of 6135157
+ 472311 words of memory out of 5000000
+ 23498 multiletter control sequences out of 15000+600000
+ 15785 words of font info for 56 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,10n,55p,3280b,872s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,6n,55p,3282b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/enc/dvips/cm-super/cm-super
 -t1.enc}</opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmmi10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi8.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr8.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy10.pfb></opt/app-sync/texlive/uio-texmf/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></opt/app-sync/texlive/uio-texmf/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></opt/app-sync/texlive/uio-t
-exmf/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></opt/app-sync/t
-exlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></opt/app-
-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></op
-t/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pf
-b></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm0
-900.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super
-/sfrm1095.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm
--super/sfrm1200.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/pub
-lic/cm-super/sfrm1728.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/typ
-e1/public/cm-super/sfti1095.pfb>
-Output written on mat2500oppg7.pdf (8 pages, 230569 bytes).
+msfonts/cm/cmr8.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/ty
+pe1/public/cm-super/sfbx1440.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fo
+nts/type1/public/cm-super/sfrm1095.pfb></opt/app-sync/texlive/uio-texmf/texmf-d
+ist/fonts/type1/public/cm-super/sfrm1200.pfb></opt/app-sync/texlive/uio-texmf/t
+exmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb>
+Output written on mirrorsymmetry.pdf (1 page, 74048 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 134 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
