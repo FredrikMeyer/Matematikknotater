@@ -85,19 +85,36 @@ $$
 $$
 from which it easily follows that $H^1(Y,\Omega_\PP \otimes \OO_Y) \simeq H^0(\OO_Y) = k$. We conclude that $h^{11}=1$. 
 
-Now we compute $h^{12} = \dim_k H^1(Y,\Omega^2)$. This is equal to $H^2(Y, \mathscr \Omega_Y)$ by Serre duality. Again we use the conormal sequence. From the Euler sequence we get that $H^2(Y, \Omega_\PP \otimes \OO_Y)=0$. We also get that $h^3(Y,\Omega_\PP \otimes \OO_Y)=24$. NOW $H^3(\Omega_Y)=0$ (WHY??), and it follows from the above computations that $h^{12}=125-24=101$.
+Now we compute $h^{12} = \dim_k H^1(Y,\Omega^2)$. This is equal to $H^2(Y, \Omega_Y)$ by Serre duality. Again we use the conormal sequence. From the Euler sequence we get that $H^2(Y, \Omega_\PP \otimes \OO_Y)=0$. We also get that $h^3(Y,\Omega_\PP \otimes \OO_Y)=24$. NOW $H^3(\Omega_Y)=0$ (WHY??), and it follows from the above computations that $h^{12}=125-24=101$.
 \end{proof}
 
+The moduli space of all quintics is $101$-dimensional, and we can see that as follows: the space of all quintic polynomials is $h^0(\PP^4,\OO_\PP(5))=125$-dimensional. But $\dim \PGL(n+1)=25-1=24$, so that the space of quintics up to automorpisms is $125-24=101$-dimensional. Note that this is the same as $h^{12}=\dim_k H^2(Y,\Omega_Y)$, and this is no coincidence.
 
-TODO:
+The mirror quintic should have its Hodge numbers switched, so we are looking for a $1$-dimensional family. The family $\lvert H^0(\PP,\OO_\PP(5)) \rvert$ have a subfamily invariant under $S_5$, given by
+\begin{equation}
+\label{dwork}
+x_0^5+x_1^5+x_2^5+x_3^5+x_4^5 + \psi x_0x_1x_2x_3x_4=0  
+\end{equation}
+
+for $\psi \in k$. Now let
+$$
+G = \{ (a_0,\cdots, a_4) \in \Z_5^5 \mid \sum a_i \equiv 0 \pmod 5 \} / \Z_5
+$$
+act on $\PP^4$ by multiplication:
+$$
+g \cdot (x_0:\cdots:x_4) = (\zeta^{a_1}x_0:\cdots : \zeta^{a_4}x_4),
+$$
+where $\zeta$ is a fifth root of unity. The family of \eqref{dwork} is invariant under $G$, so that we get a family of hypersurfaces in $\PP^4/G$. This can be shown to give the ``correct'' Calabi-Yau. [[see proofs]]
+
 \begin{itemize}
 \item Complete computation of the quintic and its mirror. $h^{11}$,$h^{12}$. 
-\item Toric construction
 \item Picard Fuchs etc?
 \end{itemize}
 
 
-\section{Batyrev-Borisov}
+\section{Batyrev and Batyrev-Borisov}
 
-...
+The Batyrev construction gives a huge number of mirror candidates using toric geometry. 
+
+
 \end{document}

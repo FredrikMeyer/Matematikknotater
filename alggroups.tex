@@ -375,7 +375,7 @@ Thus, in a sense, the two notions of $G$-invariance coincides.
 
 \subsection{Algebraic groups and their Lie spaces}
 
-[[something about local study]]
+In the spirit of Grothendieck (or maybe the spirit of Newton?\footnote{Or Leibniz, or Lie...}), we will consider infinetesimal neighbourhoods of the identity $e \in G=\Spec A$.
 
 \begin{defi}
  Let $R$ be a $k$-algebra and $M$ an $R$-module. An \emph{$M$-valued derivation} is a $k$-linear map $D:R \to M$ satisfying the Leibniz rule $D(xy)=xD(y) + yD(x)$ for $x,y \in R$.
@@ -414,7 +414,7 @@ In fact, the module of derivations is what is called a \emph{corepresentable fun
 A derivation is a $k$-linear map vanishing at $\mm_p^2$. The generalization of this are \emph{local distributions}:
 
 \begin{defi}
-Let $\mm_p \in Spec X$. A \emph{local distribution with support $\mm_p \in X$} is a $k$-linear map $\alpha:R \to k$ with the property that $\alpha(\mm_p^N)=0$ for some $N \in \N$.
+Let $\mm_p \in \Spec X$. A \emph{local distribution with support $\mm_p \in X$} is a $k$-linear map $\alpha:R \to k$ with the property that $\alpha(\mm_p^N)=0$ for some $N \in \N$.
 
 The minimal $N$ such that $\alpha(\mm_p^{N+1})=0$ is called the \emph{degree} of the distribution. Thus the distributions of degree $1$ are the derivations (up to isomorphism).
 \end{defi}
@@ -439,8 +439,18 @@ $$
 $$
 \end{lemma}
 \begin{proof}
- [comes later]
+The fact that $(e,e) \mapsto e$ under $m:G \times G \to G$, is equivalent to
+$$
+\mu_A^{-1}(\mm \otimes \mm)=\mm,
+$$
+from which it follows that $\mm \otimes \mm = \mu_A(\mm)$. This is again contained in $\mm \otimes A + A \otimes \mm$. Since $\mu_A$ is a ring homomorphism, we have
+$$
+\mu_A(\mm^{a+b+1}) \subset \sum_{i+j=a+b+1} \mm^i \otimes \mm^j.
+$$
+Taking $a = \deg \alpha$ and $\beta = \deg \beta$ proves the lemma.
 \end{proof}
+
+Note that the map $\epsilon:A \to k$ corresponding to $e \in G$ is a distribution of degree zero.
 
 \begin{lemma}
 The structure map $\epsilon:A \to k$ from Definition \ref{defalggrp} (``evaluation at the identity'') is an identity element for the convolution product.
@@ -453,10 +463,58 @@ A \xrightarrow{\mu_A} A \otimes_k A \xrightarrow{\epsilon \otimes \id} k \otimes
 The composition is equal to $\epsilon \star \alpha$, but by Part 2 of Definition \ref{defalggrp}, it is also equal to $\alpha$.
 \end{proof}
 
-[...]
+It follows from coassociativity that $\star$ is associative (easy diagram chase). This makes $\mathcal H(G)$ into an associative algebra over $k$, called the \emph{distribution algebra} of the algebraic group $G$. 
+
+[[EXAMPLES]]
+
+Now let $\mu_V: V \to V \otimes A$ be an algebraic representation, with associated representation $\rho:G \to \GL(V)$. Let $\alpha \in \HH(G)$ be a local distribution. Then composition
+\[
+V \xrightarrow{\mu_V} V \otimes_k A \xrightarrow{\id_V \otimes \alpha} V \otimes k \simeq V
+\]
+is an endemorphism of $V$, which we denote by $\tilde \rho(\alpha)\in \End(V)$. Clearly the map $\alpha \mapsto \tilde \rho (\alpha)$ is linear in $\alpha$. It is also associative, so we get a ring homomorphism
+\begin{equation}
+\tilde \rho: \HH(G) \to \End V.
+\end{equation}
+Thus $V$ is a (non-commutative) $\HH(G)$-module.
+
+Consider the action of $G$ on itself by conjugation: $G \times G \to G$, $(g,h) \mapsto  ghg^{-1}$. Since $e \in G$ is fixed under conjugation, this induces an action on each quotient $A/\mm^n$, and on its dual space. It follows that $\HH(G)$ becomes a linear representation of $G$.
+
+Also: given a representation $\rho:G \to \GL(V)$, the space $\End V$ also becomes a linear representation by mapping $g \in G$ to $(T \mapsto \rho(g) T \rho(g)^{-1}) \in \GL(\End(V))$. 
+
+\begin{lemma}
+With respect to these actions, we have: The map
+$$
+\tilde \rho : \HH(G) \to \End(V)
+$$
+is a homomorphism of $G$-representations.
+\end{lemma}
+
+In particular, the Lie space $\g \subset \HH(G)$ is a subrepresentation of $\HH(G)$. This is called the \emph{adjoint representation} and is denoted by $\mathrm{Ad}:G \to \GL(\g)$.
+
 
 \subsubsection{The Casimir operator}
 
+Let $\kappa: \g \times \g \to k$ be an inner product on the Lie algebra $\g$ of $G$. That is, $\kappa$ is a symmetric and nondegenerate bilinear form on $\g$. We will assume that $\kappa$ is invariant under the adjoint representation $\mathrm{Ad}: G \to \GL(\g)$. This just means that for $X,Y \in \g$, we have $\kappa(g \cdot X,g \cdot Y)=\kappa(X,Y)$. 
+
+\begin{defi}[The Casimir element]
+
+Let $\kappa$ be as above. Let $X_1,\cdots,X_N \in \g$ be a basis for $\g$ and let $X_1',\cdots,X_n' \in \g$ be its dual basis with respect to $\kappa$. Then the distribution
+$$
+\Omega := X_1 \star X_1' + \ldots + X_N \star X_N' \in \HH(G)
+$$
+is called the \emph{Casimir element} over $G$ with respect to $\kappa$.
+\end{defi}
+
+\begin{prop}
+ The Casimir element $\Omega$ is independent of choice of basis.
+\end{prop}
+
+\begin{corr}
+ The Casimir operator is an endomorphism of each representation $V$ of $G$ and 
+$$
+V^G \subset \ker ( \tilde \rho(\Omega)).
+$$
+\end{corr}
 
 
 \subsection{Linear reductivity}
