@@ -29,26 +29,72 @@
 \maketitle 
 
 \section{Preliminaries}
-
-\subsection{Mirror constructions}
-
-We first review the Batyrev-Borisov construction for hypersurfaces in toric varieties.
-
-Let $\Delta$ be a reflexive polytope of dimension $n$. Let $\PP_\Delta$ be the associated toric variety.
+\begin{enumerate}
+\item Stanley-Reisner schemes
+\item Deformations of Stanley-Reisner schemes
+\item Refer to mirror pdf for defs
+\end{enumerate}
 
 \section{The deformation}
 
-Let $\K = D_6 \ast D_6 \ast \{ x_0 \}$, and let $\PP(\K)$ be the associated Stanley-Reisner scheme.
+\subsection{The Stanley-Reisner scheme $\K$}
+Let $D_6$ be a hexagon, and define $\K := D_6 \ast D_6$ and let $\PP(\K)$ be the associated Stanley-Reisner scheme together with its embedding in $\PP^{11}$. We will study the deformation theory of $\K$ in some detail.
+
+Denote the vertices of the ``left'' $D_6$ by $y_1,\cdots,y_6$ and the vertices of right one by $z_1,\cdots,z_6$.
+
+\begin{lemma}
+The automorphism group of $\K$ is $G := D_6 \times D_6 \times \Z/2$ of order $288$. There are interesting subgroups $G' := \Z/6 \times \Z/6 \times \Z/2$ and $G'' := \Z/6 \times \Z/6$.
+\end{lemma}
+
+\begin{prop}
+\label{t1}
+The module $T^1_0$ is $84$-dimensional. The deformations come in three types.
+
+We have $12$ weights of type
+$$
+t_{i} := \frac{y_i}{y_{i+1}y_{i-1}},
+$$
+one for each vertex of $\K$.
+
+There are $72$ more weights:
+$$
+t^{ij}_{i+1,i-1}=\frac{y_iy_j}{y_{i+1}y_{i-1}} \qquad t^{ij}_{j+1,j-1}=\frac{y_iy_j}{y_{j+1}y_{j-1}}.
+$$
+The module $T^1_{-1}$ is $12$-dimensional, they all have the form
+$$
+s_i := \frac{y_i}{y_{i+1}y_{i-1}}.
+$$
+\end{prop}
+
+It follows that $K'= \K \ast \{ v \}$ has $\dim_k T^1_0 = 96$. 
+
+\subsection{Defs}
 
 Let $dP$ be the polytope associated to the del Pezzo surface of degree $6$.
 
 \begin{prop}
-There is a flat deformation of $\PP(\K)$ to the toric variety associated to the polar dual $(dP \times dP)^\circ$.
+There is a flat deformation of $\PP(\K')$ to the toric variety associated to the polar dual $(dP \times dP)^\circ$. The base space is $8$-dimensional.
 \end{prop}
+\begin{remark}
+This is the same as $h^{12}$ of the corresponding Calabi-Yau hypersurface. This suggests that we have captured at least an open subset of the moduli space.
+\end{remark}
+
+The parameters used are all of the form $t_i$ in the notation of Proposition \ref{t1}.
 
 \begin{corr}
-There is a flat deformation of $D_6 \ast D_6$ to a singular Calabi-Yau threefold $X_t$. It has $48$ singularities.
+There is a flat deformation of $D_6 \ast D_6$ to a singular Calabi-Yau threefold $X_t$. It has $48$ isolated singularities.
+
+A computation in \verb|M2| shows that $X_t$ have $\dim_k T^1=96$. In particular, $X_t$ have no ordinary double points as singularities (these have $\dim_k T^1=1$).
 \end{corr}
 
+\begin{prop}
+$X_t$ is smoothable by a flat deformation.
+\end{prop}
+\begin{proof}
+This follows from the last corollary and the main theorem in \cite{namikawa_localmoduli} since $X_t$ have only terminal singularities. 
+\end{proof}
+
+\bibliographystyle{plain} 
+\bibliography{bibliografi} 
 
 \end{document}

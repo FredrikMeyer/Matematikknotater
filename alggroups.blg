@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: alggroups.aux
 The style file: plain.bst
 Database file #1: bibliografi.bib
-You've used 2 entries,
+You've used 3 entries,
             2118 wiz_defined-function locations,
-            514 strings with 4295 characters,
-and the built_in function-call counts, 629 in all, are:
-= -- 60
-> -- 25
-< -- 1
-+ -- 10
-- -- 8
-* -- 51
-:= -- 111
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 10
+            523 strings with 4486 characters,
+and the built_in function-call counts, 1077 in all, are:
+= -- 110
+> -- 32
+< -- 3
++ -- 13
+- -- 10
+* -- 79
+:= -- 171
+add.period$ -- 10
+call.type$ -- 3
+change.case$ -- 14
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 24
-empty$ -- 51
-format.name$ -- 8
-if$ -- 126
+cite$ -- 3
+duplicate$ -- 49
+empty$ -- 93
+format.name$ -- 10
+if$ -- 233
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 3
-newline$ -- 13
-num.names$ -- 4
-pop$ -- 9
+int.to.str$ -- 3
+missing$ -- 4
+newline$ -- 18
+num.names$ -- 6
+pop$ -- 15
 preamble$ -- 1
-purify$ -- 8
+purify$ -- 11
 quote$ -- 0
-skip$ -- 13
+skip$ -- 31
 stack$ -- 0
-substring$ -- 35
-swap$ -- 4
-text.length$ -- 1
+substring$ -- 72
+swap$ -- 16
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 6
+type$ -- 10
 warning$ -- 0
-while$ -- 6
-width$ -- 3
-write$ -- 26
+while$ -- 11
+width$ -- 4
+write$ -- 39

@@ -12,4 +12,10 @@ D.~Mumford, J.~Fogarty, and F.~Kirwan.
   Areas (2)]}.
 \newblock Springer-Verlag, Berlin, third edition, 1994.
 
+\bibitem{thomas_git}
+R.~P. Thomas.
+\newblock Notes on {GIT} and symplectic reduction for bundles and varieties.
+\newblock In {\em Surveys in differential geometry. {V}ol. {X}}, volume~10 of
+  {\em Surv. Differ. Geom.}, pages 221--273. Int. Press, Somerville, MA, 2006.
+
 \end{thebibliography}

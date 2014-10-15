@@ -328,6 +328,11 @@ The \textbf{canonical class} $K_X$ is the class of the \hyperref[canonicalsheaf]
 
 If $X$ is a smooth algebraic variety of dimension $n$, then the canonical sheaf is $\omega := \wedge^n \Omega^1_{X/k}$ the $n$'th exterior power of the cotangent bundle of $X$.
 
+\subsubsection{Nef divisor}
+\label{nef}
+
+Let $X$ be a normal variety. Then a Cartier divisor $D$ on $X$ is \textbf{nef} (\emph{numerically effective}) if $D \cdot C \geq 0$ for every irreducible complete curve $C \subseteq X$. Here $D \cdot C$ is the intersection product on $X$ defined by $\deg(\phi^\ast \OO_X(D))$. Here $\phi:C' \to C$ is the normalization of $C$. 
+
 \subsubsection{Sheaf of holomorphic p-forms}
 \label{pforms}
 
@@ -535,6 +540,18 @@ A polytope $\Delta$ is \textbf{reflexive} if the following two conditions hold:
 It can be proved that a polytope $\Delta$ is reflexive if and only if the associated toric variety $\PP_\Delta$ is \hyperref[fano]{Fano}.
 
 \section{Homological algebra}
+\subsection{Classes of modules}
+\subsubsection{Projective modules}
+\label{projectivemodules}
+Projective modules are those satisfying a universal lifting property. A module $P$ is \textbf{projective} if for every epimorphism $\alpha:M \to N$ and every map, $\beta:P \to N$, there exists a map $\gamma:P \to M$ such that $\beta = \alpha \circ \gamma$.
+\[
+\xymatrix{
+ & P \ar@{-->}[dl]_{\exists\gamma} \ar[d]^\beta \\
+M \ar@{->>}[r]^\alpha & N \ar[r] & 0
+}
+\]
+These are the modules $P$ such that $\Hom(P,-)$ is exact.
+
 \subsection{Derived functors}
 \subsubsection{Ext}
 \label{ext}

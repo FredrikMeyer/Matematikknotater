@@ -45,24 +45,25 @@
 \contentsline {subsubsection}{\numberline {1.4.3}Anticanonical sheaf}{9}{subsubsection.1.4.3}
 \contentsline {subsubsection}{\numberline {1.4.4}Canonical class}{10}{subsubsection.1.4.4}
 \contentsline {subsubsection}{\numberline {1.4.5}Canonical sheaf}{10}{subsubsection.1.4.5}
-\contentsline {subsubsection}{\numberline {1.4.6}Sheaf of holomorphic p-forms}{10}{subsubsection.1.4.6}
-\contentsline {subsubsection}{\numberline {1.4.7}Normal sheaf}{10}{subsubsection.1.4.7}
-\contentsline {subsubsection}{\numberline {1.4.8}Rank of a coherent sheaf}{10}{subsubsection.1.4.8}
-\contentsline {subsubsection}{\numberline {1.4.9}Reflexive sheaf}{10}{subsubsection.1.4.9}
-\contentsline {subsubsection}{\numberline {1.4.10}Very ample line bundle}{10}{subsubsection.1.4.10}
+\contentsline {subsubsection}{\numberline {1.4.6}Nef divisor}{10}{subsubsection.1.4.6}
+\contentsline {subsubsection}{\numberline {1.4.7}Sheaf of holomorphic p-forms}{10}{subsubsection.1.4.7}
+\contentsline {subsubsection}{\numberline {1.4.8}Normal sheaf}{10}{subsubsection.1.4.8}
+\contentsline {subsubsection}{\numberline {1.4.9}Rank of a coherent sheaf}{10}{subsubsection.1.4.9}
+\contentsline {subsubsection}{\numberline {1.4.10}Reflexive sheaf}{10}{subsubsection.1.4.10}
+\contentsline {subsubsection}{\numberline {1.4.11}Very ample line bundle}{11}{subsubsection.1.4.11}
 \contentsline {subsection}{\numberline {1.5}Toric geometry}{11}{subsection.1.5}
 \contentsline {subsubsection}{\numberline {1.5.1}Chow group of a toric variety}{11}{subsubsection.1.5.1}
 \contentsline {subsubsection}{\numberline {1.5.2}Generalized Euler sequence}{11}{subsubsection.1.5.2}
 \contentsline {subsubsection}{\numberline {1.5.3}Polarized toric variety}{11}{subsubsection.1.5.3}
 \contentsline {subsubsection}{\numberline {1.5.4}Toric variety associated to a polytope}{11}{subsubsection.1.5.4}
-\contentsline {subsection}{\numberline {1.6}Types of varieties}{11}{subsection.1.6}
-\contentsline {subsubsection}{\numberline {1.6.1}Abelian variety}{11}{subsubsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6}Types of varieties}{12}{subsection.1.6}
+\contentsline {subsubsection}{\numberline {1.6.1}Abelian variety}{12}{subsubsection.1.6.1}
 \contentsline {subsubsection}{\numberline {1.6.2}Calabi-Yau variety}{12}{subsubsection.1.6.2}
 \contentsline {subsubsection}{\numberline {1.6.3}del Pezzo surface}{12}{subsubsection.1.6.3}
 \contentsline {subsubsection}{\numberline {1.6.4}Elliptic curve}{12}{subsubsection.1.6.4}
 \contentsline {subsubsection}{\numberline {1.6.5}Fano variety}{12}{subsubsection.1.6.5}
 \contentsline {subsubsection}{\numberline {1.6.6}Jacobian variety}{12}{subsubsection.1.6.6}
-\contentsline {subsubsection}{\numberline {1.6.7}K3 surface}{12}{subsubsection.1.6.7}
+\contentsline {subsubsection}{\numberline {1.6.7}K3 surface}{13}{subsubsection.1.6.7}
 \contentsline {subsubsection}{\numberline {1.6.8}Stanley-Reisner scheme}{13}{subsubsection.1.6.8}
 \contentsline {subsubsection}{\numberline {1.6.9}Toric variety}{13}{subsubsection.1.6.9}
 \contentsline {section}{\numberline {2}Commutative algebra}{13}{section.2}
@@ -74,7 +75,7 @@
 \contentsline {subsubsection}{\numberline {2.2.2}The Unmixedness Theorem}{14}{subsubsection.2.2.2}
 \contentsline {subsection}{\numberline {2.3}Rings}{14}{subsection.2.3}
 \contentsline {subsubsection}{\numberline {2.3.1}Cohen-Macaulay ring}{14}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Depth of a ring}{14}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.2}Depth of a ring}{15}{subsubsection.2.3.2}
 \contentsline {subsubsection}{\numberline {2.3.3}Gorenstein ring}{15}{subsubsection.2.3.3}
 \contentsline {subsubsection}{\numberline {2.3.4}Normal ring}{15}{subsubsection.2.3.4}
 \contentsline {section}{\numberline {3}Convex geometry}{15}{section.3}
@@ -88,15 +89,17 @@
 \contentsline {subsubsection}{\numberline {3.2.3}Nef partition}{16}{subsubsection.3.2.3}
 \contentsline {subsubsection}{\numberline {3.2.4}Reflexive polytope}{16}{subsubsection.3.2.4}
 \contentsline {section}{\numberline {4}Homological algebra}{16}{section.4}
-\contentsline {subsection}{\numberline {4.1}Derived functors}{16}{subsection.4.1}
-\contentsline {subsubsection}{\numberline {4.1.1}Ext}{16}{subsubsection.4.1.1}
-\contentsline {subsubsection}{\numberline {4.1.2}Local cohomology}{17}{subsubsection.4.1.2}
-\contentsline {subsubsection}{\numberline {4.1.3}Tor}{17}{subsubsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1}Classes of modules}{16}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Projective modules}{16}{subsubsection.4.1.1}
+\contentsline {subsection}{\numberline {4.2}Derived functors}{17}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Ext}{17}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Local cohomology}{17}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Tor}{17}{subsubsection.4.2.3}
 \contentsline {section}{\numberline {5}Differential and complex geometry}{17}{section.5}
 \contentsline {subsection}{\numberline {5.1}Definitions and concepts}{17}{subsection.5.1}
 \contentsline {subsubsection}{\numberline {5.1.1}Almost complex structure}{17}{subsubsection.5.1.1}
 \contentsline {subsubsection}{\numberline {5.1.2}Connection}{17}{subsubsection.5.1.2}
-\contentsline {subsubsection}{\numberline {5.1.3}Hermitian manifold}{17}{subsubsection.5.1.3}
+\contentsline {subsubsection}{\numberline {5.1.3}Hermitian manifold}{18}{subsubsection.5.1.3}
 \contentsline {subsubsection}{\numberline {5.1.4}K\IeC {\"a}hler manifold}{18}{subsubsection.5.1.4}
 \contentsline {subsubsection}{\numberline {5.1.5}Symplectic manifold}{18}{subsubsection.5.1.5}
 \contentsline {subsection}{\numberline {5.2}Results and theorems}{18}{subsection.5.2}
