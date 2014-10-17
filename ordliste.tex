@@ -357,6 +357,26 @@ A sheaf $\FF$ is \textbf{reflexive} if the natural map $\FF \to \FF^{\vee\vee}$ 
 \label{veryample}
 A line bundle $\LL$ is \textbf{very ample} if there is an embedding $i:X \hookrightarrow \PP_S^n$ such that the pullback of $\OO_{\PP_S^n}(1)$ is isomorphic to $\LL$. In other words, there should be an isomorphism $i^\ast \OO_{\PP^n_S}(1) \simeq \LL$.
 
+\subsection{Singularities}
+\subsubsection{Canonical singularities}
+\label{canonicalsings}
+A variety $X$ has \textbf{canonical singularities} if it satisfies the following two conditions:
+\begin{enumerate}
+\item For some integer $r \geq 1$, the Weil divisor $r K_X$ is Cartier (equivalently, it is $\Q$-Cartier).
+\item If $f:Y \to X$ is a resolution of $X$ and $\{E_i \}$ the exceptional divisors, then
+\[
+r K_Y = f^\ast(rK_X) + \sum a_i E_i
+\]
+with $a_i \geq 0$.
+\end{enumerate}
+
+\subsubsection{Terminal singularities}
+\label{terminalsings}
+
+A variety $X$ have \textbf{terminal singularities} if the $a_i$ in the definition of \hyperref[canonicalsings]{canonical singularities} are all greater than zero.
+
+
+
 \subsection{Toric geometry}
 
 \subsubsection{Chow group of a toric variety}
