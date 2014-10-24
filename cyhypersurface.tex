@@ -68,9 +68,31 @@ $$
 
 It follows that $K'= \K \ast \{ v \}$ has $\dim_k T^1_0 = 96$. 
 
-\subsection{Defs}
+\subsection{Smoothing}
 
-Let $dP$ be the polytope associated to the del Pezzo surface of degree $6$.
+Let $dP$ be the polytope associated to the del Pezzo surface of degree $6$. See Figure 1.
+
+\begin{figure}
+\label{fig:hexagon}
+\centering
+\begin{tikzpicture}
+  \draw (0, 0) grid (4, 4);  
+
+\draw [very thick, color=blue, fill=green, fill opacity=0.2]
+(1,1) -- (2,1) -- (3,2) -- (3,3) -- (2,3) -- (1,2) -- cycle;
+
+\draw [fill=black]  (1, 1) circle (0.1);
+\draw [fill=black]  (2, 1) circle (0.1);
+\draw [fill=black]  (3, 2) circle (0.1);
+\draw [fill=black]  (3, 3) circle (0.1);
+\draw [fill=black]  (2, 3) circle (0.1);
+\draw [fill=black]  (1, 2) circle (0.1);
+\draw [fill=black]  (2, 2) circle (0.12);
+
+
+\end{tikzpicture}
+\caption{The hexagon, a.k.a the polytope associated to a degree 6 del Pezzo surface.}
+\end{figure}
 
 \begin{prop}
 There is a flat deformation of $\PP(\K')$ to the toric variety associated to the polar dual $(dP \times dP)^\circ$. The base space is $8$-dimensional.
@@ -88,10 +110,10 @@ A computation in \verb|M2| shows that $X_t$ have $\dim_k T^1=96$. In particular,
 \end{corr}
 
 \begin{prop}
-$X_t$ is smoothable by a flat deformation.
+$X_t$ have canonical but not terminal singularities.
 \end{prop}
 \begin{proof}
-This follows from the last corollary and the main theorem in \cite{namikawa_localmoduli} since $X_t$ have only terminal singularities. 
+Every hypersurface in a Fano toric variety have at most Gorenstein canonical singularities, by Theorem 4.19 in \cite{batyrev_dualpolyhedra} and the remarks in Section 1 in \cite{batyrev_conifoldegen}, which says that the singularities in the toric stratum $X_\theta$ are terminal if and only if the only lattice points in the dual face $\theta^\circ$ are its vertices. However, in our case, the dual polyhedron have faces with two interior points.
 \end{proof}
 
 \bibliographystyle{plain} 

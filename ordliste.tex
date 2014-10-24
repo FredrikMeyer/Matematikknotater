@@ -108,7 +108,7 @@ Let $X$ be an algebraic variety and $G$ an algebraic group. Then a \textbf{geome
 \item The topology of $Y$ is the quotient topology: a subset $U$ of $Y$ is open if and only if $\pi^{-1}(U)$ is open.
 \item For any open subset $U \subset Y$, $\pi^\ast: k[U] \to k[\pi^{-1}(U)]^G$ is an isomorphism of $k$-algebras.
 \end{enumerate}
-The last condition may be rephrased as an isomorphism of strcture sheaves: $\OO_Y \simeq (\pi_\ast \OO_X)^G$.   
+The last condition may be rephrased as an isomorphism of structure sheaves: $\OO_Y \simeq (\pi_\ast \OO_X)^G$.   
 
 \subsubsection{Hodge numbers}
 \label{hodgenumbers}
@@ -369,13 +369,17 @@ r K_Y = f^\ast(rK_X) + \sum a_i E_i
 \]
 with $a_i \geq 0$.
 \end{enumerate}
+The integer $r$ is called the \emph{index}, and the $r_i$ are called the \emph{discrepancies} at $E_i$.
 
 \subsubsection{Terminal singularities}
 \label{terminalsings}
 
 A variety $X$ have \textbf{terminal singularities} if the $a_i$ in the definition of \hyperref[canonicalsings]{canonical singularities} are all greater than zero.
 
+\subsubsection{Ordinary double point}
+\label{orddoublepoint}
 
+An \textbf{ordinary double point} is a singularity that is analytically isomorphic to $x^2=yz$.
 
 \subsection{Toric geometry}
 
@@ -423,6 +427,11 @@ A \textbf{del Pezzo} surface is a $2$-dimensional \hyperref[fano]{Fano variety}.
 \label{ellipticc}
 
 An \textbf{elliptic curve} is a smooth, projective curve of genus $1$. They can all be obtained from an equation of the form $y^2=x^3+ax+b$ such that $\Delta = -2^4(4a^3+27b^2) \neq 0$. 
+
+\subsubsection{Elliptic surface}
+\label{elliptics}
+
+An \textbf{elliptic surface} is a smooth surface $X$ with a morphism $\pi:X \to B$ onto a non-singular curve $B$ whose generic fiber is a non-singular \hyperref[ellipticc]{elliptic curve}.
 
 \subsubsection{Fano variety}
 \label{fano}

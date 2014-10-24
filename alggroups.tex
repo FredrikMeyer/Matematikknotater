@@ -13,6 +13,7 @@
 \usepackage{enumerate}  % lister $  
 \usepackage{float}
 \usepackage{tikz}
+\usepackage{tikz-cd}
 \usetikzlibrary{calc}
 \usepackage{tikz-3dplot}
 \usepackage{subcaption}
@@ -384,11 +385,13 @@ In the spirit of Grothendieck (or maybe the spirit of Newton?\footnote{Or Leibni
 The set of $M$-valued derivations is also an $R$-module, denoted by $\Der_k(R,M)$. This is used to define tangent spaces in algebraic geometry as follows: Let $p \in \Spec A=X$ be a closed point. Then we have a local ring $\OO_{X,p}$ and a quotient map $\OO_{X,p} \to \OO_{X,p}/\mm_p \simeq  k$. Then the $k$-module $(\mm_p/\mm_p^2)^\vee$ is called the \emph{Zariski tangent space} of $p \in X$. In fact:
 \begin{prop}
 \label{propzariski}
-We have an isomorphism of $\OO_{X,p}$-modules:
-$$ \Der_k(\OO_{X,p},k) \simeq (\mm_p/\mm_p^2)^\vee
+We have isomorphisms of $\OO_{X,p}$-modules:
+$$ \Der_k(\OO_{X,p},k) \simeq (\mm_p/\mm_p^2)^\vee \simeq \Hom_{k-alg}(\OO_{X,p},k[\epsilon])
 $$
 \end{prop}
 \begin{proof}
+We first prove the existence of the first isomorphism.
+
 Send $D \in \Der_k(\OO_{X,p},k)$ to $\restr{D}{\mm_p}$. This is well-defined if $D$ vanishes on $\mm_p^2$. But if $m_1,m_2 \in \mm_p$, then $$D(m_1m_2)=m_1D(m_2)+m_2D(m_1)=0 \in \OO_{X,p}/\mm_p.$$
 So the map is well-defined.
 
@@ -407,7 +410,27 @@ $$
 by definition of $D_\ell$.
 
 It is easy to check that these two maps are inverse to each other.
+
+We give an isomorphism between the first and the third module. We begin first by studying the elements of $\Hom_{k-alg}(\OO_{X,p},k[\epsilon])$. As a $k$-vector space, $k[\epsilon] = k \oplus \epsilon k$. Thus every $f \in \Hom_{k-alg}(\OO_{X,p},k[\epsilon])$ can be written as $f = \lambda(f) + \epsilon \delta(f)$. But we have a diagram
+\[
+\begin{tikzcd}
+{}& k \arrow{dr} \arrow{dl} & \\
+\OO_{X,p} \arrow{dr} \arrow{rr}{f} & & k[\epsilon] \arrow{dl} \\
+ & k  
+\end{tikzcd}
+\]
+Thus $\lambda(f)(x) = x \pmod {\mm_p}  = x(p)$. Thus the ``constant part'' of $f$ is determined by default. Furhermore, since $f$ is an algebra morphism, we must have that
+\begin{align*}
+  f(xy) &= (xy)(p) + \epsilon \delta(f)(xy) \\
+f(x)f(y) &= (x(p)+\epsilon \delta(f)(x))(y(p)+\epsilon \delta(f)(y)) \\
+&= x(p)y(p) + \epsilon \left( x(p) \delta(f)(y) + y(p) \delta(f)(x)\right).
+\end{align*}
+Thus we see that the function $\delta(f):\OO_{X,p} \to k$ is a derivation. We thus have a $k$-linear map $\Hom_{k-alg}(\OO_{X,p},k[\epsilon]) \to \Der_k(\OO_{X,p},k)$ by $f \mapsto \delta(f)$. The inverse map is given by the function $D \mapsto {(x \mapsto x(p) + \epsilon D(x))}$. 
 \end{proof}
+
+\begin{remark}
+This smells of some kind of Taylor expansion. In fact, this can be used to compute tangent spaces of Hilbert schemes. Let $X \subset \PP^n$ be a projective variety, and $[X] \in \Hilb_{P(t)}$ the corresponding point in the Hilbert scheme. By the above, the set of morphisms $\Spec k[\epsilon] \to \Hilb_{P(t)}$ are in one to one correspondence with the tangent space of $\Hilb_{P(t)}$ at $[X]$. But by the universal property of the Hilbert scheme, this set is in one-one correspondence with the set of flat families $\mathfrak X \to \Spec k[\epsilon]$. But these are classified by global sections of $\mathcal N_{X/\PP^n}$, the normal bundle.
+\end{remark}
 
 In fact, the module of derivations is what is called a \emph{corepresentable functor}. There is an $R$-module $\Omega_{R/k}$ such that $\Der_k(R,M)=\Hom_R(\Omega_{R/k},M)$, functorially in $M$. This is the module of \emph{Kähler differentials}.
 
@@ -416,7 +439,7 @@ We compute the Zariski tangent space of $\SL_n$ at the identity element. Note th
 $$
 0 \to \Der_k(R,k) \to \Der_k(k[x_{ij}],k) \to \Hom_k(I/I^2,k)
 $$
-of $R$-modules. The first map is just the pullback of the projection $k[x_{ij}] \to R$. The second map send $D \in \Der_k(k[x_{ij}],k)$ to the restriction $\restr{D}{I/I^2}$. This does not a priori make sense. But since we are considering homomorphisms to $k=R/\mm_e$, it is easy to see that any $D$ vanishes on $I^2$. Thus the Zariski tangent space of $SL_n$ at the identity can be identified with the left term of this sequence. The middle term is spanned as a $k[x_{ij}]$ module by $\restr{\dd{}{x_{ij}}}{X=I_n}$, so that we can identify it with $\End(V)$.
+of $R$-modules. The first map is just the pullback of the projection $k[x_{ij}] \to R$. The second map send $D \in \Der_k(k[x_{ij}],k)$ to the restriction $\restr{D}{I/I^2}$. This does not a priori make sense. But since we are considering homomorphisms to $k=R/\mm_e$, it is easy to see that any $D$ vanishes on $I^2$. Thus the Zariski tangent space of $SL_n$ at the identity can be computed as the kernel of the map to the right. The middle term is spanned as a $k$-vector space by $\restr{\dd{}{x_{ij}}}{X=I_n}$, so that we can identify it with $\End(V)$.
 
 Since $I$ is principal, it follows that $\Hom_k(I/I^2,k) \simeq \Hom_k(A,k) \simeq k$. Doing all the identifications, the right map is then given by $D \mapsto \restr{D(\det M)}{I_n}$. A computation gives that $\restr{D(\det M)}{I_n}=\tr M $, so that the kernel is given by the matrices with trace zero.
 \end{example}

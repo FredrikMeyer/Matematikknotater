@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  21 OCT 2014 12:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  24 OCT 2014 10:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**\nonstopmode\input ordliste.tex
-(./ordliste.tex
+**\nonstopmode\input mat2500oppg9.tex
+(./mat2500oppg9.tex
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/base/size11.clo
@@ -248,17 +248,15 @@ Now handling font encoding U ...
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2013/10/10 3.9g The Babel package
 
-(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/babel-english/english.l
-df
-Language: english 2012/08/20 v3.3p English support from the babel system
- (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/babel/babel.def
+(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/babel-norsk/norsk.ldf
+Language: norsk 2012/08/06 v2.0i Norsk support from the babel system
+
+(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2013/10/10 3.9g Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
-\l@canadian = a dialect from \language\l@american 
-\l@australian = a dialect from \language\l@british 
-\l@newzealand = a dialect from \language\l@british 
+Package babel Info: Making " an active character on input line 113.
 ))
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -345,10 +343,7 @@ Package: amsthm 2004/08/06 v2.20
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
 )
-(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/fundus-calligra/calligra.
-sty
-Package: calligra 2012/04/10 v1.9 LaTeX package calligra
-) (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/url/url.sty
+(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
@@ -733,6 +728,56 @@ File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
 )))
+(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/pgf/frontendlayer/tikz/
+libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2009/09/04 v2.10 (rcs-revision 1.6)
+)
+(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/pgf/frontendlayer/tikz/
+libraries/tikzlibraryintersections.code.tex
+(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/pgf/libraries/pgflibrar
+yintersections.code.tex
+\pgf@intersect@solutions=\count122
+))
+(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/tikz-3dplot/tikz-3dplot.s
+ty (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/pgf/frontendlayer/tikz/
+libraries/tikzlibrary3d.code.tex
+File: tikzlibrary3d.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
+)
+(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/pgf/frontendlayer/tikz/
+libraries/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
+
+(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/pgf/libraries/pgflibrar
+yarrows.code.tex
+File: pgflibraryarrows.code.tex 2008/10/27 v2.10 (rcs-revision 1.9)
+\arrowsize=\dimen158
+)))
+(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+
+(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen159
+\captionmargin@=\dimen160
+\captionwidth=\dimen161
+\caption@tempdima=\dimen162
+\caption@indent=\dimen163
+\caption@parindent=\dimen164
+\caption@hangindent=\dimen165
+)
+\c@ContinuedFloat=\count123
+Package caption Info: float package is loaded.
+)
+\c@subfigure=\count124
+\c@subtable=\count125
+)
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/xypic/xy.sty
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/xypic/xy.tex
 Bootstrap'ing: catcodes, docmode,
@@ -744,45 +789,45 @@ Bootstrap'ing: catcodes, docmode,
  Xy-pic is free software: see the User's Guide for details.
 
 Loading kernel: messages; fonts; allocations: state,
-\X@c=\dimen158
-\Y@c=\dimen159
-\U@c=\dimen160
-\D@c=\dimen161
-\L@c=\dimen162
-\R@c=\dimen163
+\X@c=\dimen166
+\Y@c=\dimen167
+\U@c=\dimen168
+\D@c=\dimen169
+\L@c=\dimen170
+\R@c=\dimen171
 \Edge@c=\toks44
-\X@p=\dimen164
-\Y@p=\dimen165
-\U@p=\dimen166
-\D@p=\dimen167
-\L@p=\dimen168
-\R@p=\dimen169
+\X@p=\dimen172
+\Y@p=\dimen173
+\U@p=\dimen174
+\D@p=\dimen175
+\L@p=\dimen176
+\R@p=\dimen177
 \Edge@p=\toks45
-\X@origin=\dimen170
-\Y@origin=\dimen171
-\X@xbase=\dimen172
-\Y@xbase=\dimen173
-\X@ybase=\dimen174
-\Y@ybase=\dimen175
-\X@min=\dimen176
-\Y@min=\dimen177
-\X@max=\dimen178
-\Y@max=\dimen179
+\X@origin=\dimen178
+\Y@origin=\dimen179
+\X@xbase=\dimen180
+\Y@xbase=\dimen181
+\X@ybase=\dimen182
+\Y@ybase=\dimen183
+\X@min=\dimen184
+\Y@min=\dimen185
+\X@max=\dimen186
+\Y@max=\dimen187
 \lastobjectbox@=\box39
 \zerodotbox@=\box40
-\almostz@=\dimen180
+\almostz@=\dimen188
  direction,
-\d@X=\dimen181
-\d@Y=\dimen182
-\K@=\count122
-\KK@=\count123
-\Direction=\count124
-\K@dXdY=\dimen183
-\K@dYdX=\dimen184
+\d@X=\dimen189
+\d@Y=\dimen190
+\K@=\count126
+\KK@=\count127
+\Direction=\count128
+\K@dXdY=\dimen191
+\K@dYdX=\dimen192
 \xyread@=\read2
 \xywrite@=\write4
-\csp@=\count125
-\quotPTK@=\dimen185
+\csp@=\count129
+\quotPTK@=\dimen193
 
 utility macros; pictures: \xy, positions,
 \swaptoks@@=\toks46
@@ -802,15 +847,15 @@ Package: xy 2013/10/06 Xy-pic version 3.8.9
  Xy-pic option: All features v.3.8
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/xypic/xycurve.tex
  Xy-pic option: Curve and Spline extension v.3.12 curve,
-\crv@cnt@=\count126
+\crv@cnt@=\count130
 \crvpts@=\toks48
 \splinebox@=\box42
-\splineval@=\dimen186
-\splinedepth@=\dimen187
-\splinetol@=\dimen188
-\splinelength@=\dimen189
+\splineval@=\dimen194
+\splinedepth@=\dimen195
+\splinetol@=\dimen196
+\splinelength@=\dimen197
  circles,
-\L@=\dimen190
+\L@=\dimen198
  loaded)
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/xypic/xyframe.tex
  Xy-pic option: Frame and Bracket extension v.3.14 loaded)
@@ -820,7 +865,7 @@ Package: xy 2013/10/06 Xy-pic version 3.8.9
  Xy-pic option: More Tips extension v.3.11 loaded) loaded)
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/xypic/xyline.tex
  Xy-pic option: Line styles extension v.3.10
-\xylinethick@=\dimen191
+\xylinethick@=\dimen199
  loaded)
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/xypic/xyrotate.tex
  Xy-pic option: Rotate and Scale extension v.3.8 loaded)
@@ -828,13 +873,13 @@ Package: xy 2013/10/06 Xy-pic version 3.8.9
  Xy-pic option: Colour extension v.3.11 loaded)
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/xypic/xymatrix.tex
  Xy-pic option: Matrix feature v.3.14
-\Row=\count127
-\Col=\count128
+\Row=\count131
+\Col=\count132
 \queue@=\toks49
 \queue@@=\toks50
-\qcount@=\count129
-\qcount@@=\count130
-\matrixsize@=\count131
+\qcount@=\count133
+\qcount@@=\count134
+\matrixsize@=\count135
  loaded)
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/xypic/xyarrow.tex
  Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
@@ -853,9 +898,9 @@ loaded) Xy-pic pdf driver: `rotate' extension support
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/generic/xypic/xypdf-ro.tex
 loaded) loaded))
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen192
-\WF@size=\dimen193
-\c@WF@wrappedlines=\count132
+\wrapoverhang=\dimen200
+\WF@size=\dimen201
+\c@WF@wrappedlines=\count136
 \WF@box=\box43
 \WF@everypar=\toks51
 Package: wrapfig 2003/01/31  v 3.6
@@ -913,21 +958,20 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen194
-\Hy@linkcounter=\count133
-\Hy@pagecounter=\count134
+\@linkdim=\dimen202
+\Hy@linkcounter=\count137
+\Hy@pagecounter=\count138
 
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count135
+\Hy@SavedSpaceFactor=\count139
 
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 4319.
 Package hyperref Info: Hyper figures OFF on input line 4443.
 Package hyperref Info: Link nesting OFF on input line 4448.
 Package hyperref Info: Hyper index ON on input line 4451.
@@ -935,32 +979,32 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count136
+\c@Hy@tempcnt=\count140
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen195
-\Fld@menulength=\count137
-\Field@Width=\dimen196
-\Fld@charsize=\dimen197
+\XeTeXLinkMargin=\dimen203
+\Fld@menulength=\count141
+\Field@Width=\dimen204
+\Fld@charsize=\dimen205
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
 Package hyperref Info: backreferencing OFF on input line 6310.
-Package hyperref Info: Link coloring ON on input line 6313.
+Package hyperref Info: Link coloring OFF on input line 6315.
 Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count138
-\c@Item=\count139
-\c@Hfootnote=\count140
+\Hy@abspage=\count142
+\c@Item=\count143
+\c@Hfootnote=\count144
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count141
-\c@bookmark@seq@number=\count142
+\Fld@listcount=\count145
+\c@bookmark@seq@number=\count146
 
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/oberdiek/rerunfilecheck.s
 ty
@@ -970,41 +1014,42 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip49
 ) (./mystyle.sty
-\c@thm=\count143
-\c@oppg=\count144
-\c@losn=\count145
-\c@exc=\count146
-\c@sol=\count147
-) (./ordliste.aux)
-\openout1 = `ordliste.aux'.
+\c@thm=\count147
+\c@oppg=\count148
+\c@losn=\count149
+\c@exc=\count150
+\c@sol=\count151
+)
+No file mat2500oppg9.aux.
+\openout1 = `mat2500oppg9.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
- ABD: EveryShipout initializing macros
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+ABD: EveryShipout initializing macros
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count148
-\scratchdimen=\dimen198
+\scratchcounter=\count152
+\scratchdimen=\dimen206
 \scratchbox=\box44
-\nofMPsegments=\count149
-\nofMParguments=\count150
+\nofMPsegments=\count153
+\nofMParguments=\count154
 \everyMPshowfont=\toks52
-\MPscratchCnt=\count151
-\MPscratchDim=\dimen199
-\MPnumerator=\count152
-\makeMPintoPDFobject=\count153
+\MPscratchCnt=\count155
+\MPscratchDim=\dimen207
+\MPnumerator=\count156
+\makeMPintoPDFobject=\count157
 \everyMPtoPDFconversion=\toks53
 )
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/oberdiek/epstopdf-base.st
@@ -1023,23 +1068,27 @@ cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 28.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 26.
  (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 28.
+LaTeX Font Info:    Try loading font information for U+msb on input line 26.
 
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 28.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 26.
 
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Package xypdf Info: Line width: 0.43799pt on input line 28.
+Package xypdf Info: Line width: 0.43799pt on input line 26.
 \AtBeginShipoutBox=\box45
-Package hyperref Info: Link coloring ON on input line 28.
+Package hyperref Info: Link coloring OFF on input line 26.
 
 (/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1048,110 +1097,54 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 .sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count154
+\c@section@level=\count158
 )
-LaTeX Info: Redefining \ref on input line 28.
-LaTeX Info: Redefining \pageref on input line 28.
-LaTeX Info: Redefining \nameref on input line 28.
- (./ordliste.out) (./ordliste.out)
+LaTeX Info: Redefining \ref on input line 26.
+LaTeX Info: Redefining \pageref on input line 26.
+LaTeX Info: Redefining \nameref on input line 26.
 \@outlinefile=\write5
-\openout5 = `ordliste.out'.
+\openout5 = `mat2500oppg9.out'.
 
- (./ordliste.toc [1
+Package hyperref Info: bookmark level for unknown oppg defaults to 0 on input l
+ine 31.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
+ [1
 
 {/opt/app-sync/texlive/uio-texmf/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-)
-\tf@toc=\write6
-\openout6 = `ordliste.toc'.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
+ (./mat2500oppg9.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
 
- <xymatrix 2x2
-216> <xymatrix 2x2 137> [2] [3] [4] [5] [6] [7]
-Overfull \hbox (29.00937pt too wide) in paragraph at lines 273--274
-\T1/cmr/m/n/10.95 di-men-sion $\OML/cmm/m/it/10.95 d$\T1/cmr/m/n/10.95 , and $\
-OMS/cmsy/m/n/10.95 L$ \T1/cmr/m/n/10.95 is an [][]am-ple[][] in-vert-ible sheaf
- on $\OML/cmm/m/it/10.95 X$\T1/cmr/m/n/10.95 , then $[]$
- []
 
-[8] [9]
-LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
-(Font)              scaled to size 15.76802pt on input line 319.
-LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
-(Font)              scaled to size 17.28003pt on input line 319.
- [10] [11] [12] [13] <xymatrix 2x2 141> [14]
-Overfull \hbox (47.62799pt too wide) in paragraph at lines 486--488
-\T1/cmr/m/n/10.95 is com-mu-ta-tive. Thus we have a nat-u-ral iso-mor-phism $[]
-[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 B; M\OT1/cmr/m/n/10.95 ) = [][](
-[]\OML/cmm/m/it/10.95 ; M\OT1/cmr/m/n/10.95 )$\T1/cmr/m/n/10.95 .
- []
+Package rerunfilecheck Warning: File `mat2500oppg9.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
-<xymatrix 3x1 96> [15]
-LaTeX Font Info:    Try loading font information for U+euf on input line 517.
-
-(/opt/app-sync/texlive/uio-texmf/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-[16] <xymatrix 3x2 179> [17] [18] [19]
-Overfull \hbox (30.13066pt too wide) in paragraph at lines 677--678
-[]\T1/cmr/m/n/10.95 It re-main to com-pute the Hodge num-bers. We start with $\
-OML/cmm/m/it/10.95 h[] \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 H[]\OT1/cm
-r/m/n/10.95 (\OML/cmm/m/it/10.95 Y; \OT1/cmr/m/n/10.95 
-[])$\T1/cmr/m/n/10.95 .
- []
-
-[20] (./ordliste.bbl [21])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 709.
- [22]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 709.
- (./ordliste.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 709.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 709.
-Package rerunfilecheck Info: File `ordliste.out' has not changed.
-(rerunfilecheck)             Checksum: 669A3219292672F4542B2199FE3B0E64;1510.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 709.
+Package rerunfilecheck Info: Checksums for `mat2500oppg9.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 35.
  ) 
 Here is how much of TeX's memory you used:
- 18851 strings out of 493308
- 314634 string characters out of 6135157
- 433338 words of memory out of 5000000
- 21706 multiletter control sequences out of 15000+600000
- 23841 words of font info for 74 fonts, out of 8000000 for 9000
+ 20224 strings out of 493308
+ 343598 string characters out of 6135157
+ 464972 words of memory out of 5000000
+ 23232 multiletter control sequences out of 15000+600000
+ 15025 words of font info for 55 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,15n,55p,3276b,472s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,6n,55p,3280b,337s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/enc/dvips/cm-super/cm-super
--t1.enc}</opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/calligra
--type1/callig15.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmbx10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmex10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/f
-onts/type1/public/amsfonts/cmextra/cmex8.pfb></opt/app-sync/texlive/uio-texmf/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/app-sync/texlive/uio-
-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/app-sync/texliv
-e/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/app-sync/
-texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/app
--sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></op
-t/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-s10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy6.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy8.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/ty
-pe1/public/amsfonts/euler/eufm10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dis
-t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></opt/app-sync/texlive/uio-tex
-mf/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></opt/app-sync/texl
-ive/uio-texmf/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></opt/app-sync/texl
-ive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></opt/app-syn
-c/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></opt/a
-pp-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><
-/opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1095
-.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sf
-rm1200.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/cm-su
-per/sfrm1728.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public
-/cm-super/sfti1095.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/
-public/xypic/xyatip10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/typ
-e1/public/xypic/xybtip10.pfb>
-Output written on ordliste.pdf (22 pages, 392559 bytes).
+-t1.enc}</opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msam10.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/type1/pub
+lic/cm-super/sfbx1095.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fonts/typ
+e1/public/cm-super/sfrm1095.pfb></opt/app-sync/texlive/uio-texmf/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1200.pfb></opt/app-sync/texlive/uio-texmf/texmf-di
+st/fonts/type1/public/cm-super/sfrm1728.pfb>
+Output written on mat2500oppg9.pdf (1 page, 66052 bytes).
 PDF statistics:
- 543 PDF objects out of 1000 (max. 8388607)
- 487 compressed objects within 5 object streams
- 158 named destinations out of 1000 (max. 500000)
- 205 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 39 PDF objects out of 1000 (max. 8388607)
+ 30 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
