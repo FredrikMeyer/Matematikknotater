@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.19)  27 OCT 2014 23:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.19)  28 OCT 2014 12:00
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**alggroups.tex
-(./alggroups.tex
+**analyticnumbertheory.tex
+(./analyticnumbertheory.tex
 LaTeX2e <2014/05/01>
 Babel <3.9k> and hyphenation patterns for 78 languages loaded.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
@@ -1035,8 +1035,8 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@layoutvoffset=\dimen219
 \Gm@dimlist=\toks55
 )
-(./alggroups.aux)
-\openout1 = `alggroups.aux'.
+(./analyticnumbertheory.aux)
+\openout1 = `analyticnumbertheory.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
@@ -1116,9 +1116,9 @@ LaTeX Info: Redefining \ref on input line 27.
 LaTeX Info: Redefining \pageref on input line 27.
 LaTeX Info: Redefining \nameref on input line 27.
 
-(./alggroups.out) (./alggroups.out)
+(./analyticnumbertheory.out) (./analyticnumbertheory.out)
 \@outlinefile=\write5
-\openout5 = `alggroups.out'.
+\openout5 = `analyticnumbertheory.out'.
 
 
 *geometry* driver: auto-detecting
@@ -1155,180 +1155,49 @@ LaTeX Info: Redefining \nameref on input line 27.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 40.
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [1
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 35.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
+ [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
-t line 53.
- [2]
-Overfull \hbox (18.05937pt too wide) in paragraph at lines 113--115
-\T1/cmr/m/n/10 in-vari-ants are $\OML/cmm/m/it/10 R[] \OT1/cmr/m/n/10 = \U/msb/
-m/n/10 C\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 xz; xw; yz; yw\OT1/cmr/m/n/10 ]$\T1/c
-mr/m/n/10 . Then $\OML/cmm/m/it/10 R[] \OMS/cmsy/m/n/10 ^^Y \U/msb/m/n/10 C\OT1
-/cmr/m/n/10 [\OML/cmm/m/it/10 t[]; t[]; t[]; t[]\OT1/cmr/m/n/10 ]\OML/cmm/m/it/
-10 =\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t[]t[] \OMS/cmsy/m/n/10 ^^@
- []
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 57.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 57.
 
-<xymatrix 2x2 127> [3] <xymatrix 2x2 182> [4]
-Package hyperref Info: bookmark level for unknown defi defaults to 0 on input l
-ine 165.
- <xymatrix 2x2 182> <xymatrix 4x3
-247> <xymatrix 3x2 224> [5] <xymatrix 2x2 141> <xymatrix 2x2 182> <xymatrix
-2x2 141> [6] <xymatrix 2x2 182>
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
- line 266.
-Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
-ine 284.
-
-Overfull \hbox (15.05205pt too wide) in paragraph at lines 285--286
-\T1/cmr/m/it/10 dimensional. Pre-cisely: ev-ery $\OML/cmm/m/it/10 x \OMS/cmsy/m
-/n/10 2 \OML/cmm/m/it/10 V$ \T1/cmr/m/it/10 is con-tained in a finite-dimension
-al
- []
-
-[7]
-Overfull \hbox (5.12688pt too wide) in paragraph at lines 300--301
-[]\T1/cmr/m/n/10 Thus $\OML/cmm/m/it/10 x$ \T1/cmr/m/n/10 is con-tained in the 
-finite-dimensional rep-re-sen-ta-tion $[] \OT1/cmr/m/n/10 :
- []
-
-<xymatrix 2x1 10> [8]
-Overfull \hbox (10.5196pt too wide) detected at line 339
-\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f[]g[]\OT1/cmr/m/n/10 ) = (
-\OML/cmm/m/it/10 m \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 n\OT1/cmr/m/n/10 )\OML/cm
-m/m/it/10 f[]g[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 (\OML/cm
-m/m/it/10 mf[]\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm
-/m/it/10 ng[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 g[]E\OT1/cmr/m/n/10 (\OML/cmm
-/m/it/10 f[]\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 f[]E\OT1/cmr/m/n/10 (\OML/cmm/
-m/it/10 g[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;
- []
-
-<xymatrix 2x1 10>
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 356.
- [9] [10]
-Overfull \hbox (4.46135pt too wide) in paragraph at lines 435--436
-\T1/cmr/m/it/10 sentable func-tor\T1/cmr/m/n/10 . There is an $\OML/cmm/m/it/10
- R$\T1/cmr/m/n/10 -module $\OT1/cmr/m/n/10 
-[]$ \T1/cmr/m/n/10 such that $[][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 R; M\OT1/cm
-r/m/n/10 ) =
- []
-
-[11]
-Overfull \hbox (5.20767pt too wide) in paragraph at lines 444--445
-[]\T1/cmr/m/n/10 Since $\OML/cmm/m/it/10 I$ \T1/cmr/m/n/10 is prin-ci-pal, it f
-ol-lows that $[][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 I=I[]; k\OT1/cmr/m/n/10 ) \
-OMS/cmsy/m/n/10 ' [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; k\OT1/cmr/m/n/10 ) \
-OMS/cmsy/m/n/10 '
- []
-
-[12] [13]
-Overfull \hbox (17.9117pt too wide) in paragraph at lines 515--516
-\T1/cmr/m/n/10 comes a lin-ear rep-re-sen-ta-tion by map-ping $\OML/cmm/m/it/10
- g \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 G$ \T1/cmr/m/n/10 to $\OT1/cmr/m/n/10 (\
-OML/cmm/m/it/10 T \OMS/cmsy/m/n/10 7! \OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 (\OML
-/cmm/m/it/10 g\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 T^^Z\OT1/cmr/m/n/10 (\OML/cmm/m
-/it/10 g\OT1/cmr/m/n/10 )[]) \OMS/cmsy/m/n/10 2
- []
-
-Package hyperref Info: bookmark level for unknown corr defaults to 0 on input l
-ine 555.
-[14]
-Overfull \hbox (41.28084pt too wide) in paragraph at lines 589--590
-[]\T1/cmr/m/it/10 For ev-ery epi-mor-phism $\OML/cmm/m/it/10 V \OMS/cmsy/m/n/10
- ! \OML/cmm/m/it/10 W$ \T1/cmr/m/it/10 of \T1/cmr/m/n/10 finite-dimensional $\O
-ML/cmm/m/it/10 G$\T1/cmr/m/it/10 -representations,
- []
-
-[15] [16]
-Package hyperref Info: bookmark level for unknown thm defaults to 0 on input li
-ne 636.
-
-Overfull \hbox (7.95667pt too wide) in paragraph at lines 647--649
-\T1/cmr/m/n/10 Now we claim that in fact $\OML/cmm/m/it/10 S[]$ \T1/cmr/m/n/10 
-is gen-er-ated as a $\OML/cmm/m/it/10 k$\T1/cmr/m/n/10 -algebra by $\OML/cmm/m/
-it/10 f[]; []  ; f[]$\T1/cmr/m/n/10 .
- []
-
-
-Overfull \hbox (27.88321pt too wide) in paragraph at lines 651--653
-\T1/cmr/m/n/10 is also sur-jec-tive. There-fore there ex-ists in-vari-ant poly-
-no-mi-als $\OML/cmm/m/it/10 h[]; [] ; h[] \OMS/cmsy/m/n/10 2
- []
-
-[17] [18]
-Overfull \hbox (32.95944pt too wide) in paragraph at lines 689--690
-[]\T1/cmr/m/n/10 The con-struc-tion of GIT quo-tient: the group acts on each $\
-OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X; [][]\OT1/cmr/m/n/10 (\O
-ML/cmm/m/it/10 r\OT1/cmr/m/n/10 ))$\T1/cmr/m/n/10 .
- []
-
-
-Overfull \hbox (14.78574pt too wide) in paragraph at lines 706--707
-[][]\T1/cmr/bx/n/10 Definition 5.4. []\T1/cmr/m/n/10 A semistable point $\OML/c
-mm/m/it/10 x \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 X$ \T1/cmr/m/n/10 is \T1/cmr/m
-/it/10 sta-ble \T1/cmr/m/n/10 if $\OMS/cmsy/m/n/10 ^^H[]\OML/cmm/m/it/10 H[]\OT
-1/cmr/m/n/10 (\OML/cmm/m/it/10 X; [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r\OT1/c
-mr/m/n/10 ))[]$
- []
-
-(./alggroups.bbl) [19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 713.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 713.
- (./alggroups.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 713.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 713.
-Package rerunfilecheck Info: File `alggroups.out' has not changed.
-(rerunfilecheck)             Checksum: D91AB66A84B2DB0A6EBE98DEEEC9CA51;738.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 713.
+(./analyticnumbertheory.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 57.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 57.
+Package rerunfilecheck Info: File `analyticnumbertheory.out' has not changed.
+(rerunfilecheck)             Checksum: C56C5820A714D0A3A6D6DE884EB6FF91;42.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 57.
  ) 
 Here is how much of TeX's memory you used:
- 22865 strings out of 493117
- 412136 string characters out of 6135433
- 527291 words of memory out of 5000000
- 25694 multiletter control sequences out of 15000+600000
- 27718 words of font info for 88 fonts, out of 8000000 for 9000
+ 22456 strings out of 493117
+ 405165 string characters out of 6135433
+ 520010 words of memory out of 5000000
+ 25444 multiletter control sequences out of 15000+600000
+ 18907 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,15n,82p,3258b,1010s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,12n,82p,3269b,337s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
 /usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
-r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
-local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/
-texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/201
-4/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2014/te
-xmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2014/texm
-f-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2014/texmf-
-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2014/texmf-di
-st/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2014/texmf-dist
-/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2014/texmf-dist/f
-onts/type1/public/xypic/xyatip10.pfb></usr/local/texlive/2014/texmf-dist/fonts/
-type1/public/xypic/xybsql10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
-/public/xypic/xybtip10.pfb>
-Output written on alggroups.pdf (19 pages, 429443 bytes).
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/tex
+live/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb>
+Output written on analyticnumbertheory.pdf (1 page, 123094 bytes).
 PDF statistics:
- 421 PDF objects out of 1000 (max. 8388607)
- 365 compressed objects within 4 object streams
- 145 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
+ 3 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -15,7 +15,7 @@
 \usepackage{tikz}
 \usepackage{tikz-cd}
 \usetikzlibrary{calc}
-\usepackage{tikz-3dplot}
+%\usepackage{tikz-3dplot}
 \usepackage{subcaption}
 \usepackage[all]{xy}   % for comm.diagram
 \usepackage{wrapfig} % for float right
@@ -452,7 +452,7 @@ Let $\mm_p \in \Spec X$. A \emph{local distribution with support $\mm_p \in X$} 
 The minimal $N$ such that $\alpha(\mm_p^{N+1})=0$ is called the \emph{degree} of the distribution. Thus the distributions of degree $1$ are the derivations (up to isomorphism).
 \end{defi}
 
-We can identify the set of local distributions of degree $\leq d$ with $k$-module $(R/\mm_p^{d+1})^\vee$. The surjections $R/\mm_p^{d+1} \to R/\mm_p^{d}$ induce injections $(R/\mm_p^d)^\vee \hookrightarrow (R/\mm_p^{d+1})^\vee$. We can thus identify the set of distributions supported at $p$ with $\varinjlim R/\mm_p^i = \bigcup_i R/\mm_p^i$.
+We can identify the set of local distributions of degree $\leq d$ with $k$-module $(R/\mm_p^{d+1})^\vee$. The surjections $R/\mm_p^{d+1} \to R/\mm_p^{d}$ induce injections $(R/\mm_p^d)^\vee \hookrightarrow (R/\mm_p^{d+1})^\vee$. We can thus identify the set of distributions supported at $p$ with $\varinjlim (R/\mm_p^i)^\vee = \bigcup_i (R/\mm_p^i)^\vee$.
 
 \subsubsection{The distribution algebra}
 
@@ -512,7 +512,7 @@ Thus $V$ is a (non-commutative) $\HH(G)$-module.
 
 Consider the action of $G$ on itself by conjugation: $G \times G \to G$, $(g,h) \mapsto  ghg^{-1}$. Since $e \in G$ is fixed under conjugation, this induces an action on each quotient $A/\mm^n$, and on its dual space. It follows that $\HH(G)$ becomes a linear representation of $G$.
 
-Also: given a representation $\rho:G \to \GL(V)$, the space $\End V$ also becomes a linear representation by mapping $g \in G$ to $(T \mapsto \rho(g) T \rho(g)^{-1}) \in \GL(\End(V))$. 
+Given a representation $\rho:G \to \GL(V)$, the space $\End V$ also becomes a linear representation by mapping $g \in G$ to $(T \mapsto \rho(g) T \rho(g)^{-1}) \in \GL(\End(V))$. 
 
 \begin{lemma}
 With respect to these actions, we have: The map
@@ -541,6 +541,21 @@ is called the \emph{Casimir element} over $G$ with respect to $\kappa$.
 \begin{prop}
  The Casimir element $\Omega$ is independent of choice of basis.
 \end{prop}
+
+Recall that $\mathrm{Ad}(g)$ is the endomorphism of $\GL(\mathfrak g)$ given by $v \mapsto dc_g(v)$ where $c_g$ is conjugation by $g$. Since the inner product $\kappa$ is assumed to be $G$-invariant, the sets
+$$
+\{ \mathrm{Ad}(g)(X_1),\ldots, \mathrm{Ad}(g)(X_n) \}
+$$ 
+and 
+$$
+\{ \mathrm{Ad}(g)(X_1'),\ldots, \mathrm{Ad}(g)(X_n') \}
+$$ 
+are again dual bases. We deduce:
+\begin{corr}
+The Casimir element $\Omega \in \HH(G)$ is invariant under the action of $G$ on the distribution algebra $\HH(G)$.
+\end{corr}
+
+
 
 \begin{corr}
  The Casimir operator is an endomorphism of each representation $V$ of $G$ and 
