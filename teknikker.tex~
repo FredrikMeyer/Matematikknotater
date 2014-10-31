@@ -1,0 +1,55 @@
+\documentclass[11pt, english]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}   % S P R A A K
+%%
+%% husk 
+%% git pull origin 
+%% git add *
+%% git commit -m "..."k}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, \usepackage{mathrsfs} %,calligra}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $
+\usepackage{float}
+\usepackage{tikz}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{mystyle} % stilfilen      
+ 
+\title{Toolbox}
+\author{Fredrik Meyer}
+\begin{document}
+\maketitle 
+
+\section{Techniques}
+\subsection{Compute the ideal of an affine toric variety}
+
+Suppose given an affine toric $X_\sigma$ defined by a full-dimensional rational polyhedral convex cone in $N_\R \simeq \R^d$. Then the coordinate ring of $X_\sigma$ is given by the semigroup algebra $k[S_\sigma]$, where $S_\sigma = \sigma^\vee \cap M$.
+
+Here $\sigma^\vee$ is the dual cone and $M$ is the dual lattice $N^\vee$. There is a canonical $k$-algebra basis for $k[S_\sigma]$ given by the \emph{Hilbert basis} of the semigroup $\sigma^\vee \cap M$. This gives us a presentation $k[\mathbf x] \to k[S_\sigma]$.
+
+Thus there are three steps in computing the toric ideal:
+\begin{enumerate}
+\item First compute the dual cone $\sigma^\vee$.
+\item Compute a Hilbert basis $\{m_1,\cdots,m_r\}$ of $\sigma^\vee \cap M$.
+\item Compute the kernel of the map 
+  \begin{align*}
+    k[x_1,\cdots, x_r] &\to k[S_\sigma]  \\
+ x_i &\mapsto m_i.
+  \end{align*}
+\end{enumerate}
+
+Here is a \verb|Macaulay2| session that starts with a cone $\sigma \subseteq \N_\R$, and prints the corresponding toric ideal.
+
+\begin{verbatim}
+M = matrix{{3,1},{1,2}}
+C = posHull M
+Cd = dualCone C
+hB = transpose matrix apply(hilbertBasis Cd, a -> entries a_0)
+I  =  toricGroebner(hB, QQ[vars(0..#hB-1)])
+\end{verbatim}
+
+\end{document}

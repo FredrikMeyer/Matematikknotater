@@ -97,17 +97,22 @@ Let $dP$ be the polytope associated to the del Pezzo surface of degree $6$. See 
 \begin{prop}
 There is a flat deformation of $\PP(\K')$ to the toric variety associated to the polar dual $(dP \times dP)^\circ$. The base space is $8$-dimensional.
 \end{prop}
+\begin{proof}
+This can be computed directly, by wisely choosing deformatin parameters. The parameters used are all of the form $t_i$ in the notation of Proposition \ref{t1}. It is also true because $(dP \times dP)^\circ$ have a triangulation given by $\K'$ in the sense of \cite{sturmfels}.
 \begin{remark}
-This is the same as $h^{12}$ of the corresponding Calabi-Yau hypersurface. This suggests that we have captured at least an open subset of the moduli space.
+This is the same as $h^{12}$ of the corresponding Calabi-Yau hypersurface, which again should be the dimension of the moduli space of the mirror Calabi-Yau. This hints that perhaps the mirror lives over the same base space.
 \end{remark}
 
-The parameters used are all of the form $t_i$ in the notation of Proposition \ref{t1}.
-
 \begin{corr}
-There is a flat deformation of $D_6 \ast D_6$ to a singular Calabi-Yau threefold $X_t$. It has $48$ isolated singularities.
-
-A computation in \verb|M2| shows that $X_t$ have $\dim_k T^1=96$. In particular, $X_t$ have no ordinary double points as singularities (these have $\dim_k T^1=1$).
+There is a flat deformation of $D_6 \ast D_6$ to a singular threefold $X_t$. It has $48$ isolated singularities. Of these are $36$ ordinary double points (cones over squares), and $12$ are cones over hexagons.
 \end{corr}
+\begin{proof}
+The Stanley-Reisner ideal of $D_6 \ast D_6$ is a complete intersection in $\K'$. This deforms (and degenerates) together with $\K'$. Thus the statement of the first sentence follows from the proposition.
+
+The singularities are inherited from the toric variety, and the toric variety have $48$ one-dimensional singular curves, corresponding to $48$ non-simplicial cones.
+\end{proof}
+
+Note: Ordinary double points are not locally smoothable. However, a \verb|Macaulay2| computation using the package \verb|VersalDeformations| gives that the cones over the hexagons are locally smoothable. In fact, the versal base space have two components, on of which is a smoothing component.
 
 \begin{prop}
 $X_t$ have canonical but not terminal singularities.
@@ -115,6 +120,8 @@ $X_t$ have canonical but not terminal singularities.
 \begin{proof}
 Every hypersurface in a Fano toric variety have at most Gorenstein canonical singularities, by Theorem 4.19 in \cite{batyrev_dualpolyhedra} and the remarks in Section 1 in \cite{batyrev_conifoldegen}, which says that the singularities in the toric stratum $X_\theta$ are terminal if and only if the only lattice points in the dual face $\theta^\circ$ are its vertices. However, in our case, the dual polyhedron have faces with two interior points.
 \end{proof}
+
+[[TODO: describe resolution, examine smoothing, ...]]
 
 \bibliographystyle{plain} 
 \bibliography{bibliografi} 
