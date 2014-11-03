@@ -3,8 +3,6 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}   % S P R A A K
-
-
 % \usepackage{graphicx}    % postscript graphics
 \usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
 \usepackage{mathrsfs}
@@ -599,6 +597,7 @@ By Proposition \ref{propfinite} there exists a finite-dimensional subrepresentat
 \end{proof}
 
 \begin{lemma}
+\label{linredprod}
 Direct products of linearly reductive groups are linearly reductive. If $H \subset G$ is a normal subgroup and $G$ is linearly reductive, then so is $G/H$. Moreover, if both $H$ and $G/H$ are linearly redutive, then so is $G$.
 \end{lemma}
 \begin{proof}
@@ -628,6 +627,18 @@ The classical example of a group that is not linearly reductive is the affine li
 \]
 This is a representation by the rules of matrix multiplication. Algebraically, this as follows: let $x,y$ be a basis for $V$. Then we define a $k$-linear map $V \to V \otimes_k k[t]$ by $x \mapsto x \otimes 1$ and $y \mapsto x \otimes t + y \otimes 1$. This extends to a representation of $k[V]=k[x,y]$ in the obvious way. Then we can define an epimorphism of representations by sending $k[x,y] \to k[x,y]/(x) \simeq k[y]$. Taking invariants, we get that $k[x,y]^{\Gr_a} = k[x]$ but $k[y]^{\Gr_a}=k[y]$, but the map sends $x$ to $0$, so is not surjective.
 \end{example}
+
+The main aim of this section is to prove that $\SL_n$ is linearly reductive. From this it will follow that also $\GL_n$ is linearly reductive, because it fits into an exact sequence 
+$$
+1 \to k^\ast \to \GL_n \to \SL_n \to 1
+$$
+because, by Lemma \ref{linredprod}, the middle term must also be linearly subsection.
+
+Let $U$ be a finite-dimensional vector space. The Lie algebra of $\GL(U$ is canonically isomorphic to $\End(U)$, and we have a nondegenerate inner product on $\End(U)$ given by the trace:
+$$
+\kappa:\End(U) \times \End(U) \to k, \qquad (f,g) \mapsto \tr(fg).
+$$
+Write $\kappa(f) := \kappa(f,f)$. 
 
 \subsection{Finite generation}
 
