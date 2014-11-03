@@ -539,6 +539,29 @@ is called the \emph{Casimir element} over $G$ with respect to $\kappa$.
 \begin{prop}
  The Casimir element $\Omega$ is independent of choice of basis.
 \end{prop}
+\begin{proof}
+Suppose $\{ Y_1, \cdots, Y_N \}$ be another basis and let $ \{ Y_1',\cdots, Y_N'\}$ be its dual basis. Then
+$$
+Y_i = \sum_{j=1}^N a_{ij} X_j
+$$
+and
+$$
+Y_i' = \sum_{j=1}^N a_{ij}' X_j',
+$$
+for some matrices $A=(a_{ij})$ and $A'=(a_{ij}')$ satisfying $A^TA'=I$. To see this, compute $\kappa(Y_i,Y_j')$. 
+
+Then:
+\begin{align*}
+\sum_{i=1}^N Y_i \star Y_i' &= \sum_{i=1}^N\left(\sum_{j=1}^N a_{ij} X_j \right) \star \left( \sum_{k=1}^N a_{ik}' X_k' \right) \\
+&= \sum_{j,k}^N \left( \sum_{i=1}^N a_{ij} a_{ik}' \right) X_j \star X_k' \\
+&= \sum_{j,k} \delta_{jk} X_j \star X_k' = \Omega.
+\end{align*}
+This proves the statement.
+\end{proof}
+\begin{remark}
+This can also be seen as follows: the non-degenerate form $\kappa$ gives an isomorphism of $\g$ with $\g^\ast$. This is an element of $\Hom(\g,\g^\ast)\simeq \Hom(\g,k) \otimes_k \g^\ast \simeq \g^\ast \otimes \g^\ast \simeq (\g \otimes \g)^\ast$.
+\end{remark}
+
 
 Recall that $\mathrm{Ad}(g)$ is the endomorphism of $\GL(\mathfrak g)$ given by $v \mapsto dc_g(v)$ where $c_g$ is conjugation by $g$. Since the inner product $\kappa$ is assumed to be $G$-invariant, the sets
 $$
