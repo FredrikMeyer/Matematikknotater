@@ -504,21 +504,26 @@ V \xrightarrow{\mu_V} V \otimes_k A \xrightarrow{\id_V \otimes \alpha} V \otimes
 \]
 is an endemorphism of $V$, which we denote by $\tilde \rho(\alpha)\in \End(V)$. Clearly the map $\alpha \mapsto \tilde \rho (\alpha)$ is linear in $\alpha$. It is also associative, so we get a ring homomorphism
 \begin{equation}
+\label{tilde}
 \tilde \rho: \HH(G) \to \End V.
 \end{equation}
-Thus $V$ is a (non-commutative) $\HH(G)$-module.
+Thus $V$ is a (non-commutative) $\HH(G)$-module (if $\alpha:A \to k$ is a distribution and $v \in V$ a vector, then $\alpha \cdot v$ is $\tilde \rho(\alpha)(v)$).
 
 Consider the action of $G$ on itself by conjugation: $G \times G \to G$, $(g,h) \mapsto  ghg^{-1}$. Since $e \in G$ is fixed under conjugation, this induces an action on each quotient $A/\mm^n$, and on its dual space. It follows that $\HH(G)$ becomes a linear representation of $G$.
 
 Given a representation $\rho:G \to \GL(V)$, the space $\End V$ also becomes a linear representation by mapping $g \in G$ to $(T \mapsto \rho(g) T \rho(g)^{-1}) \in \GL(\End(V))$. 
 
 \begin{lemma}
-With respect to these actions, we have: The map
+\label{homog}
+With respect to these actions, we have that the map
 $$
 \tilde \rho : \HH(G) \to \End(V)
 $$
 is a homomorphism of $G$-representations.
 \end{lemma}
+\begin{proof}
+We must show that the map $\tilde \rho$ is $G$-equivariant. [[HOW TO DO THIS??]
+\end{proof}
 
 In particular, the Lie space $\g \subset \HH(G)$ is a subrepresentation of $\HH(G)$. This is called the \emph{adjoint representation} and is denoted by $\mathrm{Ad}:G \to \GL(\g)$.
 
@@ -559,11 +564,10 @@ Then:
 This proves the statement.
 \end{proof}
 \begin{remark}
-This can also be seen as follows: the non-degenerate form $\kappa$ gives an isomorphism of $\g$ with $\g^\ast$. This is an element of $\Hom(\g,\g^\ast)\simeq \Hom(\g,k) \otimes_k \g^\ast \simeq \g^\ast \otimes \g^\ast \simeq (\g \otimes \g)^\ast$.
+This can also be seen as follows: the non-degenerate form $\kappa$ gives a \emph{canonical} isomorphism of $\g$ with $\g^\ast$. This isomorphism is an element of $\Hom(\g,\g^\ast)\simeq \Hom(\g,k) \otimes_k \g^\ast \simeq \g^\ast \otimes \g^\ast \simeq (\g \otimes \g)^\ast$, and writing the isomorphism in \emph{one} basis gives exactly the Casimir element.
 \end{remark}
 
-
-Recall that $\mathrm{Ad}(g)$ is the endomorphism of $\GL(\mathfrak g)$ given by $v \mapsto dc_g(v)$ where $c_g$ is conjugation by $g$. Since the inner product $\kappa$ is assumed to be $G$-invariant, the sets
+Recall that $\mathrm{Ad}(g):\GL(\g) \to \GL(\g)$ is the endomorphism of $\GL(\mathfrak g)$ given by $v \mapsto dc_g(v)$ where $c_g$ is conjugation by $g$. Since the inner product $\kappa$ is assumed to be $G$-invariant, the sets
 $$
 \{ \mathrm{Ad}(g)(X_1),\ldots, \mathrm{Ad}(g)(X_n) \}
 $$ 
@@ -571,20 +575,24 @@ and
 $$
 \{ \mathrm{Ad}(g)(X_1'),\ldots, \mathrm{Ad}(g)(X_n') \}
 $$ 
-are again dual bases. We deduce:
+are again dual bases. We deduce from this and the previous proposition that:
 \begin{corr}
 The Casimir element $\Omega \in \HH(G)$ is invariant under the action of $G$ on the distribution algebra $\HH(G)$.
 \end{corr}
 
+Now let $\rho: G \to \GL(V)$ be any representation of $G$. This is an $\HH(G)$-module via $\tilde \rho:\HH(G) \to \End V$ from Equation \ref{tilde}. In particular, the Casimir element determined an endomorphism of $V$, $\tilde \rho (\Omega): V \to V$, called the \emph{Casimir operator}. 
 
+By the Corollary and Lemma \ref{homog}  $\tilde \rho(\Omega)$ is invariant under the conjugation action of $G$ on $\End V$. Moreover, since $\g$ kills the $G$-invariant $V^G \subset V$, so does the Casimir operator [[ HVA MENES HER??]]. We conclude:
 
 \begin{corr}
- The Casimir operator is an endomorphism of each representation $V$ of $G$ and 
+\label{korrker}
+The Casimir operator is a $G$-endomorphism of each representation $V$ of $G$ and 
 $$
 V^G \subset \ker ( \tilde \rho(\Omega)).
 $$
 \end{corr}
 
+This result will be crucial when proving Hilbert's finiteness theorem.
 
 \subsection{Linear reductivity}
 
@@ -607,7 +615,7 @@ The homomorphism $R$ above is called the \emph{Reynolds operator}.
 The following are equivalent:
 \begin{enumerate}[i)]
 \item $G$ is linearly reductive.
-\item For every epimorphism $V \to W$  of \emph{finite-dimensional} $G$-representations, the induced map $V^G \to W^G$ is surjective.
+\item For every epimorphism $V \to W$  of \emph{finite} dimensional $G$-representations, the induced map $V^G \to W^G$ is surjective.
 \item If $V$ is any finite-dimensional representation and $U \subseteq$ is a proper subrepresentation and $\bar v \in V/U$ is $G$-invariant, then the coset $v + U$ (for any lifting of $\bar v$) contains a non-trivial $G$-invariant vector.
 \end{enumerate}
 \end{prop}
@@ -657,11 +665,87 @@ $$
 $$
 because, by Lemma \ref{linredprod}, the middle term must also be linearly subsection.
 
-Let $U$ be a finite-dimensional vector space. The Lie algebra of $\GL(U$ is canonically isomorphic to $\End(U)$, and we have a nondegenerate inner product on $\End(U)$ given by the trace:
+Let $U$ be a finite-dimensional vector space. The Lie algebra of $\GL(U)$ is canonically isomorphic to $\End(U)$, and we have a nondegenerate inner product on $\End(U)$ given by the trace:
 $$
 \kappa:\End(U) \times \End(U) \to k, \qquad (f,g) \mapsto \tr(fg).
 $$
 Write $\kappa(f) := \kappa(f,f)$. 
+
+\begin{lemma}
+The inner product $\kappa$ is invariant under the adjoint action of $\GL(U)$. In other words:
+\[
+\kappa(\alpha f \alpha^{-1}) =  \kappa(f)
+\]
+is satisfied for all $f \in \End(U)$ and $\alpha \in \GL(U)$.
+\end{lemma}
+\begin{proof}
+The trace is just the natural map $\End(U) \simeq U \otimes U^\ast \to k$ given by $(v,\lambda) \mapsto \lambda(v)$. Under this identification, the adjoint action of $\GL(U)$ on $\End(U)$ is given by $$g \cdot (v \otimes \lambda) = (gv \otimes (w \mapsto \lambda(g^{-1}w)).$$
+Then we see that the trace map is given by
+$$
+g \cdot (v \otimes w) \mapsto \lambda(g^{-1}gv)\lambda(v).
+$$
+\end{proof}
+
+The Lie algebra $\mathfrak{sl}(U)$ of $\SL(U)$ is the sub Lie-algebra of $\g(U)$ given by the traceless matrices. 
+
+\begin{lemma}
+The inner product $\kappa$ is non-degenerate when restricted to $\mathfrak{sl}(U)$, and invariant under the adjoint action. 
+\end{lemma}
+\begin{proof}
+$\kappa$ is non-degenerate on $\End(U)$ and $\mathfrak{sl}(U)$ is the orthogonal complement of the identity element $I_U$. Thus every element $v \in \End(U)$ can be written uniquely as $s+j$ with $s \in \mathfrak{sl}(U)$ and $j$ a multiple of $I_U$. Suppose $\kappa(s,s')$ is zero for all $s' \in \mathfrak{sl}(U)$. Since $\kappa$ is non-degenerate on $\End U$, this implies that $s$ is a multiple of the identity element. But $s$ was assumed to be traceless, so $s$ is zero. 
+\end{proof}
+
+\begin{example}
+The Casimir element of $\SL(2)$ is 
+\[
+\Omega = e \star f + f \star e + \frac 12 h \star h
+\]
+where $e,f,h$ are
+\begin{align*}
+  e = 
+  \begin{pmatrix}
+    0 & 1 \\ 0 & 0 
+  \end{pmatrix} &
+f = \begin{pmatrix}
+0 & 0 \\ 1 & 0 
+\end{pmatrix} & 
+h = 
+\begin{pmatrix}
+  1 & 0 \\ 0 & -1
+\end{pmatrix}.
+\end{align*}
+This is so because $e,f$ are dual with respect to $\kappa$, and $h$ have dual $\frac 12 h$ since $\tr(h^2)=2$. 
+\end{example}
+
+\begin{prop}
+  For a representation $\rho: \SL(n) \to \GL(V)$, the following are equivalent:
+  \begin{enumerate}
+  \item The representation is trival (that is, $\rho(g)=\id_V$ for all $g$).
+\item $\tilde \rho (\Omega)=0$.
+\item $\tr \rho(\Omega) = 0$. 
+  \end{enumerate}
+\end{prop}
+\begin{proof}
+i) $\Rightarrow$ ii) trivially by Corollary \ref{corrker} once one notices that the representation is trivial if and only if $V^G=V$. ii) implies iii) even more trivally. So we have to show that iii) $\Rightarrow$ i).
+
+Let $T \subset \SL(n)$ be the torus subgroup of diagonal matrices and $\mathfrak h \subset \mathfrak{sl}(n)$ its Lie algebra. Then we can decompose $V$ as
+$$
+V = \bigoplus_{\chi \in X(T)} V_\chi.
+$$
+Each $\chi:T \to \Gr_m$ corresponds to a linear form $\bar \chi: \mathfrak h \to k$ with integer coefficients\footnote{Note that since $char k=0$, the integer are naturally embedded in $k$.}. To see this, note that a homomorphism $T \to \Gr_m$ is given by $(t_1,\cdots,t_n) \mapsto t^{\sum t_i\lambda_i}$ for some $\lambda_i$. 
+
+For each $ h \in \mathfrak h$ we have:
+\[
+\tr \tilde \rho (h)^2 = \sum_{\chi \neq 1} (\dim V_\chi) \bar \chi(h)^2 \in \Z.
+\]
+Thus if $\tr \tilde \rho (h)=0$ for all $h \in \mathfrak h$, we must have $\dim V_\chi=0$ for all $\chi \neq 1$. In other words, $V$ is the trivial representation of the torus $T$, or equivalently, $\rho(t)(v)=v$ for all $t \in T \subseteq \SL(n)$.  The same argument works for any subgroup conjugate to $T$, so that $V$ is the trivial representation for the subset of all diagonalizable matrices. But these are dense in $\SL(n)$, so $V$ is trival as a representation of $\SL(n)$ as well.
+
+Thus the proposition is proved if we can show that $\tr \tilde \rho (\Omega)=0$ implies that $\tr \tilde \rho(h)=0$ for all $h \in \mathfrak h$. 
+
+We will do this for $\SL(2)$. In this case $\mathfrak h$ is spanned by the single matrix $h$ from Example 4.30. The Casimir operator [SKJØNNER IKKE!!!!]
+\end{proof}
+
+
 
 \subsection{Finite generation}
 

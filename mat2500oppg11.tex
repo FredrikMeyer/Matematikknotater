@@ -1,0 +1,129 @@
+\documentclass[11pt, norsk]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}   % S P R A A K
+
+
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{intersections}
+\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+
+\begin{document}
+\title{Oppgaver MAT2500}
+\author{Fredrik Meyer}
+\maketitle 
+
+\begin{oppg}
+  Det geometriske stedet for midtpunktet til parallelle koorder i en parabel er ei linje som er parallell med symmetriaksen. Vis dette.
+
+\textbf{MERK:} Her må det menes ``det geometriske stedet for midtpunkter til alle korder parallell til en gitt korde''.
+\end{oppg}
+\begin{losn}
+
+Her kan vi med en gang gjøre en forenkling. En generell parabel gjennom origo er gitt ved $y=cx^2$. Men vi kan gjøre enda en forenkling: siden vi har lyst til å finne ligningen for en linje, og linjer forblir linjer under skalering av koordinataksene, kan vi sette $x = \frac{x'}{\sqrt{c}}$. Dermed blir den nye ligningen $y=x^2$, som er den enkleste parabelen av alle.
+
+En generell korde er gitt ved linjen $y=ax+b$. Ved å sette inn i ligningen $y=x^2$, får vi at midtpunktet har koordinater $(\frac a2,\frac{a^2}{2} +b)$.
+
+Lar vi $b$ variere (og holder $a$ fast, siden vi ser på parallelle korder), ser vi at midtpunktet beveger seg langs linjen $x=\frac a2$, som er parallell med symmetriaksen $x=0$.
+
+MEN! Legg merke til at om $b$ er for liten, så får vi ingen korde. Dermed får vi at det geometriske stedet faktisk er \textbf{linjestykket} fra $(a/2,a^2/4)$ parallell med symmetriaksen.
+\end{losn}
+
+\begin{oppg}
+Stigningstallet til en rekke parallelle korder til parabelen $y^2=2px$ er $k$. Finn ligningen til diameteren gjennom midtpunktet av disse kordene.
+\end{oppg}
+
+\begin{losn}
+Dette er bare en kopi av forrige oppgave. En diameter i en parabel er en linje gjennom sentrum av parabelen. En parabel har sentrum ``i det uendelige'', og et linjestykke er derfor en diameter i parabelen om det er parallelt med symmetriaksen. 
+
+Svaret er derfor det samme som i forrige oppgave, bortsett fra at nå er ligningen $y^2=2px$ i stedet for $y=x^2$. Vi kan regne på akkurat samme måte å få at ligningen for linjestykket er gitt ved $y = p/k$.
+\end{losn}
+
+\begin{oppg}
+La være gitt parabelen $y=4x$ med brennpunkt $F$ og et punkt $Q=(-2,4)$ utenfor parabelen. La $l_Q$ være ei linje gjennom $Q$ som skjærer parabelen i to punkter $A$ og $B$ og la $l_d$ være parabelen gjennom midtpunktet til korden $AB$. Diameteren $l_d$ og styrelinja til parabelen skjærer hverandre i punktet $C$. La $P$ være skjæringspunktet mellom linjene $CF$ og $QA$. Finn det geometriske stedet for $P$ når $l_Q$ varierer, og vis at både $F$ og $Q$ ligger på dette geometriske stedet.
+\end{oppg}
+
+\begin{losn}
+Linja $l_Q$ kan vi skrive som
+$$
+y = a(x-2)+4.
+$$
+Fra forrige oppgave har $l_d$ ligning $y=2/a$. Styrelinja er $x=-1$, så $C=(-1,2/a)$. Linja $CF$ er gitt ved ligningen
+$$
+y = -\frac 1a x - \frac 1a + \frac 2a = -\frac 1a x +\frac 1a.
+$$
+Linjen $QA$ er samme som $l_Q$. Vi kan regne ut skjæringspunktet mellom disse to linjene til å være
+$$
+P = \left( \frac{1-2a^2-4a}{a^2+1} , \frac{3a+4}{a^2+1} \right).
+$$
+
+Vi kan plotte dette i Geogebra med kommandoen 
+\begin{verbatim}
+Curve((1-2a^2-4a)/(1+a^2),(3a+4)/(1+a^2),a,-10,10)
+\end{verbatim}
+Og vi ser at vi får noe som minner svært meget om en sirkel. Problemet er å finne hvilken sirkel dette er. Men vi kan gjette oss til hva det er ved å studere sirkelen i Geogebra. Ved inspeksjon ser det ut til at sirkelen har sentrum $x=-\frac 12$ og $y=2$. Dermed burde ligningen være $(x+\frac 12)^2+(y-2)^2=r^2$, hvor $r$ er radiusen.
+
+Vi kan regne ut at
+$$
+x^2+x = \frac{2a^4+12a^3+11a^2-12a+2}{(1+a^2)^2}
+$$
+og at
+$$
+y^2-4y = \frac{-12a^3-7a^2+12a}{(1+a^2)^2}.
+$$
+Dermed blir
+$$
+x^2+x+y^2-4y = \frac{2a^4+4a^2+2}{(1+a^2)^2} = 2.
+$$
+Fullfører vi kvadratene får vi dermed at radiusen er $r= 5/2$.
+
+Dermed er det geometriske stedet en sirkel, og vi kan sjekke at både $F$ og $Q$ ligger på sirkelen ved å regne at du har avstand $5/2$ fra $(-\frac 12,2)$.
+\end{losn}
+
+\begin{oppg}
+Finn ligningen til en generell sirkel i planet. Hvor mange punkter trengs for å beskrive en sirkel?
+\end{oppg}
+
+\begin{losn}
+En sirkel trenger et sentrum og en radius. Radiusen er ett tall og sentrum er to ekstra tall.
+
+I symboler ser derfor en generell sirkel ut som
+$$
+(x-a)^2+(x-b)^2=r^2
+$$
+
+Det trengs derfor \emph{to} punkter, eller på et vis ``ett og et halvt'' punkt, siden om vi har oppgitt sentrum (ett punkt), trenger vi bare vite lengden til punktet på randa, og ikke selve punktet.
+\end{losn}
+
+\begin{oppg}
+  Finn ligningen til en hyperbel med gitte asymptoter symmetrisk om aksene. Hvor mange punkter trengs for å bestemme en hyperbel med disse asymptotene?
+\end{oppg}
+\begin{losn}
+ Spørsmålet er litt vanskelig å tolke. Med ``aksene'', menes det standard koordinataksene, eller mens det symmetriaksene til en hyperbel? 
+
+Altså, om det menes at vi er gitt asymptotene, så vet vi automatisk sentrum (det er der asymptotene skjærer). Dermed holder det å gi ett ekstra punkt for å finne brennpunktene [.....???]
+\end{losn}
+
+\begin{oppg}
+ Dersom alle sidene i en trekant tangerer en parabel, så går den omskrevne sirkelen til trekanten gjennom brennpunktet til parabelen. Vis dette.
+\end{oppg}
+\begin{losn}
+
+\end{losn}
+
+\end{document}
