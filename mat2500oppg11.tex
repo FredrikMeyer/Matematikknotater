@@ -114,9 +114,7 @@ Det trengs derfor \emph{to} punkter, eller på et vis ``ett og et halvt'' punkt,
   Finn ligningen til en hyperbel med gitte asymptoter symmetrisk om aksene. Hvor mange punkter trengs for å bestemme en hyperbel med disse asymptotene?
 \end{oppg}
 \begin{losn}
- Spørsmålet er litt vanskelig å tolke. Med ``aksene'', menes det standard koordinataksene, eller mens det symmetriaksene til en hyperbel? 
-
-Altså, om det menes at vi er gitt asymptotene, så vet vi automatisk sentrum (det er der asymptotene skjærer). Dermed holder det å gi ett ekstra punkt for å finne brennpunktene [.....???]
+Gitt to linjer med ligning $ax+by=0$ og $a'x+b'y=0$, så kan vi lage en hyperbel med disse som asymptoter ved ligningen $(ax+by)(a'x+b'y)=c$, for en konstant $c$. For å bestemme $c$ trengs det et punkt på hyperbelen, så svaret er at gitt asymptotene, så trengs det ett punkt for å bestemme hele hyperbelen.
 \end{losn}
 
 \begin{oppg}
@@ -124,6 +122,24 @@ Altså, om det menes at vi er gitt asymptotene, så vet vi automatisk sentrum (d
 \end{oppg}
 \begin{losn}
 
+\end{losn}
+
+\begin{oppg}
+ Vis at polaren til et brennpunkt er den tilhørende styrelinja til et kjeglesnitt.
+\end{oppg}
+
+\begin{losn}
+ Dette er trivielt såsnart en har gått gjennom definisjonene.
+
+Gitt et kjeglesnitt, kan en til hvert punkt $P$i planet assosiere en linje $l(P)$ som kalles \emph{polaren} til $P$ (med hensyn på det gitte kjeglesnittet). 
+
+Vi har tre typer kjeglesnitt, og dermed tre typer polarer. I tilfellet parabel med ligning $y^2=4cx$, vet vi at polaren er gitt ved $y_0y=2c(x+x_0)$ der $(x_0,y_0)$ er polen til den polare. Brennpunktet til kjeglesnittet er $(c,0)$, så bare ved å sette inn for $x_0,y_0$, får vi at polaren er linjen $2c(x+c)=0$, eller med andre ord $x=-c$. Men dette er, som vi vet, styrelinja til parabelen.
+
+Vi tar ett eksempel til, og lar den ivrige oppgaveløser gjøre tilfellet hyperbel. Så vi ser på ellipsen. Gitt en ellipse med standardligning $\frac{x^2}{a^2} + \frac{y^2}{b^2}=1$, er den polare gitt ved $$\frac{xx_0}{a^2}+\frac{yy_0}{b^2}=1$. Brennpunktene er gitt ved $(\pm c,0)$, og ved innsetting gir dette $\frac \pm xc}{a^2}= 1$. Men dette er
+$$
+x = \frac {\pm a^2}{c} = \pm a (\frac ca)^{-1} = \pm \frac ae,
+$$
+hvor $e=c/a$. Men dette er, fra Tabell 3 i heftet, nøyaktig lik styrelinjene til en ellipse.
 \end{losn}
 
 \end{document}
