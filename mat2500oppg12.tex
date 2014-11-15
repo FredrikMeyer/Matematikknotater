@@ -4,7 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[norsk]{babel}   % S P R A A K
 
-
+\usepackage{standalone}
 \usepackage{graphicx}    % postscript graphics
 \usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
 \usepackage{mathrsfs}
@@ -13,6 +13,7 @@
 \usepackage{enumerate}  % lister $  
 \usepackage{float}
 \usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
 \usetikzlibrary{calc}
 \usetikzlibrary{intersections}
 \usepackage{tikz-3dplot}
@@ -51,7 +52,7 @@ Dermed er snittet deres gitt av ligningssystemet $x_2=0, x_0-x_2=0$. Altså $x_0
 Lag et projektiv plan med 13 punkter og 13 linjer.
 \end{oppg}
 
-\begin{losn}
+\begin{losn} 
 Dette er vanskeligere enn det høres ut som. Mange har kanskje sett Fano-planet med syv elementer. Se Figur 1.
 \begin{figure}
  \centering
@@ -72,6 +73,82 @@ Det finnes også et projektiv plan med $13$ elementer. Én mulighet er å tegne 
   \caption{En annen, kanskje mer oversiktlig framstilling.}
 \end{figure}
 Vi ser at Figur 2 er mer symmetrisk, men Figur 3 er mer oversiktlig. 
+
+I Figur 4 er en versjon jeg laget, modellert etter den vanlige framstillingen av Fano-planet. Linjene blir ganske uoversiktlige, men om man studerer dette, ser man en del symmetri. 
+\begin{figure}
+\input{fano23.tex}
+  \caption{Det projektive planet $\PP_{\F_3}^2$.}
+\end{figure}
+\end{losn}
+
+\begin{oppg}
+ Det projektive plan med $13$ punkter og $13$ linjer er $\PP_{\F_2}^2$, der $\F_2$ er kroppen med tre elementer (altså addisjon og multiplikasjon modulo tre). Vi har homogene koordinater $(x_0:x_1:x_2)$ der $x_i \in \F_2$, akkurat som i $\PP_\R^2$.
+
+Vis at man kan indeksere punktene $P_0,\ldots, P_{12}$ og linjene $\ell_0,\ldots,\ell_{12}$ slik at $P_i \in \ell_j$ hvis og bare hvis $i + j \equiv 0,1,3,9 \pmod{13}$. Lag en $13 \times 13$-matrise $A$ med $A_{ij}=1$ hvis $P_i \in \ell_j$ og $0$ ellers.
+\end{oppg}
+\begin{losn}
+  Vi hopper foreløpig over denne.
+\end{losn}
+
+\begin{oppg}
+  Med notasjonen fra forrige oppgave, vis at trekantene $P_1P_2P_7$ og $P_3P_8P_4$ er i perspektiv fra $P_0$, det vil si at linjene $\ol{P_1P_3}$, $\ol{P_2P_8}$ og $\ol{P_7 P_4}$ alle går gjennom $P_0$. 
+
+Verifiser Desargues teorem i dette tilfellet. Det vil si, finn $\ol{P_1P_2} \cap \ol{P_3 P_8}$, $\ol{P_2 P_7} \cap \ol{P_4P_8}$ og $\ol{P_3P_4} \cap \ol{P_1P_7}$, og vis at de ligger på en linje.
+\end{oppg}
+\begin{losn}
+Vi gjør en variant av oppgaven. Velg $P_1,P_2,P_7$ til å være de ytre hjørnene i Figur 4. Det vil si, $P_1=(1:0:0)$, $P_2=(0:0:1)$ og $P_7=(0:1:0)$. 
+
+Tilsvarende la $P_3,P_8,P_4$ være den ``indre'' trekanten, altså punktene $(1:2:2),(1:1:2)$ og $(1:2:1)$. 
+
+Da ser vi fra figuren at om vi lar $P_0=(1:1:1)$, så er trekantene i perspektiv fra $P_0$. En annen måte er å finne ligningene til de forskjellige linjene. For eksempel er linjen $\ol{P_1P_3}$ gitt ved $x_1=x_2$.
+
+Nå kan vi se fra bildet at snittene $\ol{P_1P_2} \cap \ol{P_3P_8}$, $\ol{P_2 P_7} \cap \ol{P_4P_8}$ og $\ol{P_3P_4} \cap \ol{P_1P_7}$ er henholdsvis $(1:0:2), (0:1:2)$ og $(1:2:0)$. Men disse ligger alle på den buete linjen, altså linjen $x_0+x_1+x_2=0$.
+
+Vi konkluderer med at Desargues teorem holder (ihvertfall for disse to trekantene).
+\end{losn}
+
+\begin{oppg}
+ En perspektivitet med senter $C \in \PP_\R^2$ er en avbildning ${\alpha:\ell \to \ell'}$ mellom to linjer i $\PP_\R^2$ som sender $P \in \ell$ til $\ol{PC} \cap \ell'$. Vis at $\alpha$ er bijektiv, at det finnes nøyaktig ett fikspunkt, og at $\alpha^{-1}$ også er en perspektivitet.
+\end{oppg}
+\begin{losn}
+Se Figur 5. 
+
+Vi viser at $\alpha$ er bijektiv ved å finne en invers $\alpha^{-1}$. Nemlig, vi definerer $\beta$ til å være den motsatte perspektiviteten $\beta:\ell' \to \ell$ gitt ved $\beta(X)=\ol{XC} \cap \ell$. 
+
+Da er det ``klart'' fra bildet at $\beta= \alpha^{-1}$: $\beta(\alpha(X))$ er nemlig skjæringspunktet mellom $\alpha(X)C$ og $\ell$. Men $\alpha(X)C=XC$, så dette skjæringspunktet er $X$.
+
+Det er også lett å se at skjæringspunktene mellom disse to linjene er et fikspunkt for $\alpha$.
+  \begin{figure}
+\centering
+    \begin{tikzpicture}
+\coordinate (A) at (-1,0);
+\coordinate (A') at (-1,-0.5);
+\coordinate (B) at (4,0);
+\coordinate[label=above:$D$] (D) at (5,3);
+\coordinate[label=above:$C$] (C) at (2,0.5);
+\coordinate[label=below:$\alpha(D)$] (E) at (intersection of D--C and A--B);
+
+\draw (A) -- (B);
+\draw (A') -- (D);
+\fill (C) circle (2pt);
+\fill (D) circle (2pt);
+\fill (E) circle (2pt);
+\draw[dotted] (D) -- (E);
+    \end{tikzpicture}
+    \caption{Perspektivitet med senter $C$.}
+  \end{figure}
+\end{losn}
+
+\begin{oppg}
+ Gitt en perspektivitet $\alpha:\ell \to \ell'$ med senter $P$, vis at det finnes en projektiv transformasjon $T: \PP_\R^2 \to \PP_\R^2$ med $P$ som fikspunkt slik at $\restr{T}{\ell}=\alpha$. Det vil si, hvis $P \in \ell$, så er $T(P)=\alpha(P)$.
+\end{oppg}
+
+\begin{losn}
+Vi skal bruke Setning 6.5 i heftet, som sier at hvis $PQRS$ og $P'Q'R'S'$ er to firkanter i $\PP_\R^2$, så finnes det en unik transformasjon som sender den ene på den andre.
+
+La $C = \ell \cap \ell'$ og la $Q \in \ell$ være et vilkårlig punkt på linja.
+
+Da finnes det en unik transformasjon som sender firkanten $(CQP\alpha(Q))$ på firkanten $(C\alpha(Q)PQ$. 
 \end{losn}
 
 \end{document}
