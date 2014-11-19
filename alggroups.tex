@@ -102,11 +102,11 @@ $$
 \begingroup
 \renewcommand*{\arraystretch}{0.8}
 \begin{pmatrix}
-  \lambda & 0& & \ldots \\
-0& \lambda & & \\
-\vdots & & \lambda^{-1} &0 \\
-&&0& \lambda^{-1}  \in \GL_2(\C).
-\end{pmatrix}
+  \lambda & 0& 0& 0 \\
+0& \lambda & 0 &0  \\
+0  & 0 & \lambda^{-1} &0 \\
+0& 0 &0& \lambda^{-1}
+\end{pmatrix}  \in \GL_2(\C).
 \endgroup
 $$
 The action extends to the coordinate ring $R= \C[x,y,z,w]$, and the invariants are $R^G=\C[xz,xw,yz,yw]$. Then $R^G \approx \C[t_1,t_2,t_3,t_4]/(t_1t_4-t_2t_3)$. This is a hypersurface in $\C^4$. 
@@ -384,10 +384,12 @@ The set of $M$-valued derivations is also an $R$-module, denoted by $\Der_k(R,M)
 \begin{prop}
 \label{propzariski}
 We have isomorphisms of $\OO_{X,p}$-modules:
-$$ \Der_k(\OO_{X,p},k) \simeq (\mm_p/\mm_p^2)^\vee \simeq \Hom_{k-alg}(\OO_{X,p},k[\epsilon])
+$$
+\Der_k(\OO_{X,p},k) \simeq (\mm_p/\mm_p^2)^\vee \simeq \Hom_{k-alg}(\OO_{X,p},k[\epsilon])
 $$
 \end{prop}
 \begin{proof}
+
 We first prove the existence of the first isomorphism.
 
 Send $D \in \Der_k(\OO_{X,p},k)$ to $\restr{D}{\mm_p}$. This is well-defined if $D$ vanishes on $\mm_p^2$. But if $m_1,m_2 \in \mm_p$, then $$D(m_1m_2)=m_1D(m_2)+m_2D(m_1)=0 \in \OO_{X,p}/\mm_p.$$
@@ -726,7 +728,7 @@ This is so because $e,f$ are dual with respect to $\kappa$, and $h$ have dual $\
   \end{enumerate}
 \end{prop}
 \begin{proof}
-i) $\Rightarrow$ ii) trivially by Corollary \ref{corrker} once one notices that the representation is trivial if and only if $V^G=V$. ii) implies iii) even more trivally. So we have to show that iii) $\Rightarrow$ i).
+i) $\Rightarrow$ ii) trivially by Corollary \ref{korrker} once one notices that the representation is trivial if and only if $V^G=V$. ii) implies iii) even more trivally. So we have to show that iii) $\Rightarrow$ i).
 
 Let $T \subset \SL(n)$ be the torus subgroup of diagonal matrices and $\mathfrak h \subset \mathfrak{sl}(n)$ its Lie algebra. Then we can decompose $V$ as
 $$
@@ -788,6 +790,82 @@ If a linearly reductive group $G$ acts on a finitely generated $k$-algebra $R$, 
 Start by choosing generators $r_1,\ldots,r_N$ of $R$ as in the lemma. Then we have a surjection $S=k[x_1,\ldots,x_N] \to R$. Taking invariants and using Hilbert's theorem, it follows immediately that $R^G$ is finite-generated.
 \end{proof}
 
+\section{The construction of quotient varieties}
+
+In this chapter we will actually construct some objects we will call quotients. 
+
+\subsection{Affine quotients}
+
+We begin with an example.
+\begin{example}
+Let $G = \C^\ast$ act on $k^2$ by $t \cdot (x,y) = (tx,t^{-1} y)$. We have three types of orbits.
+\begin{enumerate}
+\item The origin $(0,0)$ is an orbit consisting of one point.
+\item The axes $x=0,y=0$ are two other orbits.
+\item All other orbits are hyperbolas $xy=a$ with $a \neq 0$.
+\end{enumerate}
+The action on the coordinate ring is given by $x \mapsto \lambda^{-1}x$ and $y \mapsto \lambda x$. Thus the only invariant is the monomial $xy$. We thus get a projection map $\phi:\Aa^2 \to \Aa^1$ given by $(x,y)=xy$.
+
+This ``quotient map'' separates the third type of orbits, but cannot distinguish between the orbits 1. and 2, all of which map to zero. 
+\end{example}
+
+\begin{thm}
+  Suppose that a linearly reductive group $G$ acts on an affine variety $X$. Given two orbits $O,O' \subset X$, the following conditions are equivalent:
+  \begin{enumerate}[i)]
+  \item The closures of $O$ and $O'$ have a common point, $\ol{O} \cap \ol{O'} \neq \emptyset$.
+\item $O$ and $O'$ fail to be separated by $G$-invariants $k[X]^G$.
+  \end{enumerate}
+\end{thm}
+\begin{proof}
+  $i \Rightarrow ii$ is clear: any $G$-invariant function is automatically constant on orbits, and by continuity constant on orbit closures. If the orbit closures intersect, then any $G$-invariant function is constant on $\ol{O} \cup \ol{O'}$ also.
+
+We prove the converse  of $ii \Rightarrow i$. Namely, if $ol{O} \cap \ol{O'}=\emptyset$, then $O$ and $O'$ are separated by $k[X]^G$.
+
+The condition is equivalent to $I(O) + I(O')=k[X]$. Since all three terms are $G$-invariant, we have a map of $G$-representations
+\[
+\xymatrix{
+I(O) \oplus I(O') \ar[r]^{+} & k[X].
+}
+\]
+Taking $G$-invariants, we get a surjection $I(O)^G \oplus I(O')^G \to k[X]^G$ since $G$ is linearly reductive. Thus there exist a functions $f,f'$ such that $f+f'=1$ and $f(O)=0$, $f'(O')=0$. But $f(O')=1-f'(O')=1$, and $f'(O)=1-f(O)=1$, so $f$ and $f'$ separate $O$ and $O'$.
+\end{proof}
+
+\begin{corr}
+If $G$ is a linearly reductive group acting on an affine variety $X$, then distinct closed $G$-orbits are separated by the $G$-invariants $k[X]^G$.
+\end{corr}
+\begin{proof}
+Distinct closed orbits are automatically disjoint.
+\end{proof}
+
+\begin{corr}
+Given an orbit, the set $S$ of orbits with closure meeting this orbit contains exactly one closed orbit. Moreover, this orbit is contained in the closure of every other orbit in the same set.
+\end{corr}
+\begin{proof}
+The set of such orbits can contain at most one closed set by the previous corollary. Let $O$ be an orbit with minimal dimension of $S$. We claim that $O$ is closed. Suppose not. Then $\ol{O} \bs O$ is a nonempty union of $G$-orbits in $S$ because $\ol{\ol{O} \bs O} \cap \ol{O} \neq \emptyset$, and is of smaller dimension, contradiction.
+
+For the second part...
+\end{proof}
+
+Consider again the map $\phi:X \to \Aa^n$, $x \mapsto (f_1(x),\ldots,f_n(x))$, where the $f_i$ are the generators of $R^G$. 
+
+\begin{prop}
+The image $\phi(X) \subset \Aa^n$ is closed.
+\end{prop}
+\begin{proof}
+ Consider the homomorphism of $R$-modules
+\[
+\pi: R \oplus \cdots \oplus R \to R, \qquad (b_1,\ldots,b_n) \mapsto \sum b_i(f_i-a_i).
+\]
+This is a homomorphism of $G$-representations. The induced map has image $\mm_a \subset R^G$, corresponding to the point $(a_1,\cdots, a_n)$. This implies that $\pi$ cannot be surjective. Therefore its image is contained in some maximal ideal $\mm \subset R$ (a priori not a unique ideal). But $\mm\cap R^G$ is maximal in $R^G$ and therefore coincides with $\mm_a$. 
+
+Thus $a \in \ol{\phi(X)}$ is the image of the point corresponding to $\mm$.
+\end{proof}
+
+\begin{defi}
+ We denote the affine variety $\Spec R^G$ by $X/\!/G$. The inclusion $R^G \subset R$ determines a morphism of affine varieties $\Phi:X \to X /\!/ G$, called the \emph{affine quotient map}.
+\end{defi}
+
+%%%%%%%%%%%%%%%%%%%%%%
 \section{Moduli theory}
 
 The problem of moduli theory is \emph{classification}. This can be made precise in various ways, depending upon the sophistication of the reader.
