@@ -1,5 +1,18 @@
 \begin{thebibliography}{1}
 
+\bibitem{harris_alggeo}
+Joe Harris.
+\newblock {\em Algebraic geometry}, volume 133 of {\em Graduate Texts in
+  Mathematics}.
+\newblock Springer-Verlag, New York, 1995.
+\newblock A first course, Corrected reprint of the 1992 original.
+
+\bibitem{hartshorne}
+Robin Hartshorne.
+\newblock {\em Algebraic geometry}.
+\newblock Springer-Verlag, New York, 1977.
+\newblock Graduate Texts in Mathematics, No. 52.
+
 \bibitem{mckernan_moridream}
 James McKernan.
 \newblock Mori dream spaces.

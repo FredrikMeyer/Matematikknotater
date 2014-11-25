@@ -22,6 +22,8 @@
 
 \usepackage[a5paper,margin=0.5in]{geometry}
 
+\newcommand{\vnd}{\mathbb V_{n,d}}
+
 \begin{document}
 \title{Algebraic groups and moduli theory}
 \author{Fredrik Meyer}
@@ -351,6 +353,7 @@ Let $G=\Spec A$ be an affine algebraic group. A $1$-dimensional character of $G$
 \end{defi}
 
 \begin{lemma}
+\label{chargl}
 The characters of the general linear group $\GL(n) = \Spec k[x_{ij}, \det X]$ are precisely the integer powers of the determinant $(\det X)^n$ for $n \in Z$.   
 \end{lemma}
 
@@ -838,6 +841,7 @@ Distinct closed orbits are automatically disjoint.
 \end{proof}
 
 \begin{corr}
+\label{corrclosure}
 Given an orbit, the set $S$ of orbits with closure meeting this orbit contains exactly one closed orbit. Moreover, this orbit is contained in the closure of every other orbit in the same set.
 \end{corr}
 \begin{proof}
@@ -862,8 +866,344 @@ Thus $a \in \ol{\phi(X)}$ is the image of the point corresponding to $\mm$.
 \end{proof}
 
 \begin{defi}
- We denote the affine variety $\Spec R^G$ by $X/\!/G$. The inclusion $R^G \subset R$ determines a morphism of affine varieties $\Phi:X \to X /\!/ G$, called the \emph{affine quotient map}.
+ We denote the affine variety $\Spec R^G$ by $X/\!/G$. The inclusion $R^G \subset R$ determines a morphism of affine varieties $\Phi:X \to X /\!/ G$, which we call the \emph{affine quotient map}.
 \end{defi}
+
+We sum this up in a theorem:
+
+\begin{thm}
+ If $G$ is a linearly reductive group acting on an affine variety $X$, then the affine quotient map
+$$
+\Phi: X \to X /\!/ G = \Spec \left(k[X]^G\right)
+$$
+is surjective and gives a one-to-one correspondence between points of $X /\! / G$ and closure-equivalence classes of $G$-orbits in $X$.
+
+In addition: if $Z \subset X$ is closed and $G$-invariant, then $\Phi(Z)$ is closed.
+\end{thm}
+\begin{proof}
+Only the last claim needs proof.
+
+Let $\ia \subset R$ be the ideal of $Z$. This is $G$-invariant, so $G$ acts on $R/\ia$. By linear reductivity, we get a surjective map $R^G \to (R/\ia)^G$. The kernel is $R^G \cap \ia$ and so
+\[
+R^G/(R^G \cap \ia) \simeq {(R/\ia)}^G.
+\]
+The left hand side is the coordinate ring of the closure of $\Phi(X)$ in $X /\!/ G$. The right hand side is the coordinate ring of $Z /\!/ G$. Thus, applying $\Spec(-)$, we get an isomorphism
+$$
+Z /\!/ G \simeq \ol{\Phi{(Z)}}.
+$$
+But as we have seen, the affine quotient map $Z \to Z/\!/ G$ is surjective, so we must have $\Phi(Z) = \ol{\Phi(Z)}$.
+\end{proof}
+
+\subsection{Stability}
+
+\begin{defi}
+Suppose that a linearly reductive group $G$ acts on an affine variety $X$. A point $x \in X$ is said to be \emph{stable} for the action of $G$ if the following two conditions hold:
+\begin{enumerate}
+\item The orbit $Gx \subset X$ is closed.
+\item The stabilizer subgroup $\Stab(x) = \{ g \in G \mid gx=x\}$ is finite.
+\end{enumerate}
+We denote the set of all stable point by $X^s \subset X$.
+\end{defi}
+
+The reason we don't want unstable points is that if the stabilizers have positive dimension, the dimension of the quotient will be too low.
+
+\begin{prop}
+Let $Z \subset X$ be the set
+\[
+\{ x \in X \mid \dim \Stab(x) > 0 \} .
+\]
+Then $X^s$ is the complement in $X$ of $\Phi^{-1}(\Phi(Z))$.
+\end{prop}
+\begin{proof}
+Suppose $\Phi(x) \in \Phi(z)$. If $x \in Z$, then $z \not \in X^s$. If $x \not \in Z$, then the fiber $\Phi^{-1}(\Phi(x))$ contains at least two $G$-orbits (the orbit(s) containing $Z$ and the orbit(s) containing $x$), and by Corollary \ref{corrclosure} the orbit $Gx$ cannot be closed, so the first condition is violated. This shows $\Phi^{-1}(\Phi(Z)) \subset X \bs X^s$. The converse is similar [....].
+\end{proof}
+
+\begin{remark}
+We have $X^s=X$ if and only if all points have finite stabilizer.
+\end{remark}
+
+Being stable is an open condition. Equivalently, $Z$ is a closed set:
+\begin{proof}
+Consider the map 
+\[
+s:G \times X \to X \times X, \qquad (g,x) \mapsto (gx,x).
+\]
+Then let $\widetilde{Z}$ be $s^{-1}(\Delta)$, where $\Delta$ is the diagonal. Then consider the projection
+\[
+\pi:\widetilde{Z} \to X, \qquad (g,x) \mapsto x.
+\]
+The fiber $\pi^{-1}(x)$ is canonically isomorphic to $\Stab(x)$. Now it is well-known that the dimension of the fibers is an upper semicontinous function, so it follows that the positive-dimensional locus $Z$ is a closed set. See for example Chapter 11 in Vakil. Chapter I.6.3 in Shafarevich, or EGA IV 13.1.3. 
+\end{proof}
+
+It follows at once that...
+\begin{prop}
+... the stable set $X^s \subset X$ and its image $\Phi(X^s) \subset X /\!/ G$ are open sets.
+\end{prop}
+
+\begin{thm}
+ Suppose that a linearly reductive group $G$ acts on an affine variety $X$, and suppose that $x \in X$ is a stable point for this actin. Then for any $y \in X \bs Gx$, there exists an invariant function $f \in k[X] ^G$ such that $f(x) \neq f(y)$.
+\end{thm}
+\begin{proof}
+ We apply Theorem 5.2: suppose there does not exist a function separating $x$ and $y$. Then by the theorem, the closures $\ol{Gx}$ and $\ol{Gy}$ intersect in a common point. Since $x$ is stable $Gx$ is closed, and this implies $Gx \subset \ol{Gy}$. Now, $\dim Gx=\dim G$ since $x$ have finite stabilizer, and so $\dim Gx \geq \dim \ol{Gy}$, hence $Gx=Gy$, contrary to $y \in X \bs Gx$. 
+\end{proof}
+
+For future reference, here are a few definitions.
+
+\begin{defi}
+ Let $X$ be a scheme and $G$ an (affine) algebraic group, with $G$ acting on $X$. Then a \emph{categorial quotient} is a morphism $\pi:X \to Y$ such that
+ \begin{enumerate}
+ \item $\pi$ is $G$-equivariant with $G$ acting trivially on $Y$. In other words: $\pi(gx)=\pi(x)$ for all $g,x$. Or: 
+\[
+\xymatrix{
+G \times X \ar[d]_{\pi_2} \ar[r]^\mu & X \times Y \ar[d]^\pi \\
+X \ar[r]_\pi & Y
+}
+\]
+should commute.
+\item $\pi:X \to Y$ is universal with respect to 1. In other words: if $\phi:X \to Z$ is any other such map ($\phi(gx)=\phi(x)$), then there should exist a unique $\gamma:Y \to Z$ making $\gamma \circ \pi = \phi$:
+\[
+\xymatrix{
+X \ar[r]^\phi \ar[d]_\pi & Z \\
+Y \ar[ur]_{\exists ! \gamma}
+}
+\]
+ \end{enumerate}
+\end{defi}
+Clearly a categorial quotient is unique if it exists. In fact, $\Spec R^G$ is an example. But as we have seen, categorial quotients can be quite bad on some occasions: if $G=\C^\ast$ acts by scaling lines through the origin in $\Aa^2$, then, as we have seen, $R^G=k$, so the categorial quotient is just a point.
+
+\begin{defi}
+A \emph{good categorial quotient} is a map $\pi:X \to Y$ such that:
+\begin{enumerate}
+\item If $U \subset Y$ is open, then $\OO_Y(U) \to \OO_X(\pi^{-1}(U))$ induces an isomorphism $\OO_Y(U) \xrightarrow{\sim} \OO_X(\pi^{-1}(U))^G$.
+\item If $W \subset X$ is closed and $G$-invariant, then $\pi(W)$ is closed in $Y$. 
+\item If $W_1,W_2$ are closed, disjoint and $G$-invariant, then $\pi(W_1) \cap \pi(W_2) = \emptyset$.
+\end{enumerate}
+\end{defi}
+
+It is an \textbf{exercise} to see that good implies categorical. Also, the following is true:
+\begin{prop}
+For a good categorial quotient $\pi:X \to Y$:
+\begin{enumerate}
+\item $\pi$ is surjective.
+\item If $U \subset X /\!/ G$ is open, then the restriction
+\[
+\restr{\pi}{\pi^{-1}(U)}:\pi^{-1}(U) \to U
+\]
+is also a good categorial quotient.
+\item $\pi(x)=\pi(y)$ $\Leftrightarrow$ $\ol{Gx} \cap \ol{Gy} \neq \emptyset$.
+\end{enumerate}
+\end{prop}
+
+\begin{prop}
+Let $X \to X /\!/ G$ be a good categorical quotient. Then the following are equivalent:
+  \begin{enumerate}
+  \item All orbits are closed.
+\item If $x, y \in X$ have $\pi(x)=\pi(y)$ then $Gx=Gy$.
+\item $\pi$ induces a bijection between $G$-orbits and closed points of $X /\!/ G$.
+\item The image of $G \times X \to X \times X$, $(g,x) \mapsto (gx,x)$ is isomorphic to $X \times_{X /\!/ G} X$. 
+  \end{enumerate}
+\end{prop}
+
+\begin{defi}
+  If any of the equivalent conditions of the proposition holds, then we say that $X \to Y$ is a \emph{geometric quotient}, and we write it as $X/G$.
+\end{defi}
+
+\subsection{Moduli of hypersurfaces in $\PP^n$}
+
+Let us try to make the theory concrete by some examples. We will study hypersurfaces in $\PP^n$ modulo the natural $\GL(n+1)$-action.
+
+\subsubsection{Classical invariants and discriminants}
+
+A form of degree $d$ (an element of $H^0(\PP^n,\OO_{\PP^n}(d))$) in coordinates $x_0,\ldots,x_n$ can be written
+\[
+f = \sum_{\lvert I \rvert = d} a_I x^I,
+\]
+in ``multiindex'' notation. Note that there are $\binom{n+d}{d}$ values of $I$. Denote by $V_{n,d}$ the vector space of polynomials of degree $d$ (synonymous with $H^0(\PP^n, \OO_{\PP^n}(d))$), and by $\mathbb V_{n,d}$ its associated affine space.
+
+The group $\GL(n+1)$ acts on $\vnd$ on the right by $f(x) \mapsto f(gx)$.
+\begin{remark}
+  This is really a right action. Recall that a group action is a \emph{right action} if $f \cdot (gh) = (f \cdot g) \cdot h$. 
+
+In fact, we have $$(f \cdot (gh))(x) = f(ghx) = (f \cdot g)(hx) = ((f \cdot g) \cdot h)(x),$$
+so this is really a right action.
+\end{remark}
+
+Explicitly, this can be written as follows: Let $F$ denote the ``generic'' $d$-form, that is a form with the coefficients replaced by variables (that would be forms on $\PP^n \times \Aa^{\binom{n+d}{d}}$).
+
+Then a matrix $g=(g_{ij}) \in \GL(n+1)$ transform $F$ to
+\[
+F = \sum_{\lvert I \rvert=d} a_I(\sum g_{0j}x_j)^{i_0}(\sum g_{1j}x_j)^{i_1} \ldots (\sum a_{n_j} x_j)^{i_n}.
+\]
+After rearranging, this can be written as
+\[
+F = \sum_{\lvert I \rvert = d} \xi_I(g) x^I,
+\]
+where the $\xi_I(g)$ are polynomials in $g_{ij}$ and $a_I$, linear in the $a_I$. Thus the assignment $a_I \mapsto \xi_I(g)$ is [representation ??].
+
+Lets do a very concrete example.
+
+\begin{example}[Pairs of points on the Riemann sphere, $d=2$, $n=2$]
+A form of degree $2$ on $\PP^1$ is given by a polynomial $$F=a_{20}x_0^2 + a_{11}x_0x_1+a_{02}x_1^2.$$
+
+A generic element of $\GL(2)$ looks like
+$$
+g = \begin{pmatrix} g_{11} & g_{12} \\
+g_{21} & g_{22}
+\end{pmatrix}.
+$$
+This $g$ acts on $x$ by sending it to $g_{11}x_0+g_{12}x_1$. Thus it can be computed that the action on $F$ is given by
+\begin{align*}
+& F \cdot g = (a_{20} {g}_{11}^{2}+a_{11} {g}_{11} {g}_{21}+a_{02} {g}_{21}^{2} )x_0^2 \\
+&+ (a_{20} {g}_{11} {g}_{12}+a_{11} {g}_{12} {g}_{21}+a_{11} {g}_{11} {g}_{22}+2 a_{02}
+      {g}_{21} {g}_{22})x_0x_1 \\
+&+  (a_{20} {g}_{12}^{2}+a_{11} {g}_{12} {g}_{22}+a_{02} {g}_{22}^{2})x_1^2.
+\end{align*}
+Wee see that the $\xi_I(g)$ are linear combinations of polynomials in $g_{ij}$, so we can write the transformation in matrix form:
+$$ \xi(g) = 
+\bgroup\begin{pmatrix}{g}_{11}^{2}&
+      2 {g}_{11} {g}_{12}&
+      {g}_{12}^{2}\\
+      {g}_{11} {g}_{21}&
+      {g}_{12} {g}_{21}+{g}_{11} {g}_{22}&
+      {g}_{12} {g}_{22}\\
+      {g}_{21}^{2}&
+      2 {g}_{21} {g}_{22}&
+      {g}_{22}^{2}\\
+      \end{pmatrix}\egroup.
+$$
+This is a representation of $\GL(2)$ on $V_{1,2}$ (a map $\rho:\GL(2) \to \GL(3)$). It would be a fun exercise to describe the its irreducible components (an educated guess would be that it splits into two irreducible representations, one given by the forms with a double root, and one given by the forms with distinct roots).
+
+By the way, I didn't compute this by hand. Here is how to do it in \verb|Macaulay2|.
+\begin{verbatim}
+R = QQ[x_0,x_1, a,b,c, g_11,g_12,g_21,g_22]
+h = map(R,R,{g_11*x_0+g_12*x_1, g_21*x_0+g_22*x_1,
+              a,b,c,g_11,g_12,g_21,g_22})
+F = a*x_0^2+b*x_0*x_1+c*x_1^2
+trans = h F
+(M,C) = coefficients(trans,
+       Monomials => {x_0^2,x_0*x_1, x_1^2}, Variables => {x_0,x_1})
+(V,G0) = coefficients(C_0_0,
+       Monomials => {a,b,c}, Variables => {a,b,c})
+(V,G1) = coefficients(C_0_1,
+       Monomials => {a,b,c}, Variables => {a,b,c})
+(V,G2) = coefficients(C_0_2,
+       Monomials => {a,b,c}, Variables => {a,b,c})
+G = G0 | G1 | G2
+\end{verbatim}
+The last computation, $G$, is the matrix $\xi(g)$ above. To get \LaTeX code, type \verb|tex G| and copy.
+\end{example}
+\begin{example}[Conics in the plane, $d=2$, $n=3$]
+To get a sense of how complicated things get with a slight increase in dimension, this is how $\xi(g)$ looks in the case of conics in $\PP^2$. 
+\[
+\bgroup\begin{pmatrix}{g}_{11}^{2}&
+      2 {g}_{11} {g}_{12}&
+      2 {g}_{11} {g}_{13}&
+      {g}_{12}^{2}&
+      2 {g}_{12} {g}_{13}&
+      {g}_{13}^{2}\\
+      {g}_{11} {g}_{21}&
+      {g}_{12} {g}_{21}+{g}_{11} {g}_{22}&
+      {g}_{13} {g}_{21}+{g}_{11} {g}_{23}&
+      {g}_{12} {g}_{22}&
+      {g}_{13} {g}_{22}+{g}_{12} {g}_{23}&
+      {g}_{13} {g}_{23}\\
+      {g}_{11} {g}_{31}&
+      {g}_{12} {g}_{31}+{g}_{11} {g}_{32}&
+      {g}_{13} {g}_{31}+{g}_{11} {g}_{33}&
+      {g}_{12} {g}_{32}&
+      {g}_{13} {g}_{32}+{g}_{12} {g}_{33}&
+      {g}_{13} {g}_{33}\\
+      {g}_{21}^{2}&
+      2 {g}_{21} {g}_{22}&
+      2 {g}_{21} {g}_{23}&
+      {g}_{22}^{2}&
+      2 {g}_{22} {g}_{23}&
+      {g}_{23}^{2}\\
+      {g}_{21} {g}_{31}&
+      {g}_{22} {g}_{31}+{g}_{21} {g}_{32}&
+      {g}_{23} {g}_{31}+{g}_{21} {g}_{33}&
+      {g}_{22} {g}_{32}&
+      {g}_{23} {g}_{32}+{g}_{22} {g}_{33}&
+      {g}_{23} {g}_{33}\\
+      {g}_{31}^{2}&
+      2 {g}_{31} {g}_{32}&
+      2 {g}_{31} {g}_{33}&
+      {g}_{32}^{2}&
+      2 {g}_{32} {g}_{33}&
+      {g}_{33}^{2}\\
+      \end{pmatrix}\egroup
+\]
+There is some symmetry in the equations, but for modern mathematicians, these equations are very scary. At least to handle with bare hands.  
+\end{example}
+
+\begin{defi}
+ If a homogeneous polynomial $F$ satisfies $F(xg)=F(x)$ for all $g \in \SL(n+1)$ (in other words, if it is $\SL(n+1)$-invariant for the right action of $\SL(n+1)$), then we call it a \emph{classical invariant}.
+\end{defi}
+
+Let $H_{nd} := \PP V_{nd}$. This is the Hilbert scheme of hypersurfaces of degree $d$ in $\PP^n$. 
+
+\begin{prop}
+ For a homogeneous polynomial $F \in \bigoplus_i H^i(H_{n,d}, \OO_{H_{n,d}}(i))=k[\vnd]$, the following are equivalent:
+ \begin{enumerate}
+ \item $F$ is a classical invariant.
+\item The subvariety $F = 0$ in $H_{n,d}$ is $\GL(n+1)$-invariant.
+ \end{enumerate}
+\end{prop}
+\begin{proof}
+The easiest direction is $i \Rightarrow ii)$. That the subvariety $F=0$ is $\GL(n+1)$-invariant, means that $F \cdot g = \lambda F$ for some $\lambda \neq 0$ for each $g \in \GL(n+1)$. Now, each $g \in \GL(n+1)$ can be written as the product of a diagonal matrix and an element of $\SL(n+1)$ (the diagonal matrix is $\sqrt[n]{\det g}I$). Write this as $g=\lambda h$. Then
+\[
+F(gx)=F(\lambda hx)= F(hx) \cdot \lambda = F(x) \cdot \lambda = F(\lambda x) = \lambda^n F(x).
+\]
+Thus $F=0$ is $\GL(n+1)$-invariant.
+
+For the other direction: the ideal $\langle F \rangle$ is $\GL(n+1)$-invariant. Thus the one-dimensional $k$-vector space spanned by $F$ is a one-dimensional representation of $\GL(n+1)$. But this is a character of $\GL(n+1)$, and by Lemma \ref{chargl}, we know that $F$ must have the form $\lambda \det X$, and this is clearly $\SL(n+1)$-invariant.
+[[Is this correct?? Sound too good to be true]]
+\end{proof}
+
+We will define the \emph{discriminant}, but we need some discussion first. Let $X \subseteq \PP^n$ be the hypersurface given by $f \in H^0(\OO_{\PP^n},\OO_{\PP^n}(d))$. Then recall that $p \in \PP^n$ is a singular point of $X$ if it is a solution of
+\[
+\dd{f}{x_0}=\dd{f}{x_1} = \ldots = \dd{f}{x_n}=0.
+\]
+If these have no solutions in $\PP^n$, then we say that $X$ is \emph{smooth}.
+
+Denote by $H_{n,d}^{sing} \subset H_{n,d}$ the subset of singular hypersurfaces $X \subset \PP^n$. Consider the set 
+\[
+Z := \{ (p,X) \mid  p \in \PP^n \text{ is a singular point on } X \subset \PP^n \}.
+\]
+This is an algebraic variety given by the $n+1$ equations
+\[
+\dd{}{x_0} \sum_I a_I x^I = \ldots = \dd{}{x_n} \sum_I a_I X^I = 0.
+\]
+In particular, $Z$ is closed. Let $\psi:Z \to \PP^n$ and $\varphi: Z \to H_{n,d}$ be the projections. By definition, the image of $\varphi$ is $H_{n,d}^{sing}$. On the other hand $\varphi^{-1}(p)$ is the set of all hypersurfaces that are singular at $p$, and in $H_{n,d}$, this is defined by $n+1$ linear equations (the equation above is linear in the $a_I$). Thus
+\begin{align*}
+  \dim Z &= \dim \PP^n  + \dim \phi^{-1}(p) \\
+&\geq n + \dim H_{n,d} - (n+1) \\ 
+&= \dim H_{n,d} - 1.
+\end{align*}
+
+In fact, equality holds. The reason is this: first of all, the image of $\varphi$ is a proper subset of $H_{n,d}$, since there exist nonsingular hypersurfaces in any dimension\footnote{Take the Fermat hypersurface $x_0^l+\ldots+x_n^l=0$}. Also, $\dim Z = \dim H_{n,d}^{sing}$, because 1), $Z$ surjects onto $H_{n,d}^{sing}$, and 2) because of the following fact: if $f:X \to Y$ is a dominant morphism of integral schemes of finite type over $k$, then the dimension of the fibers $f^{-1}(y)$ (for $y \in f(X)$), satisfy $\dim f^{-1}(y) \geq \dim X - \dim Y$. In our case $f^{-1}([X])=\Sing X$, so if we can prove that there exists hypersurfaces with isolated singularities, then we get $\dim H_{n,d}^{sing} \geq \dim Z$. This is true, consider for example $x_1^k+\ldots+x_n^k=0$ ($x_0$ is left out)\footnote{See for example \cite{hartshorne}, page 95, Exercise 3.22. See also \cite{harris_alggeo}, Theorem 11.12.}.
+
+Thus $H_{n,d}^{sing}$ is itself a hypersurface, so it is defined by a unique (up to scalar)  homogeneous polynomial.
+
+\begin{defi}
+ The defining equation of $H_{n,d}^{sing}$ is called the \emph{discriminant} of forms of degree $d$ on $\PP^n$. 
+\end{defi}
+
+Clearly $H_{n,d}^{sing}$ is invariant under $\GL(n+1)$, so:
+\begin{corr}
+ The discriminant $D$ is a classical invariant.
+\end{corr}
+
+\begin{example}
+We continue on Example 5.17. The hypersurface $X$ is singular if and only if
+\begin{align*}
+  \dd{F}{x_0} &= 2a_{20}x_0 + a_{11}x_1 = 0 \\
+\dd{F}{x_1} &= a_{11}x_0 + 2a_{02} x_1 = 0
+\end{align*}
+But this is a linear equation, having a non-trivial solution if and only if the determinant $4a_{20}a_{02}-a_{11}^2$ is zero. 
+
+This should remind everyone of the abc-formula from early childhood.
+\end{example}
 
 %%%%%%%%%%%%%%%%%%%%%%
 \section{Moduli theory}
@@ -899,7 +1239,7 @@ A point $x \in X$ is \emph{semistable} if there exists an $s \in H^0(X,\OO_x(r))
 Point which are not semistable are \emph{unstable}. 
 
 \begin{defi}
-A semistable point $x \in X$ is \emph{stable} if $\oplus_r H^0(X,\OO_x(r))^G$ separates orbits near $x$ and the stabiliser of $x$ is finite.
+A semistable point $x  \in X$ is \emph{stable} if $\oplus_r H^0(X,\OO_x(r))^G$ separates orbits near $x$ and the stabiliser of $x$ is finite.
 \end{defi}
 By ``separates orbits near $x$'' we mean the following: given any $v \in T_xX \bs T_x(G.x)$ there is another element in $H^0(X,\OO_x(r))^G$ whose derivative with respect to $v$ is nonzero.
 
