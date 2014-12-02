@@ -53,5 +53,48 @@ I  =  toricGroebner(hB, QQ[vars(0..#hB-1)])
 \end{verbatim}
 
 
+\subsection{Computing ideals of rational secant varieties}
 
+Let $X \subset \PP^n$ be a projective variety. Then consider
+$$
+\Sec(X) = \ol{\bigcup_{p,q \in X} \ol{pq}}.
+$$
+Here $\ol{pq}$ denotes the line through $p$ and $q$. The overline indicates closure in the Zariski topology.
+
+We do as an example the rational normal curve $C$ of degree $10 \in \PP^{10}$. It has a parametrization given by
+\[
+\PP^1 \ni (a:b) \mapsto (a^{10}:a^9b: \ldots: ab^9 : b^{10}) \in \PP^{10}.
+\]
+
+Then we have a parametrization of $\Sec(C)$ given by
+\[
+(s:t) \times (a:b) \times (a':b') \mapsto (\ldots: sa^ib^{10-i}+ta^ib^{10-i}: \ldots).
+\]
+
+On the ring level, we get the dual map
+\begin{align*}
+\varphi: k[x_0..x_{10}] &\to k[s,t,a,b,a',b'] \\
+x_i &\mapsto sa^{i}b^{10-i} + ta^{i}b^{10-i}.
+\end{align*}
+
+The kernel of this map is the ideal of $\Sec(C)$. This can be computed in \verb|Macaulay2| as follows:
+
+\begin{verbatim}
+R2 = QQ[a,b,a1,b1,s,t]
+S  = QQ[x_0..x_10]
+aa = matrix{toList apply(0..10, i -> a^(10-i)*b^i)}
+a2 = matrix{toList apply(0..10, i -> a1^(10-i)*b1^i)}
+phi= map(R2, S', s*(aa) + t*(a2))
+I = ker phi
+\end{verbatim}
+
+The ideal have $84$ cubic generators, and the Betti table looks like
+\begin{verbatim}
+             0  1   2   3   4   5   6  7
+o15 = total: 1 84 378 756 840 540 189 28
+          0: 1  .   .   .   .   .   .  .
+          1: .  .   .   .   .   .   .  .
+          2: . 84 378 756 840 540 189 28
+\end{verbatim}
+This means that all relations in the ideal are linear. It has dimension $4$, so that $\Sec(C)$ have dimension $3$ as a subset of $\PP^n$.
 \end{document}
