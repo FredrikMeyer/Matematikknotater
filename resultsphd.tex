@@ -1,0 +1,113 @@
+\documentclass[11pt, english]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}   % S P R A A K
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{calc}
+%\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+%\usepackage[a5paper,margin=0.5in]{geometry}
+
+
+\begin{document}
+\title{Results so far}
+\author{Fredrik Meyer}
+\maketitle 
+
+
+\section{Deformations of the 5-dimensional toric variety}
+
+Recall that the $5$-dimensional toric variety $T$ had $2$-dimensional singularities (actually two disjoint copies of $dP_6$).
+
+\begin{thm}
+There exists a flat deformation of $\PP(\K \ast \Delta^1)$, $\mathfrak X \to S$, such that $\mathfrak X_{t_1} = T$ for some $t_1 \in S$ and such that the general fiber $\widetilde T$ have one-dimensional singularities.
+\end{thm}
+\begin{proof}
+ As per now, the proof is purely by computer. The technique is this: First, consider the monomial degeneration of $T$ to the Stanley-Reisner ring $A(\K \ast \Delta^1)$ (recall that $\K=D_6 \ast D_6$). Choose deformation parameters $t_i$ perturbing the equations ``in the direction of $T$'', meaning that we only choose parameters introducing terms already occuring in the equations of $T$.
+
+Now, using the package \verb|VersalDeformations|, it is possible to produce a flat family $\mathfrak X \to S'$ with $\mathfrak X_0 = \PP(\K \ast \Delta^1)$.
+
+The base space is a union of toric varieties of dimensions $14,13,13,12$, respectively. Call the largest one for $S$. The equations are 
+\[
+\begin{vmatrix}
+ t_1 & t_2 & t_2 & t_3 & \ldots & t_{12} \\
+ t_{13} & t_{14} & t_{15} & t_{16} & \ldots & t_{24} 
+\end{vmatrix} \leq 1
+\]
+By restriction, we get the claimed family $\mathfrak X \to T$. It is cheched by setting $t_i=i$ for $i=1,\ldots,12$ and $t_i=2i$ for $i=13,\ldots,24$ that the resulting fiber have one-dimensional singularities. The reason we don't set all $t_i=1$, is that this point lies in the intersection of the components of $S$. 
+\end{proof}
+
+\begin{corr}
+The Stanley-Reisner scheme $\PP(\K)$ smooths to a smooth Calabi-Yau variety $X$.
+\end{corr}
+\begin{proof}
+The scheme $\PP(\K)$ sits as a complete intersection in $\PP(\K \ast \Delta^1)$. Complete intersections deform together with the ambient variety, so $\PP(\K \ast \Delta^1)$ deforms to a general complete intersection in $\widetilde T$. Since $\widetilde T$ have curve singularities, it follows by two applications of Bertini's theorem \cite[Theorem II.8.18]{hartshorne}, that $X$ is smooth.
+\end{proof}
+
+Now what we would really like to do is to compute the Hodge numbers $h^{ij}=\dim_k H^j(X,\Omega^i_X)$ of $X$. 
+
+We can however compute the Hodge numbers of $\widetilde T$. The hope is that there is some sort of Lefschetz theorem giving us the Hodge numbers of $X$.
+
+\begin{thm}
+  We have $h^{11}(\widetilde T)=1$ and $h^{12}(\widetilde T)=13$. 
+\end{thm}
+\begin{proof}
+Again, this is purely computational. We use long exact sequences together with sheaf cohomology computations in \verb|Macaulay2|.
+
+Since the ideal of $\widetilde T$ is rather complicated, doing this naïvely does not work. The trick is to choose the right term order. Since we know that $\widetilde T$ has a nice degeneration, we would like to find a term order such that its initial ideal is precisely the Stanley-Reisner ideal.
+
+The \verb|Macaulay2| package \verb|gfanInterface| provides an interface with \verb|gfan|, which is a program that can compute weight vectors given polynomials with prescribed initial terms. The weight vector is 
+\[ \omega = (1, 1, 4, 7, 7, 4, 1, 1, 4, 7, 7, 4, 1, 1). \]
+With this term order, giving a very small Gröbner basis (18 elements), the computations are much faster than with the standard term order. We are able to compute resolutions of all the relevant modules within a few minutes in total.
+
+We have an exact sequence of sheaves on $\widetilde T$:
+\[
+0 \to \mathscr T_1 \hookrightarrow \mathcal I/\mathcal I^2 \xrightarrow{d} \Omega_{\PP^{13}}^1 \otimes \OO_{\widetilde T} \to \Omega_{\widetilde T}^1 \to 0.
+\]
+This sequence can be broken into two short exact sequences. The relevant one is this:
+\begin{equation}
+\label{eqt1}
+0 \to \im d \to \Omega_{\PP^{13}}^1 \otimes \OO_{\widetilde T} \to \Omega_{\widetilde T}^1 \to 0.  
+\end{equation}
+
+We also have the restriced Euler sequence:
+\begin{equation}
+\label{eqeuler}
+0 \to \Omega_{\PP^{13}} \otimes \OO_{\widetilde T} \to \OO_{\widetilde T}(-1)^{14} \to \OO_{\widetilde   T} \to 0.
+\end{equation}
+
+We first compute $h^{11}$. From \eqref{eqt1}  we get a long exact sequence
+\[
+\ldots \to H^1(\im d) \to H^1(\Omega_{\PP^{13}}^1 \otimes \OO_{\widetilde T}) \to H^1(\Omega_{\widetilde T}^1) \to H^2(\im d) \to \ldots 
+\]
+The cohomology of $H^1(\im d)$ and $H^2(\im d)$ was computed with \verb|Macaulay2| to be both zero. Thus $H^1(\Omega_{\widetilde T}^1) \simeq H^1(\Omega_{\PP^{13}}^1 \otimes \OO_{\widetilde T})$. From the Euler sequence we get 
+\[
+\ldots \to H^0(\OO_{\widetilde T}(-1)^{14}) \to H^0(\OO_{\widetilde T}) \to H^1(\Omega_{\PP^{13}}^1 \otimes \OO_{\widetilde T}) \to H^1(\OO_{\widetilde T}(-1)^{14}) \to \ldots
+\]
+But the left and right terms are both zero. Hence $h^{11}=1$. We now compute $h^{12}$. 
+
+From \eqref{eqt1} we again get 
+\[
+0 \to H^2(\Omega_{\PP^{13}}^1 \otimes \OO_{\widetilde T}) \to H^2(\Omega_{\widetilde T}^1) \to H^3(\im d) \to H^3(\Omega_{\PP^{13}}^1 \otimes \OO_{\widetilde T}) \to \ldots ,
+\]
+where we have used that $H^2(\im d)=0$.
+\end{proof}
+
+\bibliographystyle{alpha} 
+\bibliography{bibliografi}
+
+\end{document}

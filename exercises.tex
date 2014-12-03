@@ -45,12 +45,69 @@ I solve and type exercises from different places (read \emph{books}).
   \begin{enumerate}[a)]
   \item  We have $A(Y)=k[x,y]/(y-x^2)$. An isomorphism $A(Y) \to k[t]$ is given by $x \mapsto t$ and $y \mapsto t^2$. 
 \item We have $A(Z) = k[x,y]/(xy-1) \simeq k[x,\frac 1x]$. So we must show that $k[x,\frac 1x] \not \approx k[x]$. It can be computed that the first one has automorphisms given by $x \mapsto cx^n$ for $c$ nonzero and $n \neq 0$. The second has as automorphisms $ax+b$ ($a \neq 0$). So the first one have an abelian automorphism group, the second has not.
-\item It is seen by tedious calculations that any quadric in $\Aa^2$ can be reduced to one of the form
+\item What is special about $A(Y)$ and $A(Z)$? Staring at pictures, we see that any line in $\Aa^2$ intersects $Y$ in at least one point, but in the case of $Z$, there exist two lines which do not intersect $Z$. We claim that this is the only two things that can happen.
+
+First we claim that if we are in the second situation, that is, if there exist a pair of lines $\ell,\ell'$ such that $W \cap \ell = W \cap \ell' =\emptyset$, then $W \simeq Z$. 
+
+A general quadric can be written as
 \[
-x^2+bxy+y^2-c=0
+ax^2+bxy+cy^2+dx+ey+f=0.
 \]
-by linear transformations. [[[[[[[[[[HOW TO DO THE REST??]]]]
+Suppose now $\ell \cap W=\emptyset$. This is equivalent to $I(f,\ell^\vee)=(1)$. Without loss of generality, we can assumme $\ell = \{ x = 0 \}$. Then
+\[
+I(f,\ell) = (cy^2+ey+f,x).
+\]
+This generates $k[x,y]$ if and only if $c=e=0$ and $f \neq 0$. Thus $f$ must be of the form
+\[
+ax^2+bxy+dx+f=0
+\]
+with $f \neq 0$. But this can be written as
+\[
+x(ax+by+d)+f = 0.
+\]
+Put $y' = ax+by+d$. Then $I(W)$ takes the form $(xy'+f=0)$, which is clearly isomorphic to $Z$ after a linear change of coordinates. Note that the other line not meeting $W$ is the line given by $y'=ax+by+d=0$.
+
+Assume now that we are in the other situation, namely that \emph{every} line in $\Aa^2$ meets $W$. Now pick a tangent line $\ell$ of $W$. Without loss of generality, we can assume that $\ell$ is $\{ y=0 \}$. This is a tangent line if and only if it meets $W$ doubly, meaning that $I(W) + (\ell^\vee)$ takes the form $(l^2,y)$ for some linear form $l$. We can also assume that $\ell \cap W = (0,0)$, so that $I(W) + (\ell^\vee) =(x^2,y)$. But this means that
+\begin{align*}
+  I(W) + I(\ell) &= (ax^2+bxy+cy^2+dx+ey+f,y) \\
+&= (ax^2+dx+f,y)
+\end{align*}
+We want $ax^2+dx+f=x^2$. This can happen only if $d=f=0$ and $a \neq 0$. Thus the quadric takes the form
+\[
+ax^2+bxy+cy^2+ey=0.
+\]
+Now we claim that there exist one line at each point of $W$ that intersect $W$ transversally in exactly one point. This is the case for $Y$. Consider the pencil of lines through $(0,0)$ defined by $x=\lambda y$. We want to find $\lambda$ such that the intersection is transversal and only one point. We have
+\[
+( ax^2+bxy+cy^2+ey, x-\lambda y) = \left( (a\lambda ^2+b\lambda+c)y^2+ey,x-\lambda y \right).
+\]
+This have exactly one solution if and only if $a\lambda^2+b\lambda+c=0$. This is solvable since $a \neq 0$ and since all lines intersect $W$. Thus choose $\lambda$ as above. We can rotate this line such that it becomes $x=0$. Then the equation takes the form
+\[
+ax^2+bxy+ey=0.
+\]
+We have still not arrived at $y=x^2$. Let now $y=\lambda x$ be a general line through the origin. We demand that this intersect $W$ twice for every $\lambda$ such that the line is not tangent. We get that the intersection is given by
+\[
+ax^2+b\lambda x+ex = x((a+\lambda b)x+e) = 0.
+\]
+For this to have two solutions for every $\lambda$ we must have $a+\lambda b \neq 0$ for all $\lambda$. But this requires $b =0$.  Thus the equation is
+\[
+ax^2+ey = 0
+\]
+which is the conic we were looking for.
   \end{enumerate}
+\end{sol}
+
+\begin{exc}[Exercise 1.2, the twisted cubic curve]
+
+Let $Y \subseteq \Aa^3$ be the set $\{ (t,t^2,t^3) \mid t \in k\}$. Show that $Y$ is an affine variety of dimension $1$. Find generators for the ideal $I(Y)$. Show that $A(Y)$ is isomorphic to a polynomial ring in one variable over $k$. We say that $Y$ is given by the \emph{parametric equation} $x=t,y=t^2,z=t^3$.  
+\end{exc}
+\begin{sol}
+An affine variety is by definition a closed irreducible subset of $\Aa^3$. So we must find an irreducible ideal $I$ such that $Z(I)=Y$ (forgive the abuse of notation).
+
+I claim that $I(Y)=\langle x^2-y,x^3-z \rangle$. Clearly, every $P \in Y$ satisfies these equations. This shows the inclusion $Y \subset Z(I)$. Now suppose $P \in Z(I)$, that is, $f(P)=0$ for all $f \in I$. In particular $(x^2-y)(P)=0$ and $(x^3-z)(P)=0$. Thus $y=x^2$ and $z=x^3$. So if $P=(a,b,c) \in k^3$, then $P=(a,a^2,a^3)$, so $P \in Y$. This shows that $Z(I)=Y$. If we can show that $I$ is prime, then it follows that $I(Y)=I$ and that $Y$ is a variety.
+
+In fact, we claim that $k[x,y,z]/I \simeq k[t]$, implying that $I$ is prime. The map $\varphi$ is given by $x \mapsto t$, $y \mapsto t^2$, $z \mapsto t^3$. Then clearly $I \subseteq \ker \varphi$. We must show equality. So suppose $\varphi(f)=0$. 
+
+First we claim that any $f \in k[x,y,z]$ can be written as $f=R(x)+S(x)y+T(x)z+i(x,y,z)$ where $i$ is a polynomial in $I$. We prove this by induction on $\deg f$. If $\deg f = 1$, this is trivially true.  The rest of the proof proceeds by tedious induction.
 \end{sol}
 
 \subsection{Chapter II - Schemes}
