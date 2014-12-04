@@ -28,6 +28,23 @@
 \author{Fredrik Meyer}
 \maketitle 
 
+\section{Introduction}
+
+In the article \cite{gaifullin_triangulation}, it is proven that there exists a triangulation of $\C \PP^2$ with $15$ vertices and other nice properties [[expand]]. The triangulation is constructed by ``glueing'' cones of $3$-spheres along a triangle.  Call this triangulation for $\S$.
+
+A smoothing of the associated Stanley-Reisner scheme $\PP(\S)$ would have interesting properties. In particular, it would be a hyper-Kähler variety [[EXPLAIN]]
+
+The Hilbert polynomial of $\PP(\S)$ is $(9/2) t^{4}+(15/2) t^{2}+3$. The simplicial complex $\S$ have $f$-vector $(15,90,240,270,108)$. In particular, the degree of $\PP(\S)$ is $108$.
+
+Here are a few computations:
+\begin{lemma}
+The module of first-order deformations of $\PP(\S)$ is $90$-dimensional, i.e. $\dim_k T^1(\PP(\S)) = 90$.
+\end{lemma}
+\begin{lemma}
+The obstruction module have $\dim_k T^2(\PP(\K))=306$.
+\end{lemma}
+
+
 
 \section{Deformations of the 5-dimensional toric variety}
 
@@ -44,9 +61,13 @@ Now, using the package \verb|VersalDeformations|, it is possible to produce a fl
 The base space is a union of toric varieties of dimensions $14,13,13,12$, respectively. Call the largest one for $S$. The equations are 
 \[
 \begin{vmatrix}
- t_1 & t_2 & t_2 & t_3 & \ldots & t_{12} \\
- t_{13} & t_{14} & t_{15} & t_{16} & \ldots & t_{24} 
-\end{vmatrix} \leq 1
+ t_1 & t_2 & t_2 &  \cdots & t_{6} \\
+ t_7 & t_8 &  t_9 & \cdots & t_{12} 
+\end{vmatrix} \leq 1 \qquad 
+\begin{vmatrix}
+ t_{13} & t_{14} & t_{15} &  \cdots & t_{18} \\
+ t_{19} & t_{20}  & t_{21} & \cdots & t_{24} 
+\end{vmatrix} \leq 1 
 \]
 By restriction, we get the claimed family $\mathfrak X \to T$. It is cheched by setting $t_i=i$ for $i=1,\ldots,12$ and $t_i=2i$ for $i=13,\ldots,24$ that the resulting fiber have one-dimensional singularities. The reason we don't set all $t_i=1$, is that this point lies in the intersection of the components of $S$. 
 \end{proof}
@@ -63,7 +84,7 @@ Now what we would really like to do is to compute the Hodge numbers $h^{ij}=\dim
 We can however compute the Hodge numbers of $\widetilde T$. The hope is that there is some sort of Lefschetz theorem giving us the Hodge numbers of $X$.
 
 \begin{thm}
-  We have $h^{11}(\widetilde T)=1$ and $h^{12}(\widetilde T)=13$. 
+  We have $h^{11}(\widetilde T)=1$ and $h^{12}(\widetilde T)=12$. 
 \end{thm}
 \begin{proof}
 Again, this is purely computational. We use long exact sequences together with sheaf cohomology computations in \verb|Macaulay2|.
@@ -104,8 +125,23 @@ From \eqref{eqt1} we again get
 \[
 0 \to H^2(\Omega_{\PP^{13}}^1 \otimes \OO_{\widetilde T}) \to H^2(\Omega_{\widetilde T}^1) \to H^3(\im d) \to H^3(\Omega_{\PP^{13}}^1 \otimes \OO_{\widetilde T}) \to \ldots ,
 \]
-where we have used that $H^2(\im d)=0$. But from the Euler sequence we get that the right term is also zero. 
+where we have used that $H^2(\im d)=0$. But from the Euler sequence we get that the right term is also zero. Thus $H^2(\Omega_{\widetilde T}^1) \simeq H^3(\im d)$. This last group can be computed in \verb|Macaulay2| to be $12$-dimensional. 
 \end{proof}
+
+\begin{remark}
+ The reader may wonder we just didn't ask \verb|Macaulay2| to compute the cohomology sheaf $\Omega_{\widetilde T}^1$ directly, e.g. by the command \verb|HH^i(cotangentSheaf Proj A)|. The reason is that \verb|Macaulay2|'s algorithims actually compute the \emph{sheaf}, and not just the dimension, and this is too computationally intensive.
+\end{remark}
+
+\begin{remark}[Question]
+A computation revelas that $H^i(\mathcal I/\mathcal I^2) \simeq H^i(\im d)$ for $ i\geq 2$. This could be because the singularities are of dimension $1$. Is there a theoretical result to this effect?
+\end{remark}
+
+We can compute it \verb|Macaulay2| that:
+\begin{lemma}
+The first cotangent module of $\widetilde T$ has $\dim_k T^1(\widetilde T/k) = 26$. 
+\end{lemma}
+
+We have that $h^0(\PP(\KK \ast \Delta^1),\mathcal T)=14$ by Theorem 5.2 in \cite{deforming_christophersen}. Thus these numbers fit in the narrative that we should have $T^1_{X_0} = h^1(\mathcal T_{X_t}) + h^0(\mathcal T_{X_0})$. (IS THERE ANY HEURISTIC FOR THIS??)
 
 \bibliographystyle{alpha} 
 \bibliography{bibliografi}
