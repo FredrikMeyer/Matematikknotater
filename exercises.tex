@@ -121,7 +121,7 @@ Since $\mathscr L, \mathscr M$ are invertible, we have isomorphisms $\mathscr L_
 But $\Hom_{\OO_{X,x}}(\OO_{X,x},\OO_{X,x})=\OO_{X,x}$, that is, all homomorphisms are given by multiplication by some $h \in \OO_{X,x}$. But since $f$ was surjective, we conclude that $h$ is outside $\mm_x$, the maximal ideal of $\OO_{X,x}$. But then $h$ is a unit, so $f$ is an isomorphism.
 \end{sol}
 
-\subsection{Chapter III}
+\subsection{Chapter III - Cohomology}
 
 \begin{exc}[Exercise 4.3]
 Let $X= \Aa^2_k=\Spec k[x,y]$ and let $U = X \bs \{(0,0)\}$. Use a suitable open cover of $X$ by open affine subsets to show that $H^1(U,\OO_U)$ is isomorphic to the $k$-vector space spanned by $\{ x^i y^j \mid i,j < 0 \}$. In particular, it is infinitedimensional, and so $U$ cannot be affine (not projective either).  
@@ -138,7 +138,45 @@ H^1(U, \OO_U) \simeq \{ x^i y^j \mid i,j < 0 \}
 as $k$-vector spaces.
 \end{sol}
 
-\subsection{Chapter IV}
+\begin{exc}[Exercise 4.7]
+Let $X$ be the subscheme of $\PP_k^2$ defined by a single homogeneous polynomial $f(x_0,x_1,x_2)=0$ of degree $d$. Assume that $(1,0,0)$ is not on $X$. Then show that $X$ can be covered by the two open affine subsets $U= X \cap \{ x_1 \neq 0\}$ and $V = X \cap \{ x_2 \neq 0\}$. Now calculate the \v Cech complex
+\[
+\Gamma(U,\OO_X) \oplus \Gamma(V,\OO_X) \to \Gamam(U \cap V, \OO_X)
+\]
+explicitly, and thus show that
+\begin{align*}
+  \dim_k H^0(X,\OO_X) &= 1 \\
+\dim _k H^1(X,\OO_X) &= \frac 12 (d-1)(d-2).
+\end{align*}
+\end{exc}
+
+\begin{sol}
+  $X$ can be covered by just two open affines since $\PP^2 \bs (U \cup V) = \{(1:0:0)\}$, which was assumed not to lie on the curve.
+
+The open affine subset $\Gamma(U, \OO_X)$ can be identified with the polynomial ring $k[u,v]/\langle f(u,1,v) \rangle$, and $\Gamma(V,\OO_X) = k[x,y]/f(x,y,1)$. The differential is then given by 
+\[
+\left( g(u,v), h(x,y) \right) \mapsto g(xy^{-1},y^{-1})-h(x,y) \in k[x,y,\frac 1y].
+\]
+
+We can assume that $f=x_0^d$, since what really matters is the degree, and we are just doing linear algebra.
+
+We first calculate $H^0(X,\OO_X)$. So suppose $g(xy^{-1}, y^{-1})-h(x,y)=0$ in $k[x,y,y^{-1}]/\langle f(x,y,1) \rangle$. By definition this means that
+\[
+g(xy^{-1},y^{-1}) - h(x,y) = f(x,y,1) \cdot \tilde f(x,y,\frac 1y)
+\]
+for some polynomial $\tilde f$. Write $\tilde f$ as $\tilde f_0 + \tilde f_1$, where $\tilde f_0=\sum_{j < 0} a_{ij} x^i y^j$ and $\tilde f_1 \in k[x,y]$. Then we have the equality
+\[
+g(xy^{-1},y^{-1}) - h(x,y) = \sum_{j < 0} a_{ij}x^{i+d}y^j + \sum_{j \geq 0} x^{i+d} y^j.
+\]
+First of all, we see that the constant terms of $g$ and $h$ must be equal, because there are no constant terms on the right hand side. Secondly, $g(xy^{-1},y^{-1})$ consists solely of terms with $j < 0$. Thus the non constant terms of  $g(xy^{-1},y^{-1})$ must be equal to the left term of the right hand side above. But both terms of the right hand side are zero modulo $f$, so the constant terms of $g(xy^{-1},y^{-1})$ are also zero mod $f$. The same holds for $h(x,y)$. Thus $H^0(X,\OO_X)= \{ (c,c) \mid c \in k \} \simeq k$.
+
+Now we compute $H^1(X,\OO_X)$. Consider a monomial $x^iy^j$ in the target. If both $i,j \geq 0$, then it is hit by $(0,-x^iy^j)$. Likewise, if $j \geq i$, then $(x^iy^{j-i},0) \mapsto x^i x^{-j}$. Thus all monomials $x^iy^{-j}$ with $j \geq i$ is zero in the cokernel. Further, if $i \geq d$, then $x^i y^j$ is already zero! Thus, we can draw the non-zero monomials in the cokernel as points in the lattice $\Z^2$. This is a triangle of length $d-2$. Thus the dimension of $H^1(X,\OO_X)$ is 
+\[
+1 + 2 + \ldots+ d-3 + d-2 = \frac 12 (d-2)(d-2+1) = \frac 12 (d-2)(d-1).
+\]
+\end{sol}
+
+\subsection{Chapter IV - Curves}
 
 \begin{exc}[Exercise 1.1]
 Let $X$ be a curve and $P \in X$ a point. Show that there exists a nonconstant rational function $f \in K(X)$ which is regular everywhere except at $P$.

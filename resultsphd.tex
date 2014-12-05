@@ -44,7 +44,21 @@ The module of first-order deformations of $\PP(\S)$ is $90$-dimensional, i.e. $\
 The obstruction module have $\dim_k T^2(\PP(\K))=306$.
 \end{lemma}
 
+The link of $\mathcal S$ at one of its vertices is a particularly simple $3$-sphere, namely the join of the boundaries of two hexagons. Call this $\K$. Then $\K$ have $f$-vector $(1, 12, 48, 72, 36)$. In particular the Stanley-Reisner scheme $\PP(\K)$ have degree $36$.
 
+Consider now $\K \ast \Delta^1$. This a cone over a ball, so it is topologically a ball. In fact, it is the join of two hexagons. So it is a $5$-dimensional sphere. Consider now the polytope $P \ast P$ that is the convex hull of the columns of the matrix
+\[
+\left(
+\begin{array}{*{12}c}
+ 1 & 1 & 0 & -1 & -1& 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 0 & 1 & 1 & 0 & -1 & -1& 0 & 0 & 0  & 0 & 0 & 0 \\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0  & -1 & -1 & 0 \\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1  & 0 & -1 & -1 \\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1  & 1 & 1 & 1 \\
+\end{array}
+\right) \]
+
+This polytope is the join of two \emph{actual} hexagons. Thus, by standard theory, 
 
 \section{Deformations of the 5-dimensional toric variety}
 
@@ -141,7 +155,7 @@ We can compute it \verb|Macaulay2| that:
 The first cotangent module of $\widetilde T$ has $\dim_k T^1(\widetilde T/k) = 26$. 
 \end{lemma}
 
-We have that $h^0(\PP(\KK \ast \Delta^1),\mathcal T)=14$ by Theorem 5.2 in \cite{deforming_christophersen}. Thus these numbers fit in the narrative that we should have $T^1_{X_0} = h^1(\mathcal T_{X_t}) + h^0(\mathcal T_{X_0})$. (IS THERE ANY HEURISTIC FOR THIS??)
+We have that $h^0(\PP(\K \ast \Delta^1),\mathcal T)=14$ by Theorem 5.2 in \cite{deforming_christophersen}. Thus these numbers fit in the narrative that we should have $T^1_{X_0} = h^1(\mathcal T_{X_t}) + h^0(\mathcal T_{X_0})$. (IS THERE ANY HEURISTIC FOR THIS??)
 
 \bibliographystyle{alpha} 
 \bibliography{bibliografi}
