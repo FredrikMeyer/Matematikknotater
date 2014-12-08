@@ -141,7 +141,7 @@ as $k$-vector spaces.
 \begin{exc}[Exercise 4.7]
 Let $X$ be the subscheme of $\PP_k^2$ defined by a single homogeneous polynomial $f(x_0,x_1,x_2)=0$ of degree $d$. Assume that $(1,0,0)$ is not on $X$. Then show that $X$ can be covered by the two open affine subsets $U= X \cap \{ x_1 \neq 0\}$ and $V = X \cap \{ x_2 \neq 0\}$. Now calculate the \v Cech complex
 \[
-\Gamma(U,\OO_X) \oplus \Gamma(V,\OO_X) \to \Gamam(U \cap V, \OO_X)
+\Gamma(U,\OO_X) \oplus \Gamma(V,\OO_X) \to \Gamma(U \cap V, \OO_X)
 \]
 explicitly, and thus show that
 \begin{align*}
@@ -366,4 +366,60 @@ Let $M_k := M \otimes k = M/\mm M$. By Nakayama's lemma, $M_k=0 \Rightarrow M=0$
 
 So suppose $M \otimes_A N=0$. Then $(M \otimes_A N)_k = 0$. But this is isomorphic to $M_k \otimes_A  N_k$ since $k \otimes_A k = k$. But $M_k \otimes_A N_k \simeq M_k \otimes_k N_k$, as $k$-modules, since everything in $\mm$ acts trivially on $M_k$. But these are vector spaces over a field, now we must have $M_k=0$ or $N_k=0$, and by Nakayama we are done.
 \end{sol}
+
+\begin{exc}[Exercise 24]
+If $M$ is an $A$-module, the following are equivalent:
+  \begin{enumerate}[i)]
+  \item $M$ is flat.
+\item $\Tor_n^A(M,N)=0$ for all $n>0$ and $A$-modules $N$.
+\item $\Tor_1^A(M,N)=0$ for all $A$-modules $N$.
+  \end{enumerate}
+  \begin{sol}
+
+To compute $\Tor_A^n(M,N)$, one takes an $A$-resolution of $N$ and tensor it with $M$ and take homology. But $M$ is flat, so the sequence stays exact, so the homology is zero. This shows $i) \Rightarrow ii)$.
+
+The implication $ii) \Rightarrow iii)$ is trivial.
+
+Now let
+\[
+0 \to N' \to N \to N'' \to 0
+\]
+be any exact sequence of $A$-modules. Then by properties of the Tor functor, we have an exact sequence
+\[
+\Tor_1(M,N'') \to N' \otimes M \to N \otimes M \to N'' \otimes M \to 0.
+\]
+But $\Tor_1(M,N'')=0$, so the sequence is short exact. Hence $M$ is flat.
+  \end{sol}
+
+  \begin{exc}[Exercise 25]
+
+Let 
+\[
+0 \to N' \to N \to N'' \to 0
+\]
+be an exact sequence with $N''$ flat. Then $N'$ is flat if and only if $N$ is flat.
+  \end{exc}
+  \begin{sol}
+    We have from the Tor exact sequence
+\[
+0 \to \Tor_1(N',M) \to Tor_1(N,M) \to 0
+\]
+since $\Tor_2(N'',M)=\Tor_1(N'',M)=0$. The statement follows.
+  \end{sol}
+  
+\end{exc}
+
+\subsection{Chapter III - Rings and modules of fractions}
+\begin{exc}[Exercise 1]
+
+Let $S$ be a multiplicatively closed subset of a ring $A$, and let $M$ be a finitely-generated $A$-module. Prove that $S^{-1}M=0$ if and only if there exists $s \in S$ such that $sM=0$.  
+\end{exc}
+
+\begin{sol}
+ Suppose there exists such $s$. Let $m/s' \in S^{-1}M$. This is zero if and only if there exists $s \in M$ such that $s(s'm)=0$. But $ss'm=s'sm=s'0=0$. So $m=0$ in $S^{-1}M$.  (note that we did not use finite generation)
+
+Now let $m_1,\ldots,m_r$ be a set of generators for $M$ and suppose that $S^{-1}M=0$. Then for each $i$ ($i=1,\ldots,r$), there exists $s_i$ such that $s_im_i=0$. Since every element of $M$ is an $A$-linear combination of the $m_i$, it follows that the product $s_1s_2\cdots s_r$ makes $sM=0$.
+\end{sol}
+
+
 \end{document}
