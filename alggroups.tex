@@ -201,6 +201,10 @@ The coinverse is given by the usual Cramer's rule. Also $\epsilon(T_{ij})=\delta
 \end{example}
 
 \begin{example}
+A special case of the previous example is the one-dimensional torus $\Gr_m=\Spec k[x,x^{-1}]$. Here $\mu_A(x)=x \otimes x$ and $\iota(x)=x^{-1}$. The coinverse is evaluation at $1$, i.e. the map sending $x \mapsto 1$.
+\end{example}
+
+\begin{example}
 If $G=\Gr_a=(\Aa^1,+)=\Spec k[X]$, then $\mu_A(X)=X \otimes 1 + 1 \otimes X$. The coidentity is $\epsilon(X)=0$, and the coinverse is $\iota(X)=-X$.
 \end{example}
 
@@ -292,7 +296,7 @@ Now, by the commutativity of the diagram \eqref{eq:algrep1} it follows that $$ x
 
 By the commutativity of the second diagram in the definition, it follows that
 $$
-\sum_i \mu_V (x_i) \otimes f_i = \sum_i x_i \otimes \mu_A(f_i) \in U \otimes A_k \otimes_k A.
+\sum_i \mu_V (x_i) \otimes f_i = \sum_i x_i \otimes \mu_A(f_i) \in U \otimes_k A \otimes_k A.
 $$
 
 Because each term of the right-hand-side is contained in $U \otimes A \otimes A$, it follows that $\mu_V(x_i)$ is contained in $U$ since the $f_i$ are linearly independent.
@@ -344,21 +348,28 @@ as wanted.
 A character is a homomorphism $G \to \C^\ast$, so we have a corresponding notion of characters in this ``dual'' world:
 
 \begin{defi}
-Let $G=\Spec A$ be an affine algebraic group. A $1$-dimensional character of $G$ is a function $\chi \in A$ satisfying
+Let $G=\Spec A$ be an affine algebraic group. A $1$-dimensional character of $G$ is an element $\chi \in A$ satisfying
 \[
 \xymatrix{
 \mu_A(\chi) = \chi \otimes \chi & \iota(\chi)\chi = 1.
 }
 \]
 \end{defi}
+\begin{example}
+ Let $G = \Gr_m = \Spec k[x,x^{-1}]$. Then since $\iota(x)=x^{-1}$ and $\mu_A(x) = x \otimes x$, we see that the elements $x^n$ for $n \in \Z$ are characters. In fact they are all:
+\end{example}
+
 
 \begin{lemma}
 \label{chargl}
 The characters of the general linear group $\GL(n) = \Spec k[x_{ij}, \det X]$ are precisely the integer powers of the determinant $(\det X)^n$ for $n \in Z$.   
 \end{lemma}
+\begin{proof}
+Characters are in particular invertible elements of the coordinate ring. The only invertible elements of $\Gamma(\GL(n),\OO_{\GL(n)})$ are scalar multiples of integer powers of the determinant. But the only $\lambda$ for which $\lambda( \det X)^n$ is a character is when $\lambda=1$, by the first equation in the definition of character.
+\end{proof}
 
 \begin{defi}
-  Let $\chi$ be a character of an affine algebraic group $G$, and let $V$ be a representation of $G$. A vector $v \in V$ satisfying $$\mu_V(v) = v \otimes \chi$$ is called a \emph{semi-invariant} of $G$ with weight $\chi$. The semi-invariants of $V$ belonging to a given character $\chi$ form a subrepresentation $V_\chi \subset V$ of $V$.
+  Let $\chi$ be a character of an affine algebraic group $G$, and let $V$ be a representation of $G$. A vector $v \in V$ satisfying $$\mu_V(v) = v \otimes \chi$$ is called a \emph{semi-invariant} of $G$ with weight $\chi$. The semi-invariants of $V$ belonging to a given character $\chi$ form a subrepresentation $V_\chi \subset V$ of $V$. (easy to show)
 \end{defi}
 
 We will often change the point of view depending upon the situation. Sometimes we think of a representation of an algebraic group as a $k$-linear map $V \to V \otimes_k A$ satisfying some axioms, and sometimes we think of a representation as a group $G$ acting on a vector space $V$ in the usual fashion.
@@ -457,9 +468,17 @@ The minimal $N$ such that $\alpha(\mm_p^{N+1})=0$ is called the \emph{degree} of
 
 We can identify the set of local distributions of degree $\leq d$ with $k$-module $(R/\mm_p^{d+1})^\vee$. The surjections $R/\mm_p^{d+1} \to R/\mm_p^{d}$ induce injections $(R/\mm_p^d)^\vee \hookrightarrow (R/\mm_p^{d+1})^\vee$. We can thus identify the set of distributions supported at $p$ with $\varinjlim (R/\mm_p^i)^\vee = \bigcup_i (R/\mm_p^i)^\vee$.
 
+\begin{lemma}
+For a $k$-linear map $\alpha:R \to k$, the following are equivalent:
+\begin{enumerate}
+\item $\alpha$ is a derivation of $X=\Spec R$ at the point $p \in X$.
+\item $\alpha$ is a local distribution supported at $p \in X$ of degree $1$ satisfying $\alpha(1)=0$.
+\end{enumerate}
+\end{lemma}
+
 \subsubsection{The distribution algebra}
 
-If now $G=\Spec A$ is an affine algebraic group with coordinate ring $A$, then denote by $\HH(G)$ the vector space of distributions $\alpha:A \to k$ supported at $e \in G$. The Zariski tangent space at $e \in G$ is called the \emph{Lie space} of $G$ and is denoted by $\g \subset \HH(G)$.
+If $G=\Spec A$ is an affine algebraic group with coordinate ring $A$, then denote by $\HH(G)$ the vector space of distributions $\alpha:A \to k$ supported at $e \in G$. The Zariski tangent space at $e \in G$ is called the \emph{Lie space} of $G$ and is denoted by $\g \subset \HH(G)$.
 
 \begin{defi}
  Let $\alpha,\beta \in \HH(G)$. Then we define the \emph{convolution product} $\alpha \star \beta$ to be the composition
@@ -477,9 +496,9 @@ $$
 \begin{proof}
 The fact that $(e,e) \mapsto e$ under $m:G \times G \to G$, is equivalent to
 $$
-\mu_A^{-1}(\mm \otimes \mm)=\mm,
+\mu_A^{-1}(A \otimes \mm + \mm \otimes A)=\mm,
 $$
-from which it follows that $\mm \otimes \mm = \mu_A(\mm)$. This is again contained in $\mm \otimes A + A \otimes \mm$. Since $\mu_A$ is a ring homomorphism, we have
+from which it follows that $A \otimes \mm + \mm \otimes A = \mu_A(\mm)$. Since $\mu_A$ is a ring homomorphism, we have
 $$
 \mu_A(\mm^{a+b+1}) \subset \sum_{i+j=a+b+1} \mm^i \otimes \mm^j.
 $$
@@ -501,7 +520,23 @@ The composition is equal to $\epsilon \star \alpha$, but by Part 2 of Definition
 
 It follows from coassociativity that $\star$ is associative (easy diagram chase). This makes $\mathcal H(G)$ into an associative algebra over $k$, called the \emph{distribution algebra} of the algebraic group $G$. 
 
-[[EXAMPLES]]
+\begin{prop}
+ The distribution algebra $\HH(G)$ is a Lie algebra with bracket
+\[
+[\alpha,\beta] = \alpha \star \beta - \beta \star \alpha.
+\]
+\end{prop}
+\begin{proof}
+Same proof as in the matrix case.
+\end{proof}
+
+\begin{example}
+Let $G = \Gr_m$, the multiplicative group. The derivations are just scalar multiples of $E=\restr{\dd{}{t}}{e}$. 
+
+I claim that the distribution algebra $\HH(G)$ is generated by $E$ as an algebra. That is, distributions of degree $n$ are precisely scalar multiples of $E \star E \cdots  \star E$. Since $k[t,t^{-1}]_d= \langle t^{d} \rangle_k$, it is clear that the set of distrubutions of degree exactly $n$ is one-dimensional. Hence they are multiples of $E^{\star n}$. 
+\end{example}
+
+
 
 Now let $\mu_V: V \to V \otimes A$ be an algebraic representation, with associated representation $\rho:G \to \GL(V)$. Let $\alpha \in \HH(G)$ be a local distribution. Then composition
 \[
