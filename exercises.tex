@@ -391,6 +391,33 @@ Let $M_k := M \otimes k = M/\mm M$. By Nakayama's lemma, $M_k=0 \Rightarrow M=0$
 So suppose $M \otimes_A N=0$. Then $(M \otimes_A N)_k = 0$. But this is isomorphic to $M_k \otimes_A  N_k$ since $k \otimes_A k = k$. But $M_k \otimes_A N_k \simeq M_k \otimes_k N_k$, as $k$-modules, since everything in $\mm$ acts trivially on $M_k$. But these are vector spaces over a field, now we must have $M_k=0$ or $N_k=0$, and by Nakayama we are done.
 \end{sol}
 
+\begin{exc}[Exercise 4]
+
+Let $M_i$ ($i \in I$) be any family of $A$-modules, and let $M$ be their direct sum. Then $M$ is flat if and only if each $M_i$ is flat.  
+\end{exc}
+\begin{sol}
+Let
+\[
+0 \to N' \to N \to N'' \to 0
+\]
+be any exact sequence. Then tensoring with $M$ gives
+\[
+0 \to N' \otimes_A M \to N \otimes_A M \to N'' \otimes_A M \to 0.
+\]
+We only need to check that the left map is injective. But we have $N' \otimes_A M \simeq \bigoplus_i N' \otimes_A M_i$ and $N \otimes_A M \simeq \bigotimes_i N \otimes_A M_i$, and thus the left map is just the direct sum of all the maps 
+\[
+0 \to N' \otimes_A M_i \to N \otimes_A M,
+\]
+which is injective if and only if each $M_i$ is flat.
+\end{sol}
+
+\begin{exc}[Exercise 5]
+Let $A[x]$ be the ring of polynomials in one indeterminate over a ring $A$. PRove that $A[x]$ is flat $A$-algebra.  
+\end{exc}
+\begin{sol}
+We have $A[x] = \bigoplus_{i=0}^\infty x^i A$ as an $A$-module. Now use Exercise 4.
+\end{sol}
+
 \begin{exc}[Exercise 24]
 If $M$ is an $A$-module, the following are equivalent:
   \begin{enumerate}[i)]
@@ -451,7 +478,7 @@ Now let $m_1,\ldots,m_r$ be a set of generators for $M$ and suppose that $S^{-1}
 
 Let $f:A \to B$ be an integral morphism of rings. Show that $f^\ast:\Spec B \to \Spec A$ is a closed mapping.  
 \end{exc}
-\begin{proof}
+\begin{sol}
 The map $f^\ast$ is by definition given by $\pp \mapsto f^{-1}(\pp) = \pp \cap A$. A closed subset of $\Spec B$ is by definition 
 \[
 V(\ia) = \{ \pp \in \Spec B \mid \pp \supset \ia \}
@@ -462,8 +489,26 @@ Then the image of $V(\ia)$ is the set
 \begin{align*}
 f^\ast(V(\ia)) &= \{ \pp \cap A \mid \pp \in \Spec B, \quad  \pp \supset \ia \} 
 \end{align*}
-........... ???
-\end{proof}
+I claim that this is equal to 
+\[
+V(\ia \cap A) = \{ \qq \in \Spec A \mid \qq \supset \ia \cap A \},
+\]
+which clearly is a closed subset of $\Spec A$.
+
+One direction is obvious: let $\pp \cap A$ be an element of $f^\ast(V(\ia))$. This is a point of $\Spec A$, and clearly $\pp \cap A \supset \ia \cap A$ since $\pp \supset \ia$.
+
+The other direction needs the going up Theorem 5.10. Suppose $\qq \in V(\ia \cap A)$. Then by Going Up, there exists $\pp \in \Spec B$ with $\pp \cap A = \qq$. But we need to check that $\pp \supset \ia$. That is, we need to prove the assertion that if $\qq = \pp \cap A$ and $\qq \supset \ia \cap A$, then $\pp \supset \ia$. So suppose $a \in \ia \subset B$. Then $a$ satisfies an equation
+\[
+a^n + b_{n-1}a^{n-1} + \ldots + b_1a+b_0=0
+\]
+with $b_i \in A$. Since $a \in \ia$, we see that $b_0 \in \qq = \pp \cap A$. Hence
+\[
+a^n+b_{n-1}a^{n-1}+\ldots+b_1a = a(a^{n-1}+b_{n-1}a^{n-2}+\ldots+b_1) \in \pp
+\]
+since $\qq \subset \pp$. But $\pp$ is prime so either $a \in \pp$ and we are done, or $a^{n-1}b_{n-1}a^{n-2}+\ldots+b_1 \in \pp$, and we can continue by induction.
+
+Hence we are done.
+\end{sol}
 
 \subsection{Chapter 7 - Noetherian rings}
 
