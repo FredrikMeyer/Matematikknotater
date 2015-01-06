@@ -157,6 +157,83 @@ The first cotangent module of $\widetilde T$ has $\dim_k T^1(\widetilde T/k) = 2
 
 We have that $h^0(\PP(\K \ast \Delta^1),\mathcal T)=14$ by Theorem 5.2 in \cite{deforming_christophersen}. Thus these numbers fit in the narrative that we should have $T^1_{X_0} = h^1(\mathcal T_{X_t}) + h^0(\mathcal T_{X_0})$. (IS THERE ANY HEURISTIC FOR THIS??)
 
+\section{Computing the Hodge numbers of X}
+
+First a lemma that will be useful later:
+\begin{lemma}
+\label{lemmanormal}
+Let $\mathcal N_{X/\PP^{13}}$ be the normal sheaf of $X$ in $\PP^{13}$. Then $h^3(\mathcal I_X/\mathcal I_X^2) = h^0(\mathcal N_{X/\PP^{13}})$.
+\end{lemma}
+\begin{proof}
+By Serre duality $h^{3-i}(\mathcal I_X/\mathcal I_X^2)=h^{i}((\mathcal I_X/\mathcal I_X^2)^\vee \otimes \omega)$, where $\omega$ is the dualizing sheaf. But $X$ is Calabi-Yau, so $\omega \simeq \OO_X$. The dual of $\mathcal I_X/\mathcal I_X^2$ is by definition the normal bundle.
+\end{proof}
+
+
+
+Consider the Euler sequence
+\[
+0 \to \Omega_{\PP^{13}} \otimes \OO_{X} \to \OO_{X}(-1)^{14} \to \OO_X \to 0.
+\]
+
+Since $X$ is a deformation of a Stanley-Reisner sphere, we know the cohomology of $\OO_X$. So we can extract the cohomology of $\Omega_{\PP^{13}} \otimes \OO_X$.
+
+\begin{lemma}
+We have
+\[
+H^i(\Omega_{\PP^{13} \otimes \OO_X}) = \begin{cases}
+0 & \text{if } i=0 \\
+1 & \text{if } i=1 \\
+0 & \text{if } i=2 \\
+11 & \text{if } i=3. \\
+\end{cases}
+\]
+\end{lemma}
+\begin{proof}
+The full long exact sequence is:
+\begin{align*}
+0 & \to H^0(\Omega_{\PP^{13}} \otimes \OO_X) &\to H^0(\OO_X(-1)^{14}) &\to H^0(\OO_X) \to \\
+H^1(\Omega_{\PP^{13}} \otimes \OO_X) &\to H^1(\OO_X(-1)^{14}) &\to H^1(\OO_X) \to \\
+ H^2(\Omega_{\PP^{13}} \otimes \OO_X) &\to H^2(\OO_X(-1)^{14}) &\to H^2(\OO_X) \to \\
+ H^3(\Omega_{\PP^{13}} \otimes \OO_X) &\to H^3(\OO_X(-1)^{14}) &\to H^3(\OO_X) \to 0
+\end{align*}
+Inserting the dimensions we know, we get:
+\begin{align*}
+0 & \to H^0(\Omega_{\PP^{13}} \otimes \OO_X) & 0  &\to 1 \to \\
+H^1(\Omega_{\PP^{13}} \otimes \OO_X) &\to 0 &\to 0 \to \\
+ H^2(\Omega_{\PP^{13}} \otimes \OO_X) &\to 0 &\to 0 \to \\
+ H^3(\Omega_{\PP^{13}} \otimes \OO_X) &\to 12  &\to 1 \to 0
+\end{align*}
+Hence we conclude.
+\end{proof}
+
+Since $X$ is smooth, the conormal sequence is exact, so we have
+\[
+0 \to \mathcal I_X/\mathcal I_X^2 \to \Omega^1_{\PP^{13}} \otimes \OO_X \to \Omega_X^1 \to 0.
+\]
+
+\begin{lemma}
+We have equalities
+\[
+h^{11}(X) = h^2(\mathcal I_X/\mathcal I_X^2)-h^1(\mathcal I_X/\mathcal I_X^2)+1
+\]
+and 
+\[
+h^{21}(X) = h^0(\mathcal N_{X/\PP^{13}})-11.
+\]
+Hence also
+\[
+\frac{\chi (X)}{2} = 12 - \chi(\mathcal I_X/\mathcal I_X^2),
+\]
+where $\chi$ denotes the Euler characteristic.
+\end{lemma}
+\begin{proof}
+Write up the long exact sequence coming from the conormal sequence of $X$ and use Lemma \ref{lemmanormal}.
+\end{proof}
+
+
+
+
+
 \bibliographystyle{alpha} 
 \bibliography{bibliografi}
 
