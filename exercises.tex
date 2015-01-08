@@ -218,6 +218,35 @@ If $n$ is large enough, $K-D$ will have negative degree, so $l(K-D)=0$. Thus for
 
 \end{sol}
 
+%%%%%%%%%%%%%%%%%%%%
+\section{Calculus on Manifolds - Spivak}
+
+\subsection{Functions on Euclidean Space}
+
+\begin{exc}[Exercise 1.1]
+Prove that $\lvert x \rvert \leq \sum_{i=1}^n \lvert x^i  \rvert$.  
+\end{exc}
+\begin{sol}
+ By induction, one can prove that $\sqrt{\sum_i a_i} \leq \sum_i \sqrt{a_i}$. The claim then follows trivially.
+\end{sol}
+
+\begin{exc}[Exercise 1.7]
+A linear transformation $T:\R^n \to \R^n$ is \emph{norm preserving} if $\lvert T(x)\rvert = \lvert x \rvert$ for all $x \in \R^n$. It is inner product preserving if $\langle Tx,Ty \rangle = \langle x,y \rangle y$. 
+\begin{enumerate}[a)]
+\item Prove that $T$ is norm preserving if and only if it is inner product preserving.
+\item Prove that such a linear transformation is $1-1$ and $T^{-1}$ is of the same sort.
+\end{enumerate}
+\end{exc}
+\begin{sol}
+a). The direction $\Leftarrow$ is trivial. For the other direction, choose a basis $\{x_1,\ldots,x_n\}$ of $\R^n$ such that $x=x_1$ and $y=\sum a_ix_i$. 
+Then $\langle Tx ,a_ix_i \rangle = a_i \langle T x, x_i \rangle = 0$ if $i \neq 1$ and $a_1$ else. Then since $T(0)=0$ it follows that 
+\[
+\langle Tx, Ty \rangle = \langle Tx,T(a_1x_1) \rangle = a_1 \langle Tx_1,Tx_1 \rangle = a_1 \lvert Tx_1\rvert ^2 = a_1 \lvert x_1 \rvert ^2 = a_1\langle x_1,x_1 \rangle.
+\]
+
+b). Suppose $T(x)=0$. Then $0=\langle Tx,Tx \rangle = \langle x,x \rangle$, but this happens if and only if $x=0$. Also $\langle T^{-1} y,T^{-1}y \rangle = \langle T^{-1}T(x),T^{-1}T(x) \rangle = \langle TT^{-1}(x),TT^{-1}(x) \rangle = \langle T^{-1}x,T^{-1}x \rangle = \langle y,y \rangle$. 
+\end{sol}
+
 %%%%%%%%%%%%%%%
 \section{Commutative Algebra - Eisenbud}
 
