@@ -180,11 +180,11 @@ Since $X$ is a deformation of a Stanley-Reisner sphere, we know the cohomology o
 \begin{lemma}
 We have
 \[
-H^i(\Omega_{\PP^{13} \otimes \OO_X}) = \begin{cases}
+H^i(\Omega_{\PP^{13}} \otimes \OO_X) = \begin{cases}
 0 & \text{if } i=0 \\
 1 & \text{if } i=1 \\
 0 & \text{if } i=2 \\
-11 & \text{if } i=3. \\
+167 & \text{if } i=3. \\
 \end{cases}
 \]
 \end{lemma}
@@ -201,7 +201,7 @@ Inserting the dimensions we know, we get:
 0 & \to H^0(\Omega_{\PP^{13}} \otimes \OO_X) & 0  &\to 1 \to \\
 H^1(\Omega_{\PP^{13}} \otimes \OO_X) &\to 0 &\to 0 \to \\
  H^2(\Omega_{\PP^{13}} \otimes \OO_X) &\to 0 &\to 0 \to \\
- H^3(\Omega_{\PP^{13}} \otimes \OO_X) &\to 12  &\to 1 \to 0
+ H^3(\Omega_{\PP^{13}} \otimes \OO_X) &\to 168  &\to 1 \to 0
 \end{align*}
 Hence we conclude.
 \end{proof}
@@ -218,11 +218,11 @@ h^{11}(X) = h^2(\mathcal I_X/\mathcal I_X^2)-h^1(\mathcal I_X/\mathcal I_X^2)+1
 \]
 and 
 \[
-h^{21}(X) = h^0(\mathcal N_{X/\PP^{13}})-11.
+h^{21}(X) = h^0(\mathcal N_{X/\PP^{13}})-167.
 \]
 Hence also
 \[
-\frac{\chi (X)}{2} = 12 - \chi(\mathcal I_X/\mathcal I_X^2),
+\frac{\chi (X)}{2} = 168 - \chi(\mathcal I_X/\mathcal I_X^2),
 \]
 where $\chi$ denotes the Euler characteristic.
 \end{lemma}
@@ -230,7 +230,39 @@ where $\chi$ denotes the Euler characteristic.
 Write up the long exact sequence coming from the conormal sequence of $X$ and use Lemma \ref{lemmanormal}.
 \end{proof}
 
+\begin{lemma}
+ There is an exact sequence
+\[
+0 \to \restr{ \mathcal I_Y /\mathcal I_Y^2 }{X} \to \mathcal I_X/\mathcal I_X^2 \to \mathscr O_X(-1)^2 \to 0.
+\]
+\end{lemma}
 
+\begin{proof}
+  There is an exact sequence of ideal sheaves
+\[
+0 \to \mathcal I_Y \to \mathcal I_X  \to \mathcal I_X/\mathcal I_Y \to 0.
+\]
+First tensoring with $\mathscr O_Y$ gives [[WHY IS THIS EXACT?]]
+\[
+0 \to  \mathcal I_Y /\mathcal I_Y^2 \to \mathcal I_X \otimes \OO_Y \to \mathcal I_X/\mathcal I_Y \otimes \OO_Y \to 0.
+\]
+Tensoring with $\mathscr O_X$ gives the statement since $X$ is a complete intersection of two linear subspaces, and hence its normal bundle \emph{in $Y$} is just $\OO_X(-1)^2$.
+\end{proof}
+
+\begin{corr}
+ Hence:
+\[
+h^0(\mathcal N_{X/\PP^{13}}) = h^3(\restr{\mathcal I_Y/\mathcal I_Y^2 }{X})+24.
+\]
+\end{corr}
+
+We also have the following:
+\begin{lemma}
+The Hodge number $h^{21}(X)$ of $X$ satisfies the following equation:
+\[
+h^{12}(X) = 120 + h^2(\restr{\Omega_{Y/k}^1}{X}) -h^3(\restr{\Omega_{Y/k}^1}{k}).
+\]  
+\end{lemma}
 
 
 
