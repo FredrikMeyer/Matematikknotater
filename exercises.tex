@@ -112,6 +112,51 @@ First we claim that any $f \in k[x,y,z]$ can be written as $f=R(x)+S(x)y+T(x)z+i
 
 \subsection{Chapter II - Schemes}
 
+\begin{exc}[Exercise 1.16, Flabby/flasque sheaves]
+A sheaf $\FF$ on a topological space $X$ is \emph{flasque} (flabby) if for every inclusion $U \subseteq V$, the restriction map $\FF(U) \to \FF(V)$ is surjective.
+\begin{enumerate}[a)]
+\item Show that a constant sheaf on an irreducible topological space is flasque.
+\item If $0 \to \FF' \to \FF \to \FF'' \to 0$ is an exact sequence of sheaves, and if $\FF'$ is flabby, then for any open set $U$, the sequence
+$$
+0 \to \FF'(U) \to \FF(U) \to \FF''(U) \to 0
+$$
+is exact.
+\item Same as above, but suppose $\FF'$ and $\FF$ are flabby. Show that $\FF''$ is flabby.
+\item If $f:X \to Y$ is a continous map, and $\FF$ is a flabby sheaf on $X$, then $f_*\FF$ is flabby on $Y$.
+\item Let $\FF$ be any sheaf on $X$. We define a new sheaf $\mathscr G$, called the \emph{sheaf of discontinous sections of $\FF$}, as follows: For each open set $U \subset X$, $\mathscr G(U)$ is the set of maps $s:U \to \cup_{P \in U} \FF_P$, such that for all $P \in U$, $s(P) \in \FF_P$. Show that $\mathscr G$ is a flabby sheaf, and that there is a natural injective morphism from $\FF$ to $\mathscr G$.
+\end{enumerate}
+\end{exc}
+
+\begin{sol}
+\begin{enumerate}[a)]
+\item Every open set in $X$ is irreducible and dense, and dense sets are connected. Hence a constant sheaf is actually constant, and all the restriction maps are identities (except if one of them is the empty set).
+\item The sheaf axiom for a sheaf $\FF$ is equivalent to the following: for every covering $\{U_i \}$ of $U$, the following sequence is exact:
+$$
+0 \to \FF(U) \to \prod_i \FF(U_i) \to \prod_{ij} \FF(U_{ij}),
+$$
+where $U_{ij}= U_i \cap U_j$. The first map sends a section $s$ to the product of all its restrictions, and the second map sends $(s_i) \mapsto (s_i-s_j)_{ij \in I \times I}$.
+
+Since the sequence of sheaves in the exercise is exact, for small enough $U_i$, the sequence $0 \to \FF'(U_i) \to \FF(U_i) \to \FF''(U_i) \to 0$ is exact (for sheaves, exactness is a local property). Hence we can form the following diagram, where the columns are exact by the sheaf property, and the rows are exact by what was just said:
+\[
+\xymatrix{
+ & 0\ar[d] & 0 \ar[d] & 0 \ar[d] \\
+ 0 \ar[r] & \FF'(U) \ar[r]\ar[d] & \FF(U) \ar[r]\ar[d] & \FF''(U)\ar[d] \\
+ 0 \ar[r] & \prod_i \FF'(U_i) \ar[r]\ar[d]^f & \prod_i \FF(U_i) \ar[r]\ar[d] & \prod_i\FF''(U_i) \ar[r]\ar[d] & 0  \\
+ 0 \ar[r] &\prod_{ij} \FF'(U_{ij}) \ar[r]\ar[d] & \prod_{ij} \FF(U_{ij}) \ar[r] & \prod_{ij}\FF''(U_{ij}) \ar[r] & 0 \\
+ & \coker f
+}
+\]
+Now, $\coker f=0$ since $\FF'$ is flabby! Hence apply the snake lemma to see that the top right map is surjective as well!
+\item Use the same diagram. The middle column is surjective at the bottom, and by commutativity, the right column must be as well.
+\item This is obvious, since $f_\ast \FF(V) = \FF(f^{-1}(V))$.
+\item It is clear that $\mathscr G$ is a sheaf. If $U \subset V$, let $s \in \mathscr G(U)$ be given. Then define $s' \in G(V)$ as follows: $s'(P)=s(P)$ if $P \in U$ and zero elsewhere. This element will be sent to $s$.
+
+The injective morphism from $\FF$ to $\mathscr G$ is defined as follows: send $s \in \FF(U)$ to the function $s(P)=s_P$ in $\mathscr G(U)$.
+\end{enumerate}
+\end{sol}
+
+
+
 \begin{exc}[Exercise 2.19]
 Let $A$ be a ring. The following are equivalent:
 \begin{enumerate}
