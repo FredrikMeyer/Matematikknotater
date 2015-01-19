@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  15 JAN 2015 18:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  19 JAN 2015 14:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1212,31 +1212,39 @@ Overfull \hbox (52.19745pt too wide) in paragraph at lines 203--204
 i(cotangentSheaf Proj A)\T1/cmr/m/it/10.95 .
  []
 
+[5]
+Overfull \hbox (2.5192pt too wide) in paragraph at lines 232--233
+[][]\T1/cmr/bx/n/10.95 Theorem 3.1. []\T1/cmr/m/it/10.95 There ex-ists a non-si
+ngular Calabi-Yau with $\OML/cmm/m/it/10.95 X$ \T1/cmr/m/it/10.95 with $\OML/cm
+m/m/it/10.95 h[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X\OT1/cmr/m/n/10.95 ) =
 
-Overfull \hbox (3.89024pt too wide) in paragraph at lines 222--223
-[][]\T1/cmr/bx/n/10.95 Lemma 3.1. []\T1/cmr/m/it/10.95 Let $\OMS/cmsy/m/n/10.95
+ []
+
+
+Overfull \hbox (3.89024pt too wide) in paragraph at lines 268--269
+[][]\T1/cmr/bx/n/10.95 Lemma 4.1. []\T1/cmr/m/it/10.95 Let $\OMS/cmsy/m/n/10.95
  N[]$ \T1/cmr/m/it/10.95 be the nor-mal sheaf of $\OML/cmm/m/it/10.95 X$ \T1/cm
 r/m/it/10.95 in $\U/msb/m/n/10.95 P[]$\T1/cmr/m/it/10.95 . Then $\OML/cmm/m/it/
 10.95 h[]\OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95 I[]\OML/cmm/m/it/10.95 =\OMS/c
 msy/m/n/10.95 I[]\OT1/cmr/m/n/10.95 ) =
  []
 
-[5] [6] (./resultsphd.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 329.
- [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 329.
+[6] [7] (./resultsphd.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 375.
+ [8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 375.
  (./resultsphd.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 329.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 329.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 375.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 375.
 Package rerunfilecheck Info: File `resultsphd.out' has not changed.
-(rerunfilecheck)             Checksum: CA7B86C0D777A640590BE88C3C57F849;196.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 329.
+(rerunfilecheck)             Checksum: C6492AB6489ECD3E7AB0F3F472CF51A4;266.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 375.
  ) 
 Here is how much of TeX's memory you used:
- 20003 strings out of 493308
- 348078 string characters out of 6135157
- 466307 words of memory out of 5000000
- 22958 multiletter control sequences out of 15000+600000
+ 20010 strings out of 493308
+ 348151 string characters out of 6135157
+ 466365 words of memory out of 5000000
+ 22960 multiletter control sequences out of 15000+600000
  21182 words of font info for 66 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,11n,63p,3278b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1268,10 +1276,10 @@ f/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></mn/anatu/modules/opt/te
 xlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></
 mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/c
 m-super/sftt1095.pfb>
-Output written on resultsphd.pdf (7 pages, 267670 bytes).
+Output written on resultsphd.pdf (8 pages, 271551 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
- 158 compressed objects within 2 object streams
- 47 named destinations out of 1000 (max. 500000)
- 37 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 202 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
+ 52 named destinations out of 1000 (max. 500000)
+ 45 words of extra memory for PDF output out of 10000 (max. 10000000)
 
