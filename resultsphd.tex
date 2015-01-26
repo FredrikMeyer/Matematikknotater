@@ -204,7 +204,7 @@ and $h^4(\Omega_Y^1(-2))-h^5(\Omega_Y^1(-2))=23$.
 \end{remark}
 
 \begin{remark}[Question]
-A computation revelas that $H^i(\mathcal I/\mathcal I^2) \simeq H^i(\im d)$ for $ i\geq 2$. This could be because the singularities are of dimension $1$. Is there a theoretical result to this effect?
+A computation reveals that $H^i(\mathcal I/\mathcal I^2) \simeq H^i(\im d)$ for $ i\geq 2$. This could be because the singularities are of dimension $1$. Is there a theoretical result to this effect?
 \end{remark}
 
 We can compute it \verb|Macaulay2| that:
@@ -229,7 +229,7 @@ where $\mathscr I_{X/Y}$ is the ideal sheaf of $X$ in $Y$. We also have the sequ
 This allows us to compute the Hodge numbers of $X$:
 
 \begin{thm}
-There exists a non-singular Calabi-Yau with $X$ with $h^{11}(X)=1$ and $h^{12}(X)=13$. Hence the topological Euler characteristic is $-24$.
+There exists a non-singular Calabi-Yau with $X$ with $\chi(\Omega_X^1)=-12$. Hence the topological Euler characteristic is $-24$.
 \end{thm}
 
 \begin{proof}
@@ -247,22 +247,13 @@ Tensoring with $\Omega_Y^1$ is exact because it is torsionfree (??). Do the same
 \[
 0 \to \Omega_Y^1(-2) \to \Omega_Y(-1)^2 \to \mathscr I_{X/Y} \otimes \Omega_Y \to 0.
 \]
-Taking Euler characteristics, we find that $\chi(I_{X/Y} \otimes \Omega_Y)=-3$. Since $\chi(\Omega_Y^1)$ was computed to be $9$, it follows from the first exact sequence that $\chi(\Omega_X^1)=12$.
-
-Since the singularities of $Y$ are of dimension $1$, it can be proven [[see below later]] that $h^{11}(X)=h^{11}(Y)=1$. Hence $h^{21}=13$.
+Taking Euler characteristics, we find that $\chi(\mathscr I_{X/Y} \otimes \Omega_Y)=-3$. Since $\chi(\Omega_Y^1)$ was computed to be $9$, it follows from the first exact sequence that $\chi(\Omega_X^1)=12$.
 
 The topological Euler characteristic is double the Euler characteristic of the tangent sheaf, hence $\chi(X)=-24$.
 \end{proof}
 
+To actually find the Hodge numbers, we need a few lemmas.
 
-
-
-
-\section{Ramblings I thought would be useful} 
-
-%%%%%%%%%%%%%%%%%
-
-First a lemma that will be useful later:
 \begin{lemma}
 \label{lemmanormal}
 Let $\mathcal N_{X/\PP^{13}}$ be the normal sheaf of $X$ in $\PP^{13}$. Then $h^3(\mathcal I_X/\mathcal I_X^2) = h^0(\mathcal N_{X/\PP^{13}})$.
@@ -270,8 +261,6 @@ Let $\mathcal N_{X/\PP^{13}}$ be the normal sheaf of $X$ in $\PP^{13}$. Then $h^
 \begin{proof}
 By Serre duality $h^{3-i}(\mathcal I_X/\mathcal I_X^2)=h^{i}((\mathcal I_X/\mathcal I_X^2)^\vee \otimes \omega)$, where $\omega$ is the dualizing sheaf. But $X$ is Calabi-Yau, so $\omega \simeq \OO_X$. The dual of $\mathcal I_X/\mathcal I_X^2$ is by definition the normal bundle.
 \end{proof}
-
-
 
 Consider the Euler sequence
 \[
@@ -315,17 +304,10 @@ Since $X$ is smooth, the conormal sequence is exact, so we have
 \]
 
 \begin{lemma}
-We have equalities
-\[
-h^{11}(X) = h^2(\mathcal I_X/\mathcal I_X^2)-h^1(\mathcal I_X/\mathcal I_X^2)+1
-\]
-and 
+\label{lemmah21}
+We have
 \[
 h^{21}(X) = h^0(\mathcal N_{X/\PP^{13}})-167.
-\]
-Hence also
-\[
-\frac{\chi (X)}{2} = 168 - \chi(\mathcal I_X/\mathcal I_X^2),
 \]
 where $\chi$ denotes the Euler characteristic.
 \end{lemma}
@@ -334,40 +316,39 @@ Write up the long exact sequence coming from the conormal sequence of $X$ and us
 \end{proof}
 
 \begin{lemma}
- There is an exact sequence
+There is an exact sequence
+\[
+0 \to \OO_X(1)^2 \to \mathcal N_{X/\PP^{13}} \to \restr{\mathcal N_{Y/\PP^{13}} }{X} \to 0
+\]
+\end{lemma}
+\begin{proof}
+First note that there is an exact sequence of conormal sheaves:
 \[
 0 \to \restr{ \mathcal I_Y /\mathcal I_Y^2 }{X} \to \mathcal I_X/\mathcal I_X^2 \to \mathscr O_X(-1)^2 \to 0.
 \]
-\end{lemma}
-
-\begin{proof}
-  There is an exact sequence of ideal sheaves
-\[
-0 \to \mathcal I_Y \to \mathcal I_X  \to \mathcal I_X/\mathcal I_Y \to 0.
-\]
-First tensoring with $\mathscr O_Y$ gives [[WHY IS THIS EXACT?]]
-\[
-0 \to  \mathcal I_Y /\mathcal I_Y^2 \to \mathcal I_X \otimes \OO_Y \to \mathcal I_X/\mathcal I_Y \otimes \OO_Y \to 0.
-\]
-Tensoring with $\mathscr O_X$ gives the statement since $X$ is a complete intersection of two linear subspaces, and hence its normal bundle \emph{in $Y$} is just $\OO_X(-1)^2$.
+The last term is $\mathcal N_{X/Y}$, since $X$ is a complete intersection in $Y$. Dualizing is exact even though $Y$ is not smooth, because by the long exact sequence of $\mathscr {E}xt$ sheaves, we must have $\mathscr{E}xt^1(\OO_X(-1),\OO_X)=0$. But this is true, since both of these are locally free.
 \end{proof}
 
-\begin{corr}
- Hence:
+\begin{prop}
+ We have 
 \[
-h^0(\mathcal N_{X/\PP^{13}}) = h^3(\restr{\mathcal I_Y/\mathcal I_Y^2 }{X})+24.
+h^{21}(X) = 39.
 \]
-\end{corr}
+Hence $h^{11}(X)=27$.
+\end{prop}
+\begin{proof}
+By lemma \ref{lemmah21}, we need to compute $h^0(\mathcal N_{X/\PP^{13}})$. By the previous lemma, we have $h^0(\mathcal N_{X/\PP^{13}})=\restr{\mathcal N_{Y/\PP^{13}}}{X}+24$. 
 
-We also have the following:
-\begin{lemma}
-The Hodge number $h^{21}(X)$ of $X$ satisfies the following equation:
+We have an exact sequence
 \[
-h^{12}(X) = 120 + h^2(\restr{\Omega_{Y/k}^1}{X}) -h^3(\restr{\Omega_{Y/k}^1}{k}).
-\]  
-\end{lemma}
-
-
+0 \to \mathcal I_{X/Y} \otimes \mathcal N_{Y/\PP^{13}} \to  \mathcal N_{Y/\PP^{13}} \to \restr{\mathcal N_{Y/\PP^{13}}}{X} \to 0.
+\]
+And also an exact sequence:
+\[
+0 \to \mathcal N_{Y/\PP^{13}}(-2) \to \mathcal N_{Y/\PP^{13}}(-1)^{\oplus 2} \to \mathcal I_{X/Y} \otimes \mathcal N_{Y/\PP^{13}} \to 0.
+\]
+The cohomology of $\mathcal N_{Y\PP^{13}}(-i)$ is possible to compute in \verb|Macaulay2|, and it follows from the long exact sequence that $h^0(\mathcal I_{X/Y} \otimes \mathcal N_{Y/\PP^{13}})=36$, and $h^1(\mathcal I_{X/Y} \otimes \mathcal N_{Y/\PP^{13}})=0$. Hence it follows from the same computation that $h^0(\restr{\mathcal N_{Y/\PP^{13}}}{X})=182$ and that $h^0(\mathcal N_{X/\PP^{13}})=206$. We conclude that $h^{21}=206-167=39$.
+\end{proof}
 
 \bibliographystyle{alpha} 
 \bibliography{bibliografi}
