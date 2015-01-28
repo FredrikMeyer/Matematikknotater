@@ -473,6 +473,67 @@ and it is easily seen that the kernel of $\text{Jac} \otimes B$ is given by $\mm
 Also $T^0(B/k,B)$ is $B^2$ modulo the image of the Jacobian. The constants are left untouched, so $\dim_k T^0(B/k,B) = 2+2+2-3=3$. A basis is given by $(1,0),(0,1)$ and $(x,y)$. (thus Hartshorne is wrong?)
 \end{sol}
 
+\section{Introduction to Differential Geometry - Spivak}
+
+\subsection{Chapter 1 - Manifolds}
+
+\begin{exc}[Exercise 3]
+  \begin{enumerate}[a)]
+  \item Every manifold is locally compact.
+\item Every manifold is locally pathwise connected, and a connected manifold is pathwise connected.
+\item A connected manifold is arcwise connected. (\emph{Arcwise connected} means that any two points can be connected by a $1-1$ path.)
+  \end{enumerate}
+\end{exc}
+
+\begin{sol}
+  \begin{enumerate}[a)]
+  \item Indeed, let $x:\R^n \to U \subset M$ be a homeomorphism of an open subset of $M$ with $\R^n$. Then the image of $[0,1]^n$ is compact in $M$. 
+\item The first part follows in the same way, since $M$ is locally homeomorphic to $\R^n$. Now assume that $M$ is connected. Fix $q \in M$. Let $V$ be the set of all points in $M$ such that there is a path from $q$ to $p$. Clearly $V$ is non-empty, by the first part of the exercise.
+
+$V$ is also open: For let $p \in V$. Choose a neighbourhood $U$ around $p$ homeomorphic to $\R^n$. By composing paths, any point in $U$ can be reached as well. Hence $V$ is open.
+
+We show that $V$ is closed: let $\{p_i \}$ be a convergent sequence of points $p_i \in M$ with all $p_i \in V$. We want to show that the limit point is contained in $V$. Choose a compact neighbourhood around $\lim p_i = p$, which we can assume to be $\approx [0,1]^n$. Then $p \in [0,1]^n$, and this is path connected. Hence $V$ is closed.
+\item For $n > 2$, one can always homotope away from the points of non-injectivity. For $n=2$, one can do ``Reidemeister'' moves.
+  \end{enumerate}
+\end{sol}
+
+\begin{exc}[Exercise 4]
+A space $X$ is called locally connected if for each $x \in X$, it is the case that every neoughbourhood of $x$ contains a connected neighbourhood. 
+\begin{enumerate}[a)]
+\item Connectedness does not imply local connectedness.
+\item An open subset of a locally connected space is locally connected.
+\item $X$ is locally connected if and only if components of open sets are open, so every neigbourhood of a point in a locally connected space contains an \emph{open} connected neighbourhood.
+\item A locally connected space is homeomorphic to the disjoint union of its components.
+\item Every manifold is locally connected, and consequently homeomorphic to the disjoint union of its components, which are open submanifolds.
+\end{enumerate}
+\end{exc}
+\begin{sol}
+  \begin{enumerate}[a)]
+  \item Consider the topologist's since curve. Every neighbourhood of $0$ is diconnected.
+\item This is ``trivial''. Let $U$ be the said open subset. The open subsets of $U$ are intersections $U \cap V$ where $V$ is open in $X$. Hence local connectedness is trivially inherited.
+\item Suppose $X$ is locally connected. Let $U \subset X$ be an open set, and let $U= \cup_i U_i$ be its decomposition into its components. We want to show that each $U_i$ is open. So let $x \in U_i$. Then $U_i$ contains a connected neighbourhood containing $x$, by definition, hence $U_i$ is open.
+
+Conversely, assume components of open sets are open. Let $x \in X$, and let $U$ be an open neighbourhood of $x$. Then $U_i$ as above is connected and can be chosen to contain $x$, hence $x$ is locally connected.
+
+\item This is trivial, since the components are open.
+
+\item Pathwise local connectedness implies local connectedness.
+  \end{enumerate}
+\end{sol}
+
+\begin{exc}[Exercise 15]
+  \begin{enumerate}[a)]
+  \item   Show that $\PP^1$ is homeomorphic to $S^1$. (in fact, diffeomorphic)
+\item Show that $\PP^n \bs \PP^{n-1}$ is homeomorphic to the interior $D^n=\{ x \in \R^n \mid d(x,0) < 1 \}$.
+  \end{enumerate}
+\end{exc}
+\begin{sol}
+  \begin{enumerate}[a)]
+  \item Both $\PP^1$ and $S^1$ can be covered by two open subsets homeomorphic to $\R$, and it can be checked that in both cases, the transition mapping is given by $x \mapsto \frac 1x$, hence they are glued in the same way, hence they must be diffeomorphic.S
+\item By using homoegeneous coordinates, we see that $\PP^n \bs \PP^{n-1}$ is homeomorphic to $\R^n$ which is again homeomorphic to the interior of a disc.
+  \end{enumerate}
+\end{sol}
+
 \section{Introduction to Commutative Algebra - Atiyah-MacDonald}
 
 \subsection{Chapter 1 - Rings and ideals}
