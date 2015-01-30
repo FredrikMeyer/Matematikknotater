@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  28 JAN 2015 16:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  30 JAN 2015 15:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1227,26 +1227,27 @@ Overfull \hbox (1.1899pt too wide) in paragraph at lines 804--806
 /10.95 +
  []
 
-[23] [24] [25] [26] [27] [28]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1019.
- [29]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1019.
- (./exercises.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1019.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1019.
+[23] [24] [25] [26] [27] [28] [29] <xymatrix 5x4 761> [30] [31]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1111.
+ [32]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1111.
+
+(./exercises.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1111.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1111.
 
 Package rerunfilecheck Info: File `exercises.out' has not changed.
-(rerunfilecheck)             Checksum: D91BF204A821221AE0A60800CB924A56;1599.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1019.
+(rerunfilecheck)             Checksum: 1F3202580487C52F7C4D77EFEAB6A2EC;1912.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1111.
  ) 
 Here is how much of TeX's memory you used:
- 20351 strings out of 493308
- 351840 string characters out of 6135157
+ 20396 strings out of 493308
+ 352532 string characters out of 6135157
  466005 words of memory out of 5000000
- 23041 multiletter control sequences out of 15000+600000
+ 23051 multiletter control sequences out of 15000+600000
  24263 words of font info for 79 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,18n,63p,3277b,610s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,23n,63p,3277b,610s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/enc/dvips/
 cm-super/cm-super-t1.enc}</mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></mn/anatu/modules/opt/texlive
@@ -1286,10 +1287,10 @@ exlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><
 cm-super/sfti1095.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-d
 ist/fonts/type1/public/xypic/xyatip10.pfb></mn/anatu/modules/opt/texlive/2013-u
 io/uio-texmf/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on exercises.pdf (29 pages, 416520 bytes).
+Output written on exercises.pdf (32 pages, 429640 bytes).
 PDF statistics:
- 665 PDF objects out of 1000 (max. 8388607)
- 599 compressed objects within 6 object streams
- 312 named destinations out of 1000 (max. 500000)
- 181 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 730 PDF objects out of 1000 (max. 8388607)
+ 660 compressed objects within 7 object streams
+ 347 named destinations out of 1000 (max. 500000)
+ 213 words of extra memory for PDF output out of 10000 (max. 10000000)
 
