@@ -229,7 +229,7 @@ where $\mathscr I_{X/Y}$ is the ideal sheaf of $X$ in $Y$. We also have the sequ
 This allows us to compute the Hodge numbers of $X$:
 
 \begin{thm}
-There exists a non-singular Calabi-Yau with $X$ with $\chi(\Omega_X^1)=-12$. Hence the topological Euler characteristic is $-24$.
+There exists a non-singular Calabi-Yau with $X$ with $\chi(\Omega_X^1)=36$. Hence the topological Euler characteristic is $-72$.
 \end{thm}
 
 \begin{proof}
@@ -237,17 +237,17 @@ Since $X$ is a complete intersection in $Y$, we have $\mathscr I_{X/Y}/\mathscr 
 \[
 0 \to \OO_X(-1)^2 \to \Omega_Y^1 \otimes \OO_X \to \Omega_X^1 \to 0.
 \]
-The first sheaf have no cohomology, which can be computed from its Stanley-Reisner degeneration. Hence the Euler characteristics of the two sheaves on the right must be equal.
+The first sheaf have cohomology only in $H^3(\OO_X(-1))=H^0(\OO_X(1))=12$, which can be computed from its Stanley-Reisner degeneration. Hence the Euler characteristics are related by $\chi(\Omega_X^1) = \chi(\restr{\Omega_Y^1}X) + 24$.
 
 Now tensor the exact sequence \eqref{eqox} with $\Omega_Y^1$ to get
 \[
 0 \to \mathscr I_{X/Y} \otimes \Omega_Y^1 \to \Omega_Y^1 \to \Omega_Y^1 \otimes \OO_X \to 0.
 \]
-Tensoring with $\Omega_Y^1$ is exact because it is torsionfree (??). Do the same with the $\OO_Y$-resolution of $\mathscr I_{X/Y}$ to get
+Tensoring with $\Omega_Y^1$ is exact because the singularities of $Y$ lie outside $X$ (recall that the sheaf on the right is extended by zero outside $X$). Do the same with the $\OO_Y$-resolution of $\mathscr I_{X/Y}$ to get
 \[
 0 \to \Omega_Y^1(-2) \to \Omega_Y(-1)^2 \to \mathscr I_{X/Y} \otimes \Omega_Y \to 0.
 \]
-Taking Euler characteristics, we find that $\chi(\mathscr I_{X/Y} \otimes \Omega_Y)=-3$. Since $\chi(\Omega_Y^1)$ was computed to be $9$, it follows from the first exact sequence that $\chi(\Omega_X^1)=12$.
+Taking Euler characteristics, we find that $\chi(\mathscr I_{X/Y} \otimes \Omega_Y)=-3$. Since $\chi(\Omega_Y^1)$ was computed to be $9$, it follows from the first exact sequence that $\chi(\Omega_X^1)=36$.
 
 The topological Euler characteristic is double the Euler characteristic of the tangent sheaf, hence $\chi(X)=-24$.
 \end{proof}
