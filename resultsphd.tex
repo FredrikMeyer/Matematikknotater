@@ -223,13 +223,12 @@ Since $X$ is a complete intersection of two hyperplanes in $Y$, we have an exact
 where $\mathscr I_{X/Y}$ is the ideal sheaf of $X$ in $Y$. We also have the sequence
 \begin{equation}
 \label{eqox}
-0 \to \mathscr I_{X/Y} \to \OO_Y \to \OO_X \to 0.  
+0 \to \mathscr I_{X/Y} \to \OO_Y \to i^\ast \OO_X \to 0,  
 \end{equation}
-
-This allows us to compute the Hodge numbers of $X$:
+where $i:X \to Y$ is the inclusion. This allows us to compute the Hodge numbers of $X$:
 
 \begin{thm}
-There exists a non-singular Calabi-Yau with $X$ with $\chi(\Omega_X^1)=36$. Hence the topological Euler characteristic is $-72$.
+There exists a non-singular Calabi-Yau with $X$ with $\chi(\Omega_X^1)=36$. 
 \end{thm}
 
 \begin{proof}
@@ -248,9 +247,10 @@ Tensoring with $\Omega_Y^1$ is exact because the singularities of $Y$ lie outsid
 0 \to \Omega_Y^1(-2) \to \Omega_Y(-1)^2 \to \mathscr I_{X/Y} \otimes \Omega_Y \to 0.
 \]
 Taking Euler characteristics, we find that $\chi(\mathscr I_{X/Y} \otimes \Omega_Y)=-3$. Since $\chi(\Omega_Y^1)$ was computed to be $9$, it follows from the first exact sequence that $\chi(\Omega_X^1)=36$.
-
-The topological Euler characteristic is double the Euler characteristic of the tangent sheaf, hence $\chi(X)=-24$.
 \end{proof}
+\begin{remark}
+The standard toric construction used on $T$ gives a Calabi-Yau $X'$ with $\chi(\Omega_{X'}^1,X')=-36$ with Hodge numbers $(44,8)$, so we would \emph{really} want our Calabi-Yau to have Hodge numbers $(8,44)$. In that case, it would be an example of an \emph{extremal transition}, in the sense of Morrison.
+\end{remark}
 
 To actually find the Hodge numbers, we need a few lemmas.
 
@@ -334,7 +334,7 @@ The last term is $\mathcal N_{X/Y}$, since $X$ is a complete intersection in $Y$
 \[
 h^{21}(X) = 39.
 \]
-Hence $h^{11}(X)=27$.
+Hence $h^{11}(X)=3$.
 \end{prop}
 \begin{proof}
 By lemma \ref{lemmah21}, we need to compute $h^0(\mathcal N_{X/\PP^{13}})$. By the previous lemma, we have $h^0(\mathcal N_{X/\PP^{13}})=\restr{\mathcal N_{Y/\PP^{13}}}{X}+24$. 
@@ -347,7 +347,7 @@ And also an exact sequence:
 \[
 0 \to \mathcal N_{Y/\PP^{13}}(-2) \to \mathcal N_{Y/\PP^{13}}(-1)^{\oplus 2} \to \mathcal I_{X/Y} \otimes \mathcal N_{Y/\PP^{13}} \to 0.
 \]
-The cohomology of $\mathcal N_{Y\PP^{13}}(-i)$ is possible to compute in \verb|Macaulay2|, and it follows from the long exact sequence that $h^0(\mathcal I_{X/Y} \otimes \mathcal N_{Y/\PP^{13}})=36$, and $h^1(\mathcal I_{X/Y} \otimes \mathcal N_{Y/\PP^{13}})=0$. Hence it follows from the same computation that $h^0(\restr{\mathcal N_{Y/\PP^{13}}}{X})=182$ and that $h^0(\mathcal N_{X/\PP^{13}})=206$. We conclude that $h^{21}=206-167=39$.
+The cohomology of $\mathcal N_{Y/\PP^{13}}(-i)$ is possible to compute in \verb|Macaulay2|, and it follows from the long exact sequence that $h^0(\mathcal I_{X/Y} \otimes \mathcal N_{Y/\PP^{13}})=36$, and $h^1(\mathcal I_{X/Y} \otimes \mathcal N_{Y/\PP^{13}})=0$. Hence it follows from the same computation that $h^0(\restr{\mathcal N_{Y/\PP^{13}}}{X})=182$ and that $h^0(\mathcal N_{X/\PP^{13}})=206$. We conclude that $h^{21}=206-167=39$.
 \end{proof}
 
 \bibliographystyle{alpha} 

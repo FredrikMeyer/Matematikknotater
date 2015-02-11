@@ -474,6 +474,16 @@ A \textbf{toric variety} $X$ is an integral scheme containing the torus $(k^\ast
 Let $R$ be a noetherian ring, and $M$ a finitely-generated $R$-module and $I$ an ideal of $R$ such that $IM \neq M$. Then the $I$-depth of $M$ is (see \hyperref[ext]{Ext}): \[\inf\{i \mid \Ext^i_R(R/I,M) \neq 0\}.\]
 This is also the length of a maximal $M$-sequence in $I$.
 
+\subsubsection{Rank}
+\label{lengthmodule}
+
+If $R$ has the invariant basis property (IBN), then we define the \textbf{rank} of a \emph{free} module to be the cardinality of any basis.
+
+\subsubsection{Stably free module}
+\label{stablyfree}
+
+A module $M$ is \textbf{stably free} (of rank $n-m$) if $P \oplus R^n \simeq R^n$ for some $m$ and $n$. 
+
 \subsubsection{Kähler differentials}
 \label{kahlerdifferentials}
 
@@ -515,6 +525,11 @@ The depth of a ring $R$ is is its depth as a module over itself.
 \subsubsection{Gorenstein ring}
 
 A commutative ring $R$ is Gorenstein if each localization at a prime ideal is a Gorenstein local ring. A Gorenstein local ring is a local ring with finite injective dimension as an $R$-module. This is equivalent to the following: $\Ext_R^i(k,R)=0$ for $i \neq n$ and $\Ext_R^n(k,R) \simeq k$ (here $k = R/\mm$ and $n$ is the Krull dimension of $R$).
+
+\subsubsection{Invariant basis property}
+\label{IBP}
+
+A ring $R$ satisfies the \textbf{invariant basis property} (IBP) if $R^n \not \simeq R^{n+t}$ $R$-modules for any $t \neq 0$. Any commutative ring satisfies the IBP.
 
 \subsubsection{Normal ring}
 \label{normalring}

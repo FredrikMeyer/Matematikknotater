@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  3 FEB 2015 16:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  10 FEB 2015 14:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1213,7 +1213,7 @@ i(cotangentSheaf Proj A)\T1/cmr/m/it/10.95 .
  []
 
 [5]
-Overfull \hbox (0.15414pt too wide) in paragraph at lines 232--233
+Overfull \hbox (0.15414pt too wide) in paragraph at lines 231--232
 [][]\T1/cmr/bx/n/10.95 Theorem 3.1. []\T1/cmr/m/it/10.95 There ex-ists a non-si
 ngular Calabi-Yau with $\OML/cmm/m/it/10.95 X$ \T1/cmr/m/it/10.95 with $\OML/cm
 m/m/it/10.95 ^^_\OT1/cmr/m/n/10.95 (
@@ -1241,13 +1241,13 @@ Package rerunfilecheck Info: File `resultsphd.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 356.
  ) 
 Here is how much of TeX's memory you used:
- 20008 strings out of 493308
- 348115 string characters out of 6135157
+ 20009 strings out of 493308
+ 348137 string characters out of 6135157
  466396 words of memory out of 5000000
  22961 multiletter control sequences out of 15000+600000
  21182 words of font info for 66 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,12n,63p,3278b,459s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,12n,63p,3278b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/enc/dvips/
 cm-super/cm-super-t1.enc}</mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></mn/anatu/modules/opt/texlive
@@ -1262,24 +1262,25 @@ type1/public/amsfonts/cm/cmr6.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-t
 exmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></mn/anatu/modules/opt/
 texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 ></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy8.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf
--dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></mn/anatu/modules/opt/texli
-ve/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
-></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/publi
-c/rsfs/rsfs10.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/
-fonts/type1/public/cm-super/sfbx1095.pfb></mn/anatu/modules/opt/texlive/2013-ui
-o/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></mn/anatu/modu
-les/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1
-095.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type
-1/public/cm-super/sfrm1200.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texm
-f/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></mn/anatu/modules/opt/te
-xlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></
+c/amsfonts/cm/cmsy6.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></mn/anatu/modules/opt/texlive/2
+013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></mn/
+anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsf
+onts/symbols/msbm10.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf
+-dist/fonts/type1/public/rsfs/rsfs10.pfb></mn/anatu/modules/opt/texlive/2013-ui
+o/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></mn/anatu/modu
+les/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx1
+440.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type
+1/public/cm-super/sfrm1095.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texm
+f/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></mn/anatu/modules/opt/te
+xlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></
 mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/c
-m-super/sftt1095.pfb>
-Output written on resultsphd.pdf (8 pages, 272272 bytes).
+m-super/sfti1095.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-di
+st/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on resultsphd.pdf (8 pages, 279864 bytes).
 PDF statistics:
- 197 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
- 49 named destinations out of 1000 (max. 500000)
+ 202 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
+ 50 named destinations out of 1000 (max. 500000)
  37 words of extra memory for PDF output out of 10000 (max. 10000000)
 

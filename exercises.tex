@@ -530,10 +530,13 @@ Conversely, assume components of open sets are open. Let $x \in X$, and let $U$ 
 \begin{sol}
   \begin{enumerate}[a)]
   \item Both $\PP^1$ and $S^1$ can be covered by two open subsets homeomorphic to $\R$, and it can be checked that in both cases, the transition mapping is given by $x \mapsto \frac 1x$, hence they are glued in the same way, hence they must be diffeomorphic.S
-\item By using homoegeneous coordinates, we see that $\PP^n \bs \PP^{n-1}$ is homeomorphic to $\R^n$ which is again homeomorphic to the interior of a disc.
+\item By using homogeneous coordinates, we see that $\PP^n \bs \PP^{n-1}$ is homeomorphic to $\R^n$ which is again homeomorphic to the interior of a disc.
   \end{enumerate}
 \end{sol}
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction to Commutative Algebra - Atiyah-MacDonald}
 
 \subsection{Chapter 1 - Rings and ideals}
@@ -865,6 +868,59 @@ So flatness is the same as being locally free.
  The implications $i \Rightarrow ii)$ and $ii) \Rightarrow iii)$ follows trivially from the previous exercise. We prove $iii) \Rightarrow i)$. 
 
 Applying the $\Tor$ functor commutes with localization, hence we have $\Tor_1^A(M,N)_\mm = \Tor_1^{A_\mm}(M_\mm, N_\mm)=0$ for all $\mm$. But being zero is a local property, so it follows that $\Tor_1^A(M,N)=0$ for all $A$-modules $N$. Hence $M$ is flat.
+\end{sol}
+
+\section{The K-book - Charles Weibel}
+
+\subsubsection{Chapter 1.1 - Free modules, GLn and stably free modules}
+
+\begin{exc}[Semisimple rings]
+
+A nonzero $R$-module $M$ is called \emph{simple} if it has no submodules other than $0$ and $M$, and semisimple if it is a direct sum of simple modules. A ring $R$ is called \emph{semisimple} if it is a semisimple $R$-module. If $R$ is semisimple, show that $R$ is a direct sum of a \emph{finite} (say $n$) number of simple modules.
+
+Then use the Jordan-Hölder theorem to show that every stably free module is free.  
+\end{exc}
+\begin{sol}
+Suppose $R$ is semisimple, that is $R = \oplus M_i$ with a priori infinitely many $M_i$. But write $1 = \sum a_im_i$ with $m_i \in M_i$ and $a_i \in R$. This is a finite sum, and since for any $r \in R$, we have $r = \sum a_irm_i$, only finitely many $M_i$ need occur in the decomposition $R=\oplus M_i$. 
+
+To see that any stably free module is free if $R$ is semisimple, suppose $M \oplus R^n \simeq R^m$. Then we can write $M \oplus M_i^n \simeq \oplus M_j^m$ as above, and note that the image of a simple module must be simple, hence the $M_j$ on the right must be mapped to copies of themselves isomorphically. Hence we can cancel $M_i$-terms on both sides until we arrive at $R^k \simeq M$ for some $k$.
+\end{sol}
+
+\begin{exc}
+Consider the following conditions on a ring $R$:
+\begin{enumerate}[i)]
+\item $R$ satisfies the invariant basis property (IBP).
+\item For all $m,n$, if $R^m \simeq R^n \oplus P$, then $m \leq n$.
+\item For all $n$, if $R^n \simeq R^n \oplus P$, then $P=0$.
+\end{enumerate}
+Show that iii $\Rightarrow$ ii $\Rightarrow$ i. 
+\end{exc}
+\begin{sol}
+Suppose $R^m \simeq R^n \oplus P$ and suppose $n > m$. Then we can write $R^m \simeq R^m \oplus (R^{n-m} \oplus P)$. Then from $iii$ we must have $R^{n-m} \oplus P = 0$, but this is impossible.
+
+Now suppose $R^n \simeq R^m$. Then for $P=0$, we have $R^m \simeq R^n \oplus P$, hence $m \leq n$. But the opposite argument works as well, hence $m=n$.
+\end{sol}
+
+\begin{exc}
+ Show that iii) in the previous exercise and the following matrix conditions are equivalent:
+ \begin{enumerate}[a)]
+ \item For all $n$, every surjection $f:R^n \to R^m$ is an isomorphism. 
+\item  For all $n$ and $f,g \in M_n(R)$, if $fg=1_n$, then $gf=1_n$ and $g \in \GL_n(R)$.
+ \end{enumerate}
+Then show that commutative rings satisfy b), hence iii).
+\end{exc}
+\begin{sol}
+ First we see that $iii  \Rightarrow a)$. Suppose $f:R^n \to R^m$ is a surjection. Then we have an exact sequence
+\[
+0 \to K \to R^n \xrightarrow{f} R^n \to 0.
+\]
+Since $R^n$ is free, the sequence splits and we have $R^n \simeq R^n \oplus K$, but then by assumption $K=0$. Hence $f$ is an isomorphism.
+
+Now suppose $a)$, that is,  every surjection is an isomorphism. Next suppose $R^n \simeq R^n \oplus P$. Compose with the surjection $R^n \oplus P \to R^n$ to get a surjective map $R^n \to R^n$. The kernel of this is $P$. But every surjection $R^n\to R^n$ is an isomorphism, hence $P=0$.
+
+Now suppose $iii)$. The condition $fg=1_n$ implies that $g$ is injective and that we have a splitting $R^n \simeq R^n \oplus \coker g$. But then $\coker g=0$ by $iii)$, hence $g$ is an isomorphism. To show that $gf=1_n$, suppose $gf(x)=y$. Applying $f$ to both sides give $f(x)=f(y)$. So we must show that $f$ is injective. So suppose that $f(x)=0$. Since $g$ was surjective, we can write $x=g(y)$ for some $y$. Then $f(g(x))=x=0$. Hence $f$ is injective. So we have proven b). 
+
+Now suppose b). Then $b$ implies $a$, hence iii).
 \end{sol}
 
 
