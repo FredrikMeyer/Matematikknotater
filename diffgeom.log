@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  12 MAR 2015 13:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  12 MAR 2015 13:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**\nonstopmode\input exercises.tex
-(./exercises.tex
+**\nonstopmode\input diffgeom.tex
+(./diffgeom.tex
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/base/art
 icle.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
@@ -260,8 +260,8 @@ babel.sty
 Package: babel 2013/10/10 3.9g The Babel package
 
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/generic/babel-
-english/english.ldf
-Language: english 2012/08/20 v3.3p English support from the babel system
+norsk/norsk.ldf
+Language: norsk 2012/08/06 v2.0i Norsk support from the babel system
 
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/generic/babel/
 babel.def
@@ -269,15 +269,13 @@ File: babel.def 2013/10/10 3.9g Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
-\l@canadian = a dialect from \language\l@american 
-\l@australian = a dialect from \language\l@british 
-\l@newzealand = a dialect from \language\l@british 
+Package babel Info: Making " an active character on input line 113.
 
 *************************************
-* Local config file english.cfg used
+* Local config file norsk.cfg used
 *
-(/site/share/texlive/texmf/tex/generic/uio/english.cfg
-(/site/share/texlive/texmf/tex/generic/uio/lenglish.cfg))))
+(/site/share/texlive/texmf/tex/generic/uio/norsk.cfg
+(/site/share/texlive/texmf/tex/generic/uio/lnorsk.cfg))))
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/amsfonts
 /amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -1079,8 +1077,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \c@losn=\count148
 \c@exc=\count149
 \c@sol=\count150
-) (./exercises.aux)
-\openout1 = `exercises.aux'.
+) (./diffgeom.aux)
+\openout1 = `diffgeom.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
@@ -1170,155 +1168,69 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 26.
 LaTeX Info: Redefining \pageref on input line 26.
 LaTeX Info: Redefining \nameref on input line 26.
- (./exercises.out) (./exercises.out)
+ (./diffgeom.out) (./diffgeom.out)
 \@outlinefile=\write5
-\openout5 = `exercises.out'.
+\openout5 = `diffgeom.out'.
 
-Package hyperref Info: bookmark level for unknown exc defaults to 0 on input li
-ne 37.
-Package hyperref Info: bookmark level for unknown sol defaults to 0 on input li
-ne 45.
- [1
-
-{/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-var/fonts/map/pdftex/up
-dmap/pdftex.map}] [2] [3] <xymatrix 2x2 182> [4] [5] <xymatrix 5x5 803> [6] [7]
-LaTeX Font Info:    Try loading font information for U+euf on input line 238.
+Package hyperref Info: bookmark level for unknown defi defaults to 0 on input l
+ine 35.
+LaTeX Font Info:    Try loading font information for U+euf on input line 37.
 
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/amsfonts
 /ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [8] [9] [10]
-Overfull \hbox (1.8173pt too wide) in paragraph at lines 336--336
-[]\T1/cmr/bx/n/14.4 Categories for the work-ing math-e-mati-cian - Saun-
+)
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
  []
 
-[11]
-Overfull \hbox (3.22282pt too wide) detected at line 375
-\OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 Tx; Ty\OMS/cmsy/m/n/10.95 i \OT1/cmr/m
-/n/10.95 = \OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 Tx; T\OT1/cmr/m/n/10.95 (\O
-ML/cmm/m/it/10.95 a[]x[]\OT1/cmr/m/n/10.95 )\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/
-10.95 = \OML/cmm/m/it/10.95 a[]\OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 Tx[]; T
-x[]\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 a[]\OMS/cmsy/
-m/n/10.95 j\OML/cmm/m/it/10.95 Tx[]\OMS/cmsy/m/n/10.95 j[] \OT1/cmr/m/n/10.95 =
- \OML/cmm/m/it/10.95 a[]\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 x[]\OMS/cmsy/m
-/n/10.95 j[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 a[]\OMS/cmsy/m/n/10.95 h\
-OML/cmm/m/it/10.95 x[]; x[]\OMS/cmsy/m/n/10.95 i\OML/cmm/m/it/10.95 :
- []
+[1
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 393.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 393.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 393.
-
-<xymatrix 2x2 175> [12]
-Overfull \hbox (27.16716pt too wide) in paragraph at lines 418--419
-[][]\T1/cmr/bx/n/10.95 Exercise 18 \T1/cmr/m/n/10.95 (Ex-er-cise 3.3)\T1/cmr/bx
-/n/10.95 . []\T1/cmr/m/n/10.95 Let $\OML/cmm/m/it/10.95 B \OT1/cmr/m/n/10.95 = 
-\OML/cmm/m/it/10.95 k\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 x; y\OT1/cmr/m/n/1
-0.95 ]\OML/cmm/m/it/10.95 =\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x[]; xy; y[]
-\OT1/cmr/m/n/10.95 )$\T1/cmr/m/n/10.95 . Show that $\OML/cmm/m/it/10.95 T[]\OT1
-/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 B=k; B\OT1/cmr/m/n/10.95 ) =
- []
-
-[13] [14] [15] [16] [17] [18] [19] [20] [21] [22]
-Overfull \hbox (1.1899pt too wide) in paragraph at lines 822--824
-\T1/cmr/m/n/10.95 since $\U/euf/m/n/10.95 q \OMS/cmsy/m/n/10.95 ^^Z \U/euf/m/n/
-10.95 p$\T1/cmr/m/n/10.95 . But $\U/euf/m/n/10.95 p$ \T1/cmr/m/n/10.95 is prime
- so ei-ther $\OML/cmm/m/it/10.95 a \OMS/cmsy/m/n/10.95 2 \U/euf/m/n/10.95 p$ \T
-1/cmr/m/n/10.95 and we are done, or $\OML/cmm/m/it/10.95 a[]b[]a[] \OT1/cmr/m/n
-/10.95 +
- []
-
-[23] [24]
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 890.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 890.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 890.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 890.
-
-[25] [26] [27] [28] [29] [30] [31] <xymatrix 5x4 761> [32] [33] [34]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1241.
- [35]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1241.
-
-(./exercises.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1241.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1241.
-
-Package rerunfilecheck Info: File `exercises.out' has not changed.
-(rerunfilecheck)             Checksum: E59018EF6EC413BDE5CF65F0A85A1C59;2423.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1241.
+{/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-var/fonts/map/pdftex/up
+dmap/pdftex.map}]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 82.
+ [2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 82.
+ (./diffgeom.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 82.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 82.
+Package rerunfilecheck Info: File `diffgeom.out' has not changed.
+(rerunfilecheck)             Checksum: E78645AA4E0EC278FE93AA8B67C1C436;47.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 82.
  ) 
 Here is how much of TeX's memory you used:
- 20464 strings out of 493308
- 353630 string characters out of 6135157
- 466212 words of memory out of 5000000
- 23069 multiletter control sequences out of 15000+600000
- 26081 words of font info for 85 fonts, out of 8000000 for 9000
+ 19991 strings out of 493308
+ 347535 string characters out of 6135157
+ 461026 words of memory out of 5000000
+ 22976 multiletter control sequences out of 15000+600000
+ 17965 words of font info for 61 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,23n,63p,3277b,610s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,6n,63p,3276b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/enc/dvips/
 cm-super/cm-super-t1.enc}</mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></mn/anatu/modules/opt/texlive
-/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></mn/a
-natu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi12.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi6.pfb></mn/anatu/modules/opt/texlive/2013-ui
-o/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></mn/anatu/modu
-les/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi9.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr10.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texm
-f/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></mn/anatu/modules/opt/tex
-live/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></mn
-/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr9.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmss10.pfb></mn/anatu/modules/opt/texlive/2013-u
-io/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></mn/anatu/mo
-dules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy6.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy8.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-te
-xmf/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></mn/anatu/modules/
-opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/euler/euf
-m7.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1
-/public/amsfonts/symbols/msbm10.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio
--texmf/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></mn/anatu/modules/opt/tex
-live/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></m
-n/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm
--super/sfbx1200.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dis
-t/fonts/type1/public/cm-super/sfbx1440.pfb></mn/anatu/modules/opt/texlive/2013-
-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></mn/anatu/mo
-dules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfr
-m0800.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/ty
-pe1/public/cm-super/sfrm0900.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-te
-xmf/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></mn/anatu/modules/opt/
-texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-</mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public
-/cm-super/sfrm1728.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-
-dist/fonts/type1/public/cm-super/sfti1095.pfb></mn/anatu/modules/opt/texlive/20
-13-uio/uio-texmf/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></mn/anatu/mo
-dules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/xypic/xybtip
-10.pfb>
-Output written on exercises.pdf (35 pages, 457684 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></mn/anatu/modules/opt/texlive
+/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></mn/an
+atu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr10.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr8.pfb></mn/anatu/modules/opt/texlive/2013-uio/u
+io-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></mn/anatu/module
+s/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/euler/e
+ufm10.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/ty
+pe1/public/amsfonts/symbols/msam10.pfb></mn/anatu/modules/opt/texlive/2013-uio/
+uio-texmf/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></mn/anatu/
+modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/rsfs/rsfs1
+0.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/
+public/cm-super/sfbx1095.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/
+texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></mn/anatu/modules/opt/texl
+ive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></mn
+/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-
+super/sfrm1200.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist
+/fonts/type1/public/cm-super/sfrm1728.pfb></mn/anatu/modules/opt/texlive/2013-u
+io/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
+Output written on diffgeom.pdf (2 pages, 161702 bytes).
 PDF statistics:
- 810 PDF objects out of 1000 (max. 8388607)
- 735 compressed objects within 8 object streams
- 387 named destinations out of 1000 (max. 500000)
- 261 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 108 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
+ 22 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

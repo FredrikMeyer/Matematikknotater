@@ -1,0 +1,82 @@
+\documentclass[11pt, norsk]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}   % S P R A A K
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{calc}
+%\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+%\usepackage[a5paper,margin=0.5in]{geometry}
+
+
+\begin{document}
+\title{Notater diffgeom}
+\author{Fredrik Meyer}
+\maketitle 
+
+
+\section{Definisjoner}
+
+\begin{defi}
+En \emph{affin konneksjon} $\nabla$ på en differensiabel mangfoldighet $M$ er en avbildning
+\[
+\nabla: \XX(M) \X \XX(M) \to \XX(M),
+\]
+betegnet $(X,Y) \mapsto \nabla_X Y$ som tilfredsstiller:
+\begin{enumerate}
+\item $\mathscr D(M)$-lineær i første variabel. $$\nabla_{fX +gY}Z = f \nabla_X Z + g \nabla_Y Z.$$
+\item $\R$-lineær i andre variabel. $$\nabla_X(Y+Z) = \nabla_X Y + \nabla_X Z.$$
+\item Derivasjon i andre variabel. $$ \nabla_X(f Y) = f \nabla _X(Y) + X(f) Y.$$
+\end{enumerate}
+\end{defi}
+
+En konneksjon gir oss mulighet til å derivere vektorfelter langs kurver. Mer presist: om $M$ er en mangfoldighet utstyrt med en affin konneksjon, og $c:I \to M$ er en differensiabel kurve, så finnes en korrespondanse som til hvert vektorfelt $V$ langs kurven, assosierer et nytt vektorfelt $\frac{DV}{dt}$ langs kurven slik at 
+\begin{enumerate}[a)]
+\item $\frac{D}{dt}(V+W) = \frac{DV}{dt} + \frac{DW}{dt}$
+\item $\frac{D}{dt}(fV) = \frac{df}{dt} V + f \frac{DV}{dt}$ \\
+\item Om $V$ kommer fra et vektorfelt $Y \in \XX(M)$ (altså $V(t) = Y(c(T))$), så er $\frac{DV}{dt} = \nabla_{dc/dt} Y$.
+\end{enumerate}
+
+\begin{defi}
+A vector field $V$ along a curve $c:I \to M$ is \emph{parallel} if $\frac{DV}{dt}=0$ for all $ t \in I$.
+\end{defi}
+
+
+\begin{defi}
+ Let $M$ be a Riemannian manifold with a connection $\nabla$. The connection is \emph{compatible} with the metric $\langle , \rangle$ if for any pair of parallell vector fields $V,W$  along a curve $c:I \to M$, we have $\langle V,W \rangle = constant$. 
+\end{defi}
+ 
+\begin{defi}
+ An affine connection $\nabla$ is \emph{symmetric} when
+\[
+\nabla_X Y - \nabla_Y X = [X,Y]
+\]
+for all $X,Y \in \XX(M)$.
+\end{defi}
+
+
+\begin{defi}[Levi-Civita-connection]
+  
+The unique symmetric  affine connection $\nabla$ on a Riemannian manifold that is compatible with the Riemannian metric is called the \emph{Levi-Civita connection} or the \emph{Riemannian connection}.
+\end{defi}
+
+\begin{defi}
+  A parametrized curve $\gamma:I \to M$ is a \emph{geodesic} if $\frac{D}{dt}(\frac{d\gamma}{dt})=0$ for all points $t \in I$.
+\end{defi}
+
+
+\end{document}
