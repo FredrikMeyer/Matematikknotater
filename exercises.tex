@@ -887,7 +887,7 @@ Applying the $\Tor$ functor commutes with localization, hence we have $\Tor_1^A(
 
 \section{The K-book - Charles Weibel}
 
-\subsubsection{Chapter 1.1 - Free modules, GLn and stably free modules}
+\subsubsection{Chapter 1.1 - Free modules, $GL_n$ and stably free modules}
 
 \begin{exc}[Semisimple rings]
 
@@ -1213,5 +1213,54 @@ In this chart (forgetting the scaling, since by the chain rule, that will only c
 The first minor (the first two columns) is only zero if $x=y=0$, and in that case, the last minor is non-zero. Hence (at least in this chart), the mapping is an immersion.
 
 For b), note the $xy=ab$ and $xz=bc$ together imply $y/z=b/c$ which implies $yc=bz$, hence $y=bc/z$. Hence $bc^2=bz^2$, hence $c = \pm z$. Inserting this into $xz=ac$ gives $x=\pm a$, and similarly $y=\pm b$, hence $\tilde \varphi$ is injective.
+\end{sol}
+
+\subsection{Chapter 2 - Affine and Riemannian connections}
+
+\begin{exc}[Exercise 8]
+Consider the upper half plane
+\[
+\R_+^2 = \{ (x,y) \in \R^2 \mid y > 0 \},
+\]  
+with the metric given by $g_{11}=g_{22}=\frac 1{y^2}$ and $g_{12}=g_{21}=0$.
+\begin{enumerate}[a)]
+\item Show that the Christoffel symbols of the Riemannian connection are $\Gamma_{11}^1=\Gamma_{12}^2 = \Gamma_{22}^1 = 0$, $\Gamma_{11}^2 = \frac{1}{y}$, $\Gamma_{12}^1 = \Gamma_{22}^2 = -\frac 1y$.
+\item Let $v_0=(0,1)$ be a tangent vector at the point $(0,1)$ of $\R_+^2$. Let $v(t)$ be the parallel transport of $v_0$ along the curve $x=t,y=1$. Show that $v(t)$ makes an angle $t$ with the direction of the $y$-axis, measured in the clockwise sense.
+\end{enumerate}
+\end{exc}
+
+\begin{sol}
+a)
+
+This part is easy but tedious, using the fact that
+\[
+\Gamma^m_{ij} = \frac 12 \sum_k \left( \dd{}{x_i} g_{jk} +\dd{}{x_j} g_{ki} - \dd{}{x_k} g_{ij} \right) g^{km}
+\]
+where $(g^{km})$ is the inverse matrix of $(g_{ij})$, it being $$
+\begin{pmatrix}
+y^2 & 0 \\ 0 & y^2 
+\end{pmatrix}.$$
+
+b)
+
+The parallel transport satisfies the equation
+\[
+0 = \frac{dv^k}{dt} + \sum_{ij} \Gamma_{ij} v^j \frac{dx_i}{dt}
+\]
+for $k=1,2$, on page 53. In this case, using the values of $\Gamma_{ij}^k$, and the fact that $y=1$ along the curve $v(t)$, these equations simplify to
+\[
+\begin{cases}
+  0 &= \frac{da}{dt} - b(t) \\
+0 &= \frac{db}{dt} + a(t).
+\end{cases}
+\]
+Now, since $v_0$ was a unit vector, and paralell transport is an isometry, the image of $v_0$ must lie on the unit circle on each point of the curve. Thus we can write $(a(t),b(t)) = (\sin \theta(t), \cos \theta(t))$ for some function $\theta(t)$. Using the chain rule the equations transform to
+\[
+\begin{cases}
+0 &= -\sin \theta(t) \theta'(t)-\sin \theta(t) = 0\\
+0 &= \cos \theta(t) \theta'(t) +\cos \theta(t) = 0.
+\end{cases}
+\]
+This implies that $\theta'(t)=-1$, hence $\theta(t)=\pi/2- t$. 
 \end{sol}
 \end{document}

@@ -26,7 +26,13 @@
 \BOOKMARK [2][-]{subsection.9.1}{Representations of Finite Groups}{section.9}% 26
 \BOOKMARK [2][-]{subsection.9.2}{Chapter 7 - Lie groups}{section.9}% 27
 \BOOKMARK [2][-]{subsection.9.3}{Lecture 8 - Lie Algebras and Lie groups}{section.9}% 28
+<<<<<<< HEAD
 \BOOKMARK [1][-]{section.10}{Twenty-Four Hours of Local Cohomology}{}% 29
 \BOOKMARK [2][-]{subsection.10.1}{Lecture 1 - Basic notions}{section.10}% 30
 \BOOKMARK [1][-]{section.11}{Riemannian geometry - Do Carmo}{}% 31
 \BOOKMARK [2][-]{subsection.11.1}{Chapter 0 - Differentiable manifolds}{section.11}% 32
+=======
+\BOOKMARK [1][-]{section.10}{Riemannian geometry - Do Carmo}{}% 29
+\BOOKMARK [2][-]{subsection.10.1}{Chapter 0 - Differentiable manifolds}{section.10}% 30
+\BOOKMARK [2][-]{subsection.10.2}{Chapter 2 - Affine and Riemannian connections}{section.10}% 31
+>>>>>>> 23da6d353f675746a893bc6fe4cae61782af8e6b
