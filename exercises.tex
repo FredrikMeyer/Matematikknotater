@@ -1143,6 +1143,31 @@ H = \bigcup_{n \in \Z} U^n,
 hence $H$ is an open subgroup. But since $G \bs H = \bigcup_{h \not \in H} hH$, we see that any open subgroup is also closed, hence $H$ is both open and closed, hence $H=G$. (this solution was given by Theo Bühler at math.stackexchange).
 \end{sol}
 
+\section{Twenty-Four Hours of Local Cohomology}
+
+\subsection{Lecture 1 - Basic notions}
+
+\begin{exc}
+Let $k$ be a finite field.
+\begin{enumerate}
+\item For every point $p \in k^n$, construct a polynomial $f \in k[x_1,\ldots,x_n]$ such that $f(p)=1$ and $f(q)=0$ for all points $q \in k^n \bs \{ p \}$.
+\item Given a function $q:k^n \to k$, show that there is a polynomial $f \in k[x_1,\ldots,x_n]$ with $f(p)=g(p)$ for all $p \in k^n$.
+\item Prove that any subset of $k^n$ is the zero set of a single polynomial. 
+\end{enumerate}
+\end{exc}
+
+\begin{sol}
+Suppose that $char(k)=p$.
+1. Suppose $p=(p_1,\ldots,p_n)$. If $n=1$, then $p=(p_1)$. Then the polynomial $f(x)=\prod_{q \neq p}(x-q)$ is zero on all of $k$. On the other hand, $f(p)$ is the product of all non-zero elements in $k$. But this must be one, as one sees by grouping inverses together.
+
+This generalizes to $k^n$ by taking products over products. 
+
+2. 
+\end{sol}
+
+
+
+
 \section{Riemannian geometry - Do Carmo}
 
 \subsection{Chapter 0 - Differentiable manifolds}
