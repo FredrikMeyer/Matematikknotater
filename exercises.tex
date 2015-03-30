@@ -488,6 +488,102 @@ and it is easily seen that the kernel of $\text{Jac} \otimes B$ is given by $\mm
 Also $T^0(B/k,B)$ is $B^2$ modulo the image of the Jacobian. The constants are left untouched, so $\dim_k T^0(B/k,B) = 2+2+2-3=3$. A basis is given by $(1,0),(0,1)$ and $(x,y)$. (thus Hartshorne is wrong?)
 \end{sol}
 
+\section{Geometry of differential forms - Morita}
+
+\subsection{Chapter 1 - Manifolds}
+
+\begin{exc}[1.1] For a natural number $m$, define a map $f_m:\C \to \C$ by $z \mapsto z^m$. Let $z=x+iy$, and consider $f_m$ as a function of $x$ and $y$. Compute the Jacobian matrix of $f_m$.
+\end{exc}
+\begin{sol}
+We consider $f_m$ as a map $\R^2 \to \R^2$. Write $f_m = r_m + i j_m$. Then we want compute $\dd{r_m}{x}$,$\dd{r_m}{y}$ and $\dd{j_m}{x}$ and $\dd{j_m}{y}$. Now
+\[
+\dd{}{x} \left( x+iy\right) ^m  = m (x+iy)^{m-1}
+\]
+and 
+\[
+\dd{}{y} (x+iy)^m = im(x+iy)^{m-1}.
+\]
+
+Now taking real parts ($\Re$) and taking imaginary parts ($\Im$) are continous operations $\C \to \R$, so they commute with limits and hence derivatives. Hence
+\[
+\dd{r_m}{x} = \Re \left( m(x+iy)^{m-1} \right) = m \Re(z^{m-1})
+\]
+and 
+\[
+\dd{r_m}{y} = \Re \left( mi(x+iy)^{m-1}  \right) = -m \Im(z^{m-1})
+\]
+since in general $\Re(iz)=-\Im(z)$. Similarly 
+\[
+\dd{j_m}{x} = \Im \left( m(x+iy)^{m-1} \right) = m \Im(z^{m-1})
+\]
+and 
+\[
+\dd{j_m}{x} = \Im \left( im(x+iy)^{m-1} \right) = \Re( z^{m-1}).
+\]
+Hence the Jacobian matrix is
+\[
+\begin{bmatrix}
+m \Re(z^{m-1}) & -m\Im(z^{m-1}) \\
+m \Im(z^{m-1}) & m\Re(z^{m-1})
+\end{bmatrix},
+\]
+with determinant $m^2 \lvert z \rvert ^2$.
+\end{sol}
+
+\begin{exc}[1.2]
+Prove that the set of all the orthogonal matrices of order $2$, denoted $O(2)$ becomes a $C^\infty$ manifold in a natural way.
+\end{exc}
+\begin{sol}
+Let $a,b,c,d$ be coordinates on $M_2(\R)$. Then the equations of $O(2)$ are given by
+\begin{align*}
+ a^2+b^2- 1 &= 0 \\
+ac+bd &= 0 \\
+c^2+d^2 -1&= 0
+\end{align*}
+Hence the Jacobian is
+\[
+\begin{bmatrix}
+2a & 2b & 0 & 0 \\
+c & d & a & b \\
+0 & 0 & 2c & 2d
+\end{bmatrix}.
+\]
+We want this to have maximal rank. The determinant of the first minor (choosing the first three columns) is $4c(ad-bc)$. Hence this has maximal rank if and only if $c \neq 0$. So suppose $c=0$. Then $d^2=\pm 1$, hence $d=\pm 1$, hence $b = 0$, hence $a^2=1$, hence $a= \pm 1$. Hence the only two matrices in $O(2)$ with $c=0$ are the identity matrix $I$ and $-I$. But by inspection, both these values are regular, hence $O(2)$ is a $C^\infty$ submanifold of $M_2(\R)$ by the inverse function theorem.
+
+In fact, since the Jacobian have rank 3, it follows that $O(2)$ is one-dimensional. In fact it is diffeomorphic to two disjoint copies of $S^1$.
+\end{sol}
+
+\begin{exc}[1.3]
+
+Show that the $1$-dimensional complex projective space $\C P^1$ is diffeomorphic to $S^2$.
+\end{exc}
+
+\begin{sol}
+We define a map $\C P^1 \to S^2$ locally. That is, both spaces are covered by two charts, and we check that the maps agree on intersections. It will be clear from the construction that it is injective and surjective and $C^\infty$, and since the spaces are compact, there exists an inverse.
+
+$\C P ^1$ is covered by two charts $i_1:(x,y) \mapsto [x+iy,1]$ and $i_2:(x,y) \mapsto [1,x+iy]$. Similarly, $S^2$ is covered by two charts, given by stereographic projection. The formulas are $j_1^{-1} (x,y,z) = \left (\frac{x}{1-z}, \frac{y}{1-z}\right)$ and $j_2^{-1}(x,y,z) = \left( \frac{x}{1+z},\frac{y}{1+z} \right)$ with inverses $j_1(a,b) = \left( \frac{2a}{1+a^2+b^2}, \frac{2b}{1+a^2+b^2}, \frac{-1+a^2+b^2}{1+a^2+b^2}\right)$ and $j_2(a,b) = \left( \frac{2a}{1+a^2+b^2}, \frac{2b}{1+a^2+b^2}, \frac{1-a^2-b^2}{1+a^2+b^2} \right)$.
+
+Define a map $\C P^1 \to S^2$ by the identity map on the chart corresponding to $i_1$ and on the other chart, let the map be given by $\varphi: (a,b) \mapsto (a,-b)$. Then one can check that $ j_2 \circ \varphi \circ i_2^{-1} \circ i_1 = j_1$.
+
+Hence the diagram
+\[
+\xymatrix{
+ & \C P^1 \ar[r] & S^2 & \\
+\R^2 \ar[ur]^{i_1} \ar[dr]^{i_2^{-1} \circ i_1} \ar[rr] & & \R^2 \ar[dr]_{j_2^{-1} \circ j_ 1} \ar[u]^{j_1} & \\
+& \R^2 \ar[uu]_{i_2} \ar[rr]^\varphi & & \R^2 \ar[uul]_{j_2} 
+}
+\]
+And this defines a map $\C P^1 \to S^2$. 
+
+This map globalizes to
+\[
+\C P ^1 \ni [x+iy, a+ib] \mapsto \left( \frac{2ax+2by}{a^2+b^2+x^2+y^2}, \frac{2ay-2bx}{a^2+b^2+x^2+y^2}, \frac{a^2+b^2-x^2-y^2}{a^2+b^2+x^2+y^2}\right) \in S^2
+\]
+\end{sol}
+
+
+
+
 \section{Introduction to Differential Geometry - Spivak}
 
 \subsection{Chapter 1 - Manifolds}
