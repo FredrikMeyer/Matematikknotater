@@ -332,6 +332,41 @@ $$
 If $n$ is large enough, $K-D$ will have negative degree, so $l(K-D)=0$. Thus for large $n$, we can get $l(D)$ as big as we want.
 
 \end{sol}
+
+\subsection{Chapter V - Surfaces}
+
+\begin{exc}[Exercise 1.1]
+Let $C,D$ be any two divisors on a surface $X$, and let the corresponding invertible sheaves be $\mathscr L, \mathscr M$. Show that
+\[
+C.D = \chi(\OO_X) -\chi(\mathscr L^{-1})-\chi(\mathscr M^{-1})+\chi(\mathscr L^{-1} \otimes \mathscr M^{-1}).
+\]
+\end{exc}
+
+\begin{sol}
+We have an exact sequence
+\[
+0 \to \mathscr L^{-1} \to \OO_X \to \OO_C \to 0,
+\]
+and similarly with $\mathscr L$ and $C$ replaces by $\mathscr M$ and  $D$, from which we obtain that $\chi(\OO_C) = \chi(\OO_X)-\chi(\LL^{-1})$. We want to use the equality $C.D = \chi(\OO_C)- \chi(\mathscr L(-D) \otimes \OO_C)$ in the proof of Proposition 1.4.
+
+Using what we've found, we have
+$$
+C.D = -\chi(\mathscr L^{-1}) + \chi ( \OO_{C \cap D}).
+$$
+Using the exact sequences 
+\[
+0 \to \mathscr M^{-1} \otimes \OO_C \to \OO_C \to \OO_{C \cap D} \to 0
+\]
+and 
+\[
+0 \to \mathscr M^{-1} \otimes \mathscr L^{-1} \to \mathscr M^{-1} \to \mathscr M^{-1} \otimes \mathscr L^{-1} \to 0,
+\]
+together with additivty of Euler characteristics, we obtain the desired result.
+\end{sol}
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Categories for the working mathematician - Saunders MacLane}
 \subsection{Chapter 1.1}
