@@ -76,4 +76,18 @@ Let $p \in M$ and let $\gamma:(-\epsilon,\epsilon) \to M$ be an integral curve s
 Then by uniqueness of integral curves we must have $\tilde \gamma(s)=\gamma(t+\epsilon/2)$ (they both satisfy the same differential equation). In this way we can extend the domain of $\gamma$ by $\frac \epsilon 2$, and we continue this process indefinitely. Since $\R$ is the increasing union of the intervals $(-\epsilon-n \frac \epsilon 2, \epsilon + \frac \epsilon 2)$, this will define $\gamma$ on all of $\R$.
 \end{sol}
 
+\begin{exc}
+Let $G$ be a Lie group. Denote by $l_g(h)=gh$ left-multplication by $g$. We say that a vector field on $G$ is \emph{left-invariant} if $(d_hl_g)(X_h)=X_{gh}$ for all $g,h \in G$. Denote by $X^v$ the vector field with the value $v$ at $e \in G$. Then $X^v_g = (d_el_g)(v)$. 
+\begin{enumerate}[i)]
+\item  For $v \in \g$, let $\gamma_v$ be the maximal integral curve of $X^v$ such that $\gamma_v(0)=e$. Show that for every $g \in G$, the curve $\gamma(t)=g\gamma_v(t)$ is an integral curve of $X^v$ such that $\gamma(0)=g$. Conclude that $\gamma_v(t)$ is defined for all $t \in \R$, and the flow $(\phi_t^v)_t$ defined by $X^v$ is given by $\phi_t^v(g)=g\gamma_v(t)$.
+\end{enumerate}
+\end{exc}
+
+\begin{sol}
+  \begin{enumerate}[i)]
+  \item Note that $\gamma(t)$ is the composition of $\gamma_v(t)$ and $l_g$. Since taking differentials is functorial, we 
+  \end{enumerate}
+\end{sol}
+
+
 \end{document}
