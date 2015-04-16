@@ -77,17 +77,35 @@ Then by uniqueness of integral curves we must have $\tilde \gamma(s)=\gamma(t+\e
 \end{sol}
 
 \begin{exc}
-Let $G$ be a Lie group. Denote by $l_g(h)=gh$ left-multplication by $g$. We say that a vector field on $G$ is \emph{left-invariant} if $(d_hl_g)(X_h)=X_{gh}$ for all $g,h \in G$. Denote by $X^v$ the vector field with the value $v$ at $e \in G$. Then $X^v_g = (d_el_g)(v)$. 
-\begin{enumerate}[i)]
-\item  For $v \in \g$, let $\gamma_v$ be the maximal integral curve of $X^v$ such that $\gamma_v(0)=e$. Show that for every $g \in G$, the curve $\gamma(t)=g\gamma_v(t)$ is an integral curve of $X^v$ such that $\gamma(0)=g$. Conclude that $\gamma_v(t)$ is defined for all $t \in \R$, and the flow $(\phi_t^v)_t$ defined by $X^v$ is given by $\phi_t^v(g)=g\gamma_v(t)$.
+Let $G$ be a Lie group and let $\g$ be its Lie algebra at the identity.
+
+A smooth vector field $X$ on $G$ is called \emph{left-invariant} if $(d_hl_g)(X_h)=X_{gh}$ for all $g,h \in G$. Here $l_g$ is left-multiplication by $g$. A left-invariant vector field is completely determined by its value at $e \in G$. We denote the corresponding vector field by $X^v_g := (d_el_g)(v)$. Every element $v \in T_e G=\g$ arises this way. 
+
+The commutator of two left-invariant vector fields is again left-invariant (a short computation), and hence we get a Lie bracket on $\g$ given by $[v,w] := [X^v, X^w]_e$. 
+
+\begin{enumerate}
+\item For $v \in \g$, let $\gamma_v$ be the maximal integral curve of $X^v$ such that $\gamma_v(0)=e$. Show that for every $g \in G$ the curve $\gamma(t)=g \gamma_v(t)$ is an integral curve of $X^v$ such that $\gamma(0)=g$. Conclude that $\gamma_v(t)$ is defined for all $t \in \R$ and the flow $(\phi_t^v)_t$ defined by $X^v$ is given by $\phi_t^v(g)=g\gamma_v(t)$. 
+
+\item Choose a coordinate chart $x:U \to \R^n$ on $G$ containing $e \in G$ such that $x(e)=0$. Let $f:V \times V \to \R^n$, where $V$ is a small neighbourhood of $0 \in \R^n$, and $f$ be the map describing the group law of $G$ in these coordinates, so $f(a,b)=x(x^{-1}(a)x^{-1}(b))$. Consider the Taylor expansion of $f$ at $0 \in \R^{2n}$. Show that
+$$
+a+b+B(a,b)+h.o.t.
+$$
+where $B:\R^n \times \R^n \to \R^n$ is a bilinear map.
 \end{enumerate}
 \end{exc}
 
 \begin{sol}
-  \begin{enumerate}[i)]
-  \item Note that $\gamma(t)$ is the composition of $\gamma_v(t)$ and $l_g$. Since taking differentials is functorial, we 
-  \end{enumerate}
+\begin{enumerate}
+\item
+First we need to show two things. The first is that $\gamma(0)=g$. But this is trivial: $\gamma(0)=g \gamma_v(0)=ge=g$. The second is that $(d\gamma)_t(v) = X_{\gamma(t)}^v$. By definition we have that $X_{\gamma(t)}^v=(d_e l_{\gamma(t)})(v)$. So we will check that this agrees with the left-hand-side.
+----
+
+\item 
+
+
 \end{sol}
+
+
 
 
 \end{document}
