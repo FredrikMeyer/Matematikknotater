@@ -91,21 +91,89 @@ $$
 a+b+B(a,b)+h.o.t.
 $$
 where $B:\R^n \times \R^n \to \R^n$ is a bilinear map.
+
+\item Show that in the chosen local coordinates the Lie bracket on $\g$ is given by
+\[
+[v,w] = B(v,w) - B(w,v).
+\]
+\item Take $G=\GL_n(\R)$. Identify $\g$ with $\mathrm{Mat}_n(\R)$. Show that $[A,B] = AB-BA$.
 \end{enumerate}
 \end{exc}
 
 \begin{sol}
 \begin{enumerate}
 \item
-First we need to show two things. The first is that $\gamma(0)=g$. But this is trivial: $\gamma(0)=g \gamma_v(0)=ge=g$. The second is that $(d\gamma)_t(v) = X_{\gamma(t)}^v$. By definition we have that $X_{\gamma(t)}^v=(d_e l_{\gamma(t)})(v)$. So we will check that this agrees with the left-hand-side.
-----
+First we need to show two things. The first is that $\gamma(0)=g$. But this is trivial: $\gamma(0)=g \gamma_v(0)=ge=g$. The second is that $(d\gamma)_t(1) = X_{\gamma(t)}^v$. By definition we have that $X_{\gamma(t)}^v=(d_e l_{\gamma(t)})(v)$. So we will check that this agrees with the left-hand-side. They key observation is that left-multiplication satisfies $l_{gh}=l_g \circ l_h$. Thus
+\begin{align*}
+d(\gamma)_t(1) &= d(l_g \circ \gamma_v)_t(1)=d(l_g)_{\gamma_v(t)} \circ d(\gamma_v)_t(1) \\
+&= d(l_g)_{\gamma_v(t)} (X_{\gamma_v(t)}^v) = X_{g\gamma_v(t)}^v = X_{\gamma(t)}.
+\end{align*}
+Where we in the last equalities used that $X$ was left-invariant.
+
+This says that all the integral curves are just translates of integral curves through the identity, and thus every integral curve can be defined on the same interval. Thus by Exercise 2, every integral curve can be defined on all of $\R$. It follows that the flow is given by traversing an integral curve through the identity and then multiplying by $g$, that is $\phi_t^v(g)=g\gamma_v(t)$. 
+
+\item The Taylor expansion in several variables is given by the sum of all partial derivatives of all orders with an $x^i$ in front. By holding the first $n$ coordinates fixed (and vice versa), we see that the linear term has to be $a+b$, since the derivative of $ab$ with respect to the last $n$ variables is $a$.
+
+I'm not sure how to see that the quadratic part is bilinear. 
 
 \item 
+\item This is probably not the intended solution, but well: Any $A \in \g$ can be written as $A=\sum A_{ij} \restr{\dd{}{x^{ij}}}{e}$. The product of $AB$ is defined to be the double derivative. But actually doing the composition, one sees that it is done exactly the same way as matrix multiplication.
 
-
+Hence $[A,B]=AB-BA$.
+ 
+\end{enumerate}
 \end{sol}
 
+\begin{exc}
+To show existence of compactly supported commuting vector fields linearly independent at a given point. 
 
+Fix $\epsilon > 0$ and choose a smooth function $h$ on $[0,\infty)$ such that $h'(t) > 0$ for all $t\geq 0$, $h(t)=t$ for $t \in [0,\epsilon]$, and $h(t)=1-\frac{1}{\ln t}$ for large $t$. 
+
+Consider the map $f:\R^n \to \R^n$ defined by $f(a)= \frac{h(\lvert a \rvert)}{\lvert a \rvert} a$. 
+\begin{enumerate}
+\item Show that $f$ is a diffeomorphism of $\R^n$ onto the open unit ball $B \subset \R^n$.
+
+\item Define smooth vector fields $X_i$ on $B$ by $X_i := f_\ast(\dd{}{x^i})$. Or explicitly:
+$$
+X_i(b) = (d_{f^{-1}(b)}f)\left( \restr{\dd{}{x^i}}{f^{-1}(b)}\right).
+$$
+Put $X_i(p)=0$ for $p \not \in B$. Show that the vector fields $X_i$ on $\R^n$ are smooth and $X_i(p)=\restr{\dd{}{x^i}}{p}$ for $\lvert p \rvert \leq \epsilon$.
+
+\item Explain why the vector fields $X_i$ pairwise commute.
+
+\item Let $(\phi_t^i)_t$ be the flow on $\R^n$ defined by $X_i$. For all $p \in \R^n$, find the limit
+\[
+\lim_{t \to -\infty} \phi_t^i(p) \qquad \text{ and } \qquad \lim_{t \to +\infty} \phi_t^i(p).
+\]
+
+\end{enumerate}
+\end{exc}
+
+\begin{sol}
+  \begin{enumerate}
+  \item The function $f$ is clearly smooth. Since $h$ is strictly increasing, it has a smooth inverse. One can check that then the inverse of $f$ is given by
+$$
+g(a) = \frac{h^{-1}(\lvert a \rvert)}{\lvert a \rvert} a.
+$$
+Thus $f$ is a diffeomorphism. To see that it is onto the open unit ball, we observe first that $f$ only scales the coordinates of $a \in \R^n$, so we want to look at the norm of $f(a)$. We have that $\rvert f(a) \lvert = h(\lvert a \rvert)$. Thus we want to see that $h([0,\infty))= [0,1)$. Clearly $h(0)=0$. We also have 
+\[
+\lim_{t \to \infty} h(t) = \lim_{t \to \infty} \frac{\ln t -1}{\ln t} = 1,
+\]
+by L'Hôpital's rule. This implies that the image of $h$ get arbitrarily close to $1$, hence $h([0,\infty))=[0,1)$ (it cannot include $1$, because then $h$ would be a diffeomorphism of a half-open interval onto a closed interval).
+
+\item The vector fields $X_i$ are cleary smooth on $B$, since it is defined by smooth functions. To see that it is smooth on all of $\R^n$, note that $d_{f^{-1}(b)}f \to 0$ as $b \to \infty$, and this happens very quickly, thus $X_i$ is at least continous on all of $\R^n$. But by differentiating $f$, we see that all the derivatives approach zero as well, so the extension must be smooth.
+
+Now, since $h(t)=t$ for $t \leq \epsilon$, it follows that $d_{f^{-1}(b)}f = \id$ on $T\R^n_{f^{-1}(b)}$ for small $b$. Thus $X_i(b)=\restr{\dd{}{x^i}}{p}$.
+
+\item Since $f$ is just scaling, the vector fields $X_i$ are just scalings of the $\restr{\dd{}{x^i}}{p}$, in particular, they are still orthogonal at every point, and hence $[X_i,X_j]_p=0$ for $i \neq j$. 
+
+\item The first limit is obtained by traversing the integral curve backwards in time. Since each $X_i$ is ``pointing outward'', the intragral curves all go through $0$ and go radially outwards to the boundary of $B$. Thus the first limit is $0$ if $p \in B$, and it is $p$ if $p \not \in B$. 
+
+The second limit is found by traversing time forwards, and by the same explanation, it is $0$ if $p=0$, it is $p/\lvert p \rvert$ if $ p\in B\bs \{0 \}$, and it is $p$ if $ p \not \in B$.
+
+
+\end{enumerate}
+\end{sol}
 
 
 \end{document}
