@@ -680,6 +680,66 @@ Conversely, assume components of open sets are open. Let $x \in X$, and let $U$ 
   \end{enumerate}
 \end{sol}
 
+\subsection{Chapter 3}
+\begin{exc}
+Show that in the definition of an equivalence it suffices to assume that the map $E_1 \to E_2$ is continous. 
+\end{exc}
+\begin{sol}
+Okay, so the assumptions are now that there is a continous map $f:E_1 \to E_2$  and a commuting diagram
+$$
+\xymatrix{
+E_1 \ar[dr]_{\pi_1} \ar[r]^f & E_2 \ar[d]^{\pi_2} \\
+& B
+}
+$$
+taking each fibre $\pi_1^{-1}(p)$ isomorphically onto $\pi_2^{-1}(p)$. We want to show that $f$ is a homeomorphism.
+
+First we show that $f$ is bijective by defining a set-theoretic inverse $g:E_2 \to E_1$. Suppose $q \in E_2$. Then $q \in \pi_2^{-1}(\pi_2(q))$. But $\restr{f}{\pi_1^{-1}(\pi_2(q))}$ is a vector space isomorphism, so we define
+$$
+g(q) = \restr{f}{\pi_1^{-1}(\pi_2(q))}^{-1}(q).
+$$
+
+The next step is to show that $g$ is continous. This actually follows from the local triviality condition. For each open $U$ on $B$ on which $E_1,E_2$ both are trivial. Then there are isomorphisms $\restr{E_1}{U} \simeq U \times \R^n$ and $\restr{E_2}{U} \simeq U \times \R^n$, then we have a commutative diagram
+$$
+\xymatrix{
+U \times \R^n  \ar[dr]^{\pi_1} \ar[r]^{f'} & U \times \R^n  \ar[d]^{\pi_2}\\
+& U 
+}
+$$
+
+The commuting condition implies that $f'$ is the identity on the first factor, and thus $f'$ is \emph{linear} map on the second factor. Linear maps are always continous.
+\end{sol}
+
+\begin{exc}
+Show that in the definition of bundle map, continuity of $f:B_1 \to B_2$ follows automatically from continuity of $\widetilde f:E_1 \to E_2$. 
+\end{exc}
+\begin{sol}
+Again, this is local triviality. Choose a trivialization so that the map is given by $U \times \R^n \to V \times R^m$. This is continous by assmuption. Choose open $W \subset V \subset B_2$. The map $\pi_2$ is continous (of course), and by continuity of $\widetilde f$ and openness of $\pi_1$, we have $f^{-1}(W)=\pi_1( \widetilde f ^{-1}(\pi_2^{-1}(W)))$ which is open.
+\end{sol}
+
+\begin{exc}
+For a bundle map $(\tilde f, f)$, with $f:B_1 \to B_2$, let $K_p$ be the kernel of the map $\restr{\tilde f}{\pi_1^{-1}(p)}$ from $\pi_1^{-1}(p)$ to $\pi_2^{-1}(f(p))$.
+\begin{enumerate}
+\item If $p \mapsto \dim K_p$ is continous, then $\ker \tilde f$, the union of all $K_p$ is a bundle over $B_1$.
+\item 
+\end{enumerate}
+\end{exc}
+\begin{sol}
+1. The condition says that $\dim \ker K_p$ is constant on connected components, so we may as well assume that $\dim \ker K_p$ is constant and $B_1$ is connected.
+
+First choose a small open set $U \subset B_2$ such that $E_1,E_2$ are both trivial over $V=f^{-1}(U)$ and $E_2$, respectively.
+
+Then the map $\restr{E_1}{V} \to \restr{E_2}{U}$ takes the form $(v,p) \mapsto (f(v),f_2(v,p))$, since this is a bundle map (follows from commutativity).
+
+Then
+$$
+\restr{\ker \tilde f }{V} \simeq \left\{ (v,p) \in V \times \R^n \mid f_2(v,p)=0 \right\}.
+$$
+We can define a map $\restr{\ker \tilde f}{V} \to V$ by $(v,p) \mapsto v$ (this is just the restriction of the projection to $B_1$). This map has constant rank $\dim V=m$, so that by Theorem 10 i Chapter 2, it looks locally like a projection $(a^1, \ldots, a^m) \mapsto (a^1, \ldots, a^m)$. 
+\end{sol}
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
