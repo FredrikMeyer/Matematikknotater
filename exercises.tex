@@ -28,7 +28,71 @@
 \author{Fredrik Meyer}
 \maketitle 
 
-I solve and type exercises from different places (read \emph{books}). 
+\tableofcontents 
+
+\section{Algebra - Serge Lang}
+
+\subsection{Chapter V}
+
+\begin{exc}
+ Let $E=\Q(\alpha)$, where $\alpha$ is a root of the equation
+\[
+\alpha^3+ \alpha^2+\alpha+2 = 0.
+\]
+Express $(\alpha^2+\alpha+1)(\alpha^2+\alpha)$ and $(\alpha-1)^{-1}$ in the form
+\[
+a\alpha^2+b\alpha + c 
+\]
+with $a,b,c \in \Q$.
+\end{exc}
+
+\begin{sol}
+Note that $\alpha^3 = -\alpha^2-\alpha - 2$ and $\alpha^2+\alpha+1=\frac{\alpha^3-1}{\alpha-1}$ (it is the beginning of a geometric series). Then
+\begin{align*}
+(\alpha^2+\alpha+1)(\alpha^2+\alpha) &= \alpha(\alpha^2+\alpha+1)(\alpha+1) \\
+&= \alpha \left(\frac{ \alpha^3 -1}{\alpha-1} \right) (\alpha+1) \\
+&= \alpha \left( \frac{-\alpha^2-\alpha- 3}{\alpha-1} \right) (\alpha+1) \\
+&= -\left( \frac{\alpha^3+\alpha^2+3\alpha}{\alpha-1} \right)(\alpha+1) \\
+&= -\left( \frac{-\alpha^2-\alpha-2 + \alpha^2+3\alpha}{\alpha-1}\right) (\alpha+1) \\
+&= -\left( \frac{2\alpha - 2}{\alpha-1} \right) (\alpha+1) \\
+&= -2\alpha-2.
+\end{align*}
+Alternatively, there's a much easier solution.
+
+
+For $(\alpha-1)^{-1}$, let 
+\[
+\frac{1}{\alpha-1} = a\alpha^2+b\alpha+ c.
+\]
+Then multiplaying on both sides and using that $1,\alpha, \alpha^2$ are linearly independent over $\Q$, we equate coefficients, and get
+\[
+(\alpha-1)^{-1} = -\frac 15 \alpha^2 -\frac 25 \alpha - \frac 35.
+\]
+\end{sol}
+
+\begin{exc}
+  Let $E=F(\alpha)$ where $\alpha$ is algebraic over $F$ of odd degree. Show that $E=F(\alpha^2)$.
+\end{exc}
+\begin{sol}
+Cleary $F(\alpha^2) \subset F(\alpha)$. It will be enough to show $\alpha \in F(\alpha^2)$. 
+
+If $\alpha \not \in F(\alpha^2)$, the extension $F(\alpha)/F(\alpha^2)$ must have degree $2$ because $\alpha$ is a zero of $X^2-\alpha^2$. Then $[F(\alpha):F]=[F(\alpha):F(\alpha^2)][F(\alpha^2):F]=2 [F(\alpha^2):F]$.
+\end{sol}
+
+\begin{exc}
+ Let $\alpha, \beta$ be two elements which are algebraic over $F$. Let $f(X)=\mathrm{Irr}(\alpha,F,X)$ and $g(X)=\mathrm{Irr}(\beta,F,X)$. Suppose that $\deg f$ and $\deg g$ are relatively prime. Show that $g$ is irreducible in the polynomial ring $F(\alpha)[X]$.
+\end{exc}
+
+\begin{sol}
+Consider the tower of fields $F \subset F(\alpha) \subset F(\alpha, \beta)$. Then $[F(\alpha,\beta):F] = \deg f \cdot n \leq \deg f \cdot \deg g$, by the same argument as in the proof of Proposition 1.2. Similarly $[F(\alpha,\beta):F]=\deg g \cdot m \leq \deg f \cdot \deg g$. But then
+\[
+\frac{\deg f}{\deg g} = \frac{m}{n}.
+\]
+But $\deg f$ and $\deg g$ are relatively prime, and, and we must have $m \leq \deg f$ and $n \leq deg g$. This forces $m = deg f$ and $n = \deg g$, and hence $[F(\alpha,\beta):F(\alpha)]=\deg g$ and $[F(\alpha,\beta):F(\beta)]=\deg f$.
+
+Now, if $g$ were reducible in $F(\alpha)[X]$, we would have $[F(\alpha,\beta):F] < \deg f \deg g$. But we don't.
+\end{sol}
+
 
 \section{Algebraic Geometry - Hartshorne}
 
