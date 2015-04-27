@@ -475,6 +475,39 @@ We get a projective scheme $\PP(\K)$ defined by $\Proj \left (k[ \mathbf x]/I_\K
 
 A \textbf{toric variety} $X$ is an integral scheme containing the torus $(k^\ast)^n$ as a dense open subset, such that the action of the torus on itself extends to an action $(k^\ast)^n \times X \to X$.
 
+%%%%%%%%%%%%
+
+\section{Category theory}
+\subsection{Basisc concepts}
+
+\subsubsection{Adjoints pair}
+\label{adjoint}
+
+Let $\CC,\CC'$ be categories. Let $F:\CC \to \CC'$ and $F':\CC' \to \CC$ be functors. We call $(F,F')$ an \textbf{adjoint pair}, or that $F$ is \textbf{left adjoint} to $F'$ (or $\F'$ right adjoint) if for each $A \in \CC$ and $A' \in \CC'$, we have a \emph{natural} bijection
+\[
+\Hom_{\CC'}(F(A),A') \simeq \Hom_\CC(A,F'(A')).
+\]
+The naturality condition assures us that adjoints are unique up to isomorphism. 
+
+\subsection{Limits}
+
+\subsubsection{Direct limit}
+\label{directlimit}
+
+
+
+\subsubsection{Filtered category}
+\label{filteredcategory}
+A category $J$ is \textbf{filtered} when it satisfies the following three conditions: 1) it is non-empty. 2) For every two objects $j,j' \in \catname{ob}(J)$, there exists an object $k \in \catname{ob}(J)$ and two arrows $f:j \to k$ and $f:j' \to k$. 3) For every two parallel arrows $u,v:i \to j$ there exists an object $w \in \catname{ob}(J)$ and an arrow $w:j \to k$ such that $wu=wv$.
+\[
+\xymatrix{
+j \ar[dr]^\exists  &  & \\
+  &  k &  & i \ar@/^{1pc}/[r]^u \ar@/_{1pc}/[r]_v  & j \ar[r]^\exists &  w \\ 
+j' \ar[ur]^\exists  &
+}
+\]
+
+
 %%%%%%%%%%%%%%
 \section{Commutative algebra}
 \subsection{Modules}
