@@ -1,0 +1,165 @@
+\documentclass[11pt, english]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}   % S P R A A K
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{calc}
+%\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+%\usepackage{hyperref}
+ \usepackage{mystyle} % stilfilen      
+
+
+\begin{document}
+\title{Seminarnotater}
+\author{Fredrik Meyer}
+\maketitle 
+
+\section{Innledning}
+
+Vi husker litt notasjon.
+\begin{itemize}
+\item $\Gamma$ er en gruppe som virker på $\Hh$, det øvre halvplanet.
+\item Vanligste eksemplene er $\Gamma(1)=\SL_2(\Z)$, og kongruensundergruppene av denne: $\Gamma(N)$.
+\end{itemize}
+
+
+\textbf{HUSK}
+
+\begin{enumerate}
+\item \textbf{Modular functions}: modulære funksjoner er funksjoner invariant under $\Gamma$. Det er ikke nødvendigvis spesielt mange av disse. $f(\gamma z)=f(\gamma)$ for alle $\gamma \in \Gamma$. Vi krever at de er meromorfe på $\Hh$ og på "køspene".
+\item \textbf{Modular forms}: modulære former er som "brøker", evt. som homogene polynomer på $\PP^N$. Så gitt en gruppe $\Gamma$, så er en modulær form for $\Gamma$ av vekt $2k$ gitt ved en funksjon på $\Hh$ slik at 1) $f(\gamma z)=(cz+d)^{2k}f(z)$ for $z \in \Hh$ og $\gamma=\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \Gamma$. Vi krever at $f$ er holomorf på $\Hh$ og på køspene. 
+\item Litt notasjon: $\mathcal M_k(\Gamma)$ er vektorrommet av modulære former av vekt $2k$ for $\Gamma$. $\mathcal S_k(\Gamma)$ er underrommet av køspformer (=null på køspene). Ved multiplikasjon av modulære former ser vi at 
+$$
+\mathcal M( \Gamma) = \bigoplus_{k \geq 0} \mathcal M_k(\Gamma)
+$$
+er en gradert ring. Kristian nevnte sist at 
+\[
+\dim \mathcal M_k(\Gamma) = \begin{cases} 0 & k \leq -1 \\
+1 & k = 0 \\
+(2k-1)(g-1) + \nu_\infty k + \sum_P k\left[1-\frac{1}{e_P}\right] & k \geq 1
+\end{cases}
+\]
+Her er $\nu_\infty$ antall ikke-ekvivalente køsper. Summen går over representanter for elliptiske punkter $P$ av $\Gamma$. $e_P$ er orden til en eller annen stabilisator... 
+\item Det viste seg at
+\[
+\mathcal M (\Gamma(1)) \simeq \C[T^2,T^3].
+\]
+(hehe, køsp på nytt)
+\end{enumerate}
+
+På dette tidspunktet regner Milne ut Fourier-koffesientene for Eisenstein-serien til $\Gamma(1)$. Jeg tror vi hopper over dette.
+
+Vi kan vel nevne resultatet og \textbf{betrakte} sammenhengen med tallteori. La 
+$$
+\sigma_k(n) = \sum_{d \mid n} d^k.
+$$
+Da er (PROPOSISJON!!)
+\[
+G_k(z) = 2\zeta(2k) + 2\frac{(2\pi i) ^{2k}}{(2k-1)!} \sum_{n=1}^\infty \sigma_{2k-1}(n) q^n.
+\]
+(trommevirvel)
+
+
+\section{Modulære former som seksjoner av linjebunter}
+
+\textbf{TERMINOLOGI:}
+
+La $X$ være en kompleks mangfoldighet. Da er en \textbf{linjebunt} på $X$ gitt ved en avbildning $\pi:L \to X$ slik at for en overdekning $\{ U_i \}$ av $X$, har vi at $\pi^{-1}(U_i) \simeq U_i \times \C$. 
+
+For $U \subset X$, la  $\Gamma(U,L)$ betegne mengden av seksjoner av $\pi$ over $U$. For den trivielle linjebunten er dette bare holomorfe funksjoner.
+
+Betrakt følgende situasjon:
+
+La $\Gamma$ være en diskret gruppe som virker fritt og "ekte diskontinuerlig" på en Riemann-flate $H$. La $X = \Gamma \bs H$.
+
+La $\pi:L \to X$ være en linjebunt på $X$. Da er 
+$$
+p^\ast (L) = \{ (h,l) \subset H \times L \mid p(h) = \pi(l) \}
+$$
+en linjebunt på $H$ (pullback).
+\[
+\xymatrix{
+p^\ast (L) \pullbackcorner \ar[r] \ar[d] & H \ar[d]^p \\
+L \ar[r]_\pi & X
+}
+\]
+
+Dette kan sjekkes lokalt på en overdekning som trivialiserer både $\pi$ og $p$ (finnes det en mer kategorisk metode???). 
+
+Anta gitt en isomorfi $i: H \times \C \to p^\ast (L)$. Da kan vi overføre virkningen av $\Gamma$ på $p\ast (L)$ til en virkning av $\Gamma$ på $H \times \C$ over $H$.  La $(t,z) \in H \times \C$. Vi skriver:
+
+$$
+\gamma \cdot (t,z) = \left( \gamma t , j_\gamma(t)z \right)
+$$
+hvor $j_\gamma(t) \in \C^x$. 
+
+Da er 
+$$
+\gamma \gamma' (t,z) = \gamma(\gamma' t, j_{\gamma '}(t)z ) = (\gamma \gamma' t, j_{\gamma}(\gamma' t) j_{\gamma'}(t) z).
+$$
+
+Så
+$$
+j_{\gamma \gamma'}(t) = j_\gamma(\gamma' t) j_{\gamma'}(t).
+$$
+
+En funksjon $j:\Gamma \times \Hh \to \C^x$ som dette som er holomorf kalles for en \textbf{"automorfisk faktor"}.
+
+\begin{example}
+Enhver åpen delmengde av $\C$ med en gruppevirkning fra $\Gamma$ kommer med en kanonisk automorfisk faktor $j_\gamma(t)$, nemlig:
+\[
+\Gamma \times H \to \C, (\gamma, t) \mapsto (d\gamma)_t.
+\]
+I ord: $\gamma$ induserer en avbildning. Tangentrommet til $\C$ er $\C$ selv, så differensialen er bare gitt ved å multiplisere med et komplekst tall. 
+
+At dette er en automorfisk faktor følger fra kjerneregelen! Prøv selv :)
+
+EKSEMPEL: Se på $\Gamma(1)$ som virker på $\Hh$. Om $\gamma$ sender $z$ til $\frac{az+b}{cz+d}$ følger det at 
+$$
+d\gamma = \frac{1}{(cz+d)^2} dz,
+$$
+så $j_\gamma(t)= (cz+d)^{-2}$ og $j_\gamma(t)^k= (cz+d)^{-2k}$. 
+\end{example}
+
+Vi har følgende:
+\begin{prop}
+Det er en 1-1-korrespondanse mellom par $(L,i)$ hvor $L$ er en linjebunt på $\Gamma \bs H$ og $i$ er en isomorfi $H \times \C \simeq p^\ast L$ og mengden av automorfiske faktorer.
+\end{prop}
+\begin{proof}
+Vi har sett hvordan vi går fra $(L,i) \mapsto j_\gamma(t)$. 
+
+Gitt en automorfisk faktor $j$, bruk denne til å definere en virkning av $\Gamma$ på $H \times \C$, og la $L$ være gitt ved $\Gamma \bs H \times \C$.
+\end{proof}
+
+Siden alle linjebunter på $\Hh$ er trivielle, har vi en "klassifikasjon" av linjebunter på $\Gamma \bs \Hh$. Den trivielle linjebunten svarer til $j=1$. 
+
+
+[[
+Korrespondanse mellom seksjoner av $L_k$ og modulære former av vekt $2k$.
+]]
+
+\subsection{Poincaré-rekker}
+
+...
+
+\subsection{Litt om geometrien til H}
+
+
+\subsection{Indreprodukt + utspenning}
+
+
+
+
+\end{document}
