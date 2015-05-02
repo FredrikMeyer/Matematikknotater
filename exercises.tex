@@ -394,7 +394,23 @@ $$
 l(D)-l(K-D) = \deg D +1 -g = n+1-g.
 $$
 If $n$ is large enough, $K-D$ will have negative degree, so $l(K-D)=0$. Thus for large $n$, we can get $l(D)$ as big as we want.
+\end{sol}
 
+\begin{exc}[Exercise 1.5]
+For an effective divisor $D$ on a curve $X$ of genus $g$, show that $\dim \lvert D \rvert \leq \deg D$. Furthermore, equality holds if and only if $D=0$ or $g=0$. 
+\end{exc}
+\begin{sol}
+This is a simple consequence of Riemann-Roch. Note that the statement is equivalent to $l(D) - 1 \leq \deg D$. So by Riemann-Roch:
+\[
+l(D)-1 = \deg D - g + l(K-D).
+\]
+So the statement is equivalent to $l(K-D) \leq g$. Now, by definition, $l(K)=g$, so we need only show that $l(K-D) \leq l(K)$ for any two divisors $K,D$. But by the identification
+$$
+H^0(K-D)=\{ f \in K(C) \mid (f) + K-D \leq 0 \}
+$$
+this is trivial since $D$ is effective.
+
+Now assume $l(K-D)=g$. If $D=0$, then this is equal by definition. If not, then if $f$ is such that $(f) + K \geq 0$, then $(f) + K-D \geq 0$. We must have $\deg f = 0$ and $f$ must have at least $2g-2$ zeros and the same number of poles. ....................
 \end{sol}
 
 \subsection{Chapter V - Surfaces}

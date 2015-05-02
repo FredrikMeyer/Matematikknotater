@@ -1,0 +1,170 @@
+\message{ !name(seminar30april15.tex)}\documentclass[11pt, english]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}   % S P R A A K
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{calc}
+%\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+%\usepackage{hyperref}
+ \usepackage{mystyle} % stilfilen      
+
+
+\begin{document}
+
+\message{ !name(seminar30april15.tex) !offset(74) }
+virkning av $\Gamma$ på $H \times \C$ over $H$.  La $(t,z) \in H \times \C$. Vi skriver:
+
+$$
+\gamma \cdot (t,z) = \left( \gamma t , j_\gamma(t)z \right)
+$$
+hvor $j_\gamma(t) \in \C^x$. 
+
+Da er 
+$$
+\gamma \gamma' (t,z) = \gamma(\gamma' t, j_{\gamma '}(t)z ) = (\gamma \gamma' t, j_{\gamma}(\gamma' t) j_{\gamma'}(t) z).
+$$
+
+Så
+$$
+j_{\gamma \gamma'}(t) = j_\gamma(\gamma' t) j_{\gamma'}(t).
+$$
+
+En funksjon $j:\Gamma \times \Hh \to \C^x$ som dette som er holomorf kalles for en \textbf{"automorfisk faktor"}.
+
+\begin{example}
+Enhver åpen delmengde av $\C$ med en gruppevirkning fra $\Gamma$ kommer med en kanonisk automorfisk faktor $j_\gamma(t)$, nemlig:
+\[
+\Gamma \times H \to \C, (\gamma, t) \mapsto (d\gamma)_t.
+\]
+I ord: $\gamma$ induserer en avbildning. Tangentrommet til $\C$ er $\C$ selv, så differensialen er bare gitt ved å multiplisere med et komplekst tall. 
+
+At dette er en automorfisk faktor følger fra kjerneregelen! Prøv selv :)
+
+EKSEMPEL: Se på $\Gamma(1)$ som virker på $\Hh$. Om $\gamma$ sender $z$ til $\frac{az+b}{cz+d}$ følger det at 
+$$
+d\gamma = \frac{1}{(cz+d)^2} dz,
+$$
+så $j_\gamma(t)= (cz+d)^{-2}$ og $j_\gamma(t)^k= (cz+d)^{-2k}$. 
+\end{example}
+
+Vi har følgende:
+\begin{prop}
+Det er en 1-1-korrespondanse mellom par $(L,i)$ hvor $L$ er en linjebunt på $\Gamma \bs H$ og $i$ er en isomorfi $H \times \C \simeq p^\ast L$ og mengden av automorfiske faktorer.
+\end{prop}
+\begin{proof}
+Vi har sett hvordan vi går fra $(L,i) \mapsto j_\gamma(t)$. 
+
+Gitt en automorfisk faktor $j$, bruk denne til å definere en virkning av $\Gamma$ på $H \times \C$, og la $L$ være gitt ved $\Gamma \bs H \times \C$.
+\end{proof}
+
+Siden alle linjebunter på $\Hh$ er trivielle (finnes det et kort bevis for dette?), har vi en "klassifikasjon" av linjebunter på $\Gamma \bs \Hh$. Den trivielle linjebunten svarer til $j=1$. 
+
+
+--
+
+Merk at
+\[
+\Gamma(X,L) = \{ s \in \Gamma(H, p^\ast L) \mid \text{ s kommuterer med $\Gamma$} \}.
+\]
+Anta gitt en isomorfo $p^\ast L \simeq H \times \C$. Dermed identifiserer vi $p^\ast L$ med $H \times \C$. En seksjon $s:H \to H \times \C$ kan skrives $s(t)=(t,f(t))$. $\Gamma$ virker på $H \times \C$ ved $\gamma(t,z) = (\gamma t, j_\gamma(t)z)$ for en automorfisk faktor $j_\gamma$. Da er kravet om kommutativitet gitt ved $s(\gamma t)=\gamma s(t)$. Eksplisitt:
+\[
+s(\gamma t) = s(\gamma t, f(\gamma t)) \stackrel{!}{=} \gamma s(t) = (\gamma t, j_\gamma(t) s(t)).
+\]
+
+Dermed er kravet $s(\gamma t) = j_\gamma(t) f(t)$.
+
+La nå $H= \Hh$ og la  $L_k$ betegne linjebunten som korresponderer til $j_\gamma^{-k}$ der $j_\gamma$ er den kanoniske automorfiske faktoren for $\Gamma$ på $\Hh$. Da blir betingelsen
+\[
+f(\gamma t) = (cz+d)^{2k} f(t).
+\]
+Så seksjoner av $L_k$ er i 1-1 korrespondanse med modulære former av vekt $2k$ på $\Hh$. 
+
+Nå sier Milne at linjebunten $L_k$ på $\Gamma \bs \Hh$ utvides til en linjebunt på $\Gamma \bs Hh^\ast$ (kompaktifiseringen) (hvorfor???). Og dermed er seksjoner av $L_k^\ast$ i 1-1 korrespondanse med modulære former av vekt $2k$. 
+
+(så disse formene har en viss geometrisk betydning)
+
+\subsection{Poincaré-rekker}
+
+Vi ønsker å konstruere modulære former.
+
+Dette er litt samme regla som før. Først lager en en uendelig rekke som ser ut til å ha de riktige egenskapene. Så ser vi at konvergens er et problem. Så må vi massere litt, og så funker det.
+
+Vi gjør dette mer generelt for automorfiske faktorer. Vi ønsker funksjoner slik at $f(\gamma t z) = j_\gamma (z) f(z)$. 
+
+Prøv med (la $\Gamma' = \Gamma/\pm I$)
+\[
+f(z) \stackrel{??}{=} \sum_{\gamma \in \Gamma'} \frac{h(\gamma z)}{j_\gamma(z)}.
+\]
+
+Her er nemlig
+ \[
+ f(\gamma' z) = \sum_{\gamma \in \Gamma'} \frac{h(\gamma \gamma' z)}{j_\gamma (\gamma' z)} = \sum_{\gamma \in \Gamma'} \frac{h(\gamma \gamma' z)}{j_{\gamma \gamma'}(t)} \cdot j_{\gamma'} (t)  = j_{\gamma'} (t).
+\] 
+Så denne ville vært en fin kandidat! Men det er liten sjangs for konvergens siden vi kan ha $j_\gamma(t) \equiv 1$ for uendelig mange $\gamma$. Nemlig fikspunkter! 
+
+La så 
+\[
+\Gamma_0 = \{ \gamma \in \Gamma' \mid j_\gamma(z) \equiv 1 \}. 
+\]
+
+For $\Gamma(1)$ er dette gruppen generert av $\begin{pmatrix} 1 & h \\ 0 & 1 \end{pmatrix}$.
+
+$\Gamma_0$ er en undergruppe av $\Gamma$.
+
+Anta nå $h:\Hh \to \C$ er invariant under $\Gamma_0$. La $\gamma \in \Gamma'$ og $\gamma_0 \in \Gamma_0$. Da er 
+\[
+\frac{h(\gamma_0 \gamma z)}{j_{\gamma_0 \gamma}(z)} = \frac{h(\gamma z)}{j_{\gamma_0}(\gamma z) j_\gamma(z)} = \frac{h(\gamma z)}{j_\gamma(z)}.
+\]
+
+Dermed ser vi heller på summen
+\[
+f(z) = \sum_{\gamma \in \Gamma'/\Gamma_0} \frac{h(\gamma z)}{j_\gamma(z)}
+\]
+hvor summen går over et sett med representanter fra hvert kosett i kvotiengruppa. Denne har ihvertfall større håp om å konvergere.
+
+
+Bruk dette på $j_\gamma(z) = (cz+d)^{2k}$ og $\Gamma$ en undergruppe av endelig indeks i $\Gamma(1)$. Da er $\Gamma_0$ generert av $z \mapsto z+h$ for en $ h \in \Z$. Én slik funksjon er $\exp(2 \pi i nz/h)$. Dermed:
+
+\begin{defi}
+Vi definerer \textbf{Poincaré-rekka} av vekt 2k og karakter $n$ for $\Gamma$ til å være 
+\[
+\varphi_n(z) = \sum_{\Gamma_0 \bs \Gamma'} \frac{\exp(\frac{2 \pi i \gamma (z)}{h})}{(cz+d)^{2k}}.
+\]
+\end{defi}
+*puste lettet ut*
+
+Da er det et teorem (uten bevis :) som sier at $\phi_n$ konvergerer absolutt uniformt på kompakter på $\Hh$. Så vi har en hel rekke med modulære former av vekt $2k$ for $\Gamma$. 
+
+I tillegg:
+
+\begin{enumerate}
+\item $\varphi_0(z) = \sum \frac{1}{cz+d}^k$ er null på alle endelige køsper og $\phi_0(\infty)=1$. [[er dette sant? Regne på tavla??]]
+\item For alle $n \geq 1$, så er $\varphi_n(z)$ en køspform. (null på køspene)
+\end{enumerate}
+
+\subsection{Litt om geometrien til $\Hh$ }
+
+
+\subsection{Indreprodukt + utspenning}
+
+La $f,g$ være modulære former av vekt $2k$ for $\Gamma$.
+
+\begin{lemma}
+  Differensialen $f(z) \overline{g(z)} y^{2k-2} dx dy$ er invariant under virkningen av $\SL_2(\R)$. 
+\end{lemma}
+
+\message{ !name(seminar30april15.tex) !offset(75) }
+
+\end{document}
