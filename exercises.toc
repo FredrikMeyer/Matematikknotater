@@ -19,22 +19,23 @@
 \contentsline {subsection}{\numberline {7.1}Chapter 1 - Manifolds}{19}{subsection.7.1}
 \contentsline {section}{\numberline {8}Introduction to Differential Geometry - Spivak}{21}{section.8}
 \contentsline {subsection}{\numberline {8.1}Chapter 1 - Manifolds}{21}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Chapter 3}{23}{subsection.8.2}
-\contentsline {section}{\numberline {9}Introduction to Commutative Algebra - Atiyah-MacDonald}{25}{section.9}
-\contentsline {subsection}{\numberline {9.1}Chapter 1 - Rings and ideals}{25}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}Chapter 2 - Modules}{29}{subsection.9.2}
-\contentsline {subsection}{\numberline {9.3}Chapter III - Rings and modules of fractions}{31}{subsection.9.3}
-\contentsline {subsection}{\numberline {9.4}Chapter 5 - Integral dependence and valuations}{31}{subsection.9.4}
-\contentsline {subsection}{\numberline {9.5}Chapter 7 - Noetherian rings}{32}{subsection.9.5}
-\contentsline {section}{\numberline {10}The K-book - Charles Weibel}{34}{section.10}
-\contentsline {subsubsection}{\numberline {10.0.1}Chapter 1.1 - Free modules, $GL_n$ and stably free modules}{34}{subsubsection.10.0.1}
-\contentsline {subsection}{\numberline {10.1}Chapter 1.2 - Projective modules}{35}{subsection.10.1}
-\contentsline {section}{\numberline {11}Representation Theory - Fulton, Harris}{35}{section.11}
-\contentsline {subsection}{\numberline {11.1}Representations of Finite Groups}{35}{subsection.11.1}
-\contentsline {subsection}{\numberline {11.2}Chapter 7 - Lie groups}{39}{subsection.11.2}
-\contentsline {subsection}{\numberline {11.3}Lecture 8 - Lie Algebras and Lie groups}{40}{subsection.11.3}
-\contentsline {section}{\numberline {12}Twenty-Four Hours of Local Cohomology}{41}{section.12}
-\contentsline {subsection}{\numberline {12.1}Lecture 1 - Basic notions}{41}{subsection.12.1}
-\contentsline {section}{\numberline {13}Riemannian geometry - Do Carmo}{41}{section.13}
-\contentsline {subsection}{\numberline {13.1}Chapter 0 - Differentiable manifolds}{41}{subsection.13.1}
-\contentsline {subsection}{\numberline {13.2}Chapter 2 - Affine and Riemannian connections}{42}{subsection.13.2}
+\contentsline {subsection}{\numberline {8.2}Chapter 3 - The tangent bundle}{23}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Chapter 4 - Tensors}{25}{subsection.8.3}
+\contentsline {section}{\numberline {9}Introduction to Commutative Algebra - Atiyah-MacDonald}{26}{section.9}
+\contentsline {subsection}{\numberline {9.1}Chapter 1 - Rings and ideals}{26}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Chapter 2 - Modules}{30}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}Chapter III - Rings and modules of fractions}{32}{subsection.9.3}
+\contentsline {subsection}{\numberline {9.4}Chapter 5 - Integral dependence and valuations}{33}{subsection.9.4}
+\contentsline {subsection}{\numberline {9.5}Chapter 7 - Noetherian rings}{33}{subsection.9.5}
+\contentsline {section}{\numberline {10}The K-book - Charles Weibel}{35}{section.10}
+\contentsline {subsubsection}{\numberline {10.0.1}Chapter 1.1 - Free modules, $GL_n$ and stably free modules}{35}{subsubsection.10.0.1}
+\contentsline {subsection}{\numberline {10.1}Chapter 1.2 - Projective modules}{37}{subsection.10.1}
+\contentsline {section}{\numberline {11}Representation Theory - Fulton, Harris}{37}{section.11}
+\contentsline {subsection}{\numberline {11.1}Representations of Finite Groups}{37}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.2}Chapter 7 - Lie groups}{41}{subsection.11.2}
+\contentsline {subsection}{\numberline {11.3}Lecture 8 - Lie Algebras and Lie groups}{42}{subsection.11.3}
+\contentsline {section}{\numberline {12}Twenty-Four Hours of Local Cohomology}{42}{section.12}
+\contentsline {subsection}{\numberline {12.1}Lecture 1 - Basic notions}{42}{subsection.12.1}
+\contentsline {section}{\numberline {13}Riemannian geometry - Do Carmo}{43}{section.13}
+\contentsline {subsection}{\numberline {13.1}Chapter 0 - Differentiable manifolds}{43}{subsection.13.1}
+\contentsline {subsection}{\numberline {13.2}Chapter 2 - Affine and Riemannian connections}{44}{subsection.13.2}

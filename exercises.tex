@@ -760,7 +760,7 @@ Conversely, assume components of open sets are open. Let $x \in X$, and let $U$ 
   \end{enumerate}
 \end{sol}
 
-\subsection{Chapter 3}
+\subsection{Chapter 3 - The tangent bundle}
 \begin{exc}
 Show that in the definition of an equivalence it suffices to assume that the map $E_1 \to E_2$ is continous. 
 \end{exc}
@@ -815,7 +815,68 @@ Then
 $$
 \restr{\ker \tilde f }{V} \simeq \left\{ (v,p) \in V \times \R^n \mid f_2(v,p)=0 \right\}.
 $$
-We can define a map $\restr{\ker \tilde f}{V} \to V$ by $(v,p) \mapsto v$ (this is just the restriction of the projection to $B_1$). This map has constant rank $\dim V=m$, so that by Theorem 10 i Chapter 2, it looks locally like a projection $(a^1, \ldots, a^m) \mapsto (a^1, \ldots, a^m)$. 
+Since $\tilde f_2$ is linear in the second variable, we can write $\restr{\ker \tilde f }{V}$ as the kernel of matrix with functional entries. If the dimension of the kernel is $q$, then there is some $q \times q$-minor that doesn't vanish. 
+\end{sol}
+
+\subsection{Chapter 4 - Tensors}
+
+\begin{exc}[Exc 1]
+Let $f:M^n \to N^m$ and suppose $(x,U),(y,V)$ are coordinate systems around $p$ and $f(p)$, respectively.
+\begin{enumerate}[a)]
+\item If $g:N \to \R$, then
+\[
+\dd{(g \circ f)}{x^i}(p) = \sum_{j=1}^m \dd{g}{y^j}(f(p)) \dd{(y^j \circ f)}{x^i} (p).
+\]
+\item Show that
+\[
+f_\ast \left( \restr{\dd{}{x^i}}{p} \right) = \sum_{j=1}^m \dd{(y^j \circ f)}{x^i}(p) \restr{\dd{}{y^j}}{f(p)}.
+\]
+\item 
+Show that
+$$
+(f^\ast dy^j)(p) = \sum_{i=1}^n \dd{(y^j \circ f)}{x^i}(p) dx^i(p).
+$$
+\end{enumerate}
+\end{exc}
+\begin{sol}
+a)
+
+This is of course the chain rule together with deciphering of the definitions. By definition
+$$
+\dd{ (g \circ f)}{x^i}(p) = D_i(g \circ f \circ x^{-1}).
+$$
+Which is equal to
+
+$$
+ D_i(g \circ f \circ x^{-1}) =  D_i(g \circ y^{-1} \circ y \circ  f \circ x^{-1})
+$$
+which by the chain rule is
+$$
+\sum_{j=1}^n D_j(g \circ y^{-1})(y \circ f(p)) \cdot D_i(y \circ f \circ x^{-1})^j ( x(p)) 
+$$
+which by definition is equal to what we want.
+
+b)
+
+This is easier. We know that $f_\ast( \dd{}{x^i})$ is a certain linear combination of $\dd{}{y^j}$'s. So we just have to verify the coefficients.
+
+We use that $\dd{}{y^j} y^i = \delta_i^j$. That is, the coefficients are determined by the $m$ coordinate functions $y^i$. 
+
+Thus each coefficient is given by $(f_\ast \dd{}{x^i})(y^j) \stackrel{def}{=} \dd{(y^j \circ f)}{x^i}$.
+
+
+c)
+
+Solved similarly as above. We know that $f^\ast dy^j$ is a certain linear combination of $dx^i$'s. To get the coefficients, we use that $dx_j(\dd{}{x^i})= \delta_i^j$. Then
+$$
+(f^\ast dy^j)_p(\dd{}{x^i}) \stackrel{def}{=} dy^j_{f(p)} \left(f_\ast \restr{\dd{}{x^i}}{p}\right).
+$$
+By the above, this is
+$$
+dy^j_{f(p)} \left( \sum_{j=1}^m \dd{(y^j \circ f)}{x^i}(p) \restr{\dd{}{y^j}}{f(p)}\right)
+$$
+The only surviving term in the sum is $\frac{(y^j \circ f)}{x^i}(p)$. This is exactly the coefficient we want.
+
 \end{sol}
 
 
