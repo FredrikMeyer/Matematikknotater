@@ -880,6 +880,40 @@ The only surviving term in the sum is $\frac{(y^j \circ f)}{x^i}(p)$. This is ex
 \end{sol}
 
 
+\subsection{Chapter 5 - Vector fields and differential equations}
+
+\begin{exc}[Exercise 1]
+\begin{itemize}
+\item If $\alpha:M \to N$ is $C^\infty$, then $\alpha_\ast:TM \to TN$ is $C^\infty$. 
+\item If $\alpha:M \to N$ is a diffeomorphism and $X$ is a vector field on $M$,then $\alpha_\ast M$ is a $C^\infty$ vector field on $N$.
+\item If $\alpha: \R \to \R$ is $\alpha(t)=t^3$, then there is a $C^\infty$ vector field on $\R$ such that $\alpha_\ast X$ is not $C^\infty$.
+\end{itemize}
+\end{exc}
+
+\begin{sol}
+\begin{itemize}
+\item This is clear, since the map from tangent bundles is just the Jacobian matrix. Explicitly, we can WLOG assume $M=\R^n$ and $N=\R^m$ with $TM=\R^n \X \R^n$ and $TN= \R^m \X \R^m$. Then $a_\ast$ is given by $(v,p) \mapsto (d\alpha(p)(v), \alpha(p))$, where $d\alpha(p)$ is the Jacobian matrix evaluated at $p$.
+\item The same strategy. We assume $M= \R^n$ and $N=\R^m$. The difference between $\alpha_\ast$ and $\alpha_\ast X$ is that the former is a map between the tangent bundles and the latter is a section of $N$.
+
+Then, chasing through the definitions, if the $X$ is given by $p \mapsto (f(p),p)$, the section $\alpha_\ast X ( q) $ is given by $ q \mapsto \left(d(\alpha^{-1}(q))(f(\alpha^{-1}(q))),q\right)$.
+
+But this is clearly $C^\infty$ since $\alpha^{-1}$ is.
+
+\item Every vector field on $\R$ have the form $X=f \dd{}{t}$ for some function $f$. Let $f=1$. That is, $X$ is the vector field $s \mapsto (1,s)$. Then by the above, $\alpha_\ast X(s)=(\restr{(3s^2)}{s^{\frac 13}} \cdot 1 , s) = (3s^{\frac 23},s)$ which is not $C^\infty$. 
+\end{itemize}
+\end{sol}
+
+\begin{exc}[Exercise 10a]
+Prove that
+\[
+L_X(f \omega ) = \omega L_X f + f L_X w.
+\]
+\end{exc}
+\begin{sol}
+Two things are needed for this: 1) Note that $\varphi_h^\ast(f \omega)(p) = f(\varphi_h(p)) \varphi_h^\ast \omega(p)$. 2) The standard proof of the product rule. The rest is routine.
+\end{sol}
+
+
 
 
 
