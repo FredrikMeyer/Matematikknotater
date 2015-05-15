@@ -1119,6 +1119,36 @@ Let $S$ be a multiplicatively closed subset of a ring $A$, and let $M$ be a fini
 Now let $m_1,\ldots,m_r$ be a set of generators for $M$ and suppose that $S^{-1}M=0$. Then for each $i$ ($i=1,\ldots,r$), there exists $s_i$ such that $s_im_i=0$. Since every element of $M$ is an $A$-linear combination of the $m_i$, it follows that the product $s_1s_2\cdots s_r$ makes $sM=0$.
 \end{sol}
 
+\begin{exc}
+A multiplicatively closed subset $S$ of a ring $A$ is said to be \emph{saturated} if
+\[
+xy \in S \Leftrightarrow x \in S \text{ and } y \in S.
+\]
+Prove that
+\begin{enumerate}[i)]
+\item $S$ is saturated $\Leftrightarrow$ $A \bs S$ is a union of prime ideals.
+\item If $S$ is any multiplicatively closed subset of $A$, there is a unique smallest saturated multiplicatively closed subset $\overline S$ containing $S$, and $\overline S$ is the complement in $A$ of the union of the prime ideals which do not meet $S$. 
+\end{enumerate}
+If $S = 1 + \ia$, where $\ia$ is an ideal of $A$, find $\overline S$.
+\end{exc}
+
+\begin{sol}
+i) Suppose $S$ is saturated. Then let $C$ be the set of all prime ideals not meeting $S$. Then by Proposition 3.11, the prime ideals of $S^{-1}A$ are precisely those in $C$, and they are all extensions of prime ideals of $A$. Thus let $a \in A \bs S$ and consider $i:A \to S^{-1}A$. Let $\overline a$ be the image of $a$ in $S^{-1}A$. Then $\overline a$ is contained in some prime ideal $\pp \subset S^{-1} A$. Let $\pp'$ be the inverse image of $\pp$ under $i$. Then $a \in \pp'$ and $\pp' \cap S = \emptyset$. Hence every $a \in A \bs S$ is contained in some prime ideal, hence $A \bs S$ is a union of prime ideals. (note: we didn't use that $S$ was saturated)
+
+Now assume $A \bs S$ is a union of prime ideals, say $A \bs S = \bigcup_{i \in I} \pp_i$. Then we have the following chain of equivalences:
+\begin{align*}
+  xy \in S &\Leftrightarrow xy \not \in A \bs S \\
+&\Leftrightarrow \exists \text{ no } i \in I \text{ with } xy \in \pp_i \\
+&\Leftrightarrow \forall i \in I, xy \not \in \pp_i \\
+&\Leftrightarrow \forall i \in I, (x \not \in \pp_i \text{ and } y \not \in \pp_i) \\
+&\Leftrightarrow x \in S \text{ and } y \in S.
+\end{align*}
+
+ii) Clearly $\overline S$ as defined in the exercise contains $S$, and it is clear from the previous paragraph that it is maximal.
+
+Now let $S = 1 + \ia$. 
+\end{sol}
+
 \subsection{Chapter 5 - Integral dependence and valuations}
 
 \begin{exc}[Exercise 1]

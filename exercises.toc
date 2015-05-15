@@ -26,16 +26,16 @@
 \contentsline {subsection}{\numberline {9.2}Chapter 2 - Modules}{30}{subsection.9.2}
 \contentsline {subsection}{\numberline {9.3}Chapter III - Rings and modules of fractions}{32}{subsection.9.3}
 \contentsline {subsection}{\numberline {9.4}Chapter 5 - Integral dependence and valuations}{33}{subsection.9.4}
-\contentsline {subsection}{\numberline {9.5}Chapter 7 - Noetherian rings}{33}{subsection.9.5}
-\contentsline {section}{\numberline {10}The K-book - Charles Weibel}{35}{section.10}
-\contentsline {subsubsection}{\numberline {10.0.1}Chapter 1.1 - Free modules, $GL_n$ and stably free modules}{35}{subsubsection.10.0.1}
+\contentsline {subsection}{\numberline {9.5}Chapter 7 - Noetherian rings}{34}{subsection.9.5}
+\contentsline {section}{\numberline {10}The K-book - Charles Weibel}{36}{section.10}
+\contentsline {subsubsection}{\numberline {10.0.1}Chapter 1.1 - Free modules, $GL_n$ and stably free modules}{36}{subsubsection.10.0.1}
 \contentsline {subsection}{\numberline {10.1}Chapter 1.2 - Projective modules}{37}{subsection.10.1}
-\contentsline {section}{\numberline {11}Representation Theory - Fulton, Harris}{37}{section.11}
-\contentsline {subsection}{\numberline {11.1}Representations of Finite Groups}{37}{subsection.11.1}
+\contentsline {section}{\numberline {11}Representation Theory - Fulton, Harris}{38}{section.11}
+\contentsline {subsection}{\numberline {11.1}Representations of Finite Groups}{38}{subsection.11.1}
 \contentsline {subsection}{\numberline {11.2}Chapter 7 - Lie groups}{41}{subsection.11.2}
 \contentsline {subsection}{\numberline {11.3}Lecture 8 - Lie Algebras and Lie groups}{42}{subsection.11.3}
-\contentsline {section}{\numberline {12}Twenty-Four Hours of Local Cohomology}{42}{section.12}
-\contentsline {subsection}{\numberline {12.1}Lecture 1 - Basic notions}{42}{subsection.12.1}
+\contentsline {section}{\numberline {12}Twenty-Four Hours of Local Cohomology}{43}{section.12}
+\contentsline {subsection}{\numberline {12.1}Lecture 1 - Basic notions}{43}{subsection.12.1}
 \contentsline {section}{\numberline {13}Riemannian geometry - Do Carmo}{43}{section.13}
 \contentsline {subsection}{\numberline {13.1}Chapter 0 - Differentiable manifolds}{43}{subsection.13.1}
 \contentsline {subsection}{\numberline {13.2}Chapter 2 - Affine and Riemannian connections}{44}{subsection.13.2}
