@@ -1,0 +1,53 @@
+\documentclass[11pt, english]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}   % S P R A A K
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{calc}
+%\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+%\usepackage[a5paper,margin=0.5in]{geometry}
+
+
+\begin{document}
+\title{Mangfoldigheter}
+\author{Fredrik Meyer}
+\maketitle 
+
+\section{Mangfoldigheter}
+
+Mangfoldigheter er topologiske rom som er konstruert ved å lime sammen kopier av $\R^n$ på et kontinuerlig vis.
+
+Presist:
+
+\begin{defi}
+Et Hausdorff, parakompakt, topologisk rom $M$ er en \textbf{topologisk mangfoldighet} hvis det for hver $p \in M$ finnes en åpen mengde $U \ni p$ og en homeomorfi $\varphi_{p,U}:U \to \R^n$. 
+\end{defi}
+
+Vi kan utstyre mangfoldigheter med mer struktur. I dette kurset er vi interessert i "differensiable strukturer". Èn måte å introdusere dette på er ved hjelp av et \emph{maksimalt atlas}. 
+
+[kan dette ekvivalent gjøres vha et knippe av funksjoner?]
+
+\begin{defi}[Glatt maksimalt atlas]
+Et \textbf{kart} er en homeomorfi $\varphi:U \to V$ fra en åpen mengde $U \subset \R^n$ til en åpen delmengde $V \subset M$. Et \textbf{atlas} er en mengde kompatible kart, i betydningen at hvis $x:U \to M$ og $y:V \to M$ er to kart, så er $y^{-1} \circ x : U \to V$ glatt. Atlaset skal dekke mangfoldigheten, slik at hvert punkt $p \in M$ er dekket av et kart. 
+
+Et \textbf{maksimalt atlas} er et atlas som ikke kan utvides med flere kompatible kart.
+\end{defi}
+
+Av tekniske grunner definerer vi så en \textbf{differensiabel mangfoldighet} (heretter bare kalt "mangfoldighet") til å være en topologisk mangfoldighet utstyrt med et glatt maksimalt kart. 
+
+\end{document}
