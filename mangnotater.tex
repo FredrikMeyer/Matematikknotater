@@ -35,8 +35,45 @@ Mangfoldigheter er topologiske rom som er konstruert ved å lime sammen kopier a
 Presist:
 
 \begin{defi}
-Et Hausdorff, parakompakt, topologisk rom $M$ er en \textbf{topologisk mangfoldighet} hvis det for hver $p \in M$ finnes en åpen mengde $U \ni p$ og en homeomorfi $\varphi_{p,U}:U \to \R^n$. 
+Et metrisk rom $M$ er en \textbf{topologisk mangfoldighet} hvis det for hver $p \in M$ finnes en åpen mengde $U \ni p$ og en homeomorfi $\varphi_{p,U}:U \to \R^n$. 
 \end{defi}
+
+
+\textbf{Merk:} Her krever vi at $n$ er \emph{ekvidimensjonal}, nemlig at dimensjonen er konstant. Merk også at den åpne mengden alltid kan velges til å være homeomorf med en åpen ball i $\R^n$.
+
+\begin{example}
+Alle $\R^n$ og alle åpne delmengder av $\R^n$.
+\end{example}
+\begin{example}
+Produkter av mangfoldigheter er mangfoldigheter og disjunkte unioner også.
+\end{example}
+
+\begin{example}
+Sfærene $S^n$: La $N=(0,\ldots,0,1)$ og $S=(0,\ldots,0,-1)$, "nord- og sørpolen". Vi definerer \emph{stereografisk projeksjon} fra $N$ (og $S$) fra $S^n \bs N \to \R^n$. Om $(a^1,\ldots,a^{n+1}) \in S^n \subset R^{n+1}$, sendes denne til
+$$
+\left( \frac{a^1}{1-a^{n+1}}, \ldots, \frac{a^n}{1-a^{n+1}} \right).
+$$
+Dette gir en homeomorfi med $\R^n$ med invers
+$$
+(a^1, \ldots, a^n) \mapsto \left( \frac{2a^1}{1+\lvert a \rvert}, \ldots, \frac{2 a^n}{1+\lvert a \rvert}, \frac{\lvert a \rvert - 1}{1+\lvert a \rvert}\right).
+$$
+DEtte gir oss en differensiabel struktur på alle sfærene $S^n$. Vi kan spørre oss om det finnes en unik differensiabel struktur på $S^n$. Dette er sant for $n \leq 6$, men Milnor viste at det er 28 differensiable strukturer på $S^7$, de såkalte "eksotiske sfærene".
+\end{example}
+\begin{example}[Projektive rom]
+
+La $\PP^n$ være mengden av linjer gjennom origo i $\R^{n+1}$. Merk at hver linje kan gis ved et $n+1$-tuppel, men dette tuplet er bare unikt opp til multiplikasjon fra $\R \bs \{ 0\}$. Vi kan definere et atlas for $\PP^n$ på følgende hvis ($\PP^n$ arver automatisk også topologien på dette viset). La $U_i$ være mengden av linjer hvor den $i$'te koordinaten er ulik null. Da definerer vi en homeomorfi til $\R^n$ ved 
+$$
+\varphi_j: [a_1,\ldots, a^{n+1}] \mapsto \left(a_1/a^i, \ldots, a^{i-1}/a^i, a^{i+1}/a^i,\ldots, a^{n+1}\right) \in \R^n
+$$
+Inversen er gitt ved $(a^1,\ldots, a^n) \mapsto [a^1, \ldots, 1, \ldots, a^n]$. Her er koordinatene i brackets en vektor som spenner linjen. Merk at avbildningen er veldefinert. 
+
+Anta nå $i \neq j$. Vi ser på den induserte avbildningen $\R^n \to \R^n$ gitt ved $\varphi_j \circ \varphi_i^{-1}$:
+$$
+(a^1,\ldots, a^n) \mapsto \left( \frac{a^1}{a^j}, \ldots, \frac{1}{a^j}, \ldots, \frac{a^n}{a^j} \right).
+$$
+Her er $1/a^j$  posisjon $i$.
+\end{example}
+
 
 Vi kan utstyre mangfoldigheter med mer struktur. I dette kurset er vi interessert i "differensiable strukturer". Èn måte å introdusere dette på er ved hjelp av et \emph{maksimalt atlas}. 
 
@@ -49,5 +86,179 @@ Et \textbf{maksimalt atlas} er et atlas som ikke kan utvides med flere kompatibl
 \end{defi}
 
 Av tekniske grunner definerer vi så en \textbf{differensiabel mangfoldighet} (heretter bare kalt "mangfoldighet") til å være en topologisk mangfoldighet utstyrt med et glatt maksimalt kart. 
+
+\subsection{Differensiabilitet og konsekvenser}
+
+En avbildning $f:M^n \to N^m$ mellom mangfoldigheter er differensiabel om den lokalt er differensiabel. Dette gir mening å si, siden vi vet hva differensiabilitet er for avbildninger $\R^n \to \R^m$. 
+
+Noe av det spesielle med differensialgeometri er eksistensen av glatte funksjoner med fine egenskaper (bytt ut "differensiabel" med det sterkere kravet "holomorf" for eksempel, og du er på langt dypere vann). 
+
+\begin{enumerate}
+\item Definer $h:\R \to \R$ ved 
+\[
+h(x) = \begin{cases} e^{-1/x^2} & x \neq 0 \\
+0 & x=0.
+\end{cases}
+\]
+Da er $h$ glatt og $h^{(n)}(0)=0$ for alle $n$.
+\item Funksjonen $j:\R \to \R$ definert ved
+$$
+j(x) = \begin{cases} e^{-(x-1)^{-2}}e^{-(x+1)^{-2}} & x \in (-1,1) \\
+0 & x \not \in (-1,1)
+\end{cases}
+$$
+er glatt og strengt positiv innenfor $(-1,1)$. Ved skalering og translasjon kan vi få en funksjon $k:\R \to \R$ som er positiv på $(0,\delta)$ og null utenfor.
+\item Definer 
+$$
+l(x) = \left( \int_0^x k(x) dx \right) / \left( \int_0^\delta k(x) dx \right). 
+$$
+Den er $0$ for $x \leq 0$, stigende på $(0,\delta)$, og $1$ for $x \geq \delta$.
+\item Funksjonen $g:\R^n \to \R$ definert ved
+$$
+g(x) = \prod_{i=1}^n j(x^i/\epsilon)
+$$
+er positiv på $(-\epsilon, \epsilon)^n$ og null ellers.
+\end{enumerate}
+
+Dette er det vi trenger for å bevise eksistensen av såkalte "bump"-funksjoner:
+
+\begin{prop}
+La $K \subset U \subset M$ være en kompakt mengde. Da finnes det en funksjon $g:M \to [0,1]$ som er $1$ på $K$ og $0$ utenfor $U$. 
+\end{prop}
+\begin{proof}
+For hver $p \in U$ kan vi finne et koordinatsystem $x:V \to \R^n$ med $x(U) \supset (-\epsilon,\epsilon)^n$. Funksjonen $x \circ g$ er glatt på $V$. La $\overline{g}$ betegne samme funksjonen definert på $M$, men $0$ utenfor $V$. Denne er klart kontinuerlig og glatt. 
+
+Dette kan gjøres for hver $p \in U$. Siden $K$ er kompakt, vil endelig mange $V$ dekke $K$. Kall disse $V_1,\ldots,V_p$ med tilhørende funksjoner $g_1,\ldots,g_p$ som over. 
+
+Funksjonen $g_1+\ldots + g_p$ er positiv på $K$, si større enn $\delta$. La $l$ være definert som i punkt 3 over. Da vil $l \circ(g_1 + \ldots + g_p)$ være $1$ på $K$ og $0$ utenfor $U$. 
+\end{proof}
+
+\subsection{Derivarberhet og sånn}
+
+Vi skal skille mellom når vi deriverer \emph{i et koordinatsystem} og når vi deriverer på mangfoldigheten. For å gjøre dette må koordinatsystemet være bakt inn i notasjonen. 
+
+La $f:\R^n \to \R$ være en funksjon (la oss heretter anta alle funksjoner er glatte, med mindre vi mot formodning skulle finne på å snakke om monstre). Vi definerer
+$$
+D_if(a) \stackrel{\Delta}{=} \lim_{h \to 0} \frac 1h \left( f(a^1, \ldots, a^i +h, \ldots, a^n)-f(a) \right).
+$$
+
+Om $g:\R^m \to \R^n$ og $f: \R^n \to \R$, så sier kjerneregelen at
+\[
+D_j(f \circ g)(a) = D_i(f(g(a))) D_jg^i(a).
+\]
+(vi prøver oss på Einstein-notasjonen)
+
+Anta nå at $f:M \to \R$ er en funksjon og at $(x,U)$ er et koordinatsystem på $M$. Da definerer vi
+\[
+\dd{f}{x^i} (p) \stackrel{\Delta}{=} \restr{\dd{f}{x^i}}{p} \stackrel{\Delta}{=} D_i(f \circ x^{-1})(x(p)).
+\]
+Notasjonen referer altså til koordinatsystemet $(x,U)$, og måler "veksthastigheten" til funksjonen $f$ langs den i'te koordinataksen.
+
+Ved å fjerne punktet $p$ fra notasjonen kan vi betrakte ligningene som ligninger mellom funksjoner. 
+
+Den deriverte av en funksjon i et koordinatsystem er relatert til den deriverte i et annet koordinatsystem:
+\begin{prop}
+Om $(x,U)$ og $(y,V)$ er koordinatsystemer og $f: M \to \R$ er deriverbar, så gjelder på $U \cap V$ at
+$$
+\dd{f}{y^i} = \dd{x^j}{y^i} \dd{f}{x^j}.
+$$
+\end{prop}
+\begin{proof}
+\begin{align*}
+\dd{f}{y^i}(p) &= D_i(f \circ y^{-1})(y(p)) \\
+&= D_i([f \circ x^{-1}] \circ[ x \circ y^{-1}] )(y(p)) \\
+&= D_i(f' \circ g')(y(p)) \\
+&= D_j(f'(g'(y(p)))) D_i g^{'j}(y(p)) \\
+&= D_j(f \circ x^{-1}(p)) D_i [x \circ y^{-1}]^j (y(p)) \\
+&= \dd{f}{x^j}(p)  \dd{x^j}{y^i}(p).
+\end{align*}
+Legg merke til bruken av kjerneregelen.
+\end{proof}
+
+\begin{remark}
+Det er lett å sjekke at operatoren $\restr{\dd{}{x^i}}{p}$ som sender funksjonskimer til $\R$ er en derivasjon. Formelt, la $\OO_p$ betegne ekvivalensklasser av funksjoner definert nær $p$. Da er $\ell=\restr{\dd{}{x^i}}{p}$ en lineær funksjon $\OO_p \to \R$ som tilfredstiller Leibniz-regelen: $\ell(fg) = f(p)\ell(g) + g(p) \ell(f)$.
+\end{remark}
+
+\subsection{Glatte avbildninger}
+
+Avbildninger har egenskaper. La $f:M^n \to N^m$ være en avbildning mellom glatte mangfoldigheter og la $p \in M$. La $(x,U)$ være en kartomegn om $p$ og la $(y,V)$ være en kartomegn om $f(p)$. Da kan vi betrakte avbildningen $y \circ f \circ x^{-1}$, som er en avbildning $\R^n \to \R^m$. Matrisen
+$$
+J = \left( \restr{\dd{y^i \circ f}{x^j}}{p} \right)
+$$
+er Jacobi-matrisen til $f$ i punktet $p$. Da kan $J$ enten ha rang lik $m$ eller mindre enn $m$. Om rangen er mindre enn $m$, kaller vi $p$ et "\textbf{kritisk punkt}" for $f$, og om rangen er lik $m$ kaller vi $p$ for et "\textbf{regulært punkt}" for $f$. 
+
+Om $p$ er kritisk, kaller vi $f(p)$ for en "\textbf{kritisk verdi}", og hvis ikke, kaller vi $f(p)$ for en "\textbf{regulær verdi}". 
+
+Det er et faktum at bildet av de kritiske verdiene til $f$ alltid er "lite":
+
+\begin{prop}
+Om $f:M \to N$ er en glatt avbildning av mangfoldigheter. Da er mengden av kritiske verdier for $f$ en mengde av mål null i $N$.
+\end{prop}
+
+Dette er Sards "sterke" teorem slik det er beskrevet i Spivak. 
+
+Om vi vet rangen til en avbildning i et punkt $p$, kan vi beskrive avbildningen lokalt.
+
+\begin{prop}
+\begin{enumerate}
+\item Om $f: M^n \to N^m$ har rang $k$ i $p$, så finnes det koordinatsystemer $(x,U)$ rundt $p$ og $(y,V)$ rundt $f(p)$ slik at 
+$$
+y \circ f \circ x^{-1}(a^1,\ldots, a^n) = (a^1, \ldots, a^k, \psi^{k+1}(a), \ldots, \psi^m(a)).
+$$
+\item Om $f$ har rang $k$ i \emph{et område} rundt $p$ kan koordinatsystemene velges slik at
+$$
+y \circ f \circ x^{-1}(a^1,\ldots, a^n) = (a^1, \ldots, a^k, 0,\ldots,0).
+$$
+\end{enumerate}
+\end{prop}
+\begin{proof}
+1. Dette er litt grisete å skrive opp, så jeg skisserer ideen. La $(u,U)$ være et koordinatsystem rundt $p$ og la $(y,V)$ være et system rundt $f(p)$. Siden $f$ har rang $k$ i $p$, finnes det en $k \times k$-undermatrise med determinant ulik null i $J$. Vi kan permutere søyler og rader slik at denne undermatrisen er øverst til venstre i $J$. Dette betyr at de $k$ første koordinatene til $f$ (uttrykt i $(y,V)$) kan brukes som koordinater.
+
+Eksplisitt, definer et nytt koordinatsystem $(x,U)$ ved $x^\alpha(a) = y^\alpha(f(a))$ for $\alpha \leq k$ og $x^r(a) = u^r(a)$ for $r > k$. Da er det lett å se at $x$ definerer et koordinatsystem (følger fra Invers Funksjonsteoremet). La $q= x^{-1}(a^1, \ldots,a^n)$. Da er per definisjon $x^i(q) = a^i$. Da er $y^\alpha \circ f(q) = a^\alpha$ for $\alpha \leq k$ og $u^r(q)=a^r$ for $r > k$, per definisjon. Men da har vi at 
+$$
+y f x^{-1}(a^1,\ldots, a^n) = y \circ f(q) = (a^1,\ldots, a^k, ......).
+$$
+Som er det vi skulle vise.
+
+2. Denne er teknisk mer infløkt. 
+\end{proof}
+
+\begin{prop}
+\begin{enumerate}
+\item Om $m \leq n$ og $f:M^n \to N^m$ har rang $m$ i $p$, og $(y,V)$ er et vilkårlig koordinatsystem rundt $f(p)$, så finnes et koordinatsystem $(x,U)$ rundt $p$ med
+$$
+y \circ f \circ x^{-1}(a^1, \ldots, a^n) = (a^1, \ldots, a^m).
+$$
+Med andre ord, om $f$ har maksimal rang, ser $f$ lokalt ut som en projeksjon.
+\item Om $n \leq m$, og $(x,U)$ er et vilkårlig koordinatsystem rundt $p$, kan vi finne koordinatsystem rundt $(y,V)$ rundt $f(p)$ slik at
+$$
+y \circ f \circ x^{-1}(a^1,\ldots, a^n ) = (a^1, \ldots, a^n, 0,\ldots,0).
+$$
+Med andre ord, om $f$ har maksimal rang, så er $f$ lokalt en injeksjon.
+\end{enumerate}
+\end{prop}
+
+Det er flere måter en mangfoldighet kan inkluderes i en annen mangfoldighet. 
+
+Vi sier at en avbildning $f:M^n \to N^m $ er en \textbf{immersjon} om $n \leq m$ og $f$ har maksimal rang (lik $n$) overalt.
+
+Immersjon er likevel ikke alltid nok - bildet trenger ikke nødvendigvis være en mangfoldighet. Ta for eksempel $8$. Dette kan realiseres som et bilde av en avbildning $S^1 \to \R^2$, men $8$-tallet er ikke homeomorf med en sirkel. 
+
+En immersjon er alltid lokalt injektiv, men det er ikke nok å kreve injektivitet for å få "pene" undermangfoldigheter. Eksemplet $\R \to S^1 \times S^1$ med irrasjonal stigning gir en injektiv immersjon av den reelle linja inn i torusen. Vi kaller disse for en "\textbf{immersed submanfold}" (norsk ord?) 
+
+
+
+\subsection{Viktigste ting i dette kapitlet}
+
+\begin{enumerate}
+\item Definisjon av mangfoldighet.
+\item Prop 1.8.
+\item Kritiske og regulære verdier.
+\item Struktur til avbildninger med gitt rang. 
+\item Embedding.
+\item Partisjon av enheten.
+\end{enumerate}
+
+
 
 \end{document}
