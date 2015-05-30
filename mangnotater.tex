@@ -246,7 +246,16 @@ Immersjon er likevel ikke alltid nok - bildet trenger ikke nødvendigvis være e
 
 En immersjon er alltid lokalt injektiv, men det er ikke nok å kreve injektivitet for å få "pene" undermangfoldigheter. Eksemplet $\R \to S^1 \times S^1$ med irrasjonal stigning gir en injektiv immersjon av den reelle linja inn i torusen. Vi kaller disse for en "\textbf{immersed submanfold}" (norsk ord?) 
 
+\subsection{Eksistens av partisjon av enheten}
 
+Her tror jeg vi kun beskriver.
+
+La $\OO$ være en åpen overdekning av $M$. Da eksisterer det en samling av glatte funksjoner $\phi_i:M \to [0,1]$ slik at
+\begin{enumerate}
+\item Familien $\{ p \mid \phi_i(p) \neq 0 \}$ er lokalt endelig. (lokalt endelig støtte)
+\item $\sum_i \phi_i(p) = 1$ for alle $p \in M$.
+\item For hver $i$ finnes $U \in \OO$ med $\supp \phi_i \subset U$.
+\end{enumerate}
 
 \subsection{Viktigste ting i dette kapitlet}
 
@@ -259,6 +268,270 @@ En immersjon er alltid lokalt injektiv, men det er ikke nok å kreve injektivite
 \item Partisjon av enheten.
 \end{enumerate}
 
+
+\section{Tangentbunten}
+
+\subsection{Viktige ting i dette kapitlet}
+
+\begin{itemize}
+\item Definisjon av tangentbunten.
+\item Definisjon av vektorbunter.
+\item Basis for $T_pM$.
+\item $\mathscr F$-struktur på $\Gamma(TM)$.
+\item Orientering.
+\end{itemize}
+
+%%%%%%%%%%%%
+\section{Tensorer}
+
+\subsection{Viktige ting}
+
+\begin{itemize}
+\item Kotangentbunten og basis for denne.
+\item Pullback.
+\item 1-1 korrespondanse Theorem 2.
+\item 
+\end{itemize}
+
+\section{Vektorfelt og differensiallikninger}
+
+\begin{itemize}
+\item Lokal eksistens av integralkurver.
+\item Lie-derivert av $X$ og $\omega$.
+\item Bracket.
+\end{itemize}
+
+
+\section{Differensialformer}
+
+\subsection{de Rham-kohomologi}
+
+%%%
+%% -def
+% -homotopiinvarians
+%%%
+
+La $M$ og $N$ være mangfoldigheter og la $I=[0,1]$ betegne enhetsintervallet. Vi har lyst på et begrep som beskriver hvordan en avbildning kan ``kontinuerlig forandres''. Helt presist:
+\begin{defi}
+La $f:M \to N$ og $g:M \to N$ være to avbildninger. Da er en \textbf{homotopi} mellom dem en avbildning
+$$
+F:M \times I \to N
+$$
+slik at $f_0 = f$ og $f_1=g$, hvor $f_t(p) \stackrel{\Delta}{=} F(p,t)$.
+\end{defi}
+
+Nå kan vi formulare nok et begrep. Vi sier at en mangfoldighet $M$ er \textbf{kontraktibel} om identitetsavbildningen og den konstante avbildningen $p \mapsto p_0$ (for en $p_0 \in M$) er homotope. 
+
+
+\subsection{Poincaré-lemma}
+
+Vi sier at en åpen mengde $U \subset \R^n$ er \textbf{stjerneformet} om det finnes et punkt $p \in U$ slik at for alle andre punkter $q \in U$ er linjestykekt mellom $p$ og $q$ inneholdt i $U$.\footnote{Merk at dette er svakere enn \emph{konveks}, siden i definisjonen av konveks er både $p$ og $q$ frie variable.}
+
+\begin{lemma}
+ En stjerneformet mengde $U$ er kontraktibel.
+\end{lemma}
+\begin{proof}
+Velg $p \in U$ som stjernens ``sentrum''. Da kan vi definere en homotopi ved
+$$
+(q,t) \mapsto q(1-t) + tp
+$$
+for $q \in M$ og $t \in [0,1]$.
+\end{proof}
+
+Poincaré-lemmaet er et lemma som egentlig burde vært et teorem om en tar konsekvensene i betrakning. Det er enkelt å formulere:
+
+\begin{thm}[Poincare-lemma]
+ Om $U \subset \R^n$ er en kontraktibel åpen mengde, er $H^k_{dR}(U)=0$ for $k \geq 0$.
+\end{thm}
+
+Størstedelen av beviset vil gå med på å analyse avbildningen $i_\alpha:M \to M \times [0,1]$ gitt ved $p \mapsto (p,\alpha)$. 
+
+Merk først at om det er en naturlig funksjon $t$ på $M \times [0,1]$, nemlig projeksjonen $\pi_2$. Om $(x,U)$ er et lokalt koordinatsystem på $M$, er
+$$
+( x^1 \circ \pi_1, \ldots, x^n \circ \pi_1, t)
+$$
+et koordinatsystem på $M \times [0,1]$. Vi forkorter $x^i \circ \pi_1$ med $\overline x ^i$. Da kan vi regne ut at
+\[
+i_\alpha^\ast \left( \sum_{i=1}^n \omega_i d \overline x^i + f dt \right) = \sum_{i=1}^n \omega_i(-,\alpha) dx^i.
+\]
+En generell $1$-form på $M \times [0,1]$ ser ut som
+\[
+\omega(p,t) = \sum_{i=1}^n \omega_i(p,t) d \overline x ^i + f(p,t) dt.
+\]
+Da er $d \omega$ gitt som 
+\begin{align*}
+dw &= \sum_{i=1}^n \left[ \sum_{j=1}^n   \dd{\omega_i}{\overline x^j} d \overline x^j \wedge d \overline x ^i + \dd{\omega_i}{t} dt \wedge d \overline x^i \right] + \sum_{i=1}^n  \dd{f}{\overline x^k} d \overline x^k \wedge dt \\
+&= \text{(ingen dt)}+ \sum_{i=1}^n \left( -\dd{\omega_i}{t}  d \overline x^i \wedge dt  + \dd{f}{\overline x^i} d \overline x^i \wedge dt \right).
+\end{align*}
+
+Om vi krever at $d \omega = 0$, ser vi at 
+\[
+\dd{\omega_i}{t} = \dd{f}{\overline x^i}
+\]
+for alle $i$. Dermed
+\[
+\omega_i(p,1)-\omega_i(p,0) = \int_0^1 \dd{\omega_i}{t} dt = \int_0^1 \dd{f}{\overline x^i } dt.
+\]
+
+Dermed er
+\[
+\sum_{i=1}^n \left( \omega_i(p,1) - \omega_i(p,0) \right) = \sum_{i=1}^n\left( \int_0^1 \dd{f}{\overline x ^i } (p,t) dt\right) dx^i.
+\]
+
+Om vi definerer
+\[
+g(p) = \int_0^1 f(p,t) dt,
+\]
+sier dette at
+\[
+i_1^\ast \omega - i_0^\ast \omega = dg,
+\]
+siden $\dd{g}{x^i}(p) = \int_0^1 \dd{f}{\overline x^i} (p,t) dt$. Om vi kaller $g$ for $I\omega$ (det er klart at $g$ er en funksjon av $\omega$), ser formelen slik ut:
+\[
+i_1^\ast \omega - i_0 ^\ast \omega = d(I\omega). 
+\]
+
+Omtrent samme bevis, bare med mer notasjon fungerer mer generelt. Legg først merke til at $\Omega^k(M \times [0,1])$ splitter som en direkte sum. Enhver $\omega \in \Omega^k(M \times [0,1])$ kan deles opp i $\omega_1 \in \ker \pi_1$ og $\omega_2 \in \ker \pi_2$. Bruker man den kanoniske koordinaten $t$ på $M \times [0,1]$, ser vi at $\omega_1$ kan skrives som $dt \wedge \eta$ for en $\eta \in \Omega^{k-1}(M \times [0,1])$. Med andre ord kan enhver $\omega$ skrives som
+\[
+\omega = \omega_2 + dt \wedge \eta.
+\]
+Vi definerer dermed
+\[
+I(\omega)(p) \stackrel{\Delta}{=} \int_0^1 \eta(p,t) dt
+\]
+For å være heeelt presis, for formelen over gir ikke uten godvilje mening, betyr dette:
+\[
+I(\omega)(p)(v_1,\ldots,v_{k-1}) = \int_0^1 \eta(p,t)(i_{t\ast}v_1,\ldots, i_{t\ast}v_{k-1}) dt.
+\]
+
+I utregningene over ville dette altså vært $g$ (mens $f=\eta$).
+
+Vi har:
+
+\begin{prop}
+  For hver $k$-form $\omega \in \Omega^k(M \times [0,1])$ har vi at
+\[
+i_1^\ast  \omega - i_0^\ast \omega = d(I\omega) + I(d\omega).
+\]
+I homologisk algebra-språk sier dette at formene $i_1^\ast \omega$ og $i_0^\ast \omega$ er kjedehomotope. De har altså samme verdi på homologi.
+\end{prop}
+
+\begin{proof}
+ La oss jobbe i et koordinatsystem.
+
+Siden $I$ er lineær har vi to tilfeller å sjekke.
+\begin{enumerate}
+\item Anta $\omega = f dx^I$, altså at det ikke er noen $dt$ inolvert. Da er $I\omega = 0$. Så høyresiden er bare
+\begin{align*}
+I(d \omega)(p) &= I\left(\sum_{i=1}^n \dd{f}{d \overline x^i} dx^i \wedge dx^I + \dd{f}{t} dt \wedge dx^I \right)(p) \\
+&= \left(\int_0^1 \dd{f}{t} dt  \right) dx^I(p) \\
+&= (f(p,1)-f(p,0)) dx^I(p) \\
+&= i_1^\ast \omega(p) - i_0^\ast \omega(p).
+\end{align*}
+Som var det vi skulle vise.
+\item Anta $\omega = f dt \wedge dx^I$. Da er $i_1^\ast \omega=i_0^\ast \omega = 0$ siden $i_1^\ast dt = i_0^\ast dt = 0$. Vi har at
+  \begin{align*}
+d(I\omega) &= d((\int_0^1 f dt) \wedge dx^I) \\
+&= \sum_{i=1}^n \dd{}{x^i} \left( \int_0^1 f   dt\right) dx^i \wedge dx^I.
+  \end{align*}
+Men også
+\begin{align*}
+I(d \omega) &= I(\sum_{i=1}^n \dd{f}{x^i} dx^i \wedge dt \wedge dx^I) \\
+&= - I(\sum_{i=1}^n \dd{f}{x^i} dt \wedge  dx^i \wedge dx^I) \\
+&= -\sum_{i=1}^n \left( \int_0^1 \dd{f}{x^i} dt\right) dx^i \wedge dx^I .
+\end{align*}
+Og vi ser at $I(d\omega) + d(I\omega) =0$.
+\end{enumerate}
+\end{proof}
+
+
+
+\subsection{Viktige punkter i dette kapitlet}
+\begin{itemize}
+\item Overgangsformler.
+\item Kriterie for orienterbarhet.
+\item $d$
+\item Poincare-lemma
+\end{itemize}
+
+
+\section{Integrasjon}
+
+\begin{itemize}
+\item Definisjon.
+\item $\partial$
+\item Stoke
+\item de Rham-kohomologi
+\end{itemize}
+
+\section{Alg-top}
+
+
+%%%%%%%%%%%%%%%%%%%
+
+\section{Obligen}
+
+\begin{exc}
+Let $G$ be a Lie group and let $\g$ be its Lie algebra at the identity.
+
+A smooth vector field $X$ on $G$ is called \emph{left-invariant} if $(d_hl_g)(X_h)=X_{gh}$ for all $g,h \in G$. Here $l_g$ is left-multiplication by $g$. A left-invariant vector field is completely determined by its value at $e \in G$. We denote the corresponding vector field by $X^v_g := (d_el_g)(v)$. Every element $v \in T_e G=\g$ arises this way. 
+
+The commutator of two left-invariant vector fields is again left-invariant (a short computation), and hence we get a Lie bracket on $\g$ given by $[v,w] := [X^v, X^w]_e$. 
+
+\begin{enumerate}
+\item For $v \in \g$, let $\gamma_v$ be the maximal integral curve of $X^v$ such that $\gamma_v(0)=e$. Show that for every $g \in G$ the curve $\gamma(t)=g \gamma_v(t)$ is an integral curve of $X^v$ such that $\gamma(0)=g$. Conclude that $\gamma_v(t)$ is defined for all $t \in \R$ and the flow $(\phi_t^v)_t$ defined by $X^v$ is given by $\phi_t^v(g)=g\gamma_v(t)$. 
+
+\item Choose a coordinate chart $x:U \to \R^n$ on $G$ containing $e \in G$ such that $x(e)=0$. Let $f:V \times V \to \R^n$, where $V$ is a small neighbourhood of $0 \in \R^n$, and $f$ be the map describing the group law of $G$ in these coordinates, so $f(a,b)=x(x^{-1}(a)x^{-1}(b))$. Consider the Taylor expansion of $f$ at $0 \in \R^{2n}$. Vis at Taylor-rekka har formen
+$$
+f(a,b) = a+b+B(a,b)+h.o.t.
+$$
+where $B:\R^n \times \R^n \to \R^n$ is a bilinear map.
+
+\item Show that in the chosen local coordinates the Lie bracket on $\g$ is given by
+\[
+[v,w] = B(v,w) - B(w,v).
+\]
+\item Take $G=\GL_n(\R)$. Identify $\g$ with $\mathrm{Mat}_n(\R)$. Show that $[A,B] = AB-BA$.
+\end{enumerate}
+\end{exc}
+
+\begin{sol}
+  \begin{enumerate}
+  \item It is clear that $\gamma(0)=g$. We need to see that $\gamma'(t)=X_{\gamma(t)}^v$. The key observation is that $\gamma = l_g \circ \gamma_v$, so that
+\begin{align*}
+(d\gamma)_t(1) &= d(l_g \circ \gamma_v)_t(1) \\
+&= (d l_g)_{\gamma_v(t)} \circ (d \gamma_v)_t(1) \\
+&= (d l_g)_{\gamma_v(t)}(X^v_{\gamma_v(t)}) \\
+&\stackrel{!}{=} X^v_{g \gamma_v(t)} \\
+&= X_{\gamma(t)},
+\end{align*}
+hvor vi i den merkede likheten har brukt at $X$ er venstreinvariant.
+
+ \item Husk at Taylor-utviklingen er gitt ved å summere alle mulige ledd $\dd{f}{x^{a}} x^{a}$, hvor $a$ er med i $\N^n$. 
+
+Førsteleddet er verdien i origo, som er null. At neste ledd er $a+b$ er ekvivalent med at $\restr{\dd{f}{a^i}}{0} = \restr{\dd{f}{b^i}}{0}= 1$. 
+
+Vi kan regne ut $\dd{f}{a^i}(0)$ fra definisjonen:
+\begin{align*}
+\dd{f}{a^i}(0) &\stackrel{\Delta}{=} \lim_{h \to 0} \frac 1h \left( x(x^{-1}(he^i)x^{-1}(0))-x(x^{-1}(0)x^{-1}(0)) \right) \\
+&=  \lim_{h \to 0} \frac 1h  (he^i-0) = e^i
+\end{align*}
+siden $x(x^{-1}(0)x^{-1}(0))=x(ee)=x(e)=0$.
+
+Grad 2-leddene kan skrives på formen
+\[
+\sum \frac{\partial^2 f}{\partial a^i \partial a^j}(0) a^i a^j + 
+\sum \frac{\partial^2 f}{\partial a^i \partial b^j}(0) a^i b^j +
+\sum \frac{\partial^2 f}{\partial a^i \partial a^j}(0) b^i b^j.
+\]
+For at dette skal være bilineært i $\vec a$ og $\vec b$, må første og siste-leddet være null. Så vi må vise at 
+$$
+\restr{\frac{\partial^2 f}{\partial a^i \partial a^j}}{0}= 0.
+$$
+HER ER JEG LITT STØKK. 
+\item 
+  \end{enumerate}
+\end{sol}
 
 
 \end{document}
