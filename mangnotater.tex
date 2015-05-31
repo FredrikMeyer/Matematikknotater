@@ -444,6 +444,48 @@ Og vi ser at $I(d\omega) + d(I\omega) =0$.
 \end{enumerate}
 \end{proof}
 
+\begin{thm}[Poincare-lemma]
+Om $M$ er kontraktibel til $p_0 \in M$, så er hver lukket form $\omega$ eksakt, ekvivalent $H^k_{dR}(M)=0$ for $k > 0$. 
+\end{thm}
+\begin{proof}
+Se på $H \circ i_0$ og $H \circ i_1$. Den førstnevnte avbildningen er identitetsavbildningen og den andre konstantavbildningen $p \mapsto p_0$.
+
+La $\omega$ være slik at $d \omega = 0$. Da er $H^\ast \omega$ en $k$-form på $M \times [0,1]$, så vi kan bruke vårt forrige resultat:
+$$
+i_1^\ast (H^\ast \omega) - i_0^\ast (H^\ast \omega) = d(I(H^\ast \omega))+I(d H^\ast \omega) = d(I H^\ast \omega).
+$$
+Men vi har jo at $i_1^\ast H^\ast \omega = (H \circ_1)^\ast \omega = \omega$ og $i_0^\ast H^\ast \omega = (H \circ i_0)^\ast \omega = 0$. Dermed sier formelen over at
+$$
+\omega = d(I H^\ast \omega).
+$$
+Så $\omega$ er eksakt.
+\end{proof}
+
+Faktisk vil samme bevis gi den mye mer generelle påstanden:
+\begin{thm}
+Anta at $H:M \times [0,1] \to N$ er en homotopi mellom $f:M \to N$ og $g:M \to N$. Da induserer $f$ og $g$ samme avbildning på $H^k(N) \to H^k (M)$. 
+\end{thm}
+\begin{proof}
+På samme vis  som over er $H \circ i_0=f$ og $H \circ i_1 = g$. La $\omega$ representere en kohomologiklasse, dvs, $d \omega=0$. Vi får samme formel som over:
+$$
+i_1^\ast (H^\ast \omega) - i_0^\ast (H^\ast \omega) = d(I(H^\ast \omega))+I(d H^\ast \omega) = d(I H^\ast \omega).
+$$
+Og dermed også:
+$$
+g\ast \omega - f^\ast \omega = d(IH^\ast \omega).
+$$
+Dette betyr at $f^\ast \omega  \equiv g^\ast \omega$ som elementer i $H^k(M)$. 
+\end{proof}
+
+\begin{remark}
+Husk at $M$ og $N$ er \textbf{homotopiekvivalente} om det finnes avbildninger $f:M \to N$ og $g:N \to M$ slik at $f \circ g$ og $g \circ f$ begge er homotope med identitetsavbildningen. Da følger det umiddelbart fra teoremet over at $H^k(M) \simeq H^k(N)$ for alle $k$. 
+\end{remark}
+\begin{example}
+Se på $S^1 \subset \R^2 \bs \{ 0\}$. La $i:S^1 \to \R^2$ være inklusjonsavbildningen. La $g:\R^2 \bs \{ 0 \} \to S^1$ være definert ved $\vec x \mapsto \frac{\vec x}{\lvert \vec x \rvert}$. Da er $g \circ i = \id_{S^1}$ og $g \circ i = g$. Men $g$ er selv homotop med identitetsavbildningen (via skalering), så $H^i(S^1)= H^i(\R^2 \bs \{ 0 \})$. 
+\end{example}
+
+
+
 
 
 \subsection{Viktige punkter i dette kapitlet}
@@ -457,9 +499,115 @@ Og vi ser at $I(d\omega) + d(I\omega) =0$.
 
 \section{Integrasjon}
 
+Vi har lyst å integrere på mangfoldigheter. Siden mangfoldigheter er abstrakte objekter, gir det ikke mening å integrere direkte i kartene. Vi må ha et invariant objekt å integrere, og dette er akkurat differensialformene.
+
+Vi begynner med definisjoner.
+
+\begin{defi}
+En glatt funksjon $c:[0,1]^k \to M$ kalles en \textbf{singulær k-kube}. Vi kaller inklusjonene $I^k:[0,1]^k \to \R^k$ for \textbf{standard k-kuben}. 
+\end{defi}
+
+Om $\omega$ er en $k$-form på $[0,1]^k$  og $x^i$ er standard-koordinatene, så kan $\omega$ skrives unikt som
+$$
+\omega = f dx^1 \wedge \ldots dx^k.
+$$
+Vi definerer
+$$
+\int_{[0,1]^k} \omega \stackrel{\Delta}{=} \int_{[0,1]^k} f dx^1 \ldots dx^k.
+$$
+Videre, om $\omega$ er en $k$-form på $M$, og $c$ er en singulær $k$-kube på $M$, så definerer vi
+$$
+\int_c \omega \stackrel{\Delta}{=} \int_{[0,1]^k} c^\ast \omega .
+$$
+
+Vi starter med to enkle proposisjoner:
+\begin{prop}
+La $c:[0,1]^n \to \R^n$ være en 1-1 singulær n-kube med $\det c' \geq 0$ på $[0,1]^n$. La $\omega$ være $n$-formen
+$$
+\omega = f dx^1\wedge \ldots dx^n.
+$$
+Da er 
+$$
+\int_c \omega = \int_{c([0,1]^n)} f dx^1 \ldots dx^n.
+$$
+\end{prop}
+
+\begin{proof}
+\begin{align*}
+\int_c \omega &= \int_{[0,1]^n} c^\ast \omega \\
+&= \int_{[0,1]^n} (f \circ c)(\det c') dx^1 \wedge \ldots \wedge dx^n \\
+&= \int_{[0,1]^n} (f \circ c)|\det c' | dx^1 \wedge \ldots \wedge dx^n \\
+&= \int_{[0,1]^n} (f \circ c) |\det c'| dx^1 \ldots dx^n \\
+&= \int_{c([0,1]^n)} f dx^1 \ldots dx^n.
+\end{align*}
+I siste linja brukte vi variabelskifte-formelen fra kalkulus. 
+\end{proof}
+
+\begin{prop}
+La $p:[0,1]^k \to [0,1]^k $ være en en-en på avbildning (bijeksjon) med $\det p \geq 0$. Da er
+$$
+\int_c \omega = \int_{c \circ p} \omega.
+$$
+\end{prop}
+\begin{proof}
+\begin{align*}
+\int_{c \circ p} \omega &\stackrel{def}{=} \int_{[0,1]^k} (c \circ p)^\ast \omega = \int_{[0,1]^k} p^\ast(c^\ast \omega) \\
+&= \int_p c^\ast \omega \\
+&= \int_{[0,1]^k} c^\ast \omega \\
+&\stackrel{def}{=} \int_c \omega.
+\end{align*}
+I nest siste linje brukte vi at $p$ var surjektiv.
+\end{proof}
+
+Det er en randoperator for differensialformer, og vi skal nå definere en randoperator for singulære $k$-kuber.
+
+Først utvider vi definisjonen av integralet til også å gjelde "$k$-kjeder". Dette er per definisjon formelle summer $\sum a_i c_i$ hvor $c_i$ er $k$-kjeder og $a_i$ er heltall.
+
+Vi skal definere $\partial c$ hvor $c$ er en $k$-kube. Dette vil være en $k$-kjede. 
+
+Om $I^n$ er standard k-kuben, så definerer vi
+$$
+I_{(i,\alpha)}^n(x) = I^n(x^1, \ldots, x^{i-1},\alpha,x^i, \ldots, x^{n-1}) = (x^1, \ldots, x^{i-1},\alpha,x^i, \ldots, x^{n-1})
+$$
+
+Om vi tenker oss hva randen til $\square$ burde være, så er dette, med klokken, $I_{(2,0)}^2, I_{(1,1)}^2, I_{(2,1)}^2, I_{(1,0)}^2$. 
+
+For en singulær k-kube definer vi
+$$
+c_{i,\alpha)} \stackrel{\Delta}{=} c \circ I_{(i, \alpha)}^n.
+$$
+
+Så definerer vi
+$$
+\partial c \stackrel \Delta = \sum_{i=1}^n \sum_{\alpha=0,1} (-1)^{i + \alpha} c_{(i,\alpha)}.
+$$
+Randa av en generell $k$-kjede definerer vi linearitet. 
+
+Kall mengden av $k$-kjeder for $S_k(M)$ Vi har vist at vi har en avbildnig $\partial:S_k(M) \to S_{k-1}(M)$. 
+
+\begin{prop}
+$$\partial^2=0.$$
+\end{prop}
+\begin{proof}
+Bookkeeping.
+\end{proof}
+
+Dermed har vi et (homologisk) kompleks $(S_\ast(M),\partial)$. Legg merke til at om $c$ er en singulær $1$-kube, så er $\partial c = c_{(1,1)} - c_{(1,0)}$. Men $c_{(1,\alpha)}=c(\alpha)$ i dette tilfellet, så $\partial c=0$ nøyaktig når $c$ er en "lukket" kurve.
+
+\subsection{Stokes teorem}
+
+\begin{thm}[Stoke]
+If $\omega$ is a $(k-1)$-form on $M$ and $c$ is a $k$-chain in $M$, then
+$$
+\int_{\partial c} \omega = \int_c d \omega.
+$$
+\end{thm}
+
+\subsection{Viktige punkter}
+
 \begin{itemize}
 \item Definisjon.
-\item $\partial$
+\item $\partial^2=0$
 \item Stoke
 \item de Rham-kohomologi
 \end{itemize}
