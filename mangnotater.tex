@@ -612,7 +612,68 @@ $$
 \item de Rham-kohomologi
 \end{itemize}
 
+
+%%%%%%%%%%%%%%%%%%%
 \section{Alg-top}
+
+\begin{thm}[Mayer-Vietoris]
+Suppose $M=U \cup V$ with $U$ and $V$ open. Then there is an exact sequence:
+$$
+0 \to H^0(M) \to H^0(U) \oplus H^0(V) \to H^0(U \cap V) \to H^1(M) \to \ldots H^k(U \cap V) \xrightarrow{\delta} H^{k+1}(M) \to \ldots
+$$
+\end{thm}
+\begin{proof}
+Beviset består av to deler. Del én består i å vise at det finnes en kort-eksakt sekvens av komplekser
+$$
+0 \to C^k(M) \xrightarrow{i} C^k(U) \oplus C^k(V) \xrightarrow j C^k(U \cap V) \to 0.
+$$
+Del to er ren algebraisk, for det er standard fra homologisk algebra at en slik kort-eksakt sekvens induserer en lang-eksakt sekvens på homologi. Dette unngår vi å bevise.
+
+\[
+\xymatrix{
+U \cap V \ar[r]^{j_1} \ar[d]^{j_2} & U  \ar[d]^{i_2} \\
+V \ar[r]^{i_1} & M
+}
+\]
+Se på inklusjonene over. Gitt en differensialform $\omega$ på $M$ kan vi sende den til $i_1^\ast \omega - i_2^\ast \omega$. Dette er avbildningen $i$. På samme vis, gitt et par $(\omega_1, \omega_2)$, sender vi denne til $j_1^\ast \omega_1 + j_2^\ast \omega_2$.
+
+Det er klart at dette gir oss et kompleks. Problemet er å vise at det er eksakt.
+
+Første del er å se at $i$ er injektiv. Men dette er lett. For om $i_1^\ast \omega$ og $i_2^\ast \omega$ er null, må også $\omega$ være null siden $U \cup V=M$. 
+
+Anta nå at $(\eta_1,\eta_2) \in \ker j$. Med andre ord er $\restr{\eta_1}{U \cap V} = \restr{\eta_2}{U \cap V}$. Men da er det klart at $\eta_1,\eta_2$ kommer fra samme form $\eta$.
+
+Anta $\alpha \in C^k(U \cap V)$. For å vise at $j$ er surjektiv, velg en partisjon $\phi_U,\phi_V$ av enheten over $\{ U,V \}$. Da kan vi definere $\phi_V \omega$ og $\phi_U \omega$ på $U,V$. 
+
+Da vil $j$ sende $(\phi_V \omega, \phi_U \omega) \mapsto \omega$.
+\end{proof}
+
+
+
+En av fordelene til kohomologi til forskjell fra homologi er eksistensen av et produkt. Om $\omega$ og $\eta$ er $k$- og $l$-former, kan vi danne $\omega \wedge \eta \in C^{k+l}(M)$. Dette induserer faktisk en avbildning på kohomologi også.
+
+For anta $d\omega=0$ og $d \eta = 0$ være lukkede. Da er
+$$
+d(\omega \wedge \eta) = d(\omega) \wedge \eta + (-1)^k \omega \wedge d \eta = 0 + 0 = 0.
+$$
+Så produktet definerer et element i $H^{k+l}(M)$. Det er også lett å se at vi også får et produkt på kohomologi med kompakt support, $H_c^k(M)$ på samme vis.
+
+
+
+\begin{thm}[Poincaré-dualitet]
+Om $M$ er en sammenhengende, orientert mangfoldighet av endelig type så er avbildningen
+$$
+PD:H^k(M) \to H_c^{n-k}(M)^\vee
+$$
+en isomorfi for alle $k$. 
+\end{thm}
+
+\begin{enumerate}
+\item Mayer-Vietoris
+\item Euler-karakteristikk.
+\item Mayer-Vietoris for $H_c^\ast$
+\item Pointcare-dualitet og cup-produkt
+\end{enumerate}
 
 
 %%%%%%%%%%%%%%%%%%%
@@ -680,6 +741,298 @@ HER ER JEG LITT STØKK.
 \item 
   \end{enumerate}
 \end{sol}
+
+\section{Oppgaver gitt i kurset}
+\subsection{Exercise3.pdf}
+
+\begin{exc}
+Betrakt den todimensjonale torusen $T^2$ som undermengden av $\C^2$ slik at at $|z^1|=|z^2|=1$. For $\alpha \in \Q \bs \R$, definer $f_\alpha:\R \to T^2$ ved
+$$
+t \mapsto \left( e^{it}, e^{it\alpha} \right).
+$$
+Vis at $f_\alpha$ er en injektiv immersjon med tett bilde.
+\end{exc}
+\begin{sol}
+Først, sett $f=f_\alpha$. Vi viser at $f$ er injektiv. Anta $e^{it}=e^{is}$. Da er $t = s + 2 \pi k$ for en $k \in \Z$. Men for den andre komponenten får vi at $t\alpha = s\alpha + 2 \pi l$. Men dette impliserer etter litt regning at $\alpha = l/k \in \Q$, mot formodning. Så $f$ er injektiv.
+
+$f$ er en immersjon om differensialen alltid er ikke-null. Men dette er klart. Den deriverte er gitt ved $(ie^{it}, i \alpha e^{it \alpha })$, og ingen av komponentene er noensinne null. Så $f$ er en immersjon.
+
+Å vise at $f$ har tett bilde er litt mer pirkete, men egentlig ganske lett. Vi kan tenke oss $T^2$ som en firkant med identifiserte sider. La $p \in \square$. Vi skal vise at hver liten firkant rundt $p$ inneholder et punkt fra bildet til $f$. Så la $t$ ha samme $x$-koordinat som $p$. Da er enten $f(t)$ inneholdt i den lille firkanten eller ikke. Prøv så med $t+2 \pi$. Dette gir oss et nytt punkt $f(p)$ med nye y-koordinater. Men siden $\alpha$ er irrasjonal, vil vi til slutt treffe firkanten.
+\end{sol}
+
+\begin{exc}
+Vis at mengden $\{ (t, |t|) \mid t \in \R \}$ er bildet av en glatt avbildning $f:\R \to \R^2$.
+\end{exc}
+\begin{sol}
+La
+$$
+g(x) = \begin{cases}
+e^{-x^{-2}} & x > 0 \\
+0 & x= 0 \\
+-e^{-x^{-2}} & x > 0
+\end{cases}.
+$$
+Da defineres $f$ ved $t \mapsto (g(t),\lvert g (t)\rvert )$. Denne er glatt siden $g(x)$ er glatt og alle deriverte til $g(x)$ er på formen $p(x)e^{-x^{-2}}$ hvor $p(x)$ er et polynom med $p(x) \to 0$ når $x \to 0$. 
+\end{sol}
+
+
+\begin{exc}
+Vis at de to definisjonene av embedded undermangfoldighet er ekvivalente.
+
+\begin{enumerate}
+\item En undermangfoldighet er en injektiv immersjon $f:N \to M$  slik at $N \to f(N)$ er en homeomorfi.
+\item En undermangfoldighet er en delmengnde $N \subset M$ som i passende koordinater er definert ved $a^1=a^2=\ldots=a^k=0$.
+\end{enumerate}
+\end{exc}
+\begin{sol}
+Dette burde følge fra Theorem 10.2 i Kapittel 2 i Spivak. Det sier at en immersjon lokalt ser ut som
+$$
+(a^1, \ldots, a^n) \mapsto (a^1,\ldots, a^n,0, \ldots, 0). 
+$$
+Dermed er $f(N)$ lokalt definert som $a^{n+1}=\ldots = a^m=0$. Siden $N \to f(N)$ også er en homeomorfi, kan vi like gjerne si at $N$ er slik definert.
+
+
+Andre veien. Anta gitt en delmengde $N$ som er definert slik. La $i: N \to M$ være inklusjonsavbildningen. Det er klart at dette gir en immersjon og er injektivt per definisjon. 
+\end{sol}
+
+\subsection{exercise6.pdf}
+
+\begin{exc}
+La $M$ være en mangfoldighet og la $p \in M$.  La $I_p$ være mengden funksjoner $f \in C^\infty(M)$ slik at $f(p)=0$. Dette er et ideal i $C^\infty(M)$. 
+
+Vis at avbildningen $f \mapsto d_p f\in (T_pM)^\ast = \Hom_\R(T_pM ,\R)$ definerer en lineær isomorfi
+$$
+I_p/I_p^2 \simeq (T_p M)^\ast.
+$$
+Dermed kunne vi like gjerne definert tangentrommet som dualen til $I_p/I_p^2$. 
+\end{exc}
+\begin{sol}
+Det er lett å se at vi har en lineær avbildning $I_p \to (T_pM)^\ast$. Det første vi må gjøre er å se at vi faktisk har en avbildning fra kvotienten $I_p/I_p^2$ til $(T_pM)^\ast$.
+
+Anta $f,g \in I_p$ slik at $fg \in I_p^2$. Da er
+$$
+d_p(fg) = f(p)d_p(g) + g(p)d_p(f) = 0+0=0.
+$$
+Så vi har en veldefinert indusert avbildning.
+
+Merk at om $f$ og $\bar f$ er like i et område rundt $p$, så er $d_pf=d_p \bar f$. Dermed kan vi anta at vi jobber i en kartomegn om $p$, så vi kan anta $M=\R^n$. Vi kan også anta $p=0$. Da kan vi skrive
+$$
+f(\vec x) = \sum_i x^i g_i( \vec x)
+$$
+med $g_i(0)= \dd{f}{x^i}(0)$. 
+
+Da er 
+$$
+d_pf = \sum_i \left( x^i(p) d_pg_i + g_i(0) d_px^i \right) = \sum_i \restr{\dd{f}{x^i}}{0} d_px^i.
+$$
+Det er lett å se at $d_p x^i$ er lineært uavhengige vektorer i $(T_pM)^\ast$. Dermed vil $d_pf = 0$ implisere at $\restr{\dd{f}{x^i}}{0}=0$ for alle $i$.
+
+Dette betyr igjen at $f$ kan skrives på formen
+$$
+f = \sum_{ij} g_{ij} x^{i+j}
+$$
+med $g_{ij}(0) = \frac{\partial^2 f}{\partial x^i \partial x^j}$. Men siden $g_{ij}x^i \cdot x^j \in I_p^2$, følger det at $f \in I_p^2$. Dermed er dette faktisk kjernen til avbildningen. Det gjenstår å vise at den er surjektiv.
+
+Enhver $\omega \in (T_pM) ^\ast$ kan skrives som $\sum_i a^i(p) d_px^i$. Så det er nok å la $f=\sum_i a^i(p) x^i$. 
+\end{sol}
+
+\begin{exc}
+I notasjonen fra forrige oppgave, vis at en funksjon $f \in C^\infty (M)$ ligger i $I_p^{n+1}$ hvis og bare hvis for hvert koordinatkart $(x,U)$ som inneholder $p$, så har vi at $\partial^k f/ \partial x^{i_1} \partial x^{i_2} \cdots \partial x^{i_k}$ up to order $n$ vanish at $p$.
+\end{exc}
+
+\begin{sol}
+Dette følger fra Lemma 2, siden 78 i Spivak.
+
+Anta påstanden for $n-1$ og under. Den stemmer for $n=0,1$.
+
+Anta $f \in I_p^{n+1}$. Da er $f$ en sum av produkter av $n+1$ funksjoner $f_i$ slik at $f_i(p)=0$.  Det er nok å betrakte hvert ledd. Så anta $f=f_1\cdots f_{n+1}$. Da er $f=(f_1\ldots f_n)f_{n+1}$. Da er
+\begin{align*}
+\frac{\partial^n f }{\partial^n x_1} (p) &= \frac{\partial^{n-1}}{\partial^{n-1}x_1} \left( f_{n+1} \frac{\partial (f_1 \cdots f_n)}{\partial x_1} + (f_1 \cdots f_n) \dd{ f_{n+1}}{x_1} \right)(p) \\
+&= \frac{\partial^{n-2}}{\partial^{n-2} x_1}  \left( \dd{f_{n+1}}{x_1} \dd{(f_1, \ldots, f_n)}{x_1}  + f_{n+1} \frac{\partial^2 (f_1\cdots f_n)}{\partial^2 x_1}  \right)(p)
+\end{align*}
+osv....
+
+(altså, dette er bare notasjon. Tror vi dropper dette.)
+
+\end{sol}
+
+\begin{exc}
+Vis at en $k$-vektorbunt $\pi:E \to M$ er triviell hvis og bare hvis det finnes $k$ seksjoner $s_1,\ldots, s_k$ slik at $\{ s_i(p)\}$ danner en basis for $E_p=\pi^{-1}(p)$ for hver $p$.
+\end{exc}
+\begin{sol}
+Vi skal definere en vektorbuntisomorfi $E \to M \times \R^k \to E$.
+
+Hvert punkt i $E$ kan skrives unikt som $\sum a^i(p) s_i(p)$ for $p \in M$ og $a^i$ kontinuerlige funksjoner $M \to \R$. Dermed kan vi la avbildningen være
+$$
+\sum a^i(p) s_i(p) \mapsto (p, a^1(p), \ldots, a^n(p)).
+$$
+Det er klart at $p \mapsto a^i(p)$ er glatt. (??)
+\end{sol}
+
+\begin{exc}
+Husk at $\PP^n$ kan defineres som kvotienten av $S^n$ med ekvivalensrelasjonen $p \sim -p$. Vis at $T \PP^n$ kan identifiseres med $TS^n$ delt ut på $(p,v) \sim (-p,-v)$. 
+\end{exc}
+\begin{sol}
+Siden $S^n$ er en 2:1-overdekning av $\PP^n$ og en lokal diffeomorfi, vil den induserte avbildnigen $\pi_\ast: TS^n \to T \PP^n$ også være en 2:1-overdekning. Spørsmålet er bare hva fibrene er.
+
+Start med en tangentvektor $w_{[p]} \in T_{[p]} \PP^n$. Denne vil ha to fibre, over $\pm p$.
+
+Så la $v_p \in TS^n$. Spørsmålet er hvordan den andre $w_{-p}$ må se ut for at denne skal være den andre fiberen. For at bildet skal være likt, må $\Z/2$-virkningen på $TS^n$ ta $v_p$ til $w_{-p}$. Den induserte virkningen på $v_p$ er $-v_{-p}$ som kan sees ved å kreve at antipodalavbildningen og vektorfeltet skal være kompatible. 
+
+Dermed følger det $TS^n / v_p \sim -v_{-p}$ er i bijeksjon med $T \PP^n$.
+\end{sol}
+
+\begin{exc}
+\begin{enumerate}
+\item Vis at om $f:M \to N$ er en glatt avbildning med konstant rang $k$, så har $f_\ast: TM \to TN$ konstant rang $2k$. Spesielt, om $f$ er en immersjon, så er også $f_\ast$ det.
+\item Vis at $TS^n$ er definert ved $ p \cdot p = 1$ og $p \cdot q = 0$ i $\R^{2n+2}$.
+\end{enumerate}
+\end{exc}
+\begin{sol}
+For 1., ser vi at vi kan anta at $M= \R^n$ og $N= \R^m$ siden dette er lokale spørsmål. Om $n \leq m$ ser dessuten $f$ lokalt ut som $(a^1,\ldots,a^n) \mapsto (a^1,\ldots a^k, 0,0, \ldots,0)$. 
+
+Det er lett å regne ut at den induserte avbildningen på $TM \to TN$ ser ut som 
+$$
+(a^1, \ldots, a^n, b^1, \ldots, b^n) \mapsto (a^1, \ldots, a^k, 0,\ldots,0,b^1, \ldots, b^k, 0,\ldots 0).
+$$
+Den er altså identiteten på de første k koordinatene, null på de $n-k$ neste, identitet på de k neste og null sist. Det er klart at dette gir en avbildning med rang $2k$.
+2. har vi allerede brukt i forrige oppgave, og 
+\end{sol}
+
+\subsection{exercise8.pdf}
+
+\begin{exc}
+Regn ut flow av vektorfeltet 
+$$
+X = y \dd{}{x} + \dd{}{y} 
+$$
+på $\R^2$.
+\end{exc}
+\begin{sol}
+Vi leter etter en avbildning $\varphi_t(p):\R^2 \times \R \to \R^2$ slik at kurven $t \mapsto \varphi_t(p)$ for en fiksert $p$, kall denne, $c(t)$ (med $c(0)=p$), tilfredsstiller $X_{c(t)} = c'(t)$. 
+
+La $p=(a,b)$. Og la $c(t) = (c_1(t),c_2(t))$. Da er $c'(t) = c_1'(t) \dd{}{x} + c_2'(t) \dd{}{y}$.
+
+Betingelsen sier at $c^2(t)=c_1'(t)$ og $c_2'(t) = 1$. Så $c_2(t)=t+C$ for en konstant $C$ og $c_1(t) = \frac 12 t^2+Ct+D$ for en konstant $D$. Vi må ha $C=b$ og $D=a$, slik at flowen er definert ved 
+$$
+(a,b,t) \mapsto (\frac 12 t^2+bt+a, t+b).
+$$
+\end{sol}
+
+
+\begin{exc}
+La $f \in C^\infty(M)$ og la $X,Y$ være vektorfelter med $\phi_t$ og $\psi_t$ de tilhørende flowene. Vis at
+$$
+\frac{\partial^2}{\partial s \partial t} \left( f(\psi_s(\phi_t(p)))-f(\phi_t(\psi_s(p))) \right) = L_{[X,Y]}(f) (p)=(XY-YX)(f)(p).
+$$
+\end{exc}
+\begin{sol}
+Vi gjør kun første ledd.
+
+Sett $g=f \circ \psi_s$. Per definisjon er
+\begin{align*}
+\frac{\partial^2}{\partial s \partial t} \left( f(\psi_s(\phi_t(p)))-f(\phi_t(\psi_s(p))) \right)  &= \dd{}{s} \lim_{h \to 0} \left( \frac 1h \left[ f(\psi_s(\phi_{h}(p)))-f(\psi_s(p)) \right] \right) \\ 
+&= \dd{}{s} X(f \circ \psi_s) \\
+&= X( \dd{}{s}(f \circ \psi_s)) \\
+&= X (\lim_{h \to 0} \frac 1h f(\psi_h(p))-f(p)) \\
+&= XY(f)(p).
+\end{align*}
+Samme metode på andre ledd gir resultatet.
+\end{sol}
+
+\begin{oppg}
+La $N$ være en lukket undermangfoldighet av $M$ og anta $X$ er et glatt vektorfelt som er tangensielt til $N$, nemlig at for $p \in N$ så er $X_p \in T_p N$. Vis at enhver integralkurve av $X$ som snitter $N$ ligger inneholdt i $N$.
+\end{oppg}
+\begin{losn}
+La $c:\R \to M$ være en integralkurve som snitter $N$, si i punktet $p$. Siden $\restr{X}{N}$ er et vektorfelt på $N$, finnes det en \textbf{unik} integralkurve $d(t)$ gjennom $p$ med $\restr{X}{N}_p = d'(t)$. Men $c(t)$ er en slik kurve, så vi må ha $c=d$.
+
+Dermed må $c$ ligge totalt inneholdt i $N$.
+\end{losn}
+
+
+\begin{oppg}
+La $f: M \to N$ være en glatt avbildning og la $X$ være et fektorfelt på $M$ og $Y$ et vektorfelt på $N$. Vi sier at $X$ og $Y$ er \textbf{f-relatert} om $f_{\ast p}(X_p) = Y_{f(p)}$ for hver $p \in M$. 
+
+Vis at dette skjer hvis og bare hvis $f \circ \phi_t = \psi_t \circ f$ for alle $t$, hvor $\phi_t$ er flow til $X$ og $\psi_t$ til $Y$.
+\end{oppg}
+\begin{losn}
+
+\end{losn}
+
+
+
+
+\begin{exc}
+Vis at om $M$ er en sammenhengende mangfoldighet, så finnes det for hvert par av punkter $p,q \in M$ en diffeomorfi $\phi$ med $phi(p)=q$. 
+\end{exc}
+\begin{sol}
+Anta først at $p$ og $q$ befinner seg i samme kart. La $\vec v = q -p$, og la $X$ være det konstante vektorfeltet $X_p=v_p$. Da vil en integralkurve for $X$ som starter i $p$ tilfredsstille $c(1)=q$. Dermed vil flow-avbildningen være en diffeomorfi som sender $p$ til $q$.
+
+Ved å gange med en passende bump-funksjon, kan vi sørge for at $X$ har support bare rundt en pølse rundt bildet av $c$.
+
+Anta nå at $p$ og $q$ befinner seg i forskjellige kart. Da kan vi finne en endelig kjede av kart $U_i$ med $U_i \cap U_j \neq \emptyset$.
+
+Vi får en liten haug med flow-avbildninger tilhørende kompakt støttede vektorfelt. Sammensetningen er svaret vi ønsker.
+\end{sol}
+
+\subsection{exercise11.pdf}
+
+\begin{oppg}
+Vis at for vektorrom $U,V,W$ så er den lineære avbildningen
+\begin{align*}
+\phi:\Hom(U \otimes V, W) &\to \Hom(U, \Hom(V,W)) \\
+\psi &\mapsto [u \mapsto (v \mapsto \psi(u,v))]
+\end{align*}
+en isomorfi.
+\end{oppg}
+\begin{losn}
+Vi definerer en invers $\gamma$:
+\begin{align*}
+\gamma:\Hom(U, \Hom(V,W)) &\to  \Hom(U \otimes V, W) \\
+\varphi &\mapsto [u \otimes v \mapsto \varphi(u)(v)].
+\end{align*}
+Da er
+\begin{align*}
+\gamma \circ \phi(\psi) &= \gamma( [u \mapsto (v \mapsto \psi(u,v))]) \\
+&= u \otimes v \mapsto \psi(u)(v)
+\end{align*}
+Samme formalisme andre veien gjør at $\phi \circ \gamma = \id$. Så disse vektorrommene er isomorfe. Det er også klart at begge avbildningene er lineære.
+\end{losn}
+
+\begin{oppg}
+La $V$ være et endeligdimensjonalt vektorrom. 
+\begin{enumerate}
+\item Vis at den lineære avbildningen
+
+\[
+\psi: V^\ast \otimes V \to \End(V)
+\]
+
+definert ved $\psi(\gamma \otimes v)(w) = \gamma(w) v$ er en isomorfi.
+\item Vis at det finnes en unik lineær avbildning $V^\ast \otimes V \to \R$ slik at $f \otimes v \mapsto f(v)$. Vis at for enhver lineær operator, så er bildet av $\psi^{-1}(A)$  under denne avbildningen lik $\tr A$.
+\end{enumerate}
+\end{oppg}
+
+\begin{losn}
+1. Velg en basis $\{ e_i \}$ for $V$ og la $\{ e_i^\ast \}$ være den duale basisen. På basistensorer ser avbildningen ut som $\psi(e_i^\ast \otimes e_j)(v) = e_i^\ast(v) e_j = a_i e_j$, om $v = \sum a_i e_i$. 
+
+Så en matrise $(a_{ij})$ blir truffet av $\sum a_{ij} e_i^\ast \otimes e_j$. Litt ettertanke sier da at resultatet er åpenbart.
+
+(alternativt: vis at avbildningen er injektiv, og konkluder siden rommene har samme dimensjon)
+
+2. At avbildningen finnes og er unik er bare universalegenskapen til tensorproduktet siden den er bilineær. En lineær avbildning er representert ved $\sum a_{ij} e_i^\ast e_j$. Da er bildet under avbildningen gitt ved
+$$
+\sum a_{ij} e_i^\ast e_j \mapsto \sum a_{ij} e_i^\ast e_j = \sum_{i=j} a_{ij} = \sum_i a_{ii}.
+$$
+Men dette er bare traseavbildningen.
+\end{losn}
+
+\begin{oppg}[7]
+En endimensjonal vektorbunt kalles en \emph{linjebunt}. Vis at for hver linjebunt $\xi$, så er $\xi^\ast \otimes \xi$ triviell.
+\end{oppg}
+\begin{losn}
+Punkter i $\xi^\ast \otimes \xi$ ser ut som $\lambda_p \otimes v_p$ (ingen valg gjort). Vi kan definere en avbildning $\xi^\ast \otimes \xi \to M \otimes \R$ ved $(\lambda_p \otimes v_p) \mapsto (p,\lambda_p(v_p))$. Denne er klart en isomorfi.
+\end{losn}
 
 
 \end{document}
