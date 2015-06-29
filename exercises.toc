@@ -37,6 +37,6 @@
 \contentsline {subsection}{\numberline {11.3}Lecture 8 - Lie Algebras and Lie groups}{43}{subsection.11.3}
 \contentsline {section}{\numberline {12}Twenty-Four Hours of Local Cohomology}{44}{section.12}
 \contentsline {subsection}{\numberline {12.1}Lecture 1 - Basic notions}{44}{subsection.12.1}
-\contentsline {section}{\numberline {13}Riemannian geometry - Do Carmo}{44}{section.13}
-\contentsline {subsection}{\numberline {13.1}Chapter 0 - Differentiable manifolds}{44}{subsection.13.1}
-\contentsline {subsection}{\numberline {13.2}Chapter 2 - Affine and Riemannian connections}{45}{subsection.13.2}
+\contentsline {section}{\numberline {13}Riemannian geometry - Do Carmo}{45}{section.13}
+\contentsline {subsection}{\numberline {13.1}Chapter 0 - Differentiable manifolds}{45}{subsection.13.1}
+\contentsline {subsection}{\numberline {13.2}Chapter 2 - Affine and Riemannian connections}{46}{subsection.13.2}
