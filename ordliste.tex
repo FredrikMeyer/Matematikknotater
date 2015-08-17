@@ -212,7 +212,7 @@ The easiest example is this: Let $\CC$ be the category of open sets on a topolog
 
 A \textbf{site} is a category equipped with a \hyperref[grothendiecktopology]{Grothendieck topology}.
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Results and theorems}
 \subsubsection{Adjunction formula}
 \label{adjunction}
@@ -311,6 +311,30 @@ Here $\omega_X^\circ$ is a \emph{dualizing sheaf} for $X$. In the case that $X$ 
 \label{serrevanishing}
 
 One form of Serre vanishing states that if $X$ is a proper scheme over a noetherian ring $A$, and $\LL$ is an \hyperref[amplelinebundle]{ample} sheaf, then for any coherent sheaf $\FF$ on $X$, there exists an integer $n_0$ such that for each $i > 0$ and $n \geq n_0$ the group $H^i(X, \FF \otimes_{\OO_X} \LL^n)=0$ vanishes. See \cite[Proposition III.5.3]{hartshorne}.
+
+\subsubsection{Weil conjectures}
+\label{weilconjectures}
+
+The Weil conjectures is a theorem relating the properties of a variety over finite fields with its properties over fields over characteristic zero.
+
+Specifically, let 
+$$
+\zeta(X,s) = \exp \left(\sum_{m=1}^\infty \frac{N_m}{m} q^{-sm}  \right)
+$$
+be the zeta function of $X$ (with respect to $q$). $N_m$ is the number of points of $X$ over $\F_{q^n}$. Then the Weil conjectures are the following four statements:
+\begin{enumerate}
+\item The zeta function $\zeta(X,s)$ is a rational function of $T=q^{-s}$:
+$$
+\zeta(X,T) = \prod_{i=1}^{2n} P_i(T)^{(-1)^{i+1}},
+$$
+where the $P_i$'s are integral polynomials. Furthermore, $P_0(T)=1-T$ and $P_{2n}(T) = 1-q^nT$. For $1 \leq i \leq 2n-1$, $P_i(T)$ factors as $P_j(T)=\prod (1-\alpha_{ij}T)$ over $\C$. 
+\item There is a functional equation. Let $E$ be the topological Euler characteristic of $X$. Then
+$$
+\zeta(X,q^{-n} T^{-1}) = \pm q^{\frac {nE}{2}} T^E \zeta(X,T).
+$$
+\item A ``Riemann hypothesis'':  $\lvert \alpha_{ij} \rvert = q^{i/2}$ for all $1 \leq i \leq 2n-1$ and all $j$. This implies that the zeroes of $P_k(T)$ all lie on the critical line $\Re(z)=k/2$. 
+\item If $X$ is a good reduction modulo $p$, then the degree of $P_i$ is equal to the i'th Betti number of $X$, seen as a complex variety.
+\end{enumerate}
 
 \subsection{Sheaves and bundles}
 \subsubsection{Ample line bundle}
