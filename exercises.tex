@@ -1281,6 +1281,41 @@ So flatness is the same as being locally free.
 Applying the $\Tor$ functor commutes with localization, hence we have $\Tor_1^A(M,N)_\mm = \Tor_1^{A_\mm}(M_\mm, N_\mm)=0$ for all $\mm$. But being zero is a local property, so it follows that $\Tor_1^A(M,N)=0$ for all $A$-modules $N$. Hence $M$ is flat.
 \end{sol}
 
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Linear representations of finite groups - Serre}
+
+\subsection{Chapter 1 - Representations and characters}
+
+[no exercises]
+
+\subsection{Chapter 2 - The character of a representation}
+
+\begin{exc}[Exercise 2.1]
+  Let $\chi,\chi'$ be the characters of two representations. Prove the formulas:
+\[
+(\chi+\chi')_\sigma^2 = \chi_\sigma^2 + \chi_\sigma^{'2}+\chi \chi'
+\]
+and 
+\[
+(\chi+\chi')_\alpha^2 = \chi_\alpha^2 + \chi_\alpha^{'2}+\chi \chi'
+\]
+Here $\chi_\sigma,\chi_\alpha$ are the characters of the symmetric and the alternating representation, respectively.
+\end{exc}
+\begin{sol}
+The left hand side is the character of $\Sym^2(V \oplus W)$, and a calculation shows that this decomposes as $\Sym^2 V \oplus \Sym^2 W \oplus (V \otimes W)$. Hence the result follows by Proposition 2.
+
+For the alternating representation we have a similar decomposition.
+\end{sol}
+
+\begin{exc}[Exercise 2.2]
+  Let $X$ be a finite set on which $G$ acts and let $\rho$ be the corresponding permutation representation and $\chi_X$ the character of $\rho$. Let $s \in G$. Show that $\chi_X(s)$ is the number of elements of $X$ fixed by $s$.
+\end{exc}
+
+\begin{sol}
+ We have by definition that $\chi_X(s)$ is the trace of a matrix representing $\rho(s)$, but $\rho(s)$ is a permutation matrix. All basis elements corresponding to elements moved by $s$ will be moved off the diagonal, so the remaning elements, the elements fixed by $s$, are on the diagonal, and are all $1$'s. Done.
+\end{sol}
+
 \section{The K-book - Charles Weibel}
 
 \subsubsection{Chapter 1.1 - Free modules, $GL_n$ and stably free modules}
@@ -1599,7 +1634,14 @@ $$
 $$
 \end{sol}
 
+\subsection{Lecture 7 - Local cohomology}
 
+\begin{exc}[Exercise 7.2]
+Check that the $\ia$-torsion functor is left-exact.
+\end{exc}
+\begin{sol}
+Suppose $\varphi:M \hookrightarrow N$ is an injection of $R$-modules. Then clearly the induced morphism $\Gamma_\ia(M) \to \Gamma_\ia(N)$ is injective as well since $\Gamma_\ia(M)$ (N) is a submodule of $M$ (N). 
+\end{sol} 
 
 
 
