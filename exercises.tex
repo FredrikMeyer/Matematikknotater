@@ -396,6 +396,18 @@ $$
 If $n$ is large enough, $K-D$ will have negative degree, so $l(K-D)=0$. Thus for large $n$, we can get $l(D)$ as big as we want.
 \end{sol}
 
+\begin{exc}[Exercise 1.2]
+Again let $X$ be a curve and let $P_1,\cdots,P_r$ be points. Then there is a rational function $f \in K(X)$ having poles only at the $P_i$ and regular elsewhere.
+\end{exc}
+\begin{exc}
+Again, this follows by Riemann-Roch. Let $D=n\sum_i P_i$. Then, as in the previous exercise, we get that the set
+$$
+\{ f \in K(X) \mid (f) + \sum nP_i \geq 0 \}
+$$
+is non-empty. But the condition is equivalent to $(f)_{P_i} \geq -nP_i$ and $(f)_P \geq 0$ for $P \neq P_i$. But this is exactly what is to be shown.
+\end{exc}
+
+
 \begin{exc}[Exercise 1.5]
 For an effective divisor $D$ on a curve $X$ of genus $g$, show that $\dim \lvert D \rvert \leq \deg D$. Furthermore, equality holds if and only if $D=0$ or $g=0$. 
 \end{exc}
@@ -1281,6 +1293,41 @@ So flatness is the same as being locally free.
 Applying the $\Tor$ functor commutes with localization, hence we have $\Tor_1^A(M,N)_\mm = \Tor_1^{A_\mm}(M_\mm, N_\mm)=0$ for all $\mm$. But being zero is a local property, so it follows that $\Tor_1^A(M,N)=0$ for all $A$-modules $N$. Hence $M$ is flat.
 \end{sol}
 
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Linear representations of finite groups - Serre}
+
+\subsection{Chapter 1 - Representations and characters}
+
+[no exercises]
+
+\subsection{Chapter 2 - The character of a representation}
+
+\begin{exc}[Exercise 2.1]
+  Let $\chi,\chi'$ be the characters of two representations. Prove the formulas:
+\[
+(\chi+\chi')_\sigma^2 = \chi_\sigma^2 + \chi_\sigma^{'2}+\chi \chi'
+\]
+and 
+\[
+(\chi+\chi')_\alpha^2 = \chi_\alpha^2 + \chi_\alpha^{'2}+\chi \chi'
+\]
+Here $\chi_\sigma,\chi_\alpha$ are the characters of the symmetric and the alternating representation, respectively.
+\end{exc}
+\begin{sol}
+The left hand side is the character of $\Sym^2(V \oplus W)$, and a calculation shows that this decomposes as $\Sym^2 V \oplus \Sym^2 W \oplus (V \otimes W)$. Hence the result follows by Proposition 2.
+
+For the alternating representation we have a similar decomposition.
+\end{sol}
+
+\begin{exc}[Exercise 2.2]
+  Let $X$ be a finite set on which $G$ acts and let $\rho$ be the corresponding permutation representation and $\chi_X$ the character of $\rho$. Let $s \in G$. Show that $\chi_X(s)$ is the number of elements of $X$ fixed by $s$.
+\end{exc}
+
+\begin{sol}
+ We have by definition that $\chi_X(s)$ is the trace of a matrix representing $\rho(s)$, but $\rho(s)$ is a permutation matrix. All basis elements corresponding to elements moved by $s$ will be moved off the diagonal, so the remaning elements, the elements fixed by $s$, are on the diagonal, and are all $1$'s. Done.
+\end{sol}
+
 \section{The K-book - Charles Weibel}
 
 \subsubsection{Chapter 1.1 - Free modules, $GL_n$ and stably free modules}
@@ -1565,6 +1612,41 @@ $$
 Then $f(p)=g(p)$ for all $p$.
 
 3. Let $S$ be any subset. Let $q$ be a function that is $1$ outside $S$ and is $0$ on $S$. Then the result follows from 2.
+<<<<<<< HEAD
+\end{sol}
+
+\begin{oppg}[Exercise 1.11]
+Prove that if $K$ is not algebraically closed, then any algebraic set in $K^n$ is the zero set of a single polynomial.
+\end{oppg}
+\begin{losn}
+Suppose $Z=V(F_1,\ldots,F_r)$ is an algebraic set. We first show that for any $n$, there is a polynomial whose only zero is the origin. 
+
+The case $n=1$ is clear, and the case $n=2$ can be gotten this way: choose an irreducible polynomial $f(x)$ of degree greater than one (here we use that $K$ is not algebraically closed). Then form the homogenization of $f(x)$ with respect to $y$. Call this new polynomial $G(x,y)$. Then $G(x,y)$ have only one zero at the origin. 
+
+Now assume we have such a polynomial $H$ for $n=k-1$. Then form $G(H(x_1,\ldots,x_{n-1}),x_n)$. Done.
+
+Let $n=r$. Let $F(x_1,\ldots,x_n)=H(f_1,\ldots,f_r)$. Done.
+
+(I must admit I cheated on this one. I had to Google the first part)
+\end{losn}
+
+\begin{oppg}[Exc 1.14]
+If a principal ideal domain is not a field, prove that it has dimension one.
+\end{oppg}
+\begin{losn}
+Suppose we have a minimal strict chain of \emph{three} prime ideals. That is, suppose the dimension of $R$ is two or more. $(0) \subset \pp_1 \subset \pp_2$. But $\pp_1=(a)$ for some $a \in R$ and $\pp_2=(b)$. But since $\pp_1 \subset \pp_2$, we must have $b=ar$ for some $r \in R$. But $\pp_2$ is a prime ideal, hence either $a \in \pp_2$ or $r \in \pp_2$. The latter cannot happen, because in that case, the inclusion would not be minimal. Neither the first, because then we would have $\pp_2 = \pp_1$. 
+\end{losn}
+
+\begin{exc}
+What is the dimension of $\Z[x]$? 
+\end{exc}
+\begin{sol}
+The answer is 2, because of
+$$
+(0) \subset (p) \subset (p,x).
+$$
+=======
+>>>>>>> 6c23ee3526a4d2c896cddba577f8a746977c2737
 \end{sol}
 
 \begin{oppg}[Exercise 1.11]
@@ -1599,6 +1681,14 @@ $$
 $$
 \end{sol}
 
+\subsection{Lecture 7 - Local cohomology}
+
+\begin{exc}[Exercise 7.2]
+Check that the $\ia$-torsion functor is left-exact.
+\end{exc}
+\begin{sol}
+Suppose $\varphi:M \hookrightarrow N$ is an injection of $R$-modules. Then clearly the induced morphism $\Gamma_\ia(M) \to \Gamma_\ia(N)$ is injective as well since $\Gamma_\ia(M)$ (N) is a submodule of $M$ (N). 
+\end{sol} 
 
 
 

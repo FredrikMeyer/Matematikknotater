@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  12 JUN 2015 11:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  21 AUG 2015 11:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**\input ordliste.tex
-(./ordliste.tex
+**\input cv.tex
+(./cv.tex
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/base/art
 icle.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
@@ -372,10 +372,6 @@ Package: amsthm 2004/08/06 v2.20
 /mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
-)
-(/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/fundus-c
-alligra/calligra.sty
-Package: calligra 2012/04/10 v1.9 LaTeX package calligra
 )
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/url/url.
 sty
@@ -789,6 +785,44 @@ File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 ontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
 )))
+(/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/tikz-cd/
+tikz-cd.sty
+Package: tikz-cd 2012/12/30 v0.3c Commutative diagrams with tikz.
+
+(/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/generic/pgf/fr
+ontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2008/06/18 v2.10 (rcs-revision 1.2)
+))
+(/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/generic/pgf/fr
+ontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2009/09/04 v2.10 (rcs-revision 1.6)
+)
+(/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/caption/
+subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+
+(/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/caption/
+caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/caption/
+caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen158
+\captionmargin@=\dimen159
+\captionwidth=\dimen160
+\caption@tempdima=\dimen161
+\caption@indent=\dimen162
+\caption@parindent=\dimen163
+\caption@hangindent=\dimen164
+)
+\c@ContinuedFloat=\count122
+Package caption Info: float package is loaded.
+)
+\c@subfigure=\count123
+\c@subtable=\count124
+)
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/generic/xypic/
 xy.sty
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/generic/xypic/
@@ -803,45 +837,45 @@ xyidioms.tex)
  Xy-pic is free software: see the User's Guide for details.
 
 Loading kernel: messages; fonts; allocations: state,
-\X@c=\dimen158
-\Y@c=\dimen159
-\U@c=\dimen160
-\D@c=\dimen161
-\L@c=\dimen162
-\R@c=\dimen163
+\X@c=\dimen165
+\Y@c=\dimen166
+\U@c=\dimen167
+\D@c=\dimen168
+\L@c=\dimen169
+\R@c=\dimen170
 \Edge@c=\toks44
-\X@p=\dimen164
-\Y@p=\dimen165
-\U@p=\dimen166
-\D@p=\dimen167
-\L@p=\dimen168
-\R@p=\dimen169
+\X@p=\dimen171
+\Y@p=\dimen172
+\U@p=\dimen173
+\D@p=\dimen174
+\L@p=\dimen175
+\R@p=\dimen176
 \Edge@p=\toks45
-\X@origin=\dimen170
-\Y@origin=\dimen171
-\X@xbase=\dimen172
-\Y@xbase=\dimen173
-\X@ybase=\dimen174
-\Y@ybase=\dimen175
-\X@min=\dimen176
-\Y@min=\dimen177
-\X@max=\dimen178
-\Y@max=\dimen179
+\X@origin=\dimen177
+\Y@origin=\dimen178
+\X@xbase=\dimen179
+\Y@xbase=\dimen180
+\X@ybase=\dimen181
+\Y@ybase=\dimen182
+\X@min=\dimen183
+\Y@min=\dimen184
+\X@max=\dimen185
+\Y@max=\dimen186
 \lastobjectbox@=\box39
 \zerodotbox@=\box40
-\almostz@=\dimen180
+\almostz@=\dimen187
  direction,
-\d@X=\dimen181
-\d@Y=\dimen182
-\K@=\count122
-\KK@=\count123
-\Direction=\count124
-\K@dXdY=\dimen183
-\K@dYdX=\dimen184
+\d@X=\dimen188
+\d@Y=\dimen189
+\K@=\count125
+\KK@=\count126
+\Direction=\count127
+\K@dXdY=\dimen190
+\K@dYdX=\dimen191
 \xyread@=\read2
 \xywrite@=\write4
-\csp@=\count125
-\quotPTK@=\dimen185
+\csp@=\count128
+\quotPTK@=\dimen192
 
 utility macros; pictures: \xy, positions,
 \swaptoks@@=\toks46
@@ -862,15 +896,15 @@ Package: xy 2013/10/06 Xy-pic version 3.8.9
 xyall.tex  Xy-pic option: All features v.3.8
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/generic/xypic/
 xycurve.tex  Xy-pic option: Curve and Spline extension v.3.12 curve,
-\crv@cnt@=\count126
+\crv@cnt@=\count129
 \crvpts@=\toks48
 \splinebox@=\box42
-\splineval@=\dimen186
-\splinedepth@=\dimen187
-\splinetol@=\dimen188
-\splinelength@=\dimen189
+\splineval@=\dimen193
+\splinedepth@=\dimen194
+\splinetol@=\dimen195
+\splinelength@=\dimen196
  circles,
-\L@=\dimen190
+\L@=\dimen197
 
 loaded)
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/generic/xypic/
@@ -881,7 +915,7 @@ xycmtip.tex  Xy-pic option: Computer Modern tip extension v.3.7
 xytips.tex  Xy-pic option: More Tips extension v.3.11 loaded) loaded)
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/generic/xypic/
 xyline.tex  Xy-pic option: Line styles extension v.3.10
-\xylinethick@=\dimen191
+\xylinethick@=\dimen198
  loaded)
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/generic/xypic/
 xyrotate.tex  Xy-pic option: Rotate and Scale extension v.3.8 loaded)
@@ -889,13 +923,13 @@ xyrotate.tex  Xy-pic option: Rotate and Scale extension v.3.8 loaded)
 xycolor.tex  Xy-pic option: Colour extension v.3.11 loaded)
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/generic/xypic/
 xymatrix.tex  Xy-pic option: Matrix feature v.3.14
-\Row=\count127
-\Col=\count128
+\Row=\count130
+\Col=\count131
 \queue@=\toks49
 \queue@@=\toks50
-\qcount@=\count129
-\qcount@@=\count130
-\matrixsize@=\count131
+\qcount@=\count132
+\qcount@@=\count133
+\matrixsize@=\count134
  loaded)
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/generic/xypic/
 xyarrow.tex  Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
@@ -916,9 +950,9 @@ xypdf-li.tex loaded) Xy-pic pdf driver: `rotate' extension support
 xypdf-ro.tex loaded) loaded))
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/wrapfig/
 wrapfig.sty
-\wrapoverhang=\dimen192
-\WF@size=\dimen193
-\c@WF@wrappedlines=\count132
+\wrapoverhang=\dimen199
+\WF@size=\dimen200
+\c@WF@wrappedlines=\count135
 \WF@box=\box43
 \WF@everypar=\toks51
 Package: wrapfig 2003/01/31  v 3.6
@@ -980,9 +1014,9 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 /kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen194
-\Hy@linkcounter=\count133
-\Hy@pagecounter=\count134
+\@linkdim=\dimen201
+\Hy@linkcounter=\count136
+\Hy@pagecounter=\count137
 
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/hyperref
 /pd1enc.def
@@ -990,13 +1024,12 @@ File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count135
+\Hy@SavedSpaceFactor=\count138
 
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/latexcon
 fig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 4319.
 Package hyperref Info: Hyper figures OFF on input line 4443.
 Package hyperref Info: Link nesting OFF on input line 4448.
 Package hyperref Info: Hyper index ON on input line 4451.
@@ -1004,24 +1037,24 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count136
+\c@Hy@tempcnt=\count139
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen195
-\Fld@menulength=\count137
-\Field@Width=\dimen196
-\Fld@charsize=\dimen197
+\XeTeXLinkMargin=\dimen202
+\Fld@menulength=\count140
+\Field@Width=\dimen203
+\Fld@charsize=\dimen204
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
 Package hyperref Info: backreferencing OFF on input line 6310.
-Package hyperref Info: Link coloring ON on input line 6313.
+Package hyperref Info: Link coloring OFF on input line 6315.
 Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count138
-\c@Item=\count139
-\c@Hfootnote=\count140
+\Hy@abspage=\count141
+\c@Item=\count142
+\c@Hfootnote=\count143
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
@@ -1030,8 +1063,8 @@ Package hyperref Message: Driver (autodetected): hpdftex.
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/hyperref
 /hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count141
-\c@bookmark@seq@number=\count142
+\Fld@listcount=\count144
+\c@bookmark@seq@number=\count145
 
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/oberdiek
 /rerunfilecheck.sty
@@ -1041,43 +1074,43 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip49
 ) (./mystyle.sty
-\c@thm=\count143
-\c@oppg=\count144
-\c@losn=\count145
-\c@exc=\count146
-\c@sol=\count147
-) (./ordliste.aux)
-\openout1 = `ordliste.aux'.
+\c@thm=\count146
+\c@oppg=\count147
+\c@losn=\count148
+\c@exc=\count149
+\c@sol=\count150
+) (./cv.aux)
+\openout1 = `cv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 
 ABD: EveryShipout initializing macros
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/context/base/s
 upp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count148
-\scratchdimen=\dimen198
+\scratchcounter=\count151
+\scratchdimen=\dimen205
 \scratchbox=\box44
-\nofMPsegments=\count149
-\nofMParguments=\count150
+\nofMPsegments=\count152
+\nofMParguments=\count153
 \everyMPshowfont=\toks52
-\MPscratchCnt=\count151
-\MPscratchDim=\dimen199
-\MPnumerator=\count152
-\makeMPintoPDFobject=\count153
+\MPscratchCnt=\count154
+\MPscratchDim=\dimen206
+\MPnumerator=\count155
+\makeMPintoPDFobject=\count156
 \everyMPtoPDFconversion=\toks53
 )
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/oberdiek
@@ -1098,27 +1131,31 @@ fig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 28.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 26.
 
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/amsfonts
 /umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 28.
+LaTeX Font Info:    Try loading font information for U+msb on input line 26.
 
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/amsfonts
 /umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 28.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 26.
 
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/jknapltx
 /ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Package xypdf Info: Line width: 0.43799pt on input line 28.
+Package xypdf Info: Line width: 0.43799pt on input line 26.
 \AtBeginShipoutBox=\box45
-Package hyperref Info: Link coloring ON on input line 28.
+Package hyperref Info: Link coloring OFF on input line 26.
 
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/hyperref
 /nameref.sty
@@ -1128,118 +1165,77 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 ek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count154
+\c@section@level=\count157
 )
-LaTeX Info: Redefining \ref on input line 28.
-LaTeX Info: Redefining \pageref on input line 28.
-LaTeX Info: Redefining \nameref on input line 28.
- (./ordliste.out) (./ordliste.out)
+LaTeX Info: Redefining \ref on input line 26.
+LaTeX Info: Redefining \pageref on input line 26.
+LaTeX Info: Redefining \nameref on input line 26.
+ (./cv.out) (./cv.out)
 \@outlinefile=\write5
-\openout5 = `ordliste.out'.
+\openout5 = `cv.out'.
 
- (./ordliste.toc
-[1
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 34.
+
+(/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/base/oms
+cmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 34.
+
+Overfull \hbox (5.99672pt too wide) in paragraph at lines 45--46
+[]\T1/cmr/m/n/10.95 ``An In-ter-dis-ci-plinary Ap-proach to Ten-sor De-com-po-s
+i-tion'', 2014. Trento,
+ []
+
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 53.
+
+(/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/base/t1c
+mtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 57.
+ [1
 
 {/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-var/fonts/map/pdftex/up
-dmap/pdftex.map}])
-\tf@toc=\write6
-\openout6 = `ordliste.toc'.
+dmap/pdftex.map}]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 57.
+ (./cv.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 57.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 57.
 
- <xymatrix 2x2 216> <xymatrix 2x2 137> [2] [3] [4] [5]
-[6] [7]
-Overfull \hbox (29.00937pt too wide) in paragraph at lines 281--282
-\T1/cmr/m/n/10.95 di-men-sion $\OML/cmm/m/it/10.95 d$\T1/cmr/m/n/10.95 , and $\
-OMS/cmsy/m/n/10.95 L$ \T1/cmr/m/n/10.95 is an [][]am-ple[][] in-vert-ible sheaf
- on $\OML/cmm/m/it/10.95 X$\T1/cmr/m/n/10.95 , then $[]$
- []
 
-[8] [9] [10]
-LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
-(Font)              scaled to size 15.76802pt on input line 351.
-LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
-(Font)              scaled to size 17.28003pt on input line 351.
- [11] [12] [13] [14] [15] <xymatrix 6x3 265> [16] <xymatrix 2x2
-141>
-Overfull \hbox (47.62799pt too wide) in paragraph at lines 561--563
-\T1/cmr/m/n/10.95 is com-mu-ta-tive. Thus we have a nat-u-ral iso-mor-phism $[]
-[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 B; M\OT1/cmr/m/n/10.95 ) = [][](
-[]\OML/cmm/m/it/10.95 ; M\OT1/cmr/m/n/10.95 )$\T1/cmr/m/n/10.95 .
- []
+Package rerunfilecheck Warning: File `cv.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
-<xymatrix 3x1 96> [17]
-LaTeX Font Info:    Try loading font information for U+euf on input line 592.
-
-(/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/amsfonts
-/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [18] [19] <xymatrix 3x2 179> [20] [21] [22]
-Overfull \hbox (30.13066pt too wide) in paragraph at lines 757--758
-[]\T1/cmr/m/n/10.95 It re-main to com-pute the Hodge num-bers. We start with $\
-OML/cmm/m/it/10.95 h[] \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 H[]\OT1/cm
-r/m/n/10.95 (\OML/cmm/m/it/10.95 Y; \OT1/cmr/m/n/10.95 
-[])$\T1/cmr/m/n/10.95 .
- []
-
-[23] (./ordliste.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 789.
- [24]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 789.
- (./ordliste.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 789.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 789.
-Package rerunfilecheck Info: File `ordliste.out' has not changed.
-(rerunfilecheck)             Checksum: DE681247F8E6572E85A637B4983879A4;1682.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 789.
+Package rerunfilecheck Info: Checksums for `cv.out':
+(rerunfilecheck)             Before: A7F5F362BEBC29EBA768BF4AAB569961;105
+(rerunfilecheck)             After:  D4B1BA813F197C596AA040BE26AAA111;152.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 57.
  ) 
 Here is how much of TeX's memory you used:
- 18911 strings out of 493308
- 320840 string characters out of 6135157
- 435020 words of memory out of 5000000
- 21743 multiletter control sequences out of 15000+600000
- 23841 words of font info for 74 fonts, out of 8000000 for 9000
+ 19941 strings out of 493308
+ 347278 string characters out of 6135157
+ 459218 words of memory out of 5000000
+ 22943 multiletter control sequences out of 15000+600000
+ 16099 words of font info for 57 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,15n,55p,3264b,744s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,6n,63p,3258b,337s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/enc/dvips/
 cm-super/cm-super-t1.enc}</mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texm
-f-dist/fonts/type1/public/calligra-type1/callig15.pfb></mn/anatu/modules/opt/te
-xlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
-/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmex10.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-
-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></mn/anatu/modules/opt/texli
-ve/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></mn
-/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi6.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi8.pfb></mn/anatu/modules/opt/texlive/2013-u
-io/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></mn/anatu/mod
-ules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr6.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr8.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></mn/anatu/modules/opt/te
-xlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy6.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></mn/anatu/modules/opt/texlive/201
-3-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></mn/an
-atu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfon
-ts/symbols/msbm10.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-d
-ist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></mn/anatu/modules/opt/texliv
-e/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></mn/anatu/m
-odules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sf
-bx1095.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/t
-ype1/public/cm-super/sfbx1200.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-t
-exmf/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></mn/anatu/modules/opt
-/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb
-></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/publi
-c/cm-super/sfrm1200.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf
--dist/fonts/type1/public/cm-super/sfrm1728.pfb></mn/anatu/modules/opt/texlive/2
-013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></mn/anat
-u/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/xypic/xy
-atip10.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/t
-ype1/public/xypic/xybtip10.pfb>
-Output written on ordliste.pdf (24 pages, 404752 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></mn/anatu/modules/opt/texlive
+/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></mn/an
+atu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-sup
+er/sfrm1095.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fo
+nts/type1/public/cm-super/sfrm1200.pfb></mn/anatu/modules/opt/texlive/2013-uio/
+uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></mn/anatu/module
+s/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sftt109
+5.pfb>
+Output written on cv.pdf (1 page, 83128 bytes).
 PDF statistics:
- 582 PDF objects out of 1000 (max. 8388607)
- 523 compressed objects within 6 object streams
- 175 named destinations out of 1000 (max. 500000)
- 229 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 PDF objects out of 1000 (max. 8388607)
+ 41 compressed objects within 1 object stream
+ 5 named destinations out of 1000 (max. 500000)
+ 29 words of extra memory for PDF output out of 10000 (max. 10000000)
 

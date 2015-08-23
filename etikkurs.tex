@@ -1,0 +1,111 @@
+\documentclass[12pt, norsk]{article}
+\linespread{1.3}
+\usepackage[tmargin=1in,bmargin=1in,lmargin=1.25in,rmargin=1.25in]{geometry}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}   % S P R A A K
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{calc}
+%\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+%\usepackage[a5paper,margin=0.5in]{geometry}
+
+
+\begin{document}
+\title{Matematisk platonisme og den praktiserende matematiker}
+\author{Fredrik Meyer}
+\maketitle 
+
+\abstract{
+Vi snakker løst om matematisk platonisme, snakker litt om Kurt Gödel og hans teoremer, og ser på hvordan praktiserende matematikere ser på matematikk.
+}
+
+\section{Matematisk platonisme}
+
+La oss sette oss i rollen til en matematiker. Vi kan definere en matematiker som en person hvis jobb det er å manipulere matematiske objekter. Allerede nå støter vi på et problem, ettersom det ikke er åpenbart hva  begrepet ``matematiske objekter'' refererer til. Hva slags objekter er det snakk om? Er de fysiske eller abstrakte? Eksisterer de, eller er de bare en mental konstruksjon?
+
+Dette er fundamentale spørsmål for en matematikkfilosof. Grovt sett finnes det to ekstreme standpunkter en kan ta. Vi kan bestemme oss for at matematikk kun er en formell ``lek'', hvor brikkene er symboler som vi flytter rundt på etter visse regler. Dette er altså \emph{formalisme}, som er standpunktet David Hilbert tok \cite{hilbert_quote}:
+
+\begin{quote}Mathematics is a game played according to certain simple rules with meaningless marks on paper.
+\end{quote}
+
+Matematikk blir som et parti sjakk, hvor et teorem korresponderer til en oppnåelig posisjon på brettet. De matematiske objektene får først mening når en anvender dem på fysiske problemer. Derfor kan en formalist være tilfreds med påstander uten sannhetsverdier (som kontinuumshypotesen, som vi skal snakke litt om etterhvert).
+
+Den andre ekstreme retningen en kan ta, er å tro på \emph{matematisk platonisme}. En matematisk platonist hevder at matematiske objekter er abstrakte objekter som har en objektiv eksistens uavhengig av det oppdagende mennesket.
+
+Øystein Linnebo skriver i artikkelen \cite{platonism} at matematisk platonisme kan ses på som snittet av de tre påstandene ``det eksisterer matematiske objekter'', ``matematiske objekter er abstrakte'', og ``matematiske objekter er uavhengige av intelligente agenter og deres språk, tanker og arbeider''. Hver for seg er disse påstandene rimelig uskyldige, men sammen skaper de litt forklaringsproblemer. Kombinerer vi nummer en og nummer to, hevder vi eksistensen av abstrakte objekter som matematikere jobber med. På hvilken måte kan vi få kunnskap om abstrakte objekter? Om vi dessuten også hevder at disse objektene er uavhengig av matematikeren, hevder vi at det finnes abstrakte matematiske objekter som eksisterer i en "uavhengig, ikke-fysisk verden". Dette vil mange hevde grenser til teologi. Nøyaktig hva er utforskningsmekanismen? Hva betyr det at påstander om abstrakte objekter har en sannhetsverdi? 
+
+Litt satt på spissen kan vi si at en formalist vil hevde at matematikere \emph{finner opp} matematikk, mens en platonist vil hevde at det matematikere gjør er å \emph{oppdage} matematikken.
+
+\section{Kontinuumshypotesen og Kurt Gödel}
+
+På slutten av 1800-tallet og begynnelsen av 1900-tallet begynte det å bli klart at mengdelære var den beste kandidat-teorien til et grunnlag for all matematikk. I mengdelære starter man med relativt få aksiomer om \emph{mengder}, som intuitivt skal modellere samlinger av objekter. Den vanligste aksiom-samlingen kalles for \emph{Zermelo-Fraenkel-aksiomene med utvalgsaksiomet}, som regel forkortet ZFC \cite{wiki_zfc}. Vi trenger ikke gå inn på nøyaktig hva disse aksiomene sier her, men nøyer oss med å si at dette er kraftige nok aksiomer til å utlede omtrent all moderne matematikk, og da spesielt \emph{aritmetikk}, eller elementær tallteori.
+
+Hilberts store ønske var å vite at all matematikk kunne hvile på en formell grunn - at alle teoremer kunne utledes fra et lite knippe aksiomer. Spesielt ønsket man å vite om aritmetikken var både \emph{komplett} og \emph{konsistent}. Et system er komplett om alle dets sanne påstander er bevisbare, og et system er konsistent om det ikke er mulig å utlede noen selvmotsigelser. 
+
+Logikeren Kurt Gödel sjokkerte den matematiske verden da han publiserte sine \emph{ufullstendighetsteoremer} i 1931 i \cite{godel_formal}. Dette er to resultater som sier noe om nettopp komplettheten og konsistensen til aritmetikk (og alle systemer som inneholder aritmetikk). Gödels første ufullstendighetsteorem sier at enhver sterk nok matematisk teori ikke kan være både konsistent og komplett. Siden vi gjerne ønsker konsistente teorier, så følger det at enhver konsistent teori er ikke-komplett: det finnes sanne påstander som ikke er mulig å bevise uten å legge til nye aksiomer. 
+
+Hilberts drøm ble dermed knust. Om aritmetikk er konsistent er den ikke-komplett. Det vil alltid finnes matematiske sannheter som er uoppnåelige med mindre vi legger til nye aksiomer.
+
+Gödels andre ufullstendighetsteorem sier noe lignende: en matematisk teori kan aldri bevise sin egen konsistens. Med andre ord, om aritmetikk er konsistent, kan vi bare håpe på å vise dette ved hjelp aksiomer utenfor aritmetikken.
+
+La oss si noen ord om hvordan Gödels beviste sitt første teorem (det andre følger som en relativ enkel konsekvens). Det Gödel gjør, er å formalisere setningen ``Denne setningen er usann'', kjent som ``løgnerparadokset''. Gödel utvikler et rimelig teknisk infløkt system for å oversette setninger og teoremer i et formelt språk til såkalte ``Gödel-tall''. Oversettelsen er slik at logiske deduksjoner svarer til aritmetiske operasjoner på naturlige tall. Dermed, om vårt logiske system er sterkt nok til å uttrykke aritmetikk, har det nå muligheten til å snakke om seg selv, siden sine egne sanne påstander er visse tall definert ved aritmetiske egenskaper. En formalisering av disse ideene leder til beviset av Gödels teorem.
+
+Det er populært i populærvitenskapelig og populærfilosofisk litteratur å finne dype filosofiske konsekvenser av Gödels teoremer. For eksempel hevder Roger Penrose ved hjelp av Gödels teoremer i sin bok ``The Emperor's New Mind'' \cite{penrose_emperor} at hjernen vår ikke kan være algoritmisk, og kan derfor ikke modelleres av en Turing-maskin.
+
+Vi kan avslutte med et sitat fra \cite{godel_online}:
+\begin{quote}
+Sometimes quite fantastic conclusions are drawn from Gödel's theorems. It has been even suggested that Gödel's theorems, if not exactly prove, at least give strong support for mysticism or the existence of God. These interpretations seem to assume one or more misunderstandings which have already been discussed above: it is either assumed that Gödel provided an absolutely unprovable sentence, or that Gödel's theorems imply Platonism, or anti-mechanism, or both.
+\end{quote}
+
+Som en platonist, hva tenkte Gödel om sine teoremer? Gödel så ingen motsetning mellom platonisme og et teorem som hevdet at det finnes påstander som ikke er bevisbare. Han mente at en del av jobben til en matematiker er ikke bare å utlede resultater fra aksiomene, men også å finne ``de rette'' aksiomene. Han følte at enhver matematisk påstand har en faktisk sannhetsverdi, så om vi fant en påstand som var ubestemmelig i et gitt system, var det bare fordi vi ikke hadde lagt til de riktige aksiomene ennå.
+
+Vi skal utdype dette litt i et eksempel: kontinuumshypotesen. Kontinuumshypotesen er en påstand i mengdelære og handler om \emph{størrelsen} på mengder. Georg Cantor lærte oss at uendeligheter kommer i forskjellige størrelser. Den første uendeligheten er størrelsen til mengden av de naturlige tallene, betegnet $\aleph_0$ ("aleph null"). Lager vi så de reelle tallene (desimaltall, som for eksempel $\pi$ og $e$ og $\sqrt 2$), får vi en uendelighet som er større, betegnet $2^{\aleph_0}$. Vi definerer $\aleph_1$ til å være den neste uendeligheten, og det kan da vises at kontinuumshypotesen er ekvivalent med spørsmålet $2^{\aleph_0}=\aleph_1$. 
+
+I 1963 ble det vist av Paul Cohen (sammen med tidligere resultater av Gödel) at kontinuumshypotesen er \emph{uavhengig} av ZFC i betydningen at verken den eller dens negasjon kan bevises i ZFC. En formalist ville tolket dette som at kontinuumshypotesen ikke har noe bestemt svar, og om vi legger til flere aksiomer, er det uten betydning om vi legger til kontinuumshypotesen eller dens negasjon.
+
+Gödel derimot, hevder i \cite{godel_continuum}, at dette bare betyr at aksiomlisten vår er for liten, og at spørsmålet har et definitivt ja/nei-svar. For eksempel avslutter han med følgende sitat:
+\begin{quote}
+Therefore one may on good reason suspect that the role of the continuum problem in set theory w ll be this, that it will finally lead to the discovery of new axioms which will make it possible to disprove Cantor's conjecture.
+\end{quote}
+
+Gödel er altså et eksempel på en matematiker som vil hevde at han \emph{oppdager} matematikk.
+
+
+\section{Tanker fra den praktiserende matematiker}
+
+... og for den praktiserende matematiker, er det akkurat slik det \emph{føles} å gjøre matematikk. Dette er ihvertfall det en uformell undersøkelse forfatterne og referansene til boken `` The mathematical experience'' \cite{mathematical_experience} hevder (og undertegnede kan si seg enig). 
+
+Jeg vil dele noen tanker om hvordan matematikk \emph{oppleves}. Det å lære seg ny matematikk kan sammenlignes med å lese en turistguide for en ny by. Etterhvert som man blir mer kjent med matematikken, blir det som å besøke byen, og etterhvert begynner man også å kjenne bakgatene.
+
+Vi kan gjøre metaforen noe mer konkret. La oss si at en lærer seg ikke-euklidsk geometri. Dette er en type geometri hvor parallelle linjer ikke finnes: alle linjer vil krysse. Her gjelder andre romlige regler og teoremer, og å lese om dette vil for en matematiker føles som å oppdage et nytt land.
+
+Også når en matematiker beviser teoremer, skjer dette som regel etter lengre utforsking over ``dette landets'' regler. Mange matematikere vil derfor si de ``oppdager'' teoremene de beviser.
+
+Men det viser seg at det ofte er en forskjell på hvordan man intuitivt tenker på et problem og hva man tør innrømme offentlig. Et sitat fra \cite[side 359]{mathematical_experience} går som følger: 
+
+\begin{quote}
+Most writers on the subject seem to agree that the typical mathematician is a Platonist on weekdays and a formalist on Sundays. That is, when he is doing mathematics he is convinced that he is dealing with an objective reality whose properties he is attempting to determine. But then, when challenged to give a philosophical account of his reality, he finds it easiest to pretend that he does not believe in it after all.
+\end{quote}
+
+Det er vanskelig å finne overbevisende argumenter for matematisk platonisme, så av de matematikerne som har tenkt filosofisk på disse spørsmålene, vil nok de færreste påstå at matematiske objekter faktisk eksisterer uavhengig av oss mennesker, men heller lene seg mot formalisme i en eller annen grad.
+
+
+\bibliographystyle{alpha} 
+\bibliography{bibliografi}
+
+\end{document}
