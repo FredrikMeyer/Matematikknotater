@@ -21,7 +21,13 @@ David Hilbert.
 \newblock {Quotations by David Hilbert}.
 \newblock \url{http://www-history.mcs.st-and.ac.uk/Quotations/Hilbert.html},
   2013.
-\newblock [Online; accessed 30-July-2015].
+\newblock [Online; sett 30-7-2015].
+
+\bibitem[Lin]{linnebo_artikkel}
+Østein Linnebo.
+\newblock The nature of mathematical objects.
+\newblock \url{http://www.oysteinlinnebo.org/nmo.pdf}.
+\newblock Sett: 27-10-2015.
 
 \bibitem[Lin13]{platonism}
 Øystein Linnebo.
@@ -45,6 +51,6 @@ Panu Raatikainen.
 Wikipedia.
 \newblock Zermelo–fraenkel set theory --- wikipedia{,} the free encyclopedia,
   2015.
-\newblock [Online; accessed 30-July-2015].
+\newblock [Online; sett 30-07-2015].
 
 \end{thebibliography}
