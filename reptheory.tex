@@ -313,4 +313,38 @@ Show that the $S$ defined in the proof of Theorem \eqref{thmdensity} lies in $\T
  This is, I think, definition-hunting. DETAILS COME LATER
 \end{sol}
 
+\section{Some worked examples}
+
+\subsection{The representation ring of $S_3$}
+
+We want to explicitly compute the representation ring of $S_3$.
+
+First we find all irreducible representations. The first one is the trivial representation $\epsilon:S_3 \to \C$. We also have the \emph{sign} representation given by $g \mapsto  sgn(g) \in \C $. Both of these are one-dimensional representations.
+
+$S_3$ have a natural action on $\R^3$ given by permuting the basis vectors. But it acts trivially on the subspace spanned by $e_1+e_2+e_3$, hence $\R^3$ decomposes as $\epsilon \oplus V$, where $V$ is some $2$-dimensional representation. It is irreducible: if not, any $v \in V$ would be sent to a scalar multiple of itself, but this is not the case. This representation is called the \textbf{standard representation} of $S_3$. We have also now found all representations of $S_3$, since $1^2+1^2+2^2=6$. 
+
+Thus the representation ring $R(S_3)$ is $\Z[A,S]$ modulo some relations to be found. Here $A$ is the alternating representation and $S$ is the standard representation. The trivial representation is $1$. It is easy to see that $A \otimes A \sim \epsilon$, so $A^2=1 \in R(S_3)$. The representation $S \otimes S$ is $4$-dimensional. To compute how it decomposes, we use character theory.
+
+Recall that characters are class functions on $G$, that is, they only depend on the conjugacy classes of $G$. So we write a character table:
+
+\begin{center}
+\begin{tabular}{ r | c c  c }
+ & $e$ & $\tau$ & $\sigma$ \\
+\hline
+$\epsilon$ & 1 & 1 & 1  \\
+$A$ & 1 & 1 & -1 \\
+$S$ & 2 & -1 & 0 \\
+\end{tabular}
+\end{center}
+
+To compute the character of the standard representation, we first note that it is, as a vector space given by $\R^3/(1,1,1)$. A basis is then given by the images of $e_1,e_2$. Let $\tau$ be the transposition $(123)$, sending $e_i$ to $e_{i+1}$. Let $\sigma$ be reflection fixing $e_1$ and exchanging $e_2$ and $e_3$. In this basis that means $e_2$ is sent to $-e_1-e_2$. Writing up the corresponding matrices lets us find the value of the character.
+
+Now one can compute by hand (or use a result on characters), that the character of $S \otimes S$ is given by $\chi_S \cdot \chi_S$, so that its entry in the character table is $(4,1,0)$. If $S \otimes S = V_1 \oplus V_2$, then $\chi_S = \chi_{V_1} + \chi_{V_2}$. Using also that the characters are linearly independent, we see that the only option is $S \otimes S \sim \epsilon \oplus A \oplus S$.
+
+Hence $S^2=1+A+S$ in the representation ring. Similarly, we find that $AS=S$ in the representation ring. All in all
+$$
+R(S_3) = \Z[A,S]/(A^2-1,S^2-1-A-S,AS-S).
+$$
+
+
 \end{document}
