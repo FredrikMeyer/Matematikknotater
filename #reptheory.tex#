@@ -276,8 +276,24 @@ It is the avering trick again. First observe that if $T:V_\theta \to V_\pi$ is a
 \[
 \frac{1}{\lvert G \rvert} \sum_{g \in G} \pi(g) T \theta(g^{-1}) 
 \]
-is in $\Hom_G(\theta,\pi)$.
+is in $\Hom_G(\theta,\pi)$. 
+
+First assume $\pi \not \sim \theta$. Then any $T$ as above is zero by Schur. Define $T$ by $T(v) = \rho(v)x$. Then
+$$
+0 = f(Sy) = \frac{1}{\lvert G \rvert} \sum_{g \in G} \alpha_{f,x}^\pi(g) \alpha_{\rho,y}^\theta(g^{-1}).
+$$
+
+Now consider the case $\theta=\pi$. Then the $T$ above is in $\End(\pi) = \C$. 
+
+We use this proof to introduce some new notation and concepts. If $f_1,f_2 \in \C[G]$, we define their \textbf{convolution product} by the following formula
+\[
+(f_1 \ast f_2)(g) = \sum_h f_1(h)f_2(h^{-1}g).
+\]
+We have $f_{g_1}$.................. [resten kommer]
 \end{proof}
+
+\section{Lecture 3}
+Where does the name ``orthogonality relations'' come from? 
 
 
 \appendix
