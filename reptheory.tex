@@ -194,7 +194,8 @@ $$
 \End(\pi) = \{ T \in \End(V) \mid T\pi(g) = \pi(g) T \, \forall \, g \in G \} = \C \cdot \id_V.
 $$
 
-\begin{thm}
+\begin{thm}[The density theorem]
+\label{thmdensity}
  Assume $\pi_1,\ldots,\pi_n$ are pairwise inequivalent irreducible representations, with $V_i = V_{\pi_i}$. Consider the direct sum representation $V_1 \oplus \ldots \oplus V_n$.
 
 Then
@@ -220,8 +221,7 @@ We call $X'$ the \textbf{commutant} of $X$. Thus if $(V,\pi)$ is a representatio
 \End(\pi) = \pi(G)'.
 \]
 
-\begin{thm}
-\label{thmdensity}
+\begin{thm} 
  For any finite-dimensional representation $(V,\pi)$ we have 
 \[
 \pi(G)'' = \Span{\pi(G)}.
@@ -274,9 +274,99 @@ for all $f \in V_\pi^\ast$, $\rho \in V_\theta^\ast$, $x \in V_\pi$ and $y \in V
 \begin{proof}
 It is the avering trick again. First observe that if $T:V_\theta \to V_\pi$ is any linear operator, then 
 \[
-\frac{1}{\lvert G \rvert} \sum_{g \in G} \pi(g) T \theta(g^{-1}) 
+S = \frac{1}{\lvert G \rvert} \sum_{g \in G} \pi(g) T \theta(g^{-1}) 
 \]
-is in $\Hom_G(\theta,\pi)$.
+is in $\Hom_G(\theta,\pi)$ by averaging. Thus, since $\pi$ and $\theta$ are in-equivalent, it follows from Schur's lemma that this must be zero.
+
+Now let $T(v) = \rho(v)x$. This is a linear operator. Then
+$$
+0 = f(Sy) = \frac{1}{\lvert G \rvert} \sum_g \alpha_{f,x}^\pi (g) \alpha_{\rho,y}^\theta(g^{-1}).
+$$
+This proves part $1$.
+
+Now suppose $\pi=\theta$. Then $S \in \End(\pi) = \C \cdot \id_V$. Thus $S = \alpha \cdot \id_V$. Taking traces on both sides, we get $\alpha = Tr T/\dim \pi$ (note that $T$ and $S$ have the same trace).
+
+Then
+$$
+\frac 1{\lvert G \rvert} \sum_g \alpha_{f,x}^\pi(g) \alpha_{\rho,y}^\pi(g^{-1}) = f(S(y)) = f(y) \frac{Tr T}{\dim \pi}
+$$
+(make this nicer some time)
+\end{proof}
+
+Instead of writing expressions like $\sum_g \alpha_g \pi(g)$ it is convenient to introduce the following notation. Define the \textbf{convolution} of two functions $f_1,f_2 \in \C[G]$ by
+$$
+(f_1 \ast f_2)(g) = \sum_{g=g_1g_2} f_1(g_1)f_2(g_2) = \sum_{h \in G} f_1(h)f_2(h^{-1}g).
+$$
+We have $\delta_{g_1} \ast \delta_{g_2} = \delta_{g_1g_2}$ (easy check!). The convolution product is associative and makes $\C[G]$ into an algebra, called the \textbf{group algebra} of $G$. 
+
+Given a representation $\pi:G \to \GL(V)$ we can define an algebra homomorphism $\C[G] \to \End(V)$ by $\pi(f) = \sum_{g \in G} f(g) \pi(g)$. Thus $V$ becomes a left $\C[G]$-module. Conversely, given any united algebra homomorphism $\pi:\C[G] \to \End(V)$, we get a representation by $g \mapsto \pi(\delta_g)$. Thus we have a correspondence between representations of $G$ and left $\C[G]$-modules. Using these notions, the Density Theorem (Theorem \ref{thmdensity}) becomes $\pi(\C[G]) = \oplus_i \End(V_i)$.
+
+\begin{thm}
+Let $\hat G$ be the set of equivalence classes of irreducible representations of $G$. Then $\hat G$ is finite and $\sum_{[\pi] \in \hat G} (\dim \pi)^2 = \lvert G \rvert$. Furthermore, we have
+$$
+\lambda \sim  \bigoplus_{[\pi] \in \hat G} \pi^{\oplus \dim \pi}.
+$$
+Here $\lambda$ is the left regular representation of $G$.
+\end{thm}
+Proof to come later.
+
+\section{Lecture 3 - More on orthogonality}
+
+Where does the name ``orthogonality relations'' come from? We'll see now.
+
+First of all, note that if $V_\pi$ is a representation of a finite group $G$, and $\langle,\rangle'$ is \emph{any} Hermitian scalar product on $V_\pi$, then 
+$$
+\langle v, w \rangle := \frac{1}{\langle G \rangle} \sum_{g \in G} \langle \pi(g) v, \pi(g) w \rangle'
+$$
+is another Hermitian scalar product on $V_\pi$, making the representation \textbf{unitary}.
+
+If $\pi$ is any unitary representation, choose an orthonormal basis $e_1,\ldots,e_n \in V$. Then the matrices $\pi(g) = \left( a_{ij}^\pi(g) \right)$ are unitary matrices. Hence $\overline{a_{ij}^\pi} = a_{ji}^\pi(g^{-1})$.
+
+There is a standard scalar product on $\C[G]$ defined by
+$$
+(f_1,f_2) = \frac 1{\lvert G \rvert} \sum_{g \in G} f_1(g) \overline{f_2(g)}.
+$$
+
+Then the orthogonality relations take the form:
+
+\begin{thm}
+ For every irreducible representation $\pi$ choose an invariant scalar product and an orthonormal basis $\{e_1^\pi, \ldots, e_n^{\dim \pi}$ and corresponding matrix coeffecients $a_{ij}^\pi$. Then the functions $a_{ij}^\pi$ are mutually orthogonal with
+$$
+\left (a_{ij}^\pi, a_{ij}^\pi\right) = \frac{1}{\dim \pi}.
+$$
+\end{thm}
+
+\subsection{Characters of a representation}
+
+Let $(\pi,V)$ be a representation. 
+
+The function $\chi_\pi:G \to \C$ defined by $\tr \pi(g)$ is called the \textbf{character of $\pi$}.
+
+We say that a function $f:G \to \C$ is \textbf{central} if $f(hgh^{-1})=f(g)$ for all $h,g \in G$. Note that characters are central. Also note that $\chi_\pi(e)=\dim \pi$. 
+
+\begin{thm}
+ The characters $\chi_\pi$ (for $[\pi] \in \widehat G$) form an orthonormal basis for the space of central functions on $G$.
+\end{thm}
+\begin{proof}
+ We have
+$$
+\chi_\pi(g) = \sum_{i=1}^{\dim \pi} a_{ii}^\pi(g),
+$$
+and the orthogonality relations show that $\{ \chi_\pi \mid [\pi] \in \widehat G \}$ is an orthonormal system:
+$$
+(\chi_\pi, \chi_\pi) = \sum_{ij}^{\dim \pi} (a_{ii}^\pi, a_{jj}^\pi) = 
+\sum_{i=1}^{\dim \pi} \frac{1}{\dim \pi} = 1.
+$$
+
+Thus we need to show that the characters \emph{span} the space of central functions. Consider the projection $P$ from $\C[G]$ to the space of central functions defined by
+$$
+f \mapsto (Pf)(g) = \frac{1}{\lvert G \rvert }\sum_{h \in G} f(hgh^{-1}).
+$$
+It is obviously a projection. Now consider $P(a_{ij})(g)$ (we skip the upper index $\pi$). Then this is equal to
+$$
+\frac{1}{\lvert G \rvert} \sum_h a_{ij}(hgh^{-1}) = \frac{1}{\lvert G \rvert} \sum_{h \in G} \sum_k \sum_l a_{ik}(h) a_{kl}(g) a_{lj}(h^{-1}).
+$$
+
 \end{proof}
 
 
@@ -311,6 +401,40 @@ Show that the $S$ defined in the proof of Theorem \eqref{thmdensity} lies in $\T
 \end{exc}
 \begin{sol}
  This is, I think, definition-hunting. DETAILS COME LATER
+\end{sol}
+
+\begin{exc}
+  \begin{enumerate}
+  \item Check that indeed 
+$$
+\langle v, w \rangle := \frac{1}{\langle G \rangle} \sum_{g \in G} \langle \pi(g) v, \pi(g) w \rangle'
+$$
+is an invariant Hermitian scalar product.
+\item Show that if $\pi$ is irreducible, then an invariant scalar product is unique up to a factor.
+  \end{enumerate}
+\end{exc}
+
+\begin{sol}
+i). Invariant means that $\langle \pi(h) v, \pi(h) w \rangle = \langle v, w \rangle $. This is clear from the definitions, since if $g \in G$ ranges over all of $G$, then so does $gh$.
+
+The only (slightly) nontrivial thing to check is that $\langle,\rangle$ is positive definite. But this is so.
+
+
+ii) If $\langle,\rangle$ is invariant, then it is an element of $\Hom_G(V \otimes V, \C)$. This is canonically isomorphism to $\Hom_G(V \otimes, V^\ast)$. If we can show that $V$ and $V^\ast$ are isomorphic as representations, then we are done by Schur's lemma. 
+
+But we are given an inner product $\langle , \rangle$. We can define a map $V \to V^\ast$ by sending $v \in V$ to the function $w \mapsto \langle v, w \rangle$. This is clearly a linear isomorphism, and it is also a map of representations. Recall that the action of $G$ on $V^\ast$ is defined by $\pi^\ast(g) \varphi (v) = \varphi(g^{-1} v)$. Then in the diagram
+
+$$
+\xymatrix{
+V \ar[r] \ar[d]^{\cdot g} & V^\ast \ar[d]^{\cdot g} \\
+V \ar[r]  & V^\ast 
+}
+$$
+we want $\langle gv, w \rangle$ to be equal to $\langle v, g^{-1} w \rangle$. But this is true since $\langle ,\rangle$ is invariant:
+$$
+\langle gv, w \rangle = \langle gv g g^{-1} w \rangle = \langle v, g^{-1}w \rangle.
+$$
+Hence $V$ and $V^\ast$ are isomorphic as representations and then $\Hom_G(V,V^\ast)$ (space of bilinear forms) is one-dimensional. 
 \end{sol}
 
 \section{Some worked examples}
