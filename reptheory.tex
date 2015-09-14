@@ -17,6 +17,10 @@
 \usepackage{enumerate}  % lister $
 \usepackage{float}
 \usepackage{tikz}
+
+\usepackage{young} 
+\usepackage{youngtab} 
+
 \usepackage[all]{xy}   % for comm.diagram
 \usepackage{wrapfig} % for float right
 \usepackage[colorlinks=true]{hyperref}
@@ -330,7 +334,7 @@ $$
 Then the orthogonality relations take the form:
 
 \begin{thm}
- For every irreducible representation $\pi$ choose an invariant scalar product and an orthonormal basis $\{e_1^\pi, \ldots, e_n^{\dim \pi}$ and corresponding matrix coeffecients $a_{ij}^\pi$. Then the functions $a_{ij}^\pi$ are mutually orthogonal with
+ For every irreducible representation $\pi$ choose an invariant scalar product and an orthonormal basis $\{e_1^\pi, \ldots, e_n^{\dim \pi}\}$ and corresponding matrix coeffecients $a_{ij}^\pi$. Then the functions $a_{ij}^\pi$ are mutually orthogonal with
 $$
 \left (a_{ij}^\pi, a_{ij}^\pi\right) = \frac{1}{\dim \pi}.
 $$
@@ -366,9 +370,407 @@ It is obviously a projection. Now consider $P(a_{ij})(g)$ (we skip the upper ind
 $$
 \frac{1}{\lvert G \rvert} \sum_h a_{ij}(hgh^{-1}) = \frac{1}{\lvert G \rvert} \sum_{h \in G} \sum_k \sum_l a_{ik}(h) a_{kl}(g) a_{lj}(h^{-1}).
 $$
-
+But after using that the orthogonality relations, this simplifies to
+$$
+\frac{1}{\dim \pi} \delta_{ij} \chi_\pi(g).
+$$
+But the $a_{ij}$ constitute a basis of $\C[G]$. [[HM!? TRUE??]]
 \end{proof}
 
+[[some comment about why the last claim is true...]]
+
+\begin{corr}
+Let $c(G)$ be the number of conjugacy classes in $G$. We have
+$$
+\lvert \widehat G \rvert = c(G).
+$$
+\end{corr}
+\begin{proof}
+ The left hand side is equal to $\dim_\C \text{span}_{\pi \in \widehat G} \{ \chi_\pi \}$. But this is, as just proved, equal to the dimension of the space of central functions.
+\end{proof}
+
+\begin{corr}
+ Two finite-dimensional representations $\pi$ and $\theta$ are equivalent if and only if $\chi_\pi = \chi_\theta$.
+\end{corr}
+\begin{proof}
+  You can read off the multiplicities from the character.
+\end{proof}
+
+\begin{corr}
+ For any $[\pi] \in \widehat G$, the multiplicity of $\pi$ in the regular representation $\lambda$ equals $\dim \pi$.
+\end{corr}
+\begin{proof}
+ We are interested in $(\chi_\lambda, \chi_\pi)$. But note that
+$$
+\chi_\lambda(g) = \sum_{h \in G} \tr ( \delta_h \mapsto \delta_{hg} ) = \begin{cases} 0 & \text{ if } g \neq e \\
+\lvert G \rvert & \text{ if } g = e.
+\end{cases}
+$$
+Then $(\chi_\lambda,\chi_\pi) = \frac{1}{\lvert G \rvert} \chi_\lambda(e) \cdot \overline{\chi_\pi(e)} = \dim \pi$.
+\end{proof}
+
+\subsection{Isotypic component and can. decomposition of $V$}
+
+[[isotypic component ...]]
+
+\section{Lecture 4 - The Frobenius determinant problem}
+
+Let $G$ be a finite group and $\C[x_g \mid g \in G]$ the algebra on generators indexed by $g \in G$. Then one can form the following determinant:
+$$
+P_G  = \det \left( (x_{gh})_{gh} \right).
+$$
+It is the determinant of the multiplication table of $G$. The problem is to decompose $P_G$ into irreducible polynomials.
+
+It is conventient to instead work with $\widetilde{P_G}=\det( {(x_{gh^{-1}})}_{gh})$. This has the same determinant as $P_G$ up to multiplication by $\pm 1$ since this just corresponds to permuting some of rows of the multiplication table.
+
+Now here comes the \emph{key} observation: the matrix $(x_{gh^{-1}})$ is the matrix of the operator 
+$$
+\sum_{g \in G} x_g \lambda(g)
+$$
+in the basis $\delta_g \in \C[G]$. Here you are supposed to view elements of $\C[x_g \mid g \in G]$ as \textbf{functions} on $G$.
+
+That this operator actually has matrix $(x_{gh^{-1}})$ can be seen by applying the operator to basis elements:
+$$
+\left(\sum_{g \in G} x_g \lambda(g)\right)(\delta_h) = \sum{g \in G} x_g \delta_{gh}
+$$
+by definition of the left regular action. Reparametrizing this last sum by setting $g' = gh$ we get
+$$
+\sum_{g \in G} x_g \delta_{gh} = \sum_{g' = gh} x_{gh^{-1}} \delta_g,
+$$
+as wanted.
+
+Now, the regular representation decomposes as
+$$
+\lambda \sim \bigoplus_{[\pi] \in \widehat G}  \pi^{\oplus \dim \pi}
+$$
+Hence the determinant decomposes as well (since the operator is $G$-invariant) and we get
+$$
+\widehat{P_G} = \prod_{[\pi] \in \widehat G} \det\left( \sum_{g \in G} x_g \pi(g) \right)^{\dim \pi}
+$$
+
+The question is now of course if we can decompose further. The answer is no:
+
+\begin{thm}[Frobenius]
+The polynomials $\det\left(\sum_{g \in G} x_g \pi(g) \right)$ ($[\pi] \in \widehat G$) are irreducible and no two of them are associates.
+\end{thm}
+
+We begin with a lemma:
+\begin{lemma}
+ The polynomial $p=\det (x_{ij})$ is irreducible.
+\end{lemma}
+
+\begin{proof}
+  To come.
+\end{proof}
+
+\begin{proof}[Proof of theorem]
+  
+Suppose that $P_\pi=p_1p_2$. The polynomials $p_1,p_2$ are homogeneous. Fix a basis $e_1,\ldots,e_n$ in $V_\pi$. Consider the corresponding matrix units $m_{ij}$ defined by
+$$
+m_{ij} e_k = \delta_{jk}e_i.
+$$
+Since $\pi(\C[G]) = \End(V_\pi)$ by the density theorem,we can find $a_{ij}(g) \in \C$ such that
+$$
+m_{ij} = \sum_{g \in G} \alpha_{ij}(g) \pi(g).
+$$
+
+Consider the ring map $\C[x_g \mid g \in G] \to \C[x_{ij}]$ defined by
+$$
+x_g \mapsto \sum_{ij} \alpha_{ij}(g) x_{ij}.
+$$
+
+Under this map the operator $\widehat{P_G}$ becomes
+$$
+\sum_{g \in G} x_g \pi(g) = \sum_{g \in G} \sum_{i,j} \alpha_{ij}(g) x_{ij} \pi(g) = \sum_{ij} m_{ij} x_{ij} = (x_{ij}).
+$$
+
+Since the determinant is functorial with respect to ring maps, a decomposition $P_G=p_1p_2$ would induce a decomposition of $\det (x_{ij})$, which was just proved to be impossible.
+
+We still have to check that no two of the determinants are equal (up to associates). But note that $\restr{P_\pi}{x_g = 0, g \neq e}=x_e^{\dim \pi}$. So we can recover the dimension of $\pi$ from the determinant. Also note that if we fix $g \in G$, then
+$$
+\restr{P_\pi}{x_e=1, x_h =0 \text{ for } h \neq g} = \det(1+x_g\pi(g))=1+\tr \pi(g)x_g + h.o.t.
+$$,
+so we can recover the trace as well. But a representation is determined by its character, so if the polynomials are equal, then the representations are equivalent. The converse is similar.
+\end{proof}
+
+\subsection{Two constructions on representations}
+
+Recall that the tensor product of $V$ and $W$ have a basis $v_i \otimes v_j$. Hence $\dim_\C V \otimes W = \dim_\C V \cdot \dim_\C W$.
+
+Assume $(V,\pi)$ is a finite-dimensional representation and consider $V^\ast = \Hom_\C(V,\C)$. Then we define the \textbf{contragradient representation} $\pi^c$ to be the representation of the dual space defined by 
+$$
+(\pi(g)f)(v) = f(\pi(g^{-1})v).
+$$
+
+If $v_1,\ldots,v_n$ is a basis for $V$ and $\pi(g)=(a_{ij}(g))$, then in this basis 
+$$
+\pi^c(g) = (a_{ji}(g^{-1}))_{ij}.
+$$
+In particular, the character  $\chi_{\pi^c}(g)=\chi_\pi(g^{-1})=\overline{\chi_\pi(g)}$. 
+
+Also, we can define the \textbf{tensor product of two representations} $\pi$ and $\theta$ by $(\pi \otimes \theta)(g)(v \otimes w) = \pi(g)v \otimes \theta(g)w$. 
+
+See the exercises for some properties.
+
+Also: $\Hom(U, W \otimes V^\ast)= \Hom(U \otimes V, W)$. 
+
+Frobenius reciprocity:
+$$
+\Mor(\pi, \eta \otimes \theta^c) \simeq \Mor(\pi \otimes \theta, \eta).
+$$
+
+Denote by $R(G)$ the abelian group generated by classes $[\pi] \in \widehat G$ of finite-dimensional representations and relations $[\pi]+[\pi'] = [\pi \oplus \pi']$.  Then it is an exercise to show that $R(G)$ is a free abelian group with basis $[\pi] \in \widehat G$.
+
+Via the tensor product we can form a product on $R(G)$, making it into a ring.
+
+
+\section{Lecture 5 - Dimension of irreps and the symmetric group}
+
+Recall that $$
+\sum_{[\pi] \in \widehat G} (\dim \pi)^2 = \lvert G \rvert. $$
+
+In this lecture we will prove the following theorem:
+
+\begin{thm}
+\label{thmzg}
+ The dimension of any irreducible representation divides the number $\lvert G/Z(G) \rvert$, where $Z(G)$ is the center of $G$. 
+\end{thm}
+Later we will strengthen this and show that $Z(G)$ can be replaced by any normal abelian subgroup of $G$.
+
+In order to prove this, we need to introduce some results from commutative algebra. Let $R$ be a unital commutative ring and $S \subset R$ a united subring. Then we say that an element $a \in R$ is \textbf{integral over $S$} if it satisfies a monic polynomial $a^n+s_1a^{n-1}+\ldots+s_{n-1}=0$ with coefficients in $S$.
+
+We say that a complex number integral over $\Z$ is an \textbf{algebraic integer}. An integral domain $S$ is called \textbf{integrally closed} if any element in the fraction field of $S$ integral over $S$ is already in $S$. It is an easy exercise to see that $\Z$ is integrally closed (and in fact any UFD). 
+
+\begin{lemma}
+ Let $S \subset R$ be as above. Then $a \in R$ is integral over $S$ if and only if the subring $S[a]$ is a finitely-generated $S$-module.
+\end{lemma}
+\begin{proof}
+This is Proposition 5.1 in Atiyah-MacDonald.
+\end{proof}
+
+It is an exercise to see that the set of elements of $R$ integral over $S$ actually form a ring. Alternatively, consult Corollary 5.3 in Atiyah-MacDonald.
+
+\begin{prop}
+ Assume that $\pi$ is an irreducible representation. Let $g \in G$. Let $C(g)$ be the conjugacy class of $G$. Then
+ \begin{enumerate}
+ \item The number $\chi_\pi(g)$ is an algebraic integer.
+\item The number $\frac{\lvert C(g) \rvert}{\dim \pi} \chi_\pi(g)$ is also an algebraic integer.
+ \end{enumerate}
+\end{prop}
+\begin{proof}
+i). Since $G$ is finite, we have $g^n=e$ for some $n$. Hence all eigenvalues of $g$ are $n$th roots of unity which are algebraic integers. But $\chi_\pi(g)$ is the sum of the eigenvalues, and the set of algebraic integers form a subring of $\C$, hence $\chi_\pi(g)$ is an algebraic integer as well.
+
+The second part is more difficult. Let $p$ be the characteristic function of $C(g)$. Then $p$ lies in the center of $\C[G]$. Consider the subring $\Z[G] \subset \C[G]$ (the \textbf{group ring} of $G$). Let $R \subset \Z[G]$ be the subring of \emph{central functions}. As $R$ is a finitely generated abelian group, any element of $R$ is integral over $\Z \cdot 1 \subset R$. 
+
+It follows that $\pi(p)$ is integral over $\Z \cdot \id_{V_\pi} \subset \End(V_\pi)$. Since $p$ is central $\pi(p) \in \End_G(V_\pi)=\C \cdot 1$. Hence $\pi(p) = \alpha \cdot 1$ for some complex number $\alpha$. This $\alpha$ is an algebraic integer.
+
+But now
+\begin{align*}
+  \alpha \cdot \dim \pi &= \tr( \alpha \cdot 1) \\
+&= \tr \pi(p) \\
+&= \sum_{h \in C(g)} \tr \pi(h) \\
+&= \sum_{h \in C(g)} \chi_\pi(h) \\
+&= \lvert C(g) \rvert \chi_\pi(g).
+\end{align*}
+The last equality is because characters are constant on conjugacy classes. This proves the claim.
+\end{proof}
+
+\begin{lemma}
+ If $\pi$ is irreducible, then $\dim \pi \mid \lvert G \rvert$.
+\end{lemma}
+\begin{proof}
+Recall that
+$$
+(\chi_\pi , \chi_\pi) = 1.
+$$
+This can be rewritten as
+$$
+\frac{\lvert G \rvert}{\dim \pi} = \sum_{g \in G} \frac{\chi_\pi(g) \chi_\pi(g^{-1})}{\dim \pi}.
+$$
+Now let $C(G)$ denote the set of conjugacy classes in $G$. $C$ is then a partition of $G$. Then the above sum can be rewritten as
+$$
+\sum_{C \in C(G)} \sum_{h \in C} \frac{\chi_\pi(h) \chi_\pi(h^{-1})}{\dim \pi} = \sum_{C \in C(G)}  \frac{\lvert C \rvert \chi_\pi(g) }{\dim \pi}  \chi_\pi(g^{-1}).
+$$
+The right-hand-side is a sum of product that we know are algebraic integers. They form a ring, hence the sum is an algebraic integer as well.
+
+But the left hand side is a fraction, so we must have $\lvert G \rvert / \dim \pi \in \Z$, which is equivalent to what was to be proven.
+\end{proof}
+
+Now we can prove Theorem \ref{thmzg}. Recall that we want to show that $\dim \pi$ divides $\lvert G/Z(G) \rvert$. 
+
+\begin{proof}
+ For every $n \in \N$, consider the representation of $G^n = G \times \cdots \times G$ on $V_\pi \otimes \ldots \otimes V_\pi$ defined by $\pi_n(g_1,\ldots,g_n) = \pi_1(g_1) \otimes \ldots \otimes \pi_n(g_n)$.  It is an \textbf{exercise} to see that this representation is irreducible as well.
+
+Now consider the subgroup $Z_n = \{ (g_1,\ldots,g_n) \in Z(G)^n \mid \prod g_i = e \}$. It is isomorphic to $Z(G)^{n-1}$. 
+
+If $g \in Z(G)$, then by Schur's lemma, $\pi(g)$ is a scalar operator. So if $(g_1,\ldots,g_n) \in Z_n$, then $\pi(g_i)=\alpha_i \cdot 1$, hence
+\[
+\pi_n(g_1,\ldots,g_n) = \alpha_1,\ldots,\alpha_n \id_{V^{\otimes n}} = \id_{V^{\otimes n}}
+\]
+since $g_1\cdots g_n = e$. Therefore $Z_n \subset \ker \pi_n$. It follows that $\pi_n$ induces a representation of $G^n/Z_n$. Then by the previous lemma
+$$
+(\dim \pi)^n \mid \frac{\lvert G \rvert^n }{\lvert Z(G) \rvert ^{n-1}}
+$$
+That is:
+$$
+\left( \frac{\lvert G \rvert}{\dim \pi \lvert Z(G) \rvert } \right)^n \in \Z[\frac{1}{\lvert Z(G) \rvert}]
+$$
+for any $n$. But this implies that the left-hand-side is a finitely-generated $\Z$-module, hence what is inside the brackets is an algebraic integer. But is also a fraction, so it must be an integer.
+\end{proof}
+
+\section{Lecture 6 - Representation theory of $S_n$}
+
+It is easy to understand conjugacy classes in $S_n$. Every $\sigma \in S_n$ defined a partition of $\{ 1,\ldots n\}$ into orbints of $\sigma$. Let $O_1,\ldots,O_m$ be these orbits. Assume that they are decreasing in size. Let $n_i=\lvert O_i \rvert$. These numbers $n_i$ sum to $n$.
+
+We say that a \textbf{partition of $n$} is a decreasing sequence of integers $n_1 geq \ldots \geq n_m \geq 1$ such that $n=\sum n_i$. 
+
+Thus every $\sigma \in S_n$ gives a partition of $n$. Two elements of $S_n$ are conjugate if and only if they define the same partition. This is straightforward to see. First suppose that $\sigma$ and $\tau$ are conjugate, that is, that $\sigma = g^{-1} \tau g$ for some $g \in S_n$. The orbit of $1$ under $\sigma$ is defined by $O(\sigma,1) = \{ \sigma^n(1) \mid n \geq 0 \}$. But this is $g^{-1} O(\tau, g(1))$. This defines a bijection the orbit of $1$ under $\sigma$ and the orbit of $1$ under $\tau$. Hence their sizes are equal. Conversely, assume that the orbits of $\tau$ and $\sigma$ have the same sizes. Let $g$ be an arbitrary bijection $[n] \to [n]$ between sending orbits to orbits. [[HOW TO PROCEED?????]]
+
+Our goal is to produce an irreducible representation for every partition of $n$.
+
+Recall that for any finite group $G$, we have
+$$
+\C [G] \simeq \bigoplus_{[\pi] \in \widehat G} \End(V_\pi),
+$$
+the isomorphism sending $g$ to the corresponding endomorphism of $V = \oplus V_\pi$. Now one can ask if it is possible to recover the space $V_\pi$ from its matrix algebra? (essentially, yes)
+
+We need a few definitions. An idempotent $e$ in an algebra $A$ is called \textbf{minimal} if $e \neq 0$ and $eAe =\C e$. 
+
+Here's an exercise (to be proven in the appendix!):
+\begin{exc}
+ Let $V$ be a finite-dimensional vector space. Show that $e \in \End(V)$ is a minimal idempotent if and only if it is a projecting onto a $1$-dimensional subspace $\C v \subset V$. Then we have an isomorphism
+$$
+\End(V)e \simeq V
+$$
+of $\End(V)$-modules given by $Te \mapsto Tv$. 
+\end{exc}
+Therefore finding irreducible representations of $G$ is the same as finding minimal idempotents in the group algebra $\C[G]$: if $e \in \C[G]$ is a minimal idempotent, then $\C[G]e$ defines an irreducible representation ([[WHY IS IT IRREDUCIBLE??]].
+
+Thus, returning to $S_n$, we want to to construct minimal idempotents in $\C[S_n]$ for every partition.
+
+It is convenient to present partitions as \textbf{Young diagrams}. Given a partition $(n_1,\ldots,n_m)$ of $n$, we draw a diagram having $n_1$ boxes in the first row, $n_2$ boxes in the second, and so on. For example, for the partition $(6,5,2,1)$ of $14$, we draw the following diagram:
+$$
+\begin{Young}
+&&&&&\cr
+&&&&\cr
+&\cr
+\cr
+\end{Young}
+$$
+We can also fill these with numbers: a \textbf{Young tableau} (plural \emph{tableaux}) is a Young diagram filled with numbers $i \in [n]$ without repetitions. For example:
+$$
+\begin{Young}
+3&1\cr
+2\cr
+\end{Young}
+$$
+Two Young tableaux are said to be of the same \textbf{shape} if they arise from the same underlying Young diagram.
+
+Note that the symmetric group acts on the set of Young tableaux of the same shape $\lambda$. 
+
+Fix a Young tableaux $T$. Let $R(T) \subset S_n$ be the subgroup of elements of $S_n$ permuting numbers in the \emph{rows} of $T$. Let $C(T)$ be the same group, but permuting columns instead. Define the following two elements of $\C[S_n]$:
+
+$$
+a_T = \frac{1}{\lvert R(T) \rvert} \sum_{g \in R(T)} g 
+$$
+and
+$$
+b_T = \frac{1}{\lvert C(T) \rvert} \sum_{g \in C(T)} sgn(g) \cdot g.
+$$
+Then we define $c_T=a_T b_T$. The element $c_T$ is called a \textbf{Young symmetrizer}. Our main theorem is this:
+
+\begin{thm}
+  \begin{enumerate}
+  \item For any $T$, the element $c_T$ is (up to a scalar) a minimal idempotent in $\C[S_n]$, so it defines an irreducible representation of $S_n$.
+\item If $T_1,T_2$ are two Young tableaux, then the representations corresponding to them are equivalent if and only if $T_1$ and $T_2$ have the same shape.
+  \end{enumerate}
+\end{thm}
+
+The modules $\C[S_n]c_T$ are called \textbf{Specht modules}.
+
+\begin{proof}
+  TOO LONG FOR NOW. WILL PROB. COME LATER
+\end{proof}
+
+\subsection{Tabloids}
+
+A bit more explicitly the Specht modules can be described as follows.
+
+Fix a Young diagram $\lambda$. Introduce an equivalence relation on Young tableaux of shape $\lambda$:
+$$
+T_1 \sim T_2 
+$$
+if $T_1 = r(T_2)$ for some $r \in R(T_2)$. The equivalence class of a Young tableau $T$ is called a \textbf{tabloid} (of shape $\lambda$) and denoted by $\{ T \}$. 
+
+Note that $S_n$ act on the set of tabloids. Let $(M_\lambda,S_n)$ be the corresponding permutation representation. Note also that action on the set of tabloids is transitive. Thus the basis of $M_\lambda$ can be identified with $S_n/R(T)$\footnote{Every $\{T \}$ can be written as $\sigma \{ T_0\}$ for some fixed $T_0$. But the ambiguity lies in $R(T)$.}.  
+
+Thus we get isomorphisms of $\C[S_n]$-modules:
+$$
+\C[S_n]a_T \simeq \C[S_n/R(T)] \simeq M_\lambda.
+$$
+The first isomorphism is given by sending $ga_T$ to $\partial_{gR(T)}$ (the delta function), and the second is given by sending a coset $\partial_{gR(T)}$ to $\{g(T)\}$. 
+
+Under these isomorphisms, the image of the  submodule $\C[S_n]b_T a_T \subset \C[S_n]a_T$ is spanned by the elements $b_{g(T)} \{ g(T) \}$. In other words, $V_\lambda$ is spanned by $e_{T'} := b_{T'} \{ T' \}$ by all elements of shape $\lambda$. This gives us a description of $V_\lambda \simeq V_T$ only in terms of $\lambda$.
+
+This is a spanning set. We would like a basis. We say that that tableau $T$ is \textbf{standard} if the numbers in every row and column are increasing.
+
+Here's a theorem that we wont prove:
+\begin{thm}
+ For any Young diagram $\lambda$ the elements $e_T$ for all standard tableaux $T$ of shape $\lambda$ form a basis in $V_\lambda$.
+\end{thm}
+
+The complication is of course that $g e_T = c_{g(T)}$ is a combination of standard tableaux! 
+
+[[two examples]]
+
+\subsection{Characters and the Hook length formula}
+
+Here we prove two theorems. 
+
+Let $I=(i_1,i_2,\ldots,)$ consist of non-negative integers such that
+$$
+\sum_{k=1}\infty ki_k=n.
+$$
+Denote by $c_I$ the conjugacy class in $S_n$ consisting of elements $\sigma$ which decompose into $i_1$ orbits of length $1$, $i_2$ orbits of length two and so on. 
+
+This corresponds to an obvious partition of $n$.
+
+Let $\chi_{\pi_\lambda}(C_I)$ denote the value of the character of $\pi_\lambda$ on any representating of the conjugacy class of $C_I$. Then
+\begin{thm}[Frobenius character formula]
+  
+Assume $\lambda=(\lambda_1,\ldots,\lambda_r)$. Take any number $N \geq r$. Then $\chi_{\pi_\lambda}(C_I)$ is the coefficient of $\prod_{i=1}^N x_i^{\lambda_i+N-i}$ in the polynomial
+$$
+\Delta(x) \prod_{i \geq 1} \sum_{i=1}^N (x_i^k)^{i_k}.
+$$
+where $\Delta(x) = \prod (x_i-x_j)$ is the Vandermonde determinant.
+\end{thm}
+
+This was not proved, but the idea of the proof was given.
+
+Now we quote the \textbf{hook length} formula. Let $\lambda$ be Young diagram and let $(i,j)$ be the element in position row $i$ and column $j$. Then the \textbf{hook length} $h(i,j)$ is the number of boxes below and to the right of $(i,j)$ including $(i,j)$ itself. Then:
+
+\begin{thm}
+  Let $\lambda$ be partition and let $\pi_\lambda$ be the corresponding irreducible representation of $S_n$. Then 
+$$
+\dim \pi_\lambda = \frac{n!}{\prod_{(i,j) \in \lambda} h(i,j)}.
+$$
+\end{thm}
+
+Prooof later.
+
+
+\section{Induced representations}
+
+Let $G$ be a finite group and $H \subset G$ a subgroup. Assume $(\pi,V)$ is a representation of $H$. We want to construct a representation of $G$ out of this.
+
+We define the \textbf{induced representation} $\mathrm{Ind}_H^G \pi$ to be the representation defined by the $\C[G]$-module
+$$
+\C[G] \otimes_{\C[H]} V.
+$$
+
+It is ``somehow completely fundamental''.
+
+[[DEFINITION AND SOMETHING ABOUT EQUIVALENCE]]
 
 \appendix
 \section{Exercises}
@@ -437,6 +839,17 @@ $$
 Hence $V$ and $V^\ast$ are isomorphic as representations and then $\Hom_G(V,V^\ast)$ (space of bilinear forms) is one-dimensional. 
 \end{sol}
 
+\subsection{Lecture 4}
+
+\begin{exc}
+  \begin{enumerate}
+  \item $\pi^{cc}=\pi$.
+\item $(pi \otimes \theta)^c = \pi^c \otimes \pi^c$.
+\item $\pi$ is irreducible if and only if $\pi^c$ is.
+  \end{enumerate}
+\end{exc}
+
+
 \section{Some worked examples}
 
 \subsection{The representation ring of $S_3$}
@@ -470,5 +883,73 @@ $$
 R(S_3) = \Z[A,S]/(A^2-1,S^2-1-A-S,AS-S).
 $$
 
+\subsection{Explicit Specht modules}
 
+Again, we work with $G=S_3$. Consider the following Young-diagram:
+$$
+T = \young(12,3)
+$$
+
+We want to use the theorem from Lecture 5 (?) to find the standard representation of $S_3$. The elements of $S_3$ are generated by $\rho=(123)$ and $s=(23)$ with the relations $\rho^3=e$ and $s\rho s =\rho^2$. 
+
+First off, the elements permuting the rows is the subgroup consisting of $e$ and $(12)=s\rho^2$. The elements permuting the columns is the subgroup generated by $(13)=s\rho$. Then
+$$
+a_T = \frac 12 \left(e+(12)\right)
+$$
+and
+$$
+b_T = \frac 12 \left( e+(13) \right).
+$$
+Thus
+$$
+c_T= \frac 14 \left( e -(13) + (12)-(132) \right).
+$$
+
+This gives us as in the lecture a map
+$$
+\C[S_3] \to V \subseteq \C[S_3]
+$$
+given by $g \mapsto g c_T$, whose image is supposed to be an irreducible representation of $S_3$. Let's find this. One computes the action of $c_T$ on the basis elements of $\C[S_3]$ by direct computation:
+\begin{align*}
+  c_T      &= \frac 14 \left( e -s\rho  + s\rho^2-\rho^2 \right) \\
+ \rho c_T  &= \frac 14 \left( \rho - s + s\rho -e \right) \\
+ \rho^2 c_T &= \frac 14 \left( \rho^2 - s\rho^2 + s -\rho \right) \\
+sc_T &= \frac 14 \left( s-\rho + \rho^2-s\rho^2 \right)  \\
+s \rho c_T &= \frac 14 \left( s \rho -e+\rho-s \right) \\
+s \rho^2 c_T &= \frac 14 \left( s\rho^2-\rho^2+e - s\rho \right) \\
+\end{align*}
+We claim that $c_T$ and $\rho c_T$ span the image. For we have $\rho^2 c_T = -c_T-\rho c_T$. And $sc_T=\rho^2 c_T$. And $s \rho c_T = \rho c_T$. And $s \rho^2 c_T = c_T$. 
+
+Thus we have some $2$-dimensional representation of $S_3$ with basis $c_T, \rho c_T$. We compute the matrices of $S_3$ with respect to this basis:
+\begin{align*}
+e =
+\begin{pmatrix}
+1 & 0 \\ 0 & 1
+\end{pmatrix}
+&&
+\rho = 
+\begin{pmatrix}
+0 & -1 \\ 1 & -1
+\end{pmatrix}
+&&
+\rho^2 =
+\begin{pmatrix}
+-1 & 1 \\ -1 & 0
+\end{pmatrix} \\
+s =
+\begin{pmatrix}
+-1 & 0 \\ -1 & 1
+\end{pmatrix}
+&&
+s\rho  =
+\begin{pmatrix}
+0 & 1 \\ 1 & 0
+\end{pmatrix}
+&&
+s\rho^2  =
+\begin{pmatrix}
+1 & -1 \\ 0 & -1
+\end{pmatrix}.
+\end{align*}
+As expected, the character of this representation is exactly the character of the standard representation from the previous example (as is seen by computing traces). This is no coincidence.
 \end{document}

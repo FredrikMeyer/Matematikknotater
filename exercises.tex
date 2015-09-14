@@ -1328,6 +1328,27 @@ For the alternating representation we have a similar decomposition.
  We have by definition that $\chi_X(s)$ is the trace of a matrix representing $\rho(s)$, but $\rho(s)$ is a permutation matrix. All basis elements corresponding to elements moved by $s$ will be moved off the diagonal, so the remaning elements, the elements fixed by $s$, are on the diagonal, and are all $1$'s. Done.
 \end{sol}
 
+\subsection{Chapter 3}
+
+\begin{exc}[Exercise 3.1]
+ Show directly using Schur's lemma, that each irreducible representation of an abelian group, finite or not, has degree $1$.
+\end{exc}
+
+\begin{sol}
+Let $A$ be an abelian group, and let $V$ be an irreducible representation of $A$. Then each $g \in A$ gives  a nonzero $G$-morphism $V \to V$ by left-multiplication. Here we use that $A$ is abelian.
+
+But by Schur's lemma, every such morphism is given by multiplication by some $\alpha(g) \in \C \bs \{ 0\}$.
+
+Let $v \neq 0 \in V$ and let $W \subset V$ be the subspace spanned by $v$. Then $W$ is $G$-invariant: $g \cdot v = \alpha(g) v \in W$. Hence $V=W$ since $W$ was irreducible.
+\end{sol}
+
+\begin{exc}
+ Let $\rho$ be an irreducible representation of $G$ of degree $n$ and character $\chi$. Let $Z(G)$ be the center of $G$ and let $c$ be its order.
+ \begin{enumerate}[a)]
+ \item Show that $\rho_s$ is a homothety for each $s \in Z(G)$. Deduce that $\lvert \chi(s) \rvert = n$ for all $ s \in C$. 
+ \end{enumerate}
+\end{exc}
+
 \section{The K-book - Charles Weibel}
 
 \subsubsection{Chapter 1.1 - Free modules, $GL_n$ and stably free modules}
