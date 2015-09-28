@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  9 SEP 2015 12:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  22 SEP 2015 19:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1283,49 +1283,49 @@ Overfull \hbox (1.1899pt too wide) in paragraph at lines 1230--1232
 /10.95 +
  []
 
-[35] [36] [37]
+[35] [36] [37] [38] [39] [40]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1347.
+(hyperref)                than one, level fixed on input line 1458.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1347.
+(hyperref)                removing `math shift' on input line 1458.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1347.
+(hyperref)                removing `subscript' on input line 1458.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1347.
+(hyperref)                removing `math shift' on input line 1458.
 
-[38] [39] [40] [41] [42] [43] <xymatrix 5x4 761> [44]
+[41] [42] [43] [44] [45] [46] [47] <xymatrix 5x4 761> [48]
 Package hyperref Info: bookmark level for unknown oppg defaults to 0 on input l
-ine 1632.
+ine 1756.
 Package hyperref Info: bookmark level for unknown losn defaults to 0 on input l
-ine 1636.
- [45] [46] [47] [48]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1805.
-
-[49]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1805.
+ine 1760.
+ [49] [50] [51]
+[52]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1929.
+ [53]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1929.
  (./exercises.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1805.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1805.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1929.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1929.
 
 Package rerunfilecheck Info: File `exercises.out' has not changed.
 (rerunfilecheck)             Checksum: 39BE799A7238687CE2322C0D2694BB7A;3584.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1805.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1929.
  ) 
 Here is how much of TeX's memory you used:
- 20657 strings out of 493308
- 356412 string characters out of 6135157
- 467226 words of memory out of 5000000
- 23110 multiletter control sequences out of 15000+600000
+ 20698 strings out of 493308
+ 356930 string characters out of 6135157
+ 467240 words of memory out of 5000000
+ 23115 multiletter control sequences out of 15000+600000
  26081 words of font info for 85 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,23n,63p,3265b,610s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,23n,63p,3265b,646s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/enc/dvips/
 cm-super/cm-super-t1.enc}</mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></mn/anatu/modules/opt/texlive
@@ -1368,10 +1368,10 @@ ive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></mn
 /anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/xyp
 ic/xyatip10.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fo
 nts/type1/public/xypic/xybtip10.pfb>
-Output written on exercises.pdf (49 pages, 528451 bytes).
+Output written on exercises.pdf (53 pages, 541861 bytes).
 PDF statistics:
- 1130 PDF objects out of 1200 (max. 8388607)
- 1037 compressed objects within 11 object streams
- 533 named destinations out of 1000 (max. 500000)
+ 1185 PDF objects out of 1200 (max. 8388607)
+ 1088 compressed objects within 11 object streams
+ 569 named destinations out of 1000 (max. 500000)
  381 words of extra memory for PDF output out of 10000 (max. 10000000)
 

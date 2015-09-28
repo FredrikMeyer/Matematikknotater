@@ -82,44 +82,45 @@
 \contentsline {section}{\numberline {3}Commutative algebra}{16}{section.3}
 \contentsline {subsection}{\numberline {3.1}Modules}{16}{subsection.3.1}
 \contentsline {subsubsection}{\numberline {3.1.1}Depth}{16}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.2}Rank}{16}{subsubsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.3}Stably free module}{16}{subsubsection.3.1.3}
-\contentsline {subsubsection}{\numberline {3.1.4}K\IeC {\"a}hler differentials}{17}{subsubsection.3.1.4}
+\contentsline {subsubsection}{\numberline {3.1.2}M-sequence}{16}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Rank}{17}{subsubsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.4}Stably free module}{17}{subsubsection.3.1.4}
+\contentsline {subsubsection}{\numberline {3.1.5}K\IeC {\"a}hler differentials}{17}{subsubsection.3.1.5}
 \contentsline {subsection}{\numberline {3.2}Results and theorems}{17}{subsection.3.2}
 \contentsline {subsubsection}{\numberline {3.2.1}The conormal sequence}{17}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}The Unmixedness Theorem}{17}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.2}The Unmixedness Theorem}{18}{subsubsection.3.2.2}
 \contentsline {subsection}{\numberline {3.3}Rings}{18}{subsection.3.3}
 \contentsline {subsubsection}{\numberline {3.3.1}Cohen-Macaulay ring}{18}{subsubsection.3.3.1}
 \contentsline {subsubsection}{\numberline {3.3.2}Depth of a ring}{18}{subsubsection.3.3.2}
 \contentsline {subsubsection}{\numberline {3.3.3}Gorenstein ring}{18}{subsubsection.3.3.3}
 \contentsline {subsubsection}{\numberline {3.3.4}Invariant basis property}{18}{subsubsection.3.3.4}
 \contentsline {subsubsection}{\numberline {3.3.5}Normal ring}{18}{subsubsection.3.3.5}
-\contentsline {section}{\numberline {4}Convex geometry}{18}{section.4}
-\contentsline {subsection}{\numberline {4.1}Cones}{18}{subsection.4.1}
-\contentsline {subsubsection}{\numberline {4.1.1}Gorenstein cone}{18}{subsubsection.4.1.1}
+\contentsline {section}{\numberline {4}Convex geometry}{19}{section.4}
+\contentsline {subsection}{\numberline {4.1}Cones}{19}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Gorenstein cone}{19}{subsubsection.4.1.1}
 \contentsline {subsubsection}{\numberline {4.1.2}Reflexive Gorenstein cone}{19}{subsubsection.4.1.2}
 \contentsline {subsubsection}{\numberline {4.1.3}Simplicial cone}{19}{subsubsection.4.1.3}
 \contentsline {subsection}{\numberline {4.2}Polytopes}{19}{subsection.4.2}
 \contentsline {subsubsection}{\numberline {4.2.1}Dual (polar) polytope}{19}{subsubsection.4.2.1}
 \contentsline {subsubsection}{\numberline {4.2.2}Gorenstein polytope of index r}{19}{subsubsection.4.2.2}
 \contentsline {subsubsection}{\numberline {4.2.3}Nef partition}{19}{subsubsection.4.2.3}
-\contentsline {subsubsection}{\numberline {4.2.4}Reflexive polytope}{19}{subsubsection.4.2.4}
+\contentsline {subsubsection}{\numberline {4.2.4}Reflexive polytope}{20}{subsubsection.4.2.4}
 \contentsline {section}{\numberline {5}Homological algebra}{20}{section.5}
 \contentsline {subsection}{\numberline {5.1}Classes of modules}{20}{subsection.5.1}
 \contentsline {subsubsection}{\numberline {5.1.1}Projective modules}{20}{subsubsection.5.1.1}
 \contentsline {subsection}{\numberline {5.2}Derived functors}{20}{subsection.5.2}
 \contentsline {subsubsection}{\numberline {5.2.1}Ext}{20}{subsubsection.5.2.1}
 \contentsline {subsubsection}{\numberline {5.2.2}Local cohomology}{20}{subsubsection.5.2.2}
-\contentsline {subsubsection}{\numberline {5.2.3}Tor}{20}{subsubsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.3}Tor}{21}{subsubsection.5.2.3}
 \contentsline {section}{\numberline {6}Differential and complex geometry}{21}{section.6}
 \contentsline {subsection}{\numberline {6.1}Definitions and concepts}{21}{subsection.6.1}
 \contentsline {subsubsection}{\numberline {6.1.1}Almost complex structure}{21}{subsubsection.6.1.1}
 \contentsline {subsubsection}{\numberline {6.1.2}Connection}{21}{subsubsection.6.1.2}
 \contentsline {subsubsection}{\numberline {6.1.3}Hermitian manifold}{21}{subsubsection.6.1.3}
 \contentsline {subsubsection}{\numberline {6.1.4}K\IeC {\"a}hler manifold}{21}{subsubsection.6.1.4}
-\contentsline {subsubsection}{\numberline {6.1.5}Symplectic manifold}{21}{subsubsection.6.1.5}
+\contentsline {subsubsection}{\numberline {6.1.5}Symplectic manifold}{22}{subsubsection.6.1.5}
 \contentsline {subsection}{\numberline {6.2}Results and theorems}{22}{subsection.6.2}
 \contentsline {section}{\numberline {7}Worked examples}{22}{section.7}
 \contentsline {subsection}{\numberline {7.1}Algebraic geometry}{22}{subsection.7.1}
 \contentsline {subsubsection}{\numberline {7.1.1}Hurwitz formula and K\IeC {\"a}hler differentials}{22}{subsubsection.7.1.1}
-\contentsline {subsection}{\numberline {7.2}The quintic threefold}{22}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.2}The quintic threefold}{23}{subsection.7.2}

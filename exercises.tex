@@ -1328,6 +1328,110 @@ For the alternating representation we have a similar decomposition.
  We have by definition that $\chi_X(s)$ is the trace of a matrix representing $\rho(s)$, but $\rho(s)$ is a permutation matrix. All basis elements corresponding to elements moved by $s$ will be moved off the diagonal, so the remaning elements, the elements fixed by $s$, are on the diagonal, and are all $1$'s. Done.
 \end{sol}
 
+\begin{exc}[Excercise 2.3]
+Let $\rho:G \to \GL(V)$ be a linear representation with character $\chi$ and let $V'$ be the dual of $V$. Show that there exists a unique linear representation $\rho':G \to \GL(V')$ such that
+$$
+\langle \rho_s x, \rho' x' \rangle = \langle x, x' \rangle
+$$  
+for $s \in G$, $x \in V$, $x' \in V'$. Here $\langle,\rangle$ is the natural pairing between $V$ and $V'$, given by $\langle x,x' \rangle = x'(x)$. 
+
+This is the \textbf{contragradient} or \textbf{dual} representation of $\rho$. Its character is $\overline \chi$.
+\end{exc}
+
+\begin{sol}
+  We first define the representation $\rho'$, and then show that is unique. So let $\rho'(s)$ be defined by
+$$
+(\rho'(s) f)(v) = f(g^{-1} v).
+$$
+Then (we omit the $\rho$ from the notation, it being clear which action is referred to):
+$$
+\langle g \cdot x, g \cdot f \rangle = (g \cdot f)(g \cdot x) = f(g^{-1} gx ) = f(x) = \langle x, f \rangle.
+$$
+
+Now let $\sigma:G \to \GL(V')$ be another representation of $V'$ satisfying this identity, and suppose $\sigma \neq \rho'$. Then there is some $s \in G$ such that $\sigma(s) \neq \rho'(s) \in \GL(V')$. This means there is some $f \in GL(V')$ such that $\sigma(s)(f) \neq \rho'(s)(f) \in V'$. This means that there is some $v \in V$ such that $\sigma(s)(f)(v) \neq \rho'(s)(f)(v) \in \C$. Writing this more compactly, this means
+$$
+(\sigma_s f)(v) \neq (\rho'_s f)(v).
+$$
+But then (letting $w = s^{-1} \cdot v$)
+\begin{align*}
+f(w) =& \langle w,f\rangle = \langle s \cdot w, \sigma_s f \rangle= ( \sigma_s 
+f)(v) \neq (\rho_s' f)(v) = \langle v, \rho_s' f \rangle \\
+&= \langle s \cdot w, (\rho_s')(f) \rangle = \langle w, f \rangle = f(w)
+\end{align*}
+which is a contradiction.
+\end{sol}
+
+\begin{exc}
+  Let $\rho_1:G \to \GL(V_1)$ and $\rho_2:G \to \GL(V_2)$ be two linear representations with characters $\chi_1, \chi_2$. Let $W= \Hom(V_1,V_2)$. 
+
+For $s \in G$ and $f \in W$, let $\rho_s f = \rho_{2,s} \circ f \circ \rho_{1,s}^{-1}$ so $\rho_s f \in W$. Show that this defines a linear representation $\rho:G \to \GL(W)$ and that its character is $\chi_1^\ast \cdot \chi_2$. This representation is isomorphic to $\rho_1' \otimes \rho_2$.
+\end{exc}
+
+\begin{sol}
+  It is easy but notationally challenging to check that this defines a representation.
+
+To prove the statement about characters, we first show that
+$$
+\Hom(V_1, V_2) \simeq V_1^\ast \otimes V_2
+$$
+as representations. Then the statement will follow by properties of characters.
+
+The map is given by (from right to left) by $f \otimes v_2 \mapsto (v_1 \mapsto f(v_1)v_2)$. We check that this map intertwines the action of $G$ on the tensor product with that on the $\Hom$-set, that is calling the isomorphism for $\varphi$, that $g \cdot \varphi(f \otimes v_2) = \varphi ( g \cdot (f \otimes v_2))$. But
+
+$$
+g \cdot \varphi( f \otimes v_2) = g \cdot (v_1 \mapsto f(v_1)v_2) = v_1 \mapsto f(g^{-1}v_1) g v_2
+$$
+
+Note that the notation is ambigious here. With $gf(g^{-1}v)$, we really means $(\rho_2(g)f)(\rho_1(g)v)$, but who wants to write that much? On the other hand we have
+$$
+\varphi ( g \cdot (f \otimes v_2)) = \varphi ( gf \otimes gv_2) = \varphi((v_1 \mapsto f(g^{-1}v_1)) \otimes gv_2) = v_1 \mapsto f(g^{-1}v_1)  g v_2.
+$$
+But these are equal!
+\end{sol}
+
+\begin{exc}[Exercise 2.5]
+Let $\rho$ be a linear representation with character $\chi$. Show that the number of times that $\rho$ contains the unit representation is equal to $(\chi \mid 1)=\frac 1g \sum_{s \in G} \chi(s)$.  
+\end{exc}
+
+\begin{sol}
+The character $\chi_\rho$ decomposes as $\sum a_i \chi_{\pi_i}$ where $\pi_i$ are its irreducible components with multiplicities $a_i$. Since the unit representation have character $\chi_\epsilon(g)=1$ for all $g$, the result follows trivially.
+\end{sol}
+
+
+\begin{exc}[Exercise 2.6]
+Let $X$ be a finite set on which $G$ acts and let $\rho$ be the corresponding permutation representation and $\chi$ its character.
+\begin{enumerate}[a)]
+\item The set $Gx$ of images under $G$ of an element $x \in X$ is the \emph{orbit} of $x$. Let $c$ be the number of distinct orbits. Show that $c$ is the number of times that $\rho$ contains the unit representation. Deduce that $c=(\chi \mid 1)$. In particular, if $G$ is transitive, $\rho$ can be decomposed into $1 \oplus \theta$ where $\theta$ does not contain the unit representation. If $\psi$ is the character of $\theta$, we have $\chi=1+\psi$ and $(\psi \mid 1)=0$. 
+\item Let $G$ act diagonally on $X \times X$. That is, by $s (x,y)= (sx,sy)$. Show that the character of the corresponding representation is equal to $\chi^2$.
+\item Suppose that $G$ acts transitively on $X$ and that $X$ has at least two elements. We say that $G$ is doubly transitive if for all $x,y,x',y' \in X$ with $x \neq y$ and $x' \neq y'$, there exists $s \in G$ with $x'=sx$ and $y'=sy$. Prove the equivalence of the following properties:
+  \begin{enumerate}[i)]
+  \item $G$ is doubly transitive.
+\item The action of $G$ on $X \times X$ have two orbits, the diagonal and the complement.
+\item $(\chi^2 \mid 1)=2$.
+\item The representation $\theta$ defined in a) is irreducible.
+  \end{enumerate}
+\end{enumerate}
+\end{exc}
+
+\begin{sol}
+  \begin{enumerate}[a)]
+  \item 
+Decompose $X= \cup X_i$ where $X_i$ are the disjoint orbits. Then $\rho$ decomposes as $\rho=\oplus \rho_i$. Thus it suffices to show that if $G$ act transitively on $X$, the corresponding permutation representation contains exactly one copy of the unit representation.
+
+It is clear that it contains one copy, namely the subspace spanned by the element $(1,1,\ldots,1)$.
+
+Now, two representations are isomorphic if and only if their characters are equal. Any representation isomorphic to the unit representation must therefore act as the identity. So let $v \in V_\rho$ be any vector. Then its coordinates are permutes by $G$. If the subspace spanned by $v$ is invariant and if $G$ act as the identity on it and since $G$ acts transitively on the coordinates, all its coordinates must be equal. Thus the unit representation occurs exactly once in $\rho$. 
+
+Thus $c= (\chi \mid 1)$. The rest of the claims follows immediately.
+\item Just note that the corresponding permutation representation is just the tensor product $\rho \otimes \rho$. 
+\item i and ii are clearly equivalent. The implication ii $\Rightarrow$ iii is the content of a) and b). The implication iii $Rightarrow$ ii is a and b also. 
+
+Now suppose that $\theta$ is irreducible. We will show iii. It is easy to see that $(\chi^2,1)=(\chi, \chi)$. This in turn is equal to $(1+\psi,1+\psi)$ which is equal to $(1,1)+2(1,\psi)+(\psi,\psi)$. The first term is $1$. The second is zero, since $\theta$ does not contain the unit representation. The third term is $1$ by assumption. Hence $(\chi^2,1)=2$. 
+
+Clearly we can go the other way as well.
+  \end{enumerate}
+\end{sol}
+
 \subsection{Chapter 3}
 
 \begin{exc}[Exercise 3.1]
@@ -1540,6 +1644,19 @@ If $V$ is a permutation representation associated to the action of a group $G$ o
 This is easy. The matrix associated to $g$ is a permutation matrix with a $1$ in row $j$ if element number $i$ is sent to $j$. Then number of fixed points is the number of ones on the diagonal, and this is $\chi_V(g)$.
 \end{sol}
 
+\begin{exc}[Exercise 2.7]
+Consider the standard representation $V$ of $S_3$ and its $n$th tensor power $V^{\otimes n}$. Decompose it using character theory.  
+\end{exc}
+\begin{sol}
+ We know that there are three irreducible representations of $S_3$. Hence $V^{\otimes n} \simeq U^a \oplus {U'}^{b} \oplus V^c$ for some numbers $a,b,c$. Here $U$ is the trivial representation, $U'$ is the alternating representation and $V$ the standard representation.
+
+We also know that the characters are orthogonal, so to find $a$ we have to compute $\langle \chi_U, \chi_{V^{\otimes n}}\rangle $. This we do by using that $\chi_{V^{\otimes n}} = \chi_V^n$. Then we see that $a=\frac 13 (2^{n-1} + (-1)^n)$ since
+$$
+\langle \chi_U, \chi_{V^{\otimes n}} \rangle = \frac 16 \left( 2^n + 0 + (-1)^n \right).
+$$
+Similarly for $b,c$.
+\end{sol}
+ 
 
 \begin{exc}[Exercise 2.34]
 Let $V,W$ be irreducible representations of $G$ and $L_0:V \to W$ any linear mapping. Define $L:V \to W$ by 

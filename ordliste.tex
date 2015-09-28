@@ -536,8 +536,19 @@ j' \ar[ur]^\exists  &
 \section{Commutative algebra}
 \subsection{Modules}
 \subsubsection{Depth}
+\label{depth}
 Let $R$ be a noetherian ring, and $M$ a finitely-generated $R$-module and $I$ an ideal of $R$ such that $IM \neq M$. Then the $I$-depth of $M$ is (see \hyperref[ext]{Ext}): \[\inf\{i \mid \Ext^i_R(R/I,M) \neq 0\}.\]
-This is also the length of a maximal $M$-sequence in $I$.
+This is also the length of a maximal \hyperref[msequence]{$M$-sequence} in $I$.
+
+\subsubsection{M-sequence}
+\label{msequence}
+
+Let $M$ be an $A$-module and $x \in A$. We say that $x$ is \textbf{$M$-regular} if multiplication by $x$ is injective on $M$. We say that a sequence of elements $a_1,\ldots,a_r$ is an \textbf{M-sequence} if 
+\begin{itemize}
+\item $a_1$ is $M$-regular, $a_2$ is $M/a_1M$-regular, $a_3$ is $M/(a_1,a_2)M$-regular, and so on.
+\item $M/\sum_i a_i M \neq 0$.
+\end{itemize}
+The length of a maximal $M$-sequence is the \hyperref[depth]{depth} of $M$.
 
 \subsubsection{Rank}
 \label{lengthmodule}

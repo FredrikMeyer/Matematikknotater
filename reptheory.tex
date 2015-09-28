@@ -770,7 +770,99 @@ $$
 
 It is ``somehow completely fundamental''.
 
-[[DEFINITION AND SOMETHING ABOUT EQUIVALENCE]]
+We have three equivalent description of the induced representation, some of the descriptions being easier to work with than others.
+
+\begin{thm}
+Let $V$ be a representation of $H$. The following representations are isomorphic.
+\begin{enumerate}
+\item $\C[G] \otimes_{\C[H]} V$ where $G$ acts by $g \cdot (g' \otimes v) = gg' \otimes v$. 
+\item $\Hom_H(\C[G],V) \simeq \{ f:G \to V \mid f(hg)=hf(g) \forall h \in H, g \in G \}$, where $g$ acts by $(g' \cdot f)(g) = f(gg')$.
+\item $W = \bigoplus_{\sigma \in G/H} V_\sigma$, where each $V_\sigma$ is a copy of $V$. Let $x_\sigma \in V_\sigma$. Then the action of $G$ is defined as follows: Let $r_\sigma \in \sigma$ be a representative for the coset $\sigma$. Then $g$ can be written as $g=r_{\sigma'}h$ for some $h \in H$. Then we define $g \cdot  x_\sigma = h \cdot x_{g \sigma}$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+Start with 1). We want to show that this is the same as number 3). We will do this in a non-canonical way. The algebra $\C[H]$ have a vector space basis $\{e_{h_1}, \ldots, e_{h_r}\}$ where $r=\lvert H \rvert$. By properties of cosets, this implies that $\C[G]$ have a basis 
+$$\{e_{h_1},\ldots, e_{h_r},e_{r_1h_1},\ldots, e_{r_1h_r},\ldots,e_{r_kh_1},\ldots,e_{r_kh_r} \}$$
+where $k=[G:H]$ and the $r_i$'s are a set of fixed representatives for the cosets $G/H$. This means that we can write
+$$
+\C[G] = \bigoplus_{i=1}^k r_i \C[H].
+$$
+This implies that $\C[G] \otimes_{\C[H]} V$ decomposes as
+$$
+\C[G] \otimes_{\C[H]} V = \left(\bigoplus_{i=1}^k r_i \C[H]\right) \otimes_{\C[H]} V \simeq \bigoplus_{i=1}^k \left( r_i \C[H] \otimes_{\C[H]} V \right)
+$$
+This is exactly the description in 3), because each $r_i \C[H] \otimes_{\C[H]} V$ is isomorphic to $V$ via the map $r_ih \otimes v \mapsto h^{-1}v$ (we need the inverse in order for this to be a map of representations). The representation $V$ is endowed with a left action of $H$ (this is what a representation \emph{is}), but it also has a right action, defined by $v \cdot g := g^{-1}v$. In this way, $V$ becomes a left-right-$H$-module.
+
+One can check that the action in 3) and the natural $G$-action on $r_i\C[H] \otimes_{\C[H]} V$ are the same.
+[[more to come]]
+\end{proof}
+
+We say that the collection $\{ V_\sigma \}\subset W$  is called a \textbf{system of imprimitivity} of the representation $V$. 
+
+\subsection{Frobenius reciprocity}
+
+and a proof of this...
+
+\subsection{More on induction}
+
+Here are some basic properties of induction. Most of them follow from basic properties of tensor products.
+
+\begin{enumerate}
+\item If $N \subset M \subset G$ are subgroups, then
+$$
+\Ind_H^G \Ind_N^M \pi \sim \Ind_N^G \pi
+$$
+\item If $\pi$ is finitedimensional, then
+$$
+(\Ind_H^G \pi)^\vee \simeq \Ind_H^G  \pi^\vee.
+$$
+Here $\pi^\vee$ is the contragradient representation of $\pi$.
+\end{enumerate}
+
+\subsection{Characters of induced representations}
+
+\begin{prop}
+ Assume $G \supset H$ and that $\pi$ is a finite-dimensional representation of $H$ and $\chi$ its character. Then the character $\Ind_H^G \chi$ of $\Ind_H^G \pi$ is given by
+$$
+(\Ind \chi)(g) = \frac{1}{\lvert H \rvert} \sum_{s \in G \mid s^{-1}gs \in H} \chi(s^{-1}gs).
+$$
+\end{prop}
+
+\section{The Frobenius subgroup theorem}
+
+In this section we will prove a theorem of group theory, the proof of which relies heavily upon representation theory. To this day, no ``elementary'' proof is known.
+
+\begin{thm}
+  Assume a finite group $G$ acts transitively on a set $X$ such that every $g \neq e$ has at most one fixed point. Then there exists a unique normal subgroup $K$ of $G$ acting freely transitively on $X$.
+\end{thm}
+
+\section{The theorems of Artin and Brauer and fields of definition}
+
+...
+
+\section{Part II - compact groups}
+
+When one wants to develop a representation theory for infinite groups, one has to restrict the scope somewhat. Infinite groups are too wild in general, and they can have quite bad representation theory. For example, $\Z$ acting on $\C^2$ by $(x,y) \mapsto (x+ny,y)$ has the $y$-axis as an irreducible subspace, but the representation does not split, because there is no complementary invariant subspace. Thus the property of complete reducibility fails. 
+
+We want to at least restrict to groups with a topology. But what made wonders for the theory of finite groups was the presence of an averaging operator. If we restrict to \emph{compact} groups, we will see that we can mimic this operator in this setting as well.
+
+Recall that a \textbf{topological group} is a group $G$ equipped with a topology such that the group law and the inverse are continous maps. 
+
+Here is a key fact:
+\begin{prop}[Haar, von Neumann, André Weil]
+For any locally compact group $G$ there exists a nonzero left-invariant Radon measure on $G$ which is unique up to scalar. We call such a measure a \textbf{Haar measure}.  
+\end{prop}
+
+Recall that a \textbf{Radon measure} $\mu$ on a locally compact space is a Borel measure which is outer regular, inner regular on open subsets and $\mu(K) < \infty$ for all compacts $K$.
+
+To be given a Radon measure on a locally compact space $X$ is equivalent to be given a linear functional $F:C_c(X) \to \C$ such that $F(f) \geq 0$ if $f \geq 0$ (here $C_c(X)$ is the space of compactly supported functions on $X$). Thus we can think of a Radon measure as equivalent to having a way to integrate functions.
+
+\begin{example}
+  Let $G=(\R,+)$. The the Haar measure is the usual Lebesgue measure.
+\end{example}
+
+There are also right-invariant measures. If the left- and right-invariant Haar measures coincide, then we say that the group $G$ is \textbf{unimodular}.
 
 \appendix
 \section{Exercises}
@@ -797,6 +889,8 @@ Now, every finite abelian group is a product of these groups. So it remains to s
 
 It is easy to see that this map is injective. To see that it is surjective, let $\varphi:G \times H \to \C$ be a character. Write $\varphi$ as $gh \mapsto \varphi(gh)$. Then we can define characters on $G,H$ by $g \mapsto \varphi(g \cdot 1)$ which maps to $\varphi$. Ok.
 \end{sol}
+
+\subsection{Exercises 3}
 
 \begin{exc}
 Show that the $S$ defined in the proof of Theorem \eqref{thmdensity} lies in $\Theta(G)''$.
@@ -839,6 +933,26 @@ $$
 Hence $V$ and $V^\ast$ are isomorphic as representations and then $\Hom_G(V,V^\ast)$ (space of bilinear forms) is one-dimensional. 
 \end{sol}
 
+\begin{exc}
+ Let $(V,\pi)$ be an irreducible representation and $(W,\theta)$ a finite-dimensional representation. Let $W(\pi)$ be the isotypic component corresponding to $\pi$.
+ \begin{enumerate}
+ \item Show that the operator
+$$
+P = \frac{\dim \pi}{\lvert G \rvert} \sum_{g \in G} \chi_\pi(g^{-1})\theta(g)
+$$
+on $W$ is the projection onto $W(\pi)$ along $\sum_{\pi' \not \simeq \pi} W(\pi')$. In particular:
+$$
+W = \bigoplus_{[\pi] \in \widehat G} W(\pi).
+$$
+\item Show that $\restr{\theta}{W(\pi)} \sim \pi^{n_\pi}$ where $n_\pi = \dim \Mor(\pi,\theta)$.
+ \end{enumerate}
+\end{exc}
+
+\begin{sol}
+dddd
+\end{sol}
+
+
 \subsection{Lecture 4}
 
 \begin{exc}
@@ -848,6 +962,43 @@ Hence $V$ and $V^\ast$ are isomorphic as representations and then $\Hom_G(V,V^\a
 \item $\pi$ is irreducible if and only if $\pi^c$ is.
   \end{enumerate}
 \end{exc}
+
+\subsection{Exercises 11}
+
+\begin{exc}
+  \begin{enumerate}
+  \item Find a Haar measure on $\GL_2(\R)$ and check that this group is unimodular\footnote{Recall that this means that the left and right invariant Haar measures coincide}.
+\item Find left- and right-invariant Haar measures on the $ax+b$ group over $\R$, and check that this group is not unimodular.
+  \end{enumerate}
+\end{exc}
+\begin{sol}
+For the first part, we start with the usual measure on $\R^4$, and see what happens when we translate by an element of $\GL_2(\R)$. 
+
+We assume the Haar measure has the following form, for some yet unknown function $f$.
+$$
+\mu(S) = \int_S f(A) \lvert da_{11} d a_{12} da_{21} da a_{22} \rvert.
+$$
+
+Now consider the same formula on the set $gS$. Then the change of variable formula tells us that
+$$
+\mu(gS) = \int_S f(gS) \lvert \det D(g) \rvert \lvert da_{11} d a_{12} da_{21} da a_{22} \rvert.
+$$
+where $\det D(g)$ is the Jacobian matrix of the map $A \mapsto gA$. A computation shows that this map is row-equivalent to a block diagonal matrix with two copies of $g$. Thus $\det D(g) = (\det g)^2$. Hence a left-invariant Haar measure on $\GL_2(\R)$ is given by
+$$
+\mu(S) = \int_S \frac{1}{\lvert \det A\rvert ^2} dA.
+$$
+The same computation with $g mapsto Ag$ gives the same result. Hence $\GL_2(\R)$ is unimodular.
+
+ii). For the second part, note that the $ax+b$-group is topologically $\R \times \R^\ast$, so that we can use the measure $dxdy$ here. Then a similar computation gives that a left-invariant Haar measure is given by
+$$
+\mu(S) = \int_S \frac{1}{a^2} da\, db
+$$
+and a right-invariant Haar measure is given by
+$$
+\mu(S) = \int_S \frac{1}{a} da\, db.
+$$
+
+\end{sol}
 
 
 \section{Some worked examples}

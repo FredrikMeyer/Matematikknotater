@@ -31,17 +31,17 @@
 \contentsline {section}{\numberline {10}Linear representations of finite groups - Serre}{37}{section.10}
 \contentsline {subsection}{\numberline {10.1}Chapter 1 - Representations and characters}{37}{subsection.10.1}
 \contentsline {subsection}{\numberline {10.2}Chapter 2 - The character of a representation}{37}{subsection.10.2}
-\contentsline {subsection}{\numberline {10.3}Chapter 3}{38}{subsection.10.3}
-\contentsline {section}{\numberline {11}The K-book - Charles Weibel}{38}{section.11}
-\contentsline {subsubsection}{\numberline {11.0.1}Chapter 1.1 - Free modules, $GL_n$ and stably free modules}{38}{subsubsection.11.0.1}
-\contentsline {subsection}{\numberline {11.1}Chapter 1.2 - Projective modules}{39}{subsection.11.1}
-\contentsline {section}{\numberline {12}Representation Theory - Fulton, Harris}{40}{section.12}
-\contentsline {subsection}{\numberline {12.1}Representations of Finite Groups}{40}{subsection.12.1}
-\contentsline {subsection}{\numberline {12.2}Chapter 7 - Lie groups}{43}{subsection.12.2}
-\contentsline {subsection}{\numberline {12.3}Lecture 8 - Lie Algebras and Lie groups}{44}{subsection.12.3}
-\contentsline {section}{\numberline {13}Twenty-Four Hours of Local Cohomology}{45}{section.13}
-\contentsline {subsection}{\numberline {13.1}Lecture 1 - Basic notions}{45}{subsection.13.1}
-\contentsline {subsection}{\numberline {13.2}Lecture 7 - Local cohomology}{47}{subsection.13.2}
-\contentsline {section}{\numberline {14}Riemannian geometry - Do Carmo}{47}{section.14}
-\contentsline {subsection}{\numberline {14.1}Chapter 0 - Differentiable manifolds}{47}{subsection.14.1}
-\contentsline {subsection}{\numberline {14.2}Chapter 2 - Affine and Riemannian connections}{48}{subsection.14.2}
+\contentsline {subsection}{\numberline {10.3}Chapter 3}{41}{subsection.10.3}
+\contentsline {section}{\numberline {11}The K-book - Charles Weibel}{41}{section.11}
+\contentsline {subsubsection}{\numberline {11.0.1}Chapter 1.1 - Free modules, $GL_n$ and stably free modules}{41}{subsubsection.11.0.1}
+\contentsline {subsection}{\numberline {11.1}Chapter 1.2 - Projective modules}{43}{subsection.11.1}
+\contentsline {section}{\numberline {12}Representation Theory - Fulton, Harris}{43}{section.12}
+\contentsline {subsection}{\numberline {12.1}Representations of Finite Groups}{43}{subsection.12.1}
+\contentsline {subsection}{\numberline {12.2}Chapter 7 - Lie groups}{47}{subsection.12.2}
+\contentsline {subsection}{\numberline {12.3}Lecture 8 - Lie Algebras and Lie groups}{48}{subsection.12.3}
+\contentsline {section}{\numberline {13}Twenty-Four Hours of Local Cohomology}{49}{section.13}
+\contentsline {subsection}{\numberline {13.1}Lecture 1 - Basic notions}{49}{subsection.13.1}
+\contentsline {subsection}{\numberline {13.2}Lecture 7 - Local cohomology}{51}{subsection.13.2}
+\contentsline {section}{\numberline {14}Riemannian geometry - Do Carmo}{51}{section.14}
+\contentsline {subsection}{\numberline {14.1}Chapter 0 - Differentiable manifolds}{51}{subsection.14.1}
+\contentsline {subsection}{\numberline {14.2}Chapter 2 - Affine and Riemannian connections}{52}{subsection.14.2}
