@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  22 SEP 2015 19:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  7 OCT 2015 15:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1199,13 +1199,13 @@ LaTeX Font Info:    Try loading font information for U+euf on input line 302.
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/amsfonts
 /ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [11] [12] [13] [14]
-Overfull \hbox (1.8173pt too wide) in paragraph at lines 463--463
+) [11] [12] [13] [14] [15]
+Overfull \hbox (1.8173pt too wide) in paragraph at lines 480--480
 []\T1/cmr/bx/n/14.4 Categories for the work-ing math-e-mati-cian - Saun-
  []
 
-[15]
-Overfull \hbox (3.22282pt too wide) detected at line 502
+[16]
+Overfull \hbox (3.22282pt too wide) detected at line 519
 \OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 Tx; Ty\OMS/cmsy/m/n/10.95 i \OT1/cmr/m
 /n/10.95 = \OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 Tx; T\OT1/cmr/m/n/10.95 (\O
 ML/cmm/m/it/10.95 a[]x[]\OT1/cmr/m/n/10.95 )\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/
@@ -1219,19 +1219,19 @@ OML/cmm/m/it/10.95 x[]; x[]\OMS/cmsy/m/n/10.95 i\OML/cmm/m/it/10.95 :
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 520.
+(hyperref)                removing `math shift' on input line 537.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 520.
+(hyperref)                removing `superscript' on input line 537.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 520.
+(hyperref)                removing `math shift' on input line 537.
 
-[16] <xymatrix 2x2 175>
-Overfull \hbox (27.16716pt too wide) in paragraph at lines 545--546
-[][]\T1/cmr/bx/n/10.95 Exercise 25 \T1/cmr/m/n/10.95 (Ex-er-cise 3.3)\T1/cmr/bx
+<xymatrix 2x2 175> [17]
+Overfull \hbox (27.16716pt too wide) in paragraph at lines 562--563
+[][]\T1/cmr/bx/n/10.95 Exercise 26 \T1/cmr/m/n/10.95 (Ex-er-cise 3.3)\T1/cmr/bx
 /n/10.95 . []\T1/cmr/m/n/10.95 Let $\OML/cmm/m/it/10.95 B \OT1/cmr/m/n/10.95 = 
 \OML/cmm/m/it/10.95 k\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 x; y\OT1/cmr/m/n/1
 0.95 ]\OML/cmm/m/it/10.95 =\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x[]; xy; y[]
@@ -1239,24 +1239,24 @@ Overfull \hbox (27.16716pt too wide) in paragraph at lines 545--546
 /cmr/m/n/10.95 (\OML/cmm/m/it/10.95 B=k; B\OT1/cmr/m/n/10.95 ) =
  []
 
-[17] [18] [19]
-Overfull \hbox (11.5052pt too wide) in paragraph at lines 691--692
+[18] [19] [20]
+Overfull \hbox (11.5052pt too wide) in paragraph at lines 708--709
 []$ \T1/cmr/m/n/10.95 with in-verses $\OML/cmm/m/it/10.95 j[]\OT1/cmr/m/n/10.95
  (\OML/cmm/m/it/10.95 a; b\OT1/cmr/m/n/10.95 ) = []$ \T1/cmr/m/n/10.95 and $\OM
 L/cmm/m/it/10.95 j[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a; b\OT1/cmr/m/n/10
 .95 ) =
  []
 
-[20] <xymatrix 4x3 405>
-Overfull \hbox (53.16557pt too wide) detected at line 708
+<xymatrix 4x3 405> [21]
+Overfull \hbox (53.16557pt too wide) detected at line 725
 \U/msb/m/n/10.95 C\OML/cmm/m/it/10.95 P[] \OMS/cmsy/m/n/10.95 3 \OT1/cmr/m/n/10
 .95 [\OML/cmm/m/it/10.95 x \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 iy; a \OT1/
 cmr/m/n/10.95 + \OML/cmm/m/it/10.95 ib\OT1/cmr/m/n/10.95 ] \OMS/cmsy/m/n/10.95 
 7! [] 2 \OML/cmm/m/it/10.95 S[]
  []
 
-[21] [22] <xymatrix 2x2 141> [23] <xymatrix 2x2 141> [24] [25]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 899.
+[22] [23] <xymatrix 2x2 141> <xymatrix 2x2 141> [24] [25] [26]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 916.
 
 
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/base/oms
@@ -1264,9 +1264,9 @@ cmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 899.
- [26]
-Overfull \hbox (1.93008pt too wide) in paragraph at lines 910--911
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 916.
+
+Overfull \hbox (1.93008pt too wide) in paragraph at lines 927--928
 []\T1/cmr/m/n/10.95 Then, chas-ing through the def-i-ni-tions, if the $\OML/cmm
 /m/it/10.95 X$ \T1/cmr/m/n/10.95 is given by $\OML/cmm/m/it/10.95 p \OMS/cmsy/m
 /n/10.95 7! \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 f\OT1/cmr/m/n/10.95 (\OML/c
@@ -1274,8 +1274,8 @@ mm/m/it/10.95 p\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; p\OT1/cmr/m/n/10.95 )$
 \T1/cmr/m/n/10.95 ,
  []
 
-[27] [28] [29] [30] [31] [32] [33] [34]
-Overfull \hbox (1.1899pt too wide) in paragraph at lines 1230--1232
+[27] [28] [29] [30] [31] [32] [33] [34] [35]
+Overfull \hbox (1.1899pt too wide) in paragraph at lines 1247--1249
 \T1/cmr/m/n/10.95 since $\U/euf/m/n/10.95 q \OMS/cmsy/m/n/10.95 ^^Z \U/euf/m/n/
 10.95 p$\T1/cmr/m/n/10.95 . But $\U/euf/m/n/10.95 p$ \T1/cmr/m/n/10.95 is prime
  so ei-ther $\OML/cmm/m/it/10.95 a \OMS/cmsy/m/n/10.95 2 \U/euf/m/n/10.95 p$ \T
@@ -1283,49 +1283,49 @@ Overfull \hbox (1.1899pt too wide) in paragraph at lines 1230--1232
 /10.95 +
  []
 
-[35] [36] [37] [38] [39] [40]
+[36] [37] [38] [39] [40] [41]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1458.
+(hyperref)                than one, level fixed on input line 1475.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1458.
+(hyperref)                removing `math shift' on input line 1475.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1458.
+(hyperref)                removing `subscript' on input line 1475.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1458.
+(hyperref)                removing `math shift' on input line 1475.
 
-[41] [42] [43] [44] [45] [46] [47] <xymatrix 5x4 761> [48]
+[42] [43] [44] [45] [46] [47] <xymatrix 5x4 761> [48] [49]
 Package hyperref Info: bookmark level for unknown oppg defaults to 0 on input l
-ine 1756.
+ine 1773.
 Package hyperref Info: bookmark level for unknown losn defaults to 0 on input l
-ine 1760.
- [49] [50] [51]
-[52]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1929.
- [53]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1929.
+ine 1777.
+ [50] [51] [52]
+[53]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1946.
+ [54]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1946.
  (./exercises.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1929.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1929.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1946.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1946.
 
 Package rerunfilecheck Info: File `exercises.out' has not changed.
 (rerunfilecheck)             Checksum: 39BE799A7238687CE2322C0D2694BB7A;3584.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1929.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1946.
  ) 
 Here is how much of TeX's memory you used:
- 20698 strings out of 493308
- 356930 string characters out of 6135157
+ 20704 strings out of 493308
+ 357005 string characters out of 6135157
  467240 words of memory out of 5000000
  23115 multiletter control sequences out of 15000+600000
  26081 words of font info for 85 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,23n,63p,3265b,646s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,23n,63p,3265b,610s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/enc/dvips/
 cm-super/cm-super-t1.enc}</mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></mn/anatu/modules/opt/texlive
@@ -1368,10 +1368,10 @@ ive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></mn
 /anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/xyp
 ic/xyatip10.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fo
 nts/type1/public/xypic/xybtip10.pfb>
-Output written on exercises.pdf (53 pages, 541861 bytes).
+Output written on exercises.pdf (54 pages, 544588 bytes).
 PDF statistics:
- 1185 PDF objects out of 1200 (max. 8388607)
- 1088 compressed objects within 11 object streams
- 569 named destinations out of 1000 (max. 500000)
+ 1195 PDF objects out of 1200 (max. 8388607)
+ 1097 compressed objects within 11 object streams
+ 575 named destinations out of 1000 (max. 500000)
  381 words of extra memory for PDF output out of 10000 (max. 10000000)
 
