@@ -946,7 +946,7 @@ Let $G$ be a finite group and $\mathscr C$ a collection of subgroups of $G$. The
 
 thu 22 and wed 23.
 
-\section{Part II - compact groups}
+\section{Part II - Compact groups}
 
 When one wants to develop a representation theory for infinite groups, one has to restrict the scope somewhat. Infinite groups are too wild in general, and they can have quite bad representation theory. For example, $\Z$ acting on $\C^2$ by $(x,y) \mapsto (x+ny,y)$ has the $y$-axis as an irreducible subspace, but the representation does not split, because there is no complementary invariant subspace. Thus the property of complete reducibility fails. 
 
@@ -963,12 +963,70 @@ Recall that a \textbf{Radon measure} $\mu$ on a locally compact space is a Borel
 
 To be given a Radon measure on a locally compact space $X$ is equivalent to be given a linear functional $F:C_c(X) \to \C$ such that $F(f) \geq 0$ if $f \geq 0$ (here $C_c(X)$ is the space of compactly supported functions on $X$). Thus we can think of a Radon measure as equivalent to having a way to integrate functions.
 
+If $G$ is compact, we usually normalize so that $\mu(G)=1$. This makes the Haar measure unique.
+
 \begin{example}
   Let $G=(\R,+)$. The the Haar measure is the usual Lebesgue measure.
 \end{example}
 
 There are also right-invariant measures. If the left- and right-invariant Haar measures coincide, then we say that the group $G$ is \textbf{unimodular}.
 
+\begin{lemma}
+Any compact group is unimodular.  
+\end{lemma}
+\begin{proof}
+ Let $\mu_l$ be the left-invariant measure. Then the measure $\mu_l'(U)= \mu_l(Ug)$ is left-invariant as well. Hence $\mu_l' = \alpha \mu_l$ for some $\alpha \in \R$. But $1=\mu_l'(G) = \alpha \mu_l(G) = \alpha$. Hence $\mu_l'=\mu$.
+Thus $\mu_l(Ug)=\mu_l'(U)=\mu_l(U)$, so $\mu_l$ is right-invariant as well.
+\end{proof}
+
+Many of the results for finite groups carry over to compact groups: the proofs are the same except expressions like $\frac{1}{\lvert G \rvert}$ are replaced by $\int_G f d \mu$.
+
+A \textbf{representation} of a compact group $G$ is a continous homomorphism $\pi:G \to \GL(V)$.
+
+Here are some results that holds for compact groups as well (with the same proofs):
+\begin{itemize}
+\item \textbf{Maschke's theorem:} Any finite-dimensional representation of $G$ is completely reducible.
+\item Any finite-dimensional representation is unitarizable.
+\item The orthogonality relations. In particular, two finite-dimensional representations of a $G$ are equivalent if and only if the characters coincide. 
+\end{itemize}
+
+The notion of regular representation is however more complicated. We are forced to (briefly) introduce infinite-dimensional spaces.
+
+A \textbf{unitary} representation of a topological group $G$ on a Hilbert space $\mathcal H$ is a homomorphism $\pi:G \to U(\mathcal H)$, continous in the \textbf{strong operator topology}, meaning the following: if $g_i \to g$ in $G$, then $\pi(g_i) \zeta \to \pi(g)\zeta$ for all $\zeta \in \mathcal H$. This can be rephrased as saying that the map $G \to \mathcal H$ given by $g \mapsto \pi(g) \zeta $ is continous for all $\zeta \in \mathcal H$.
+
+\begin{example}
+ Let $G$ be a locally compact group with fixed Haar measure. Consider $L^2(G)$ (the vector space of square integrable functions on $G$) with respect to the given measure. Define
+$$
+\xymatrix @ R = 0mm{
+G \ar[r] &U(L^2(G)) \\
+g \ar@{|->}[r] & (\lambda(g)f)(h) = f(g^{-1}h).
+}
+$$
+Then $\lambda$ is continous in the above sense.
+
+We call $\lambda$ the \textbf{regular representation of the compact group $G$}.
+\end{example}
+
+\begin{thm}[Peter-Weyl]
+
+Let $G$ be a compact group and $\pi:G \to U(\mathcal H)$ a unitary representation. Then $\pi$ decomposes into a direct sum (in the sense of Hilbert spaces) of finite-dimensional irreducible representations.
+  
+\end{thm}
+
+\begin{proof}
+  [[a sketch was given in the lecture]]
+\end{proof}
+
+\begin{corr}
+For any compact group $G$, the intersection of all kernels of irreducible representations on $G$ is trivial.
+\end{corr}
+\begin{proof}
+The regular representation decomposes into a sum of irreducibles, and is injective. 
+\end{proof}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 \section{Exercises}
 
@@ -1102,8 +1160,29 @@ and a right-invariant Haar measure is given by
 $$
 \mu(S) = \int_S \frac{1}{a} da\, db.
 $$
-
 \end{sol}
+
+\subsection{Lecture 13}
+\begin{exc}
+ Let $G = \GL_n(\C)$. Show that $\exp:\frak g \to G$ is surjective. Show also that it is not open.
+\end{exc}
+\begin{sol}
+Note that for matrix groups, the exponential is given by
+$$
+\exp(A) = I + A + \frac 12 A^2 + \frac 16+A^3 + \ldots+\frac{1}{n!}A^n + \ldots
+$$
+Also note that
+$$
+\exp(P^{-1}AP) = P^{-1} \exp(A) P
+$$
+for invertible matrices $P \in \GL_n(\C) \subset \frak g=\End(\C^n)$. Thus, if $A$ is diagonalizable with eigenvalues $\lambda_i$, the matrix $P^{-1}\text{diag}(\log \lambda_1,\ldots,\log \lambda_n)P$ (with $P$ diagonalizing $A$) is mapped to $A$. Here $\log$ is of course the complex logarithm (which is multi-valued, so choose one value for each).
+
+Now if $A$ is not diagonalizable, the matrix $A+\epsilon I$ is invertible and diagonalizable for generic $\epsilon$. Thus we can find a sequence $A_n$ with all $A_n$ diagonalizable and $A_n \to A$ with corresponding $B_n$ with $\exp(B_n)=A_n$. I claim that the $B_n$ can be chosen such that $\{ B_n \}$ is a convergent sequence.  This is because the eigenvalues of $A_n$ are continous with respect to $\epsilon$, and as $\log:\C^\ast \to \C$ is continous, we can choose the logs of close eigenvalues to be close. Thus we get a convergent sequence $B_n \to B$, and by continuity of $\exp$, $\exp(B)=A$.
+
+Now we explain why $\exp$ is not open. [[[HOW????]]
+\end{sol}
+
+
 
 
 \section{Some worked examples}
