@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  13 OCT 2015 17:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  19 OCT 2015 18:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1239,21 +1239,22 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 988.
- <xymatrix 2x2 86> [24]
+ <xymatrix 2x2 86> [24] [25] [26] [27] <xymatrix 2x2 182>
 Package hyperref Info: bookmark level for unknown sol defaults to 0 on input li
-ne 1038.
- [25] <xymatrix 2x2 168>
-Underfull \hbox (badness 2027) in paragraph at lines 1095--1097
+ne 1196.
+ [28] [29]
+<xymatrix 2x2 168>
+Underfull \hbox (badness 2027) in paragraph at lines 1253--1255
 \T1/cmr/m/n/10 Hence $\OML/cmm/m/it/10 V$ \T1/cmr/m/n/10 and $\OML/cmm/m/it/10 
 V[]$ \T1/cmr/m/n/10 are iso-mor-phic as rep-re-sen-ta-tions and then
  []
 
-[26] [27]
+[30] [31]
 
 Package amsfonts Warning: Obsolete command \frak; \mathfrak should be used inst
-ead on input line 1167.
+ead on input line 1325.
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 1167.
+LaTeX Font Info:    Try loading font information for U+euf on input line 1325.
 
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/amsfonts
 /ueuf.fd
@@ -1261,38 +1262,45 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1190.
+(hyperref)                removing `math shift' on input line 1348.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1190.
+(hyperref)                removing `subscript' on input line 1348.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1190.
+(hyperref)                removing `math shift' on input line 1348.
 
-[28]
+[32]
 Package youngtab: box1 not free! Expect an error!
-[29] [30]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1290.
- [31]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1290.
+[33]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1448.
+ [34]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1448.
  (./reptheory.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1290.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1290.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1448.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1448.
 
-Package rerunfilecheck Info: File `reptheory.out' has not changed.
-(rerunfilecheck)             Checksum: 8D1F930DAEE21AC97CB3866D67DDFFAC;2301.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1290.
+
+
+Package rerunfilecheck Warning: File `reptheory.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `reptheory.out':
+(rerunfilecheck)             Before: 1C2D08ACD9345200545ABFC1A5B0B278;2452
+(rerunfilecheck)             After:  F58B69F0E7CB046CADC684BF266FD502;2534.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1448.
  ) 
 Here is how much of TeX's memory you used:
- 18959 strings out of 493308
- 321541 string characters out of 6135157
- 432741 words of memory out of 5000000
- 21745 multiletter control sequences out of 15000+600000
+ 18989 strings out of 493308
+ 321982 string characters out of 6135157
+ 431777 words of memory out of 5000000
+ 21748 multiletter control sequences out of 15000+600000
  32320 words of font info for 105 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,14n,55p,3265b,527s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,14n,55p,3265b,531s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/enc/dvips/
 cm-super/cm-super-t1.enc}</mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></mn/anatu/modules/opt/texlive
@@ -1348,10 +1356,10 @@ exlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></mn
 /anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/xyp
 ic/xybtip10.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fo
 nts/type1/public/xypic/xydash10.pfb>
-Output written on reptheory.pdf (31 pages, 572214 bytes).
+Output written on reptheory.pdf (34 pages, 589100 bytes).
 PDF statistics:
- 630 PDF objects out of 1000 (max. 8388607)
- 550 compressed objects within 6 object streams
- 203 named destinations out of 1000 (max. 500000)
- 277 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 681 PDF objects out of 1000 (max. 8388607)
+ 598 compressed objects within 6 object streams
+ 230 named destinations out of 1000 (max. 500000)
+ 293 words of extra memory for PDF output out of 10000 (max. 10000000)
 
