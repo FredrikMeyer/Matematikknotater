@@ -1,0 +1,9 @@
+\beamer@endinputifotherversion {3.33pt}
+\select@language {norsk}
+\beamer@sectionintoc {1}{Oversikt}{2}{0}{1}
+\beamer@sectionintoc {2}{Algebraisk geometri}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{Teorem}{5}{0}{2}
+\beamer@subsectionintoc {2}{2}{Eksempel}{6}{0}{2}
+\beamer@sectionintoc {3}{Fremheving}{7}{0}{3}
+\beamer@sectionintoc {4}{Lister}{8}{0}{4}
+\beamer@sectionintoc {5}{Referanser}{9}{0}{5}
