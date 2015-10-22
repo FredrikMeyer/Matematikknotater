@@ -257,12 +257,128 @@ Et svømmebasseng er 25 m langt, 10 m bredt og 1 m dypt i den grunne enden og 6 
 \begin{losn}
 Vi må ha enhetene riktig. 2000 liter er 2 kubikkmeter. 
 
-Vi skriver volumet som funksjon av høyden:
+Før vannstanden har nådd 5 meter må vi regne ut volumet til et prisme (tegn tegning!). Dette har volum 
 $$
-V(t) = 
+V(t) = \frac 12 b(t)h(t)l,
+$$
+hvor $b$ er lengden til vannstanden, $l$ er bredden til bassenget og $h$ er høyden. Lengden er konstant og $b$ og $h$ avhenger av $t$. Siden vi får 2 kubikkmeter i minuttet, er $V'(t)=2$.
+
+Merk at vi har en formlik trekant her. Dermed finner vi at $b=5h$, så
+$$
+V(t) =  \frac 5h(t)^2 \cdot 10 = 25h(t)^2.
+$$
+Deriverer vi på begge sider får vi
+$$
+2 = V'(t) = 50h'(t)h(t).
+$$
+Om $h(t)=3$, får vi dermed
+$$
+h'(t) = \frac{2}{150} m/min.
+$$
+Vi gjør om til $cm$ per $min$ og får $4/3$ cm per minutt.
+\end{losn}
+
+
+\begin{oppg}[7.2.13]
+En radar er plassert på en stolpe 7 meter over en vei. En bil nærmer seg stolpen. I det øyeblikket avstanden fra bilen til stolpen er 24 meter, viser radaren at avstanden fra bilen til radaren avtar med 30 meter i sekundet. Hvor fort kjører bilen?
+\end{oppg}
+\begin{losn}
+Tegn tegning.
+
+La $h(t)$ være avstanden fra radaren etter $t$ sekunder og la $x(t)$ være posisjonen til bilen. Vi får en rettvinklet trekant, og ved Pythagoras er 
+$$
+x(t)^2 + 7^2 = h(t)^2.
+$$
+Som gir
+$$
+x(t)x'(t) = h(t)h'(t).
+$$
+Om $h(t)=24$ og $h'(t)=-30$, må dermed $x'(t) = -720/h(t)$. Ved Pythagoras igjen finner vi $h(t)$. For vi har $h(t)^2=24^2+7^2=25^2$. Så $h(t)=25$. Dermed er
+$$
+x'(t) = -720/25 = -28.8 m/s.
+$$
+
+\end{losn}
+
+
+\section{7.4 - Omvendte funksjoner}
+
+\begin{oppg}[7.4.1]
+Vis at funksjonen er injektiv og finn den omvendte funksjonen. Angi definisjonsområdet til den omvendte funksjonen.
+\end{oppg}
+\begin{losn}
+\begin{enumerate}[a)]
+\item La $f(x)=x^3$ med $D_f=\R$. Vi har at $f'(x)=3x^2$. Dette er en strengt positiv funksjon (for $x\neq 0$), så $f$ må være injektiv. Inversen er gitt ved $g(x)=\sqrt[3]{x}$ med definisjonsområde $\R$.
+\item La $f(x)=x^2$ for $D_f=[0, \infty)$. Igjen er $f$ injektiv fordi den er strengt voksende på definisjonsområdet. Inversen er gitt ved $g(x) = \sqrt{x}$ med definisjonsområde $[0,\infty)$.
+\item La $f(x)=x^2$ igjen, denne gangen med definisjonsområde $(-\infty,0]$. Nå er $f$ strengt synkende, så igjen må den være injektiv. Inversen her er $g(x)=-\sqrt{x}$ og $D_f=[0, \infty)$. 
+\end{enumerate}
+\end{losn}
+
+\begin{oppg}[7.3]
+Vis at funksjonen
+$$
+f(x) = 2xe^x + 1,
+$$
+definert for $x \geq 1$ er injektiv. La $g$ være den omvendte funksjonen og beregn $g'(1)$.
+\end{oppg}
+\begin{losn}
+Vi deriverer og får $f'(x) = 2e^x+2xe^x=2e^x(1+x)$. Vi ser at om $x \geq -1$, så er den deriverte positiv, så $f$ må være strengt voksende. Dermed er den injektiv. 
+
+Vi har at 
+$$
+x=g(f(x))
+$$
+så vi deriverer på begge sider og får 
+$$
+1 = g'(f(x))f'(x).
+$$
+Vi har at $f(0)=1$, så vi setter $x=0$ over, og får
+$$
+g'(1)=\frac{1}{f'(0)}=\frac{1}{2}.
 $$
 \end{losn}
 
+\begin{oppg}[7.4.5]
+La $f(x)=\tan(2x)$ og vis at $f$ er injektiv på intervallet $(-\pi/4,\pi/4)$. Finn den deriverte til den omvendte funksjonen i punktet $x=1$.
+\end{oppg}
+\begin{losn}
+Vi har at $f'(x) = \frac{2}{\cos^2(2x)}$. Dermed er $f(x)$ strengt voksende så lenge $\cos(2x) \neq 0$ (for da er den ikke definert). Dette skjer presist når $x \in (-\pi/4,\pi/4)$.
+
+La $g(x)$ være den omvendte funksjonen. Igjen vet vi at
+$$
+g'(f(x)) = \frac{1}{f'(x)}.
+$$
+Så vi må finne når $f(x)=1$. Men dette skjer når $x=\pi/8$, for da er $\tan(2x)=\tan(\pi/4)=1$. Så
+$$
+g'(1)=\frac{1}{f'(\pi/u)} = \frac 14.
+$$
+\end{losn}
+
+\begin{oppg}
+Anta at $g$ er den omvendte funksjonen til en kontinuerlig, strengt monoton funksjon $f$ og at $f$ er to ganger deriverbar i punktet $y=g(x)$. Vis at $g$ er to ganger deriverbar i $x$ og at 
+$$
+g''(x) = -\frac{f'(g(x))g'(x)}{f'(g(x))^2}.
+$$
+\end{oppg}
+\begin{losn}
+Start med
+$$
+x=f(g(x)).
+$$
+Da er 
+$$
+1 = f'(g(x))g'(x).
+$$
+Dermed er
+$$
+g'(x) = \frac{1}{f'(g(x))}.
+$$
+Så 
+$$
+g''(x) = \frac{-f''(g(x))g'(x)}{f'(g(x))^2}.
+$$
+
+\end{losn}
 
 
 
