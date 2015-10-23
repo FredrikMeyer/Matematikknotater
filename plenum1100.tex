@@ -108,7 +108,7 @@ A(60 ^\circ) = a^2 \frac{3}{\sqrt{2}}\frac{3}{2} = \frac{9a^2}{2\sqrt{2}}.
 $$
 \end{losn}
 
-\begin{oppg}
+\begin{oppg}[7.1.8]
 Vi har et rektrangel innskrevet som under.
 \begin{verbatim}
 |
@@ -151,7 +151,7 @@ $$
 \end{losn}
 
 
-\begin{oppg}[7.15]
+\begin{oppg}[7.1.15]
 Vi har et trapes innskrevet i en sirkel slik at nederste av trapeset er diameteren i sirkelen. De to andre hjørnene ligger på sirkelomkretsen. Finn det største arealet et slikt trapes kan ha.
 \end{oppg}
 \begin{losn}
@@ -178,7 +178,7 @@ $$
 
 \section{7.2}
 
-\begin{oppg}
+\begin{oppg}[7.2.1]
 En $4$ meter høy stige står opptil en vegg på et flatt underlag. Foten av stigen sklir bort fra veggen med konstant hastighet $0.5 m/s$. Hvor fort beveger toppen av stigen seg når den er $2$ meter over bakken?
 \end{oppg}
 
@@ -199,7 +199,7 @@ $$
 Så toppen av stigen beveger seg mot bakken med en fart på $\sqrt 3 / 2 m/s$. 
 \end{losn}
 
-\begin{oppg}[7.3]
+\begin{oppg}[7.2.3]
 Et fyrtårn sender ut en lysstråle som roterer med konstant fart $2$ omdreininger i minuttet. Fyrtårnet ligger $0.5$ km fra en rettlinjet strandlinje. Finn strålens fart langs strandkanten i et punkt på stranden $1$ km fra fyrtårnet.
 \end{oppg}
 
@@ -223,7 +223,7 @@ $$
 Så fyrtårnet lyser med en fart på circa $25.13 km/min \approx 1500 km/t$ 1km fra tårnet.
 \end{losn}
 
-\begin{oppg}[7.5]
+\begin{oppg}[7.2.5]
 En jente er ute og fisker. En fisk biter på kroken og svømmer rett fra båten med en konstant fart på $4 m/s$ og konstant dybde $8 m$. Hvor mange meter lne løper ut av snellen per sekund i det øyeblikket 10 meter line er ute?
 \end{oppg}
 
@@ -242,7 +242,7 @@ s'(t) = \frac{4 \cdot 6}{10} = 2.4.
 $$
 \end{losn}
 
-\begin{oppg}[7.7]
+\begin{oppg}[7.2.7]
 Du er ute og går med en lommelykt som lyser opp $60^\circ$ rundt seg. Du går mot et gjerde med en fart på $1 m/s$. Hvor fort minker den opplyste delen av gjerdet?
 \end{oppg}
 
@@ -250,7 +250,7 @@ Du er ute og går med en lommelykt som lyser opp $60^\circ$ rundt seg. Du går m
 Ved enkel trigonometri er lengden av gjerdet gitt ved $l(t) = 2h(t)/\sqrt{3}$. Så $l'(t)= 2/\sqrt{3}$.
 \end{losn}
 
-\begin{oppg}
+\begin{oppg}[7.2.9]
 Et svømmebasseng er 25 m langt, 10 m bredt og 1 m dypt i den grunne enden og 6 m dypt på den dype enden. Bunnen skrår jevnt. Bassenget fylles med vann, 2000 liter per minutt. Hvor fort stiger vannet i bassenget ved det tidspunktet da vanndybden i den dype enden er 3 meter?
 \end{oppg}
 
@@ -293,11 +293,10 @@ Som gir
 $$
 x(t)x'(t) = h(t)h'(t).
 $$
-Om $h(t)=24$ og $h'(t)=-30$, må dermed $x'(t) = -720/h(t)$. Ved Pythagoras igjen finner vi $h(t)$. For vi har $h(t)^2=24^2+7^2=25^2$. Så $h(t)=25$. Dermed er
+Om $x(t)=24$ får vi ved Pythagoras at $h(t)=25$. Dermed er
 $$
-x'(t) = -720/25 = -28.8 m/s.
+x'(t) = \frac{25 \cdot (-30)}{24} = -31.25 m/s.
 $$
-
 \end{losn}
 
 
@@ -314,7 +313,7 @@ Vis at funksjonen er injektiv og finn den omvendte funksjonen. Angi definisjonso
 \end{enumerate}
 \end{losn}
 
-\begin{oppg}[7.3]
+\begin{oppg}[7.4.3]
 Vis at funksjonen
 $$
 f(x) = 2xe^x + 1,
@@ -354,7 +353,7 @@ g'(1)=\frac{1}{f'(\pi/u)} = \frac 14.
 $$
 \end{losn}
 
-\begin{oppg}
+\begin{oppg}[7.4.8]
 Anta at $g$ er den omvendte funksjonen til en kontinuerlig, strengt monoton funksjon $f$ og at $f$ er to ganger deriverbar i punktet $y=g(x)$. Vis at $g$ er to ganger deriverbar i $x$ og at 
 $$
 g''(x) = -\frac{f'(g(x))g'(x)}{f'(g(x))^2}.
@@ -377,11 +376,177 @@ Så
 $$
 g''(x) = \frac{-f''(g(x))g'(x)}{f'(g(x))^2}.
 $$
-
+La $f(x)=\sin x$. Vi har at $\sin(\pi/6)=\frac 12$. Dermed er
+$$
+g'\left(\frac 12\right) = \frac{1}{\sin'(\pi/6)}=\frac{1}{\cos(\pi/6)}= \frac{1}{\sqrt{3}/2}=\frac{2}{\sqrt{3}}.
+$$
+Dermed er
+$$
+g''\left( \frac 12 \right) = \frac{-(-\sin(g(1/2)))(2/\sqrt{3})}{\cos(g(1/2))^2}=\frac{1/\sqrt{3}}{1-sin(g(1/2))^2}=\frac{4}{3\sqrt 3}.
+$$
+Sjekk selv at dette gir samme resultat som å dobbelderive $\arcsin x$.
 \end{losn}
 
+\begin{oppg}[7.4.10]
+Vis at funksjonen $f(x)=xe^{\frac 12(1-x^2)}$ er injektiv på intervallet $[-1,1]$. Finn definisjonsområdet til den omvendte funksjonen $g$ og beregn
+$$
+\lim_{y \to 1^-} (1-y)[g'(y)]^2.
+$$
+\end{oppg}
+\begin{losn}
+Ved å derivere ser vi at den deriverte er strengt positiv på det indre av intervallet $[-1,1]$, så funksjonen må være injektiv ved tidligere resultater. Vi har også at $f(-1)=-1$ og $f(1)=1$, så definisjonsområdet til $g$ er $D_g=[-1,1]$. 
 
+For å regne ut grenseverdien trenger vi et par deriverte. Vi regner og finner at
+$$
+f'(x) = e^{\frac 12 (1-x^2)}(1-x^2)
+$$
+og 
+$$
+f''(x) = e^{\frac 12 (1-x^2)}(x^3-3x).
+$$
+Merk at $f'(1)=0$ og $f''(1)=-2$.
 
+Det første vi gjør for å finne grenseverdien er å bruke at
+$$
+g'(y) = \frac{1}{f'(g(y))}.
+$$
+Dermed er
+$$
+\lim_{y \to 1^-} (1-y)[g'(y)]^2 = \lim_{y \to 1^-} \frac{1-y}{f'(g(y))^2}
+$$
+Men siden $g(1)=1$ og $f'(1)=0$, er dette et $0/0$-uttrykk. Vi kan derfor bruke L'Hôpital's regel, og vi får
+$$
+\lim_{y \to 1^-} (1-y)[g'(y)]^2 = \lim_{y \to 1^-} \frac{-1}{2f'(g(y))f''(g(y))g'(y)}.
+$$
 
+Her var vi nødt til å bruke kjerneregelen to ganger. Nå bruker vi igjen at $g'(y)=1/f'(g(y))$, og får at grenseverdien er
+$$
+\lim_{y \to 1^-} (1-y)[g'(y)]^2 = \lim_{y \to 1^-} \frac{-1}{2f''(g(y))}=-\frac{1}{4}.
+$$
+\end{losn}
 
+\section{7.5}
+\begin{oppg}[7.5.3ab]
+Finn grenseverdier.
+\end{oppg}
+
+\begin{losn}
+  \begin{enumerate}[a)]
+  \item Vi skal finne
+$$
+\lim_{x \to 0} x \cot x.
+$$
+Husk at $\cot x = \cos x /\sin x = 1/\tan x$. Dermed er
+$$
+\lim_{x \to 0} x \cot x = \lim_{x \to 0} \frac{x}{\tan x} = \lim_{x \to 0} \frac{1}{1/\cos^2(x)} = \lim_{x \to 0} \cos^2 x = 1.
+$$
+\item Vi skal finne
+$$
+\lim_{x \to \pi/2} \frac{\cot x}{\pi/2 - x}.
+$$
+Dette er ren L'Hôpital:
+$$
+\lim_{x \to \pi/2} \frac{\cot x}{\pi/2 - x} = \lim_{x \to \pi/2} \frac{\frac{-1}{\sin^2(x)}}{-1} = 1.
+$$
+  \end{enumerate}
+\end{losn}
+
+\section{7.6}
+\begin{oppg}
+  Finn eksakte verdier.
+\end{oppg}
+\begin{losn}
+  \begin{enumerate}[a)]
+  \item Siden $\sin(\pi/6)=\frac 12$ er $\arcsin \frac 12 = \pi/6$. 
+\item Siden $\cos(\pi/3)= \frac 12$ er $\arccos \frac 12 = \pi/3$. 
+\item Siden $\tan(\pi/3) = sqrt{3}$, er $\arctan(\sqrt 3) = \pi/3$.
+  \end{enumerate}
+\end{losn}
+
+\begin{oppg}
+  Finn de deriverte.
+\end{oppg}
+\begin{losn}
+  Den deriverte av $f(x) = \arcsin \sqrt {x}$. Her må vi bruke mye kjerneregel.
+$$
+f'(x) = \frac{1}{\sqrt{1-\sqrt{x}^2}} \cdot \frac{1}{2\sqrt{x}} = \frac{1}{2\sqrt{x-x^2}}.
+$$
+
+Og også finne den deriverte til 
+$$
+g(x) = \frac{\arcsin(x)}{\sin (3x)}.
+$$
+Dette er ren formelmanipulasjon. Svaret er
+$$
+g'(x) = \frac{\frac{\sin (3x)}{\sqrt{1-x^2}} - 3\cos(3x) \arcsin x}{\sin^2 (3x)}.
+$$
+\end{losn}
+
+\begin{oppg}
+  Finn grenseverdier.
+\end{oppg}
+
+\begin{losn}
+  \begin{enumerate}
+  \item Først skal vi finne
+$$
+\lim_{x \to 0} \frac{\arctan 2x}{x}.
+$$
+Vi har at $\tan 0 = 0$, så $\arctan 0=0$ også. Dermed er dette et $0/0$-uttrykk og vi bruker L'Hôpital:
+$$
+\lim_{x \to 0} \frac{\arctan 2x}{x} = \lim_{x \to 0} \frac{\frac{2}{\cos^2(2x)}}{1} = \lim_{x \to 0} \frac{2}{\cos^2(2x)} = 2.
+$$
+\item
+
+Nå skal vi finne 
+$$
+\lim_{x \to 0} \frac{\arcsin x}{\sin 3x} = \lim_{x \to 0} \frac{\sqrt{1-x^2}^{-1}}{3\cos (3x)} = \frac{1}{3}.
+$$
+\item Og til slutt:
+$$
+\lim_{x \to 0} \frac{\arctan x - x}{x^3} = \lim_{x \to 0} \frac{\frac{1}{\cos^2 x} - 1}{3x^2}
+$$
+Vi ganger med $\cos^2 x$ både oppe og nede på brøken og bruker at grensen av et produkt er produktet av grensene:
+$$
+\lim_{x \to 0} \frac{\frac{1}{\cos^2 x} - 1}{3x^2} = \lim_{x \to 0} \frac{1-\cos^2 x}{3x^2 \cos^2 x} = \lim_{x \to 0} \frac{1}{\cos^2 x} \frac{1- \cos^2 x}{3x^2} = \lim_{x \to 0} \frac{1}{\cos^2 x} \lim_{x \to 0} \frac{1-\cos^2 x}{3x^2}.
+$$
+Første leddet er lik $1$. Så vi står igjen med 
+$$
+\lim_{x \to 0} \frac{1-\cos^2 x}{3x^2}.
+$$
+Igjen bruker vi L'Hôpital:
+$$
+\lim_{x \to 0} \frac{2 \cos x  \sin x}{6x} = \lim_{x \to 0} \frac{\sin x}{3 x} = \frac 13.
+$$
+  \end{enumerate}
+\end{losn}
+
+\begin{oppg}
+  La $f(x) = x \arctan x$. 
+  \begin{enumerate}[a)]
+  \item Avgjør hvor $f$ er voksende og hvor den er avtagende. 
+\item Hvor er $f$ konveks og hvor er den konkav?
+\item Finn asymptotene til $f$ og skisser grafen. 
+  \end{enumerate}
+\end{oppg}
+
+\begin{sol}
+Vi deriverer og får:
+$$
+f'(x) = \arctan x + \frac{x}{1+x^2}.
+$$
+Vi deriverer enda en gang og får
+$$
+f''(x) = \frac{1}{(1+x^2)^2}.
+$$
+Dermed ser vi at $f'(0)=0$, og siden $f''(x) > 0$ må dette være det eneste nullpunktet. Dermed er $f(x)=x \arctan x$ synkende for $x < 0$ og stigende for $x > 0$.  Så a) er ferdig.
+
+For b). Siden $f''(x) > 0$ hele tiden er $f$ overalt konveks.
+
+Asympotentene er gitt ved $y=\pi/2 x - 1$ og $y=-\pi / 2 x -1$.
+\end{sol}
+
+\begin{oppg}
+ Se boka.
+\end{oppg}
 \end{document}
