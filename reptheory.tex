@@ -1340,7 +1340,40 @@ Now if $A$ is not diagonalizable, the matrix $A+\epsilon I$ is invertible and di
 Now we explain why $\exp$ is not open. [[[HOW????]]
 \end{sol}
 
+\subsection{Exercises 16}
 
+\begin{exc}[Exc 2]
+Let $G$ be a topological group and $\Gamma \subset G$ a discrete normal subgroup. Show that $\Gamma \subset Z(G)$.
+\end{exc}
+\begin{sol}
+Since $\Gamma \subset G$ is normal, we have that $h^{-1}gh \in \Gamma$ for all $g \in G$. So we get a continous map $c:G \to \Gamma$ given by conjugation. But a continous map from a connected topological space to a discrete space must be constant (let $\{g_1, g_2\} \subset c(G)$, which is open (in the discrete topology), hence $c^{-1}(\{ g_1,g_2 \})$ is open, which is only possible if  the inverse image is $\emptyset$ or all of $G$). 
+
+Since $c$ is constant it must be constantly equal to $e$, since $c(e)=e$.
+\end{sol}
+
+\subsection{Exercises 18}
+
+\begin{exc}[Exc 2]
+Let $\pi:G \to \GL(V)$ and $\eta:G \to \GL(W)$ be two finite-dimensional representations of a Lie group $G$. Show that 
+$$
+(\pi \otimes \eta)_\ast(X) = \pi_\ast(X) \otimes 1 + 1 \otimes \eta_\ast(X)
+$$
+for all $X \in \frak g$.
+\end{exc}
+
+\begin{sol}
+We have that $\GL(V \otimes W)$ is an open subset of $\End(V \otimes W)$, so that we may use the additive structure when computing the derivative.
+
+Thus, let $\gamma:\R \to \GL(V \otimes W)$ be a continous curve with $\gamma(0)=e$ and $\gamma'(0)=X$. Then
+\begin{align*}
+  \pi_\ast(\pi \otimes \eta)(X) &= \dd{}{t}\restr{\left(
+\pi(\gamma(t)) \otimes\eta(\gamma(t))
+\right)}{t = 0} \\
+&= \lim_{t \to 0} \frac 1t \left( \pi(\gamma(t)) \otimes \eta(\gamma(t)) - \pi(\gamma(t)) \otimes 1 + \pi(\gamma(t)) \otimes 1 - 1 \otimes 1 \right)\\
+&= 1 \otimes X + X \otimes 1
+\end{align*}
+by the usual proof of the product rule.
+\end{sol}
 
 
 \section{Some worked examples}
