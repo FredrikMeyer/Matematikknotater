@@ -763,12 +763,16 @@ Prooof later.
 
 Let $G$ be a finite group and $H \subset G$ a subgroup. Assume $(\pi,V)$ is a representation of $H$. We want to construct a representation of $G$ out of this.
 
-We define the \textbf{induced representation} $\mathrm{Ind}_H^G \pi$ to be the representation defined by the $\C[G]$-module
+We define the \textbf{induced representation} $\mathrm{Ind}_H^G \pi$ to be the $\C[G]$-module define by
 $$
 \C[G] \otimes_{\C[H]} V.
 $$
 
-It is ``somehow completely fundamental''.
+It is very useful in constructing representations of larger groups from smaller ones. The idea is that if we know the representations some subgroup $H$ of a group $G$, then in nice situations all representations of $G$ can be found as subrepresentations of $\Ind_H^G \pi$ for various $[\pi] \in \hat H$.
+
+\begin{remark}
+This is exactly the concept of \emph{extension of scalars} from commutative algebra (see e.g. Atiyah-MacDonald page 28). Namely let $A=\C[H]$ and $B=\C[G]$ and let $M=V$ be an $A$-module. Then we can form the $A$-module $M_B= B \otimes_A M$, which carries a natural $B$-module structure as well: the action of $B$ on $M_B$ is given by $b(b' \otimes x)=bb' \otimes x$.
+\end{remark}
 
 We have three equivalent description of the induced representation, some of the descriptions being easier to work with than others.
 
@@ -795,16 +799,19 @@ $$
 This is exactly the description in 3), because each $r_i \C[H] \otimes_{\C[H]} V$ is isomorphic to $V$ via the map $r_ih \otimes v \mapsto h^{-1}v$ (we need the inverse in order for this to be a map of representations). The representation $V$ is endowed with a left action of $H$ (this is what a representation \emph{is}), but it also has a right action, defined by $v \cdot g := g^{-1}v$. In this way, $V$ becomes a left-right-$H$-module.
 
 One can check that the action in 3) and the natural $G$-action on $r_i\C[H] \otimes_{\C[H]} V$ are the same.
-[[more to come]]
+
+The equivalence of $1)$ and $2)$ can be seen by standard isomorphisms from module theory. Namely, note that 
+$$
+\Hom_H(\C[G],V) \simeq \Hom_H(\C[G],\C) \otimes_{\C[H]} V.
+$$
+We also have an identifaction of representations $\C[G]$ with $\Hom(\C[G],\C)$ where we let $\delta_g$ be a basis of $\C[G]$. Then the action of $G$ on $\C[G]$ by left-multiplication is identified with the contragradient action of $G$ on $\Hom(\C[G],\C)$. But all functions $\C[G] \to \C$ are $G$-invariant (because $f(gx)=gf(x)=f(x)$ since we are considering the trivial action on $\C$). Hence $\Hom_H(\C[G],\C)=C[G]$. So the two descriptions are equal.
 \end{proof}
 
 We say that the collection $\{ V_\sigma \}\subset W$  is called a \textbf{system of imprimitivity} of the representation $V$. 
 
-\subsection{Frobenius reciprocity}
-
-and a proof of this...
-
-\subsection{More on induction}
+\begin{example}
+Let $\lambda_H$ be the regular representation of $H$. Then $\lambda_H$ can be identified with $\C[H]$. In this case we have $\Ind_H^G \lambda_H = \lambda_G$ since $\C[G] \otimes_{\C[H]} \C[H] \simeq \C[G]$.
+\end{example}
 
 Here are some basic properties of induction. Most of them follow from basic properties of tensor products.
 
@@ -820,14 +827,56 @@ $$
 Here $\pi^\vee$ is the contragradient representation of $\pi$.
 \end{enumerate}
 
+\subsection{Frobenius reciprocity}
+
+Let $\Rep{G}$ denote the category of finite-dimensional $G$-representations where $G$ is a finite group and let $H \subset G$ be a subgroup of $G$. We have two functors in each direction: we have a functor $\Res_H^G$ sending a representation to its restriction to $H$, and we have a functor $\Ind_H^G$ in the other direction, sending a representation of $H$ to the induced representation on $G$. The theorem of this section is that these two functors are adjoints to each other.
+
+But this is a standard fact about tensor products: let $S \subset R$ be rings (commutative or not) and let $V$ be an $S$-module and $W$ an $R-S$-bimodule. In our case a representation $W$ of $G$ is both a $\C[G]$-module and a $\C[H]$-module by restriction. Then we always have
+$$
+\Hom_R(R \otimes_S V,W) \simeq \Hom_S(V,W)
+$$
+Note that as an $S$-module we have $W=\Res_H^G W$. 
+
+If $\chi$ is the character of $\pi$ (a representation of $H$), we denote by $\Ind_H^G \chi$ the character of the induced representation. 
+
+Note that it follows by Schur's lemma and the orthogonality relations that for any two representations, we have
+$$
+(\chi_{\pi_1}, \chi_{\pi_2}) = \dim_\C \Mor(\pi_1,\pi_2).
+$$
+Therefore, in terms of characters, Frobenius reciprocity can be stated as 
+$$
+(\Ind_H^G \chi_\pi, \chi_\theta) = (\chi_\theta, \Res_H^G \chi_\theta).
+$$
+Thus:
+\begin{prop}
+Let $V$ be an irreducible representation of $H$ and $W$ an irreducible representation of $G$. Then the number of times that $W$ occurs in $\Ind_H^G V$ is equal to the number of times that $\Res_H^G W$ occurs in $V$.
+\end{prop}
+\begin{proof}
+Recall that if $V$ is an irreducible representation and $U$ is any representation, then $(\chi_V,\chi_U)$ is equal to the number of times that $V$ occurs in $U$. Now use the above remarks.
+\end{proof}
+
 \subsection{Characters of induced representations}
 
 \begin{prop}
- Assume $G \supset H$ and that $\pi$ is a finite-dimensional representation of $H$ and $\chi$ its character. Then the character $\Ind_H^G \chi$ of $\Ind_H^G \pi$ is given by
+ Assume $G \supset H$ and that $(\pi,V)$ is a finite-dimensional representation of $H$ and $\chi$ its character. Then the character $\Ind_H^G \chi$ of $\Ind_H^G \pi$ is given by
 $$
-(\Ind \chi)(g) = \frac{1}{\lvert H \rvert} \sum_{s \in G \mid s^{-1}gs \in H} \chi(s^{-1}gs).
+(\Ind \chi)(g) = \sum_{\bar s \in G/H, s^{-1}gs \in H} \chi(s^{-1}gs) =\frac{1}{\lvert H \rvert} \sum_{s \in G \mid s^{-1}gs \in H} \chi(s^{-1}gs),
 $$
+where we extend $\chi$ to $G$ by zero.
 \end{prop}
+\begin{proof}
+Consider the imprimitivity system $\{W_x\}_{x \in G/H}$ for the induced representation $\theta = \Ind_H^G \pi$. Then
+\begin{align*}
+  \chi_\theta(g) &= \tr(g) &= \sum_{x \in G/H, gx=x} \tr(\restr{\theta(g)}{W_x}) \\
+&= \sum_{\bar s \in G/H, s^{-1}gs \in H} \tr( \restr{\theta(g)}{W_{\bar s}})  
+&= \sum_{\bar s \in G/H, s^{-1}gs \in H} \tr( \restr{\theta(s^{-1})\theta(g)\theta(s)}{W_{\bar e}})   \\
+&= \sum_{\bar s \in G/H, s^{-1}gs \in H} \tr( \pi(s^{-1}gs)) 
+&= \sum_{\bar s \in G/H, s^{-1}gs \in H} \chi(s^{-1}gs).
+\end{align*}
+The second equality follows by noting that $\chi(s^{-1}gs)$ is constant on left cosets as $s$ varies.
+\end{proof}
+
+This makes it easy to compute characters of induced representations. In practice one often induces from a normal subgroup containing few conjugacy classes, so that many of the terms in the sum are zero.
 
 \section{The Frobenius subgroup theorem}
 
@@ -935,7 +984,21 @@ Let $G$ be a finite group and $\mathscr C$ a collection of subgroups of $G$. The
 \item Any character of $G$ is a rational combination of characters of representations induced from subgroups in $\mathscr C$.
 \item Any $g \in G$ is conjugate to an element in a subgroup in $\mathscr C$.
 \end{enumerate}
+\end{thm}
 
+
+We will not prove Brauer's theorem, but we state it:
+\begin{thm}[Brauer]
+  For any finite group $G$, the character of $G$ can be written as a linear combination with integer coeffcients of characters $\Ind_H^G \chi_\pi$ for one-dimensional representations $\pi$ of subgroups $H \subset G$.
+
+In fact we can let $H$ range through products of cyclic and $p$-subgroups.
+\end{thm}
+
+\subsection{Field of definition}
+
+\begin{thm}[Brauer]
+Let $G$ be a finite group and let $m$ be the exponent of $G$ (the least common multiple of orders of elements in $G$). Then any complex representation of $G$ is defined over $\Q(\zeta_n)$, where $\zeta_n$ is a primitive $n$-th root of unity.
+  
 \end{thm}
 
 \section{Mackey's irreducibility criterion}
@@ -946,6 +1009,8 @@ Let $G$ be a finite group and $\mathscr C$ a collection of subgroups of $G$. The
 
 thu 22 and wed 23.
 
+
+\newpage
 \section{Part II - Compact groups}
 
 When one wants to develop a representation theory for infinite groups, one has to restrict the scope somewhat. Infinite groups are too wild in general, and they can have quite bad representation theory. For example, $\Z$ acting on $\C^2$ by $(x,y) \mapsto (x+ny,y)$ has the $y$-axis as an irreducible subspace, but the representation does not split, because there is no complementary invariant subspace. Thus the property of complete reducibility fails. 
