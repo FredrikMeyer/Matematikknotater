@@ -715,7 +715,24 @@ A \emph{Hermitian metric} on a complex vector bundle $E$ over a manifold $M$ is 
 \subsubsection{Kähler manifold}
 \label{kahlermanifold}
 
-A \textbf{Kahler manifold} is ????
+A \textbf{Kahler manifold} is a Hermitian manifold (that is, a complex manifold equipped with a Hermitian metric at every complex tangent space) such that its associated Hermitian form is closed.
+
+\subsubsection{Morse function}
+\label{morsefunction}
+
+A \textbf{Morse function} $f:M \to \R$ on a manifold $M$ is a smooth function whose Hessian matrix is no-where singular. The set of Morse functions forms a dense open set on $C^\infty(M)$ in the $C^2$-topology.
+
+The Morse lemma states that a Morse function can be written as
+$$
+f(x)=f(b)- x_1^2-x_2^2-\ldots-x_\alpha^2+x_{\alpha+1}^2+\ldots+x_n^2
+$$
+such that $f(x)=0$, in a neighbourhood of a point $x \in M$. The number $\alpha$ is called the \textbf{index} of $f$ at $b$. 
+
+Let $M^a=f^{-1}((-\infty,a])$. The first of the two fundamental theorems of Morse theory says the following: suppose $f$ is a Morse function and $f^{-1}([a,b])$ is compact, and that there are no critical values of $f$ in $[a,b]$, then $M^a$ is diffeomorphic to $M^b$ and $M^b$ deformation retracts onto $M^a$.
+
+The other theorem says the following: let $f$ be a Morse function and let $p$ be a critical point of $f$ of index $\gamma$, and that $f(p)=q$. Suppose also that $f^{-1}([q-\epsilon,q+\epsilon])$ is compact and contains no other critical points. Then $M^{q+\epsilon}$ is homotopy equivalent to $M^{q-\epsilon}$ with a $\gamma$-cell attached.
+
+Thus Morse functions are nice for studying the topology of manifolds.
 
 \subsubsection{Symplectic manifold}
 \label{symplectic}
