@@ -48,4 +48,28 @@ Da vil $\wedge^k \mathscr E$ være en linjebunt på Grassmannian, og seksjonene 
 
 La $X=\PP(\Delta)$ være et Stanley-Reisner-skjema. La $f=(f_0,\ldots,f_n)$ være $f$-vektoren, det vil si, antall $f_i$ er antall $i$-dimensjonale fasetter i $\Delta$. Da er $h^i(\PP_\C(\Delta),\C)=f_i$ om $i$ er jevn, og $0$ ellers. Dette er fordi $X$ har strukturen til et CW-kompleks med bare celler i jevne grader.
 
+\subsection{Kotangentkohomologi på en oppblåsning}
+
+La $\pi:\widetilde X \to X$ være oppblåsningen av en glatt flate $X$ i et punkt $P$. La $E \simeq \PP^1$ være den eksepsjonelle divisoren. Vi ønsker å beregne kohomologien $H^i(\Omega_{\widetilde X/k}^1)$ gitt kjennskap til kohomologien til $X$.
+
+Et standard teorem sier at vi har en eksakt sekvens
+$$
+\pi^\ast \Omega^1_{X/k} \to \Omega^1_{\widetilde X/k} \to \Omega^1_{\widetilde X/X} \to 0.
+$$
+
+Påstanden er at denne er venstre-eksakt også. Siden $\widetilde X \bs E \simeq X \bs P$ er den første pilen en isomorfi utenfor $E$ (og dermed er høyre-leddet også null). Om vi er på $Q \in E$, har vi at $\mathscr G = {\pi^\ast \Omega_{X/k}^1}$ er null langs $E$, siden stilken $\mathscr G_Q=\Omega_{f(x)/k}^1$, og kotangentknippet over et punkt er null.
+
+Legg også merke til at $\Omega^1_{\widetilde X/X}=i_\ast \OO_{\PP^1}(-2)$ siden $E \simeq \PP^1$ og knippet er null utenfor $E$ (her er $i:\PP^1 \to \widetilde X$ inklusjonen). Dermed har vi sekvensen
+$$
+0 \to \pi^\ast \Omega^1_{X/k} \to \Omega^1_{\widetilde X/k} \to i_\ast \mathscr O_{\PP^1} (-2) \to 0.
+$$
+
+Vi har også at $H^i(\pi^\ast \Omega^1_{X/k})= H^i(\Omega_{X/k}^1)$ (se beviset for Zariskis hoved-teorem i Hartshorne).
+
+Dermed har vi at $H^0(\Omega_{\widetilde X/k}^1) = H^0(\Omega_{X/k}^1)$. For å regne ut de andre kohomologigruppene trenger vi mer presis informasjon om $X$. Så anta $X= \PP^2$. Da følger det fra Euler-sekvensen at $H^i(\Omega_{X/k}^1)$ er null for $i=0,2$ og $1$ for $i=1$. Dermed følger det at $H^i(\Omega_{\widetilde X/k}^1)$ er null for $i=0,2$ og $2$ for $i=1$.
+
+Så å blåse opp i et punkt øker $H^1$ med én.
+
+
+
 \end{document}
