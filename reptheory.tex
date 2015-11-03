@@ -1248,8 +1248,57 @@ is commutative.
 \subsection{The Lie algebra of a Lie group}
 ...
 
+\section{Lie subgroups}
+
+\section{Classical Lie groups}
+
+\section{More on Lie subgroups}
+
+\section{The adjoint representation}
+
+Let $G$ be a Lie group. For any $g \in G$ consider the automorphism $h \mapsto ghg^{-1}$ of $G$. Thus we have a map $G \to \Aut(G)$. Its differential at the identity is denoted by $Ad$, and we get a homomorphism $Ad:G \to \GL(\mathfrak g)$, called the \textbf{adjoint representation}.
+
+\section{Representation theory of $SU(2)$}
+
+\section{Tori}
+
+\section{Cartan's theorem on maximal tori}
+
+\section{Roots}
+
+First we recall some notation from the representation theory of $SU(2)$. There we had a maximal torus, called $T$, which was given by
+$$
+T = \left\{ \begin{pmatrix} z & 0 \\ 0 & \overline z
+\end{pmatrix} \mid z \in S^1 \subset \C \right\}.
+$$
+The Lie algebra of $SU(2)$ is contained in the Lie algebra of $SL(2,\C)$. We write $\mathfrak{su}(2) \subset \mathfrak{sl}_2(\C)$. The Lie algebra is spanned by [[write basis here]]
+
+\subsection{Roots}
+
+Let $G$ be a compact connected Lie group. Fix a maximal torus $T$. Consider $\g_\C=\C \otimes_\R \g$, the complexification of the Lie algebra of $G$. This is a complex Lie algebra, where we define $[c \otimes X, d \otimes Y=cd \otimes [X,Y]$.
+
+We can identifty $\g$ with the elements of the form $1 \otimes X$ for $X \in \g$. Sometimes we write elements of $\g_\C$ as $X+iY$.
+
+The adjoint representation $\Ad:G \to \GL(\g)$ extends to a representation $G \to \GL(\g_\C)$, which we will also denote by $\Ad$.
+
+Consider $\restr{\Ad}{T}$. As $T$ is a compact abelian group, we have a decomposition of $\restr{\Ad}{T}$ into isotypic components corresponding to charachers $\chi \in \widehat T$. Thus we can write
+$$
+\g_\C = \bigoplus_{\chi \in \widehat T} \g_\C(\chi)
+$$
+where
+$$
+\g_\C(\chi) = \{ X \in \g_\C \mid (\Ad g)X = \chi(g) X \, \text{for all } g \in T \}
+$$
+is the eigenspace of $X$.
+
+We view $\mathbb T = S^1$ as a subgroup of $\C^\ast = \GL_1(\C)$, so the Lie algebra of $\mathbb T$ is $i \R \subset \C$.
+
+Any character $\chi \in \widehat T$ is determined by its differential $\chi_\ast:\mathfrak t \to i \R$, so we can think of $\chi_\ast \in i \mathfrak t^\ast$, where $\mathfrak t ^\ast = \Hom_\R(\mathfrak t,\R)$.
+
+Then the set of differentials 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 \appendix
 \section{Exercises}
 
