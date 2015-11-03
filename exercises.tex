@@ -512,8 +512,47 @@ Show that each of the following constructions can be regarded as a functor: The 
 \begin{sol}
 The first is a functor $\catname{Rings} \to \catname{Fields}$, since "obviously" the assignment $R \mapsto K(R)$ is functorial, since a morphism is determined by what it does to elements of $R$.
 
-The second is a functor from the category of Lie groups to the category of Lie algebrasÅ
+The second is a functor from the category of Lie groups to the category of Lie algebras. It sends a Lie group $G$ to its tangent space $T_eG$ at the identity.
 \end{sol}
+
+\begin{exc}[1.2]
+Show that functors $1 \to C$, $2 \to C$ and $3 \to C$ correspond respectively to objects, arrows and composable pairs of arrows of $C$.
+\end{exc}
+\begin{sol}
+A functor $1 \to C$ need not satisfy any compatability conditions, so the only data is an object in $C$.
+
+A functor $F:2 \to C$ correspond to a choice of two objects $F(1),F(2)$ in $C$ such that there is an arrow $F(1) \to F(2)$.
+
+A functor $F:3 \to C$ correspond to a choice of three objects in $C$ and arrows between them such that that the corresponding triangle commutes.
+\end{sol}
+
+\begin{exc}[1.4]
+Prove that there is no functor $\catname{Grp} \to \catname{Ab}$ sending a group to its center.
+\end{exc}
+\begin{sol}
+We take the hint and consider maps $S_2 \to S_3 \to S_2$. Let the first map be given by sending a permutation $(a_1a_2)$ to $(a_1a_23)$\footnote{Notation: $(a_1\ldots a_n)$ denotes the permutation sending $i$ to $a_i$.} Let the map $S_3 \to S_2$ be given by sending $\sigma$ to its signature $\pm 1$. Then the composite is the identity.
+
+Denote the purported functor by $Z$.
+
+But the center of $S_3$ is trivial. This forces $Z(f \circ g)$ to be the constant function $g \mapsto e$. However, as $f \circ g=\id_{S_2}$, this sshould be the identity, which it is not.
+\end{sol}
+
+\begin{exc}[1.5]
+Find two different functors $T:\catname{Grp} \to \catname{Grp}$ with object function $T(G)=G$ for every group $G$.
+\end{exc}
+\begin{sol}
+Here are two different functors: let the first one be the identity functor, sending each morphism $G \to H$ to itself. 
+
+Let the other be the "trivial" functor, sending each morphism $G \to H$ to the trivial morphism $\epsilon:G \to H$, $g \mapsto e \in H$.
+
+It is trivial that both of these are functors.
+\end{sol}
+
+
+
+
+
+
 
 
 
