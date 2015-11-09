@@ -1295,7 +1295,117 @@ We view $\mathbb T = S^1$ as a subgroup of $\C^\ast = \GL_1(\C)$, so the Lie alg
 
 Any character $\chi \in \widehat T$ is determined by its differential $\chi_\ast:\mathfrak t \to i \R$, so we can think of $\chi_\ast \in i \mathfrak t^\ast$, where $\mathfrak t ^\ast = \Hom_\R(\mathfrak t,\R)$.
 
-Then the set of differentials 
+Then the set of differentials $\chi_\ast$ ($\chi \in \widehat T$) form a subset $X^\ast(T) \subset i \mathfrak t ^\ast$. It is a \emph{lattice} in $i \mathfrak t^\ast$ (here by \emph{lattice} we mean a discrete subgroup of maximal rank), called the \textbf{character lattice}.
+
+Indeed, if $T=\R^n/\Z^n$, then $\mathfrak t=\R^n$, so $\mathfrak t^\ast=\R^n$, and an element $(it_1,\ldots,it_n) \in it^\ast$ defines a character $\R^n \to \mathbb T$ by 
+$$
+(a_1, \ldots,a_n) \mapsto e^{ia_1t_1}\cdot \ldots \cdot e^{ia_nt_n},
+$$
+which factors through $\R^n/\Z^n$ if and only if all the $a_i \in 2\pi \Z$. Then $X^\ast(T) = 2\pi i \Z^n \subset i \R^n$.
+
+Consider now the complexification $\mathfrak t_\C$ of the Lie algebra of $T$. We denote this complexification by $\mathfrak h$. It is called a \textbf{Cartan subalgebra} of $\mathfrak g_\C$. It is a ``maximal toral subalgebra''.
+
+Functionals $\mathfrak t \to \R$ can be extended by complex linearity to $\mathfrak h$, so $i \mathfrak t^\ast \subset \mathfrak h^\ast = \Hom_\C(\mathfrak h, \C)$. We then have
+
+\begin{align*}
+  \g_\C(\chi) &= \{ X \in \g_\C \mid (Ad g)X = \chi(g) X \forall g \in T \} \\
+&= \{ X \in \g_\C \mid [Y,X] = \chi_\ast(Y)X \forall Y \in T \} \\
+&= \{ X \in \g_\C \mid [Y,X] = \chi_\ast(Y)X \forall Y \in \mathfrak h \}.
+\end{align*}
+
+For $\alpha \in \mathfrak h^\ast$, denote
+$$
+\g_\alpha = \{ X \in \g_\C \mid [H,X] = \alpha(H)X \forall H \in \mathfrak H \}.
+$$
+In our earlier notation, this says that $\g_{\chi_\ast} = \g_\C(\chi)$.
+
+\begin{lemma}
+We have that $\g_0 = \mathfrak h$.
+\end{lemma}
+\begin{proof}
+ This follows because $\mathfrak t$ is a maximal abelian Lie subalgebra of $\g$, so that
+$$
+\mathfrak t = \{ X \in \g \mid [H,X] = 0 \forall H \in \mathfrak t \}.
+$$
+Now complexify both sides.
+\end{proof}
+
+The elements $\alpha \in X^\ast(T) \bs \{ 0 \}$ such that $\g_\alpha \neq 0$ are called the \textbf{roots} of $G$ or $\g_\C$. We denote the set of roots by $\Delta$. 
+
+To remember the position of $\g$ inside $\g_\C$, it is convenient to introduce an involution on $\g_\C$, defined by
+$$
+(X+iY)^\star = -X + iY,
+$$
+so that $\g = \{ X \in \g_\C \mid X = -X^\star \}$.\footnote{Note that I have chosen to write $X^\star$ for the involution to distinguish it from taking duals.}
+
+This induces an involution $\alpha \mapsto \overline \alpha$ in $\mathfrak h^\ast$ as well. Define
+$$
+\overline \alpha(H) = \overline{\alpha(H^\star)}.
+$$
+This is actually an involution, because
+$$
+\overline{\overline \alpha}(H) = \overline{\overline \alpha(H^\star)} = \overline{\overline{\alpha(H^{\star \star})}} = \alpha(H).
+$$
+In fact, this definition ensures that $\overline{\alpha}$ is \emph{complex linear} as well: we have that $\overline \alpha (zH) = z \overline \alpha(H)$ (this is an easy but tedious exercise).
+
+This lets us recognice $\mathfrak t^\ast$ inside $\mathfrak h^\ast$ as well. Namely,
+\begin{align*}
+  i \mathfrak t^\ast &= \{ \alpha \in \mathfrak h^\ast \mid \alpha(\mathfrak t) \subset i \R \} \\
+&= \{ \alpha \in \mathfrak h ^\ast \mid \overline \alpha = \alpha \},
+\end{align*}
+as those functionals fixed by the involution.
+
+\subsection{Some lemmas}
+
+The rest of this lecture will consist of several small results.
+
+\begin{lemma}
+  \begin{enumerate}
+Recall that we have a decomposition $$\g_\C = \mathfrak h \oplus \bigoplus_{\alpha \in \Delta} \g_\alpha.$$ Then:
+  \item $[\mathfrak g_\alpha, \mathfrak g_\beta] \subset \mathfrak g_{\alpha+\beta}$.
+\item $\g_\alpha^\star = \g_{-\alpha}$. Here $g_\alpha^\star = \{ X^\star \mid X \in \g_\alpha \}$.
+  \end{enumerate}
+\end{lemma}
+\begin{proof}
+We have that 
+$$
+\g_\alpha = \{ X \in \g_\C \mid [H,X] = \alpha(H) X \text{ for all } H \in \mathfrak h\}.
+$$
+Thus, let $Y \in \g_\beta$. Then we look at $[H,[X,Y]]$. By the Jacobi identity, this is equal to
+\begin{align*}
+  [H,[X,Y]] &= -[Y,[H,X]] - [X,[Y,H]] \\
+&= -\alpha(H)[Y,X] +[X,[H,Y]] \\
+&= \alpha(H)[X,Y] +\beta(H)[X,Y] \\
+&= (\alpha(H)+\beta(H))[X,Y].
+\end{align*}
+Hence $[X,Y] \in \g_{\alpha+\beta}$.
+
+[[PROOF FOR ii TO COME!!!!????]]
+\end{proof}
+
+To proceed, it is convenient to introduce an $\Ad$-invariant scalar product on $\g$. In fact, it is conventient to change its sign: so consider a negative definite symmetric form $(.,.)$. By linearity, extend it to $\g_\C$. Thus we get a symmetric bilinear form on $\g_\C$ ushc that
+$$
+([X,Y],Z) + (Y,[X,Z]) = 0
+$$
+for all $X,Y,Z \in \g_\C$ and $(.,.)$ restricted to $\g \subset g_\C$ is negative definite. [[ WHAT DOES $\Ad$-invariant MEAN?? AND WHY DOES THE RELATION FOLLOW??]]
+
+\begin{lemma}
+ We have that $(\g_\alpha,\g_\beta) = 0$ unless $\alpha+\beta=0$.
+\end{lemma}
+
+This gives us an isomorphism between $\mathfrak h$ and its dual $\mathfrak h^\ast$. Namely, given $\alpha \in \mathfrak h^\ast$, define $h_\alpha \in \mathfrak h$ by $\alpha(H)=(h_\alpha,H)$ for $H \in mathfrak H$. This defines $h_\alpha$ uniquely since the form is non-degenerate. Then the inner product carries over to $\mathfrak h^\ast$ by the formula $(\alpha,\beta)=(h_\alpha,h_\beta)$.
+
+Note that the map $\alpha \mapsto h_\alpha$ respects the involution. [[SHOW THIS]]
+[....]
+
+\begin{lemma}
+For $\alpha \in \Delta$ , $X \in \g_\alpha$, we have
+$$
+[X,X^\star] = (X,X^\star)h_\alpha.
+$$  
+\end{lemma}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -1490,6 +1600,8 @@ by the usual proof of the product rule.
 \end{sol}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 \section{Some worked examples}
 
 \subsection{The representation ring of $S_3$}
