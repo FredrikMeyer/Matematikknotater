@@ -1250,13 +1250,100 @@ is commutative.
 
 \section{Lie subgroups}
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 \section{Classical Lie groups}
 
+This section will give examples of Lie groups and their Lie algebras explicitlyin terms of matrices.
+
+\subsection{The general linear group}
+
+Let $V$ be a real or complex vector space of dimension $n$. Then $\GL(V)$ is the set of invertible linear operators $V \to V$. If a basis for $V$ is given, then $\GL(V)$ is realized as the set of invertible $n \times n$ matrices with determinant non-zero.
+
+If $V$ is a real vector space, then the dimension of $\GL(V)$ is $n^2$, and if $V$ is complex, then the dimension is $2n^2$. 
+
+The Lie algebra of $\GL(V)$, denoted by $\mathfrak {gl}(V)$ is identified with $\End(V)$, or, if a basis is given, with $\mathrm{Mat}_{n,n}(V)$, since $\GL(V)$ is an open subset in $\End(V)$.
+
+\subsection{The special linear group}
+
+Again, let $V$ be a real or a complex vector space. The \textbf{special linear group} $\SL(V)$ is by definition the subset of $\GL(V)$ consisting of operators of determinant $1$. Since this is a closed condition, it follows from [[THEOREM]] that $\SL(V)$ is actually a closed Lie subgroup of $\GL(V)$. Note that $\dim \SL(V) = n^2-1$ if $V$ is a real vector space.
+
+I claim that the Lie algebra of $\SL(V)$ is the space of matrices in $\End(V)$ of trace zero. To prove this, let $\{ A_t \}$ be an arc in $\SL(V)$ such that $A_0 = I_n$ and $\restr{\frac{d}{dt}}{t=0} A_t =X$. Then $A_t e_1 \wedge \ldots  \wedge A_t e_n = e_1 \wedge \ldots \wedge e_n$ for all $t$ since the determinant of $A_t$ is $1$ for all $t$. Thus, taking derivatives of both sides, we get
+
+\begin{align*}
+0 &= \restr{ \frac{d}{dt}}{t=0} A_t e_1 \wedge \ldots \wedge A_t e_n \\
+&= \sum_{i=1}^n e_1 \wedge \ldots \wedge X e_i \wedge \ldots e_n \\
+&= \tr(X) e_1 \wedge \ldots \wedge e_n.
+\end{align*}
+
+In the second line we used the product rule for the derivative (which works just as well with exterior products (in fact, with any bilienar operator). Hence $\tr(X)=0$. Counting dimensions, we see that the space of traceless matrices have the same dimension as $\SL(V)$, so that we can identify $\mathfrak{sl}(V)$ with the space of traceless matrices.
+
+
+\subsection{Groups defined by preservation of a bilinear form}
+
+Let $V$ be as above and consider a bilinear $B$ form on $V$. Let
+$$
+G = \{ g \in \GL(V) \, \mid  \, B(gv,gw)=B(v,w) \, \text{for all } v,w \in V \}.
+$$
+
+Then $G$ is a subgroup of $\GL(V)$. We shall verify that it is indeed a Lie subgroup.
+
+Let $W$ be the space of bilinear forms on $V$. Note that $W \simeq V^\ast \otimes V^\ast$. Define a representation $\pi$ of $\GL(V)$ on $W$ by
+$$
+(\pi(g)B')(v,w) = B'(g^{-1}v,g^{-1}w).
+$$
+Then $G$ is exactly the set $\{  g \in \GL(V) \mid \pi(g) B = B \}$, so that from [[Propostion 2]], it follows that $G$ is a Lie group. with Lie algebra
+$$
+\g = \{X \in \mathfrak{gl}(V) \, \mid \, \pi_\ast(X) B = 0 \}.
+$$
+
+We want this a little more explicit. So note that we can write
+$$
+\pi_\ast(X) = \restr{\frac{d}{dt}\pi(\exp(t X)) }{t=0}
+$$
+
+This is a simple calculation using the functoriality of $\pi_ast$ and the definition of the exponential map. Hence we get
+
+\begin{align*}
+(\pi_\ast(X) B)(v,w) &= \restr{\frac{d}{dt} (\pi(\exp(tX))B)(v,w) }{t=0} \\
+&= \restr{\frac{d}{dt}  B(e^{-tX} v, e^{-tX} w)}{t=0} \\
+&= -B(Xv,w)-B(v,Xw).
+\end{align*}
+We used the chain rule in the last line.
+
+Thus
+$$
+\g =  \{X \in \mathfrak{gl}(V) \, \mid \, B(Xv,w)+B(v,Xw) = 0 \}.
+$$
+
+The dimension of $G$ will of course depend upon the choice of $B$.
+
+\subsection{The orthogonal group $O(n)$}
+
+Let $V=\R^n$ and let $B$ be the usual scalar product
+$$
+(v,w) = \sum_{i=1}^n v_i w_i.
+$$
+Then the group $G$ for $B$ as above is called the \textbf{orthogonal group} and denoted by $O(n)$, $O_n(\R)$ or $O(n; \R)$. 
+
+Note that we have
+$$
+(Xv,w)+(v,Xw) = (Xv,w)+(X^Tv,w)= ((X+X^T)v,w).
+$$
+Thus
+$$
+
+$$
+
+%%%%%%%%%%%%%%%%%%
+\newpage
 \section{More on Lie subgroups}
 
 \section{The adjoint representation}
 
-Let $G$ be a Lie group. For any $g \in G$ consider the automorphism $h \mapsto ghg^{-1}$ of $G$. Thus we have a map $G \to \Aut(G)$. Its differential at the identity is denoted by $Ad$, and we get a homomorphism $Ad:G \to \GL(\mathfrak g)$, called the \textbf{adjoint representation}.
+Let $G$ be a Lie group. For any $g \in G$ consider the automorphism $h \mapsto ghg^{-1}$ of $G$. Thus we have a map $G \to \Aut(G)$. Its differential at the identity is denoted by $\Ad$, and we get a homomorphism $\Ad:G \to \GL(\mathfrak g)$, called the \textbf{adjoint representation}.
 
 \section{Representation theory of $SU(2)$}
 
