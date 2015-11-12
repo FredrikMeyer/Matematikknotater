@@ -1193,7 +1193,7 @@ as $\gamma(t+s)=\gamma(t)\gamma(s)$. [[why does it follow??]]
 \end{proof}
 
 \begin{remark}
- In general $\gamma(\R)$ is not a closed subgroup of $G$. Take for example $\R \to S^1 \times \S^1$ given by $t \mapsto (e^{it},e^{i\theta t})$ for some irrational $\theta$. Then the image is dense in $S^1 \times S^1$.
+ In general $\gamma(\R)$ is not a closed subgroup of $G$. Take for example $\R \to S^1 \times S^1$ given by $t \mapsto (e^{it},e^{i\theta t})$ for some irrational $\theta$. Then the image is dense in $S^1 \times S^1$.
 \end{remark}
 
 We define the \textbf{exponential map} as $\exp:T_e G \to G$ given by $X \mapsto \alpha_X(1)$. 
@@ -1246,7 +1246,20 @@ is commutative.
 \end{example}
 
 \subsection{The Lie algebra of a Lie group}
-...
+
+Recall that for vector field $X,Y$ on a manifold $M$, there is a bracket operation $[X,Y]$. If $L_X,L_Y$ are the corresponding derivations, then $[X,Y]$ is defined as the vector field corresponding to the derivation $L_{[X,Y]} = L_X L_Y - L_Y L_X$.\footnote{It is not immediately obvious that this is a derivation, but it is easily checked.} If $X$ and $Y$ are given in local coordinates as 
+$$
+X = \sum f^i \dd{}{x^i}, \, Y = \sum g^i \dd{}{x^i},
+$$
+respectively, then
+$$
+[X,Y] = \sum_{i,j} \left(f^i \dd{g^j}{x^i} - g_i \dd{f^j}{x^i} \right) \dd{}{x^j}.
+$$
+
+The definition of a Lie algebra over a field $k$ is then the following: a \textbf{Lie algebra} is a vector space $\g$ over $k$ equipped with a bilinear form $[-,-]$ called the \textbf{Lie bracket} that is skew-symmetric and satisfies the \textbf{Jacobi identity}:
+$$
+[X,[Y,Z]] + [Z,[X,Y]] + [Y,[Z,X]] = 0.z
+$$
 
 \section{Lie subgroups}
 
@@ -1256,7 +1269,7 @@ is commutative.
 \newpage
 \section{Classical Lie groups}
 
-This section will give examples of Lie groups and their Lie algebras explicitlyin terms of matrices.
+This section will give examples of Lie groups and their Lie algebras explicitly in terms of matrices. The \textbf{classical Lie groups} are groups of linear transformations preserving some symmetric/skew-symmetric/Hermitian form on a real/complex/quaternionic space, as well as their special versions. 
 
 \subsection{The general linear group}
 
@@ -1332,14 +1345,108 @@ Note that we have
 $$
 (Xv,w)+(v,Xw) = (Xv,w)+(X^Tv,w)= ((X+X^T)v,w).
 $$
-Thus
+This inner product should be zero for all $v,w$. Hence we have:
+$$
+\mathfrak{o}(n) = \{ X \in \mathfrak{gl}_n(\R) \, \mid \, X+X^T = 0 \},
+$$
+by the previous section. Thus the Lie algebra consists of all skew-symmetric matrices. We see that $O(n)$ have dimension $1+2+\ldots+(n-1)=n(n-1)/2$. The \textbf{special orthogonal group} $SO(n)$ is the subgroup of $O(n)$ whose determinants are $1$. In other words: $SO(n) = O(n) \cap \SL_n(R)$. This is the connected component of the identity of $O_n(\R)$. Then the Lie algebra is given by
+$$
+\mathfrak{sl}_n(\R) = \{ X \in \mathfrak{gl}_n(\R) \, \mid \, X^T=-X, \, \tr X = 0 \},
+$$
+which is equal to $\mathfrak{o}(n)$ since the condition $X^T=-X$ implies that $\tr X = 0$.
+
+We can do the same for $V= \C^n$ with the same bilinear form. The corresponding groups are denoted by $O_n(\C)$ and $SO_n(\C)$. These are however not compact anymore, since $B \otimes \C$ is not positive definite.
+
+\subsection{Indefinite orthogonal groups $O(k,l)$}
+
+Let $V=\R^{k+l}$ for $k, l \geq 1$ and consider the bilinear form
+\begin{align*}
+B(v,w) &= \sum_{i=1}^k v_iw_i - \sum_{i=k+1}^{k+l} v_iw_i \\
+&= (Av,w)
+\end{align*}
+where
+$$
+A = \begin{pmatrix} \
+I_k &  0 \\
+0 & -I_l \end{pmatrix}.
+$$
+The group of transformations preserving this form is then by definition the indefinite orhogonal group $O(k,n)$. As above, we see that its Lie algebra is
+$$
+\mathfrak{o}(k,l) = \{ X \in \mathfrak{gl}_{k+l}(\R) \, \mid \, AX+X^TA=0 \} . 
 $$
 
+This can be made even more explicit. Let $X \in \mathfrak{o}(k,l)$. Write
 $$
+X = \begin{pmatrix}
+P & Q \\
+R & S
+\end{pmatrix},
+$$
+where $P$ is a $k \times k$ matrix, $Q$ is a $l \times k$ matrix, $R$ is a $k \times l$ matrix, and $S$ is a $l \times l$ matrix. Then one can check that the condition for $X$ to be in $\mathfrak{o}(k,l)$ is equivalent to $P=-P^T$, $S=-S^T$ and $R=Q$. Thus the dimension of $\mathfrak{o}(k,l)$ is
+$$
+\frac{k(k-1)}{2} + \frac{l(l-1)}{2} + kl = \frac{n(n-1)}{2}.
+$$
+
+We also have its special version: $SO(k,l) := O(k,l) \cap SL_{k+l}(\R)$. 
+
+\subsection{The unitary group $U(n)$}
+
+Let $V=\C^n$, and consider the Hermitian form
+$$
+\langle v, w \rangle = \sum_{i=1}^n v_i \overline{w_i}.
+$$
+The \textbf{unitary group} $U(n)$ is the group of $\C$-linear transformations preserving this form. The proof in the case of $O(n)$ goes through here as well, so that we see that
+$$
+\mathfrak{u}(n) = \{ X \in \mathfrak{gl}_n(\C) \, \mid \, X = -X^\ast \},
+$$
+where the star means the conjugate transpose of $X$. We also have the \textbf{special unitary group} $SU(n) = U(n) \cap \SL_n(\C)$ with Lie algebra
+$$
+\mathfrak{su}(n) = \{ X \in \mathfrak{gl}_n(\C) \, \mid \, X = -X^\ast, \, \tr X = 0\}.
+$$
+The dimension of $U(n)$ is $n^2$. To see this, note that matrices in the Lie algebra consist of real entries along the diagonal, plus free entries above the diagonal (the entries below the diagonal are minus conjugate those above). Thus the total freedom is $n+2 \cdot \frac{n(n-1)}{2} = n^2$.
+
+\subsection{The symplectic Lie groups $Sp(2n,\R)$}
+
+Let $V= \R^{2n}$ or $V= \C^{2n}$ and consider
+\begin{align*}
+  (v,w) &= \sum_{i=1}^{2n} (v_i w_{i+n}-v_{i+n}w_i) \\
+&= (Jv,w)
+\end{align*}
+where
+$$
+J =
+\begin{pmatrix}
+  0 & -I_n \\
+-I_n & 0 
+\end{pmatrix}.
+$$
+The group of transformations preserving this form are the \textbf{symplectic groups} $Sp(2n,\R)$ or $Sp(2n,\C)$. The Lie algebra is
+$$
+\mathfrak{sp}(2n;k) = \{ X \in \mathfrak{gl}_n(k) \, \mid \, JX+X^TJ = 0 \}.
+$$
+In the same way is with the indefinite orthogonal group, one can compute the Lie algebra more explicitly. Namely, write $X$ as 
+$$
+X =
+\begin{pmatrix}
+  A & B \\
+C & D
+\end{pmatrix}.
+$$
+Here $A,B,C$ and $D$ are $n \times n$ matrices. Here the condition on $X$ to be in the Lie algebra is equivalent to $D=-A^T$ and $B$ and $C$ being skew-symmetric matrices. Hence the dimension is $n^2+2 \cdot \frac{n^2-n}{2} = 2n^2-n$.
+
+\subsection{The compact symplectic group $Sp(n)$} 
+
+This is the group defined by $Sp(n) = Sp(2n; \C) \cap U(2n)$ with Lie algebra
+$$
+\mathfrak{sp}(n) = \{ X \in \mathfrak{gl}_n(\C) \, \mid \, X+X^*=0, \, JX+X^TJ = 0\},
+$$
+where $J$ is as above. It can be shown that $Sp(n)$ is the subgroup of $\GL_n(\mathbb H)$ preserving $\sum_{i=1}^n v_i \overline{w_i}$. 
 
 %%%%%%%%%%%%%%%%%%
 \newpage
-\section{More on Lie subgroups}
+\section{Lie subgroups}
+
+A \textbf{Lie subgroup} of a Lie group $G$ is a subgroup $H \subset G$ admitting the structure of a Lie group, making the embedding $H \to G$ smooth. 
 
 \section{The adjoint representation}
 

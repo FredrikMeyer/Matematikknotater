@@ -31,22 +31,26 @@
 \BOOKMARK [2][-]{subsection.15.2}{The special linear group}{section.15}% 31
 \BOOKMARK [2][-]{subsection.15.3}{Groups defined by preservation of a bilinear form}{section.15}% 32
 \BOOKMARK [2][-]{subsection.15.4}{The orthogonal group O\(n\)}{section.15}% 33
-\BOOKMARK [1][-]{section.16}{More on Lie subgroups}{}% 34
-\BOOKMARK [1][-]{section.17}{The adjoint representation}{}% 35
-\BOOKMARK [1][-]{section.18}{Representation theory of SU\(2\)}{}% 36
-\BOOKMARK [1][-]{section.19}{Tori}{}% 37
-\BOOKMARK [1][-]{section.20}{Cartan's theorem on maximal tori}{}% 38
-\BOOKMARK [1][-]{section.21}{Roots}{}% 39
-\BOOKMARK [2][-]{subsection.21.1}{Roots}{section.21}% 40
-\BOOKMARK [2][-]{subsection.21.2}{Some lemmas}{section.21}% 41
-\BOOKMARK [1][-]{appendix.A}{Exercises}{}% 42
-\BOOKMARK [2][-]{subsection.A.1}{Lecture 1}{appendix.A}% 43
-\BOOKMARK [2][-]{subsection.A.2}{Exercises 3}{appendix.A}% 44
-\BOOKMARK [2][-]{subsection.A.3}{Lecture 4}{appendix.A}% 45
-\BOOKMARK [2][-]{subsection.A.4}{Exercises 11}{appendix.A}% 46
-\BOOKMARK [2][-]{subsection.A.5}{Lecture 13}{appendix.A}% 47
-\BOOKMARK [2][-]{subsection.A.6}{Exercises 16}{appendix.A}% 48
-\BOOKMARK [2][-]{subsection.A.7}{Exercises 18}{appendix.A}% 49
-\BOOKMARK [1][-]{appendix.B}{Some worked examples}{}% 50
-\BOOKMARK [2][-]{subsection.B.1}{The representation ring of S3}{appendix.B}% 51
-\BOOKMARK [2][-]{subsection.B.2}{Explicit Specht modules}{appendix.B}% 52
+\BOOKMARK [2][-]{subsection.15.5}{Indefinite orthogonal groups O\(k,l\)}{section.15}% 34
+\BOOKMARK [2][-]{subsection.15.6}{The unitary group U\(n\)}{section.15}% 35
+\BOOKMARK [2][-]{subsection.15.7}{The symplectic Lie groups Sp\(2n,R\)}{section.15}% 36
+\BOOKMARK [2][-]{subsection.15.8}{The compact symplectic group Sp\(n\)}{section.15}% 37
+\BOOKMARK [1][-]{section.16}{Lie subgroups}{}% 38
+\BOOKMARK [1][-]{section.17}{The adjoint representation}{}% 39
+\BOOKMARK [1][-]{section.18}{Representation theory of SU\(2\)}{}% 40
+\BOOKMARK [1][-]{section.19}{Tori}{}% 41
+\BOOKMARK [1][-]{section.20}{Cartan's theorem on maximal tori}{}% 42
+\BOOKMARK [1][-]{section.21}{Roots}{}% 43
+\BOOKMARK [2][-]{subsection.21.1}{Roots}{section.21}% 44
+\BOOKMARK [2][-]{subsection.21.2}{Some lemmas}{section.21}% 45
+\BOOKMARK [1][-]{appendix.A}{Exercises}{}% 46
+\BOOKMARK [2][-]{subsection.A.1}{Lecture 1}{appendix.A}% 47
+\BOOKMARK [2][-]{subsection.A.2}{Exercises 3}{appendix.A}% 48
+\BOOKMARK [2][-]{subsection.A.3}{Lecture 4}{appendix.A}% 49
+\BOOKMARK [2][-]{subsection.A.4}{Exercises 11}{appendix.A}% 50
+\BOOKMARK [2][-]{subsection.A.5}{Lecture 13}{appendix.A}% 51
+\BOOKMARK [2][-]{subsection.A.6}{Exercises 16}{appendix.A}% 52
+\BOOKMARK [2][-]{subsection.A.7}{Exercises 18}{appendix.A}% 53
+\BOOKMARK [1][-]{appendix.B}{Some worked examples}{}% 54
+\BOOKMARK [2][-]{subsection.B.1}{The representation ring of S3}{appendix.B}% 55
+\BOOKMARK [2][-]{subsection.B.2}{Explicit Specht modules}{appendix.B}% 56
