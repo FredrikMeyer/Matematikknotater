@@ -1702,7 +1702,69 @@ dddd
   \end{enumerate}
 \end{exc}
 
+\subsection{Exercises 5}
+
+\begin{exc}[Excercise 1]
+Show that the ring $\Z$ is integrally closed.
+\end{exc}
+\begin{sol}
+Let $x=p/q \in \Q$ and suppose that we have an equation of integral dependence:
+$$
+x^n + b_1x^{n-1} + \ldots + b_n = 0
+$$
+with $b_i \in \Z$. We can suppose that $p$ and $q$ have no common factor. Multiply by $q^n$ on both sides to get
+$$
+p^n+b_1qp^{n-1} + \ldots+b_nq^n = 0.
+$$
+Looking modulo $q$ we see that $q \mid p^n$, which to avoid contradiction, must imply that $q=\pm 1$, hence $x \in \Z$.
+\end{sol}
+
+\begin{exc}[Exercise 2]
+Suppose $R$ is a unital commutative ring and $S \subset R$ a subring with $1 \in S$. Show that the set of elements of $R$ integral over $S$ form a subring of $R$.
+\end{exc}
+\begin{sol}
+ Note that $x$ is integral over $S$ if and only if $S[x]$ is a finitely generated $S$-module. Hence if $x$ and $y$ are integral over $S$, it follows that $S[x] \otimes_S S[y] = S[x,y]$ is a finitely generated $S$-module. Hence $x \pm y$ and $xy$ are integral over $S$
+\end{sol}
+
 \subsection{Exercises 11}
+
+\subsection{Lecture 13}
+\begin{exc}
+ Let $G = \GL_n(\C)$. Show that $\exp:\frak g \to G$ is surjective. Show also that it is not open.
+\end{exc}
+\begin{sol}
+Note that for matrix groups, the exponential is given by
+$$
+\exp(A) = I + A + \frac 12 A^2 + \frac 16+A^3 + \ldots+\frac{1}{n!}A^n + \ldots
+$$
+Also note that
+$$
+\exp(P^{-1}AP) = P^{-1} \exp(A) P
+$$
+for invertible matrices $P \in \GL_n(\C) \subset \frak g=\End(\C^n)$. Thus, if $A$ is diagonalizable with eigenvalues $\lambda_i$, the matrix $P^{-1}\text{diag}(\log \lambda_1,\ldots,\log \lambda_n)P$ (with $P$ diagonalizing $A$) is mapped to $A$. Here $\log$ is of course the complex logarithm (which is multi-valued, so choose one value for each).
+
+Now if $A$ is not diagonalizable, the matrix $A+\epsilon I$ is invertible and diagonalizable for generic $\epsilon$. Thus we can find a sequence $A_n$ with all $A_n$ diagonalizable and $A_n \to A$ with corresponding $B_n$ with $\exp(B_n)=A_n$. I claim that the $B_n$ can be chosen such that $\{ B_n \}$ is a convergent sequence.  This is because the eigenvalues of $A_n$ are continous with respect to $\epsilon$, and as $\log:\C^\ast \to \C$ is continous, we can choose the logs of close eigenvalues to be close. Thus we get a convergent sequence $B_n \to B$, and by continuity of $\exp$, $\exp(B)=A$.
+
+Now we explain why $\exp$ is not open. [[[HOW????]]
+\end{sol}
+
+\subsection{Exercises 13}
+
+\begin{exc}[Exercise 1]
+
+Let $G$ be a group that is also a compact space (that is, a compact Hausdorff topological space) such that the multiplication map $\mu:G \times G \to G$ is continous. Show that $G$ is a compact group, that is, that the inverse map $\iota:G \to G$ is continous as well.
+\end{exc}
+
+\begin{sol}
+ Let $U \subset G$. Then
+ \begin{align*}
+   \iota^{-1}(U) &= \{ g \in G \, \mid \, \iota(g) \in U \} \\
+&= \{ g \in G \, \mid \, g^{-1} \in U \}  \\
+&= \{ g \in G \, \mid \, e \in gU \}
+ \end{align*}
+
+[[[[[[[[[ something about bijection between compact spaces is a homeomorphism ]]]]]]]]]
+\end{sol}
 
 \begin{exc}
   \begin{enumerate}
@@ -1726,7 +1788,7 @@ where $\det D(g)$ is the Jacobian matrix of the map $A \mapsto gA$. A computatio
 $$
 \mu(S) = \int_S \frac{1}{\lvert \det A\rvert ^2} dA.
 $$
-The same computation with $g mapsto Ag$ gives the same result. Hence $\GL_2(\R)$ is unimodular.
+The same computation with $g \mapsto Ag$ gives the same result. Hence $\GL_2(\R)$ is unimodular.
 
 ii). For the second part, note that the $ax+b$-group is topologically $\R \times \R^\ast$, so that we can use the measure $dxdy$ here. Then a similar computation gives that a left-invariant Haar measure is given by
 $$
@@ -1736,26 +1798,6 @@ and a right-invariant Haar measure is given by
 $$
 \mu(S) = \int_S \frac{1}{a} da\, db.
 $$
-\end{sol}
-
-\subsection{Lecture 13}
-\begin{exc}
- Let $G = \GL_n(\C)$. Show that $\exp:\frak g \to G$ is surjective. Show also that it is not open.
-\end{exc}
-\begin{sol}
-Note that for matrix groups, the exponential is given by
-$$
-\exp(A) = I + A + \frac 12 A^2 + \frac 16+A^3 + \ldots+\frac{1}{n!}A^n + \ldots
-$$
-Also note that
-$$
-\exp(P^{-1}AP) = P^{-1} \exp(A) P
-$$
-for invertible matrices $P \in \GL_n(\C) \subset \frak g=\End(\C^n)$. Thus, if $A$ is diagonalizable with eigenvalues $\lambda_i$, the matrix $P^{-1}\text{diag}(\log \lambda_1,\ldots,\log \lambda_n)P$ (with $P$ diagonalizing $A$) is mapped to $A$. Here $\log$ is of course the complex logarithm (which is multi-valued, so choose one value for each).
-
-Now if $A$ is not diagonalizable, the matrix $A+\epsilon I$ is invertible and diagonalizable for generic $\epsilon$. Thus we can find a sequence $A_n$ with all $A_n$ diagonalizable and $A_n \to A$ with corresponding $B_n$ with $\exp(B_n)=A_n$. I claim that the $B_n$ can be chosen such that $\{ B_n \}$ is a convergent sequence.  This is because the eigenvalues of $A_n$ are continous with respect to $\epsilon$, and as $\log:\C^\ast \to \C$ is continous, we can choose the logs of close eigenvalues to be close. Thus we get a convergent sequence $B_n \to B$, and by continuity of $\exp$, $\exp(B)=A$.
-
-Now we explain why $\exp$ is not open. [[[HOW????]]
 \end{sol}
 
 \subsection{Exercises 16}
@@ -1793,6 +1835,24 @@ Thus, let $\gamma:\R \to \GL(V \otimes W)$ be a continous curve with $\gamma(0)=
 by the usual proof of the product rule.
 \end{sol}
 
+\subsection{Exercises 19}
+
+\begin{exc}[Exercise 3]
+Let $G$ be a closed subgroup of $U(n)$. Verify that the formula
+$$
+\langle X,Y \rangle = -Tr(XY)
+$$  
+defines an $\Ad$-invariant scalar product on $\g \subset \mathfrak u(n)$.
+\end{exc}
+\begin{sol}
+We first verify that the formula defines a scalar product. It is clearly symmetric and bilinear. We only need to check that it is positive definite. Note that every $X \in \g$ satisfies $X = -X*$. Hence $\langle X,X \rangle  = -Tr(XX)=-Tr(-X^\ast X)=Tr(XX^\ast)$. An easy computation shows that the $i$th diagonal entry of $XX^\ast$ is the sum of the moduli of the elements in the $i$th row of $X$. Hence $tr(XX^\ast)$ is the sum of the lengths of all the entries in $X$ (with certain repetitions). But this is zero if and only if $X=0$. Hence $\langle X,Y \rangle$ is positive definite.
+
+Recall the adjoint action of $G$ on $\g$, given by $g \cdot X = gXg^{-1}$. Being $\Ad$-invariant means that $\langle g \cdot X, g \cdot Y \rangle = \rangle X,Y \langle$ for all $X,Y \in \g$. But the action on the Lie algebra is given by conjugating, and we have
+$$
+\langle g \cdot X, \cdot Y \rangle = \langle gXg^{-1},gYg^{-1}\rangle = -\tr(gXg^{-1}gYg^{-1}) = -\tr(gXYg^{-1})=-tr(XY).
+$$
+And we are done.
+\end{sol}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
