@@ -1,6 +1,6 @@
 \select@language {english}
-\contentsline {section}{\numberline {1}Algebra - Serge Lang}{2}{section.1}
-\contentsline {subsection}{\numberline {1.1}Chapter V}{2}{subsection.1.1}
+\contentsline {section}{\numberline {1}Algebra - Serge Lang}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Chapter V}{3}{subsection.1.1}
 \contentsline {section}{\numberline {2}Algebraic Geometry - Hartshorne}{4}{section.2}
 \contentsline {subsection}{\numberline {2.1}Chapter I - Varieties}{4}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Chapter II - Schemes}{7}{subsection.2.2}
@@ -28,20 +28,22 @@
 \contentsline {subsection}{\numberline {9.3}Chapter III - Rings and modules of fractions}{35}{subsection.9.3}
 \contentsline {subsection}{\numberline {9.4}Chapter 5 - Integral dependence and valuations}{36}{subsection.9.4}
 \contentsline {subsection}{\numberline {9.5}Chapter 7 - Noetherian rings}{37}{subsection.9.5}
-\contentsline {section}{\numberline {10}Linear representations of finite groups - Serre}{39}{section.10}
-\contentsline {subsection}{\numberline {10.1}Chapter 1 - Representations and characters}{39}{subsection.10.1}
-\contentsline {subsection}{\numberline {10.2}Chapter 2 - The character of a representation}{39}{subsection.10.2}
-\contentsline {subsection}{\numberline {10.3}Chapter 3}{43}{subsection.10.3}
-\contentsline {section}{\numberline {11}The K-book - Charles Weibel}{43}{section.11}
-\contentsline {subsubsection}{\numberline {11.0.1}Chapter 1.1 - Free modules, $GL_n$ and stably free modules}{43}{subsubsection.11.0.1}
-\contentsline {subsection}{\numberline {11.1}Chapter 1.2 - Projective modules}{45}{subsection.11.1}
-\contentsline {section}{\numberline {12}Representation Theory - Fulton, Harris}{45}{section.12}
-\contentsline {subsection}{\numberline {12.1}Representations of Finite Groups}{45}{subsection.12.1}
-\contentsline {subsection}{\numberline {12.2}Chapter 7 - Lie groups}{49}{subsection.12.2}
-\contentsline {subsection}{\numberline {12.3}Lecture 8 - Lie Algebras and Lie groups}{50}{subsection.12.3}
-\contentsline {section}{\numberline {13}Twenty-Four Hours of Local Cohomology}{51}{section.13}
-\contentsline {subsection}{\numberline {13.1}Lecture 1 - Basic notions}{51}{subsection.13.1}
-\contentsline {subsection}{\numberline {13.2}Lecture 7 - Local cohomology}{53}{subsection.13.2}
-\contentsline {section}{\numberline {14}Riemannian geometry - Do Carmo}{53}{section.14}
-\contentsline {subsection}{\numberline {14.1}Chapter 0 - Differentiable manifolds}{53}{subsection.14.1}
-\contentsline {subsection}{\numberline {14.2}Chapter 2 - Affine and Riemannian connections}{54}{subsection.14.2}
+\contentsline {section}{\numberline {10}Lie groups, Lie algebras and Representations - Hall}{39}{section.10}
+\contentsline {subsection}{\numberline {10.1}Matrix Lie groups}{39}{subsection.10.1}
+\contentsline {section}{\numberline {11}Linear representations of finite groups - Serre}{40}{section.11}
+\contentsline {subsection}{\numberline {11.1}Chapter 1 - Representations and characters}{40}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.2}Chapter 2 - The character of a representation}{40}{subsection.11.2}
+\contentsline {subsection}{\numberline {11.3}Chapter 3}{43}{subsection.11.3}
+\contentsline {section}{\numberline {12}The K-book - Charles Weibel}{44}{section.12}
+\contentsline {subsubsection}{\numberline {12.0.1}Chapter 1.1 - Free modules, $GL_n$ and stably free modules}{44}{subsubsection.12.0.1}
+\contentsline {subsection}{\numberline {12.1}Chapter 1.2 - Projective modules}{45}{subsection.12.1}
+\contentsline {section}{\numberline {13}Representation Theory - Fulton, Harris}{46}{section.13}
+\contentsline {subsection}{\numberline {13.1}Representations of Finite Groups}{46}{subsection.13.1}
+\contentsline {subsection}{\numberline {13.2}Chapter 7 - Lie groups}{49}{subsection.13.2}
+\contentsline {subsection}{\numberline {13.3}Lecture 8 - Lie Algebras and Lie groups}{51}{subsection.13.3}
+\contentsline {section}{\numberline {14}Twenty-Four Hours of Local Cohomology}{51}{section.14}
+\contentsline {subsection}{\numberline {14.1}Lecture 1 - Basic notions}{51}{subsection.14.1}
+\contentsline {subsection}{\numberline {14.2}Lecture 7 - Local cohomology}{54}{subsection.14.2}
+\contentsline {section}{\numberline {15}Riemannian geometry - Do Carmo}{54}{section.15}
+\contentsline {subsection}{\numberline {15.1}Chapter 0 - Differentiable manifolds}{54}{subsection.15.1}
+\contentsline {subsection}{\numberline {15.2}Chapter 2 - Affine and Riemannian connections}{55}{subsection.15.2}

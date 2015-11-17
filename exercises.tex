@@ -1377,6 +1377,45 @@ Applying the $\Tor$ functor commutes with localization, hence we have $\Tor_1^A(
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 
+\section{Lie groups, Lie algebras and Representations - Hall}
+
+\subsection{Matrix Lie groups}
+
+\begin{exc}
+Let $a$ be an irrational number and let $G$ be the following subgroup of $\GL(2; \C)$:
+$$
+G = 
+\left\{
+\begin{pmatrix}
+e^{it} & 0 \\
+0 & e^{ita} 
+\end{pmatrix}
+\, \mid  \, t \in \R \right\}.
+$$
+Show that
+$$
+\overline G = \left\{
+\begin{pmatrix}
+e^{it} & 0 \\
+0 & e^{is} 
+\end{pmatrix}
+\, \mid  \, t,s  \in \R \right\}.
+$$
+\end{exc}
+\begin{sol}
+It suffices to show that every pair $(e^{it},e^{is})$ can be arbitrarily apprixmated by a pair $(e^{it},e^{iat})$. 
+
+Let $t' = 2\pi k + t$. The set 
+$$
+\{ e^{iat'} \mid k \in \Z \} 
+$$
+is dense in $S^1$, hence for some $k$ we come very close to the pair $(e^{it},e^{iat})$. Hence the closure is the torus.
+\end{sol}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Linear representations of finite groups - Serre}
 
 \subsection{Chapter 1 - Representations and characters}
