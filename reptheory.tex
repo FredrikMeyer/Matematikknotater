@@ -1469,13 +1469,13 @@ The Lie algebra of $SU(2)$ is contained in the Lie algebra of $SL(2,\C)$. We wri
 
 \subsection{Roots}
 
-Let $G$ be a compact connected Lie group. Fix a maximal torus $T$. Consider $\g_\C=\C \otimes_\R \g$, the complexification of the Lie algebra of $G$. This is a complex Lie algebra, where we define $[c \otimes X, d \otimes Y=cd \otimes [X,Y]$.
+Let $G$ be a compact connected Lie group. Fix a maximal torus $T$. Consider $\g_\C=\C \otimes_\R \g$, the complexification of the Lie algebra of $G$. This is a complex Lie algebra, where we define $[c \otimes X, d \otimes Y]=cd \otimes [X,Y]$.
 
 We can identifty $\g$ with the elements of the form $1 \otimes X$ for $X \in \g$. Sometimes we write elements of $\g_\C$ as $X+iY$.
 
 The adjoint representation $\Ad:G \to \GL(\g)$ extends to a representation $G \to \GL(\g_\C)$, which we will also denote by $\Ad$.
 
-Consider $\restr{\Ad}{T}$. As $T$ is a compact abelian group, we have a decomposition of $\restr{\Ad}{T}$ into isotypic components corresponding to charachers $\chi \in \widehat T$. Thus we can write
+Consider $\restr{\Ad}{T}$. As $T$ is a compact abelian group, we have a decomposition of $\restr{\Ad}{T}$ into isotypic components corresponding to characters $\chi \in \widehat T$. Thus we can write
 $$
 \g_\C = \bigoplus_{\chi \in \widehat T} \g_\C(\chi)
 $$
@@ -1485,13 +1485,13 @@ $$
 $$
 is the eigenspace of $X$.
 
-We view $\mathbb T = S^1$ as a subgroup of $\C^\ast = \GL_1(\C)$, so the Lie algebra of $\mathbb T$ is $i \R \subset \C$.
+We view $\mathbb T = S^1$ as a subgroup of $\C^\ast = \GL_1(\C)$. In  this picture, the Lie algebra of $\mathbb T$ is $i \R \subset \C$.
 
-Any character $\chi \in \widehat T$ is determined by its differential $\chi_\ast:\mathfrak t \to i \R$, so we can think of $\chi_\ast \in i \mathfrak t^\ast$, where $\mathfrak t ^\ast = \Hom_\R(\mathfrak t,\R)$.
+Let $\mathfrak t$ be the Lie algebra of $T$. Any character $\chi \in \widehat T$ is determined by its differential $\chi_\ast:\mathfrak t \to i \R$, so we can think of $\chi_\ast \in i \mathfrak t^\ast$, where $\mathfrak t ^\ast = \Hom_\R(\mathfrak t,\R)$.
 
 Then the set of differentials $\chi_\ast$ ($\chi \in \widehat T$) form a subset $X^\ast(T) \subset i \mathfrak t ^\ast$. It is a \emph{lattice} in $i \mathfrak t^\ast$ (here by \emph{lattice} we mean a discrete subgroup of maximal rank), called the \textbf{character lattice}.
 
-Indeed, if $T=\R^n/\Z^n$, then $\mathfrak t=\R^n$, so $\mathfrak t^\ast=\R^n$, and an element $(it_1,\ldots,it_n) \in it^\ast$ defines a character $\R^n \to \mathbb T$ by 
+Indeed, if $T=\R^n/\Z^n$, then $\mathfrak t=\R^n$, so $\mathfrak t^\ast=\R^n$, and an element $(it_1,\ldots,it_n) \in i\mathfrak t^\ast$ defines a character $\R^n \to \mathbb T$ by 
 $$
 (a_1, \ldots,a_n) \mapsto e^{ia_1t_1}\cdot \ldots \cdot e^{ia_nt_n},
 $$
@@ -1502,16 +1502,16 @@ Consider now the complexification $\mathfrak t_\C$ of the Lie algebra of $T$. We
 Functionals $\mathfrak t \to \R$ can be extended by complex linearity to $\mathfrak h$, so $i \mathfrak t^\ast \subset \mathfrak h^\ast = \Hom_\C(\mathfrak h, \C)$. We then have
 
 \begin{align*}
-  \g_\C(\chi) &= \{ X \in \g_\C \mid (Ad g)X = \chi(g) X \forall g \in T \} \\
-&= \{ X \in \g_\C \mid [Y,X] = \chi_\ast(Y)X \forall Y \in T \} \\
-&= \{ X \in \g_\C \mid [Y,X] = \chi_\ast(Y)X \forall Y \in \mathfrak h \}.
+  \g_\C(\chi) &= \{ X \in \g_\C \mid (\Ad g)X = \chi(g), X\, \forall g \in T \} \\
+&= \{ X \in \g_\C \mid [Y,X] = \chi_\ast(Y)X, \,\forall Y \in T \} \\
+&= \{ X \in \g_\C \mid [Y,X] = \chi_\ast(Y)X, \, \forall Y \in \mathfrak h \}.
 \end{align*}
 
 For $\alpha \in \mathfrak h^\ast$, denote
 $$
-\g_\alpha = \{ X \in \g_\C \mid [H,X] = \alpha(H)X \forall H \in \mathfrak H \}.
+\g_\alpha = \{ X \in \g_\C \mid [H,X] = \alpha(H)X \forall H \in \mathfrak h \}.
 $$
-In our earlier notation, this says that $\g_{\chi_\ast} = \g_\C(\chi)$.
+In our earlier notation, this says that $\g_{\alpha} = \g_\C(\chi)$, where we think of $\chi \in i \mathfrak t^\ast \subset \mathfrak h^\ast$.
 
 \begin{lemma}
 We have that $\g_0 = \mathfrak h$.
@@ -1519,7 +1519,7 @@ We have that $\g_0 = \mathfrak h$.
 \begin{proof}
  This follows because $\mathfrak t$ is a maximal abelian Lie subalgebra of $\g$, so that
 $$
-\mathfrak t = \{ X \in \g \mid [H,X] = 0 \forall H \in \mathfrak t \}.
+\mathfrak t = \{ X \in \g \mid [H,X] = 0 \quad \forall H \in \mathfrak t \}.
 $$
 Now complexify both sides.
 \end{proof}
@@ -1532,17 +1532,17 @@ $$
 $$
 so that $\g = \{ X \in \g_\C \mid X = -X^\star \}$.\footnote{Note that I have chosen to write $X^\star$ for the involution to distinguish it from taking duals.}
 
-This induces an involution $\alpha \mapsto \overline \alpha$ in $\mathfrak h^\ast$ as well. Define
+This induces an involution $\alpha \mapsto \overline \alpha$ in $\mathfrak h^\ast$ as well. Namely, define
 $$
-\overline \alpha(H) = \overline{\alpha(H^\star)}.
+\overline \alpha(H) \stackrel{\Delta}{=} \overline{\alpha(H^\star)}.
 $$
 This is actually an involution, because
 $$
 \overline{\overline \alpha}(H) = \overline{\overline \alpha(H^\star)} = \overline{\overline{\alpha(H^{\star \star})}} = \alpha(H).
 $$
-In fact, this definition ensures that $\overline{\alpha}$ is \emph{complex linear} as well: we have that $\overline \alpha (zH) = z \overline \alpha(H)$ (this is an easy but tedious exercise).
+In fact, this definition ensures that $\overline{\alpha}$ is \emph{complex linear} as well: we have that $\overline \alpha (zH) = z \overline \alpha(H)$ (this is an easy but somewhat tedious exercise).
 
-This lets us recognice $\mathfrak t^\ast$ inside $\mathfrak h^\ast$ as well. Namely,
+This lets us recognice $i \mathfrak t^\ast$ inside $\mathfrak h^\ast$ as well. Namely,
 \begin{align*}
   i \mathfrak t^\ast &= \{ \alpha \in \mathfrak h^\ast \mid \alpha(\mathfrak t) \subset i \R \} \\
 &= \{ \alpha \in \mathfrak h ^\ast \mid \overline \alpha = \alpha \},
@@ -1554,18 +1554,21 @@ as those functionals fixed by the involution.
 The rest of this lecture will consist of several small results.
 
 \begin{lemma}
+\label{lemmadecomp}
   \begin{enumerate}
-Recall that we have a decomposition $$\g_\C = \mathfrak h \oplus \bigoplus_{\alpha \in \Delta} \g_\alpha.$$ Then:
+We have a decomposition $$\g_\C = \mathfrak h \oplus \bigoplus_{\alpha \in \Delta} \g_\alpha.$$ Also:
   \item $[\mathfrak g_\alpha, \mathfrak g_\beta] \subset \mathfrak g_{\alpha+\beta}$.
 \item $\g_\alpha^\star = \g_{-\alpha}$. Here $g_\alpha^\star = \{ X^\star \mid X \in \g_\alpha \}$.
   \end{enumerate}
 \end{lemma}
 \begin{proof}
+The decomposition of $\g_\C$ is just that of writing $\g_\C$ into simultaneous eigenspaces for the action of $\mathfrak h$, where $\mathfrak h$ has zero eigenvalues, as proved above.
+
 We have that 
 $$
 \g_\alpha = \{ X \in \g_\C \mid [H,X] = \alpha(H) X \text{ for all } H \in \mathfrak h\}.
 $$
-Thus, let $Y \in \g_\beta$. Then we look at $[H,[X,Y]]$. By the Jacobi identity, this is equal to
+Let $Y \in \g_\beta$. Then we look at $[H,[X,Y]]$. By the Jacobi identity, this is equal to
 \begin{align*}
   [H,[X,Y]] &= -[Y,[H,X]] - [X,[Y,H]] \\
 &= -\alpha(H)[Y,X] +[X,[H,Y]] \\
@@ -1574,30 +1577,132 @@ Thus, let $Y \in \g_\beta$. Then we look at $[H,[X,Y]]$. By the Jacobi identity,
 \end{align*}
 Hence $[X,Y] \in \g_{\alpha+\beta}$.
 
-[[PROOF FOR ii TO COME!!!!????]]
+For ii), note that $\alpha(\mathfrak t) \subset i \R$. Hence for $H \in \mathfrak t$, we have 
+$$
+\overline \alpha(H) = \overline{\alpha(H^\star)} = - \overline{\alpha(H)} = \alpha(H).
+$$
+Hence we have
+\begin{align*}
+\g_\alpha &= \{ X \in \g_\C \mid [H,X] = -\alpha(H)X \quad \forall H \in \mathfrak h \} \\
+&= \{ X \in \g \mid [H,X] = -\alpha(H) X \quad \forall H \in i \mathfrak t^\ast \} \otimes_\R \C  \\
+&= \{ X \in \g \mid [H,X^\star] = \alpha(H) X^\star \quad \forall H \in i \mathfrak t ^\ast \} \otimes_\R \C.
+\end{align*}
+In the last equality, we used the involution on both sides to get
+$$
+[H^\star, X^\star] = -[H,X] = \alpha(H) X = \alpha(H) X^\star,
+$$
+since $X$ is real (which gives $X^\star = -X$) and $H^\star=H$.
 \end{proof}
 
-To proceed, it is convenient to introduce an $\Ad$-invariant scalar product on $\g$. In fact, it is conventient to change its sign: so consider a negative definite symmetric form $(.,.)$. By linearity, extend it to $\g_\C$. Thus we get a symmetric bilinear form on $\g_\C$ ushc that
-$$
-([X,Y],Z) + (Y,[X,Z]) = 0
-$$
-for all $X,Y,Z \in \g_\C$ and $(.,.)$ restricted to $\g \subset g_\C$ is negative definite. [[ WHAT DOES $\Ad$-invariant MEAN?? AND WHY DOES THE RELATION FOLLOW??]]
+\subsection{An Ad-invariant inner product and the Killing form}
+
+To proceed, it is convenient to introduce an $\Ad$-invariant scalar product on $\g$. These exist:
 
 \begin{lemma}
- We have that $(\g_\alpha,\g_\beta) = 0$ unless $\alpha+\beta=0$.
+Let $G$ be compact Lie group. Then there is an $\Ad$-invariant inner product $( -,-)$ on $\g$, in the sense that $$( g \cdot X, g\cdot Y )  = (X , Y )$$
+for $X,Y \in \g$, where $g \cdot X$ denotes the adjoint action $\Ad:G \to \GL(\g)$. This condition further implies that
+$$
+( [X,Y],Z )  +(Y,[X,Z]) = 0.
+$$
 \end{lemma}
+\begin{proof}
+ Choose any scalar product $\langle -,-\rangle $ on $\g$ and a normalized Haar measure $dg$ on $G$. Then 
+$$
+(X,Y ) = \int_G (g \cdot X, g\cdot Y) dg
+$$
+is an $\Ad$-invariant scalar product on $\g$. To see the other equality, let $\gamma:\R \to G$ be an arc with $\gamma(0)=e \in G$ and $\gamma'(0)=Z \in \g$. Then
+\begin{align*}
+0 &=   \restr{\frac{d}{dt}\left( \gamma(t) \cdot X, \gamma(t) \cdot Y \right)}{t = 0} \\
+ &= \lim_{t \to 0} \frac 1t \left(( \gamma(t) \cdot X, \gamma(t) \cdot Y ) - ( X, \gamma(t) \cdot  Y ) + ( X, \gamma(t) \cdot Y ) - ( X, Y ) \right) \\
+&= \lim_{t \to 0} \left( \frac 1t (\gamma(t) \cdot X - X), Y \right) + \left( X, \frac 1t (\gamma(t) \cdot Y - Y) \right) \\
+&= ( [Z,X],Y ) + ( X, [Z,Y])
+\end{align*}
+Renaming $X,Y,Z$ appropriately gives the required identity.
+\end{proof}
 
-This gives us an isomorphism between $\mathfrak h$ and its dual $\mathfrak h^\ast$. Namely, given $\alpha \in \mathfrak h^\ast$, define $h_\alpha \in \mathfrak h$ by $\alpha(H)=(h_\alpha,H)$ for $H \in mathfrak H$. This defines $h_\alpha$ uniquely since the form is non-degenerate. Then the inner product carries over to $\mathfrak h^\ast$ by the formula $(\alpha,\beta)=(h_\alpha,h_\beta)$.
-
-Note that the map $\alpha \mapsto h_\alpha$ respects the involution. [[SHOW THIS]]
-[....]
+It will be conventient to require that $( -,- )$ is \emph{negative} definite on $\g$. We can extend this form to $\g_\C$ be complex linearity. It will no longer be definite (it doesn't make sense), but it will still be non-degenerate (easy exercise). 
 
 \begin{lemma}
-For $\alpha \in \Delta$ , $X \in \g_\alpha$, we have
+We have
 $$
-[X,X^\star] = (X,X^\star)h_\alpha.
-$$  
+(\g_\alpha, \g_\beta ) = 0
+$$
+if $\alpha \neq -\beta$.
 \end{lemma}
+\begin{proof}
+This follows from the invariance of $\Ad$. Namely let $X \alpha \in \g_\alpha$ and $X_\beta \in \g_\beta$. Then:
+\begin{align*}
+  0 &= ([H,X_\alpha],X_\beta ) + (X_\alpha,[H,X_\beta]) \\
+&= (\alpha(H)X_\alpha, X_\beta) + (X_\alpha,\beta(H)X_\beta) \\
+&= (\alpha(H)+\beta(H)) (X_\alpha,X_\beta)
+\end{align*}
+for all $H \in \mathfrak h$.
+\end{proof}
+
+By duality we can define a symmetric bilinear form on $\mathfrak h^\ast$ as well: let $\alpha \in \mathfrak h^\ast$. Define its \textbf{dual element} $h_\alpha$ by the equality
+$$
+(h_\alpha, H) = \alpha(H)
+$$
+for all $H \in \mathfrak h$. To see that this is well-defined, choose an orthogonal basis $\{ e_i \}$ for $h$ and let $\{ e_i^\ast \}$ be the dual basis (with respect to the form $(-,-)$). Then the vector $h_\alpha$ is just the transpose of the vector $\alpha$. 
+
+We define 
+$$
+(\alpha,\beta) = (h_\alpha, h_\beta).
+$$
+
+
+\begin{lemma}
+We have
+$$
+h_\alpha^\star = h_{\overline \alpha}
+$$
+for every $\alpha \in \mathfrak h^\ast$.
+\end{lemma}
+\begin{proof}
+First off, note that by definition $(X^\star, Y) = \overline{(X,Y^\star)}$. Then
+$$
+(h_\alpha^\star, H) = \overline{(h_\alpha, H^\star)} = \overline{\alpha(H^\star)} = \overline{\overline{\overline \alpha(H)}} = \overline{\alpha} (H) = (h_{\overline \alpha},H).
+$$
+Here we used the definition of $\overline \alpha$ as $\overline \alpha(H) = \overline{\alpha(H^\star)}$.
+\end{proof}
+
+It follows that if for $\alpha \in \mathfrak h$ satisfies $\overline \alpha = \alpha$, then $h_\alpha^\star = h_\alpha$, which implies that $h_\alpha \in i \mathfrak t$. Since $(-,-)$ was negative definite on $\g$, it follows that $(-,-)$ is positive definite on $i \mathfrak t$. 
+
+Now let $\alpha \in \Delta$ be a root. Then define
+$$
+H_\alpha = \frac{2 h_\alpha}{(\alpha,\alpha)} \in i \mathfrak t \subset \mathfrak h.
+$$
+
+\begin{lemma}
+Let $\alpha \in \Delta$, and $X \in \g_\alpha$. Then
+$$
+[X,X^\star] = (X,X^\star) h_\alpha.
+$$
+\end{lemma}
+\begin{proof}
+We know already from Lemma \eqref{lemmadecomp} that $[X,X^\star] \in \mathfrak h$. Let $\beta \in \mathfrak h^\star$. Then
+\begin{align*}
+\beta([X,X^\star]) &= (h_\beta,[X,X^\star]) \\
+&= -(h_\beta,[X^\star,X]) \\
+&= ([X^\star, h_\beta],X) \\
+&= (\alpha(h_\beta) X^\star,X) = (X^\star,X) \beta(h_\alpha).
+\end{align*}
+This holds for all $\beta \in \mathfrak h^\ast$, which implies the statement.
+\end{proof}
+
+Choose a non-zero $E_\alpha \in \g_\alpha$, and normalize it so that $(E_\alpha,E_\alpha^\star) = \frac{2}{(\alpha,\alpha)}$. Then
+$$
+[E_\alpha,E_\alpha^\star] = H_\alpha.
+$$
+Put $F_\alpha = E_\alpha^\star$. We thus get
+\begin{align*}
+  [H_\alpha, E_\alpha] = 2 E_\alpha && [H_\alpha ,F_\alpha] = -2F_\alpha && [E_\alpha, F_\alpha] = H_\alpha.
+\end{align*}
+
+This defines a sub-Lie-algebra isomorphic to $\mathfrak{sl}_2(\C)$. Thus for every $\alpha \in \Delta$ we get an inclusion of Lie algebras
+$$
+i_\alpha: \mathfrak{sl}_2(\C) \to \g_\C.
+$$
 
 
 
@@ -1642,7 +1747,7 @@ Show that the $S$ defined in the proof of Theorem \eqref{thmdensity} lies in $\T
   \begin{enumerate}
   \item Check that indeed 
 $$
-\langle v, w \rangle := \frac{1}{\langle G \rangle} \sum_{g \in G} \langle \pi(g) v, \pi(g) w \rangle'
+\langle v, w \rangle := \frac{1}{\lvert G \rvert} \sum_{g \in G} \langle \pi(g) v, \pi(g) w \rangle'
 $$
 is an invariant Hermitian scalar product.
 \item Show that if $\pi$ is irreducible, then an invariant scalar product is unique up to a factor.
