@@ -1518,6 +1518,86 @@ $$
 This is clearly homeomorphic to $S^3$, which is simply-connected.
 \end{proof}
 
+Therefore, from [[Prop]], we have a one to one correspondence between Lie group homomorphisms $SU(2) \to \GL(V)$ and Lie algebra homomorphisms $\mathfrak{su}(2) \to \mathfrak{gl}(V)$.
+
+Recall that if $\g$ is Lie algebra, then a \textbf{representation} of $\g$ on $V$ is the same thing as a Lie algebra homomorphism $\g \to \mathfrak{gl}(V)$. We also say that $V$ is a \textbf{$\g$-module}. We say that a subspace $W \subset V$ is \textbf{invariant} if $X \cdot W \subset W$ for all $X \in \g$. A representation $\g \to \mathfrak{gl}(V)$ is \textbf{irreducible} (or the $\g$-module $V$ is \textbf{simple}) if there are no proper invariant subspaces.
+
+It is an exercise to see that if $G$ is connected Lie group, then these notions coincide with those of representation of $G$ (as opposed to representations of $\g$).
+
+We now want to classify irreducible representations of $SU(2)$ on \emph{complex} finite-dimensional vector spaces $V$. Equivalently, we want to classify irreducible representations of $\mathfrak{su}(2)$ on complex finite-dimensional vectors spaces $V$. 
+
+Now, since $\mathfrak{su}(2) \otimes_\R \C \simeq \mathfrak{sl}_2(\C)$, any Lie algebra homomorphism $\mathfrak{su}(2) \to \mathfrak{gl}(V)$ (where we consider $V$ as a real vector space) extends uniquely to a Lie algebra homomorphism $\mathfrak{sl}_2(\C) \to \mathfrak{gl}(V)$ of complex vector spaces.
+
+So classifying $\mathfrak{su}(2)$-modules is the same as classifying $\mathfrak{sl}_2(\C)$-modules.
+
+Assume now $V$ is a finite-dimensional $\mathfrak{sl}_2(\C)$-module. Then this exponentiates to a representation of $SU(2)$:
+$$
+\xymatrix{
+\mathfrak{su}(2) \ar@{^{(}->}[r] \ar[ddr] &  \mathfrak{sl}_2(\C) \ar[dd] & & SU(2) \ar[ddr]  \ar@{^(->}[r] & SL_2(\C) \ar[dd] \\
+& & \ar[r]^{\exp}   & \\
+&  \mathfrak{gl}(V) && & \GL(V)
+}
+$$
+
+By restriction, the torus $T \subset SU(2)$ act on $V$ as well, and by complete reducibility, $V$ decomposes as a sum of $T$-invariant subspaces. Since $\{ ti H \mid t \in \R \}$ exponentiates to the torus $\mathbb T$, $V$ decomposes in as a sum of $H$-invariant subspaces as well.
+
+\begin{lemma}
+  The eigenvalues of $H$ are integers.
+\end{lemma}
+\begin{proof}
+Note that each irreducible eigenspace must be one-dimensional, since on each eigenspace, $H$ is sent to a diagonal matrix. Thus on each one-dimensional irreducible representation, $itH$ is sent to multiplication by $it\alpha$.
+
+Also note that $\exp(itH) \in S^1$, so that the action of $H$ on $(\C,+)$ lifts to a representation of $S^1$. These are all of the form $\theta \ mapsto n \theta$.
+
+Exponentiating, we get that $e^{itH}=e^{it\alpha}$ for all $t \in \R$. Put $t=2\pi$. Then we get that $1=e^{2\pi i \alpha}$, which is possible only if $\alpha \in \Z$.
+\end{proof}
+
+It is common to index the eigenvalues of $H$ on $V$ by half-integers. Thus for $s \in \frac 12 \Z$, we put
+$$
+V(s) = \{ \xi \in V \mid H \xi = 2s \xi \}.
+$$
+
+Elements of $V(s)$ are called vectors of \textbf{weight} $s$. Thus we write
+$$
+V = \bigoplus_{s \in \frac 12 \Z} V(s).
+$$
+
+Now recall the commutation relations in $\mathfrak{sl}_2(\C)$: $[H,E]=2E$ and $[H,F]=-2F$.
+
+\begin{lemma}
+  We have 
+$$
+EV(s) \subset V(s+1)
+$$
+and 
+$$
+FV(s) \subset V(s-1).
+$$
+In particular, if $v \neq 0$ is a vector of heighest weight, then $Ev = 0$.
+\end{lemma}
+\begin{proof}
+Let $v \in EV(s)$. Then $v=Ew$ for $w \in V(s)$. Then
+\begin{align*}
+  Hv &= HEw \\
+&= HEw - EHw + EHw \\
+&= [H,E]w + EHw \\
+&= 2Ew + 2sEw\\
+&=2v+2sv \\
+&=2(v+1)v.
+\end{align*}
+So $v \in V(s+1)$. The calculation with $F$ is similar.
+\end{proof}
+
+These two observations are enough to prove quite a lot about representations of $\mathfrak{sl}_2(\C)$.
+
+\begin{lemma}
+Suppose $V$ is a finite-dimensional $\mathfrak{sl}_2(\C)$-module and $\xi \in V(s) \bs \{ 0 \}$ satisfies $E \xi = 0$ (that is, $\xi$ is of heighest weight). Then
+\begin{enumerate}
+\item $s \geq 0$.
+\item $F^{2s+1}\xi = 0$ and $F^k\xi \neq 0$ for $k=0,\ldots,2s$. 
+\item $EF^k \xi = (2s-k+1)kF^{k-1} \xi$.
+\end{enumerate}
+\end{lemma}
 
 %%%%%%%%%%%%%%%%%%
 \newpage
