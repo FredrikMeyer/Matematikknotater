@@ -1452,12 +1452,84 @@ A \textbf{Lie subgroup} of a Lie group $G$ is a subgroup $H \subset G$ admitting
 
 Let $G$ be a Lie group. For any $g \in G$ consider the automorphism $h \mapsto ghg^{-1}$ of $G$. Thus we have a map $G \to \Aut(G)$. Its differential at the identity is denoted by $\Ad$, and we get a homomorphism $\Ad:G \to \GL(\mathfrak g)$, called the \textbf{adjoint representation}.
 
-\section{Representation theory of $SU(2)$}
 
+%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Structure and representation theory of $SU(2)$}
+
+Recall that the Lie algebra of $SU(2)$ is
+$$
+\mathfrak{su}(2) = \{ X \in \mathfrak{gl}_2(\C) \mid X^\ast + X = 0, \quad \tr(X) = 0\} .
+$$
+
+Recall also that
+$$
+\mathfrak{sl}_2(\C) = \{ X \in \mathfrak{gl}_2(\C) \mid \tr(X) = 0 \}.
+$$
+
+The latter is a complex vector space, and in fact we have $\mathfrak{su}(2) \otimes_\R \C = \mathfrak{sl}_2(\C)$. Note that one inclusion is obvious. For the other, note that any $X \in \mathfrak{sl}_2(\C)$ can be written as 
+$$
+X = \frac{X-X^\ast}{2} + i \frac{X+X^\ast}{2i},
+$$
+namely as a sum of two matrices in $\mathfrak{su}(2)$. 
+
+There is a standard $\C$-basis for $\mathfrak{sl}_2(\C)$ given by the following three matrices:
+\begin{align*}
+E = \begin{pmatrix}
+0 & 1 \\
+0 & 0 
+\end{pmatrix} &&
+F = \begin{pmatrix} 
+0 & 0 \\
+1 & 0 
+\end{pmatrix} &&
+H = \begin{pmatrix}
+1 & 0 \\
+0 & - 1
+\end{pmatrix}.
+\end{align*}
+
+A basis for $\mathfrak{su}(2)$ over $\R$ is $E-F$, $i(E+F)$ and $iH$. Note that $\R i H \subset \mathfrak{su}(2)$ is the Lie algebra of the torus 
+$$
+T = \left\{ \begin{pmatrix}
+z & 0 \\
+0 & \overline z 
+\end{pmatrix} \mid z \in S^1
+\right\}.
+$$
+The Lie algebra structure on $\mathfrak{sl}_2(\C)$ is defined by the rules
+\begin{align*}
+[H,E] = 2E && [H,F] = -2F && [E,F] = H.
+\end{align*}
+
+\begin{lemma}
+The group $SU(2)$ is simply-connected.
+\end{lemma}
+\begin{proof}
+One checks that
+$$
+SU(2) =\left\{ \begin{pmatrix}
+\alpha & \beta \\
+-\overline \beta & \overline \alpha 
+\end{pmatrix}
+\mid \alpha, \beta \in \C, \quad |\alpha|^2 + |\beta|^2 = 1
+\right\}
+$$
+This is clearly homeomorphic to $S^3$, which is simply-connected.
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%
+\newpage
 \section{Tori}
 
+%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 \section{Cartan's theorem on maximal tori}
 
+
+%%%%%%%%%%%%%%%%%%%%
+\newpage
 \section{Roots}
 
 First we recall some notation from the representation theory of $SU(2)$. There we had a maximal torus, called $T$, which was given by
@@ -1703,6 +1775,20 @@ This defines a sub-Lie-algebra isomorphic to $\mathfrak{sl}_2(\C)$. Thus for eve
 $$
 i_\alpha: \mathfrak{sl}_2(\C) \to \g_\C.
 $$
+
+\begin{lemma}
+\begin{enumerate}[a)]
+\item The spaces $\g_\alpha$ are one-dimensional.
+\item Suppose $\alpha \in \Delta$ and $c \in \R^\star$ and $c\alpha \in \Delta$. Then $c = \pm 1$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+We can suppose $\alpha$ to be minimal, in the sense that $c \alpha \not \in \Delta$ if $c \in (0,1)$. Now consider the space
+$$
+V = \C F_\alpha \oplus \mathfrak h \oplus \left( \bigoplus_{c > 0, c \alpha \in \Delta} \mathfrak g_{c \alpha} \right).
+$$
+This is a finite-dimensional $\mathfrak{sl}_2(\C)$-module. But we know from [[previous lecture]] that their spectra are symmetric about the origin, counted with multiplicities. Hence the big term must be isomorphic with the left term, which is one-dimensional, and we must have $c=1$.
+\end{proof}
 
 
 
