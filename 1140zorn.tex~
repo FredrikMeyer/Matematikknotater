@@ -1,0 +1,43 @@
+\documentclass[11pt, norsk]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}   % S P R A A K
+
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs,calligra}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $
+\usepackage{float}
+\usepackage{tikz}
+
+\usepackage{young} 
+\usepackage{youngtab} 
+
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+
+\title{Løsningsforslag Zorn}
+\author{Fredrik Meyer}
+\date{}
+\begin{document}
+
+\maketitle
+
+Her er et løsningsforslag på Oppgave 3 i notatet om Zorns lemma. De to andre oppgavene ble gjort på plenum.
+
+Først selve oppgaven.
+
+\begin{oppg}
+  Vi skal vise at alle uendeligdimensjonale vektorrom har en basis. La $V$ være et vektorrom over $\R$ (muligens uendelig-dimensjonalt). La $E \subset V$ være en delmengde. Vi sier at
+$$
+a_1\vec {e_1} +\ldots+a_n\vec{e_n}
+$$
+er en \emph{lineær kombinasjon fra $E$} om alle $\vec {e_i} \in E$. 
+\end{oppg}
+
+\end{document}

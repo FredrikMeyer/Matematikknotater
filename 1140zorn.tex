@@ -1,0 +1,172 @@
+\documentclass[11pt, norsk]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}   % S P R A A K
+
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs,calligra}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $
+\usepackage{float}
+\usepackage{tikz}
+
+\usepackage{young} 
+\usepackage{youngtab} 
+
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage[colorlinks=true]{hyperref}
+
+\usepackage{framed, color}
+\definecolor{shadecolor}{rgb}{0.94, 0.87, 0.8}
+
+\usepackage{mystyle} % stilfilen      
+
+
+\title{Løsningsforslag til noen oppgaver om Zorns lemma}
+\author{Fredrik Meyer}
+\date{}
+\begin{document}
+
+\maketitle
+
+Her er et løsningsforslag på Oppgave 3 og Oppgave 5 i notatet om Zorns lemma. De to første oppgavene ble gjort på plenum.
+
+\begin{oppg}
+  Vi skal vise at alle uendeligdimensjonale vektorrom har en basis. La $V$ være et vektorrom over $\R$ (muligens uendelig-dimensjonalt). La $E \subset V$ være en delmengde. Vi sier at
+$$
+a_1\vec {e_1} +\ldots+a_n\vec{e_n}
+$$
+er en \emph{lineær kombinasjon fra $E$} om alle $\vec {e_i} \in E$. Vi sier at $E$ er \emph{lineært uavhengig} om for hver gang vi har
+$$
+a_1 \vec{e_1} + \ldots + a_n \vec{e_n} = 0 \qquad (\vec{e_i} \in E),
+$$
+så medfører dette at $a_i=0$ for $i=1,\ldots,n$.
+
+La $\mathscr U$ være mengden av lineært uavhengige delmengder av $V$. Ordne $\mathscr U$ med $\subseteq$. Da er $\mathscr U$ en partielt ordnet mengde.
+\begin{enumerate}[a)]
+\item Vis at alle kjeder i $\mathscr U$ har en øvre skranke i $\mathscr U$.
+\item Bruk Zorns lemma til å vise at $\mathscr U$ må ha et maksimalt element $E_{max}$.
+\item Vis at ethvert element i $\vec v \in V$ kan skrives som en lineærkombinasjon 
+$$
+\vec v = a_1\vec {e_1} + \ldots a_n \vec {e_n}
+$$
+med $\vec {e_i} \in E_{max}$. Dette viser at $E_{max}$ er en såkalt \emph{Hamel-basis} for $V$.
+\end{enumerate}
+\end{oppg}
+
+\begin{enumerate}[a)]
+\item La $\{ E_i\}_{i \in I}$ være en kjede av lineært uavhengige mengder i $V$. Dette betyr at om $i < j$, så er $E_i \subset E_j$. Så en øvre skranke må inneholde alle de lineært uavhengige mengdene $E_i$. Vi definerer derfor
+$$
+E = \bigcup_{i \in I} E_i. 
+$$
+Dette er en (muligens uendelig) delmengde av $V$. Vi må vise at den er lineært uavhengig for at den skal være en øvre skranke for kjeden. 
+
+Så anta at vi har
+\begin{equation}
+\label{eqrel}
+a_1 \vec {e_1}+\ldots+a_n \vec {e_n}=0 \qquad  \vec {e_i} \in E
+\end{equation}
+At $\vec {e_i} \in E$, betyr det   finnes en $n_i$ slik at $\vec {e_i} \in E_{n_i}$. Men $E$ er unionen av slike, så alle $\vec {e_i}$ for $i=1,\ldots,n$ er inneholdt i $E_j$ for $j=\max\{ n_i\}$. Dermed foregår relasjonen \eqref{eqrel} i $E_j$. Og $E_j$ er lineært uavhengig, så vi må ha at alle $a_i=0$.
+
+Dermed er $E$ en øvre skranke for $\{ E_i \}_{i \in I}$, altså en lineært uavhengig mengde som inneholder alle elementene i kjeden.
+\item Vi har akkurat vist at alle kjeder i $\mathscr U$ har en øvre skranke i $\mathscr U$, og det følger da ved Zorns lemma at $\mathscr U$ har et maksimalt element $E_{max}$.
+\item Anta at det ikke stemmer. Nemlig, anta at det finnes en ikke-null $\vec v \in V$ som ikke kan skrives som en lineærkombinasjon med elementer fra $E_{max}$. Da påstår jeg at dette motsier at $E_{max}$ er en maksimal lineært uavhengig mengde. For vi kan lage $E' = E_{max} \cup \{ \vec v \}$. Denne er ekte større enn $E_{max}$, og lineært uavhengig: for anta vi har $a\vec e + b \vec v = 0$ med $\vec e \in Span \{ E_{max} \}$. Vi kan ikke ha $a=0$, for da får vi $\vec v =0$. Men om $b \neq 0$, vil $\vec v$ være i spennet av $E_{max}$, som vi antok den ikke gjorde. Så vi må ha $b = 0$. Men $E_{max}$ er lineært uavhengig, så $a=0$ også. Dermed er $E'$ lineært uavhengig, og ekte større enn $E_{max}$. Dette er en motsigelse, så vi må faktisk ha at $\vec v$ er med i spennet til $E_{max}$. 
+\end{enumerate}
+
+Punktene over er et bevis for at ethvert vektorrom har en Hamel-basis. Siden man ikke støter på uendeligdimensjonale vektorrom så ofte, her er et eksempel å ha i tankene:
+\begin{example}
+La $V = C^\infty(\R)$ være mengden av glatte funksjoner $f:\R \to \R$ (husk at glatt betyr at alle de deriverte er kontinuerlige funksjoner). Dette er et vektorrom (siden du kan legge sammen to funksjoner og gange med skalarer). Resultatet over sier da at det finnes en undelig mengde funksjoner $E$ slik at alle andre funksjoner $f \in V$ kan skrives som en lineærkombinasjon av disse.
+
+Dette er litt rart.
+\end{example}
+
+\rule{\textwidth}{1pt}
+
+Vi tar én oppgave til.
+\begin{oppg}[Eksamen 2013]
+  La $X$ være en uendelig mengde. En ikke-tom familie $\mathcal F$ av delmengder av $X$ kalles et \emph{filter} dersom 
+  \begin{enumerate}
+  \item $\emptyset \not \in \mathcal F$.
+\item Om $F \in \mathcal F$ og $G \in \mathcal F$, så er $F \cap G \in \mathcal F$. 
+\item Om $G \supset F$ og $F \in \mathcal F$, så er $G \in \mathcal F$.
+  \end{enumerate}
+Et filter $\mathcal F$ er et \emph{ultrafilter} dersom for alle $A \subset X$, så er enten $A \in \mathcal F$ eller $A^c \in \mathcal F$.
+\begin{enumerate}[a)]
+\item Vis at dersom $x \in X$, så er 
+$$
+\mathcal F_x = \{ F \subset X \, \mid \, x \in F \}
+$$
+et ultrafilter.
+\item Vis at 
+$$
+\mathcal F = \{ F \subset X \, \mid \, F^c \, \text{ er endelig } \}.
+$$
+er et filter, men ikke et ultrafilter.
+\item Anta at $\mathscr C$ er en totalt ordnet ikke-tom mengde av filtre (det vil si, hvis $\mathcal F,\mathcal G \in \mathscr C$, så er enten $\mathcal F \subset \mathcal G$ eller $\mathcal G \subset \mathcal F$). Vis at 
+$$
+\mathcal H = \bigcup_{\mathcal F \in \mathscr C} \mathcal F
+$$
+er et filter.
+\item Anta at $\mathcal F$ er et filter, og at $G \subset X$ er en delmengde slik at verken $G \in \mathcal F$ eller $G^c \in \mathcal F$. Vis at
+$$
+\mathcal F_G = \{ H \subseteq X \, \mid \, \text { det finnes } F \in \mathcal F \text{ slik at } F \cap G \subseteq H \}
+$$
+er et filter.
+
+\item Vis at for ethvert filter $\mathcal F$ finnes det et ultrafilter $\mathscr U$ slik at $\mathcal F \subset \mathscr U$.
+\end{enumerate}
+\end{oppg}
+\begin{enumerate}[a)]
+\item Vi har altså at $\mathcal F_x$ er alle delmengdene av $X$ som inneholder $x$. Det er klart at $\emptyset \not \in \mathcal F_x$.  Også om både $F,G$ inneholder $x$, så gjør også $F \cap G$ det. Så betingelse $2$ er oppfylt. I tillegg: om $x \in F$ og $G \supset F$, så er det klart at også $x \in G$. Dermed er $G \in \mathcal F_x$. Så $\mathcal F_x$ er et filter.
+
+At det er et ultrafilter er også lett å se: enten er $x \in A$ eller så er $x \not \in A$.
+\item Vi ser altså på mengden $\mathcal F$ som består av ``ko-endelige'' mengder, det vil si, mengder som har endelig komplement. Siden $X$ er uendelig, er det klart at $\emptyset \not \in \mathcal F$. 
+
+La nå både $F$ og $G$ ha endelig komplement. Da er
+$$
+(F \cap G)^c = F^c \cup G^c
+$$
+ved de Morgan's lov. Derfor, om både $F^c$ og $G^c$ er endelig, så er også $(F \cap G)^c$ det. Så punkt 2 er oppfylt.
+
+For punkt 3, merk at om $F^c$ er endelig, og $G \supset F$, så er $G^c \subset F^c$, og dermed må også $G \in \mathcal F$. Dermed er $\mathcal F$ et filter.
+
+Vi skal nå vise at det ikke er et ultrafilter. Siden $X$ er uendelig, finnes det en injektiv funksjon $f:\mathbb N \hookrightarrow X$. La $A$ være bildet av alle partallene, nemlig $A=f(2 \mathbb N)$, og la $B$ være bildet av oddetallene: $B= f(2\mathbb N + 1)$. Da er $A$ og $B$ uendelige mengder som er disjunkte. For at $\mathcal F$ skal være et ultrafilter, må enten $A$ eller $A^c$ være i $\mathcal F$. Vi har at $A \not \in \mathcal F$, siden $B \subset A^c$, som er uendelig. På samme vis er $A^c \not \in \mathcal F$, siden $A = A^{cc}$, som er uendelig. 
+
+\item Igjen, vi må sjekke de tre betingelsene for et filter. Siden $\mathscr C \neq \emptyset$, er det klart at $\emptyset \not \in \mathcal H$. Anta nå at $F \in \mathcal H$ og $G \in \mathcal H$. Da er $F \in mathcal F$ for et filter $\mathcal F$ og $G \in \mathcal G$ for et annet filter $\mathcal G$. Men $\mathscr C$ var total-ordnet, så vi har enten $\mathcal F \subset \mathcal G$ eller $\mathcal G \subset \mathcal F$. Uten tap av generalitet kan vi anta at $\mathcal F \subset \mathcal G$. Dermed er både $F$ og $G$ inneholdt i $\mathcal G$. Men $\mathcal G$ er et filter, så $F \cap G \in \mathcal G$. Så $F \cap G \in \mathcal H$.
+
+Anta nå at $G \supset F$ og at $F \in \mathcal H$. Da er Da er $F \in \mathcal F$ for en $\mathcal F \in \mathscr C$. Men $\mathcal F$ er et filter, så $G \in \mathcal F \subset \mathcal H$. Dermed er $\mathcal H$ et filter.
+
+\item Merk først følgende observasjon: vi må ha $F \cap G \neq \emptyset$ for alle $F \in \mathcal F$. For hvis vi hadde hatt $F \cap G = \emptyset$, så ville $F \subseteq G^c$. Men $\mathcal F$ er et filter, og da impliserer punkt 3 at $G^c \in \mathcal F$, noe vi vet det ikke er. Dermed må vi ha $F \cap G \neq \emptyset$. 
+
+Dette impliserer at punkt 1 stemmer, for om $\emptyset \in \mathcal F_G$, så ville det eksistert $F \in \mathcal F$ slik at $F \cap G = \emptyset$. Men det gjør det ikke.
+
+La nå $H_1$ og $H_2$ være med i $\mathcal F_G$. Da finnes det $F_1$ slik at $F_1 \cap G \subset H_1$ og det finnes $F_2$ slik at $F_2 \cap G \subset H_2$. Men da er 
+$$
+(F_1 \cap F_2) \cap G \subseteq H_1 \cap H_2,
+$$
+og siden $F_1 \cap F_2 \in \mathcal F$, impliserer dette at $H_1 \cap H_2 \in \mathcal F_G$. 
+
+La nå $H_2 \supset H_1$ og anta at $H_1 \in \mathcal F_G$. Da finnes det $F \in \mathcal F$ slik at $F \cap G \subseteq H_1$. Men $H_1 \subset H_2$, så $F \cap G \subseteq H_2$ også. Dermed er $H_2 \in \mathcal F_G$.
+
+Så $\mathcal F_G$ er et filter.
+\item Dette er en typisk anvendelse av Zorns lemma. La $\mathscr D$ være mengden av alle filtre på $X$ som inneholder $\mathcal F$ og ordne denne ved inklusjon. Fra oppgave c) vet vi at alle kjeder i $\mathscr D$ har en øvre skranke i $\mathscr D$. Det følger fra Zorns lemma at $\mathscr D$ har et maksimalt element $\mathscr U$.
+
+Vi må vise at $\mathscr U$ er et ultrafilter. Så la $A \subset X$ og anta $A \not \in \mathscr U$. Vi må vise at da er $A^c \in \mathscr U$. Anta for motsigelse at dette ikke stemmer, og se på filteret $\mathscr U_A$ fra oppgave d).
+
+Det er da ikke vanskelig å se at vi må ha $\mathscr U \subset \mathscr U_A$ og at dette er en streng inklusjon, fordi $\mathscr U_A$ inneholder $A$. 
+
+Dette motsier at $\mathscr U_A$ var maksimal. Vi må derfor ha at $A^c \in \mathscr U$.
+
+Så $\mathscr U$ er et ultrafilter.
+\end{enumerate}
+
+\rule{\textwidth}{1pt}
+
+\begin{shaded}
+Zorns lemma er oppkalt etter \textbf{Max Zorn} (1906-1993). Han jobbet med algebra, gruppeteori og numerisk analyse. Han tok doktorgraden i Tyskland 1930 og fikk en undervisningsstilling, men måtte rømme landet i 1933 på grunn av nazist-direktiver. Han flyttet til USA, og jobbet på Yale og UCLA. Deretter var han professor på Universitetet i Indiana fra 1946 til 1970, da han pensjonerte seg. 
+\end{shaded} 
+
+\end{document}

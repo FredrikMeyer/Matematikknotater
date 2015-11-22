@@ -1595,9 +1595,71 @@ Suppose $V$ is a finite-dimensional $\mathfrak{sl}_2(\C)$-module and $\xi \in V(
 \begin{enumerate}
 \item $s \geq 0$.
 \item $F^{2s+1}\xi = 0$ and $F^k\xi \neq 0$ for $k=0,\ldots,2s$. 
-\item $EF^k \xi = (2s-k+1)kF^{k-1} \xi$.
+\item $EF^k \xi = (2s-k+1)kF^{k-1} \xi$ for all $k \geq 0$.
 \end{enumerate}
 \end{lemma}
+\begin{proof}
+
+We start by proving number 3 by induction. The base case $k=0$ gives $E \xi = 0$, which is clear by assumption.
+
+Note that $EF = [E,F]+FE = H+FE$. Note also that since $\xi \in V(s)$, we have $F^k \xi \in V(s-k)$ by the previous lemma. Then:
+\begin{align*}
+  EF^{k+1} \xi &= EF F^k \xi \\
+&= (H+FE) F^k \xi \\
+&= H(F^k \xi) + F(EF^k \xi) \\
+&= 2(s-k)F^k \xi + (2s-k+1)k F^k \xi \\
+&= (2s-k+2sk-k^2) F^k \alpha.
+\end{align*}
+Now note that this is what we want, because
+$$
+(2s-(k+1)+1)(k+1) = (2s-k)(k+1) = 2sk+2s-k^2-k.
+$$
+Thus number 3) is proved.
+
+Now let $n$ be the smallest number such that $F^n \xi = 0$ (the \textbf{smallest weight}). Then $F^n \xi = 0$. Then it follows from 3) that
+$$
+0 = EF^n \xi = (2s-n+1)nF^{n-1} \xi.
+$$
+Hence $2s-n+1=0$, so $n=2s+1$. This proves $2)$. This also proves $1)$ because $n \geq 1$. 
+\end{proof}
+
+In view of this lemma, for any $s \in \frac 12 \Z_+ = \{ 0, \frac 12, 1, \ldots \}$, define an $\mathfrak{sl}_2(\C)$-module $V_s$ as follows: it is a vector space with basis elements denoted by
+$$
+\{ \xi_{-s}^s, \xi_{-s+1}^s, \ldots, \xi_s^s \},
+$$
+and where $H,F$ and $E$ act as follows:
+\begin{align*}
+ H \xi_t^s = 2t \xi_t^s && F\xi_t^s = \xi_{t-1}^s && E \xi_{s-k}^s = (2s-k+1)k\xi_{s-k+1}^s.
+\end{align*}
+
+Then it is an (easy) exercise to see that this defines an $\mathfrak{sl}_2(\C)$-module. It is also easy to see that $V_s$ is irreducible, since, starting from any basis vector $\xi_t^s$, we can use $F$ and $E$ to raise and lower the indices to generate all of $V_s$.
+
+The number $s$ in $V_s$ is called the \textbf{heighest weight} or \textbf{spin} of $V_s$.
+
+The lemma tells us that if $V$ is a finite-dimensional $\mathfrak{sl}_2(\C)$-module and $\xi \in V(s)$, $\xi \neq 0$ and $E \xi = 0$ (that is, $\xi$ is a heighest weight vector), then we get an embedding $V_s \hookrightarrow V$ given by $\xi_{s-k}^s \mapsto F^k \xi$.
+
+\begin{thm}
+ The $\mathfrak{sl}_2(\C)$-modules $V_s$ ($s \in  \frac 12 \Z$) are irreducible, pairwise non-isomorphic, and any finite-dimensional irreducible $\mathfrak{sl}_2(\C)$-module is isomorphic to some $V_s$.
+\end{thm}
+\begin{proof}
+The first statement is clear, since all the $V_s$ have different dimension. Now, if $V$ is an irreducible $\mathfrak{sl}_2(\C)$-module, the observation above tells that us we have an embedding $V_s \hookrightarrow V$.
+
+Since $\mathfrak{sl}_2(\C)$ is semisimple, it follows from Weyls theorem ([[ref??]]), that every invariant subspace has a complementary invariant subspace. But $V$ was irreducible, so $V_s=V$.
+\end{proof}
+
+\begin{example}
+  Let $s=0$. Then $\dim V_0 = 1$, and this corresponds to the trivial representation of $SU(2)$. 
+\end{example}
+
+\begin{example}
+ Let $s=\frac 12$. Then $\dim V_{\frac 12} = 2$, and one sees that $H,F$ and $E$ act precisely as the canonicial representation of $\mathfrak{sl}_2(\C)$ on $\C^2$. 
+\end{example}
+
+\begin{example}
+Let $s=1$. Then $\dim V_1 = 3$, and $V_1$ is the adjoint representation of $\mathfrak{sl}_2(\C)$ with heigest weight vector $\xi_1^1 = E$. 
+\end{example}
+
+
 
 %%%%%%%%%%%%%%%%%%
 \newpage
