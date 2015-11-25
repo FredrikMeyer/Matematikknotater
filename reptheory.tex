@@ -184,6 +184,8 @@ We call the $\hat G$ the \textbf{Pontryagin dual} of $G$. It is an abelian group
   If $G$ is non-abelian, there will always exist irreducible representations of dimension $\geq 2$. This follows because the regular representation $G \to \GL \left( \C[G] \right)$ is injective.
 \end{remark}
 
+%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 \section{Lecture 2 - Density theorems}
 
 \subsection{Density theorems}
@@ -314,6 +316,13 @@ Here $\lambda$ is the left regular representation of $G$.
 \end{thm}
 Proof to come later.
 
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 \section{Lecture 3 - More on orthogonality}
 
 Where does the name ``orthogonality relations'' come from? We'll see now.
@@ -413,6 +422,8 @@ Then $(\chi_\lambda,\chi_\pi) = \frac{1}{\lvert G \rvert} \chi_\lambda(e) \cdot 
 
 [[isotypic component ...]]
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Lecture 4 - The Frobenius determinant problem}
 
 Let $G$ be a finite group and $\C[x_g \mid g \in G]$ the algebra on generators indexed by $g \in G$. Then one can form the following determinant:
@@ -618,6 +629,9 @@ $$
 for any $n$. But this implies that the left-hand-side is a finitely-generated $\Z$-module, hence what is inside the brackets is an algebraic integer. But is also a fraction, so it must be an integer.
 \end{proof}
 
+
+%%%%%%%%%%%%%%%
+\newpage
 \section{Lecture 6 - Representation theory of $S_n$}
 
 It is easy to understand conjugacy classes in $S_n$. Every $\sigma \in S_n$ defined a partition of $\{ 1,\ldots n\}$ into orbints of $\sigma$. Let $O_1,\ldots,O_m$ be these orbits. Assume that they are decreasing in size. Let $n_i=\lvert O_i \rvert$. These numbers $n_i$ sum to $n$.
@@ -758,7 +772,8 @@ $$
 
 Prooof later.
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 \section{Induced representations}
 
 Let $G$ be a finite group and $H \subset G$ a subgroup. Assume $(\pi,V)$ is a representation of $H$. We want to construct a representation of $G$ out of this.
@@ -878,6 +893,9 @@ The second equality follows by noting that $\chi(s^{-1}gs)$ is constant on left 
 
 This makes it easy to compute characters of induced representations. In practice one often induces from a normal subgroup containing few conjugacy classes, so that many of the terms in the sum are zero.
 
+
+%%%%%%%%%%%%%%%%%
+\newpage
 \section{The Frobenius subgroup theorem}
 
 In this section we will prove a theorem of group theory, the proof of which relies heavily upon representation theory. To this day, no ``elementary'' proof is known.
@@ -975,6 +993,8 @@ K = \left\{ \begin{pmatrix}
 $$
 \end{example}
 
+%%%%%%%%%%%%%%%%%%%%
+\newpage
 \section{The theorems of Artin and Brauer and fields of definition}
 
 \begin{thm}[Artin]
@@ -1001,10 +1021,13 @@ Let $G$ be a finite group and let $m$ be the exponent of $G$ (the least common m
   
 \end{thm}
 
+
+\newpage
 \section{Mackey's irreducibility criterion}
 
 ...
 
+\newpage
 \section{Induction from normal subgroups}
 
 thu 22 and wed 23.
@@ -1124,7 +1147,7 @@ In fact, for any compact group $G$, the characters of finite-dimensional represe
 \end{proof}
 
 %%%%%%%%%%%
-
+\newpage
 \section{Representation theory of compact Lie groups}
 
 A \textbf{Lie group} is a smooth manifold $G$ equipped with smooth maps $\mu:G \times G \to G$ and $\iota:G \to G$ making $(G,\mu,\iota)$ into a group.
@@ -1258,10 +1281,117 @@ $$
 
 The definition of a Lie algebra over a field $k$ is then the following: a \textbf{Lie algebra} is a vector space $\g$ over $k$ equipped with a bilinear form $[-,-]$ called the \textbf{Lie bracket} that is skew-symmetric and satisfies the \textbf{Jacobi identity}:
 $$
-[X,[Y,Z]] + [Z,[X,Y]] + [Y,[Z,X]] = 0.z
+[X,[Y,Z]] + [Z,[X,Y]] + [Y,[Z,X]] = 0.
 $$
 
+The Jacobi identity can be thought of as a "linearization of associativity". 
+
+We want to compute the commutator more explicitly. Let $\gamma_X$ be a curve on $G$ with $\gamma_X(0)=e$ and $\gamma'_X(0)=X$. Then for any $g \in G$, the curve $g \gamma_X$ satisfies $(g \gamma_X)(0)=g$ and $(g \gamma_X)'(0) = (d_e l_g)(X)$. 
+
+Hence we have 
+$$
+L_X(f)(g) =\restr{ \frac{d}{dt} f(g \gamma_X(t))}{t=0}
+$$
+Then
+\begin{align*}
+(L_XL_Y)(f)(g) &= \restr{\frac{d}{dt} L_Y(f) (g \gamma_X(t))}{t=0} \\
+&= \restr{\frac{\partial^2}{\partial s \partial t} f(g \gamma_X(t) \gamma_Y(s))}{s=t=0}
+\end{align*}
+Hence
+
+\begin{align}
+(d_ef)([X,Y]) &= (L_X L_Y - L_Y L_X)(f)(e) \nonumber \\
+&= \restr{
+\frac{\partial^2}{\partial s \partial t} (f(\gamma_X(t)\gamma_Y(s))-f(\gamma_Y(s)\gamma_X(t)))}{s=t=0} \label{eqLie}
+\end{align}
+
+This is reasonable explicit, but can be made more so by working with coordinates. Choose local coordinates $(x,U)$ around the identity $e \in G$. We can identity the codomain of $x:U \to \R^n$ with $\mathfrak g=T_eG$. We require that $x(e)=0$ and $d_ex = \id$ (we can for example choose $x = \exp^{-1}$). 
+
+Now consider the map $m:V \times V \to \mathfrak g$ given by $(X,Y) \mapsto x(x^{-1}(X)x^{-1}(Y))$. This is well-defined for a small enough neighbourhood $U$ of $0 \in \mathfrak g$. 
+
+Applying equation \eqref{eqLie} to $f = \ell \circ x$ (where $\ell$ is a linear functional on $\g$) we get 
+
+\begin{align*}
+\ell([X,Y]) &= \restr{\frac{\partial^2}{\partial s \partial t} \ell(x(x^{-1}(tX)(x^{-1}(sY))-x(x^{-1}(sY)x^{-1}(tX)))}{t=s=0} \\
+&= \ell \left(\restr{\frac{\partial^2}{\partial s \partial t} (m(tX,sY) - m(sY,tX))}{t=s=0} \right)
+\end{align*}
+
+Therefore 
+
+$$
+[X,Y] = \restr{\frac{\partial^2}{\partial s \partial t} (m(tX,sY) - m(sY,tX))}{t=s=0} 
+$$
+
+This can further be written as follows: as $m(0,0)=0$, $m(X,0)=X$ and $m(0,Y)=Y$, the Taylor expansion of $m$ at $(0,0)$ has the form
+$$
+m(X,Y) = X+Y + B(X,Y) + h.o.t
+$$
+where $B: \g \times \g \to \g$ is a bilinear map [[WHY?????]] 
+
+Hence in this description, we have that
+$$
+[X,Y] = B(X,Y) - B(Y,X).
+$$
+
+\begin{example}
+Let $G= \GL(V)$ for $V$ a finite-dimensional real or complex vector space. Choose coordinates by setting $x(A) = A-I$. Then
+$$
+m(X,Y) = (1+X)(1+Y)-1  = XY+ X+Y.
+$$
+Hence in this case $[X,Y]= XY-YX$. 
+\end{example}
+
+The space $\End V=T_e \GL(V)$ with this bracket is denoted by $\mathfrak {gl}(V)$. 
+
+With this done, here's a theorem:
+
+\begin{thm}
+If $\pi:G \to H$ is a Lie group homomorphism, then $\pi_\ast= d_e \pi: \g \to \mathfrak h$ is a Lie algebra homomorphism. That is, the map $\pi_\ast$ preserves the bracket:
+$$
+\pi_ast([X,Y]) = [\pi_\ast(X), \pi_\ast(Y)].
+$$
+Also, if $G$ is connected, $\pi$ is completely determined by $\pi_\ast$.
+\end{thm}
+\begin{proof}
+Recall first that for all $X \in \g$ we have $\pi(\exp(t X)) = \exp(t \pi_\ast (X))$. First off, we have, as above, that
+$$
+L_X(f)(g) = \restr{ \frac{d}{dt} (f(g \exp(tX)))}{t=0}
+$$
+and one also verifies that
+$$
+L_{\pi_\ast(X)} (f) (\pi(g)) = L_X(f \circ \pi)(g).
+$$
+This follows more or less directly from the definitions. 
+
+[[[[ rest of the proof here ]]]]
+\end{proof}
+
+
+
+%%%%%%%%%%%
+\newpage
 \section{Lie subgroups}
+
+By definition, a \textbf{closed Lie subgroup} of a Lie group $G$ is a subgroup $H$ which is also a closed submanifold. 
+
+Then $H$ is itself a Lie group. We can identify $\mathfrak h = T_e H$ with a subspace of $\g = T_eG$. As the embedding $H \hookrightarrow G$ is a Lie group homomorphism, this gives an identification of $\mathfrak h$ with a Lie subalgebra of $\g$. 
+
+In fact, the condition that $H$ is a submanifold is redundant:
+
+\begin{thm}
+If $G$ is a Lie group and $H$ is a closed subgroup, then $H$ is a closed submanifold.
+\end{thm}
+\begin{proof}
+LONG PROOF HERE
+\end{proof}
+
+Here's a surprising theorem.
+
+\begin{thm}
+If $\pi:G \to H$ is a continous homomorphism of Lie group, then $\pi$ is smooth.
+\end{thm}
+
+In particular, for Lie groups, there is no difference between finite-dimensional representations of locally compact groups and Lie groups. 
 
 
 
