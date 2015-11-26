@@ -1938,7 +1938,7 @@ $$
 since $X$ is real (which gives $X^\star = -X$) and $H^\star=H$.
 \end{proof}
 
-\subsection{An Ad-invariant inner product and the Killing form}
+\subsection{An Ad-invariant inner product}
 
 To proceed, it is convenient to introduce an $\Ad$-invariant scalar product on $\g$. These exist:
 
@@ -1964,7 +1964,7 @@ is an $\Ad$-invariant scalar product on $\g$. To see the other equality, let $\g
 Renaming $X,Y,Z$ appropriately gives the required identity.
 \end{proof}
 
-It will be conventient to require that $( -,- )$ is \emph{negative} definite on $\g$. We can extend this form to $\g_\C$ be complex linearity. It will no longer be definite (it doesn't make sense), but it will still be non-degenerate (easy exercise). 
+It will be convenient to require that $( -,- )$ is \emph{negative} definite on $\g$. We can extend this form to $\g_\C$ be complex linearity. It will no longer be definite (it doesn't make sense), but it will still be non-degenerate (easy exercise). 
 
 \begin{lemma}
 We have
@@ -2062,6 +2062,161 @@ $$
 This is a finite-dimensional $\mathfrak{sl}_2(\C)$-module. But we know from [[previous lecture]] that their spectra are symmetric about the origin, counted with multiplicities. Hence the big term must be isomorphic with the left term, which is one-dimensional, and we must have $c=1$.
 \end{proof}
 
+\begin{remark}
+  The \emph{isomorphism} $\mathfrak h ^\ast \simeq \mathfrak h$ depends upon the choice of invariant form, but the elements $H_\alpha$ ($\alpha \in \Delta$) does not depend upon this choice: $H_\alpha$ is the unique element of the one-dimensional space $[\g_\alpha, g_{-\alpha}] \subseteq \mathfrak h$ such that $\alpha(H_\alpha)=2$. Then $E_\alpha \in \g_\alpha$ is defined up to scalar of modulus $1$, such that $[E_\alpha, E_\alpha^\ast] = H_\alpha$. 
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Root systems}
+
+In this lecture, we study root systems in the abstract.
+
+Let $V$ be a finite-dimensional Euclidean vector space (that is, a real vector space equipped with a scalar product). A finite subset $\Delta \subset V \bs \{ 0 \}$ is a \textbf{root system} if:
+
+\begin{enumerate}
+\item For every $\alpha \in \Delta$, the reflection $s_\alpha$ with respect to the hyperplane $\alpha^\perp$ leaves $\Delta$ invariant.
+
+Note that
+$$
+s_\alpha(v) = v - \frac{2(\alpha,v)}{(\alpha,\alpha)} \alpha.
+$$
+\item The number 
+$$
+\frac{2(\alpha, \beta)}{(\alpha,\alpha)}
+$$
+is an integer for all $\alpha, \beta \in \Z$.
+\newcounter{enumTemp}
+    \setcounter{enumTemp}{\theenumi}
+\end{enumerate}
+A root system is called \textbf{reduced}, if in addition the following condition is satisfied:
+\begin{enumerate}
+\setcounter{enumi}{\theenumTemp}
+\item If $\alpha, c\alpha \in \Delta$, where $ c \in \R^\times$, then we must have $c = \pm 1$.
+\end{enumerate}
+
+\begin{remark}
+ Number 3. is often assumed to be part of the definition of a root system. It is also often assumed that $\Delta$ span the whole space $V$, but for us it will be important not to assume this.
+\end{remark}
+
+\begin{example}
+  Here's an example of a root system. It is denoted by $A_2$ (and is associated with $SU(3)$). It is a regular hexagon.
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}
+\foreach \a in {0,60,...,300} { %\a is the angle variable
+\draw [->] (0,0) -- (\a:2cm);
+}
+\end{tikzpicture}
+\caption{The root system $A_2$.}
+\end{figure}
+
+To check the conditions, we can choose the vertices $\alpha_i$ to be given by $\alpha_i=(\cos \theta_i, \sin \theta_i)$ with $\theta_i = \frac{\pi}{3} i$ for $i=0,\ldots,5 \pi/3$. Then we have that
+$$
+(\cos \theta_i, \sin \theta_i) \cdot (\cos \theta_j, \sin \theta_j)  = \cos(\theta_i - \theta_j) = \pm \frac 12 \text{ or } \pm 1,
+$$
+since $\theta_i-\theta_j$ is a multiple of $\pi/3$. In either case, the second condition is fulfilled. 
+\end{example}
+
+We say that two root systems $(V_1, \Delta_1)$ and $(V_2, \Delta_2)$ are \textbf{isomorphic} if there exists a linear isomorphism $T:V_1 \to V_2$ such that $T(\Delta_1)=\Delta_2$ and $T s_\alpha = s_{T(\alpha)} T$ for all $\alpha in \Delta_1$. Note that we do not require the isomorphism to preserve the scalar product.
+
+\begin{thm}
+ Let $G$ be a compact connected Lie group and $T \subset G$ a maximal torus. Then $(i \mathfrak  t^\ast, \Delta)$ is a reduced root system. Up to isomorphism, this root system does not depend upon the choice of $T$ and the choice of an invariant form on $\g$.
+\end{thm}
+
+\begin{proof}
+LONG PROOF HERE
+\end{proof}
+
+\subsection{Simple roots, Weyl chambers, and the Weyl group}
+
+Let $(V,\Delta)$ be a root system and assume that $\mathrm{Span} \Delta = V$.  We say that a subset $\Pi \subset \Delta$ is a \textbf{system of simple roots} if (1) $\Pi$ is a basis of $V$ and (2) that if $\beta = \sum_{\alpha \in \Pi} c_\alpha \alpha \in \Delta$, then either all $c_\alpha \geq 0$ or all $c \alpha \leq 0$.
+
+Reflections $s_\alpha$ defined by simple roots are called \textbf{simple reflections}.
+
+If we fix a set of simple roots $\Pi$, then the roots $\beta = \sum_\alpha c_\alpha \alpha \in \Delta$ with positive $c_\alpha$ are called \textbf{positive roots}. We denote the set of positive roots by $\Delta_+$. Thus $\Delta = \Delta_+ \cup -\Delta_-$.
+
+It is a fact that every root system possesses systems of simple roots. In order to construct $\Pi$, we introduce the notion of a \textbf{Weyl chamber}: consider the set 
+$$
+V \bs \bigcup_{\alpha \in \Delta} \alpha^\perp.
+$$
+The connected components of this set are called the (open) \emph{Weyl chambers} of $\Delta$. Let $C$ be such a Weyl chamber. 
+
+By definition, $(\alpha, \beta) \neq 0$ for all $\alpha \in \Delta$ and $\beta \in C$. Hence for any $\alpha \in \Delta$ we have either $(\alpha, \beta) > 0$ for all $\beta \in C$ or $(\alpha, \beta) < 0$ for all $\beta \in C$. In the first case, we say that $\alpha$ is \textbf{$C$-positive}. Let $\Pi(C) \subset \Delta$ be the set of $C$-positive roots $\alpha$ such that it is impossible to write $\alpha$ as $\beta+\gamma$ for $C$-positive roots $\beta, \gamma \in \Delta$.
+
+
+\begin{prop}
+  The set $\Pi(C)$ is a system of simple roots. Furthermore, the assignment $C \mapsto \Pi(C)$ is a bijection between Weyl chambers and systems of simple roots.
+\end{prop}
+\begin{proof}
+  ``quite long proof here''
+\end{proof}
+
+Given a Weyl chamber $C$, we say that a hyperplane $L \subset V$ is a \textbf{wall of $C$} if $L \cap \overline C$ has nonempty interior in $L$ (in the subspace topology). 
+
+Here are som facts that were given as an exercise:
+\begin{itemize}
+\item For all $\alpha \in \Delta$, the hyperplane $\alpha^\perp$ is a wall of some Weyl chamber.
+\item For any Weyl chamber $C$, the walls of $C$ are the hyperplanes $\alpha^\perp$ with $\alpha \in \Pi(C)$. 
+\item This implies that any $\alpha \in \Delta$ lies in $\Pi(C)$ for some Weyl chamber $C$.
+\end{itemize}
+
+By definition, the \textbf{Weyl group} $W$ of $(V,\Delta)$ is the subgroup of $O(V)$ generated by the reflections $s_\alpha$ for $\alpha \in \Delta$. 
+
+Since the reflections preserve the root system (which is a finite set), the Weyl group is itself finite. Note also that since the Weyl group act on the set of hyperplanes $\alpha^\perp$ for $\alpha \in \Delta$, it also act on the set $C$ of Weyl chambers. 
+
+\begin{thm}
+ We have:
+ \begin{enumerate}
+ \item $W$ acts freely and transitively on the set of Weyl chambers.
+\item For any Weil chamber $C$, $W$ is generated by the reflections $s_\alpha$ for $\alpha \in \Pi(C)$. 
+ \end{enumerate}
+\end{thm}
+\begin{proof}[Half-proof:]
+ Let $C$ be a Weyl chamber and let $C'$ be an adjacent Weyl chamber, meaning that there exists a hyperplane $L$ such that $L \cap \overline C \cap \overline {C'}$ has nonempty interior in $L$.
+
+Then $L = \alpha^\perp$ for some $\alpha \in \Pi(C)$ and $C' = s_\alpha(C)$. Then $s_\alpha(\Pi(C))=\Pi(C')$. 
+
+It follows that for any $\beta'= s_\alpha(\beta) \in \Pi(C')$ (with $\beta \in \Pi(C)$), we have $$s_{\beta'} = s_{s_\alpha(\beta)} = s_\alpha s_\beta s_\alpha,$$
+since for any orthogonal transformation we have $s_{T\alpha} = Ts_\alpha T^{-1}$. 
+
+Thus reflections $s_{\beta'}$ for $\beta' \in \Pi(C')$ lie in the group generated by $s_\alpha$, $\alpha \in \Pi(C)$. 
+
+Now, for any Weyl chamber $C''$ we can find a sequence of adjacent Weyl chambers $C=C_0, \ldots,C_n=C''$. Using the above argument and induction on $n$, we conclude that there exists $w \in W$ such that $w(C)=C''$ and the reflections $s_{\beta''}$ for $\beta'' \in \Pi(C'')$ lie in the group generated by $s_\alpha$ for $\alpha \in \Pi(C)$. 
+
+As any root in $\Delta$ lies in some $\Pi(C'')$, we see that $W$ is generated by $s_\alpha$, $\alpha \in \Delta$.
+
+This proves that the action of $W$ on the set of Weyl chambers is transitive. We will not prove nor need the fact that the action is free. For root spaces coming from compact groups, this will follow from the proof of the next result.
+\end{proof}
+
+\begin{example}
+ Again consider the root system $A_2$. One computes that the Weyl chambers are the interiors of the rays generated by $\left(\cos( \frac{\pi}{6}+\frac{\pi}{3}k), \sin( \frac{\pi}{6} + \frac{\pi}3 k)\right)$ and $\left(\cos( \frac{\pi}{6}+\frac{\pi}{3}(k+1)), \sin( \frac{\pi}{6} + \frac{\pi}3 (k+1))\right)$ for $k=0,\ldots,5$.
+
+Let $C$ be the Weyl chamber generated by the first two rays. Then one computes that there are three $C$-positive roots: $\alpha_1,\alpha_2,\alpha_3$ (the first one of angle zero, next of angle $60^\circ$, and last of angle $120^\circ$). But $\alpha_2=\alpha_1+\alpha_3$, so we discard it. Thus the $C$-simple roots of $A_2$ are $\alpha_1$ and $\alpha_2$.
+
+We see that the Weyl group is the group $D_6$ of symmetries preserving the hexagon.
+\end{example}
+
+\subsection{Root systems of compact Lie groups}
+
+Assume now that $G$ is a compact connected Lie group and $T \subset G$ a maximal torus. Consider the corresponding root system $\Delta$ on $V=i \mathfrak t ^\ast \subset \mathfrak h^\ast$. 
+
+Let $V_0 = Span_\R \Delta$. Then for any $\alpha \in \Delta$, the reflection $s_\alpha$ act trivially on $V_0^\perp$. It follows that the group generated by $s_\alpha$ ($\alpha \in \Delta$) can be identified with the Weyl group $W$ generated by $\restr{s_\alpha}{V_0}$.
+
+We have a homomorphism
+$$
+r \colon N(T) / T \to O(V)
+$$
+defined by $r(gT)(\alpha) \alpha \circ (\Ad g^{-1})$.
+
+\begin{thm}
+ The homomorphism $r$ defines an isomorphism 
+$$
+N(T) / T \simeq W,
+$$
+so that the two definitions of the Weyl group are equivalent.
+\end{thm}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
