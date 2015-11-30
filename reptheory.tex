@@ -1170,8 +1170,8 @@ Let $M$ be a smooth manifold and let $p \in M$. The tangent space $T_pM$ can be 
 $$
 (x \circ \gamma_1)'(0) = (x \circ \gamma_2)'(0)
 $$
-for some/any coordinate system $(x,U)$ around $p$. We denote the equivalence class by $\gamma'(0)$.
-\item There is a more algebraic defintion: the space of derivations of $C^\infty (M)$ at $p$. This is by definition a linear map $L:C^\infty(M) \to \C$ such that $L(fg) = f(p)L(g) + g(p)L(f)$.
+for some/any coordinate system $(x,U)$ around $p$. We denote the equivalence class by $\gamma'(0)$, or
+\item the more algebraic definition: the space of derivations of $C^\infty (M)$ at $p$. This is by definition a linear map $L:C^\infty(M) \to \C$ such that $L(fg) = f(p)L(g) + g(p)L(f)$.
 \end{itemize}
 The relation between these two definitions is that the derivation $L$ defined by $\gamma'(0)$ is
 $$
@@ -1348,7 +1348,7 @@ With this done, here's a theorem:
 \begin{thm}
 If $\pi:G \to H$ is a Lie group homomorphism, then $\pi_\ast= d_e \pi: \g \to \mathfrak h$ is a Lie algebra homomorphism. That is, the map $\pi_\ast$ preserves the bracket:
 $$
-\pi_ast([X,Y]) = [\pi_\ast(X), \pi_\ast(Y)].
+\pi_\ast([X,Y]) = [\pi_\ast(X), \pi_\ast(Y)].
 $$
 Also, if $G$ is connected, $\pi$ is completely determined by $\pi_\ast$.
 \end{thm}
@@ -1379,13 +1379,69 @@ Then $H$ is itself a Lie group. We can identify $\mathfrak h = T_e H$ with a sub
 In fact, the condition that $H$ is a submanifold is redundant:
 
 \begin{thm}
+\label{thmclosedlie}
 If $G$ is a Lie group and $H$ is a closed subgroup, then $H$ is a closed submanifold.
 \end{thm}
 \begin{proof}
-LONG PROOF HERE
+This will be a bit tricky.
+
+Consider the subspace $V \subset \g$ consisting of $X \in \g$ such that there exist $X_n \in \g$ and $\alpha_n \in \R$ such that $\exp(X_n) \in H$ and $\alpha_n X_n \to X$ as $ n \to \infty$ and also $\lvert \alpha_n \rvert \to \infty$ as $n \to \infty$.
+
+Note that $V$ is non-empty since $0 \in V$.
+
+\textbf{Claim 1:} If $X \in V$, then $\exp(tX) \in H$ for all $t \in \R$.
+
+Take $t \in \R$. As $\lvert \alpha_n \rvert \to \infty$, we can find $m_n \in \Z$ such that 
+$$
+\frac{m_n}{\alpha_n} \to t
+$$
+as $t \to \infty$ (take for example $m_n=[\alpha_n t ]$). Then
+\begin{align*}
+H \ni   \exp(X_n)^{m_n} &= \exp(m_n X_n) \\
+&= \exp(\frac{m_n}{\alpha_n} \alpha_n X_n) \\
+&\to \exp(t X). 
+\end{align*}
+This implies that $\exp(tX) \in H$, since $H$ is closed.
+
+\textbf{Claim 2:} The set $V \subset \g$ is a sub-vector space of $\g$.
+
+By Claim 1, $V$ is closed under multiplication by scalars. Therefore, we have to show that if $X,Y \in V$, then $X+Y \in V$. 
+
+Consider the map $\gamma(t)=\exp(tX)\exp(tY)$. Then $\gamma'(0)=X+Y$. For small $\lvert t \rvert$, we can write $\gamma(t)=\exp(f(t))$, where $f$ is a smooth $\g$-valued function, since $\exp$ is a local diffeomorphism at $e$. 
+
+Then $f'(0) = X+Y$, so $\frac{f(t)}{t} \to X+Y$ as $t \to 0$. In particular, $nf(\frac{1}{n}) \to X+Y$ as $n \to \infty$. By definition of $\gamma$, we have $\exp(f(\frac 1 n)) \in H$. Now by definition of $V$, letting $\alpha_n=n$ and $X_n = f(\frac 1n)$, we conclude that $X+Y \in V$. 
+
+\textbf{Claim 3:} $H$ is a closed submanifold with $T_e H = V$. 
+
+Let $V'$ be a complementary subspace to $V$ in $\g$, i.e. a subspace such that $\g = V \oplus V'$. 
+
+Consider the map $\varphi: V \times V' \to G$ defined by
+$$
+\varphi(X,Y) = \exp(X) \exp(Y).
+$$
+Then $d_{(0,0)}\varphi = \id_\g$, so we can find a neighbourhood $\Omega$ of $0$ in $V$ and $\Omega'$ of $0 \in V'$ such that $\varphi$ is a diffeomorphism of $\Omega \times \Omega'$ onto $\varphi(\Omega \times \Omega')$. 
+
+We will show that for $n$ large enough, we have the equality
+$$
+\varphi \left(\Omega \times \frac 1n \Omega' \right) \cap H  = \exp(\Omega \times \{0\} ).
+$$
+
+Suppose this is not true. Then we can find $(X_n,X_n') \in \Omega \times \Omega'$ such that $\exp(X_n) \exp(\frac{X_n'}{n}) \in H$ and $X_n' \neq 0$. 
+
+Take any limit point $X'$ of the sequence $\frac{X_n'}{\| X_n \| }$. Then $X' \neq 0$ and $X' \in V'$ and $\exp(\frac{X_n'}{n}) \in H$ (since the left term is in $H$). Then also
+$$
+\frac{n}{\| X_n' \|} \cdot \frac{X_n'}{n} \to X',
+$$
+Then by definition of $V$, we must have $X' \in V$. This is a contradiction, since $V'$ is closed. 
+
+Hence for some $n$, we have $\varphi \left (\Omega \times \frac 1n \Omega' \right) \cap H = \exp(\Omega \times \{0\})$. Thus, letting $U= \varphi \left(\Omega \times \frac 1n \Omega'\right)$, we can take as coordinate system $x=\varphi^{-1}$, such that
+$$
+U \cap H = \{ g \in H \, \mid \, \text{ the coordinates $x(g)$ in $V'$ are zero } \}.
+$$
+Thus $H$ satisfies the definition of a closed submanifold near the identity $e$. For arbaitry $h \in H$, we can take the neigbourhood $hU$ of $h \in G$ and coordinates $x_h(-) = x(h^{-1}-)$.
 \end{proof}
 
-Here's a surprising theorem.
+Here's a surprising consequence:
 
 \begin{thm}
 If $\pi:G \to H$ is a continous homomorphism of Lie group, then $\pi$ is smooth.
@@ -1393,6 +1449,53 @@ If $\pi:G \to H$ is a continous homomorphism of Lie group, then $\pi$ is smooth.
 
 In particular, for Lie groups, there is no difference between finite-dimensional representations of locally compact groups and Lie groups. 
 
+\begin{proof}
+  Consider the graph $\Gamma$ of $\pi$:
+$$
+\gamma = \{ (g,\pi(g) ) \, | \, g \in G \} \subset G \times H.
+$$
+Since $\pi$ is continous, $\Gamma$ is a closed subgroup of the product. Hence by the theorem, $\Gamma$ is a also a closed submanifold.
+
+Consider the projection $\pi:G \times H \to G$, and let $q = \restr{p_1}{\Gamma}$. Then $q$ is a smooth isomorphism between $\Gamma$ and $G$. 
+
+Since $q$ is a Lie group homomorphism, it has constant rank (proof: for all $x \in \Gamma$, we have $q=l_{q(x)^{-1}} \circ q \circ l_x$). 
+
+Now, by the constant rank theorem, a constant rank bijection is a diffeomorphism. Thus $q^{-1}$ is smooth.
+
+But $\pi$ is the composition of $q^{-1}$ with $p_2:G \times H \to H$, so $\pi$ is smooth.
+\end{proof}
+
+\begin{prop}
+  If $\pi:G \to H$ is a Lie group homomorphism, then $\ker \pi$ is a closed Lie subgroup of $G$ with Lie algebra $\ker( \pi_\ast: \g \to \mathfrak h)$.
+\end{prop}
+
+\begin{proof}
+ Clearly $ \ker \pi$ is closed, hence it is a closed subgroup. Hence it is a closed Lie subgroup by Theorem \ref{thmclosedlie}. So we need to show the second statement (let $\catname{LieAlg}(G)$ for the moment denote the Lie algebra of a Lie group):
+ \begin{align*}
+ X \in \catname{LieAlg}(\ker \pi) &\Leftrightarrow \exp(tX) \in \ker \pi \, \forall t \\
+&\Leftrightarrow \pi(\exp tX) = e \, \forall t \\
+&\Leftrightarrow \exp(t \pi_\ast X) = e \, \forall t \\
+&\Leftrightarrow \pi_\ast(X) = 0,
+ \end{align*}
+so $X \in \ker \pi_\ast$.
+\end{proof}
+
+\begin{prop}
+  Let $\pi:G \to \GL(V)$ be a representation of a Lie group $G$ on a finite-dimensional real or complex vector space $V$. Take any $v \in V$. Then
+$$
+H = \{ g \in G \, | \, \pi(g) v = v \}
+$$
+is a closed Lie subgroup of $G$ with Lie algebra
+$$
+\mathfrak h = \{ X \in \g \, | \, \pi_\ast(X) v = 0 \}.
+$$
+\end{prop}
+
+\begin{proof}
+ That $H$ is closed Lie subgroup is immediate.
+
+Suppose $X \in \mathfrak h$. Then $\exp(t X) \in H$ for all $t$. But this means that $\pi(\exp(tX))v=\exp(t\pi_\ast( X))v = v$ for all $t$. But differentiating both sides give $\pi_\ast(X)v = 0$. 
+\end{proof}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1411,7 +1514,7 @@ The Lie algebra of $\GL(V)$, denoted by $\mathfrak {gl}(V)$ is identified with $
 
 \subsection{The special linear group}
 
-Again, let $V$ be a real or a complex vector space. The \textbf{special linear group} $\SL(V)$ is by definition the subset of $\GL(V)$ consisting of operators of determinant $1$. Since this is a closed condition, it follows from [[THEOREM]] that $\SL(V)$ is actually a closed Lie subgroup of $\GL(V)$. Note that $\dim \SL(V) = n^2-1$ if $V$ is a real vector space.
+Again, let $V$ be a real or a complex vector space. The \textbf{special linear group} $\SL(V)$ is by definition the subset of $\GL(V)$ consisting of operators of determinant $1$. Since this is a closed condition, it follows from Theorem \ref{thmclosedlie} that $\SL(V)$ is actually a closed Lie subgroup of $\GL(V)$. Note that $\dim \SL(V) = n^2-1$ if $V$ is a real vector space.
 
 I claim that the Lie algebra of $\SL(V)$ is the space of matrices in $\End(V)$ of trace zero. To prove this, let $\{ A_t \}$ be an arc in $\SL(V)$ such that $A_0 = I_n$ and $\restr{\frac{d}{dt}}{t=0} A_t =X$. Then $A_t e_1 \wedge \ldots  \wedge A_t e_n = e_1 \wedge \ldots \wedge e_n$ for all $t$ since the determinant of $A_t$ is $1$ for all $t$. Thus, taking derivatives of both sides, we get
 
@@ -1572,15 +1675,240 @@ $$
 $$
 where $J$ is as above. It can be shown that $Sp(n)$ is the subgroup of $\GL_n(\mathbb H)$ preserving $\sum_{i=1}^n v_i \overline{w_i}$. 
 
+%&&&&&%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Simply connected Lie groups}
+
+There is a close correspondence between the category of Lie algebras and the category of Lie groups. In particular, it is true that any Lie subalgebra correspond to a Lie subgroup with that Lie algebra.
+
+To show this, we need to remind ourselves of some definitions from manifold theory, however.
+
+\subsection{Some facts about distributions}
+
+Let $M$ be a smooth manifold and let $D \subset TM$ be a subbundle of the tangent bundle of $M$. Then an immersed submanifold $N \subset M$ is called an \textbf{integral manifold} if $T_pN = D_p$ for all $p \in N$.
+
+Here's the so-called \emph{Frobenius integrability condition}:
+
+\begin{thm}
+Suppose $D$ is integrable. Then for all $p_0 \in M$ , there exists a coordinate chart $(x,U)$ around $p_0$ such that
+$$
+D_p = \Span \left\{ \restr{\frac{\partial}{\partial x^1}}{p}, \ldots, \restr{\frac{\partial}{\partial x^k}}{p} \right\} 
+$$
+for all $p \in U$.
+\end{thm}
+The proof is surprisingly short, and can be found in for example Spivak's book \cite{spivak_manifolds}. 
+
+This implies that there locally exists a unique integral manifold passing through a given point:
+$$
+N = \{ p \in U \, | \, x^{j}(p) = x^{j}(p_0) \text{ for } j=k+1,\ldots,n \}.
+$$
+Uniqueness means that if $N'$ is another integral manifold passing through $p$, then $N \cap N'$ is open in $N$ and $N'$. 
+
+This implies that every point lies in a unique maximal connected integral manifoold, called \textbf{a leaf of the foliation defined by $D$}.
+
+\subsection{Back to Lie subgroups}
+
+\begin{thm}
+Let $G$ be a Lie group with Lie algebra $\g$. Let $\mathfrak h \subset \g$ be a Lie subalgebra.
+
+Then there exists a unique Lie subgroup $H \subset G$ with Lie algebra $\mathfrak h$.
+\end{thm}
+\begin{proof}
+  Consider the distribution $D$ on $G$ defined by $D_g = (d_el_g)(\mathfrak h)$. As $\mathfrak h$ is a Lie subalgebra of $\g$, it is integrable.
+
+Since left translations map $D$ into itself, they map leaves into leaves of the corresponding foliation. 
+
+It follows that if $H$ is the leaf passing through $e$, then $H=hH$ for all $h \in H$. Therefore $H \subset G$ is a subgroup. It is a Lie subgroup because it is locally closed.
+
+Now, if $K \subset G$ is another connected Lie subgroup with Lie algebra $\mathfrak h$, then $K$ would be an integral manifold of $D$ passing through $e$. Thus $K$ is an open subgroup. But $K$ is closed as well, since
+$$
+K = H \bs \left(\bigcup_{h \not \ in K} h K\right).
+$$
+As $H$ is connected, $H \subset K$.
+\end{proof}
+
+\begin{prop}
+  Assume $\pi:G \to H$ is a Lie group homomorphism with $G$ connected. Then $\pi$ is completely determined by $\pi_\ast: \g \to \mathfrak h$. 
+\end{prop}
+
+\begin{proof}
+  Consider the subgroup $K$ generated by $\exp \g \subset G$. Since $\exp \g$ contains an open neighbourhood of $e$, $K$ is an open subgroup of $G$. But this implies that $K$ is closed, hence $K=G$.
+
+Thus, the statement is proved since  $\pi(\exp X) = \exp \pi_\ast X$, and every element of $G$ is a product of terms looking like $\exp X$.
+\end{proof}
+
+\begin{remark}
+  This proves that the functor $\catname{LieAlg}:\catname{LieGrps} \to \catname{LieAlgs}$ sending a Lie group to its Lie algebra is faithful.
+
+It is \emph{not} full, however. Take for example $G=S^1$ and $H=\R$. Then $\g = \mathfrak h = \R$, so $\Hom_{\catname{LieAlg}}(\g,\mathfrak h)=\R$, but $\Hom_{\catname{LieGrp}}(S^1,\R) = \{ 0\}$\footnote{Proof: Any such homomorphism must have compact image. But the image must also be discrete, since otherwise it would generate $\R$. Hence the image is a finite subgroup of $\R$. But the only finite subgroup of $\R$ is $\{0 \}$.}.
+\end{remark}
+
+Recall that a map $p:N \to M$ is a \textbf{covering map} if $p$ is continous and surjective and a local homeomorphism such that each point $p \in M$ has a neigbourhood $U$ such that the pre-image decomposes as
+$$
+p^{-1}(U) = \bigsqcup_{i \in I} U_i
+$$
+with $\restr{p}{U_i}:U_i \to U$ a homeomorphism.
+
+
+\begin{example}
+\label{excovering}
+ Suppose that $\pi:G \to H$ is a Lie group homomorphism with $H$ connected, such that $\pi_\ast: \g \to \mathfrak h$ is an isomorphism. Then $\pi$ is a covering map:
+
+We can find $U \supset e \in G$ such that $\restr{\pi}{U}:U \to \pi(U)$ is a diffeomorphism. Choose a neighbourhood $V$ of $e \in G$ such that $VV^{-1} \subset U$. 
+
+Note that as $\pi$ is open and $H$ is connected, $\pi$ is surjective. Then for all $g \in G$, we have
+$$
+\pi^{-1}(\pi(g) \pi(V)) = \bigsqcup_{h \in \ker \pi} hg V.
+$$
+We have to check that $h_1g \cap h_2gV = \emptyset$ for $h_1,h_2 \in \ker \pi$ and $h_1 \neq h_2$. 
+
+Suppose $h_1gv_1 = h_2gv_2$ for some $v_1,v_2 \in V$. This is equivalent to $g^{-1}h_2^{-1}h_1g = v_2v_1^{-1} \in VV^{-1} \subset U$. The left hand side is in the kernel of $\pi$, but $\pi$ is a homeomorhpism on $U \ni e$, hence $g^{-1}h_2^{-1}h_1 g = e$, hence $h_1= h_2$. 
+\end{example}
+
+If a topological space is nice enough (for example a connected manifold), then there exists a unique universal covering space $\pi:\widetilde M \to M$ such that if $p:P \to N$ is any covering space and $f:M \to N$ is a continous map, then there exists a unique map $\widetilde f: \widetilde M \to P$ such that $p \circ \widetilde f = f \circ \pi$.
+
+Furthermore, a covering map $\lambda: Q \to M$ is universal if and only if $Q$ is simply connected. 
+
+We can define $\widetilde M$ as the set of equivalence classes $[\gamma]$ of curves $\gamma:[0,1] \to M$ such that $\gamma_1 \sim \gamma_2$  if $\gamma_1(1)=\gamma_2(1)$ and $\gamma_1$ and $\gamma_2$ are homotopic within the class of  curves ending at $\gamma_1(1)=\gamma_2(1)$. This set has a natural topology. See e.g. Munkres \cite{hatcher_algtop}.
+
+\begin{prop}
+Let $G$ be a connected Lie group and $\pi: \widetilde G \to G$ a universal covering space. Then $\widetilde G$ has a natural structure of a Lie group so that $\pi$ becomes a Lie group homomorphism.
+\end{prop}
+
+\begin{proof}
+  Suppose $\overline e \in \pi^{-1}(e)$. Then using that $\pi \times \pi: \widetilde G \times \widetilde G \to G \times G$ is a universal cover, there exist a unique lift of the product map $m: G \times G \to G$ to a map $\widetilde m: \widetilde G \times \widetilde G \to \widetilde G$ such that $\widetilde m (\widetilde e, \widetilde e) = \widetilde e$.
+
+Then $\widetilde G$ is a Lie group with inverse given by the lift of the inverse such that $\widetilde e \mapsto \widetilde e$.
+\end{proof}
+
+\begin{thm}
+  Let $G,H$ be Lie groups with $G$ simply connected. Then any Lie algebra homomorphism $\rho:\g \to \mathfrak h$ integrates to a Lie group homomorphism $\pi:G \to H$.
+\end{thm}
+
+\begin{proof}
+  Consider the Lie subalgebra
+$$
+\pp = \{ (X,\rho(X)) \, | \, X \in \g \} \subset \g \oplus \mathfrak h.
+$$
+Let $P \subset G \times H$ be the connected Lie subgroup with Lie algebra $\pp$. Consider the projection $p_1: G \times H \to G$ and let $q = \restr{p_1}{P}$. Then $q_\ast : \pp \to \g$ is an isomorphism. 
+
+Hence $q:P \to G$ is a covering map. As $G$ is already simplyconnected, $q$ must be an isomorphism. Then we can define $\pi$ as the composition of $q^{-1}:G \to P \subset G \times H$ with the projection $p_2:G \times H \to H$.
+\end{proof}
+
+\begin{corr}
+ Two simply connected Lie groups are isomorphic if and only if $\g \simeq \mathfrak h$.
+\end{corr}
+
+Here is a theorem we will only state, known as \textbf{``Lie's third fundamental theorem''}, which is due to Cartan.
+
+\begin{thm}
+For any finite-dimensional real Lie algebra $\g$, there exists a simply connected Lie group $G$ with Lie algebra $\g$.
+\end{thm}
+
+Thus the category of simply connected Lie groups is equivalent to the category of Lie algebras.
+
+One possible proof is based on \textbf{Ado's theorem}, which we also will not prove: 
+
+\begin{thm}
+Any finite-dimensional real Lie algebra is isomorphic to a Lie subalgebra of $\mathfrak{gl}_n(\R)$.
+\end{thm}
+
+Given this, to prove Lie's theorem, we can take $\mathfrak g \subset \mathfrak{gl}_n(\R)$. Then let $G$ be the Lie subgroup of $\GL_n(\R)$ corresponding to $\g$, and then pass to the universal covering.
+
+\begin{remark}
+  It is not true that every Lie group can be embedded in $\GL_n(\R)$. Here's an example: let $G$ be the universal cover of $\SL_2(\R)$. 
+
+One can show that $\SL_2(\R)$ is a fiber bundle with fiber $\R$ over $\R^2 \bs \{ 0\}$, hence its fundamental group is $\Z$.
+
+Complexifying, we get the corresponding group $\SL_2(\C)$, which in the same manner can be shown to have trivial fundamental group.
+
+Now suppose we have a representation $p:G \to \GL_n(\R)$ for some $n$. By inclusion, we have a representation $G \stackrel{p}\to \GL_n(\R) \to \GL_n(\C)$. 
+
+This is the same map as the composition
+$$
+G \stackrel{\pi}{\to} \SL_2(\R) \to \SL_2(\C) \to \GL_n(\C)
+$$
+where $\pi$ is the covering space map. Since the map on tangent spaces is the same. But $\pi$ is not injective, hence $p$ cannot be injective.
+\end{remark}
+
+If $G$ is connected but not simply-connected, then $G \simeq \widetilde G / \Gamma$ for some discret normal subgroup $\Gamma \subset \widetilde G$. It is easy to show that any such subgroup must be contained in the center of $G$.
+
+\begin{example}
+  The groups $SU(n), Sp(n)$ are simply connected.
+
+The group $SO(n;\R)$ is connected, but not simply connected. We have $\pi_1(SO(2)) = \pi_1(S^1) = \Z$. For $n > 2$, we have $\pi_1(SO(n)) = \Z/2$. The universal covers are the ``spin groups''.
+
+We will prove (almost) this later.
+\end{example}
+
 %%%%%%%%%%%%%%%%%%
 \newpage
-\section{Lie subgroups}
-
-A \textbf{Lie subgroup} of a Lie group $G$ is a subgroup $H \subset G$ admitting the structure of a Lie group, making the embedding $H \to G$ smooth. 
-
 \section{The adjoint representation}
 
-Let $G$ be a Lie group. For any $g \in G$ consider the automorphism $h \mapsto ghg^{-1}$ of $G$. Thus we have a map $G \to \Aut(G)$. Its differential at the identity is denoted by $\Ad$, and we get a homomorphism $\Ad:G \to \GL(\mathfrak g)$, called the \textbf{adjoint representation}.
+Let $G$ be a Lie group. For any $g \in G$ consider the automorphism $h \mapsto ghg^{-1}$ of $G$. Thus we have a map $G \to \Aut(G)$. Its differential at the identity is denoted by $\Ad$, and we get a homomorphism ${\Ad:G \to \GL(\mathfrak g)}$, called the \textbf{adjoint representation}.
+
+The differential of $\Ad$ at $e \in G$ gives a Lie algebra homomorphism
+$$
+\ad:\g \to \mathfrak{gl}(\g),
+$$
+also called the \textbf{adjoint representation}. 
+
+We can compute this map more explicitly. Let $X,Y \in \g$. Then by definition
+$$
+(\ad X)(Y) = \restr{\frac{d}{dt}( \Ad \exp(tX))(Y)}{t=0}.
+$$
+Let $f \in C^\infty(G)$. Then
+\begin{align*}
+  (d_ef)(\ad(X)(Y)) &= \restr{\frac{d}{dt} (d_ef)( \Ad \exp(tX)(Y))}{t=0} \\
+&= \restr{\frac{\partial^2}{\partial t \partial s}f(\exp(tX)\exp(sY)\exp(-tX) )}{s=t=0} \\
+&= \restr{\frac{\partial^2}{\partial s \partial t} f(\exp(tX)\exp(sY))-f(\exp (sY)\exp(tX))}{s=t=0} \\
+&= (d_ef)([X,Y]).
+\end{align*}
+
+Therefore, $(ad X)(Y) = [X,Y]$.
+
+Of course  the adjoint map $\ad: \g \to \mathfrak{gl}(\g)$ defined by $X \cdot Y = [X,Y]$ is well-defined for any Lie algebra $\g$. Note that the identity 
+$$
+\ad [X,Y] = [\ad (X), \ad(Y)] = \ad(X) \ad (Y) - \ad(Y) \ad(X)
+$$
+is exactly the Jacobi identity.
+
+The kernel of $\ad$ is exactly the \textbf{center of $\g$}:
+$$
+\mathfrak{z}(\g) = \{ X \in \g \, | \, [X,Y] = 0 \, \forall \, Y \in \g \}.
+$$
+
+\begin{prop}
+\label{propcommute}
+  Let $G$ be a Lie group and let $X,Y \in \g$. Then the following two conditions are equivalent:
+  \begin{enumerate}
+  \item $[X,Y]=0$.
+\item $\exp(tX)\exp(sY) = \exp(sY) \exp(tX)$ for all $s,t \in \R$.
+  \end{enumerate}
+
+Furthermore, if these conditions are satisfied, then $\exp(X+Y) = \exp(X)\exp(Y)$.
+\end{prop}
+
+\begin{proof}
+This is Lemma 13 on page 157 in \cite{spivak_manifolds}.
+\end{proof}
+
+\begin{prop}
+\label{propabelian}
+  Any connected abelian Lie group $G$ is isomorphic to $\R^k \times \mathbb T^l$ for some natural numbers $k,l \geq 0$.
+\end{prop}
+
+\begin{proof}
+ Consider $\g$ as a Lie group under addition. Then $\exp:\g \to G$ is a Lie group homomorphism by Proposition \ref{propcommute}.
+
+By Example \ref{excovering}, $\exp$ is a covering map. Let $\Gamma$ be its kernel, which must a discrete subgroup of $\g$. 
+
+But for any discrete subgroup $\Gamma$ of $\g \simeq \R^n$, there is a basis $\{e_1,\ldots,e_k \}$ such that $\Gamma$ is equal to $\Z e_1 \oplus \ldots \oplus \Z e_k$. Hence
+$$
+\g / \Gamma \simeq \R^n/(\Z e_1 \oplus \ldots \oplus \Z e_k) \simeq \mathbb T^k \times \R^{n-k}.
+$$
+\end{proof}
+
 
 
 %%%%%%%%%%%%%%%%%%%%
@@ -1795,9 +2123,18 @@ Let $s=1$. Then $\dim V_1 = 3$, and $V_1$ is the adjoint representation of $\mat
 \newpage
 \section{Tori}
 
-%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\section{Cartan's theorem on maximal tori}
+A \textbf{torus} is a Lie group isomorphic to $\mathbb T^n = {(S^1)}^n$. 
+
+Recall that by Proposition \ref{propabelian}, any compact connected abelian Lie group is a torus.
+
+\begin{prop}
+ Let $G$ be a compact connected Lie group. Then there exists a maximal torus in $G$. Furthermore, we have a one to one correspondence between the maximal tori in $G$ and the maximal abelian Lie subalgebras of $\g$.
+\end{prop}
+\begin{proof}
+  
+\end{proof}
+
+\subsection{Cartan's theorem on maximal tori}
 
 
 %%%%%%%%%%%%%%%%%%%%
@@ -2150,7 +2487,60 @@ By definition, $(\alpha, \beta) \neq 0$ for all $\alpha \in \Delta$ and $\beta \
   The set $\Pi(C)$ is a system of simple roots. Furthermore, the assignment $C \mapsto \Pi(C)$ is a bijection between Weyl chambers and systems of simple roots.
 \end{prop}
 \begin{proof}
-  ``quite long proof here''
+By definition of $\Pi(C)$, any $C$-positive root $\beta$ has the form $\sum_{\alpha \in \Pi(C)} c_\alpha \alpha$ for $c_\alpha \in \Z_+$ (why: because $\Pi(C)$ is exactly the set of $C$-positives that are such sums with only one term).
+
+It follows that $\Span \Pi(C)=V$, since any cone of the same dimension as $V$ span $V$.
+
+Therefore we have to show that $\Pi(C)$ is a basis. Observe first that if $\alpha,\beta \in \Pi(C)$, then $\alpha-\beta \not \in \Delta$. Indeed, otherwise, either $\alpha-\beta$ og $\beta-\alpha$ is $C$-positive. But then $\alpha=\beta +(\alpha-\beta)$ or $\beta=\alpha+(\beta-\alpha)$ gives a contradiction to the definition of $\Pi(C)$. 
+
+Observe next that if $\alpha,\beta \in \Pi(C)$, $\alpha \neq \beta$, then $(\alpha,\beta) \leq 0$. Indeed, assume that $(\alpha,\beta) > 0$. We may assume that $\| \alpha \| \geq \|\beta \|$. Then
+$$
+\frac{2 (\alpha,\beta)}{(\alpha,\alpha)} < \frac{2 \| \alpha \| \|\beta \|}{\| \alpha \|^2} = \frac{2 \| \beta \|}{\| \alpha \|} \leq 2.
+$$
+But the left term is a positive integer, hence it must be equal to $1$.  But then $s_\alpha(\beta) = \beta - \alpha \in \Delta$, contradicting the previous observation.
+
+Assume now that $\sum_{\alpha \in \Pi(C)} c_\alpha \alpha = 0$ for some $c_\alpha \in \R$. Consider the sets
+\begin{align*}
+  A = \{ \alpha \in \Pi(C) \mid c_\alpha \geq 0 \}, &&  B = \Pi(C) \bs A,
+\end{align*}
+and let $v = \sum_{\alpha \in A} c_\alpha \alpha = \sum_{\alpha \in B} (-c_\alpha) \alpha$. Then
+$$
+(v,v) = \sum_{\alpha \in A, \beta \in B} c_\alpha (-c_\beta) \cdot (\alpha,\beta) \leq 0,
+$$
+Since the coefficients are positive by definition of $A$ and $B$, and $(\alpha,\beta) \leq 0$ by the above observation. Hence $v=0$. 
+
+Now take any $\beta \in C$. Then
+$$
+0 = (v,\beta) = \sum_{\alpha \in A} c_\alpha (\alpha, \beta) = \sum_{\alpha \in B} (-c_\alpha)(\alpha,\beta)
+$$
+The coefficients in the last equality are strictly negative and the dot products are strictly positive (since the $\alpha$s are $C$-positive). Hence we must conclude that $B = \emptyset$. Likewise we conclude that $c_\alpha=0$ for all $\alpha \in A$. Thus $\Pi(C)$ is a basis, and $\Pi(C)$ is a set of simple roots.
+
+Now we have to show that the assignment is a bijection.
+
+Note that for any Weyl chamber $C$, we have
+\begin{align*}
+  C &= \{ \beta \in V \, \mid \,  (\alpha,\beta) > 0 \text{ for any $C$-positive root } \alpha \} \\
+&= \{ \beta \in V \, \mid \, (\alpha,\beta) > 0 \quad  \forall \quad \alpha \in \Pi(C) \}.
+\end{align*}
+Thus we see that we can recover $C$ from $\Pi(C)$, so $C \mapsto \Pi(C)$ is injective.
+
+Assume now that $\Pi$ is a system of simple roots. As $\Pi$ is a basis, there exists a $\beta_0 \in V$ such that $(\alpha,\beta_0)=1$ for all $\alpha \in \Pi$. Then $(\alpha,\beta_0) \neq 0$ for all $\alpha \in \Delta$, hence $\beta_0$ lies in a uniquely defined Weyl chamber $C$.
+
+Then we claim that $\Pi \subset \Pi(C)$. Indeed, if $\alpha \in \Pi$ is equal to $\alpha=\beta+\gamma$ for some $C$-positive $\beta,\gamma$, then $\beta$ and $\gamma$ are positive with respect to $\Pi$, as $(\beta,\beta_0)  >0$ and $(\gamma, \beta_0) > 0$. 
+
+As $\beta, \gamma$ cannot be proportional to $\alpha$ ($\Delta$ is reduced), decomposing $\beta$ and $\gamma$ as 
+$$
+\beta = \sum_{\delta \in \Pi} c_\delta' \delta
+$$
+and 
+$$
+\gamma = \sum_{\delta \in \Pi} c_{\delta}'' \delta
+$$
+with $c_\delta',c_\delta'' \geq 0$, we have 
+$$
+\alpha = \sum_{\delta \in \Pi} (c_\delta' + c_\delta'') \delta,
+$$
+contradicting the assumption that $\Pi$ is a basis. But $\# \Pi = \# \Pi(C)$, so they must be equal.
 \end{proof}
 
 Given a Weyl chamber $C$, we say that a hyperplane $L \subset V$ is a \textbf{wall of $C$} if $L \cap \overline C$ has nonempty interior in $L$ (in the subspace topology). 
@@ -2217,6 +2607,13 @@ N(T) / T \simeq W,
 $$
 so that the two definitions of the Weyl group are equivalent.
 \end{thm}
+
+
+\newpage
+\section{Cartan matrices and Dynkin diagrams}
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2576,4 +2973,9 @@ s\rho^2  =
 \end{pmatrix}.
 \end{align*}
 As expected, the character of this representation is exactly the character of the standard representation from the previous example (as is seen by computing traces). This is no coincidence.
+
+
+\bibliographystyle{plain}
+\bibliography{bibliografi} 
+
 \end{document}
