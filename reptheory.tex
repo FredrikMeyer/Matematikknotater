@@ -2131,8 +2131,45 @@ Recall that by Proposition \ref{propabelian}, any compact connected abelian Lie 
  Let $G$ be a compact connected Lie group. Then there exists a maximal torus in $G$. Furthermore, we have a one to one correspondence between the maximal tori in $G$ and the maximal abelian Lie subalgebras of $\g$.
 \end{prop}
 \begin{proof}
-  
+
+As $\g$ is finite-dimensional, maximal abelian subalgebras exist. Let $\ia$ be such a maximal abelian subalgebra of $\g$. Then $\exp \ia$ is a connected abelian Lie subgroup of $G$.
+
+Then $H = \overline {\exp \ia  }$ is a closed connected abelian subgroup of $G$. Hence $H$ is a torus. Then $\mathfrak h$ is abelian and $\mathfrak h \supset \ia$, hence $\mathfrak h = \ia$. Hence $H = \exp \ia$, since the inclusion $\ia \subset H$ must be a covering map.  
+
+On the other hand, if $T \subset G$ is a maximal torus, then $\mathfrak t \subset \g$ is an abelian Lie algebra, hence it is contained in a maximal abelian Lie algebra $\ia$. Then $\exp \ia$ is a torus containing $T$, hence $T= \exp \ia$, and $\mathfrak t = \ia$.
 \end{proof}
+
+Our goal in this section is to show that any two maximal tori are conjugate. This is not so difficult in concrete cases:
+
+\begin{example}
+ Let $G=U(n)$. Then
+$$
+T = \left\{ \begin{pmatrix} 
+z && \\
+& \ddots & \\
+&& z 
+\end{pmatrix} \, \mid \, z \in \C \right\} \cap SU(n) \simeq \mathbb T^n
+$$
+is a torus. 
+
+Suppose $H \subset G$ is a torus. As $H$ is compact abelian, $\C^n$ decomposes into a direct sum of $1$-dimensional $H$-invariant subspaces. Hence there exist $g \in U(n)$ such that $gHg^{-1} \subset T$, hence there exist $g \in U(n)$ such that $gHg^{-1} \subset T$. 
+
+This shows that $T$ is maximal and any maximal torus is conjugate to $T$.
+\end{example}
+
+We need some preparations to prove the general case.
+
+If $T$ is a torus, we say that $g \in T$ is a \textbf{topological generator} if
+$$
+\overline{ \{ g^n \, \mid \, n \in \Z \} } = T.
+$$
+\begin{thm}[Kronecker]
+ Consider $T=\mathbb T^n$. Then
+$$
+g = \left(e^{2\pi i t_1}, \ldots, e^{2 \pi i t_n}  \right)
+$$
+is a topological generator if and only if the numbers $1, t_1, \ldots, t_n$ are linearly independent over $\Q$.
+\end{thm}
 
 \subsection{Cartan's theorem on maximal tori}
 
