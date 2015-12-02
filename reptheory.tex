@@ -186,7 +186,7 @@ We call the $\hat G$ the \textbf{Pontryagin dual} of $G$. It is an abelian group
 
 %%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\section{Lecture 2 - Density theorems}
+\section{Density theorems}
 
 \subsection{Density theorems}
 
@@ -323,7 +323,7 @@ Proof to come later.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\section{Lecture 3 - More on orthogonality}
+\section{More on orthogonality}
 
 Where does the name ``orthogonality relations'' come from? We'll see now.
 
@@ -424,7 +424,7 @@ Then $(\chi_\lambda,\chi_\pi) = \frac{1}{\lvert G \rvert} \chi_\lambda(e) \cdot 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Lecture 4 - The Frobenius determinant problem}
+\section{The Frobenius determinant problem}
 
 Let $G$ be a finite group and $\C[x_g \mid g \in G]$ the algebra on generators indexed by $g \in G$. Then one can form the following determinant:
 $$
@@ -632,7 +632,7 @@ for any $n$. But this implies that the left-hand-side is a finitely-generated $\
 
 %%%%%%%%%%%%%%%
 \newpage
-\section{Lecture 6 - Representation theory of $S_n$}
+\section{Representation theory of $S_n$}
 
 It is easy to understand conjugacy classes in $S_n$. Every $\sigma \in S_n$ defined a partition of $\{ 1,\ldots n\}$ into orbints of $\sigma$. Let $O_1,\ldots,O_m$ be these orbits. Assume that they are decreasing in size. Let $n_i=\lvert O_i \rvert$. These numbers $n_i$ sum to $n$.
 
@@ -2249,6 +2249,7 @@ We also allow linear change of variables, so $t \mapsto \gamma(a t)$ is also cal
 Here is a theorem we wont prove.
 
 \begin{thm}
+\label{theoremgeodesic}
   Let $M$ be a Riemannian manifold. Then:
   \begin{enumerate}
   \item Any geodesic is smooth.
@@ -2271,13 +2272,101 @@ Now we use left- or right-translations to define a scalar product on $T_gG$ for 
  The geodesics in $G$ are translations (left or right) of one-parameter subgroups of $G$.
 \end{thm}
 
-...
+\begin{proof}
+
+The result is true for tori, since they are of the form $\R^n/\Z^n$, so their geodesics are lines.
+
+In general, it suffices to consider geodesics passing through $e$. Let $\gamma: \R \to G$ be a geodesic with $\gamma(0)=e$. Put $X= \gamma'(0) \in \g$. For any $g \in G$, the map $t \mapsto g \gamma(t) g^{-1}$ is also a geodesic (because the scalar product is invariant under left- and right-translations). Its derivative at $0$ is $Ad(g)(X)$.
+
+Let $T$ be a maximal torus containing $\exp(tX)$ for $t \in \R$. Then $\Ad(g)(X)=X$ for all $g \in T$. 
+
+It follows that $\gamma(t)=g \gamma(t) g^{-1}$ for all $t \in \R$, since by point 2. in Theorem \ref{theoremgeodesic}, geodesics are unique. In particular, $\gamma(t) \in N(T)^\circ =T $. 
+
+Thus $\mathrm{Im} \gamma \subset T$. Hence $\gamma$ is a geodesic in $T$, where the result is true. 
+
+Hence $\gamma(t) = \exp(tX)$, since the theorem is true for $T$.
+\end{proof}
 
 The next result is completely fundamental for everything that follows.
 
 \begin{thm}[Cartan]
 Let $G$ be a compact connected Lie group and $T \subset G$ a maximal torus. Then for all $g \in G$ there exists $h_g \in G$ such that $h_g g h_g^{-1} \in T$.
 \end{thm}
+\begin{proof}
+Let $t_0 \in T$ be a topological generator of $T$. Let $H_0 \in \mathfrak t$ be such that $\exp(H_0)=t_0$. 
+
+Choose a geodesic $\gamma$ passing through $e$ and $g$ with $\gamma(0)=e$. Let $X=\gamma'(0)$. Then $\gamma(t) = \exp(tX)$ by the previous theorem.
+
+Consider the function 
+$$
+G \ni h \mapsto \langle \Ad(h)(X),H_0 \rangle \in \R
+$$
+
+This is a function from a compact space to the real line, so it has a maximum, achieved at, say, $h \in G$.
+
+\textbf{Claim: } $[(\Ad h)(X), H_0] = 0$. 
+
+Assuming the claim, it follows that $\exp(t(\Ad h)(X))=h \exp(tX)h^{-1}$ commutes with $\exp(H_0)=t_0$ for $t \in \R$. As $t_0$ is a topological generator of $T$, it follows that $h \exp(tX)h^{-1}$ commutes with $T$. 
+
+As $T$ is a maximal torus, it follows that $h \exp(tX) h^{-1} \in T$ for all $t \in \R$. In particular, $hgh^{-1} \in T$.
+
+Thus it remains to prove the claim. Take $Y \in \g$. Then the function 
+$$
+t \mapsto \langle \Ad(\exp(tY)h)(X), H_0 \rangle 
+$$
+attains its maximum at $t=0$. Therefore its derivative at $0$ is zero. So
+\begin{align*}
+0 &= \langle \ad(Y)( \Ad h)(X), H_0 \rangle \\
+&= - \langle [\Ad(h)X,Y], H_0 \rangle \\
+&= \langle Y, [\Ad(h)(X),H_0] \rangle.
+\end{align*}
+
+This is true for all $Y \in \g$, hence $[\Ad(h)(X),H_0]  = 0$. 
+\end{proof}
+
+
+\begin{corr}
+Any two maximal tori in $G$ are conjugate.
+\end{corr}
+\begin{proof}
+Let $T_1$ and $T_2$ be two maximal tori. Let $t_1 \in T_1$ be a topological generator. Then there exists $h \in G$ such that $ht_1 h^{-1} \in T_2$. But then $hT_1 h^{-1} \subset T_2$, since $t_1$ was a topological generator.  So $T_1 \subset h^{-1} T_2 h$. But $T_1$ was maximal, so $T_1=T_2$.
+\end{proof}
+
+\begin{corr}
+Any element of $G$ is contained in a maximal torus. In particular, $\exp \colon \g  \to G$ is surjective.
+\end{corr}
+
+\begin{proof}
+Let $g \in G$, and let $T$ be a maximal torus. Then $hgh^{-1} \in T$ for some $h \in G$. But then $g \in h^{-1}T h$, which is maximal. 
+
+To see the "in particular", let $g \in G$. Then $g$ is contained in a maximal torus. Then the geodesic starting at $e$ and ending at $g$ must have the form $\exp(tX)$. 
+\end{proof}
+
+\begin{corr}
+Any maximal torus $T$ in $G$ is a maximal abelian subgroup of $G$.
+\end{corr}
+\begin{proof}
+Assume $g$ commutes with $T$. Consider
+$$
+H = C(g)^\circ = \{ h \in G \, \mid \, hg = gh \}^\circ,
+$$
+the centralizer of $g$ in $G$. This is a compact connected Lie group. Since $T$ is connected, $T \subset H$. As $g$ is contained in a maximal torus in $G$, we have $g \in H$. 
+
+As $T$ is a maximal torus in $G$, it is a maximal torus in $H$. Hence there exists $h \in H$ such that $hgh^{-1} \in T$. But $g \in Z(H)$, hence $g \in T$.
+\end{proof}
+
+
+\begin{remark}
+This implies that the map 
+\begin{align*}
+\alpha: W(G,T) &\to \Aut(T) \\
+g &\mapsto  \alpha(gT)(h) = ghg^{-1}
+\end{align*}
+has trivial kernel. Hence $W(G,T) \hookrightarrow \Aut(T)$.
+\end{remark}
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%
 \newpage
