@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  3 DEC 2015 13:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  4 DEC 2015 15:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1153,17 +1153,18 @@ LaTeX Info: Redefining \nameref on input line 33.
 \openout5 = `reptheory.out'.
 
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
-t line 51.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 60.
+t line 53.
+ [1
+
+{/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-var/fonts/map/pdftex/up
+dmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 62.
 
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/base/t1c
 mtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [1
-
-{/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-var/fonts/map/pdftex/up
-dmap/pdftex.map}]
-Overfull \hbox (5.15752pt too wide) detected at line 71
+)
+Overfull \hbox (5.15752pt too wide) detected at line 73
 \OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 x[]x[] \OT1/cmr/m/n/
 10 + \OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 x[]x[] \OMS/cms
 y/m/n/10 ^^@ \OML/cmm/m/it/10 x[]x[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 x[] \OM
@@ -1174,69 +1175,69 @@ m/it/10 x[]:
  []
 
 Package hyperref Info: bookmark level for unknown thm defaults to 0 on input li
-ne 76.
+ne 79.
 [2]
 Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
-ine 116.
- [3]
+ine 123.
+ [3] [4]
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
- line 184.
- [4] [5] [6] [7] [8] [9]
+ line 205.
+ [5] [6] [7] [8] [9] [10] [11]
 Package hyperref Info: bookmark level for unknown corr defaults to 0 on input l
-ine 392.
+ine 442.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 421.
+(hyperref)                removing `math shift' on input line 471.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 421.
+(hyperref)                removing `math shift' on input line 471.
 
-[10] [11]
-Underfull \hbox (badness 1400) in paragraph at lines 465--466
+[12] [13]
+Underfull \hbox (badness 1400) in paragraph at lines 515--516
 [][]\T1/cmr/bx/n/10 Theorem 4.1 \T1/cmr/m/n/10 (Frobe-nius)\T1/cmr/bx/n/10 . []
 \T1/cmr/m/it/10 The poly-no-mi-als $[] []$
  []
 
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 470.
-[12] [13] [14] [15] [16]
+line 520.
+[14] [15] [16] [17] [18]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 636.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 636.
+(hyperref)                removing `math shift' on input line 686.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 636.
+(hyperref)                removing `subscript' on input line 686.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 686.
 
 Package hyperref Info: bookmark level for unknown exc defaults to 0 on input li
-ne 656.
-[17] [18]
-Underfull \hbox (badness 6063) in paragraph at lines 728--729
+ne 706.
+[19] [20]
+Underfull \hbox (badness 6063) in paragraph at lines 778--779
 []\T1/cmr/m/n/10 Under these iso-mor-phisms, the im-age of the sub-mod-ule
  []
 
 
-Underfull \hbox (badness 4739) in paragraph at lines 756--757
+Underfull \hbox (badness 4739) in paragraph at lines 806--807
 [][]\T1/cmr/bx/n/10 Theorem 6.3 \T1/cmr/m/n/10 (Frobe-nius char-ac-ter for-mula
 )\T1/cmr/bx/n/10 . []\T1/cmr/m/it/10 As-sume $\OML/cmm/m/it/10 ^^U \OT1/cmr/m/n
 /10 =
  []
 
-[19] [20] [21]
-Underfull \hbox (badness 5008) in paragraph at lines 822--824
+[21] [22] [23]
+Underfull \hbox (badness 5008) in paragraph at lines 872--874
 \T1/cmr/m/n/10 We also have an iden-ti-fac-tion of rep-re-sen-ta-tions $\U/msb/
 m/n/10 C\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 G\OT1/cmr/m/n/10 ]$ \T1/cmr/m/n/10 wi
 th
  []
 
-[22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1199
+[24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1249
 .
 
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/base/oms
@@ -1244,108 +1245,108 @@ cmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1199.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1249.
 
- <xymatrix 2x2 86> [34] [35] [36] [37] <xymatrix 2x2 182> [38]
-LaTeX Font Info:    Try loading font information for U+euf on input line 1405.
+ <xymatrix 2x2 86> [36] [37] [38] [39] <xymatrix 2x2 182> [40]
+LaTeX Font Info:    Try loading font information for U+euf on input line 1455.
 
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/amsfonts
 /ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [39] [40] [41] [42] [43] [44] [45]
+) [41] [42] [43] [44] [45] [46] [47]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1692.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1692.
-
-[46]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1716.
+(hyperref)                removing `math shift' on input line 1742.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1716.
-
-[47]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1748.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1748.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1764.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1764.
+(hyperref)                removing `math shift' on input line 1742.
 
 [48]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1793.
+(hyperref)                removing `math shift' on input line 1766.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1793.
+(hyperref)                removing `math shift' on input line 1766.
 
-[49] [50] [51] [52] [53] [54] [55]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2039.
-
+[49]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2039.
+(hyperref)                removing `math shift' on input line 1798.
 
-[56] <xymatrix 5x3 303> [57] [58] [59] [60] [61] [62] [63]
-Underfull \hbox (badness 5711) in paragraph at lines 2432--2433
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1798.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1814.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1814.
+
+[50]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1843.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1843.
+
+[51] [52] [53] [54] [55] [56] [57]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2089.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2089.
+
+[58] <xymatrix 5x3 303> [59] [60] [61] [62] [63] [64] [65]
+Underfull \hbox (badness 5711) in paragraph at lines 2482--2483
 []\T1/cmr/m/n/10 Assuming the claim, it fol-lows that $[]\OT1/cmr/m/n/10 (\OML/
 cmm/m/it/10 t\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 h\OT1/cmr/m/n/10 )(\OML/cmm/m
 /it/10 X\OT1/cmr/m/n/10 )) =
  []
 
-[64] [65] [66] [67] [68] [69] [70] [71] [72]
+[66] [67] [68] [69] [70] [71] [72] [73] [74]
 \c@enumTemp=\count156
- [73] [74] [75] [76]
-Underfull \hbox (badness 10000) in paragraph at lines 2939--2940
+ [75] [76] [77] [78]
+Underfull \hbox (badness 10000) in paragraph at lines 2989--2990
 [][]\T1/cmr/bx/n/10 Example 21.5. []\T1/cmr/m/n/10 Again con-sider the root sys
 -tem $\OML/cmm/m/it/10 A[]$\T1/cmr/m/n/10 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2939--2940
+Underfull \hbox (badness 10000) in paragraph at lines 2989--2990
 \T1/cmr/m/n/10 One com-putes that the Weyl cham-bers are the in-te-ri-ors
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2939--2940
+Underfull \hbox (badness 10000) in paragraph at lines 2989--2990
 \T1/cmr/m/n/10 of the rays gen-er-ated by $[]$ and
  []
 
-[77] [78]
+[79] [80]
 Package hyperref Info: bookmark level for unknown sol defaults to 0 on input li
-ne 2984.
- [79] <xymatrix 2x2 168>
-Underfull \hbox (badness 2027) in paragraph at lines 3041--3043
+ne 3034.
+ [81] <xymatrix 2x2 168>
+Underfull \hbox (badness 2027) in paragraph at lines 3091--3093
 \T1/cmr/m/n/10 Hence $\OML/cmm/m/it/10 V$ \T1/cmr/m/n/10 and $\OML/cmm/m/it/10 
 V[]$ \T1/cmr/m/n/10 are iso-mor-phic as rep-re-sen-ta-tions and then
  []
 
-[80]
+[82]
 
 Package amsfonts Warning: Obsolete command \frak; \mathfrak should be used inst
-ead on input line 3103.
+ead on input line 3153.
 
-[81] [82] [83]
-Overfull \hbox (54.89679pt too wide) detected at line 3223
+[83] [84] [85]
+Overfull \hbox (54.89679pt too wide) detected at line 3273
 \OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 g \OMS/cmsy/m/n/10 ^^A \OML/cmm/m/it/10 X; \
 OMS/cmsy/m/n/10 ^^A\OML/cmm/m/it/10 Y\OMS/cmsy/m/n/10 i \OT1/cmr/m/n/10 = \OMS/
 cmsy/m/n/10 h\OML/cmm/m/it/10 gXg[]; gYg[]\OMS/cmsy/m/n/10 i \OT1/cmr/m/n/10 = 
@@ -1355,36 +1356,36 @@ cmsy/m/n/10 h\OML/cmm/m/it/10 gXg[]; gYg[]\OMS/cmsy/m/n/10 i \OT1/cmr/m/n/10 =
 it/10 XY\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :
  []
 
-[84]
+[86]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3231.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 3231.
+(hyperref)                removing `math shift' on input line 3281.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3231.
+(hyperref)                removing `subscript' on input line 3281.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3281.
 
 Package youngtab: box1 not free! Expect an error!
-[85] [86] (./reptheory.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3336.
- [87]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3336.
+[87] [88] (./reptheory.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3386.
+ [89]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3386.
  (./reptheory.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3336.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3336.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3386.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3386.
 
 Package rerunfilecheck Info: File `reptheory.out' has not changed.
-(rerunfilecheck)             Checksum: F2A4DD4710513B5AB8199B5FDF77A0B6;4677.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3336.
+(rerunfilecheck)             Checksum: 4E4E035B875CA436C7B7E395B460A945;4714.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3386.
  ) 
 Here is how much of TeX's memory you used:
- 19386 strings out of 493308
- 327675 string characters out of 6135157
- 433230 words of memory out of 5000000
+ 19394 strings out of 493308
+ 327778 string characters out of 6135157
+ 433253 words of memory out of 5000000
  21877 multiletter control sequences out of 15000+600000
  33333 words of font info for 109 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1450,10 +1451,10 @@ les/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/xypic/xyatip10
 ublic/xypic/xybsql10.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texm
 f-dist/fonts/type1/public/xypic/xybtip10.pfb></mn/anatu/modules/opt/texlive/201
 3-uio/uio-texmf/texmf-dist/fonts/type1/public/xypic/xydash10.pfb>
-Output written on reptheory.pdf (87 pages, 800277 bytes).
+Output written on reptheory.pdf (89 pages, 804399 bytes).
 PDF statistics:
- 1310 PDF objects out of 1440 (max. 8388607)
- 1163 compressed objects within 12 object streams
- 495 named destinations out of 1000 (max. 500000)
+ 1326 PDF objects out of 1440 (max. 8388607)
+ 1177 compressed objects within 12 object streams
+ 503 named destinations out of 1000 (max. 500000)
  549 words of extra memory for PDF output out of 10000 (max. 10000000)
 
