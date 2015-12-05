@@ -293,6 +293,7 @@ hence $T = \sum \alpha_g \pi(g)$, so $T \in \Span \pi(G)$.
 \end{proof}
 
 \begin{remark}
+\label{remarksum}
 Note that any irreducible representation is contained in the regular representation. Indeed, let $(V,\pi)$ be irreducible, and pick some non-zero $x \in V$. Then the map
 $$
 \C[G] \xrightarrow{\cdot x} V
@@ -313,6 +314,7 @@ $$
 \pi(g) = \left( \alpha_{ij}^\pi(g) \right)_{ij} \in GL(V).
 $$
 
+The following theorem is usually called the \textbf{orthogonality relations}:
 \begin{thm}
  We have:
  \begin{enumerate}
@@ -323,7 +325,7 @@ $$
 for all $f \in V_\pi^\ast$, $\rho \in V_\theta^\ast$, $x \in V_\pi$ and $y \in V_\theta$.
 \item If $\pi$ is irreducible, then
 \[
-\frac{1}{\lvert G \rvert} \sum_g \alpha_{f,x}^\pi(g) \alpha_{\rho,y}^\pi (g^{-1}) = \frac{f(x) \rho(y)}{\dim \pi}.
+\frac{1}{\lvert G \rvert} \sum_g \alpha_{f,x}^\pi(g) \alpha_{\rho,y}^\pi (g^{-1}) = \frac{f(y) \rho(x)}{\dim \pi}.
 \]
  \end{enumerate}
 \end{thm}
@@ -335,55 +337,81 @@ S = \frac{1}{\lvert G \rvert} \sum_{g \in G} \pi(g) T \theta(g^{-1})
 is in $\Hom_G(\theta,\pi)$ by averaging. Thus, since $\pi$ and $\theta$ are inequivalent, it follows from Schur's lemma that this must be zero.
 
 Now let $T(v) = \rho(v)x$. This is a linear operator. Then
-$$
-0 = f(Sy) = \frac{1}{\lvert G \rvert} \sum_g \alpha_{f,x}^\pi (g) \alpha_{\rho,y}^\theta(g^{-1}).
-$$
+\begin{align*}
+0 = f(Sy) &= f\left( \frac{1}{\lvert G \rvert} \sum_{g \in G} \pi(g) T \theta(g^{-1})(y) \right) \\
+&= \frac{1}{\lvert G \rvert} \sum_{g \in G} f(\pi(g)\rho(\theta(g^{-1})y)x) \\
+&= \frac{1}{\lvert G \rvert} \sum_{g \in G} f(\pi(g)x) \rho(\theta(g^{-1})y) \\
+&= \frac{1}{\lvert G \rvert} \sum_{g \in G} \alpha_{f,x}^\pi (g) \alpha_{\rho,y}^\theta (g^{-1})
+\end{align*}
 This proves part $1$.
 
-Now suppose $\pi=\theta$. Then $S \in \End(\pi) = \C \cdot \id_V$. Thus $S = \alpha \cdot \id_V$. Taking traces on both sides, we get $\alpha = Tr T/\dim \pi$ (note that $T$ and $S$ have the same trace).
+Now suppose $\pi=\theta$. Then $S \in \End(\pi) = \C \cdot \id_V$. Thus $S = \alpha \cdot \id_V$ for some $\alpha \in \C$. Taking traces on both sides, we get $\alpha = \tr T/\dim \pi$ (note that $T$ and $S$ have the same trace).
 
 Then
 $$
-\frac 1{\lvert G \rvert} \sum_g \alpha_{f,x}^\pi(g) \alpha_{\rho,y}^\pi(g^{-1}) = f(S(y)) = f(y) \frac{Tr T}{\dim \pi}
+\frac 1{\lvert G \rvert} \sum_g \alpha_{f,x}^\pi(g) \alpha_{\rho,y}^\pi(g^{-1}) = f(S(y)) = f(y) \frac{\tr T}{\dim \pi} = \frac{f(y)\rho(x)}{\dim \pi},
 $$
-(make this nicer some time)
+since $\tr T = \rho(x)$. 
 \end{proof}
 
-Instead of writing expressions like $\sum_g \alpha_g \pi(g)$ it is convenient to introduce the following notation. Define the \textbf{convolution} of two functions $f_1,f_2 \in \C[G]$ by
+Let $\C[G]$ denote the vector space of functions $G \to \C$. Instead of writing expressions like $\sum_g \alpha_g \pi(g)$ it is convenient to introduce the following notation. Define the \textbf{convolution} of two functions $f_1,f_2 \in \C[G]$ by
 $$
 (f_1 \ast f_2)(g) = \sum_{g=g_1g_2} f_1(g_1)f_2(g_2) = \sum_{h \in G} f_1(h)f_2(h^{-1}g).
 $$
-We have $\delta_{g_1} \ast \delta_{g_2} = \delta_{g_1g_2}$ (easy check!). The convolution product is associative and makes $\C[G]$ into an algebra, called the \textbf{group algebra} of $G$. 
+We have $\delta_{g_1} \ast \delta_{g_2} = \delta_{g_1g_2}$ (easy check!). The convolution product is associative and makes $\C[G]$ into an algebra, called the \textbf{group algebra} of $G$.
 
-Given a representation $\pi:G \to \GL(V)$ we can define an algebra homomorphism $\C[G] \to \End(V)$ by $\pi(f) = \sum_{g \in G} f(g) \pi(g)$. Thus $V$ becomes a left $\C[G]$-module. Conversely, given any united algebra homomorphism $\pi:\C[G] \to \End(V)$, we get a representation by $g \mapsto \pi(\delta_g)$. Thus we have a correspondence between representations of $G$ and left $\C[G]$-modules. Using these notions, the Density Theorem (Theorem \ref{thmdensity}) becomes $\pi(\C[G]) = \oplus_i \End(V_i)$.
+Note that with this product, $\C[G]$ could just as well have been defined as the associative algebra $\C\langle x_g  \, \mid \, g \in G \rangle $ module the relations defined by $x_gx_h = x_{gh}$. 
+
+Given a representation $\pi:G \to \GL(V)$ we can define an algebra homomorphism $\C[G] \to \End(V)$ by $\pi(f) = \sum_{g \in G} f(g) \pi(g)$. Thus $V$ becomes a left $\C[G]$-module. Conversely, given any unital algebra homomorphism $\pi:\C[G] \to \End(V)$, we get a representation by $g \mapsto \pi(\delta_g)$. Thus we have a correspondence between representations of $G$ and left $\C[G]$-modules. Using these notions, the Density Theorem (Theorem \ref{thmdensity}) becomes $\pi(\C[G]) = \oplus_i \End(V_i)$.
+
+Formalizing Remark \ref{remarksum}, we get:
 
 \begin{thm}
-Let $\hat G$ be the set of equivalence classes of irreducible representations of $G$. Then $\hat G$ is finite and $\sum_{[\pi] \in \hat G} (\dim \pi)^2 = \lvert G \rvert$. Furthermore, we have
+Let $\widehat G$ be the set of equivalence classes of irreducible representations of $G$. Then $\widehat G$ is finite and $\sum_{[\pi] \in \widehat G} (\dim \pi)^2 = \lvert G \rvert$. Furthermore, we have
 $$
-\lambda \sim  \bigoplus_{[\pi] \in \hat G} \pi^{\oplus \dim \pi}.
+\lambda \sim  \bigoplus_{[\pi] \in \widehat G} \pi^{\oplus \dim \pi}.
 $$
 Here $\lambda$ is the left regular representation of $G$.
 \end{thm}
-Proof to come later.
+\begin{proof}
+The first two statements are already proved in the Remark. The only thing to be proved is the part about the multiplicity of $\pi$ in $\lambda$. 
 
+Note that as a representation, $\C[G]$ is just the left regular representation of $G$. Note also that $\End V_i \simeq V^{\dim V}$: let $\{ v_1, \ldots , v_n\}$ be a basis of $V$. Then the map $\End(V_i) \ni \varphi \mapsto (\varphi(v_1), \ldots, \varphi(v_n))$ is an isomorphism of representations. 
 
+Then the density theorem implies the statement.
+\end{proof}
 
+\begin{example}
+Let $G=S_3$, the symmetric group on $3$ elements. We have that $\lvert G \rvert = 6$. We have two one-dimensional representations: the trivial representation and the sign representation $g \mapsto sign(g) \in \{ \pm 1 \}$. Hence $6=1^2+1^2+n_1^2+n_2^2+\ldots$, where $n_i$ is the dimension of the $i$th irreducible representation. This is only possible if $n_1=2$ and $n_i=0$ for $i >1$. Thus there are only three irreducible representations of $S_3$.
 
+Let $G=\langle \rho, \sigma \rangle$ with $\rho^3=e$, $\sigma^2=e$ and $\sigma \rho \sigma = \rho^{-1}$. The unique irreducible $2$-dimensional representation of $S_2$ can be realized as the action on $\C^2$ given by 
+$$
+\rho \mapsto \begin{pmatrix}
+\sin\left( \frac{2 \pi}{3} \right) & - \sin \left( \frac{2 \pi}{3} \right) \\
+\cos \left( \frac{2\pi}{3} \right) & \cos \left( \frac{2 \pi}{3} \right)
+\end{pmatrix}
+$$
+and 
+$$
+\sigma \mapsto \begin{pmatrix}
+-1 & 0 \\
+0 & 1 
+\end{pmatrix}.
+$$
+The density theorem here says that 
+$$
+\C[G] = e \C \oplus \ldots
+$$
+[[sett inn dekomposisjon av $\C[G]$ som algebra]]
+\end{example}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\section{More on orthogonality}
-
-Where does the name ``orthogonality relations'' come from? We'll see now.
-
-First of all, note that if $V_\pi$ is a representation of a finite group $G$, and $\langle,\rangle'$ is \emph{any} Hermitian scalar product on $V_\pi$, then 
+We will now motivate the name "orthogonality relations". First of all, note that if $V_\pi$ is a representation of a finite group $G$, and $\langle,\rangle'$ is \emph{any} Hermitian scalar product on $V_\pi$, then 
 $$
 \langle v, w \rangle := \frac{1}{\langle G \rangle} \sum_{g \in G} \langle \pi(g) v, \pi(g) w \rangle'
 $$
-is another Hermitian scalar product on $V_\pi$, making the representation \textbf{unitary}.
+is another Hermitian scalar product on $V_\pi$, making the representation \textbf{unitary}, meaning that the inner product is invariant under the action of the group.
 
-If $\pi$ is any unitary representation, choose an orthonormal basis $e_1,\ldots,e_n \in V$. Then the matrices $\pi(g) = \left( a_{ij}^\pi(g) \right)$ are unitary matrices. Hence $\overline{a_{ij}^\pi} = a_{ji}^\pi(g^{-1})$.
+If $\pi$ is any unitary representation, choose an orthonormal basis $e_1,\ldots,e_n \in V$. Then the matrices $\pi(g) = \left( a_{ij}^\pi(g) \right)$ are unitary matrices. Since for unitary matrices $U$ we have $U^{-1}=U^\star$ (conjuge transpose), we have $\overline{a_{ij}^\pi(g)} = a_{ji}^\pi(g^{-1})$.
 
 There is a standard scalar product on $\C[G]$ defined by
 $$
@@ -398,8 +426,39 @@ $$
 \left (a_{ij}^\pi, a_{ij}^\pi\right) = \frac{1}{\dim \pi}.
 $$
 \end{thm}
+\begin{proof}
+This is just a reformulation of the Theorem. 
+\end{proof}
 
-\subsection{Characters of a representation}
+Let $(V,\pi)$ be an irreducible representation of $G$ and $(W,\theta)$ any finite-dimensional representation. Denote by $W(\pi)$ the space spanned by elements $Tx$ for $T \in \Mor(\pi,\theta)$. It is an invariant subspace of $W$, called the \textbf{isotypic component} of $\theta$ corresponding to $\pi$. 
+
+
+\begin{lemma}
+The operator $P:W \to W$ defined by
+$$
+P = \frac{\dim \pi}{\lvert G \rvert} \sum_{g \in G} \chi_\pi(g^{-1})\theta(g),
+$$
+where $\chi_\pi(g)=\tr \pi(g)$, is a projection onto $W(\pi)$ along $\sum_{[\pi'] \in  \widehat G  \bs \{ [\pi] \}} W(\pi')$. In particular, $$
+W = \bigoplus_{[\pi] \in \widehat G} W(\pi)
+$$
+and 
+$$
+\restr{\theta}{W(\pi)} \sim \pi^{\oplus n_\pi},
+$$
+where $n_\pi$ is the \emph{multiplicity} of $\pi$ in $\theta$.
+\end{lemma}
+
+\begin{proof}
+check that $P$ is a $G$-morphism
+\end{proof}
+
+\subsection{Decomposition of the regular representation}
+
+....
+
+%%%%%%%%%%%%%%%
+\newpage
+\section{Character theory}
 
 Let $(\pi,V)$ be a representation. 
 
@@ -468,12 +527,8 @@ $$
 Then $(\chi_\lambda,\chi_\pi) = \frac{1}{\lvert G \rvert} \chi_\lambda(e) \cdot \overline{\chi_\pi(e)} = \dim \pi$.
 \end{proof}
 
-\subsection{Isotypic component and can. decomposition of $V$}
-
-[[isotypic component ...]]
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 \section{The Frobenius determinant problem}
 
 Let $G$ be a finite group and $\C[x_g \mid g \in G]$ the algebra on generators indexed by $g \in G$. Then one can form the following determinant:
