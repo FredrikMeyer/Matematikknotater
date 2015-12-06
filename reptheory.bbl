@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{kommalg}
+M.~F. Atiyah and I.~G. Macdonald.
+\newblock {\em Introduction to commutative algebra}.
+\newblock Addison-Wesley Publishing Co., Reading, Mass.-London-Don Mills, Ont.,
+  1969.
+
 \bibitem{hatcher_algtop}
 Allen Hatcher.
 \newblock {\em Algebraic topology}.
