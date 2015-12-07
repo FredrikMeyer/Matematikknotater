@@ -845,6 +845,10 @@ $$
 $$
 of $\End(V)$-modules given by $Te \mapsto Tv$. 
 \end{lemma}
+\begin{proof}
+--TO COME--
+\end{proof}
+
 Therefore finding irreducible representations of $G$ is the same as finding minimal idempotents in the group algebra $\C[G]$: if $e \in \C[G]$ is a minimal idempotent, then $\C[G]e$ defines an irreducible representation ([[WHY IS IT IRREDUCIBLE??]].
 
 Thus, returning to $S_n$, we want to to construct minimal idempotents in $\C[S_n]$ for every partition.
@@ -858,6 +862,7 @@ $$
 \cr
 \end{Young}
 $$
+
 We can also fill these with numbers: a \textbf{Young tableau} (plural \emph{tableaux}) is a Young diagram filled with numbers $i \in [n]$ without repetitions. For example:
 $$
 \begin{Young}
@@ -865,11 +870,12 @@ $$
 2\cr
 \end{Young}
 $$
+
 Two Young tableaux are said to be of the same \textbf{shape} if they arise from the same underlying Young diagram.
 
-Note that the symmetric group acts on the set of Young tableaux of the same shape $\lambda$. 
+Note that the symmetric group act on the set of Young tableaux of the same shape $\lambda$. 
 
-Fix a Young tableaux $T$. Let $R(T) \subset S_n$ be the subgroup of elements of $S_n$ permuting numbers in the \emph{rows} of $T$. Let $C(T)$ be the same group, but permuting columns instead. Define the following two elements of $\C[S_n]$:
+Fix a Young tableau $T$. Let $R(T) \subset S_n$ be the subgroup of elements of $S_n$ permuting numbers in the \emph{rows} of $T$. Let $C(T)$ be the same group, but permuting columns instead. Define the following two elements of $\C[S_n]$:
 
 $$
 a_T = \frac{1}{\lvert R(T) \rvert} \sum_{g \in R(T)} g 
@@ -915,49 +921,103 @@ Under these isomorphisms, the image of the  submodule $\C[S_n]b_T a_T \subset \C
 
 This is a spanning set. We would like a basis. We say that that tableau $T$ is \textbf{standard} if the numbers in every row and column are increasing.
 
-Here's a theorem that we wont prove:
+Here's a theorem that we will not prove:
 \begin{thm}
  For any Young diagram $\lambda$ the elements $e_T$ for all standard tableaux $T$ of shape $\lambda$ form a basis in $V_\lambda$.
 \end{thm}
 
 The complication is of course that $g e_T = c_{g(T)}$ is a combination of standard tableaux! 
 
-[[two examples]]
+\begin{example}
+ Let $\lambda = n$, be the trivial partition. Then the corresponding Young diagram looks like:
+$$
+\begin{Young}
+&&&...&&\cr
+\end{Young}
+$$
+For any tableau $T$ of shape $\lambda$ we get $C(T) = \{ e\}$, since all the columns are one-element sets. Also, $R(T)=S_n$. Hence
+$$
+c_T = \frac{1}{n!} \sum_{g \in S_n} g.
+$$
+Then $gc_T = c_Tg = c_T$. Hence $\C[S_n]c_T = \C c_T$, so that $\pi_T \sim \epsilon$, the trivial representation.
+\end{example}
+
+\begin{example}
+Let $\lambda = (1,\ldots,1)$ be the partition $n=1+\ldots+1$. Then the corresponding Young diagram looks like
+$$
+\begin{Young}
+\cr
+\cr \cr  \vdots \cr \cr
+\end{Young}
+$$
+Then $C(T)=S_n$ and $R(T)=\{e \}$. Therefore
+$$
+c_T = \frac{1}{n!} \sum_{g \in S_n} sgn(g) \cdot g.
+$$
+So $g c_T = c_T g = sgn(g) c_T$. Hence $\C[S_n]=\C c_T$, and $\pi_T$ is the one-dimensional representation $sgn$. 
+\end{example}
 
 \subsection{Characters and the Hook length formula}
 
-Here we prove two theorems. 
+Denote by $\pi_\lambda$ the irreducible representation of the symmetric group corresponding to the Young diagram $\lambda$.
+
+To describe the character of $\pi_\lambda$, it is convenient to index the conjugacy classes in $S_n$ by the number of cycles.
 
 Let $I=(i_1,i_2,\ldots,)$ consist of non-negative integers such that
 $$
-\sum_{k=1}\infty ki_k=n.
+\sum_{k=1}^\infty ki_k=n.
 $$
 Denote by $c_I$ the conjugacy class in $S_n$ consisting of elements $\sigma$ which decompose into $i_1$ orbits of length $1$, $i_2$ orbits of length two and so on. 
 
-This corresponds to an obvious partition of $n$.
+This correspond to the partition $ki_k+(k-1)i_{k-1}+...=n$. 
 
 Let $\chi_{\pi_\lambda}(C_I)$ denote the value of the character of $\pi_\lambda$ on any representating of the conjugacy class of $C_I$. Then
 \begin{thm}[Frobenius character formula]
   
 Assume $\lambda=(\lambda_1,\ldots,\lambda_r)$. Take any number $N \geq r$. Then $\chi_{\pi_\lambda}(C_I)$ is the coefficient of $\prod_{i=1}^N x_i^{\lambda_i+N-i}$ in the polynomial
 $$
-\Delta(x) \prod_{i \geq 1} \sum_{i=1}^N (x_i^k)^{i_k}.
+\Delta(x) \prod_{k \geq 1} {\left(\sum_{i=1}^N (x_i^k)\right)}^{i_k}.
 $$
 where $\Delta(x) = \prod (x_i-x_j)$ is the Vandermonde determinant.
 \end{thm}
 
-This was not proved, but the idea of the proof was given.
+\begin{proof}
+  If time allows a proof will appear here.
+\end{proof}
 
-Now we quote the \textbf{hook length} formula. Let $\lambda$ be Young diagram and let $(i,j)$ be the element in position row $i$ and column $j$. Then the \textbf{hook length} $h(i,j)$ is the number of boxes below and to the right of $(i,j)$ including $(i,j)$ itself. Then:
+Now we quote the \textbf{hook length} formula. Let $\lambda$ be a Young diagram and let $(i,j)$ be the element in position row $i$ and column $j$. Then the \textbf{hook length} $h(i,j)$ is the number of boxes below and to the right of $(i,j)$ including $(i,j)$ itself.
+
+Using the notation in the previous Theorem, let $l_i = \lambda_i + N - i$ (we put $\lambda_i=0$ for $i > r$). Then:
+
+\begin{lemma}
+  For any $i$, we have that
+$$
+\frac{l_i!}{\prod_{j=i+1}^n (l_i-l_j)} = \prod_{k=1}^{\lambda_i} h(i,k).
+$$
+\end{lemma}
+
+From this we get:
 
 \begin{thm}
   Let $\lambda$ be partition and let $\pi_\lambda$ be the corresponding irreducible representation of $S_n$. Then 
 $$
 \dim \pi_\lambda = \frac{n!}{\prod_{(i,j) \in \lambda} h(i,j)}.
 $$
+This is also the number of standard Young tableaux of shape $\lambda$.
 \end{thm}
 
 Prooof later.
+
+\begin{example}
+Let
+$$
+\begin{Young}
+&\cr
+\cr
+\end{Young}
+$$
+be a Young diagram. Then $\dim \pi_\lambda= \frac{3!}{1 \cdot 1 \cdot 1 \cdot 3}=2$.
+\end{example}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -1070,10 +1130,11 @@ where we extend $\chi$ to $G$ by zero.
 \begin{proof}
 Consider the imprimitivity system $\{W_x\}_{x \in G/H}$ for the induced representation $\theta = \Ind_H^G \pi$. Then
 \begin{align*}
-  \chi_\theta(g) &= \tr(g) &= \sum_{x \in G/H, gx=x} \tr(\restr{\theta(g)}{W_x}) \\
-&= \sum_{\bar s \in G/H, s^{-1}gs \in H} \tr( \restr{\theta(g)}{W_{\bar s}})  
+  \chi_\theta(g) &= \tr(g) \\
+ &=\sum_{x \in G/H, gx=x} \tr(\restr{\theta(g)}{W_x}) \\
+&= \sum_{\bar s \in G/H, s^{-1}gs \in H} \tr( \restr{\theta(g)}{W_{\bar s}})  \\
 &= \sum_{\bar s \in G/H, s^{-1}gs \in H} \tr( \restr{\theta(s^{-1})\theta(g)\theta(s)}{W_{\bar e}})   \\
-&= \sum_{\bar s \in G/H, s^{-1}gs \in H} \tr( \pi(s^{-1}gs)) 
+&= \sum_{\bar s \in G/H, s^{-1}gs \in H} \tr( \pi(s^{-1}gs)) \\
 &= \sum_{\bar s \in G/H, s^{-1}gs \in H} \chi(s^{-1}gs).
 \end{align*}
 The second equality follows by noting that $\chi(s^{-1}gs)$ is constant on left cosets as $s$ varies.
@@ -1172,7 +1233,7 @@ a & b \\
 0 & 1 
 \end{pmatrix} \mid a \in k^\times, b \in k \right\}.
 $$
-Then $G$ satisfies the conditions of the theorem (we say that $G$ is a \textbf{Frobenious group}). Then the group $K$ in the theorem is the group of translations:
+Then $G$ satisfies the conditions of the theorem (we say that $G$ is a \textbf{Frobenius group}). Then the group $K$ in the theorem is the group of translations:
 $$
 K = \left\{ \begin{pmatrix}
 1 & b \\ 0 & 1 
@@ -1180,6 +1241,7 @@ K = \left\{ \begin{pmatrix}
 \mid b \in k \right \}.
 $$
 \end{example}
+
 
 %%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -1339,9 +1401,158 @@ Thus $\pi$ is irreducible if and only if $(\chi_{\pi^g}, \restr{\chi}{H_g})=0$ f
 \newpage
 \section{Induction from normal subgroups}
 
-thu 22 and wed 23.
+We study the following question: let $G$ be a finite group and $H \subset G$ a normal subgroup. Can we describe the representations of $G$ in terms of those of $H$ and those of $G/H$? 
+
+Assume $(W,\theta)$ is an irreducible representation of $G$. Let $(V,\pi)$ be an irreducible representation contained in $\Res_H^G \theta$. Then, for every $g \in G$, $\Res_H^G \theta$ also contains the representation $\pi^g$ on $H$ defined by 
+$$
+\pi^g(h) = \pi(g^{-1}hg).
+$$
+
+Indeed, if $T:V \to W$ intertwines $\pi$ with $\Res \theta$ (meaning that $T \pi(g)= \theta(g) T$ for all $g \in H$), then $\theta(g) T $ intertwines $\pi^g$ with $\theta$:
+$$
+\theta(g) T \pi^g(h) = \theta(g) T \pi(g^{-1}hg) = \theta(g) \theta(g^{-1} h g) T = \theta(h) \theta(g) T.
+$$
+
+Furthermore, if we consider the isotypic components of $W(\pi^g)$ of $\Res \theta$ corresponding to $\pi^g$, then $\theta(g_1) W(\pi^{g_2}) = W(\pi^{g_1g_2})$. 
+
+Thus the space
+$$
+\sum_{g \in G} W(\pi^g)
+$$
+is invariant under $G$, hence it coincides with $W$, since $W$ was assummed to be irreducible.
+
+In other words, $\Res \theta$ decomposes into copies of $\pi^g$, $g \in G$.
+
+We can define an action of $G$ on $\widehat H$ by 
+$$
+[\pi] \mapsto [\pi^g].
+$$
+
+What we have shown, is that any irreducible representation $W_\theta$ of $G$ defines a $G$-orbit $S \subset \widehat H$ and that
+$$
+W = \bigoplus_{x \in S} W(x), \qquad \theta(g) W(x) W(gx).
+$$
 
 
+For $x \in \widehat H$, denote by $\mathcal I(x) \subset G$, the stabilizer of $x$ in $G$. It is called the \textbf{inertia subgroup} of $x$. Note that the action of $H$ on $\widehat H$ is trivial, so that we always have $H \subset \mathcal I(x)$.
+
+Then
+$$
+\theta \sim \Ind_{\mathcal I(x)}^G \left( \restr{\Res_{\mathcal I(x)}^G \theta }{W(x)}\right).
+$$
+
+(why??) 
+
+What can be say about $\Res_{\mathcal I(x)}^G \theta$? In other words, assume we take $[\pi] \in \widehat H$. Then
+$$
+\mathcal I = \mathcal I([\pi]) = \{ g \in G \, \mid \, \pi^g \sim \pi \}.
+$$
+Can we describe all irreducible representations $\eta$ of $\mathcal I$ such that $\Res_H^{\mathcal I} \eta$ is isotypic to $\pi$?
+
+It can be shown that all such representations of $\mathcal I$ can be described in terms of \emph{projective} irreducible representations of $\mathcal I/H$. 
+
+In general, a \textbf{projective representation} of a group $K$ on a vector space $V$ is a homomorphism $K \to \PGL(V) \stackrel{\Delta}{=} \GL(V)/ \C^\ast \cdot \id_V$.
+
+Why do projective representations appear? We have that $\pi^g \sim \pi$ for all $g \in \mathcal I$. Thus there exists an invertible $T_g \in \GL(V_\pi)$ such that
+$$
+\pi(g^{-1}hg) = T_g^{-1} \pi(h) T_g
+$$
+for all $h \in H$. By irreducibility, $T_g$ is unique up to a scalar factor. This implies that $T_{g_1g_2} = c(g_1,g_2)T_{g_1}T_{g_2}$ for some $c(g_1,g_2) \in \C^\ast$. There the operators $T_g$ define a projective representation of $\mathcal I$ on $V$.
+
+In some cases projective representations do not appear. We will make the following assumptions: $H$ is abelian, so $\pi$ is a character of $H$. Also, $\pi:H \to \GL(\C)$ extends to a homomorphism $\widetilde: \mathcal I \to \C^\ast$.
+
+We want to describe all irreducible representations of $\mathcal I$ such that $\Res_H^{\mathcal I} \sigma$ is isotypic to $\pi$. 
+
+Assume $\sigma$ is such a representation. Then consider $\widetilde \sigma = \overline{\widetilde \pi} \otimes \sigma$ (recall that by assumption, $\pi$ is a character, so conjugation makes sense). Then $\widetilde \sigma$ is a representation on the same space given by $\sigma(g) = \widetilde \pi(g)^{-1} \sigma(g)$. Then $\widetilde \sigma$ is irreducible and $H \subset \ker \widetilde \sigma$. So $\sigma$ is an irreducible representation of $\mathcal I([\pi])/H$.
+
+Conversely, if $\widetilde \sigma$ is an irreducible representation of $\mathcal I/H$, then we can define $\sigma$ by $\sigma = \widetilde \pi \otimes \widetilde \sigma$. 
+
+We have almost proved:
+
+\begin{thm}
+ Let $G$ be a finite group and $H \subset G$ a normal abelian subgroup. Assume that every character $\chi \in \widehat H$ extends to a homomorphism $\widetilde \chi: \mathcal I(\chi) \to \C^\ast$, where
+$$
+\mathcal I(\chi) = \{ g \in G \, \mid \, \chi^g = \chi \}.
+$$
+Then the irreducible representations of $G$ can be described as follows: for every $G$-orbit in $\widehat H$, fix a representative $\chi$. Then for every $[\sigma] \in \widehat{ \mathcal I(\chi)/H}$, define $\Ind_{\mathcal I(x)}^G(\widetilde \chi \otimes \sigma)$. 
+
+Therefore, as a set, $\widehat G$ can be identified with 
+$$
+\bigsqcup_{[\chi] \in \widehat H / G} \widehat{\mathcal I(\chi)/H},
+$$
+where the $[\chi]$ ranges over representatives of $G$-orbits in $\widehat H$.
+\end{thm}
+
+\begin{example}
+ Consider a finite field $\F_p$ with $p$ prime. Consider the corresponding $ax+b$ group:
+$$
+G = \left\{ 
+\begin{pmatrix}
+a & b \\
+0 & 1
+\end{pmatrix} \, \mid \, a \in \F_p^\ast, b \in \F_p
+\right\}.
+$$
+Let $H$ be the subgroup
+$
+H = \left\{ 
+\begin{pmatrix}
+1 & b \\
+0 & 1
+\end{pmatrix} \, \mid \,  b \in \F_p
+\right\} \simeq \Z/p.
+$
+Then $\widehat H = \Z/p$ consists of characters $\chi_0,\ldots, \chi_{p-1}$ where
+$$
+\chi_k(b) = e^{\frac{2\pi i}{p} kb}.
+$$
+We have 
+$$
+\chi^{\begin{pmatrix} a & b \\ 0 & 1\end{pmatrix}} = \chi(a^{-1} -).
+$$
+The stabilizer of $\chi_0$ is $G$. The stabilizers of $\chi_k$ for $k=1,\ldots,p-1$ are trivial in $G/H$, and $G$ acts transitively on $\{ \chi_1,\ldots, \chi_{p-1} \}$. 
+
+The assumptions of the theorem are satisfied, as $\chi_0$ extends to $G$ by $\widetilde \chi_0(g) = 1$.
+
+Consider the representatives of the two $G$-orbits on $\widetilde H$:
+
+\underline{$\chi_0$}: Here $\mathcal I(\chi_0)=G$. We have $G/H \simeq \F_p^\times$. This leasds to $\lvert \F_p^\times \rvert = p-1$ one-dimensional representations. Namely, 
+$$
+G \ni \begin{pmatrix} a & b \\ 0 & 1
+\end{pmatrix} \mapsto \chi(a)
+$$
+for $\chi \in \F_p^\times\simeq \Z/(p-1)$. 
+
+\underline{$\chi_1$}: Here $\mathcal(\chi_1)=H$. Then we get one irreducible $p-1$-dimensional representation $\Ind_H^G \chi_1$. 
+\end{example}
+
+\subsection{Divisibility}
+
+\begin{thm}
+  Let $G$ be a finite group, $H \subset G$ a normal abelian subgroup, and $\pi$ an irreducible representation of $G$. Then $\dim \pi$ divides $\lvert G \rvert / \lvert H \rvert$. 
+\end{thm}
+
+\begin{proof}
+Recall that we already proved this for $H=Z(G)$. For general $H$, we know that $\pi \simeq \Ind_I^G \sigma$ for some  $I \supset H$ and $\Res_H^I \sigma$ is isotypic to $\chi \in \widehat H$. 
+
+Consider the groups $\widetilde I = \sigma(I)$ and $\widetilde H = \sigma(H) = \{\chi(h) \cdot 1 \, \mid \, h \in H \}$. 
+
+Then $\widetilde H \subset Z(\widetilde I)$ and the representation of $\widetilde I$ on $V_\sigma$ is irreducible. Hence 
+$$
+\dim \sigma \mid \lvert \widetilde I / \widetilde H \rvert = \lvert I  / H \cdot \ker \sigma \rvert,
+$$
+so
+$$
+\dim \sigma \mid \lvert I / H \rvert.
+$$
+Hence 
+$$
+\dim \pi = \lvert G / I \rvert \dim \sigma  \mid \lvert G / I \rvert \lvert G / H \rvert = \lvert  G /H \rvert.
+$$
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 \newpage
 \section{Part II - Compact groups}
 
