@@ -2001,6 +2001,7 @@ so $X \in \ker \pi_\ast$.
 \end{proof}
 
 \begin{prop}
+\label{propfix}
   Let $\pi:G \to \GL(V)$ be a representation of a Lie group $G$ on a finite-dimensional real or complex vector space $V$. Take any $v \in V$. Then
 $$
 H = \{ g \in G \, | \, \pi(g) v = v \}
@@ -2060,7 +2061,7 @@ Let $W$ be the space of bilinear forms on $V$. Note that $W \simeq V^\ast \otime
 $$
 (\pi(g)B')(v,w) = B'(g^{-1}v,g^{-1}w).
 $$
-Then $G$ is exactly the set $\{  g \in \GL(V) \mid \pi(g) B = B \}$, so that from [[Propostion 2]], it follows that $G$ is a Lie group. with Lie algebra
+Then $G$ is exactly the set $\{  g \in \GL(V) \mid \pi(g) B = B \}$, so that from Proposition \ref{propfix}, it follows that $G$ is a Lie group. with Lie algebra
 $$
 \g = \{X \in \mathfrak{gl}(V) \, \mid \, \pi_\ast(X) B = 0 \}.
 $$
@@ -2302,6 +2303,7 @@ Then $\widetilde G$ is a Lie group with inverse given by the lift of the inverse
 \end{proof}
 
 \begin{thm}
+\label{thmsimply}
   Let $G,H$ be Lie groups with $G$ simply connected. Then any Lie algebra homomorphism $\rho:\g \to \mathfrak h$ integrates to a Lie group homomorphism $\pi:G \to H$.
 \end{thm}
 
@@ -2496,7 +2498,7 @@ $$
 This is clearly homeomorphic to $S^3$, which is simply-connected.
 \end{proof}
 
-Therefore, from [[Prop]], we have a one to one correspondence between Lie group homomorphisms $SU(2) \to \GL(V)$ and Lie algebra homomorphisms $\mathfrak{su}(2) \to \mathfrak{gl}(V)$.
+Therefore, from Theorem \ref{thmsimply}, we have a one to one correspondence between Lie group homomorphisms $SU(2) \to \GL(V)$ and Lie algebra homomorphisms $\mathfrak{su}(2) \to \mathfrak{gl}(V)$.
 
 Recall that if $\g$ is Lie algebra, then a \textbf{representation} of $\g$ on $V$ is the same thing as a Lie algebra homomorphism $\g \to \mathfrak{gl}(V)$. We also say that $V$ is a \textbf{$\g$-module}. We say that a subspace $W \subset V$ is \textbf{invariant} if $X \cdot W \subset W$ for all $X \in \g$. A representation $\g \to \mathfrak{gl}(V)$ is \textbf{irreducible} (or the $\g$-module $V$ is \textbf{simple}) if there are no proper invariant subspaces.
 
@@ -2525,7 +2527,7 @@ By restriction, the torus $T \subset SU(2)$ act on $V$ as well, and by complete 
 \begin{proof}
 Note that each irreducible eigenspace must be one-dimensional, since on each eigenspace, $H$ is sent to a diagonal matrix. Thus on each one-dimensional irreducible representation, $itH$ is sent to multiplication by $it\alpha$.
 
-Also note that $\exp(itH) \in S^1$, so that the action of $H$ on $(\C,+)$ lifts to a representation of $S^1$. These are all of the form $\theta \ mapsto n \theta$.
+Also note that $\exp(itH) \in S^1$, so that the action of $H$ on $(\C,+)$ lifts to a representation of $S^1$. These are all of the form $\theta \mapsto n \theta$.
 
 Exponentiating, we get that $e^{itH}=e^{it\alpha}$ for all $t \in \R$. Put $t=2\pi$. Then we get that $1=e^{2\pi i \alpha}$, which is possible only if $\alpha \in \Z$.
 \end{proof}
@@ -2784,7 +2786,7 @@ From now on, assume $G$ is a compact connected Lie group. Consider the adjoint r
 $$
 \langle Tx,y  \rangle  + \langle X,Ty \rangle = 0
 $$
-for all $x,y \in \g$ (???). 
+for all $x,y \in \g$. 
 
 Now we use left- or right-translations to define a scalar product on $T_gG$ for any $g \in G$. Thus $G$ becomes a Riemannian manifold such that both left and right translations preserve the Riemannian structure.
 
@@ -2796,7 +2798,7 @@ Now we use left- or right-translations to define a scalar product on $T_gG$ for 
 
 The result is true for tori, since they are of the form $\R^n/\Z^n$, so their geodesics are lines.
 
-In general, it suffices to consider geodesics passing through $e$. Let $\gamma: \R \to G$ be a geodesic with $\gamma(0)=e$. Put $X= \gamma'(0) \in \g$. For any $g \in G$, the map $t \mapsto g \gamma(t) g^{-1}$ is also a geodesic (because the scalar product is invariant under left- and right-translations). Its derivative at $0$ is $Ad(g)(X)$.
+In general, it suffices to consider geodesics passing through $e$. Let $\gamma: \R \to G$ be a geodesic with $\gamma(0)=e$. Put $X= \gamma'(0) \in \g$. For any $g \in G$, the map $t \mapsto g \gamma(t) g^{-1}$ is also a geodesic (because the scalar product is invariant under left- and right-translations). Its derivative at $0$ is $\Ad(g)(X)$.
 
 Let $T$ be a maximal torus containing $\exp(tX)$ for $t \in \R$. Then $\Ad(g)(X)=X$ for all $g \in T$. 
 
@@ -3063,7 +3065,7 @@ $$
 if $\alpha \neq -\beta$.
 \end{lemma}
 \begin{proof}
-This follows from the invariance of $\Ad$. Namely let $X \alpha \in \g_\alpha$ and $X_\beta \in \g_\beta$. Then:
+This follows from the invariance of $\Ad$. Namely let $X_\alpha \in \g_\alpha$ and $X_\beta \in \g_\beta$. Then:
 \begin{align*}
   0 &= ([H,X_\alpha],X_\beta ) + (X_\alpha,[H,X_\beta]) \\
 &= (\alpha(H)X_\alpha, X_\beta) + (X_\alpha,\beta(H)X_\beta) \\
@@ -3344,7 +3346,7 @@ We see that the Weyl group is the group $D_6$ of symmetries preserving the hexag
 
 Assume now that $G$ is a compact connected Lie group and $T \subset G$ a maximal torus. Consider the corresponding root system $\Delta$ on $V=i \mathfrak t ^\ast \subset \mathfrak h^\ast$. 
 
-Let $V_0 = Span_\R \Delta$. Then for any $\alpha \in \Delta$, the reflection $s_\alpha$ act trivially on $V_0^\perp$. It follows that the group generated by $s_\alpha$ ($\alpha \in \Delta$) can be identified with the Weyl group $W$ generated by $\restr{s_\alpha}{V_0}$.
+Let $V_0 = \Span_\R \Delta$. Then for any $\alpha \in \Delta$, the reflection $s_\alpha$ act trivially on $V_0^\perp$. It follows that the group generated by $s_\alpha$ ($\alpha \in \Delta$) can be identified with the Weyl group $W$ generated by $\restr{s_\alpha}{V_0}$.
 
 We have a homomorphism
 $$
