@@ -12,37 +12,39 @@
 \BOOKMARK [2][-]{subsection.4.1}{Functions on Euclidean Space}{section.4}% 12
 \BOOKMARK [1][-]{section.5}{Commutative Algebra - Eisenbud}{}% 13
 \BOOKMARK [2][-]{subsection.5.1}{Chapter 16 - Modules of Differentials}{section.5}% 14
-\BOOKMARK [1][-]{section.6}{Deformation Theory - Hartshorne}{}% 15
-\BOOKMARK [2][-]{subsection.6.1}{Chapter I.3 - The Ti functors}{section.6}% 16
-\BOOKMARK [1][-]{section.7}{Geometry of differential forms - Morita}{}% 17
-\BOOKMARK [2][-]{subsection.7.1}{Chapter 1 - Manifolds}{section.7}% 18
-\BOOKMARK [1][-]{section.8}{Introduction to Differential Geometry - Spivak}{}% 19
+\BOOKMARK [1][-]{section.6}{Complex Geometry - Daniel Huybrechts}{}% 15
+\BOOKMARK [2][-]{subsection.6.1}{1 Local Theory}{section.6}% 16
+\BOOKMARK [1][-]{section.7}{Deformation Theory - Hartshorne}{}% 17
+\BOOKMARK [2][-]{subsection.7.1}{Chapter I.3 - The Ti functors}{section.7}% 18
+\BOOKMARK [1][-]{section.8}{Geometry of differential forms - Morita}{}% 19
 \BOOKMARK [2][-]{subsection.8.1}{Chapter 1 - Manifolds}{section.8}% 20
-\BOOKMARK [2][-]{subsection.8.2}{Chapter 3 - The tangent bundle}{section.8}% 21
-\BOOKMARK [2][-]{subsection.8.3}{Chapter 4 - Tensors}{section.8}% 22
-\BOOKMARK [2][-]{subsection.8.4}{Chapter 5 - Vector fields and differential equations}{section.8}% 23
-\BOOKMARK [1][-]{section.9}{Introduction to Commutative Algebra - Atiyah-MacDonald}{}% 24
-\BOOKMARK [2][-]{subsection.9.1}{Chapter 1 - Rings and ideals}{section.9}% 25
-\BOOKMARK [2][-]{subsection.9.2}{Chapter 2 - Modules}{section.9}% 26
-\BOOKMARK [2][-]{subsection.9.3}{Chapter III - Rings and modules of fractions}{section.9}% 27
-\BOOKMARK [2][-]{subsection.9.4}{Chapter 5 - Integral dependence and valuations}{section.9}% 28
-\BOOKMARK [2][-]{subsection.9.5}{Chapter 7 - Noetherian rings}{section.9}% 29
-\BOOKMARK [1][-]{section.10}{Lie groups, Lie algebras and Representations - Hall}{}% 30
-\BOOKMARK [2][-]{subsection.10.1}{Matrix Lie groups}{section.10}% 31
-\BOOKMARK [1][-]{section.11}{Linear representations of finite groups - Serre}{}% 32
-\BOOKMARK [2][-]{subsection.11.1}{Chapter 1 - Representations and characters}{section.11}% 33
-\BOOKMARK [2][-]{subsection.11.2}{Chapter 2 - The character of a representation}{section.11}% 34
-\BOOKMARK [2][-]{subsection.11.3}{Chapter 3}{section.11}% 35
-\BOOKMARK [1][-]{section.12}{The K-book - Charles Weibel}{}% 36
-\BOOKMARK [2][-]{subsubsection.12.0.1}{Chapter 1.1 - Free modules, GLn and stably free modules}{section.12}% 37
-\BOOKMARK [2][-]{subsection.12.1}{Chapter 1.2 - Projective modules}{section.12}% 38
-\BOOKMARK [1][-]{section.13}{Representation Theory - Fulton, Harris}{}% 39
-\BOOKMARK [2][-]{subsection.13.1}{Representations of Finite Groups}{section.13}% 40
-\BOOKMARK [2][-]{subsection.13.2}{Chapter 7 - Lie groups}{section.13}% 41
-\BOOKMARK [2][-]{subsection.13.3}{Lecture 8 - Lie Algebras and Lie groups}{section.13}% 42
-\BOOKMARK [1][-]{section.14}{Twenty-Four Hours of Local Cohomology}{}% 43
-\BOOKMARK [2][-]{subsection.14.1}{Lecture 1 - Basic notions}{section.14}% 44
-\BOOKMARK [2][-]{subsection.14.2}{Lecture 7 - Local cohomology}{section.14}% 45
-\BOOKMARK [1][-]{section.15}{Riemannian geometry - Do Carmo}{}% 46
-\BOOKMARK [2][-]{subsection.15.1}{Chapter 0 - Differentiable manifolds}{section.15}% 47
-\BOOKMARK [2][-]{subsection.15.2}{Chapter 2 - Affine and Riemannian connections}{section.15}% 48
+\BOOKMARK [1][-]{section.9}{Introduction to Differential Geometry - Spivak}{}% 21
+\BOOKMARK [2][-]{subsection.9.1}{Chapter 1 - Manifolds}{section.9}% 22
+\BOOKMARK [2][-]{subsection.9.2}{Chapter 3 - The tangent bundle}{section.9}% 23
+\BOOKMARK [2][-]{subsection.9.3}{Chapter 4 - Tensors}{section.9}% 24
+\BOOKMARK [2][-]{subsection.9.4}{Chapter 5 - Vector fields and differential equations}{section.9}% 25
+\BOOKMARK [1][-]{section.10}{Introduction to Commutative Algebra - Atiyah-MacDonald}{}% 26
+\BOOKMARK [2][-]{subsection.10.1}{Chapter 1 - Rings and ideals}{section.10}% 27
+\BOOKMARK [2][-]{subsection.10.2}{Chapter 2 - Modules}{section.10}% 28
+\BOOKMARK [2][-]{subsection.10.3}{Chapter III - Rings and modules of fractions}{section.10}% 29
+\BOOKMARK [2][-]{subsection.10.4}{Chapter 5 - Integral dependence and valuations}{section.10}% 30
+\BOOKMARK [2][-]{subsection.10.5}{Chapter 7 - Noetherian rings}{section.10}% 31
+\BOOKMARK [1][-]{section.11}{Lie groups, Lie algebras and Representations - Hall}{}% 32
+\BOOKMARK [2][-]{subsection.11.1}{Matrix Lie groups}{section.11}% 33
+\BOOKMARK [1][-]{section.12}{Linear representations of finite groups - Serre}{}% 34
+\BOOKMARK [2][-]{subsection.12.1}{Chapter 1 - Representations and characters}{section.12}% 35
+\BOOKMARK [2][-]{subsection.12.2}{Chapter 2 - The character of a representation}{section.12}% 36
+\BOOKMARK [2][-]{subsection.12.3}{Chapter 3}{section.12}% 37
+\BOOKMARK [1][-]{section.13}{The K-book - Charles Weibel}{}% 38
+\BOOKMARK [2][-]{subsubsection.13.0.1}{Chapter 1.1 - Free modules, GLn and stably free modules}{section.13}% 39
+\BOOKMARK [2][-]{subsection.13.1}{Chapter 1.2 - Projective modules}{section.13}% 40
+\BOOKMARK [1][-]{section.14}{Representation Theory - Fulton, Harris}{}% 41
+\BOOKMARK [2][-]{subsection.14.1}{Representations of Finite Groups}{section.14}% 42
+\BOOKMARK [2][-]{subsection.14.2}{Chapter 7 - Lie groups}{section.14}% 43
+\BOOKMARK [2][-]{subsection.14.3}{Lecture 8 - Lie Algebras and Lie groups}{section.14}% 44
+\BOOKMARK [1][-]{section.15}{Twenty-Four Hours of Local Cohomology}{}% 45
+\BOOKMARK [2][-]{subsection.15.1}{Lecture 1 - Basic notions}{section.15}% 46
+\BOOKMARK [2][-]{subsection.15.2}{Lecture 7 - Local cohomology}{section.15}% 47
+\BOOKMARK [1][-]{section.16}{Riemannian geometry - Do Carmo}{}% 48
+\BOOKMARK [2][-]{subsection.16.1}{Chapter 0 - Differentiable manifolds}{section.16}% 49
+\BOOKMARK [2][-]{subsection.16.2}{Chapter 2 - Affine and Riemannian connections}{section.16}% 50

@@ -597,6 +597,42 @@ Show that if $b \in S$ is an idempotent ($b^2=b$), and $d:S \to M$ is any deriva
 This is trivial. $db=d(b^2)=2db$. If $2=0$, then the statement is automatically true. If not, then $db=0$ by subtraction. 
 \end{sol}
 
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{Complex Geometry - Daniel Huybrechts}
+
+\subsection{1 Local Theory}
+
+\begin{exc}[1.1.1]
+Show that every holomorphic map $f:\C \to \mathbb H = \{ z \mid \Im z > 0 \}$ is constant.
+\end{exc}
+\begin{sol}
+Note that $\mathbb H$ is holomorphic to the open unit disc via the Möbius transformation $z \mapsto i/z$. Then it follows from Liouville's theorem that any such map must be constant.
+\end{sol}
+
+\begin{exc}[1.1.2]
+Show that the real and imaginary part $u$ and $v$, respectively, of a holomorphic function $f=u+iv$ are harmonic, i.e.
+$$
+\sum_i \frac{\partial^2 u}{\partial x_i ^2 } + \sum_i \frac{\partial^2 u}{\partial y_i^2} = 0,
+$$
+and similarly for $v$.
+\end{exc}
+\begin{sol}
+It will be clear from the solution that without loss of generality, we can do this for the one-dimensional case. Then this follows trivially from the Cauchy-Riemann equations:
+\begin{align*}
+\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} &= \frac{\partial}{\partial x} \frac{\partial u}{\partial x} + 
+\frac{\partial}{\partial x} \frac{\partial u}{\partial y} \\
+&= \frac{\partial}{\partial x} \frac{\partial v}{\partial y} - 
+\frac{\partial}{\partial y} \frac{\partial v}{\partial x} \\ 
+&= 0.
+\end{align*}
+\end{sol}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Deformation Theory - Hartshorne}
 
 \subsection{Chapter I.3 - The $T^i$ functors}
