@@ -1,0 +1,94 @@
+\begin{thebibliography}{{Sta}13}
+
+\bibitem[EH00]{eisenbud_harris}
+David Eisenbud and Joe Harris.
+\newblock {\em The geometry of schemes}, volume 197 of {\em Graduate Texts in
+  Mathematics}.
+\newblock Springer-Verlag, New York, 2000.
+
+\bibitem[Eis95]{eisenbud}
+David Eisenbud.
+\newblock {\em Commutative algebra}, volume 150 of {\em Graduate Texts in
+  Mathematics}.
+\newblock Springer-Verlag, New York, 1995.
+\newblock With a view toward algebraic geometry.
+
+\bibitem[Fan01]{fantechi_stacks}
+Barbara Fantechi.
+\newblock Stacks for everybody.
+\newblock In {\em European {C}ongress of {M}athematics, {V}ol. {I}
+  ({B}arcelona, 2000)}, volume 201 of {\em Progr. Math.}, pages 349--359.
+  Birkh\"auser, Basel, 2001.
+
+\bibitem[G{\'o}m01]{gomez_stacks}
+Tom{\'a}s~L. G{\'o}mez.
+\newblock Algebraic stacks.
+\newblock {\em Proc. Indian Acad. Sci. Math. Sci.}, 111(1):1--31, 2001.
+
+\bibitem[Har77]{hartshorne}
+Robin Hartshorne.
+\newblock {\em Algebraic geometry}.
+\newblock Springer-Verlag, New York, 1977.
+\newblock Graduate Texts in Mathematics, No. 52.
+
+\bibitem[Har10]{hartshorne_def}
+Robin Hartshorne.
+\newblock {\em Deformation theory}, volume 257 of {\em Graduate Texts in
+  Mathematics}.
+\newblock Springer, New York, 2010.
+
+\bibitem[Kle69]{kleiman_grassmannians}
+Steven~L. Kleiman.
+\newblock Geometry on {G}rassmannians and applications to splitting bundles and
+  smoothing cycles.
+\newblock {\em Inst. Hautes \'Etudes Sci. Publ. Math.}, ?(36):281--297, 1969.
+
+\bibitem[Mey13]{masteroppgaven}
+Fredrik Meyer.
+\newblock Degenerations of {G(3,6)}.
+\newblock Master's thesis, University of Oslo, 2013.
+
+\bibitem[Mil80]{milne_etale}
+James~S. Milne.
+\newblock {\em \'{E}tale cohomology}, volume~33 of {\em Princeton Mathematical
+  Series}.
+\newblock Princeton University Press, Princeton, N.J., 1980.
+
+\bibitem[Mum65]{mumford_picard}
+David Mumford.
+\newblock Picard groups of moduli problems.
+\newblock In {\em Arithmetical {A}lgebraic {G}eometry ({P}roc. {C}onf. {P}urdue
+  {U}niv., 1963)}, pages 33--81. Harper \& Row, New York, 1965.
+
+\bibitem[Neu09]{neumann_stacks}
+Frank Neumann.
+\newblock {\em Algebraic stacks and moduli of vector bundles}.
+\newblock Publica\c c\~oes Matem\'aticas do IMPA. [IMPA Mathematical
+  Publications]. Instituto Nacional de Matem\'atica Pura e Aplicada (IMPA), Rio
+  de Janeiro, 2009.
+\newblock 27${^{{}}{\rm{o}}}$ Col{\'o}quio Brasileiro de Matem{\'a}tica. [27th
+  Brazilian Mathematics Colloquium].
+
+\bibitem[Nit05]{nitsure_hilbert}
+Nitin Nitsure.
+\newblock Construction of {H}ilbert and {Q}uot schemes.
+\newblock In {\em Fundamental algebraic geometry}, volume 123 of {\em Math.
+  Surveys Monogr.}, pages 105--137. Amer. Math. Soc., Providence, RI, 2005.
+
+\bibitem[Ros94]{rosenberg_ktheory}
+Jonathan Rosenberg.
+\newblock {\em Algebraic {$K$}-theory and its applications}, volume 147 of {\em
+  Graduate Texts in Mathematics}.
+\newblock Springer-Verlag, New York, 1994.
+
+\bibitem[{Sta}13]{stacks-project}
+The {Stacks Project Authors}.
+\newblock \itshape stacks project.
+\newblock \url{http://stacks.math.columbia.edu}, 2013.
+
+\bibitem[Vak13]{ravi_vakil}
+Ravi Vakil.
+\newblock Math 216: Foundations of algebraic geometry.
+\newblock \url{http://math.stanford.edu/~vakil/216blog/}, juni 2013.
+
+\end{thebibliography}
