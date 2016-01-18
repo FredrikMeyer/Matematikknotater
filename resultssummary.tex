@@ -4,7 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}   % S P R A A K
 % \usepackage{graphicx}    % postscript graphics
-\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{amssymb, amsmath, amsthm} % symboler, osv
 \usepackage{mathrsfs}
 \usepackage{url}
 \usepackage{thmtools}
@@ -103,6 +103,7 @@ The $S_3$ part comes from permuting the three points $P_1$, $P_2$ and $P_3$. If 
 $$
 (u:v:w)\times (a:b:c) \mapsto (w:u:v) \times(b:c:a).
 $$
+
 
 \subsection{A natural embedding in $\PP^1 \times \PP^1 \times \PP^1$}
 
@@ -211,10 +212,71 @@ The other smoothing is derived from another way of writing the equations of $dP_
 
 It is clear that the one-dimensional component is a smoothing of $C(dP_6)$, since it can be obtained as a generic hyperplane in $C(\PP^1 \times \PP^1 \times \PP^1)$.
 
-\section{The total families}
+\section{Topology of the smootings of the affine cones}
 
-\subsection{As a subvariety of $\PP^2 \times \PP^2$}
+Since the singularities of our Calabi-Yau look locally like affine cones over $dP_6$, and the smoothings are given by locally smoothing these cones, we would like to compute their topology. 
 
-Try to explain why total family is $\PP^2 \times \PP^2 \bs dP_6$. + computations with Gysin sequence
+\subsection{The first smoothing of $C(dP_6)$}
+
+Recall that one of the smoothing components of $C(dP_6)$ is given by the equations of $\PP^1 \times \PP^1 \times \PP^1$ in its Segre embedding in $\PP^7$, replacing one of the corners by $y_0+t$.
+
+The total family lies in $\Aa^8$, and we can take its projective closure in $\PP^8$ by homogenizing the equations (treating the variable $s_1$ as a constant of degree $0$). Thus we get a family $\mathscr X \to \Aa^1$, where $\mathscr X_s$ is a projective variety for each $s \in \Aa^1$. For $s=0$, we get the projective cone over $dP_6$, and for $s \neq 0$, we get something isomorphic (after a linear change of coordinates) to $(\PP^1)^3$. By inspection, we see that what is gained in the projective closure is exactly $dP_6$ (for $s \neq 0$). Hence the smoothing of $C(dP_6)$ is isomorphic to $\PP^1 \times \PP^1 \times \PP^1 \bs dP_6$.
+
+Let $M = \PP^1 \times \PP^1 \times \PP^1 \bs dP_6$ and let $D=dP_6$. There is the so-called ``homology Gysin sequence'', which will help us compute much of the homology of $M$:
+
+\[
+\ldots \to H_{k+1}(M) \to H_{k_1}(D) \to H_k(M \bs D) \to H_k(M) \to H_{k-2}(D) \to H_{k-1}(M \bs D) \to \ldots 
+\]
+
+Since $\PP^1 \simeq S^2$, we can use the Künneth formula to compute the homology of $(\PP^1)^3$: 
+\[
+H^i(M) = \begin{cases}
+1 & i = 0 \\
+0 & i = 1 \\
+3 & i = 2 \\
+0 & i = 3 \\
+3 & i = 4 \\
+0 & i = 5 \\
+1 & i = 6
+\end{cases}
+\]
+
+The homology of the del Pezzo is given by 
+
+\[
+H^i(D) = \begin{cases}
+1 & i = 0 \\
+0 & i = 1 \\
+4 & i = 2 \\
+0 & i = 3 \\
+1 & i = 4
+\end{cases}
+\]
+
+Writing up the long exact sequence (and being happy for all the zeroes), we find almost all the homology of $M \bs D$:
+\[
+H^i(M \bs D) = \begin{cases}
+1 & i = 0 \\
+0 & i = 1 \\
+2 & i = 2 \\
+? & i = 3 \\
+?' & i = 4 \\
+0 & i = 5,6.
+\end{cases}
+\]
+
+The two questions marks are not independent, however. Since $\chi(M) = 8$\footnote{Heuristic: Euler-characteristic is some kind of volume. And $\PP^1$ has Euler characteristic two, and volume should be multiplicative.} and $\chi(dP_6)=6$, we know that $\chi(M \bs D) = 2$. In fact, $?'=?-1$. ((there may be some codimension argument to the effect that $H_4(M) = H_4(M \bs D)$ ...))
+
+\subsection{The second smoothing}
+
+\subsubsection{Hei hei}
+
+ffff
+
+\paragraph{dfdkf klfdksfld }
+
+$\implies$
+og 
+$\Rightarrow$ 
 
 \end{document}

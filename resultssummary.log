@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  16 NOV 2015 18:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  14 JAN 2016 11:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1215,82 +1215,96 @@ Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
  line 90.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 107.
+(hyperref)                removing `math shift' on input line 108.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 107.
+(hyperref)                removing `superscript' on input line 108.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\times' on input line 107.
+(hyperref)                removing `\times' on input line 108.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 107.
+(hyperref)                removing `superscript' on input line 108.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\times' on input line 107.
+(hyperref)                removing `\times' on input line 108.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 107.
+(hyperref)                removing `superscript' on input line 108.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 107.
+(hyperref)                removing `math shift' on input line 108.
 
 [2]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 117.
+(hyperref)                removing `math shift' on input line 118.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 117.
+(hyperref)                removing `subscript' on input line 118.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 117.
+(hyperref)                removing `math shift' on input line 118.
 
 [3] [4]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 216.
+(hyperref)                removing `math shift' on input line 219.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 216.
+(hyperref)                removing `subscript' on input line 219.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\times' on input line 216.
+(hyperref)                removing `math shift' on input line 219.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 216.
+Overfull \hbox (53.56395pt too wide) detected at line 229
+[] \OMS/cmsy/m/n/10.95 ! \OML/cmm/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/
+it/10.95 M\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ! \OML/cmm/m/it/10.95 H[]\OT
+1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 D\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 
+! \OML/cmm/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 M\OMS/cmsy/m/n
+/10.95 n\OML/cmm/m/it/10.95 D\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ! \OML/cm
+m/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 M\OT1/cmr/m/n/10.95 ) \
+OMS/cmsy/m/n/10.95 ! \OML/cmm/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/1
+0.95 D\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ! \OML/cmm/m/it/10.95 H[]\OT1/cm
+r/m/n/10.95 (\OML/cmm/m/it/10.95 M\OMS/cmsy/m/n/10.95 n\OML/cmm/m/it/10.95 D\OT
+1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ! []
+ []
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 216.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 220.
 [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 220.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 282.
+ [6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 282.
  (./resultssummary.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 220.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 220.
-Package rerunfilecheck Info: File `resultssummary.out' has not changed.
-(rerunfilecheck)             Checksum: CD5AD8EE8DDC4D33FAB3C17DF8E69476;692.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 220.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 282.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 282.
+
+
+Package rerunfilecheck Warning: File `resultssummary.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `resultssummary.out':
+(rerunfilecheck)             Before: 06399E699EDF1795CD636865F8E92194;796
+(rerunfilecheck)             After:  93D693BE71FCB4813807F7007690C44A;863.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 282.
  ) 
 Here is how much of TeX's memory you used:
- 20086 strings out of 493308
- 349458 string characters out of 6135157
- 467313 words of memory out of 5000000
- 23076 multiletter control sequences out of 15000+600000
- 21128 words of font info for 73 fonts, out of 8000000 for 9000
+ 20118 strings out of 493308
+ 349770 string characters out of 6135157
+ 468328 words of memory out of 5000000
+ 23094 multiletter control sequences out of 15000+600000
+ 25942 words of font info for 87 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,9n,63p,3270b,678s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/enc/dvips/
@@ -1302,26 +1316,31 @@ nts/cm/cmmi12.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmmi8.pfb></mn/anatu/modules/opt/texlive/2013-ui
 o/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></mn/anatu/modu
 les/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r6.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr8.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></mn/anatu/modules/opt/tex
-live/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></m
+r12.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr6.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></mn/anatu/modules/opt/texl
+ive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></m
 n/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/am
-sfonts/symbols/msbm10.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/tex
-mf-dist/fonts/type1/public/rsfs/rsfs10.pfb></mn/anatu/modules/opt/texlive/2013-
-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></mn/anatu/mo
+sfonts/cm/cmsy8.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></mn/anatu/modules/opt/texlive
+/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></mn/anatu/mo
 dules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfb
-x1200.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/ty
-pe1/public/cm-super/sfbx1440.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-te
-xmf/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></mn/anatu/modules/opt/
-texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+x1095.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/ty
+pe1/public/cm-super/sfbx1200.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-te
+xmf/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></mn/anatu/modules/opt/
+texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb>
 </mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public
-/cm-super/sfrm1728.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-
-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on resultssummary.pdf (5 pages, 223457 bytes).
+/cm-super/sfrm0800.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-
+dist/fonts/type1/public/cm-super/sfrm0900.pfb></mn/anatu/modules/opt/texlive/20
+13-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></mn/anatu
+/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/
+sfrm1200.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts
+/type1/public/cm-super/sfrm1728.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio
+-texmf/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
+Output written on resultssummary.pdf (6 pages, 277339 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
- 20 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 184 PDF objects out of 1000 (max. 8388607)
+ 152 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 500000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
