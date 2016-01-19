@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  14 JAN 2016 11:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  19 JAN 2016 10:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1175,25 +1175,21 @@ LaTeX Info: Redefining \nameref on input line 26.
 \openout5 = `resultssummary.out'.
 
 
+Overfull \hbox (6.01634pt too wide) in paragraph at lines 37--38
+[]\T1/cmr/m/n/10.95 Hence the in-ter-sec-tion of $\OML/cmm/m/it/10.95 Y$ \T1/cm
+r/m/n/10.95 with two generic hy-per-planes is a 3-dimensional
+ []
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 42.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 45.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 42.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 47.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 47.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 47.
+(/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/base/t1c
+mtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+Overfull \hbox (38.44768pt too wide) in paragraph at lines 45--46
+[]\T1/cmr/m/n/10.95 The main in-gre-di-ent will be the pack-age \T1/cmtt/m/n/10
+.95 Macaulay2 \T1/cmr/m/n/10.95 pack-age \T1/cmtt/m/n/10.95 VersalDeformations
+ []
 
 [1
 
@@ -1201,74 +1197,95 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 dmap/pdftex.map}]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 60.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 85.
+(hyperref)                removing `math shift' on input line 60.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 85.
-
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
- line 90.
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 108.
+(hyperref)                removing `math shift' on input line 65.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 108.
+(hyperref)                removing `subscript' on input line 65.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\times' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\times' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 108.
+(hyperref)                removing `math shift' on input line 65.
 
 [2]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 118.
+(hyperref)                removing `math shift' on input line 103.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 118.
+(hyperref)                removing `superscript' on input line 103.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 118.
+(hyperref)                removing `math shift' on input line 103.
 
-[3] [4]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 219.
-
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
+ line 108.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 219.
+(hyperref)                removing `math shift' on input line 126.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 219.
+(hyperref)                removing `superscript' on input line 126.
 
 
-Overfull \hbox (53.56395pt too wide) detected at line 229
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\times' on input line 126.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 126.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\times' on input line 126.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 126.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 126.
+
+[3]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 136.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 136.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 136.
+
+[4] [5]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 237.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 237.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 237.
+
+
+Overfull \hbox (53.56395pt too wide) detected at line 247
 [] \OMS/cmsy/m/n/10.95 ! \OML/cmm/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/
 it/10.95 M\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ! \OML/cmm/m/it/10.95 H[]\OT
 1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 D\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 
@@ -1281,30 +1298,23 @@ r/m/n/10.95 (\OML/cmm/m/it/10.95 M\OMS/cmsy/m/n/10.95 n\OML/cmm/m/it/10.95 D\OT
 1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ! []
  []
 
-[5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 282.
- [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 282.
+[6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 300.
+ [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 300.
  (./resultssummary.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 282.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 282.
-
-
-Package rerunfilecheck Warning: File `resultssummary.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `resultssummary.out':
-(rerunfilecheck)             Before: 06399E699EDF1795CD636865F8E92194;796
-(rerunfilecheck)             After:  93D693BE71FCB4813807F7007690C44A;863.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 282.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 300.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 300.
+Package rerunfilecheck Info: File `resultssummary.out' has not changed.
+(rerunfilecheck)             Checksum: 46E8D92B0BBA39ED7BDE3C5507A77301;1030.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 300.
  ) 
 Here is how much of TeX's memory you used:
- 20118 strings out of 493308
- 349770 string characters out of 6135157
+ 20143 strings out of 493308
+ 350521 string characters out of 6135157
  468328 words of memory out of 5000000
- 23094 multiletter control sequences out of 15000+600000
- 25942 words of font info for 87 fonts, out of 8000000 for 9000
+ 23112 multiletter control sequences out of 15000+600000
+ 26256 words of font info for 88 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,9n,63p,3270b,678s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/enc/dvips/
@@ -1336,11 +1346,13 @@ dist/fonts/type1/public/cm-super/sfrm0900.pfb></mn/anatu/modules/opt/texlive/20
 /modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/
 sfrm1200.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts
 /type1/public/cm-super/sfrm1728.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio
--texmf/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on resultssummary.pdf (6 pages, 277339 bytes).
+-texmf/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></mn/anatu/modules/o
+pt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sftt1095.p
+fb>
+Output written on resultssummary.pdf (7 pages, 308662 bytes).
 PDF statistics:
- 184 PDF objects out of 1000 (max. 8388607)
- 152 compressed objects within 2 object streams
- 25 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 205 PDF objects out of 1000 (max. 8388607)
+ 171 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 

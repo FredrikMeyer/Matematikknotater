@@ -24,7 +24,7 @@
 %Remark
 \newtheorem*{remark}{Remark}
 %Figref
-\newcommand{\figref}[1]{Figure~\ref{fig:#1}}
+\newcommand{\figref}[1]{Figure~\ref{fig:#1}} %%%%% lær cref
 
 %Matematikkommandoer
 %Kategorier
@@ -115,7 +115,7 @@
 \newcommand{\RR}{\mathfrak{R}}
 \DeclareMathOperator{\Pic}{Pic}
 \newcommand{\PP}{\mathbb{P}}
-\newcommand{\dprime}{{\prime\prime}} % double prime
+\newcommand{\dprime}{{\prime\prime}} % double prime 
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\aut}{\mbox{Aut}}
 \newcommand{\pr}{\mathrm{pr}}
