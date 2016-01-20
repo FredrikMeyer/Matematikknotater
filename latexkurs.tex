@@ -1,25 +1,28 @@
-\documentclass[11pt, english, a4paper]{article}
-
-
+\documentclass[11pt, a4paper]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[norsk]{babel}   % S P R A A K
 % \usepackage{graphicx}    % postscript graphics
 \usepackage{amssymb, amsmath, amsthm} % symboler, osv
 \usepackage{mathrsfs}
+
+
+%\usepackage{tikz}
+%\usetikzlibrary{babel}
+%\usetikzlibrary{cd}
+
 \usepackage{url}
 \usepackage{thmtools}
 \usepackage{enumerate}  % lister $  
 \usepackage{float}
 \usepackage{subcaption}
 
-\usepackage{tikz}
-\usetikzlibrary{cd}
-
 
 \usepackage{wrapfig} % for float right
 \usepackage{hyperref}
 
+
+\DeclareMathOperator{\tr}{Tr}
 
 
 %%%% start pakke for å inkludere kode
@@ -47,8 +50,7 @@
 }
 %%% slutt pakke for å inkludere kode
 
-\usepackage{mystyle} % stilfilen  
-
+%\usepackage{mystyle} % stilfilen  
 
 
 \begin{document}
@@ -105,6 +107,9 @@ x_1^n & \hdots & x_n^n
 
 Andre ganger ønsker du å skrive opp lemmaer, teoremer og bevis. Jeg bruker kommandoene \verb|\begin{prop}...\end{prop}| for proposisjoner og teoremer (se øverst i kildekoden til dette dokumentet). 
 
+\section{Noen vanlige vaner og uvaner}
+
+Lag egne kommandoer for symboler du bruker ofte. Eksempelvis: det er slitsomt å skrive \verb|\mathbb R| hver gang du ønsker å skrive $\mathbb R$. Med kommandoen 
 
 \section{Noen eksempler på nyttige pakker}
 
@@ -131,19 +136,35 @@ def approximateFraction(a,n):
 
 Andre ganger ønsker du kanskje å tegne kommutative diagrammer. Her anbefales \texttt{TikZ}. 
 
-\[
-\begin{tikzcd}
-T
-\arrow[drr, bend left, "x"]
-\arrow[ddr, bend right, "y"]
-\arrow[dr, dotted, "{(x,y)}" description] & & \\
-& X \times_Z Y \arrow[r, "p"] \arrow[d, "q"]
-& X \arrow[d, "f"] \\
-& Y \arrow[r, "g"]
-& Z
-\end{tikzcd}
-\]
+%\[
+%\begin{tikzcd}
+%T
+%\arrow[drr, bend left, "x"]
+%\arrow[ddr, bend right, "y"]
+%\arrow[dr, dotted, "{(x,y)}" description] & & \\
+%& X \times_Z Y \arrow[r, "p"] \arrow[d, "q"]
+%& X \arrow[d, "f"] \\
+%& Y \arrow[r, "g"]
+%& Z
+%\end{tikzcd}
+%\]
 
+En annen nyttig pakke er \texttt{tabular}, som er til for å lage tabeller. Den gidder jeg ikke forklare. Les om den på Wikibooks.
+
+\section{Nyttige ressurser}
+
+Under er en liste over nyttige ressurser (merk at lenkene er klikkbare om du leser dette på en skjerm). 
+
+\begin{itemize}
+\item \url{goo.gl/yxFaEy}. Dette er en PDF med liste over forskjellige symboler \LaTeX har å by på.
+\item \url{tobi.oetiker.ch/lshort/lshort.pdf} "The Not So Short Guide to \LaTeX". Denne er veldig fin. Om du har en ettermiddag, anbefaler jeg at du leser hele.
+\item \url{en.wikibooks.org/wiki/LaTeX} Wikibooks er også en bra ressurs, med mange eksempler.
+\item \url{www.ctan.org/} Lurer du på hvordan pakkene du bruker egentlig fungerer, slå opp på CTAN for glimrende dokumentasjon.
+\item \url{folk.uio.no/martibhe/LaTeX/} Martin Helsø har stor peil på \LaTeX, og han har endel nyttige ressurser på sin hjemmeside. 
+\item \url{detexify.kirelabs.org/classify.html}  Detexify er glimrende. Tegn noe osm ligner på et mattesymbol, og du får forslag til hvilken \LaTeX-kode du skal bruke for å skrive dette symbolet. 
+\end{itemize}
+
+Ellers: Google er din venn.
 
 
 \section{Videre spørsmål}
