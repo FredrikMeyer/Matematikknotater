@@ -1,9 +1,8 @@
 \documentclass[11pt, english, a4paper]{article}
 
-
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[norsk]{babel}   % S P R A A K
+\usepackage[english]{babel}   % S P R A A K
 % \usepackage{graphicx}    % postscript graphics
 \usepackage{amssymb, amsmath, amsthm} % symboler, osv
 \usepackage{mathrsfs}
@@ -20,22 +19,50 @@
 
 
 \begin{document}
-\title{Ideer til prosjektoppgaver}
+\title{Projects}
 \author{Fredrik Meyer}
 \maketitle 
 
-\section{Kvaternionene}
+\section{Computational group theory}
 
-Kvaternionene er et $4$-dimensjonalt tallsystem som har den egenskapen at alle tall har en multiplikativ invers. Dette er sant for reelle og komplekse tall (henholdsvis $1$- og $2$-dimensjonalt). Når vi går opp til $4$ dimensjoner ``mister'' vi kommutativitet.
+In the abstract algebra course, you learned about groups and their abstract properties. If you have a concrete group (given for example by generators and relations), then you would like to compute some of its properties. For example its order, its normal subgroups, and so on.
 
-Denne oppgaven kan gå ut på å først beskrive hva kvaternionene er, samt snakke om anvendelser ...............
+In this project you will learn about some of the basic algorithms for computing with groups. In addition, if you are into computers, you could try to implement some of these algorithms in a programming language such as \texttt{Python}, \texttt{Java}, or your language of choice.
 
-\section{Lineære coder/feilrettende koder}
+Alternatively, the project can be to write an introduction to GAP or SAGE intended for bachelor students. These are computer algebra software that already have implemented these algorithms.
 
-...
+Here are some possible sources:
 
-\section{???}
+\begin{itemize}
+\item \url{http://www.ams.org/notices/199706/seress.pdf} This is an overview of what the whole field is about.
+\item \url{http://www.math.colostate.edu/~hulpke/CGT/cgtnotes.pdf} These are notes for a course in computational group theory. I imagine this would be the main source.
+\item \url{http://www.gap-system.org/Doc/references.html} This is a list of some of the literature on the subject.
+\end{itemize}
 
 
+\section{Insolvability of the quintic}
+
+Usually there is no time in the abstract algebra course to fully prove the insolvability of the general quintic. In this project you will present a proof of this fact. If there is time, you could discuss which quintics do have solutions. If there is interest for that, you could also say something about how Galois groups are computed in practice.
+
+You could also spend some time discussing how Abel's proof differs from modern proofs. 
+
+\begin{itemize}
+\item Boken ``Abels bevis'' av Peter Pesic.
+\item ``Abstract algebra'' by Fraleigh.
+\end{itemize}
+
+\section{Visualizing algebraic surfaces}
+
+In this project, you will present a gallery of algebraic surfaces and discuss some of their properties. First off, you will have to find a good visualization software. Then you must learn how to use it.
+
+You must also learn some of the relevant properties of algebraic surfaces: words like irreducibility, singularities, projections, and maybe blowups.
+
+The final project will be a zoo of surfaces together with some of their properties. 
+
+\begin{itemize}
+\item \url{https://imaginary.org/program/surfer} This is a user-friendly program that makes very nice surfaces.
+\item SAGE, Mathematica, etc. also makes nice pictures.
+\item Hartshorne's ``Algebraic Geometry'' for definitions.
+\end{itemize}
 
 \end{document}

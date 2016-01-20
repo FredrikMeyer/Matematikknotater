@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  19 JAN 2016 18:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.31)  20 JAN 2016 10:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -277,17 +277,7 @@ File: babel.def 2013/10/10 3.9g Babel common definitions
 * Local config file english.cfg used
 *
 (/site/share/texlive/texmf/tex/generic/uio/english.cfg
-(/site/share/texlive/texmf/tex/generic/uio/lenglish.cfg)))
-(/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/generic/babel-
-norsk/norsk.ldf
-Language: norsk 2012/08/06 v2.0i Norsk support from the babel system
-Package babel Info: Making " an active character on input line 113.
-
-*************************************
-* Local config file norsk.cfg used
-*
-(/site/share/texlive/texmf/tex/generic/uio/norsk.cfg
-(/site/share/texlive/texmf/tex/generic/uio/lnorsk.cfg))))
+(/site/share/texlive/texmf/tex/generic/uio/lenglish.cfg))))
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/amsfonts
 /amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -749,45 +739,45 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 ) (./prosjekter2000_2.aux)
 \openout1 = `prosjekter2000_2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 22.
+LaTeX Font Info:    Try loading font information for U+msa on input line 21.
 
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/amsfonts
 /umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 22.
+LaTeX Font Info:    Try loading font information for U+msb on input line 21.
 
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/amsfonts
 /umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 22.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 21.
 
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/jknapltx
 /ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Package xypdf Info: Line width: 0.43799pt on input line 22.
+Package xypdf Info: Line width: 0.43799pt on input line 21.
 \AtBeginShipoutBox=\box35
-Package hyperref Info: Link coloring OFF on input line 22.
+Package hyperref Info: Link coloring OFF on input line 21.
 
 (/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/hyperref
 /nameref.sty
@@ -799,54 +789,75 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count131
 )
-LaTeX Info: Redefining \ref on input line 22.
-LaTeX Info: Redefining \pageref on input line 22.
-LaTeX Info: Redefining \nameref on input line 22.
+LaTeX Info: Redefining \ref on input line 21.
+LaTeX Info: Redefining \pageref on input line 21.
+LaTeX Info: Redefining \nameref on input line 21.
  (./prosjekter2000_2.out) (./prosjekter2000_2.out)
 \@outlinefile=\write4
 \openout4 = `prosjekter2000_2.out'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 30.
+
+(/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/base/t1c
+mtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 37.
+
+(/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/tex/latex/base/oms
+cmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 37.
+
+Overfull \hbox (7.20908pt too wide) in paragraph at lines 37--38
+[][]$\T1/cmtt/m/n/10.95 http : / / www . ams . org / notices / 199706 / seress 
+. pdf$[] \T1/cmr/m/n/10.95 This is an overview
+ []
+
+
+Overfull \hbox (3.23332pt too wide) in paragraph at lines 38--39
+[][]$\T1/cmtt/m/n/10.95 http : / / www . math . colostate . edu / ~hulpke / CGT
+ / cgtnotes . pdf$[] \T1/cmr/m/n/10.95 These
+ []
 
 [1
 
 {/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-var/fonts/map/pdftex/up
 dmap/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 68.
+ [2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 68.
  (./prosjekter2000_2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
-
-
-Package rerunfilecheck Warning: File `prosjekter2000_2.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `prosjekter2000_2.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  931401F0B4C7F9AE813422469A48BAA4;156.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 68.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 68.
+Package rerunfilecheck Info: File `prosjekter2000_2.out' has not changed.
+(rerunfilecheck)             Checksum: 6C47F794F4CC4B60EDFB6DE82CA0E262;189.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 68.
  ) 
 Here is how much of TeX's memory you used:
- 10590 strings out of 493308
- 153673 string characters out of 6135157
- 280551 words of memory out of 5000000
- 13826 multiletter control sequences out of 15000+600000
- 15785 words of font info for 56 fonts, out of 8000000 for 9000
+ 10558 strings out of 493308
+ 153442 string characters out of 6135157
+ 281125 words of memory out of 5000000
+ 13795 multiletter control sequences out of 15000+600000
+ 16099 words of font info for 57 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,6n,40p,3272b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,6n,40p,3272b,396s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/enc/dvips/
 cm-super/cm-super-t1.enc}</mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></mn/anatu/modules/opt/texlive/
-2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></mn/ana
-tu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-supe
-r/sfrm1095.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fon
-ts/type1/public/cm-super/sfrm1200.pfb></mn/anatu/modules/opt/texlive/2013-uio/u
-io-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb>
-Output written on prosjekter2000_2.pdf (1 page, 66200 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></mn/anatu/modules/opt/texlive
+/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></mn/an
+atu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-sup
+er/sfrm1095.pfb></mn/anatu/modules/opt/texlive/2013-uio/uio-texmf/texmf-dist/fo
+nts/type1/public/cm-super/sfrm1200.pfb></mn/anatu/modules/opt/texlive/2013-uio/
+uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></mn/anatu/module
+s/opt/texlive/2013-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sftt109
+5.pfb>
+Output written on prosjekter2000_2.pdf (2 pages, 100903 bytes).
 PDF statistics:
- 37 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 59 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
+ 6 named destinations out of 1000 (max. 500000)
+ 25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
