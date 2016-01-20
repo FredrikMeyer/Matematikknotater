@@ -12,9 +12,41 @@
 \usepackage{enumerate}  % lister $  
 \usepackage{float}
 \usepackage{subcaption}
-\usepackage[all]{xy}   % for comm.diagram
+
+\usepackage{tikz}
+\usetikzlibrary{cd}
+
+
 \usepackage{wrapfig} % for float right
 \usepackage{hyperref}
+
+
+
+%%%% start pakke for å inkludere kode
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+%%% slutt pakke for å inkludere kode
+
 \usepackage{mystyle} % stilfilen  
 
 
@@ -26,21 +58,24 @@
 
 \begin{abstract}
 \noindent
-Dette er en kort beskrivelse av hva resten av dokumentet handler om. Her skriver du hva temaet er, og hva du har tenkt å bevise. Det er ikke en roman du skriver, så spoilers skal ikke unngås.
+Sammendraget er en kort beskrivelse av hva resten av dokumentet handler om. Her skriver du hva temaet er, og hva du har tenkt å bevise. Det er ikke en roman du skriver, så spoilers skal ikke unngås.
 \end{abstract}
 
 \section{Introduksjon}
 
 I introduksjonen skal du motivere resten av artikkelen. Du forteller gjerne litt om hvorfor problemet er interessant, litt om historien bak, og hva andre folk har klart å gjøre før.
 
-Deretter beskriver du i mer detalj hva du skriver om i de resterende seksjonene. 
+Deretter beskriver du i mer detalj hva du skriver om i de resterende seksjonene.  %% sett inn dette selv
 
-\section{Noen ord om \LaTeX}
+\section{Hvordan komme i gang med \LaTeX}
 
 Det første du må gjøre er å skaffe \LaTeX. Er du Linux-bruker, kan du følge oppskriften på \url{http://goo.gl/klYY1C} (en stackoverflow-tråd) for å installere på egen maskin. Kjører du Windows, kan du følge oppskriften som ligger ute på IFI sine nettsider: \url{http://goo.gl/XsF5kf}. Bruker du Mac, kan du laste ned herfra: \url{https://tug.org/mactex/}.
 
 Du vil også trenge en editor. Selv bruker jeg \texttt{TexShop} på Mac, og \texttt{Emacs} på Linux. Her er en fin liste over editorer: \url{http://goo.gl/PQi2nK}. Er du på team \texttt{Vim}, finnes det også \LaTeX-pakker til denne. Det viktigste er at du har en hurtigtast for å kompilere (som du vil komme til å gjøre ofte).
 
+Deretter må du lære deg å skrive dokumenter i \LaTeX. Dette gjøres best ved å hoppe ut i det. Skriv obliger i \LaTeX. Slutt med Word og OpenOffice og hold deg til et ordentlig tekstsystem.
+
+Les andres kode. Det er det dette dokumentet skal hjelpe deg å gjøre.
 
 \section{Litt matematikk}
 
@@ -70,7 +105,44 @@ x_1^n & \hdots & x_n^n
 
 Andre ganger ønsker du å skrive opp lemmaer, teoremer og bevis. Jeg bruker kommandoene \verb|\begin{prop}...\end{prop}| for proposisjoner og teoremer (se øverst i kildekoden til dette dokumentet). 
 
-\section{Litt mer avansert matematikk}
+
+\section{Noen eksempler på nyttige pakker}
+
+Kanskje ønsker du å vise kode eller algoritmer i dokumentet ditt. Dette kan gjøres med pakken \texttt{Listings}. Se kildekoden til dette dokumentet for et eksempel. 
+
+\begin{lstlisting}
+def approximateFraction(a,n):
+	'''
+	Input: a real number a natural number n.
+	Output: a pair [k,m], such that the fraction k/m is close 
+	to a and  1<= m < n.
+	'''
+	L = [i*a-floor(i*a) for i in range(0,n+1)]
+	mindiff = [1,0,0]
+	for i in range(len(L)):
+		for j in range(i+1,len(L)):
+			if abs(L[i]-L[j]) < abs(mindiff[0]):
+				mindiff = [(L[i]-L[j]),i,j]
+	i,j = mindiff[1], mindiff[2]
+	k = -int(round(L[i]-L[j]-(i-j)*a))
+	m = i-j
+	return [k,m]
+\end{lstlisting}
+
+Andre ganger ønsker du kanskje å tegne kommutative diagrammer. Her anbefales \texttt{TikZ}. 
+
+\[
+\begin{tikzcd}
+T
+\arrow[drr, bend left, "x"]
+\arrow[ddr, bend right, "y"]
+\arrow[dr, dotted, "{(x,y)}" description] & & \\
+& X \times_Z Y \arrow[r, "p"] \arrow[d, "q"]
+& X \arrow[d, "f"] \\
+& Y \arrow[r, "g"]
+& Z
+\end{tikzcd}
+\]
 
 
 
