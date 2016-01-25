@@ -56,6 +56,9 @@
 \renewcommand{\P}{\mathbb{P}}
 \DeclareMathOperator{\tr}{Tr}
 
+%%%%%%%%%%%%% Slutt egne kommandoer.
+%%%%%%%%%%%%% Tittel og forfatter
+%%%%%%%%%%%%% Dato kan fjernes ved å å skrive \date{}
 
 \title{Mal til en slags artikkel}
 \author{Fredrik Meyer}
@@ -81,9 +84,9 @@ Det første du må gjøre er å skaffe \LaTeX. Er du Linux-bruker, kan du følge
 
 Du vil også trenge en editor. Selv bruker jeg \emph{TexShop} på Mac, og \emph{Emacs} på Linux. Her er en fin liste over editorer: \url{http://goo.gl/PQi2nK}. Er du på team \emph{Vim}, finnes det også \LaTeX-pakker til denne. Det viktigste er at du har en hurtigtast for å kompilere (som du vil komme til å gjøre ofte).
 
-Det er også mulig å unngå å laste ned noe i det hele tatt, om du er glad i online-editorer. Jeg vet om tre, men har bare prøvd én av dem. \emph{Overleaf} (\url{https://www.overleaf.com/}), er en gratis editor, som ved første øyekast ser veldig fin. Den kompilerer automatisk i bakgrunnen, slik at du ser forandringene i dokumentet samtidig som du skriver. En annen som ser veldig fin ut, og som passer bedre for litt større prosjekter, er \emph{ShareLateX} (\url{https://no.sharelatex.com/}), men som ikke er gratis. 
+Det er også mulig å unngå å laste ned noe i det hele tatt, om du er glad i online-editorer. Jeg vet om tre, men har bare prøvd én av dem. \emph{Overleaf} (\url{https://www.overleaf.com/}), er en gratis editor, som ved første øyekast ser veldig fin. Den kompilerer automatisk i bakgrunnen, slik at du ser forandringene i dokumentet samtidig som du skriver. En annen som ser veldig fin ut, og som passer bedre for litt større prosjekter, er \emph{ShareLateX} (\url{https://no.sharelatex.com/}), men som ikke er helt gratis. 
 
-En jeg har brukt er \emph{SAGE Cloud} (\url{https://cloud.sagemath.com}). Dette er skyversjonen av \emph{SAGE}, som er et slags gratis-substitutt for MATLAB, Mathematica, og Maple.
+En jeg har brukt er \emph{SAGE Cloud} (\url{https://cloud.sagemath.com}). Dette er skyversjonen av \emph{SAGE}, som er et slags gratis-substitutt for treenigheten \emph{MATLAB}, \emph{Mathematica}, og \emph{Maple}.
 
 Deretter må du lære deg å skrive dokumenter i \LaTeX. Dette gjøres best ved å hoppe ut i det. Skriv obliger i \LaTeX. Slutt med Word og OpenOffice og hold deg til et ordentlig tekstsystem. Det hjelper ikke å lese masse introduksjoner med mindre du ikke koder selv.
 
@@ -92,7 +95,7 @@ Deretter må du lære deg å skrive dokumenter i \LaTeX. Dette gjøres best ved 
 
 Kanskje skriver du om analyse, og da snakker man gjerne om en $\epsilon > 0 $. Matematikkmodus startes og sluttes med dollartegn: \verb|$\epsilon > 0$|. 
 
-Noen ganger har du lengre uttrykk:
+Noen ganger har du større uttrykk:
 
 \begin{equation}
 f(z) = \sum_{i=0}^\infty \left( 
@@ -134,7 +137,7 @@ Anta at det finnes idioter. Men én idiot er en idiot for mye, derfor kan ikke i
 Her er en definisjon:
 
 \begin{defi}
-La $(A,d_A)$ og $(B,d_A)$ være metriske rom. Vi sier at en følge av funksjoner $\{f_i:A \to B \}_{i \in N}$ \emph{konvergerer uniformt} til $f:A \to B$ om det for hver $\epsilon > 0$ finnes en $N > 0$ slik at $d_B(f_n(x),f(x)) \rvert \leq \epsilon$ for $n \geq N$ og for alle $x \in A$. 
+La $(A,d_A)$ og $(B,d_A)$ være metriske rom. Vi sier at en følge av funksjoner $\{f_i:A \to B \}_{i \in N}$ \emph{konvergerer uniformt} til $f:A \to B$ om det for hver $\epsilon > 0$ finnes en $N > 0$ slik at $d_B(f_n(x),f(x)) \le \epsilon$ for $n \ge N$ og for alle $x \in A$. 
 \end{defi}
 
 Det finnes også teoremer. Legg merke til at både proposisjoner, korollarer, lemmaer og teoremer følger samme nummerering. Dette er en smakssak, og er mulig å endre.
@@ -148,18 +151,18 @@ f = \lim_{i \to \infty} f_i
 kontinuerlig. 
 \end{thm}
 \begin{proof}
-Vi har at $f$ per definisjon gitt ved $f(x) = \lim_{n \to \infty} f_n(x)$.  La $\epsilon > 0$ og la $x \in [0,1]$. Siden følgen konvergerer uniformt, finnes det en $n \geq N$ slik at $\lvert f(x)-f_n(x) \rvert < \epsilon/3$ for alle $x \in [0,1]$ og alle $n \geq N$.
+Vi har at $f$ per definisjon gitt ved $f(x) = \lim_{n \to \infty} f_n(x)$.  La $\epsilon > 0$ og la $x \in [0,1]$. Siden følgen konvergerer uniformt, finnes det en $n \ge N$ slik at $\lvert f(x)-f_n(x) \rvert < \epsilon/3$ for alle $x \in [0,1]$ og alle $n \ge N$.
 
 Siden hver funksjon i følgen er uniformt kontinuerlig, finnes det en $\delta > 0$ slik at $\lvert f_n(x)-f_n(y) \rvert < \epsilon/3$ for alle $n$ og alle $\lvert x - y \rvert < \delta$. Dermed har vi at
 \begin{align*}
-  \lvert f(x) - f(y) \rvert &\leq \lvert f(x) - f_n(x) \rvert + \lvert f_n(x) - f(y) \rvert \\
-&\leq \lvert f(x) - f_n(x) \rvert + \lvert f_n(x) - f_n(y) \rvert + \lvert f_n(y) - f(y) \rvert\\ 
-&\leq \frac \epsilon 3 + \frac \epsilon 3 + \frac \epsilon 3 = \epsilon.
+  \lvert f(x) - f(y) \rvert &\le \lvert f(x) - f_n(x) \rvert + \lvert f_n(x) - f(y) \rvert \\
+&\le \lvert f(x) - f_n(x) \rvert + \lvert f_n(x) - f_n(y) \rvert + \lvert f_n(y) - f(y) \rvert\\ 
+&\le \frac \epsilon 3 + \frac \epsilon 3 + \frac \epsilon 3 = \epsilon.
 \end{align*}
 Dermed har vi bevist påstanden. Dette er det berømte $\epsilon/3$-beviset.
 \end{proof}
 
-Her har jeg brukt kommandoen \texttt{\textbackslash align} for å få $\leq$-tegnene under hver\-andre. Litt eldre introduksjoner til \LaTeX vil foreslå å bruke \texttt{\textbackslash eqnarray} for dette, men sistnevnte er av forskjellige grunner mye dårligere. 
+Her har jeg brukt kommandoen \texttt{\textbackslash align} for å få $\le$-tegnene under hver\-andre. Litt eldre introduksjoner til \LaTeX vil foreslå å bruke \texttt{\textbackslash eqnarray} for dette, men sistnevnte er av forskjellige grunner mye dårligere. 
 
 \section{Noen vanlige vaner og uvaner}
 \label{seksjonvaner}
@@ -168,24 +171,26 @@ Her demonstrerer jeg samtidig kommandoen \verb|\subsection|.
 
 \subsection{Lag egne kommandoer}
 
-Lag dine egne kommandoer for symboler du bruker ofte. Eksempelvis: det er slitsomt å skrive \verb|\mathbb R| hver gang du ønsker å skrive $\mathbb R$. Med kommandoen \verb|\newcommand| kan du gjøre dette slik: \verb|\newcommand{\R}{\mathbb R}|. Den plasserer du på en linje øverst i dokumentet ditt\footnote{Alt som er over \texttt{\textbackslash begin\{document\}} kalles gjerne for ``preamblet''. Nå demonstrerte jeg samtidig hvordan en lager fotnoter. Det gjøres med \texttt{\textbackslash footnote \{ ... \}}.}, før \verb|\begin{document}|.
+Lag dine egne kommandoer for symboler du bruker ofte. Eksempelvis: det er slitsomt å skrive \verb|\mathbb R| hver gang du ønsker å skrive $\mathbb R$. Med kommandoen \verb|\newcommand| kan du gjøre dette slik: \verb|\newcommand{\R}{\mathbb R}|. Den plasserer du på en linje øverst i dokumentet ditt\footnote{Alt som er over \texttt{\textbackslash begin\{document\}} kalles gjerne for ``preamblet''. Nå demonstrerte jeg samtidig hvordan en lager fotnoter. Det gjøres med \texttt{\textbackslash footnote\{ ... \}}.}, før \verb|\begin{document}|.
 
-Etterhvert som man får ganske mange egendefinerte kommandoer, er det smart å ha dem i en egen fil. Denne filen kan så inkluderes ved å skrive \verb|\usepackage{mystyle}| i preamblet til dokumentet. Navnet ``mystyle'' referer her til en fil med navn \verb|mystyle.sty|.
+Etterhvert som man får ganske mange egendefinerte kommandoer, er det smart å ha dem i en egen fil. Denne filen kan så inklud	eres ved å skrive \verb|\usepackage{mystyle}| i preamblet til dokumentet. Navnet ``mystyle'' referer her til en fil med navn \verb|mystyle.sty|.
 
 Det er to måter å lage kommandoer på som du trenger å vite: \verb|\newcommand| og \verb|renewcommand|. Sistnevnte brukes om du vil overskrive en annen kommando. For eksempel ønsker du å bruke \verb|\P| for $\P$, og da skriver du 
 \begin{center}
 \texttt{\textbackslash renewcommand\{\textbackslash P\}\{\textbackslash mathbb P\}}.
 \end{center}
 
+En annen god grunn til å bruke egendefinerte kommandoer er at om du ved en senere anledning ønsker å endre symbolbruken, så kan dette gjøres enkelt i preamblet til dokumentet - i stedet for å gå gjennom koden og endre hvert tilfelle av symbolet.
+
 \subsection{Ikke bruk tvang}
 
-\LaTeX er laget for at du skal slippe å tenke på annet enn skrivingen. Plasserer du for eksempel bilder og figurer i dokumentet, kan disse ende opp på plasser du ikke forventet. Det er mulig å tvinge \LaTeX til å sette bildene hvor du selv vil ha dem, men det er stort sett alltid bedre å heller referere til bildene som ``Figur x.xx'' enn å bruke masse tid på tvinge dem akkurat der du tror de vil passe akkurat nå.
+\LaTeX er laget for at du skal slippe å tenke på annet enn skrivingen. Plasserer du for eksempel bilder og figurer i dokumentet, kan disse ende opp på plasser du ikke forventet. Det er mulig å tvinge \LaTeX til å sette bildene hvor du selv vil ha dem, men det er stort sett alltid bedre heller å referere til bildene som ``Figur x.xx'' enn å bruke masse tid på tvinge dem akkurat der du tror de vil passe akkurat nå.
 
 Mange lar seg også ofte irritere av de store margene i \LaTeX. Ikke gjør det. De er satt slik av hensyn til leselighet.
 
 \subsection{Semantisk korrekte kommandoer}
 
-Ønsker du å tegne implikasjonspiler, bruk $\implies$ (\verb|\implies|) i stedet for $\Rightarrow$ (\verb|Rightarrow|). Vi har også $\impliedby$ (\verb|\impliedby|), og $\iff$ (\verb|\iff|). For funksjoner $f:X \to Y$ brukes \verb|\to|.
+Ønsker du å tegne implikasjonspiler, bruk $\implies$ (\verb|\implies|) i stedet for $\Rightarrow$ (\verb|\Rightarrow|). Vi har også $\impliedby$ (\verb|\impliedby|), og $\iff$ (\verb|\iff|). For funksjoner $f\colon X \to Y$ brukes \verb|\to| (og om du er veldg pedantisk, skal kolonet skrives med \verb|\colon|).
 
 Om du ønsker å \emph{utheve noe}, bruk \verb|\emph{uthevet}|, og ikke \verb|\it{skråstilt}|. Om du ønsker å skrive $\dots$, bruk $\verb|\dots|$. 
 
@@ -197,11 +202,11 @@ Ofte produseres det en PDF-fil som ser helt fin ut til tross for at du får oppt
 
 Vi kan refere til teoremer, figurer, og seksjoner andre steder i dokumentet. Se for eksempel \cref{propmorase}. Eller kanskje du vil være mer presis: se på \vref{propmorase}.
 
-Se på \cref{tab:kryssreferanser} for de mulige kommandoene. Tabellen er kopiert fra Martin Helsøs \LaTeX-mal, som det er en lenke til i \vref{seksjon:ressurser}.
+Se på \vref{tab:kryssreferanser} for de mulige kommandoene. Tabellen er kopiert fra Martin Helsøs \LaTeX-mal, som det er en lenke til i \vref{seksjon:ressurser}.
 
 \begin{table}
 \centering
-\begin{tabular}{c|c|c}
+\begin{tabular}{ccc}
 \hline
     Kommando & Beskrivelse & Eksempel \\
 \hline
