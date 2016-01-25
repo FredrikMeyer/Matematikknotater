@@ -1,7 +1,12 @@
 \BOOKMARK [1][-]{section.1}{Introduksjon}{}% 1
 \BOOKMARK [1][-]{section.2}{Hvordan komme i gang med LaTeX}{}% 2
-\BOOKMARK [1][-]{section.3}{Litt matematikk}{}% 3
+\BOOKMARK [1][-]{section.3}{Litt om \345 matematikk}{}% 3
 \BOOKMARK [1][-]{section.4}{Noen vanlige vaner og uvaner}{}% 4
-\BOOKMARK [1][-]{section.5}{Noen eksempler p\345 nyttige pakker}{}% 5
-\BOOKMARK [1][-]{section.6}{Nyttige ressurser}{}% 6
-\BOOKMARK [1][-]{section.7}{Videre sp\370rsm\345l}{}% 7
+\BOOKMARK [2][-]{subsection.4.1}{Lag egne kommandoer}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{Ikke bruk tvang}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.3}{Semantisk korrekte kommandoer}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.4}{Aldri godta feilmeldinger}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.5}{Referanser}{section.4}% 9
+\BOOKMARK [1][-]{section.5}{Noen eksempler p\345 nyttige pakker}{}% 10
+\BOOKMARK [1][-]{section.6}{Nyttige ressurser}{}% 11
+\BOOKMARK [1][-]{section.7}{Videre sp\370rsm\345l}{}% 12

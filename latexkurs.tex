@@ -1,37 +1,27 @@
-\documentclass[11pt, a4paper]{article}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[norsk]{babel}   % S P R A A K
-% \usepackage{graphicx}    % postscript graphics
-\usepackage{amssymb, amsmath, amsthm} % symboler, osv
-\usepackage{mathrsfs}
+\documentclass[a4paper, norsk]{article}  % Hva slags type dokument
+\usepackage[T1]{fontenc}                 % For å kunne skrive æ,ø,å osv.
+\usepackage[utf8]{inputenc}              % Hvilken tegnkoding filen lagres i.
+\usepackage{microtype}                   % For penere typografi.
+\usepackage{babel}                       % For god behandling av språkforskjeller.
 
+\usepackage{amssymb, amsmath, amsthm}    % For matematiske symboler.
+\usepackage{thmtools}                    % For teoremmiljøer.
+\usepackage{mathrsfs}                    % For den veldig pene \mathscr{O}.
 
-%\usepackage{tikz}
-%\usetikzlibrary{babel}
-%\usetikzlibrary{cd}
+\usepackage{varioref}                    % For kryssreferanser.
+\usepackage{hyperref}                    % For lenker.
+\usepackage[nameinlink, capitalize, noabbrev]{cleveref} % Kryssreferanser.
 
-\usepackage{url}
-\usepackage{thmtools}
-\usepackage{enumerate}  % lister $  
-\usepackage{float}
-\usepackage{subcaption}
+\usepackage{enumerate}      % For lister.
 
-
-\usepackage{wrapfig} % for float right
-\usepackage{hyperref}
-
-
-\DeclareMathOperator{\tr}{Tr}
-
-
-%%%% start pakke for å inkludere kode
+\usepackage[all]{xy}        % For kommutative diagrammer.
+%%%%
+%%%% Start pakke for å inkludere kode.
 \usepackage{listings}
 \usepackage{color}
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
-
 \lstset{frame=tb,
   language=Python,
   aboveskip=3mm,
@@ -48,54 +38,71 @@
   breakatwhitespace=true,
   tabsize=3
 }
-%%% slutt pakke for å inkludere kode
+%%%%
+%%%% Slutt pakke for å inkludere kode.
 
-%\usepackage{mystyle} % stilfilen  
+%%%%%% Teoremomgivelser (alt under kan like gjerne legges i egen fil).
+
+\declaretheorem[style=plain,name=Teorem, numberwithin=section]{thm}
+\declaretheorem[style=plain,name=Korollar, sibling=thm]{corr}
+\declaretheorem[style=plain,name=Proposisjon, sibling=thm]{prop}
+\declaretheorem[style=plain,name=Lemma, sibling=thm]{lemma}
+\declaretheorem[style=definition,name=Definisjon, sibling=thm]{defi}
+
+% Noen hurtigtaster
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\renewcommand{\P}{\mathbb{P}}
+\DeclareMathOperator{\tr}{Tr}
 
 
-\begin{document}
 \title{Mal til en slags artikkel}
 \author{Fredrik Meyer}
+
+\begin{document}
 \maketitle 
 
 \begin{abstract}
 \noindent
-Sammendraget er en kort beskrivelse av hva resten av dokumentet handler om. Her skriver du hva temaet er, og hva du har tenkt å bevise. Det er ikke en roman du skriver, så spoilers skal ikke unngås.
+Sammendraget er en kort beskrivelse av hva resten av dokumentet handler om. Her skriver du hva temaet er, og hva du har tenkt å bevise. Det er ikke en roman du skriver, så spoilers skal ikke unngås. I resten av denne artikkelen skal jeg prøve å si noen nyttige ting for dem som ikke har brukt \LaTeX så veldig mye. Ordentlige introduksjoner kan en finne andre steder. Artikkelen skal samtidig være en slags mal på hvordan en kan sette opp en artikkel eller en prosjektoppgave. Samtidig skal kildekoden være nyttig slik at den late leseren kan bruke den som en mal på sine produksjoner.
 \end{abstract}
 
 \section{Introduksjon}
 
 I introduksjonen skal du motivere resten av artikkelen. Du forteller gjerne litt om hvorfor problemet er interessant, litt om historien bak, og hva andre folk har klart å gjøre før.
 
-Deretter beskriver du i mer detalj hva du skriver om i de resterende seksjonene.  %% sett inn dette selv
+Deretter beskriver du i mer detalj hva du skriver om i de resterende seksjonene. I denne artikkelen vil \cref{intro} fortelle kort om hvordan du skaffer \LaTeX og kommer i gang. \cref{seksjonmatte} forteller litt om matematiske symboler og \LaTeX. I \cref{seksjonvaner} snakker jeg litt om noen nyttige vaner og uheldige uvaner folk ofte har. I \cref{seksjonpakker} nevner jeg et par nyttige pakker som det er verdt å bli kjent med. I \cref{seksjon:ressurser} lister jeg opp noen nyttige lenker, og til slutt avslutter jeg i \cref{seksjonslutt} med å fortelle om hvordan det er vanlig å avslutte en artikkel.
 
 \section{Hvordan komme i gang med \LaTeX}
+\label{intro}
 
 Det første du må gjøre er å skaffe \LaTeX. Er du Linux-bruker, kan du følge oppskriften på \url{http://goo.gl/klYY1C} (en stackoverflow-tråd) for å installere på egen maskin. Kjører du Windows, kan du følge oppskriften som ligger ute på IFI sine nettsider: \url{http://goo.gl/XsF5kf}. Bruker du Mac, kan du laste ned herfra: \url{https://tug.org/mactex/}.
 
-Du vil også trenge en editor. Selv bruker jeg \texttt{TexShop} på Mac, og \texttt{Emacs} på Linux. Her er en fin liste over editorer: \url{http://goo.gl/PQi2nK}. Er du på team \texttt{Vim}, finnes det også \LaTeX-pakker til denne. Det viktigste er at du har en hurtigtast for å kompilere (som du vil komme til å gjøre ofte).
+Du vil også trenge en editor. Selv bruker jeg \emph{TexShop} på Mac, og \emph{Emacs} på Linux. Her er en fin liste over editorer: \url{http://goo.gl/PQi2nK}. Er du på team \emph{Vim}, finnes det også \LaTeX-pakker til denne. Det viktigste er at du har en hurtigtast for å kompilere (som du vil komme til å gjøre ofte).
 
-Deretter må du lære deg å skrive dokumenter i \LaTeX. Dette gjøres best ved å hoppe ut i det. Skriv obliger i \LaTeX. Slutt med Word og OpenOffice og hold deg til et ordentlig tekstsystem.
+Det er også mulig å unngå å laste ned noe i det hele tatt, om du er glad i online-editorer. Jeg vet om tre, men har bare prøvd én av dem. \emph{Overleaf} (\url{https://www.overleaf.com/}), er en gratis editor, som ved første øyekast ser veldig fin. Den kompilerer automatisk i bakgrunnen, slik at du ser forandringene i dokumentet samtidig som du skriver. En annen som ser veldig fin ut, og som passer bedre for litt større prosjekter, er \emph{ShareLateX} (\url{https://no.sharelatex.com/}), men som ikke er gratis. 
 
-Les andres kode. Det er det dette dokumentet skal hjelpe deg å gjøre.
+En jeg har brukt er \emph{SAGE Cloud} (\url{https://cloud.sagemath.com}). Dette er skyversjonen av \emph{SAGE}, som er et slags gratis-substitutt for MATLAB, Mathematica, og Maple.
 
-\section{Litt matematikk}
+Deretter må du lære deg å skrive dokumenter i \LaTeX. Dette gjøres best ved å hoppe ut i det. Skriv obliger i \LaTeX. Slutt med Word og OpenOffice og hold deg til et ordentlig tekstsystem. Det hjelper ikke å lese masse introduksjoner med mindre du ikke koder selv.
 
-Matematiske symboler og uttrykk skrives enten innad i en linje, eller på en egen linje. Det anbefales for eksempel ikke å ha lange uttrykk med summetegn og det som verre er innad i en linje.
+\section{Litt om å matematikk}
+\label{seksjonmatte}
 
-Kanskje skriver du om analyse, og da snakker man gjerne om en \(\epsilon > 0 \). Nå brukte jeg \verb|\(| og \verb|\)| for å begrense matematikkmodusen. Det går også an å bruke dollartegn: \verb| $\epsilon > 0$|. Det har samme effekt, men førstnevnte er snillere med feilmeldinger.
+Kanskje skriver du om analyse, og da snakker man gjerne om en $\epsilon > 0 $. Matematikkmodus startes og sluttes med dollartegn: \verb|$\epsilon > 0$|. 
 
 Noen ganger har du lengre uttrykk:
 
 \begin{equation}
 f(z) = \sum_{i=0}^\infty \left( 
 \frac{\int_\gamma g(w) dw}{i!}
-\right).
+\right) + \left\langle \vec v, \sum_{i=1}^\infty \vec v_i \right\rangle.
 \end{equation}
 
 For at parenteser skal få riktig størrelse, skriv \verb|\left(| og \verb|\right)| i stedet for kun \texttt{(} og \texttt{)}.
 
-Noen ganger ønsker du ikke nummerering. Den enkleste måten er da å bruke \verb|\[ ... \]|:
+Noen ganger ønsker du ikke nummerering. Den enkleste måten er da å bruke \verb|\[ ... \]|. Det går også an å bruke \verb|\nonumber|. 
 
 \[
 \tr \begin{pmatrix}
@@ -105,16 +112,119 @@ x_1^n & \hdots & x_n^n
 \end{pmatrix} = \sum_{i=1}^n x_i^i.
 \]
 
-Andre ganger ønsker du å skrive opp lemmaer, teoremer og bevis. Jeg bruker kommandoene \verb|\begin{prop}...\end{prop}| for proposisjoner og teoremer (se øverst i kildekoden til dette dokumentet). 
+Andre ganger ønsker du å skrive opp lemmaer, teoremer og bevis. Jeg bruker kommandoene \verb|\begin{prop}...\end{prop}|, og så videre. Se kildekoden til dette dokumentet for flere detaljer.
+
+\begin{prop}
+\label{propmorase}
+Mor Åse er en stein.
+\end{prop}
+\begin{proof}
+En stein kan ikke fly, og det kan Mor Åse heller ikke. Derfor er Mor Åse en stein.
+\end{proof}
+
+Vi kan også skrive korollarer:
+
+\begin{corr}
+Det finnes ingen idioter.
+\end{corr}
+\begin{proof}
+Anta at det finnes idioter. Men én idiot er en idiot for mye, derfor kan ikke idioter finnes.
+\end{proof}
+
+Her er en definisjon:
+
+\begin{defi}
+La $(A,d_A)$ og $(B,d_A)$ være metriske rom. Vi sier at en følge av funksjoner $\{f_i:A \to B \}_{i \in N}$ \emph{konvergerer uniformt} til $f:A \to B$ om det for hver $\epsilon > 0$ finnes en $N > 0$ slik at $d_B(f_n(x),f(x)) \rvert \leq \epsilon$ for $n \geq N$ og for alle $x \in A$. 
+\end{defi}
+
+Det finnes også teoremer. Legg merke til at både proposisjoner, korollarer, lemmaer og teoremer følger samme nummerering. Dette er en smakssak, og er mulig å endre.
+
+\begin{thm}
+La $\{ f_i \}_{i \in \N}$ være en uniformt konvergerende følge av uniformt kontinuerlige funksjoner på intervallet $[0,1]$. Da er grensefunksjonen
+\[
+\label{limitfunction}
+f = \lim_{i \to \infty} f_i
+\]
+kontinuerlig. 
+\end{thm}
+\begin{proof}
+Vi har at $f$ per definisjon gitt ved $f(x) = \lim_{n \to \infty} f_n(x)$.  La $\epsilon > 0$ og la $x \in [0,1]$. Siden følgen konvergerer uniformt, finnes det en $n \geq N$ slik at $\lvert f(x)-f_n(x) \rvert < \epsilon/3$ for alle $x \in [0,1]$ og alle $n \geq N$.
+
+Siden hver funksjon i følgen er uniformt kontinuerlig, finnes det en $\delta > 0$ slik at $\lvert f_n(x)-f_n(y) \rvert < \epsilon/3$ for alle $n$ og alle $\lvert x - y \rvert < \delta$. Dermed har vi at
+\begin{align*}
+  \lvert f(x) - f(y) \rvert &\leq \lvert f(x) - f_n(x) \rvert + \lvert f_n(x) - f(y) \rvert \\
+&\leq \lvert f(x) - f_n(x) \rvert + \lvert f_n(x) - f_n(y) \rvert + \lvert f_n(y) - f(y) \rvert\\ 
+&\leq \frac \epsilon 3 + \frac \epsilon 3 + \frac \epsilon 3 = \epsilon.
+\end{align*}
+Dermed har vi bevist påstanden. Dette er det berømte $\epsilon/3$-beviset.
+\end{proof}
+
+Her har jeg brukt kommandoen \texttt{\textbackslash align} for å få $\leq$-tegnene under hver\-andre. Litt eldre introduksjoner til \LaTeX vil foreslå å bruke \texttt{\textbackslash eqnarray} for dette, men sistnevnte er av forskjellige grunner mye dårligere. 
 
 \section{Noen vanlige vaner og uvaner}
+\label{seksjonvaner}
 
-Lag egne kommandoer for symboler du bruker ofte. Eksempelvis: det er slitsomt å skrive \verb|\mathbb R| hver gang du ønsker å skrive $\mathbb R$. Med kommandoen 
+Her demonstrerer jeg samtidig kommandoen \verb|\subsection|.
+
+\subsection{Lag egne kommandoer}
+
+Lag dine egne kommandoer for symboler du bruker ofte. Eksempelvis: det er slitsomt å skrive \verb|\mathbb R| hver gang du ønsker å skrive $\mathbb R$. Med kommandoen \verb|\newcommand| kan du gjøre dette slik: \verb|\newcommand{\R}{\mathbb R}|. Den plasserer du på en linje øverst i dokumentet ditt\footnote{Alt som er over \texttt{\textbackslash begin\{document\}} kalles gjerne for ``preamblet''. Nå demonstrerte jeg samtidig hvordan en lager fotnoter. Det gjøres med \texttt{\textbackslash footnote \{ ... \}}.}, før \verb|\begin{document}|.
+
+Etterhvert som man får ganske mange egendefinerte kommandoer, er det smart å ha dem i en egen fil. Denne filen kan så inkluderes ved å skrive \verb|\usepackage{mystyle}| i preamblet til dokumentet. Navnet ``mystyle'' referer her til en fil med navn \verb|mystyle.sty|.
+
+Det er to måter å lage kommandoer på som du trenger å vite: \verb|\newcommand| og \verb|renewcommand|. Sistnevnte brukes om du vil overskrive en annen kommando. For eksempel ønsker du å bruke \verb|\P| for $\P$, og da skriver du 
+\begin{center}
+\texttt{\textbackslash renewcommand\{\textbackslash P\}\{\textbackslash mathbb P\}}.
+\end{center}
+
+\subsection{Ikke bruk tvang}
+
+\LaTeX er laget for at du skal slippe å tenke på annet enn skrivingen. Plasserer du for eksempel bilder og figurer i dokumentet, kan disse ende opp på plasser du ikke forventet. Det er mulig å tvinge \LaTeX til å sette bildene hvor du selv vil ha dem, men det er stort sett alltid bedre å heller referere til bildene som ``Figur x.xx'' enn å bruke masse tid på tvinge dem akkurat der du tror de vil passe akkurat nå.
+
+Mange lar seg også ofte irritere av de store margene i \LaTeX. Ikke gjør det. De er satt slik av hensyn til leselighet.
+
+\subsection{Semantisk korrekte kommandoer}
+
+Ønsker du å tegne implikasjonspiler, bruk $\implies$ (\verb|\implies|) i stedet for $\Rightarrow$ (\verb|Rightarrow|). Vi har også $\impliedby$ (\verb|\impliedby|), og $\iff$ (\verb|\iff|). For funksjoner $f:X \to Y$ brukes \verb|\to|.
+
+Om du ønsker å \emph{utheve noe}, bruk \verb|\emph{uthevet}|, og ikke \verb|\it{skråstilt}|. Om du ønsker å skrive $\dots$, bruk $\verb|\dots|$. 
+
+\subsection{Aldri godta feilmeldinger}
+
+Ofte produseres det en PDF-fil som ser helt fin ut til tross for at du får opptil flere feilmeldinger under kompileringen. Det er fristende å ignorere disse feilmeldingene, men ikke gjør det. Får du faktiske feil som hindrer kompilering, er disse vanskeligere å finne. I tillegg vil dokumentet ditt ofte se bedre ut, da mange av feilmeldingene ofte er av kosmetisk art.
+
+\subsection{Referanser}
+
+Vi kan refere til teoremer, figurer, og seksjoner andre steder i dokumentet. Se for eksempel \cref{propmorase}. Eller kanskje du vil være mer presis: se på \vref{propmorase}.
+
+Se på \cref{tab:kryssreferanser} for de mulige kommandoene. Tabellen er kopiert fra Martin Helsøs \LaTeX-mal, som det er en lenke til i \vref{seksjon:ressurser}.
+
+\begin{table}
+\centering
+\begin{tabular}{c|c|c}
+\hline
+    Kommando & Beskrivelse & Eksempel \\
+\hline
+    \texttt{\textbackslash ref}     & Nummer            & \ref{limitfunction}        \\
+    \texttt{\textbackslash eqref}   & Nummer i parentes & \eqref{limitfunction}      \\
+    \texttt{\textbackslash pageref} & Sidetall          & \pageref{limitfunction}    \\
+    \texttt{\textbackslash cref}    & Type og nummer    & \cref{limitfunction}       \\
+    \texttt{\textbackslash vref} & Type, plassering og nummer & \vref{limitfunction} \\
+\end{tabular}
+\caption{Kryssreferansekommandoer.}
+\label{tab:kryssreferanser}
+\end{table}
+
+For å referere må du merke ligningen, teoremet (eller tabellen, eller figuren, \dots) som skal refereres. Dette gjøres ved å sette en \verb|\label{navn}| rett etter det som skal referes. Deretter kan du referere til dem med en av kommandoene i tabellen\footnote{Dette avsnittet har en dobbel funksjon. Den demonstrerer også hvordan man lager tabeller.}.
 
 \section{Noen eksempler på nyttige pakker}
+\label{seksjonpakker}
 
 Kanskje ønsker du å vise kode eller algoritmer i dokumentet ditt. Dette kan gjøres med pakken \texttt{Listings}. Se kildekoden til dette dokumentet for et eksempel. 
 
+Her er et eksempel på hvordan Python-kode vises.
+
+\begin{center}
 \begin{lstlisting}
 def approximateFraction(a,n):
 	'''
@@ -133,44 +243,47 @@ def approximateFraction(a,n):
 	m = i-j
 	return [k,m]
 \end{lstlisting}
+\end{center}
 
-Andre ganger ønsker du kanskje å tegne kommutative diagrammer. Her anbefales \texttt{TikZ}. 
+Andre ganger ønsker du kanskje å tegne kommutative diagrammer. Her anbefales \texttt{TikZ} eller \texttt{xypic}. Førstnevnte er på (nesten) alle måter bedre, så lær den først. Her er et eksempel på sistnevnte:
 
-%\[
-%\begin{tikzcd}
-%T
-%\arrow[drr, bend left, "x"]
-%\arrow[ddr, bend right, "y"]
-%\arrow[dr, dotted, "{(x,y)}" description] & & \\
-%& X \times_Z Y \arrow[r, "p"] \arrow[d, "q"]
-%& X \arrow[d, "f"] \\
-%& Y \arrow[r, "g"]
-%& Z
-%\end{tikzcd}
-%\]
+\begin{equation}
+\begin{gathered}
+\xymatrix{
+0 \ar[r] & A \ar[r]^\iota \ar[d]^\varphi & B \ar[r]^\pi \ar[d]^\gamma & C \ar[r]\ar[d]^\psi & 0 \\ 
+0 \ar[r] & D \ar[r]^{\iota'} & E \ar[r]^{\pi'} & F \ar[r] & 0
+}
+\end{gathered}
+\end{equation}
 
-En annen nyttig pakke er \texttt{tabular}, som er til for å lage tabeller. Den gidder jeg ikke forklare. Les om den på Wikibooks.
+Dette er altså første halvdel av slangelemmaet. Det er et lite prosjekt å tegne inn selve slangen. Det kan være en oppgave til de vågale.
+
 
 \section{Nyttige ressurser}
+\label{seksjon:ressurser} 
 
 Under er en liste over nyttige ressurser (merk at lenkene er klikkbare om du leser dette på en skjerm). 
 
 \begin{itemize}
 \item \url{goo.gl/yxFaEy}. Dette er en PDF med liste over forskjellige symboler \LaTeX har å by på.
-\item \url{tobi.oetiker.ch/lshort/lshort.pdf} "The Not So Short Guide to \LaTeX". Denne er veldig fin. Om du har en ettermiddag, anbefaler jeg at du leser hele.
+\item \url{tobi.oetiker.ch/lshort/lshort.pdf} \emph{``The Not So Short Guide to \LaTeX''}. Denne er veldig fin. Om du har en ettermiddag, anbefaler jeg at du leser hele.
 \item \url{en.wikibooks.org/wiki/LaTeX} Wikibooks er også en bra ressurs, med mange eksempler.
 \item \url{www.ctan.org/} Lurer du på hvordan pakkene du bruker egentlig fungerer, slå opp på CTAN for glimrende dokumentasjon.
-\item \url{folk.uio.no/martibhe/LaTeX/} Martin Helsø har stor peil på \LaTeX, og han har endel nyttige ressurser på sin hjemmeside. 
+\item \url{folk.uio.no/martibhe/LaTeX/} Martin Helsø har stor peil på \LaTeX, og han har en del nyttige ressurser på sin hjemmeside. 
 \item \url{detexify.kirelabs.org/classify.html}  Detexify er glimrende. Tegn noe osm ligner på et mattesymbol, og du får forslag til hvilken \LaTeX-kode du skal bruke for å skrive dette symbolet. 
+\item \url{tex.stackexchange.com} Her kan du stille spørsmål om du har prøvd alle andre muligheter. Det er også interessant tidsbruk å lese svar på de høyest rangerte spørsmålene.
 \end{itemize}
 
-Ellers: Google er din venn.
+I tillegg: spør folk du kjenner om hjelp. Og du kjenner alltids Google.
 
 
 \section{Videre spørsmål}
+\label{seksjonslutt}
 
-Det er ofte vanlig å avslutte en artikkel med en diskusjon av hvilke problemer det gjenstår å løse. Om artikkelen din var mer en introduksjon eller en oversiktsartikkel, er det vanlig å snakke litt om hva du \emph{ikke} snakket om.
+Det er ofte vanlig å avslutte en artikkel med en diskusjon av hvilke problemer det gjenstår å løse. Om artikkelen din var mer en introduksjon eller en oversiktsartikkel, er det vanlig å snakke litt om hva du \emph{ikke} snakket om, og om hvor leseren kan finne mer informasjon. 
 
-For eksempel, i dette dokumentet, har jeg unngått å snakke om en del avanserte deler av \LaTeX, 
+For eksempel, i dette dokumentet, har jeg unngått å snakke om en del avanserte deler av \LaTeX, og jeg har unngått å liste mange symboler. Formålet har vært at dokumentet skal fungere både som en slags inngangsport, og at kildekoden kan brukes som en mal for leseren (bare fjern min tekst først).
+
+God \TeX-ing!
 
 \end{document}
