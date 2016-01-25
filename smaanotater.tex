@@ -80,5 +80,17 @@ Anta at $P \not \in V(f) \in \PP^2$. Da er $f(P) \neq 0$. Dermed får vi at fibe
 
 Det eneste singulære punktet i $\PP(1,1,1,3)$ er $(0:0:0:1)$, og dette punktet ligger ikke på $X$. Det følger at $X$ er glatt. Faktisk er $\PP(1,1,1,3)$ isomorf med den projective kjeglen over $\nu_3(\PP^2)$ (den tredje Veronese-embeddingen av $\PP^2$).
 
+Legg merke til at avbildnigen $\pi:X \to \PP^2$ er en affin avbildning (i betydningen at $\pi^{-1}(U_i)$ er affin for $i=0,1,2$). Dette impliserer (oppgave III.8.2 i Hartshorne) at $H^i(X,\OO_X) = H^i(\PP^2,\pi_\ast \OO_X)$ for $i \geq 0$. Derfor ønsker vi å regne ut $\pi_\ast \OO_X$.
+
+Vi har at den homogene koordinatringen til $X$ er gitt ved $S = k[x,y,z,u]/(f-u^2)$, med gradene $(1,1,1,3)$. Denne er generert i grad $3$. Betrakt nå $S^{(3)}$, hvor $S_n^{(3)}=S_{3n}$. Vi har at $X = \Proj S = \Proj S^{(3)}$ (Oppgave III.5.13 i Hartshorne). På samme vis, la $T = k[x,y,z]$, og betrakt $T^{(3)}$. Vi har at $\PP^2 = \Proj T = \Proj T^{(3)}$. Vi har en inklusjon av homogene ringer:
+$$
+S \hookrightarrow T \oplus T(-3)
+$$
+Men går vi over til $S^{(3)}$ og $T^{(3)}$, får vi en likhet
+$$
+S^{(3)} = T^{(3)} \oplus u T^{(3)}(-1)
+$$
+Ved modul-knippe-korrespondansen følger det dermed at $\pi_\ast \OO_X = \OO_{\PP^2} \oplus \OO_{\PP^2}(-3)$.
+
 
 \end{document}
