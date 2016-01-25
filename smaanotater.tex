@@ -72,19 +72,13 @@ Så å blåse opp i et punkt øker $H^1$ med én.
 
 \subsection{Dobbel overdekning av $\PP^2$ ramifisert i gitt kurve}
 
-Gitt et homogent polynom $f(x_0,x_1,x_2)$ i $\bigoplus_{i \geq 0} H^0(\PP^2,\OO_{\PP^2}(i))$, konstruerer vi en flate som er en dobbel overdekning av $\PP^2$, ramifisert i kurven definert ved dette polynomet.
+Gitt et homogent polynom $f(x,y,z)$ i $H^0(\PP^2,\OO_{\PP^2}(2n))$, konstruerer vi en flate som er en dobbel overdekning av $\PP^2$, ramifisert i kurven definert ved dette polynomet.
 
-Se på inklusjonen
-\[
-k[x_0,x_1,x_2] \hookrightarrow k[x_0,x_1,x_2][u,v]/(u^2-fv^2).
-\]
-Vi ser på høyresiden som en bigradert ring, så høyresiden svarer til
-\[
-X = \{ (X,P) \in \PP^2_{(x_0,x_1,x_2)} \times \PP^1_{(u,v)} \mid u^2=f(x_0,x_1,x_2)v^2 \} \subset \PP^2 \times \PP^1.
-\]
-Denne mengden kommer med en naturlig projeksjon til $\PP^2$. Vi ser at så lenge $f(x_0,x_1,x_2) \neq 0$, er det to fibre, og langs $V(f)$ er det én dobbel fiber.
+Den naive løsningen funker, men virker upraktisk å jobbe med. Betrakt nullpunktsmengden $X$ til $f-u^2$ i $\PP(1,1,1,n)$. Dette er en veldefinert varietet, siden polynomet er homogent i denne graderingen.  Vi har en avbildning $\pi:X \to \PP^2$ gitt ved $(x:y:z:u) \mapsto (x:y:z)$. Dette er i utgangspunktet kun en rasjonal avbildning, men formen på ligningen viser at avbildningen er veldefinert: for anta at vi blir sendt til ``punktet'' $(0:0:0)$. Da er $x=y=z=0$, som tvinger $u=0$. Men dette er absurd, så avbildningen må være en morfi.
 
+Anta at $P \not \in V(f) \in \PP^2$. Da er $f(P) \neq 0$. Dermed får vi at fiberen $\pi^{-1}(P)$ består av to forskjellige punkter. Om $f(P)=0$, får vi kun ett punkt i fiberen.
 
+Det eneste singulære punktet i $\PP(1,1,1,3)$ er $(0:0:0:1)$, og dette punktet ligger ikke på $X$. Det følger at $X$ er glatt. Faktisk er $\PP(1,1,1,3)$ isomorf med den projective kjeglen over $\nu_3(\PP^2)$ (den tredje Veronese-embeddingen av $\PP^2$).
 
 
 \end{document}
