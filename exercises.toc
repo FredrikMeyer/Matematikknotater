@@ -19,33 +19,35 @@
 \contentsline {subsection}{\numberline {7.1}Chapter I.3 - The $T^i$ functors}{19}{subsection.7.1}
 \contentsline {section}{\numberline {8}Geometry of differential forms - Morita}{22}{section.8}
 \contentsline {subsection}{\numberline {8.1}Chapter 1 - Manifolds}{22}{subsection.8.1}
-\contentsline {section}{\numberline {9}Introduction to Differential Geometry - Spivak}{24}{section.9}
-\contentsline {subsection}{\numberline {9.1}Chapter 1 - Manifolds}{24}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}Chapter 3 - The tangent bundle}{26}{subsection.9.2}
-\contentsline {subsection}{\numberline {9.3}Chapter 4 - Tensors}{28}{subsection.9.3}
-\contentsline {subsection}{\numberline {9.4}Chapter 5 - Vector fields and differential equations}{29}{subsection.9.4}
-\contentsline {section}{\numberline {10}Introduction to Commutative Algebra - Atiyah-MacDonald}{30}{section.10}
-\contentsline {subsection}{\numberline {10.1}Chapter 1 - Rings and ideals}{30}{subsection.10.1}
-\contentsline {subsection}{\numberline {10.2}Chapter 2 - Modules}{34}{subsection.10.2}
-\contentsline {subsection}{\numberline {10.3}Chapter III - Rings and modules of fractions}{36}{subsection.10.3}
-\contentsline {subsection}{\numberline {10.4}Chapter 5 - Integral dependence and valuations}{37}{subsection.10.4}
-\contentsline {subsection}{\numberline {10.5}Chapter 7 - Noetherian rings}{38}{subsection.10.5}
-\contentsline {section}{\numberline {11}Lie groups, Lie algebras and Representations - Hall}{40}{section.11}
-\contentsline {subsection}{\numberline {11.1}Matrix Lie groups}{40}{subsection.11.1}
-\contentsline {section}{\numberline {12}Linear representations of finite groups - Serre}{40}{section.12}
-\contentsline {subsection}{\numberline {12.1}Chapter 1 - Representations and characters}{40}{subsection.12.1}
-\contentsline {subsection}{\numberline {12.2}Chapter 2 - The character of a representation}{40}{subsection.12.2}
-\contentsline {subsection}{\numberline {12.3}Chapter 3}{44}{subsection.12.3}
-\contentsline {section}{\numberline {13}The K-book - Charles Weibel}{44}{section.13}
-\contentsline {subsubsection}{\numberline {13.0.1}Chapter 1.1 - Free modules, $GL_n$ and stably free modules}{44}{subsubsection.13.0.1}
-\contentsline {subsection}{\numberline {13.1}Chapter 1.2 - Projective modules}{46}{subsection.13.1}
-\contentsline {section}{\numberline {14}Representation Theory - Fulton, Harris}{46}{section.14}
-\contentsline {subsection}{\numberline {14.1}Representations of Finite Groups}{46}{subsection.14.1}
-\contentsline {subsection}{\numberline {14.2}Chapter 7 - Lie groups}{50}{subsection.14.2}
-\contentsline {subsection}{\numberline {14.3}Lecture 8 - Lie Algebras and Lie groups}{51}{subsection.14.3}
-\contentsline {section}{\numberline {15}Twenty-Four Hours of Local Cohomology}{52}{section.15}
-\contentsline {subsection}{\numberline {15.1}Lecture 1 - Basic notions}{52}{subsection.15.1}
-\contentsline {subsection}{\numberline {15.2}Lecture 7 - Local cohomology}{54}{subsection.15.2}
-\contentsline {section}{\numberline {16}Riemannian geometry - Do Carmo}{54}{section.16}
-\contentsline {subsection}{\numberline {16.1}Chapter 0 - Differentiable manifolds}{54}{subsection.16.1}
-\contentsline {subsection}{\numberline {16.2}Chapter 2 - Affine and Riemannian connections}{55}{subsection.16.2}
+\contentsline {section}{\numberline {9}Foundations of Algebraic Geometry - Vakil}{24}{section.9}
+\contentsline {subsection}{\numberline {9.1}Chapter 21 - Differentials}{24}{subsection.9.1}
+\contentsline {section}{\numberline {10}Introduction to Differential Geometry - Spivak}{25}{section.10}
+\contentsline {subsection}{\numberline {10.1}Chapter 1 - Manifolds}{25}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Chapter 3 - The tangent bundle}{27}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}Chapter 4 - Tensors}{28}{subsection.10.3}
+\contentsline {subsection}{\numberline {10.4}Chapter 5 - Vector fields and differential equations}{30}{subsection.10.4}
+\contentsline {section}{\numberline {11}Introduction to Commutative Algebra - Atiyah-MacDonald}{31}{section.11}
+\contentsline {subsection}{\numberline {11.1}Chapter 1 - Rings and ideals}{31}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.2}Chapter 2 - Modules}{34}{subsection.11.2}
+\contentsline {subsection}{\numberline {11.3}Chapter III - Rings and modules of fractions}{37}{subsection.11.3}
+\contentsline {subsection}{\numberline {11.4}Chapter 5 - Integral dependence and valuations}{38}{subsection.11.4}
+\contentsline {subsection}{\numberline {11.5}Chapter 7 - Noetherian rings}{39}{subsection.11.5}
+\contentsline {section}{\numberline {12}Lie groups, Lie algebras and Representations - Hall}{40}{section.12}
+\contentsline {subsection}{\numberline {12.1}Matrix Lie groups}{40}{subsection.12.1}
+\contentsline {section}{\numberline {13}Linear representations of finite groups - Serre}{41}{section.13}
+\contentsline {subsection}{\numberline {13.1}Chapter 1 - Representations and characters}{41}{subsection.13.1}
+\contentsline {subsection}{\numberline {13.2}Chapter 2 - The character of a representation}{41}{subsection.13.2}
+\contentsline {subsection}{\numberline {13.3}Chapter 3}{45}{subsection.13.3}
+\contentsline {section}{\numberline {14}The K-book - Charles Weibel}{45}{section.14}
+\contentsline {subsubsection}{\numberline {14.0.1}Chapter 1.1 - Free modules, $GL_n$ and stably free modules}{45}{subsubsection.14.0.1}
+\contentsline {subsection}{\numberline {14.1}Chapter 1.2 - Projective modules}{47}{subsection.14.1}
+\contentsline {section}{\numberline {15}Representation Theory - Fulton, Harris}{47}{section.15}
+\contentsline {subsection}{\numberline {15.1}Representations of Finite Groups}{47}{subsection.15.1}
+\contentsline {subsection}{\numberline {15.2}Chapter 7 - Lie groups}{51}{subsection.15.2}
+\contentsline {subsection}{\numberline {15.3}Lecture 8 - Lie Algebras and Lie groups}{52}{subsection.15.3}
+\contentsline {section}{\numberline {16}Twenty-Four Hours of Local Cohomology}{53}{section.16}
+\contentsline {subsection}{\numberline {16.1}Lecture 1 - Basic notions}{53}{subsection.16.1}
+\contentsline {subsection}{\numberline {16.2}Lecture 7 - Local cohomology}{55}{subsection.16.2}
+\contentsline {section}{\numberline {17}Riemannian geometry - Do Carmo}{55}{section.17}
+\contentsline {subsection}{\numberline {17.1}Chapter 0 - Differentiable manifolds}{55}{subsection.17.1}
+\contentsline {subsection}{\numberline {17.2}Chapter 2 - Affine and Riemannian connections}{56}{subsection.17.2}
