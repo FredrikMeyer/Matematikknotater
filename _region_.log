@@ -1,0 +1,6765 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=prv_exercises 2016.2.2)  2 FEB 2016 21:03
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**&prv_exercises _region_.tex
+(./_region_.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+
+ Xy-pic version 3.8.9 <2013/10/06>
+ Copyright (c) 1991-2013 by Kristoffer H. Rose <krisrose@tug.org> and others
+ Xy-pic is free software: see the User's Guide for details.
+
+CUSTOMISED FORMAT. Preloaded files:
+        .
+ article.cls    2014/09/29 v1.4h Standard LaTeX document class
+  size11.clo    2014/09/29 v1.4h Standard LaTeX file (size option)
+ fontenc.sty
+   t1enc.def    2005/09/27 v1.99g Standard LaTeX file
+inputenc.sty    2015/03/17 v1.2c Input encoding file
+    utf8.def    2014/09/29 v1.1m UTF-8 support for inputenc
+   t1enc.dfu    2014/09/29 v1.1m UTF-8 support for inputenc
+  ot1enc.dfu    2014/09/29 v1.1m UTF-8 support for inputenc
+  omsenc.dfu    2014/09/29 v1.1m UTF-8 support for inputenc
+   babel.sty    2014/09/25 3.9l The Babel package
+ english.ldf    2012/08/20 v3.3p English support from the babel system
+ amssymb.sty    2013/01/14 v3.01 AMS font symbols
+amsfonts.sty    2013/01/14 v3.01 Basic AMSFonts support
+ amsmath.sty    2013/01/14 v2.14 AMS math features
+ amstext.sty    2000/06/29 v2.01
+  amsgen.sty    1999/11/30 v2.0
+  amsbsy.sty    1999/11/29 v1.2d
+  amsopn.sty    1999/12/14 v2.01 operator names
+  amsthm.sty    2015/03/04 v2.20.2
+mathrsfs.sty    1996/01/01 Math RSFS package v1.0 (jk)
+     url.sty    2013/09/16  ver 3.4  Verb mode for urls, etc.
+thmtools.sty    2014/04/21 v66
+thm-patch.sty    2014/04/21 v66
+parseargs.sty    2014/04/21 v66
+  thm-kv.sty    2014/04/21 v66
+  keyval.sty    2014/10/28 v1.15 key=value parser (DPC)
+kvsetkeys.sty    2012/04/25 v1.16 Key value parser (HO)
+infwarerr.sty    2010/04/08 v1.3 Providing info/warning/error messages (HO)
+etexcmds.sty    2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+ifluatex.sty    2010/03/01 v1.3 Provides the ifluatex switch (HO)
+thm-autoref.sty    2014/04/21 v66
+aliasctr.sty    2014/04/21 v66
+remreset.sty    
+thm-listof.sty    2014/04/21 v66
+thm-restate.sty    2014/04/21 v66
+thm-amsthm.sty    2014/04/21 v66
+enumerate.sty    2014/10/28 v3.00 enumerate extensions (DPC)
+   float.sty    2001/11/08 v1.3d Float enhancements (AL)
+    tikz.sty    2013/12/13 v3.0.0 (rcs-revision 1.142)
+     pgf.sty    2013/12/18 v3.0.0 (rcs-revision 1.14)
+  pgfrcs.sty    2013/12/20 v3.0.0 (rcs-revision 1.28)
+everyshi.sty    2001/05/15 v3.00 EveryShipout Package (MS)
+  pgfrcs.code.tex
+ pgfcore.sty    2010/04/11 v3.0.0 (rcs-revision 1.7)
+graphicx.sty    2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+graphics.sty    2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+    trig.sty    1999/03/16 v1.09 sin cos tan (DPC)
+graphics.cfg    2010/04/23 v1.9 graphics configuration of TeX Live
+  pdftex.def    2011/05/27 v0.06d Graphics/color for pdfTeX
+ ltxcmds.sty    2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+  pgfsys.sty    2013/11/30 v3.0.0 (rcs-revision 1.47)
+  pgfsys.code.tex
+pgfsyssoftpath.code.tex    2013/09/09  (rcs-revision 1.9)
+pgfsysprotocol.code.tex    2006/10/16  (rcs-revision 1.4)
+  xcolor.sty    2007/01/21 v2.11 LaTeX color extensions (UK)
+   color.cfg    2007/01/18 v1.5 color configuration of teTeX/TeXLive
+ pgfcore.code.tex
+pgfcomp-version-0-65.sty    2007/07/03 v3.0.0 (rcs-revision 1.7)
+pgfcomp-version-1-18.sty    2007/07/23 v3.0.0 (rcs-revision 1.1)
+  pgffor.sty    2013/12/13 v3.0.0 (rcs-revision 1.25)
+ pgfkeys.sty    
+ pgfkeys.code.tex
+ pgfmath.sty    
+ pgfmath.code.tex
+  pgffor.code.tex
+    tikz.code.tex
+ tikz-cd.sty    2014/10/30 v0.9e Commutative diagrams with tikz
+subcaption.sty    2013/02/03 v1.1-62 Sub-captions (AR)
+ caption.sty    2013/05/02 v3.3-89 Customizing captions (AR)
+caption3.sty    2013/05/02 v1.6-88 caption3 kernel (AR)
+      xy.sty    2013/10/06 Xy-pic version 3.8.9
+   ifpdf.sty    2011/01/30 v2.3 Provides the ifpdf switch (HO)
+ wrapfig.sty    2003/01/31  v 3.6
+hyperref.sty    2012/11/06 v6.83m Hypertext links for LaTeX
+hobsub-hyperref.sty    2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+hobsub-generic.sty    2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+  hobsub.sty    2012/05/28 v1.13 Construct package bundles (HO)
+  ifvtex.sty    2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+ intcalc.sty    2007/09/27 v1.1 Expandable calculations with integers (HO)
+kvdefinekeys.sty    2011/04/07 v1.3 Define keys (HO)
+pdftexcmds.sty    2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO)
+pdfescape.sty    2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+bigintcalc.sty    2012/04/08 v1.3 Expandable calculations on big integers (HO)
+  bitset.sty    2011/01/30 v1.1 Handle bit-vector datatype (HO)
+uniquecounter.sty    2011/01/30 v1.2 Provide unlimited unique counter (HO)
+letltxmacro.sty    2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+ hopatch.sty    2012/05/28 v1.2 Wrapper for package hooks (HO)
+xcolor-patch.sty    2011/01/30 xcolor patch
+atveryend.sty    2011/06/30 v1.8 Hooks at the very end of document (HO)
+atbegshi.sty    2011/10/05 v1.16 At begin shipout hook (HO)
+refcount.sty    2011/10/16 v3.4 Data extraction from label references (HO)
+ hycolor.sty    2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+ ifxetex.sty    2010/09/12 v0.6 Provides ifxetex conditional
+ auxhook.sty    2011/03/04 v1.3 Hooks for auxiliary files (HO)
+kvoptions.sty    2011/06/30 v3.11 Key value format for package options (HO)
+  pd1enc.def    2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+hyperref.cfg    2002/06/06 v1.2 hyperref configuration of TeXLive
+ hpdftex.def    2012/11/06 v6.83m Hyperref driver for pdfTeX
+rerunfilecheck.sty    2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+ mystyle.sty    
+    umsa.fd    2013/01/14 v3.01 AMS symbols A
+    umsb.fd    2013/01/14 v3.01 AMS symbols B
+   ursfs.fd    1998/03/24 rsfs font definition file (jk)
+  t1cmtt.fd    2014/09/29 v2.5h Standard LaTeX font definitions
+  t1cmss.fd    2014/09/29 v2.5h Standard LaTeX font definitions
+        .
+No file _region_.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+
+(/Applications/Aquamacs.app/Contents/Resources/lisp/aquamacs/edit-modes/auctex/
+latex/preview.sty
+Package: preview 2010/02/14 11.88 (AUCTeX/preview-latex)
+
+(/Applications/Aquamacs.app/Contents/Resources/lisp/aquamacs/edit-modes/auctex/
+latex/prtightpage.def
+\PreviewBorder=\dimen212
+)
+(/Applications/Aquamacs.app/Contents/Resources/lisp/aquamacs/edit-modes/auctex/
+latex/prauctex.def
+No auxiliary output files.
+
+
+\hbadness=\count151
+\hfuzz=\dimen213
+
+(/Applications/Aquamacs.app/Contents/Resources/lisp/aquamacs/edit-modes/auctex/
+latex/prauctex.cfg))
+(/Applications/Aquamacs.app/Contents/Resources/lisp/aquamacs/edit-modes/auctex/
+latex/prfootnotes.def)
+\pr@snippet=\count152
+\pr@box=\box46
+\pr@output=\toks55
+
+Preview: Fontsize 10.95pt
+Preview: PDFoutput 1
+) ABD: EveryShipout initializing macros
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count153
+\scratchdimen=\dimen214
+\scratchbox=\box47
+\nofMPsegments=\count154
+\nofMParguments=\count155
+\everyMPshowfont=\toks56
+\MPscratchCnt=\count156
+\MPscratchDim=\dimen215
+\MPnumerator=\count157
+\makeMPintoPDFobject=\count158
+\everyMPtoPDFconversion=\toks57
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: Incompatible package detected (regarding \caption).
+(caption)             \caption = \protected\long macro:->\pr@protect@domacro {}
+{##1{}}\pr@\caption .
+
+
+Package caption Warning: \caption will not be redefined since it's already
+(caption)                redefined by a document class or package which is
+(caption)                unknown to the caption package.
+See the caption package documentation for explanation.
+
+Package caption Info: hyperref package is loaded.
+Package caption Info: wrapfig package is loaded.
+
+! Package caption Error: The `subcaption' package does not work correctly
+(caption)                in compatibility mode.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 \begin{document}
+                     
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Package caption Info: End \AtBeginDocument code.
+Package xypdf Info: Line width: 0.43799pt on input line 25.
+\AtBeginShipoutBox=\box48
+Package hyperref Info: Link coloring OFF on input line 25.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count159
+)
+LaTeX Info: Redefining \ref on input line 25.
+LaTeX Info: Redefining \pageref on input line 25.
+LaTeX Info: Redefining \nameref on input line 25.
+
+ !name(exercises.tex) !offset(-3)  [1{/usr/local/texlive/2015/texmf-var/fonts/m
+ap/pdftex/updmap/pdftex.map}]
+! Preview: Snippet 1 started.
+<-><->
+      
+l.33 \tableofcontents
+                     
+Not a real error.
+
+Preview: Tightpage -32891 -32891 32891 32891
+! Preview: Snippet 1 ended.(651269+0x23592960).
+<-><->
+      
+l.33 \tableofcontents
+                     
+Not a real error.
+
+[1]
+! Preview: Snippet 2 started.
+<-><->
+      
+l.35 \section
+             {Algebra - Serge Lang}
+Not a real error.
+
+! Preview: Snippet 2 ended.(651269+183455x23592960).
+<-><->
+      
+l.35 \section{Algebra - Serge Lang}
+                                   
+Not a real error.
+
+[2
+
+]
+! Preview: Snippet 3 started.
+<-><->
+      
+l.37 \subsection
+                {Chapter V}
+Not a real error.
+
+! Preview: Snippet 3 ended.(542724+152880x23592960).
+<-><->
+      
+l.37 \subsection{Chapter V}
+                           
+Not a real error.
+
+[3
+
+]
+Package hyperref Info: bookmark level for unknown exc defaults to 0 on input li
+ne 40.
+
+! Preview: Snippet 4 started.
+<-><->
+      
+l.40  Let $
+           E=\Q(\alpha)$, where $\alpha$ is a root of the equation
+Not a real error.
+
+! Preview: Snippet 4 ended.(538214+179404x3105943).
+<-><->
+      
+l.40  Let $E=\Q(\alpha)$
+                        , where $\alpha$ is a root of the equation
+Not a real error.
+
+[4]
+! Preview: Snippet 5 started.
+<-><->
+      
+l.40  Let $E=\Q(\alpha)$, where $
+                                 \alpha$ is a root of the equation
+Not a real error.
+
+! Preview: Snippet 5 ended.(308974+0x461718).
+<-><->
+      
+l.40  Let $E=\Q(\alpha)$, where $\alpha$
+                                         is a root of the equation
+Not a real error.
+
+[5]
+! Preview: Snippet 6 started.
+<-><->
+      
+l.41 \[
+       
+Not a real error.
+
+! Preview: Snippet 6 ended.(693976+0x15052876).
+<-><->
+      
+l.43 \]
+       
+Not a real error.
+
+[6]
+! Preview: Snippet 7 started.
+<-><->
+      
+l.44 Express $
+              (\alpha^2+\alpha+1)(\alpha^2+\alpha)$ and $(\alpha-1)^{-1}$ in...
+
+Not a real error.
+
+! Preview: Snippet 7 ended.(598293+179404x6575840).
+<-><->
+      
+l.44 ...ess $(\alpha^2+\alpha+1)(\alpha^2+\alpha)$
+                                                   and $(\alpha-1)^{-1}$ in ...
+
+Not a real error.
+
+[7]
+! Preview: Snippet 8 started.
+<-><->
+      
+l.44 ...\alpha^2+\alpha+1)(\alpha^2+\alpha)$ and $
+                                                  (\alpha-1)^{-1}$ in the form
+Not a real error.
+
+! Preview: Snippet 8 ended.(598293+179404x3000336).
+<-><->
+      
+l.44 ...1)(\alpha^2+\alpha)$ and $(\alpha-1)^{-1}$
+                                                   in the form
+Not a real error.
+
+[8]
+! Preview: Snippet 9 started.
+<-><->
+      
+l.45 \[
+       
+Not a real error.
+
+! Preview: Snippet 9 ended.(693976+0x13789863).
+<-><->
+      
+l.47 \]
+       
+Not a real error.
+
+[9]
+! Preview: Snippet 10 started.
+<-><->
+      
+l.48 with $
+           a,b,c \in \Q$.
+Not a real error.
+
+! Preview: Snippet 10 ended.(498346+139537x3070972).
+<-><->
+      
+l.48 with $a,b,c \in \Q$
+                        .
+Not a real error.
+
+[10]
+Package hyperref Info: bookmark level for unknown sol defaults to 0 on input li
+ne 52.
+
+! Preview: Snippet 11 started.
+<-><->
+      
+l.52 Note that $
+                \alpha^3 = -\alpha^2-\alpha - 2$ and $\alpha^2+\alpha+1=\fra...
+
+Not a real error.
+
+! Preview: Snippet 11 ended.(598293+59802x5635706).
+<-><->
+      
+l.52 Note that $\alpha^3 = -\alpha^2-\alpha - 2$
+                                                 and $\alpha^2+\alpha+1=\fra...
+
+Not a real error.
+
+[11]
+! Preview: Snippet 12 started.
+<-><->
+      
+l.52 ...at $\alpha^3 = -\alpha^2-\alpha - 2$ and $
+                                                  \alpha^2+\alpha+1=\frac{\a...
+
+Not a real error.
+
+! Preview: Snippet 12 ended.(720984+302080x5804474).
+<-><->
+      
+l.52 ...ha^2+\alpha+1=\frac{\alpha^3-1}{\alpha-1}$
+                                                   (it is the beginning of a...
+
+Not a real error.
+
+[12]
+! Preview: Snippet 13 started.
+<-><->
+      
+l.53 \begin{align*}
+                   
+Not a real error.
+
+! Preview: Snippet 13 ended.(12150079+0x21323053).
+<-><->
+      
+l.61 \end{align*}
+                 
+Not a real error.
+
+[13]
+! Preview: Snippet 14 started.
+<-><->
+      
+l.65 For $
+          (\alpha-1)^{-1}$, let
+Not a real error.
+
+! Preview: Snippet 14 ended.(598293+179404x3000336).
+<-><->
+      
+l.65 For $(\alpha-1)^{-1}$
+                          , let
+Not a real error.
+
+[14]
+! Preview: Snippet 15 started.
+<-><->
+      
+l.66 \[
+       
+Not a real error.
+
+! Preview: Snippet 15 ended.(1499992+0x15295393).
+<-><->
+      
+l.68 \]
+       
+Not a real error.
+
+[15]
+! Preview: Snippet 16 started.
+<-><->
+      
+l.69 ...ultiplaying on both sides and using that $
+                                                  1,\alpha, \alpha^2$ are li...
+
+Not a real error.
+
+! Preview: Snippet 16 ended.(598293+139537x2231426).
+<-><->
+      
+l.69 ... sides and using that $1,\alpha, \alpha^2$
+                                                   are linearly independent ...
+
+Not a real error.
+
+[16]
+! Preview: Snippet 17 started.
+<-><->
+      
+l.69 ... \alpha^2$ are linearly independent over $
+                                                  \Q$, we equate coefficient...
+
+Not a real error.
+
+! Preview: Snippet 17 ended.(494359+119603x558150).
+<-><->
+      
+l.69 ...lpha^2$ are linearly independent over $\Q$
+                                                  , we equate coefficients, ...
+
+Not a real error.
+
+[17]
+! Preview: Snippet 18 started.
+<-><->
+      
+l.70 \[
+       
+Not a real error.
+
+! Preview: Snippet 18 ended.(1440190+0x16422401).
+<-><->
+      
+l.72 \]
+       
+Not a real error.
+
+[18]
+! Preview: Snippet 19 started.
+<-><->
+      
+l.76   Let $
+            E=F(\alpha)$ where $\alpha$ is algebraic over $F$ of odd degree....
+
+Not a real error.
+
+! Preview: Snippet 19 ended.(538214+179404x3108932).
+<-><->
+      
+l.76   Let $E=F(\alpha)$
+                         where $\alpha$ is algebraic over $F$ of odd degree....
+
+Not a real error.
+
+[19]
+! Preview: Snippet 20 started.
+<-><->
+      
+l.76   Let $E=F(\alpha)$ where $
+                                \alpha$ is algebraic over $F$ of odd degree....
+
+Not a real error.
+
+! Preview: Snippet 20 ended.(308974+0x461718).
+<-><->
+      
+l.76   Let $E=F(\alpha)$ where $\alpha$
+                                        is algebraic over $F$ of odd degree....
+
+Not a real error.
+
+[20]
+! Preview: Snippet 21 started.
+<-><->
+      
+l.76 ...alpha)$ where $\alpha$ is algebraic over $
+                                                  F$ of odd degree. Show tha...
+
+Not a real error.
+
+! Preview: Snippet 21 ended.(490372+0x561139).
+<-><->
+      
+l.76 ...pha)$ where $\alpha$ is algebraic over $F$
+                                                   of odd degree. Show that ...
+
+Not a real error.
+
+[21]
+! Preview: Snippet 22 started.
+<-><->
+      
+l.76 ...ebraic over $F$ of odd degree. Show that $
+                                                  E=F(\alpha^2)$.
+Not a real error.
+
+! Preview: Snippet 22 ended.(598293+179404x3420232).
+<-><->
+      
+l.76 ...$ of odd degree. Show that $E=F(\alpha^2)$
+                                                  .
+Not a real error.
+
+[22]
+! Preview: Snippet 23 started.
+<-><->
+      
+l.79 Cleary $
+             F(\alpha^2) \subset F(\alpha)$. It will be enough to show $\alp...
+
+Not a real error.
+
+! Preview: Snippet 23 ended.(598293+179404x4430134).
+<-><->
+      
+l.79 Cleary $F(\alpha^2) \subset F(\alpha)$
+                                           . It will be enough to show $\alp...
+
+Not a real error.
+
+[23]
+! Preview: Snippet 24 started.
+<-><->
+      
+l.79 ...et F(\alpha)$. It will be enough to show $
+                                                  \alpha \in F(\alpha^2)$.
+Not a real error.
+
+! Preview: Snippet 24 ended.(598293+179404x3231109).
+<-><->
+      
+l.79 ...be enough to show $\alpha \in F(\alpha^2)$
+                                                  .
+Not a real error.
+
+[24]
+! Preview: Snippet 25 started.
+<-><->
+      
+l.81 If $
+         \alpha \not \in F(\alpha^2)$, the extension $F(\alpha)/F(\alpha^2)$...
+
+Not a real error.
+
+! Preview: Snippet 25 ended.(598293+179404x3231109).
+<-><->
+      
+l.81 If $\alpha \not \in F(\alpha^2)$
+                                     , the extension $F(\alpha)/F(\alpha^2)$...
+
+Not a real error.
+
+[25]
+! Preview: Snippet 26 started.
+<-><->
+      
+l.81 ...pha \not \in F(\alpha^2)$, the extension $
+                                                  F(\alpha)/F(\alpha^2)$ mus...
+
+Not a real error.
+
+! Preview: Snippet 26 ended.(598293+179404x3832124).
+<-><->
+      
+l.81 ...2)$, the extension $F(\alpha)/F(\alpha^2)$
+                                                   must have degree $2$ beca...
+
+Not a real error.
+
+[26]
+! Preview: Snippet 27 started.
+<-><->
+      
+l.81 ...$F(\alpha)/F(\alpha^2)$ must have degree $
+                                                  2$ because $\alpha$ is a z...
+
+Not a real error.
+
+! Preview: Snippet 27 ended.(462465+0x358810).
+<-><->
+      
+l.81 ...(\alpha)/F(\alpha^2)$ must have degree $2$
+                                                   because $\alpha$ is a zer...
+
+Not a real error.
+
+[27]
+! Preview: Snippet 28 started.
+<-><->
+      
+l.81 ...(\alpha^2)$ must have degree $2$ because $
+                                                  \alpha$ is a zero of $X^2-...
+
+Not a real error.
+
+! Preview: Snippet 28 ended.(308974+0x461718).
+<-><->
+      
+l.81 ...^2)$ must have degree $2$ because $\alpha$
+                                                   is a zero of $X^2-\alpha^...
+
+Not a real error.
+
+[28]
+! Preview: Snippet 29 started.
+<-><->
+      
+l.81 ...degree $2$ because $\alpha$ is a zero of $
+                                                  X^2-\alpha^2$. Then $[F(\a...
+
+Not a real error.
+
+! Preview: Snippet 29 ended.(598293+59802x2612244).
+<-><->
+      
+l.81 ...cause $\alpha$ is a zero of $X^2-\alpha^2$
+                                                  . Then $[F(\alpha):F]=[F(\...
+
+Not a real error.
+
+[29]
+! Preview: Snippet 30 started.
+<-><->
+      
+l.81 ...alpha$ is a zero of $X^2-\alpha^2$. Then $
+                                                  [F(\alpha):F]=[F(\alpha):F...
+
+Not a real error.
+
+! Preview: Snippet 30 ended.(598293+179404x16781550).
+<-><->
+      
+l.81 ...lpha^2)][F(\alpha^2):F]=2 [F(\alpha^2):F]$
+                                                  .
+Not a real error.
+
+[30]
+! Preview: Snippet 31 started.
+<-><->
+      
+l.85  Let $
+           \alpha, \beta$ be two elements which are algebraic over $F$. Let ...
+
+Not a real error.
+
+! Preview: Snippet 31 ended.(498346+139537x1224436).
+<-><->
+      
+l.85  Let $\alpha, \beta$
+                          be two elements which are algebraic over $F$. Let ...
+
+Not a real error.
+
+[31]
+! Preview: Snippet 32 started.
+<-><->
+      
+l.85 ...be two elements which are algebraic over $
+                                                  F$. Let $f(X)=\mathrm{Irr}...
+
+Not a real error.
+
+! Preview: Snippet 32 ended.(490372+0x561139).
+<-><->
+      
+l.85 ... two elements which are algebraic over $F$
+                                                  . Let $f(X)=\mathrm{Irr}(\...
+
+Not a real error.
+
+[32]
+! Preview: Snippet 33 started.
+<-><->
+      
+l.85 ...ements which are algebraic over $F$. Let $
+                                                  f(X)=\mathrm{Irr}(\alpha,F...
+
+Not a real error.
+
+! Preview: Snippet 33 ended.(538214+179404x6205657).
+<-><->
+      
+l.85 ...r $F$. Let $f(X)=\mathrm{Irr}(\alpha,F,X)$
+                                                   and $g(X)=\mathrm{Irr}(\b...
+
+Not a real error.
+
+[33]
+! Preview: Snippet 34 started.
+<-><->
+      
+l.85 ... Let $f(X)=\mathrm{Irr}(\alpha,F,X)$ and $
+                                                  g(X)=\mathrm{Irr}(\beta,F,...
+
+Not a real error.
+
+! Preview: Snippet 34 ended.(538214+179404x6127165).
+<-><->
+      
+l.85 ...a,F,X)$ and $g(X)=\mathrm{Irr}(\beta,F,X)$
+                                                  . Suppose that $\deg f$ an...
+
+Not a real error.
+
+[34]
+! Preview: Snippet 35 started.
+<-><->
+      
+l.85 ...)=\mathrm{Irr}(\beta,F,X)$. Suppose that $
+                                                  \deg f$ and $\deg g$ are r...
+
+Not a real error.
+
+! Preview: Snippet 35 ended.(498346+139537x1634577).
+<-><->
+      
+l.85 ...rm{Irr}(\beta,F,X)$. Suppose that $\deg f$
+                                                   and $\deg g$ are relative...
+
+Not a real error.
+
+[35]
+! Preview: Snippet 36 started.
+<-><->
+      
+l.85 ...}(\beta,F,X)$. Suppose that $\deg f$ and $
+                                                  \deg g$ are relatively pri...
+
+Not a real error.
+
+! Preview: Snippet 36 ended.(498346+139537x1574025).
+<-><->
+      
+l.85 ...,F,X)$. Suppose that $\deg f$ and $\deg g$
+                                                   are relatively prime. Sho...
+
+Not a real error.
+
+[36]
+! Preview: Snippet 37 started.
+<-><->
+      
+l.85 ...$\deg g$ are relatively prime. Show that $
+                                                  g$ is irreducible in the p...
+
+Not a real error.
+
+! Preview: Snippet 37 ended.(308974+139537x368028).
+<-><->
+      
+l.85 ...deg g$ are relatively prime. Show that $g$
+                                                   is irreducible in the pol...
+
+Not a real error.
+
+[37]
+! Preview: Snippet 38 started.
+<-><->
+      
+l.85 ...g$ is irreducible in the polynomial ring $
+                                                  F(\alpha)[X]$.
+Not a real error.
+
+! Preview: Snippet 38 ended.(538214+179404x2630525).
+<-><->
+      
+l.85 ...ible in the polynomial ring $F(\alpha)[X]$
+                                                  .
+Not a real error.
+
+[38]
+! Preview: Snippet 39 started.
+<-><->
+      
+l.89 Consider the tower of fields $
+                                   F \subset F(\alpha) \subset F(\alpha, \be...
+
+Not a real error.
+
+! Preview: Snippet 39 ended.(538214+179404x6399511).
+<-><->
+      
+l.89 ...subset F(\alpha) \subset F(\alpha, \beta)$
+                                                  . Then $[F(\alpha,\beta):F...
+
+Not a real error.
+
+[39]
+! Preview: Snippet 40 started.
+<-><->
+      
+l.89 ...(\alpha) \subset F(\alpha, \beta)$. Then $
+                                                  [F(\alpha,\beta):F] = \deg...
+
+Not a real error.
+
+! Preview: Snippet 40 ended.(538214+179404x12125660).
+<-><->
+      
+l.89 ...= \deg f \cdot n \leq \deg f \cdot \deg g$
+                                                  , by the same argument as ...
+
+Not a real error.
+
+[40]
+! Preview: Snippet 41 started.
+<-><->
+      
+l.89 ... the proof of Proposition 1.2. Similarly $
+                                                  [F(\alpha,\beta):F]=\deg g...
+
+Not a real error.
+
+! Preview: Snippet 41 ended.(538214+179404x12264447).
+<-><->
+      
+l.89 ...]=\deg g \cdot m \leq \deg f \cdot \deg g$
+                                                  . But then
+Not a real error.
+
+[41]
+! Preview: Snippet 42 started.
+<-><->
+      
+l.90 \[
+       
+Not a real error.
+
+! Preview: Snippet 42 ended.(1615608+0x13664174).
+<-><->
+      
+l.92 \]
+       
+Not a real error.
+
+[42]
+! Preview: Snippet 43 started.
+<-><->
+      
+l.93 But $
+          \deg f$ and $\deg g$ are relatively prime, and, and we must have $...
+
+Not a real error.
+
+! Preview: Snippet 43 ended.(498346+139537x1634577).
+<-><->
+      
+l.93 But $\deg f$
+                  and $\deg g$ are relatively prime, and, and we must have $...
+
+Not a real error.
+
+[43]
+! Preview: Snippet 44 started.
+<-><->
+      
+l.93 But $\deg f$ and $
+                       \deg g$ are relatively prime, and, and we must have $...
+
+Not a real error.
+
+! Preview: Snippet 44 ended.(498346+139537x1574025).
+<-><->
+      
+l.93 But $\deg f$ and $\deg g$
+                               are relatively prime, and, and we must have $...
+
+Not a real error.
+
+[44]
+! Preview: Snippet 45 started.
+<-><->
+      
+l.93 ... relatively prime, and, and we must have $
+                                                  m \leq \deg f$ and $n \leq...
+
+Not a real error.
+
+! Preview: Snippet 45 ended.(498346+139537x3221476).
+<-><->
+      
+l.93 ...ime, and, and we must have $m \leq \deg f$
+                                                   and $n \leq deg g$. This ...
+
+Not a real error.
+
+[45]
+! Preview: Snippet 46 started.
+<-><->
+      
+l.93 ...nd, and we must have $m \leq \deg f$ and $
+                                                  n \leq deg g$. This forces...
+
+Not a real error.
+
+! Preview: Snippet 46 ended.(498346+139537x2831269).
+<-><->
+      
+l.93 ...st have $m \leq \deg f$ and $n \leq deg g$
+                                                  . This forces $m = deg f$ ...
+
+Not a real error.
+
+[46]
+! Preview: Snippet 47 started.
+<-><->
+      
+l.93 ... \deg f$ and $n \leq deg g$. This forces $
+                                                  m = deg f$ and $n = \deg g...
+
+Not a real error.
+
+! Preview: Snippet 47 ended.(498346+139537x3091160).
+<-><->
+      
+l.93 ...nd $n \leq deg g$. This forces $m = deg f$
+                                                   and $n = \deg g$, and hen...
+
+Not a real error.
+
+[47]
+! Preview: Snippet 48 started.
+<-><->
+      
+l.93 ...\leq deg g$. This forces $m = deg f$ and $
+                                                  n = \deg g$, and hence $[F...
+
+Not a real error.
+
+! Preview: Snippet 48 ended.(498346+139537x2961585).
+<-><->
+      
+l.93 .... This forces $m = deg f$ and $n = \deg g$
+                                                  , and hence $[F(\alpha,\be...
+
+Not a real error.
+
+[48]
+! Preview: Snippet 49 started.
+<-><->
+      
+l.93 ... $m = deg f$ and $n = \deg g$, and hence $
+                                                  [F(\alpha,\beta):F(\alpha)...
+
+Not a real error.
+
+! Preview: Snippet 49 ended.(538214+179404x7452264).
+<-><->
+      
+l.93 ...hence $[F(\alpha,\beta):F(\alpha)]=\deg g$
+                                                   and $[F(\alpha,\beta):F(\...
+
+Not a real error.
+
+[49]
+! Preview: Snippet 50 started.
+<-><->
+      
+l.93 ...$[F(\alpha,\beta):F(\alpha)]=\deg g$ and $
+                                                  [F(\alpha,\beta):F(\beta)]...
+
+Not a real error.
+
+! Preview: Snippet 50 ended.(538214+179404x7494876).
+<-><->
+      
+l.93 ...g$ and $[F(\alpha,\beta):F(\beta)]=\deg f$
+                                                  .
+Not a real error.
+
+[50]
+! Preview: Snippet 51 started.
+<-><->
+      
+l.95 Now, if $
+              g$ were reducible in $F(\alpha)[X]$, we would have $[F(\alpha,...
+
+Not a real error.
+
+! Preview: Snippet 51 ended.(308974+139537x368028).
+<-><->
+      
+l.95 Now, if $g$
+                 were reducible in $F(\alpha)[X]$, we would have $[F(\alpha,...
+
+Not a real error.
+
+[51]
+! Preview: Snippet 52 started.
+<-><->
+      
+l.95 Now, if $g$ were reducible in $
+                                    F(\alpha)[X]$, we would have $[F(\alpha,...
+
+Not a real error.
+
+! Preview: Snippet 52 ended.(538214+179404x2630525).
+<-><->
+      
+l.95 Now, if $g$ were reducible in $F(\alpha)[X]$
+                                                 , we would have $[F(\alpha,...
+
+Not a real error.
+
+[52]
+! Preview: Snippet 53 started.
+<-><->
+      
+l.95 ...ducible in $F(\alpha)[X]$, we would have $
+                                                  [F(\alpha,\beta):F] < \deg...
+
+Not a real error.
+
+! Preview: Snippet 53 ended.(538214+179404x8186574).
+<-><->
+      
+l.95 ...have $[F(\alpha,\beta):F] < \deg f \deg g$
+                                                  . But we don't.
+Not a real error.
+
+[53]
+! Preview: Snippet 54 started.
+<-><->
+      
+l.99 \section
+             {Algebraic Geometry - Hartshorne}
+Not a real error.
+
+! Preview: Snippet 54 ended.(651269+183455x23592960).
+<-><->
+      
+l.99 \section{Algebraic Geometry - Hartshorne}
+                                              
+Not a real error.
+
+[54
+
+]
+! Preview: Snippet 55 started.
+<-><->
+      
+l.101 \subsection
+                 {Chapter I - Varieties}
+Not a real error.
+
+! Preview: Snippet 55 ended.(542724+152880x23592960).
+<-><->
+      
+l.101 \subsection{Chapter I - Varieties}
+                                        
+Not a real error.
+
+[55
+
+]
+! Preview: Snippet 56 started.
+<-><->
+      
+l.105   \item Let $
+                   Y$ be the plane curve $y=x^2$. Show that $A(Y)$ is isomor...
+
+Not a real error.
+
+! Preview: Snippet 56 ended.(490372+0x576089).
+<-><->
+      
+l.105   \item Let $Y$
+                      be the plane curve $y=x^2$. Show that $A(Y)$ is isomor...
+
+Not a real error.
+
+[56]
+! Preview: Snippet 57 started.
+<-><->
+      
+l.105   \item Let $Y$ be the plane curve $
+                                          y=x^2$. Show that $A(Y)$ is isomor...
+
+Not a real error.
+
+! Preview: Snippet 57 ended.(598293+139537x2055841).
+<-><->
+      
+l.105   \item Let $Y$ be the plane curve $y=x^2$
+                                                . Show that $A(Y)$ is isomor...
+
+Not a real error.
+
+[57]
+! Preview: Snippet 58 started.
+<-><->
+      
+l.105 ...$ be the plane curve $y=x^2$. Show that $
+                                                  A(Y)$ is isomorphic to a p...
+
+Not a real error.
+
+! Preview: Snippet 58 ended.(538214+179404x1672454).
+<-><->
+      
+l.105 ...the plane curve $y=x^2$. Show that $A(Y)$
+                                                   is isomorphic to a polyno...
+
+Not a real error.
+
+[58]
+! Preview: Snippet 59 started.
+<-><->
+      
+l.105 ... a polynomial ring in one variable over $
+                                                  k$.
+Not a real error.
+
+! Preview: Snippet 59 ended.(498346+0x396186).
+<-><->
+      
+l.105 ... polynomial ring in one variable over $k$
+                                                  .
+Not a real error.
+
+[59]
+! Preview: Snippet 60 started.
+<-><->
+      
+l.106 \item Let $
+                 Z$ be the plane curve $xy=1$. Show that $A(Z)$ is not isomo...
+
+Not a real error.
+
+! Preview: Snippet 60 ended.(490372+0x541204).
+<-><->
+      
+l.106 \item Let $Z$
+                    be the plane curve $xy=1$. Show that $A(Z)$ is not isomo...
+
+Not a real error.
+
+[60]
+! Preview: Snippet 61 started.
+<-><->
+      
+l.106 \item Let $Z$ be the plane curve $
+                                        xy=1$. Show that $A(Z)$ is not isomo...
+
+Not a real error.
+
+! Preview: Snippet 61 ended.(462465+139537x2103351).
+<-><->
+      
+l.106 \item Let $Z$ be the plane curve $xy=1$
+                                             . Show that $A(Z)$ is not isomo...
+
+Not a real error.
+
+[61]
+! Preview: Snippet 62 started.
+<-><->
+      
+l.106 ...Z$ be the plane curve $xy=1$. Show that $
+                                                  A(Z)$ is not isomorphic to...
+
+Not a real error.
+
+! Preview: Snippet 62 ended.(538214+179404x1637569).
+<-><->
+      
+l.106 ... the plane curve $xy=1$. Show that $A(Z)$
+                                                   is not isomorphic to a po...
+
+Not a real error.
+
+[62]
+! Preview: Snippet 63 started.
+<-><->
+      
+l.106 ... a polynomial ring in one variable over $
+                                                  k$.
+Not a real error.
+
+! Preview: Snippet 63 ended.(498346+0x396186).
+<-><->
+      
+l.106 ... polynomial ring in one variable over $k$
+                                                  .
+Not a real error.
+
+[63]
+! Preview: Snippet 64 started.
+<-><->
+      
+l.107 \item Let $
+                 f$ be any irreducible quadratic polynomial in $k[x,y]$, and...
+
+Not a real error.
+
+! Preview: Snippet 64 ended.(498346+139537x428580).
+<-><->
+      
+l.107 \item Let $f$
+                    be any irreducible quadratic polynomial in $k[x,y]$, and...
+
+Not a real error.
+
+[64]
+! Preview: Snippet 65 started.
+<-><->
+      
+l.107 ...any irreducible quadratic polynomial in $
+                                                  k[x,y]$, and let $W$ be th...
+
+Not a real error.
+
+! Preview: Snippet 65 ended.(538214+179404x1901525).
+<-><->
+      
+l.107 ...educible quadratic polynomial in $k[x,y]$
+                                                  , and let $W$ be the conic...
+
+Not a real error.
+
+[65]
+! Preview: Snippet 66 started.
+<-><->
+      
+l.107 ...adratic polynomial in $k[x,y]$, and let $
+                                                  W$ be the conic defined by...
+
+Not a real error.
+
+! Preview: Snippet 66 ended.(490372+0x777422).
+<-><->
+      
+l.107 ...ratic polynomial in $k[x,y]$, and let $W$
+                                                   be the conic defined by $...
+
+Not a real error.
+
+[66]
+! Preview: Snippet 67 started.
+<-><->
+      
+l.107 ...]$, and let $W$ be the conic defined by $
+                                                  f$. Show that $A(W)$ is is...
+
+Not a real error.
+
+! Preview: Snippet 67 ended.(498346+139537x428580).
+<-><->
+      
+l.107 ..., and let $W$ be the conic defined by $f$
+                                                  . Show that $A(W)$ is isom...
+
+Not a real error.
+
+[67]
+! Preview: Snippet 68 started.
+<-><->
+      
+l.107 ... be the conic defined by $f$. Show that $
+                                                  A(W)$ is isomorphic to $A(...
+
+Not a real error.
+
+! Preview: Snippet 68 ended.(538214+179404x1873787).
+<-><->
+      
+l.107 ...he conic defined by $f$. Show that $A(W)$
+                                                   is isomorphic to $A(Y)$ o...
+
+Not a real error.
+
+[68]
+! Preview: Snippet 69 started.
+<-><->
+      
+l.107 ... $f$. Show that $A(W)$ is isomorphic to $
+                                                  A(Y)$ or $A(Z)$. Which one...
+
+Not a real error.
+
+! Preview: Snippet 69 ended.(538214+179404x1672454).
+<-><->
+      
+l.107 ... Show that $A(W)$ is isomorphic to $A(Y)$
+                                                   or $A(Z)$. Which one is i...
+
+Not a real error.
+
+[69]
+! Preview: Snippet 70 started.
+<-><->
+      
+l.107 ... that $A(W)$ is isomorphic to $A(Y)$ or $
+                                                  A(Z)$. Which one is it when?
+Not a real error.
+
+! Preview: Snippet 70 ended.(538214+179404x1637569).
+<-><->
+      
+l.107 ... $A(W)$ is isomorphic to $A(Y)$ or $A(Z)$
+                                                  . Which one is it when?
+Not a real error.
+
+[70]
+! Preview: Snippet 71 started.
+<-><->
+      
+l.112   \item  We have $
+                        A(Y)=k[x,y]/(y-x^2)$. An isomorphism $A(Y) \to k[t]$...
+
+Not a real error.
+
+! Preview: Snippet 71 ended.(598293+179404x7423866).
+<-><->
+      
+l.112   \item  We have $A(Y)=k[x,y]/(y-x^2)$
+                                            . An isomorphism $A(Y) \to k[t]$...
+
+Not a real error.
+
+[71]
+! Preview: Snippet 72 started.
+<-><->
+      
+l.112 ...e $A(Y)=k[x,y]/(y-x^2)$. An isomorphism $
+                                                  A(Y) \to k[t]$ is given by...
+
+Not a real error.
+
+! Preview: Snippet 72 ended.(538214+179404x3842750).
+<-><->
+      
+l.112 .../(y-x^2)$. An isomorphism $A(Y) \to k[t]$
+                                                   is given by $x \mapsto t$...
+
+Not a real error.
+
+[72]
+! Preview: Snippet 73 started.
+<-><->
+      
+l.112 ...isomorphism $A(Y) \to k[t]$ is given by $
+                                                  x \mapsto t$ and $y \mapst...
+
+Not a real error.
+
+! Preview: Snippet 73 ended.(441393+0x1785571).
+<-><->
+      
+l.112 ...$A(Y) \to k[t]$ is given by $x \mapsto t$
+                                                   and $y \mapsto t^2$.
+Not a real error.
+
+[73]
+! Preview: Snippet 74 started.
+<-><->
+      
+l.112 ...\to k[t]$ is given by $x \mapsto t$ and $
+                                                  y \mapsto t^2$.
+Not a real error.
+
+! Preview: Snippet 74 ended.(598293+139537x2064314).
+<-><->
+      
+l.112 ...iven by $x \mapsto t$ and $y \mapsto t^2$
+                                                  .
+Not a real error.
+
+[74]
+! Preview: Snippet 75 started.
+<-><->
+      
+l.113 \item We have $
+                     A(Z) = k[x,y]/(xy-1) \simeq k[x,\frac 1x]$. So we must ...
+
+Not a real error.
+
+! Preview: Snippet 75 ended.(620424+247464x10388115).
+<-><->
+      
+l.113 ...(Z) = k[x,y]/(xy-1) \simeq k[x,\frac 1x]$
+                                                  . So we must show that $k[...
+
+Not a real error.
+
+[75]
+! Preview: Snippet 76 started.
+<-><->
+      
+l.113 ...eq k[x,\frac 1x]$. So we must show that $
+                                                  k[x,\frac 1x] \not \approx...
+
+Not a real error.
+
+! Preview: Snippet 76 ended.(620424+247464x4156627).
+<-><->
+      
+l.113 ...ow that $k[x,\frac 1x] \not \approx k[x]$
+                                                  . It can be computed that ...
+
+Not a real error.
+
+[76]
+! Preview: Snippet 77 started.
+<-><->
+      
+l.113 ...he first one has automorphisms given by $
+                                                  x \mapsto cx^n$ for $c$ no...
+
+Not a real error.
+
+! Preview: Snippet 77 ended.(486153+0x2617891).
+<-><->
+      
+l.113 ...s automorphisms given by $x \mapsto cx^n$
+                                                   for $c$ nonzero and $n \n...
+
+Not a real error.
+
+[77]
+! Preview: Snippet 78 started.
+<-><->
+      
+l.113 ...morphisms given by $x \mapsto cx^n$ for $
+                                                  c$ nonzero and $n \neq 0$....
+
+Not a real error.
+
+! Preview: Snippet 78 ended.(308974+0x310554).
+<-><->
+      
+l.113 ...rphisms given by $x \mapsto cx^n$ for $c$
+                                                   nonzero and $n \neq 0$. T...
+
+Not a real error.
+
+[78]
+! Preview: Snippet 79 started.
+<-><->
+      
+l.113 ...by $x \mapsto cx^n$ for $c$ nonzero and $
+                                                  n \neq 0$. The second has ...
+
+Not a real error.
+
+! Preview: Snippet 79 ended.(498346+139535x1746370).
+<-><->
+      
+l.113 ...psto cx^n$ for $c$ nonzero and $n \neq 0$
+                                                  . The second has as automo...
+
+Not a real error.
+
+[79]
+! Preview: Snippet 80 started.
+<-><->
+      
+l.113 ...neq 0$. The second has as automorphisms $
+                                                  ax+b$ ($a \neq 0$). So the...
+
+Not a real error.
+
+! Preview: Snippet 80 ended.(498346+59802x1974529).
+<-><->
+      
+l.113 ...$. The second has as automorphisms $ax+b$
+                                                   ($a \neq 0$). So the firs...
+
+Not a real error.
+
+[80]
+! Preview: Snippet 81 started.
+<-><->
+      
+l.113 ...The second has as automorphisms $ax+b$ ($
+                                                  a \neq 0$). So the first o...
+
+Not a real error.
+
+! Preview: Snippet 81 ended.(498346+139535x1694956).
+<-><->
+      
+l.113 ...d has as automorphisms $ax+b$ ($a \neq 0$
+                                                  ). So the first one have a...
+
+Not a real error.
+
+[81] [2
+
+
+
+
+
+
+
+]
+! Preview: Snippet 82 started.
+<-><->
+      
+l.114 \item What is special about $
+                                   A(Y)$ and $A(Z)$? Staring at pictures, we...
+
+Not a real error.
+
+! Preview: Snippet 82 ended.(538214+179404x1672454).
+<-><->
+      
+l.114 \item What is special about $A(Y)$
+                                         and $A(Z)$? Staring at pictures, we...
+
+Not a real error.
+
+[82]
+! Preview: Snippet 83 started.
+<-><->
+      
+l.114 \item What is special about $A(Y)$ and $
+                                              A(Z)$? Staring at pictures, we...
+
+Not a real error.
+
+! Preview: Snippet 83 ended.(538214+179404x1637569).
+<-><->
+      
+l.114 ...m What is special about $A(Y)$ and $A(Z)$
+                                                  ? Staring at pictures, we ...
+
+Not a real error.
+
+[83]
+! Preview: Snippet 84 started.
+<-><->
+      
+l.114 ...ng at pictures, we see that any line in $
+                                                  \Aa^2$ intersects $Y$ in a...
+
+Not a real error.
+
+! Preview: Snippet 84 ended.(598293+0x829581).
+<-><->
+      
+l.114 ...pictures, we see that any line in $\Aa^2$
+                                                   intersects $Y$ in at leas...
+
+Not a real error.
+
+[84]
+! Preview: Snippet 85 started.
+<-><->
+      
+l.114 ...see that any line in $\Aa^2$ intersects $
+                                                  Y$ in at least one point, ...
+
+Not a real error.
+
+! Preview: Snippet 85 ended.(490372+0x576089).
+<-><->
+      
+l.114 ...e that any line in $\Aa^2$ intersects $Y$
+                                                   in at least one point, bu...
+
+Not a real error.
+
+[85]
+! Preview: Snippet 86 started.
+<-><->
+      
+l.114 ... at least one point, but in the case of $
+                                                  Z$, there exist two lines ...
+
+Not a real error.
+
+! Preview: Snippet 86 ended.(490372+0x541204).
+<-><->
+      
+l.114 ...t least one point, but in the case of $Z$
+                                                  , there exist two lines wh...
+
+Not a real error.
+
+[86]
+! Preview: Snippet 87 started.
+<-><->
+      
+l.114 ... exist two lines which do not intersect $
+                                                  Z$. We claim that this is ...
+
+Not a real error.
+
+! Preview: Snippet 87 ended.(490372+0x541204).
+<-><->
+      
+l.114 ...xist two lines which do not intersect $Z$
+                                                  . We claim that this is th...
+
+Not a real error.
+
+[87]
+! Preview: Snippet 88 started.
+<-><->
+      
+l.116 ...that is, if there exist a pair of lines $
+                                                  \ell,\ell'$ such that $W \...
+
+Not a real error.
+
+! Preview: Snippet 88 ended.(551690+139537x1100825).
+<-><->
+      
+l.116 ... there exist a pair of lines $\ell,\ell'$
+                                                   such that $W \cap \ell = ...
+
+Not a real error.
+
+[88]
+! Preview: Snippet 89 started.
+<-><->
+      
+l.116 ... a pair of lines $\ell,\ell'$ such that $
+                                                  W \cap \ell = W \cap \ell'...
+
+Not a real error.
+
+! Preview: Snippet 89 ended.(551690+39867x6203879).
+<-><->
+      
+l.116 ...t $W \cap \ell = W \cap \ell' =\emptyset$
+                                                  , then $W \simeq Z$.
+Not a real error.
+
+[89]
+! Preview: Snippet 90 started.
+<-><->
+      
+l.116 ...p \ell = W \cap \ell' =\emptyset$, then $
+                                                  W \simeq Z$.
+Not a real error.
+
+! Preview: Snippet 90 ended.(490372+0x2275446).
+<-><->
+      
+l.116 ...\cap \ell' =\emptyset$, then $W \simeq Z$
+                                                  .
+Not a real error.
+
+[90]
+! Preview: Snippet 91 started.
+<-><->
+      
+l.119 \[
+        
+Not a real error.
+
+! Preview: Snippet 91 ended.(773711+0x17306607).
+<-><->
+      
+l.121 \]
+        
+Not a real error.
+
+[91]
+! Preview: Snippet 92 started.
+<-><->
+      
+l.122 Suppose now $
+                   \ell \cap W=\emptyset$. This is equivalent to $I(f,\ell^\...
+
+Not a real error.
+
+! Preview: Snippet 92 ended.(538214+39867x3189412).
+<-><->
+      
+l.122 Suppose now $\ell \cap W=\emptyset$
+                                         . This is equivalent to $I(f,\ell^\...
+
+Not a real error.
+
+[92]
+! Preview: Snippet 93 started.
+<-><->
+      
+l.122 ...cap W=\emptyset$. This is equivalent to $
+                                                  I(f,\ell^\vee)=(1)$. Witho...
+
+Not a real error.
+
+! Preview: Snippet 93 ended.(551690+179404x4214502).
+<-><->
+      
+l.122 ...his is equivalent to $I(f,\ell^\vee)=(1)$
+                                                  . Without loss of generali...
+
+Not a real error.
+
+[93]
+! Preview: Snippet 94 started.
+<-><->
+      
+l.122 ...hout loss of generality, we can assumme $
+                                                  \ell = \{ x = 0 \}$. Then
+Not a real error.
+
+! Preview: Snippet 94 ended.(538214+179404x3699219).
+<-><->
+      
+l.122 ...lity, we can assumme $\ell = \{ x = 0 \}$
+                                                  . Then
+Not a real error.
+
+[94]
+! Preview: Snippet 95 started.
+<-><->
+      
+l.123 \[
+        
+Not a real error.
+
+! Preview: Snippet 95 ended.(813578+0x15913485).
+<-><->
+      
+l.125 \]
+        
+Not a real error.
+
+[95]
+! Preview: Snippet 96 started.
+<-><->
+      
+l.126 This generates $
+                      k[x,y]$ if and only if $c=e=0$ and $f \neq 0$. Thus $f...
+
+Not a real error.
+
+! Preview: Snippet 96 ended.(538214+179404x1901525).
+<-><->
+      
+l.126 This generates $k[x,y]$
+                              if and only if $c=e=0$ and $f \neq 0$. Thus $f...
+
+Not a real error.
+
+[96]
+! Preview: Snippet 97 started.
+<-><->
+      
+l.126 This generates $k[x,y]$ if and only if $
+                                              c=e=0$ and $f \neq 0$. Thus $f...
+
+Not a real error.
+
+! Preview: Snippet 97 ended.(462465+0x2917146).
+<-><->
+      
+l.126 ...generates $k[x,y]$ if and only if $c=e=0$
+                                                   and $f \neq 0$. Thus $f$ ...
+
+Not a real error.
+
+[97]
+! Preview: Snippet 98 started.
+<-><->
+      
+l.126 ...tes $k[x,y]$ if and only if $c=e=0$ and $
+                                                  f \neq 0$. Thus $f$ must b...
+
+Not a real error.
+
+! Preview: Snippet 98 ended.(498346+139537x1744210).
+<-><->
+      
+l.126 ...y]$ if and only if $c=e=0$ and $f \neq 0$
+                                                  . Thus $f$ must be of the ...
+
+Not a real error.
+
+[98]
+! Preview: Snippet 99 started.
+<-><->
+      
+l.126 ...nd only if $c=e=0$ and $f \neq 0$. Thus $
+                                                  f$ must be of the form
+Not a real error.
+
+! Preview: Snippet 99 ended.(498346+139537x428580).
+<-><->
+      
+l.126 ... only if $c=e=0$ and $f \neq 0$. Thus $f$
+                                                   must be of the form
+Not a real error.
+
+[99]
+! Preview: Snippet 100 started.
+<-><->
+      
+l.127 \[
+        
+Not a real error.
+
+! Preview: Snippet 100 ended.(773711+0x15474271).
+<-><->
+      
+l.129 \]
+        
+Not a real error.
+
+[100]
+! Preview: Snippet 101 started.
+<-><->
+      
+l.130 with $
+            f \neq 0$. But this can be written as
+Not a real error.
+
+! Preview: Snippet 101 ended.(498346+139537x1744210).
+<-><->
+      
+l.130 with $f \neq 0$
+                     . But this can be written as
+Not a real error.
+
+[101]
+! Preview: Snippet 102 started.
+<-><->
+      
+l.131 \[
+        
+Not a real error.
+
+! Preview: Snippet 102 ended.(717618+0x15492296).
+<-><->
+      
+l.133 \]
+        
+Not a real error.
+
+[102]
+! Preview: Snippet 103 started.
+<-><->
+      
+l.134 Put $
+           y' = ax+by+d$. Then $I(W)$ takes the form $(xy'+f=0)$, which is c...
+
+Not a real error.
+
+! Preview: Snippet 103 ended.(551690+139537x5120975).
+<-><->
+      
+l.134 Put $y' = ax+by+d$
+                        . Then $I(W)$ takes the form $(xy'+f=0)$, which is c...
+
+Not a real error.
+
+[103]
+! Preview: Snippet 104 started.
+<-><->
+      
+l.134 Put $y' = ax+by+d$. Then $
+                                I(W)$ takes the form $(xy'+f=0)$, which is c...
+
+Not a real error.
+
+! Preview: Snippet 104 ended.(538214+179404x1707338).
+<-><->
+      
+l.134 Put $y' = ax+by+d$. Then $I(W)$
+                                      takes the form $(xy'+f=0)$, which is c...
+
+Not a real error.
+
+[104]
+! Preview: Snippet 105 started.
+<-><->
+      
+l.134 ... = ax+by+d$. Then $I(W)$ takes the form $
+                                                  (xy'+f=0)$, which is clear...
+
+Not a real error.
+
+! Preview: Snippet 105 ended.(551690+179404x4151032).
+<-><->
+      
+l.134 ...$. Then $I(W)$ takes the form $(xy'+f=0)$
+                                                  , which is clearly isomorp...
+
+Not a real error.
+
+[105]
+! Preview: Snippet 106 started.
+<-><->
+      
+l.134 ...'+f=0)$, which is clearly isomorphic to $
+                                                  Z$ after a linear change o...
+
+Not a real error.
+
+! Preview: Snippet 106 ended.(490372+0x541204).
+<-><->
+      
+l.134 ...f=0)$, which is clearly isomorphic to $Z$
+                                                   after a linear change of ...
+
+Not a real error.
+
+[106]
+! Preview: Snippet 107 started.
+<-><->
+      
+l.134 ...s. Note that the other line not meeting $
+                                                  W$ is the line given by $y...
+
+Not a real error.
+
+! Preview: Snippet 107 ended.(490372+0x777422).
+<-><->
+      
+l.134 ... Note that the other line not meeting $W$
+                                                   is the line given by $y'=...
+
+Not a real error.
+
+[107]
+! Preview: Snippet 108 started.
+<-><->
+      
+l.134 ...ne not meeting $W$ is the line given by $
+                                                  y'=ax+by+d=0$.
+Not a real error.
+
+! Preview: Snippet 108 ended.(551690+139537x6436605).
+<-><->
+      
+l.134 ...g $W$ is the line given by $y'=ax+by+d=0$
+                                                  .
+Not a real error.
+
+[108]
+! Preview: Snippet 109 started.
+<-><->
+      
+l.136 ...ation, namely that \emph{every} line in $
+                                                  \Aa^2$ meets $W$. Now pick...
+
+Not a real error.
+
+! Preview: Snippet 109 ended.(598293+0x829581).
+<-><->
+      
+l.136 ... namely that \emph{every} line in $\Aa^2$
+                                                   meets $W$. Now pick a tan...
+
+Not a real error.
+
+[109]
+! Preview: Snippet 110 started.
+<-><->
+      
+l.136 ...that \emph{every} line in $\Aa^2$ meets $
+                                                  W$. Now pick a tangent lin...
+
+Not a real error.
+
+! Preview: Snippet 110 ended.(490372+0x777422).
+<-><->
+      
+l.136 ...at \emph{every} line in $\Aa^2$ meets $W$
+                                                  . Now pick a tangent line ...
+
+Not a real error.
+
+[110]
+! Preview: Snippet 111 started.
+<-><->
+      
+l.136 ...a^2$ meets $W$. Now pick a tangent line $
+                                                  \ell$ of $W$. Without loss...
+
+Not a real error.
+
+! Preview: Snippet 111 ended.(498346+0x299010).
+<-><->
+      
+l.136 ...meets $W$. Now pick a tangent line $\ell$
+                                                   of $W$. Without loss of g...
+
+Not a real error.
+
+[111]
+! Preview: Snippet 112 started.
+<-><->
+      
+l.136 ... $W$. Now pick a tangent line $\ell$ of $
+                                                  W$. Without loss of genera...
+
+Not a real error.
+
+! Preview: Snippet 112 ended.(490372+0x777422).
+<-><->
+      
+l.136 ...W$. Now pick a tangent line $\ell$ of $W$
+                                                  . Without loss of generali...
+
+Not a real error.
+
+[112]
+! Preview: Snippet 113 started.
+<-><->
+      
+l.136 ... loss of generality, we can assume that $
+                                                  \ell$ is $\{ y=0 \}$. This...
+
+Not a real error.
+
+! Preview: Snippet 113 ended.(498346+0x299010).
+<-><->
+      
+l.136 ... of generality, we can assume that $\ell$
+                                                   is $\{ y=0 \}$. This is a...
+
+Not a real error.
+
+[113]
+! Preview: Snippet 114 started.
+<-><->
+      
+l.136 ...enerality, we can assume that $\ell$ is $
+                                                  \{ y=0 \}$. This is a tang...
+
+Not a real error.
+
+! Preview: Snippet 114 ended.(538214+179404x2410832).
+<-><->
+      
+l.136 ... we can assume that $\ell$ is $\{ y=0 \}$
+                                                  . This is a tangent line i...
+
+Not a real error.
+
+[114]
+! Preview: Snippet 115 started.
+<-><->
+      
+l.136 ... a tangent line if and only if it meets $
+                                                  W$ doubly, meaning that $I...
+
+Not a real error.
+
+! Preview: Snippet 115 ended.(490372+0x777422).
+<-><->
+      
+l.136 ... tangent line if and only if it meets $W$
+                                                   doubly, meaning that $I(W...
+
+Not a real error.
+
+[115]
+! Preview: Snippet 116 started.
+<-><->
+      
+l.136 ...ly if it meets $W$ doubly, meaning that $
+                                                  I(W) + (\ell^\vee)$ takes ...
+
+Not a real error.
+
+! Preview: Snippet 116 ended.(551690+179404x3845728).
+<-><->
+      
+l.136 ...doubly, meaning that $I(W) + (\ell^\vee)$
+                                                   takes the form $(l^2,y)$ ...
+
+Not a real error.
+
+[116]
+! Preview: Snippet 117 started.
+<-><->
+      
+l.136 ...hat $I(W) + (\ell^\vee)$ takes the form $
+                                                  (l^2,y)$ for some linear f...
+
+Not a real error.
+
+! Preview: Snippet 117 ended.(598293+179404x1794216).
+<-><->
+      
+l.136 ...) + (\ell^\vee)$ takes the form $(l^2,y)$
+                                                   for some linear form $l$....
+
+Not a real error.
+
+[117]
+! Preview: Snippet 118 started.
+<-><->
+      
+l.136 ...the form $(l^2,y)$ for some linear form $
+                                                  l$. We can also assume tha...
+
+Not a real error.
+
+! Preview: Snippet 118 ended.(498346+0x228244).
+<-><->
+      
+l.136 ...e form $(l^2,y)$ for some linear form $l$
+                                                  . We can also assume that ...
+
+Not a real error.
+
+[118]
+! Preview: Snippet 119 started.
+<-><->
+      
+l.136 ...inear form $l$. We can also assume that $
+                                                  \ell \cap W = (0,0)$, so t...
+
+Not a real error.
+
+! Preview: Snippet 119 ended.(538214+179404x4425312).
+<-><->
+      
+l.136 ...an also assume that $\ell \cap W = (0,0)$
+                                                  , so that $I(W) + (\ell^\v...
+
+Not a real error.
+
+[119]
+! Preview: Snippet 120 started.
+<-><->
+      
+l.136 ...ume that $\ell \cap W = (0,0)$, so that $
+                                                  I(W) + (\ell^\vee) =(x^2,y...
+
+Not a real error.
+
+! Preview: Snippet 120 ended.(598293+179404x6778659).
+<-><->
+      
+l.136 ...)$, so that $I(W) + (\ell^\vee) =(x^2,y)$
+                                                  . But this means that
+Not a real error.
+
+[120]
+! Preview: Snippet 121 started.
+<-><->
+      
+l.137 \begin{align*}
+                    
+Not a real error.
+
+! Preview: Snippet 121 ended.(2065270+0x19541609).
+<-><->
+      
+l.140 \end{align*}
+                  
+Not a real error.
+
+[121]
+! Preview: Snippet 122 started.
+<-><->
+      
+l.141 We want $
+               ax^2+dx+f=x^2$. This can happen only if $d=f=0$ and $a \neq 0...
+
+Not a real error.
+
+! Preview: Snippet 122 ended.(598293+139537x5745426).
+<-><->
+      
+l.141 We want $ax^2+dx+f=x^2$
+                             . This can happen only if $d=f=0$ and $a \neq 0...
+
+Not a real error.
+
+[122]
+! Preview: Snippet 123 started.
+<-><->
+      
+l.141 ...ax^2+dx+f=x^2$. This can happen only if $
+                                                  d=f=0$ and $a \neq 0$. Thu...
+
+Not a real error.
+
+! Preview: Snippet 123 ended.(498346+139537x3074541).
+<-><->
+      
+l.141 ...x+f=x^2$. This can happen only if $d=f=0$
+                                                   and $a \neq 0$. Thus the ...
+
+Not a real error.
+
+[123]
+! Preview: Snippet 124 started.
+<-><->
+      
+l.141 ...2$. This can happen only if $d=f=0$ and $
+                                                  a \neq 0$. Thus the quadri...
+
+Not a real error.
+
+! Preview: Snippet 124 ended.(498346+139535x1694956).
+<-><->
+      
+l.141 ...can happen only if $d=f=0$ and $a \neq 0$
+                                                  . Thus the quadric takes t...
+
+Not a real error.
+
+[124]
+! Preview: Snippet 125 started.
+<-><->
+      
+l.142 \[
+        
+Not a real error.
+
+! Preview: Snippet 125 ended.(773711+0x15823406).
+<-><->
+      
+l.144 \]
+        
+Not a real error.
+
+[125]
+! Preview: Snippet 126 started.
+<-><->
+      
+l.145 ...t there exist one line at each point of $
+                                                  W$ that intersect $W$ tran...
+
+Not a real error.
+
+! Preview: Snippet 126 ended.(490372+0x777422).
+<-><->
+      
+l.145 ...there exist one line at each point of $W$
+                                                   that intersect $W$ transv...
+
+Not a real error.
+
+[126]
+! Preview: Snippet 127 started.
+<-><->
+      
+l.145 ...ine at each point of $W$ that intersect $
+                                                  W$ transversally in exactl...
+
+Not a real error.
+
+! Preview: Snippet 127 ended.(490372+0x777422).
+<-><->
+      
+l.145 ...e at each point of $W$ that intersect $W$
+                                                   transversally in exactly ...
+
+Not a real error.
+
+[127]
+! Preview: Snippet 128 started.
+<-><->
+      
+l.145 ...exactly one point. This is the case for $
+                                                  Y$. Consider the pencil of...
+
+Not a real error.
+
+! Preview: Snippet 128 ended.(490372+0x576089).
+<-><->
+      
+l.145 ...actly one point. This is the case for $Y$
+                                                  . Consider the pencil of l...
+
+Not a real error.
+
+[128]
+! Preview: Snippet 129 started.
+<-><->
+      
+l.145 ...$. Consider the pencil of lines through $
+                                                  (0,0)$ defined by $x=\lamb...
+
+Not a real error.
+
+! Preview: Snippet 129 ended.(538214+179404x1594710).
+<-><->
+      
+l.145 ...sider the pencil of lines through $(0,0)$
+                                                   defined by $x=\lambda y$....
+
+Not a real error.
+
+[129]
+! Preview: Snippet 130 started.
+<-><->
+      
+l.145 ...cil of lines through $(0,0)$ defined by $
+                                                  x=\lambda y$. We want to f...
+
+Not a real error.
+
+! Preview: Snippet 130 ended.(498346+139537x2163153).
+<-><->
+      
+l.145 ... through $(0,0)$ defined by $x=\lambda y$
+                                                  . We want to find $\lambda...
+
+Not a real error.
+
+[130]
+! Preview: Snippet 131 started.
+<-><->
+      
+l.145 ...fined by $x=\lambda y$. We want to find $
+                                                  \lambda$ such that the int...
+
+Not a real error.
+
+! Preview: Snippet 131 ended.(498346+0x418612).
+<-><->
+      
+l.145 ... $x=\lambda y$. We want to find $\lambda$
+                                                   such that the intersectio...
+
+Not a real error.
+
+[131]
+! Preview: Snippet 132 started.
+<-><->
+      
+l.146 \[
+        
+Not a real error.
+
+! Preview: Snippet 132 ended.(885346+0x22082343).
+<-><->
+      
+l.148 \]
+        
+Not a real error.
+
+[132]
+! Preview: Snippet 133 started.
+<-><->
+      
+l.149 ...ave exactly one solution if and only if $
+                                                  a\lambda^2+b\lambda+c=0$. ...
+
+Not a real error.
+
+! Preview: Snippet 133 ended.(598293+59802x5216184).
+<-><->
+      
+l.149 ... if and only if $a\lambda^2+b\lambda+c=0$
+                                                  . This is solvable since $...
+
+Not a real error.
+
+[133]
+! Preview: Snippet 134 started.
+<-><->
+      
+l.149 ...2+b\lambda+c=0$. This is solvable since $
+                                                  a \neq 0$ and since all li...
+
+Not a real error.
+
+! Preview: Snippet 134 ended.(498346+139535x1694956).
+<-><->
+      
+l.149 ...a+c=0$. This is solvable since $a \neq 0$
+                                                   and since all lines inter...
+
+Not a real error.
+
+[134]
+! Preview: Snippet 135 started.
+<-><->
+      
+l.149 ...a \neq 0$ and since all lines intersect $
+                                                  W$. Thus choose $\lambda$ ...
+
+Not a real error.
+
+! Preview: Snippet 135 ended.(490372+0x777422).
+<-><->
+      
+l.149 ...\neq 0$ and since all lines intersect $W$
+                                                  . Thus choose $\lambda$ as...
+
+Not a real error.
+
+[135]
+! Preview: Snippet 136 started.
+<-><->
+      
+l.149 ...ce all lines intersect $W$. Thus choose $
+                                                  \lambda$ as above. We can ...
+
+Not a real error.
+
+! Preview: Snippet 136 ended.(498346+0x418612).
+<-><->
+      
+l.149 ...ines intersect $W$. Thus choose $\lambda$
+                                                   as above. We can rotate t...
+
+Not a real error.
+
+[136]
+! Preview: Snippet 137 started.
+<-><->
+      
+l.149 ...n rotate this line such that it becomes $
+                                                  x=0$. Then the equation ta...
+
+Not a real error.
+
+! Preview: Snippet 137 ended.(462465+0x1725769).
+<-><->
+      
+l.149 ...tate this line such that it becomes $x=0$
+                                                  . Then the equation takes ...
+
+Not a real error.
+
+[137]
+! Preview: Snippet 138 started.
+<-><->
+      
+l.150 \[
+        
+Not a real error.
+
+! Preview: Snippet 138 ended.(773711+0x14885145).
+<-><->
+      
+l.152 \]
+        
+Not a real error.
+
+[138]
+! Preview: Snippet 139 started.
+<-><->
+      
+l.153 We have still not arrived at $
+                                    y=x^2$. Let now $y=\lambda x$ be a gener...
+
+Not a real error.
+
+! Preview: Snippet 139 ended.(598293+139537x2055841).
+<-><->
+      
+l.153 We have still not arrived at $y=x^2$
+                                          . Let now $y=\lambda x$ be a gener...
+
+Not a real error.
+
+[139]
+! Preview: Snippet 140 started.
+<-><->
+      
+l.153 ...e still not arrived at $y=x^2$. Let now $
+                                                  y=\lambda x$ be a general ...
+
+Not a real error.
+
+! Preview: Snippet 140 ended.(498346+139537x2163153).
+<-><->
+      
+l.153 ...arrived at $y=x^2$. Let now $y=\lambda x$
+                                                   be a general line through...
+
+Not a real error.
+
+[140]
+! Preview: Snippet 141 started.
+<-><->
+      
+l.153 ...e origin. We demand that this intersect $
+                                                  W$ twice for every $\lambd...
+
+Not a real error.
+
+! Preview: Snippet 141 ended.(490372+0x777422).
+<-><->
+      
+l.153 ...origin. We demand that this intersect $W$
+                                                   twice for every $\lambda$...
+
+Not a real error.
+
+[141]
+! Preview: Snippet 142 started.
+<-><->
+      
+l.153 ...that this intersect $W$ twice for every $
+                                                  \lambda$ such that the lin...
+
+Not a real error.
+
+! Preview: Snippet 142 ended.(498346+0x418612).
+<-><->
+      
+l.153 ...s intersect $W$ twice for every $\lambda$
+                                                   such that the line is not...
+
+Not a real error.
+
+[142]
+! Preview: Snippet 143 started.
+<-><->
+      
+l.154 \[
+        
+Not a real error.
+
+! Preview: Snippet 143 ended.(813578+0x17965752).
+<-><->
+      
+l.156 \]
+        
+Not a real error.
+
+[143]
+! Preview: Snippet 144 started.
+<-><->
+      
+l.157 For this to have two solutions for every $
+                                                \lambda$ we must have $a+\la...
+
+Not a real error.
+
+! Preview: Snippet 144 ended.(498346+0x418612).
+<-><->
+      
+l.157 ...to have two solutions for every $\lambda$
+                                                   we must have $a+\lambda b...
+
+Not a real error.
+
+[144]
+! Preview: Snippet 145 started.
+<-><->
+      
+l.157 ...utions for every $\lambda$ we must have $
+                                                  a+\lambda b \neq 0$ for al...
+
+Not a real error.
+
+! Preview: Snippet 145 ended.(498346+139535x3298632).
+<-><->
+      
+l.157 ...lambda$ we must have $a+\lambda b \neq 0$
+                                                   for all $\lambda$. But th...
+
+Not a real error.
+
+[145]
+! Preview: Snippet 146 started.
+<-><->
+      
+l.157 ... must have $a+\lambda b \neq 0$ for all $
+                                                  \lambda$. But this require...
+
+Not a real error.
+
+! Preview: Snippet 146 ended.(498346+0x418612).
+<-><->
+      
+l.157 ...ve $a+\lambda b \neq 0$ for all $\lambda$
+                                                  . But this requires $b =0$...
+
+Not a real error.
+
+[146]
+! Preview: Snippet 147 started.
+<-><->
+      
+l.157 ...0$ for all $\lambda$. But this requires $
+                                                  b =0$.  Thus the equation is
+Not a real error.
+
+! Preview: Snippet 147 ended.(498346+0x1623608).
+<-><->
+      
+l.157 ...r all $\lambda$. But this requires $b =0$
+                                                  .  Thus the equation is
+Not a real error.
+
+[147]
+! Preview: Snippet 148 started.
+<-><->
+      
+l.158 \[
+        
+Not a real error.
+
+! Preview: Snippet 148 ended.(773711+0x13799083).
+<-><->
+      
+l.160 \]
+        
+Not a real error.
+
+[148]
+! Preview: Snippet 149 started.
+<-><->
+      
+l.167 Let $
+           Y \subseteq \Aa^3$ be the set $\{ (t,t^2,t^3) \mid t \in k\}$. Sh...
+
+Not a real error.
+
+! Preview: Snippet 149 ended.(598293+97575x2362490).
+<-><->
+      
+l.167 Let $Y \subseteq \Aa^3$
+                              be the set $\{ (t,t^2,t^3) \mid t \in k\}$. Sh...
+
+Not a real error.
+
+[149]
+! Preview: Snippet 150 started.
+<-><->
+      
+l.167 Let $Y \subseteq \Aa^3$ be the set $
+                                          \{ (t,t^2,t^3) \mid t \in k\}$. Sh...
+
+Not a real error.
+
+! Preview: Snippet 150 ended.(598293+179404x5444093).
+<-><->
+      
+l.167 ...e the set $\{ (t,t^2,t^3) \mid t \in k\}$
+                                                  . Show that $Y$ is an affi...
+
+Not a real error.
+
+[150]
+! Preview: Snippet 151 started.
+<-><->
+      
+l.167 ... (t,t^2,t^3) \mid t \in k\}$. Show that $
+                                                  Y$ is an affine variety of...
+
+Not a real error.
+
+! Preview: Snippet 151 ended.(490372+0x576089).
+<-><->
+      
+l.167 ...t,t^2,t^3) \mid t \in k\}$. Show that $Y$
+                                                   is an affine variety of d...
+
+Not a real error.
+
+[151]
+! Preview: Snippet 152 started.
+<-><->
+      
+l.167 ...t $Y$ is an affine variety of dimension $
+                                                  1$. Find generators for th...
+
+Not a real error.
+
+! Preview: Snippet 152 ended.(462465+0x358810).
+<-><->
+      
+l.167 ...$Y$ is an affine variety of dimension $1$
+                                                  . Find generators for the ...
+
+Not a real error.
+
+[152]
+! Preview: Snippet 153 started.
+<-><->
+      
+l.167 ...sion $1$. Find generators for the ideal $
+                                                  I(Y)$. Show that $A(Y)$ is...
+
+Not a real error.
+
+! Preview: Snippet 153 ended.(538214+179404x1506005).
+<-><->
+      
+l.167 ...$1$. Find generators for the ideal $I(Y)$
+                                                  . Show that $A(Y)$ is isom...
+
+Not a real error.
+
+[153]
+! Preview: Snippet 154 started.
+<-><->
+      
+l.167 ...erators for the ideal $I(Y)$. Show that $
+                                                  A(Y)$ is isomorphic to a p...
+
+Not a real error.
+
+! Preview: Snippet 154 ended.(538214+179404x1672454).
+<-><->
+      
+l.167 ...rs for the ideal $I(Y)$. Show that $A(Y)$
+                                                   is isomorphic to a polyno...
+
+Not a real error.
+
+[154]
+! Preview: Snippet 155 started.
+<-><->
+      
+l.167 ... a polynomial ring in one variable over $
+                                                  k$. We say that $Y$ is giv...
+
+Not a real error.
+
+! Preview: Snippet 155 ended.(498346+0x396186).
+<-><->
+      
+l.167 ... polynomial ring in one variable over $k$
+                                                  . We say that $Y$ is given...
+
+Not a real error.
+
+[155]
+! Preview: Snippet 156 started.
+<-><->
+      
+l.167 ...g in one variable over $k$. We say that $
+                                                  Y$ is given by the \emph{p...
+
+Not a real error.
+
+! Preview: Snippet 156 ended.(490372+0x576089).
+<-><->
+      
+l.167 ...in one variable over $k$. We say that $Y$
+                                                   is given by the \emph{par...
+
+Not a real error.
+
+[156]
+! Preview: Snippet 157 started.
+<-><->
+      
+l.167 ...given by the \emph{parametric equation} $
+                                                  x=t,y=t^2,z=t^3$.
+Not a real error.
+
+! Preview: Snippet 157 ended.(598293+139537x6061373).
+<-><->
+      
+l.167 ...ph{parametric equation} $x=t,y=t^2,z=t^3$
+                                                  .
+Not a real error.
+
+[157] [3
+
+]
+! Preview: Snippet 158 started.
+<-><->
+      
+l.170 ...finition a closed irreducible subset of $
+                                                  \Aa^3$. So we must find an...
+
+Not a real error.
+
+! Preview: Snippet 158 ended.(598293+0x829581).
+<-><->
+      
+l.170 ...on a closed irreducible subset of $\Aa^3$
+                                                  . So we must find an irred...
+
+Not a real error.
+
+[158]
+! Preview: Snippet 159 started.
+<-><->
+      
+l.170 ...$. So we must find an irreducible ideal $
+                                                  I$ such that $Z(I)=Y$ (for...
+
+Not a real error.
+
+! Preview: Snippet 159 ended.(490372+0x371766).
+<-><->
+      
+l.170 ... So we must find an irreducible ideal $I$
+                                                   such that $Z(I)=Y$ (forgi...
+
+Not a real error.
+
+[159]
+! Preview: Snippet 160 started.
+<-><->
+      
+l.170 ...find an irreducible ideal $I$ such that $
+                                                  Z(I)=Y$ (forgive the abuse...
+
+Not a real error.
+
+! Preview: Snippet 160 ended.(538214+179404x3004029).
+<-><->
+      
+l.170 ... irreducible ideal $I$ such that $Z(I)=Y$
+                                                   (forgive the abuse of not...
+
+Not a real error.
+
+[160]
+! Preview: Snippet 161 started.
+<-><->
+      
+l.172 I claim that $
+                    I(Y)=\langle x^2-y,x^3-z \rangle$. Clearly, every $P \in...
+
+Not a real error.
+
+! Preview: Snippet 161 ended.(598293+179404x7279836).
+<-><->
+      
+l.172 ...m that $I(Y)=\langle x^2-y,x^3-z \rangle$
+                                                  . Clearly, every $P \in Y$...
+
+Not a real error.
+
+[161]
+! Preview: Snippet 162 started.
+<-><->
+      
+l.172 ...le x^2-y,x^3-z \rangle$. Clearly, every $
+                                                  P \in Y$ satisfies these e...
+
+Not a real error.
+
+! Preview: Snippet 162 ended.(490372+28057x2013564).
+<-><->
+      
+l.172 ...,x^3-z \rangle$. Clearly, every $P \in Y$
+                                                   satisfies these equations...
+
+Not a real error.
+
+[162]
+! Preview: Snippet 163 started.
+<-><->
+      
+l.172 ...ese equations. This shows the inclusion $
+                                                  Y \subset Z(I)$. Now suppo...
+
+Not a real error.
+
+! Preview: Snippet 163 ended.(538214+179404x3004029).
+<-><->
+      
+l.172 ...This shows the inclusion $Y \subset Z(I)$
+                                                  . Now suppose $P \in Z(I)$...
+
+Not a real error.
+
+[163]
+! Preview: Snippet 164 started.
+<-><->
+      
+l.172 ...inclusion $Y \subset Z(I)$. Now suppose $
+                                                  P \in Z(I)$, that is, $f(P...
+
+Not a real error.
+
+! Preview: Snippet 164 ended.(538214+179404x2908595).
+<-><->
+      
+l.172 ...Y \subset Z(I)$. Now suppose $P \in Z(I)$
+                                                  , that is, $f(P)=0$ for al...
+
+Not a real error.
+
+[164]
+! Preview: Snippet 165 started.
+<-><->
+      
+l.172 ...I)$. Now suppose $P \in Z(I)$, that is, $
+                                                  f(P)=0$ for all $f \in I$....
+
+Not a real error.
+
+! Preview: Snippet 165 ended.(538214+179404x2862751).
+<-><->
+      
+l.172 ...w suppose $P \in Z(I)$, that is, $f(P)=0$
+                                                   for all $f \in I$. In par...
+
+Not a real error.
+
+[165]
+! Preview: Snippet 166 started.
+<-><->
+      
+l.172 ...$P \in Z(I)$, that is, $f(P)=0$ for all $
+                                                  f \in I$. In particular $(...
+
+Not a real error.
+
+! Preview: Snippet 166 ended.(498346+139537x1677430).
+<-><->
+      
+l.172 ...(I)$, that is, $f(P)=0$ for all $f \in I$
+                                                  . In particular $(x^2-y)(P...
+
+Not a real error.
+
+[166]
+! Preview: Snippet 167 started.
+<-><->
+      
+l.172 ...(P)=0$ for all $f \in I$. In particular $
+                                                  (x^2-y)(P)=0$ and $(x^3-z)...
+
+Not a real error.
+
+! Preview: Snippet 167 ended.(598293+179404x4968428).
+<-><->
+      
+l.172 ...l $f \in I$. In particular $(x^2-y)(P)=0$
+                                                   and $(x^3-z)(P)=0$. Thus ...
+
+Not a real error.
+
+[167]
+! Preview: Snippet 168 started.
+<-><->
+      
+l.172 ...in I$. In particular $(x^2-y)(P)=0$ and $
+                                                  (x^3-z)(P)=0$. Thus $y=x^2...
+
+Not a real error.
+
+! Preview: Snippet 168 ended.(598293+179404x4956135).
+<-><->
+      
+l.172 ...ticular $(x^2-y)(P)=0$ and $(x^3-z)(P)=0$
+                                                  . Thus $y=x^2$ and $z=x^3$...
+
+Not a real error.
+
+[168]
+! Preview: Snippet 169 started.
+<-><->
+      
+l.172 ...$(x^2-y)(P)=0$ and $(x^3-z)(P)=0$. Thus $
+                                                  y=x^2$ and $z=x^3$. So if ...
+
+Not a real error.
+
+! Preview: Snippet 169 ended.(598293+139537x2055841).
+<-><->
+      
+l.172 ...y)(P)=0$ and $(x^3-z)(P)=0$. Thus $y=x^2$
+                                                   and $z=x^3$. So if $P=(a,...
+
+Not a real error.
+
+[169]
+! Preview: Snippet 170 started.
+<-><->
+      
+l.172 ...0$ and $(x^3-z)(P)=0$. Thus $y=x^2$ and $
+                                                  z=x^3$. So if $P=(a,b,c) \...
+
+Not a real error.
+
+! Preview: Snippet 170 ended.(598293+0x2043548).
+<-><->
+      
+l.172 ... $(x^3-z)(P)=0$. Thus $y=x^2$ and $z=x^3$
+                                                  . So if $P=(a,b,c) \in k^3...
+
+Not a real error.
+
+[170]
+! Preview: Snippet 171 started.
+<-><->
+      
+l.172 ...(P)=0$. Thus $y=x^2$ and $z=x^3$. So if $
+                                                  P=(a,b,c) \in k^3$, then $...
+
+Not a real error.
+
+! Preview: Snippet 171 ended.(598293+179404x5295669).
+<-><->
+      
+l.172 ...2$ and $z=x^3$. So if $P=(a,b,c) \in k^3$
+                                                  , then $P=(a,a^2,a^3)$, so...
+
+Not a real error.
+
+[171]
+! Preview: Snippet 172 started.
+<-><->
+      
+l.172 ...z=x^3$. So if $P=(a,b,c) \in k^3$, then $
+                                                  P=(a,a^2,a^3)$, so $P \in ...
+
+Not a real error.
+
+! Preview: Snippet 172 ended.(598293+179404x4473819).
+<-><->
+      
+l.172 ...$P=(a,b,c) \in k^3$, then $P=(a,a^2,a^3)$
+                                                  , so $P \in Y$. This shows...
+
+Not a real error.
+
+[172]
+! Preview: Snippet 173 started.
+<-><->
+      
+l.172 ...b,c) \in k^3$, then $P=(a,a^2,a^3)$, so $
+                                                  P \in Y$. This shows that ...
+
+Not a real error.
+
+! Preview: Snippet 173 ended.(490372+28057x2013564).
+<-><->
+      
+l.172 ... k^3$, then $P=(a,a^2,a^3)$, so $P \in Y$
+                                                  . This shows that $Z(I)=Y$...
+
+Not a real error.
+
+[173]
+! Preview: Snippet 174 started.
+<-><->
+      
+l.172 ...^2,a^3)$, so $P \in Y$. This shows that $
+                                                  Z(I)=Y$. If we can show th...
+
+Not a real error.
+
+! Preview: Snippet 174 ended.(538214+179404x3004029).
+<-><->
+      
+l.172 ...$, so $P \in Y$. This shows that $Z(I)=Y$
+                                                  . If we can show that $I$ ...
+
+Not a real error.
+
+[174]
+! Preview: Snippet 175 started.
+<-><->
+      
+l.172 ...hows that $Z(I)=Y$. If we can show that $
+                                                  I$ is prime, then it follo...
+
+Not a real error.
+
+! Preview: Snippet 175 ended.(490372+0x371766).
+<-><->
+      
+l.172 ...ws that $Z(I)=Y$. If we can show that $I$
+                                                   is prime, then it follows...
+
+Not a real error.
+
+[175]
+! Preview: Snippet 176 started.
+<-><->
+      
+l.172 ...that $I$ is prime, then it follows that $
+                                                  I(Y)=I$ and that $Y$ is a ...
+
+Not a real error.
+
+! Preview: Snippet 176 ended.(538214+179404x2834591).
+<-><->
+      
+l.172 ...$ is prime, then it follows that $I(Y)=I$
+                                                   and that $Y$ is a variety.
+Not a real error.
+
+[176]
+! Preview: Snippet 177 started.
+<-><->
+      
+l.172 ... then it follows that $I(Y)=I$ and that $
+                                                  Y$ is a variety.
+Not a real error.
+
+! Preview: Snippet 177 ended.(490372+0x576089).
+<-><->
+      
+l.172 ...hen it follows that $I(Y)=I$ and that $Y$
+                                                   is a variety.
+Not a real error.
+
+[177]
+! Preview: Snippet 178 started.
+<-><->
+      
+l.174 In fact, we claim that $
+                              k[x,y,z]/I \simeq k[t]$, implying that $I$ is ...
+
+Not a real error.
+
+! Preview: Snippet 178 ended.(538214+179404x5327155).
+<-><->
+      
+l.174 ...t, we claim that $k[x,y,z]/I \simeq k[t]$
+                                                  , implying that $I$ is pri...
+
+Not a real error.
+
+[178]
+! Preview: Snippet 179 started.
+<-><->
+      
+l.174 ...$k[x,y,z]/I \simeq k[t]$, implying that $
+                                                  I$ is prime. The map $\var...
+
+Not a real error.
+
+! Preview: Snippet 179 ended.(490372+0x371766).
+<-><->
+      
+l.174 ...[x,y,z]/I \simeq k[t]$, implying that $I$
+                                                   is prime. The map $\varph...
+
+Not a real error.
+
+[179]
+! Preview: Snippet 180 started.
+<-><->
+      
+l.174 ...]$, implying that $I$ is prime. The map $
+                                                  \varphi$ is given by $x \m...
+
+Not a real error.
+
+! Preview: Snippet 180 ended.(308974+139537x469442).
+<-><->
+      
+l.174 ...ying that $I$ is prime. The map $\varphi$
+                                                   is given by $x \mapsto t$...
+
+Not a real error.
+
+[180]
+! Preview: Snippet 181 started.
+<-><->
+      
+l.174 ...is prime. The map $\varphi$ is given by $
+                                                  x \mapsto t$, $y \mapsto t...
+
+Not a real error.
+
+! Preview: Snippet 181 ended.(441393+0x1785571).
+<-><->
+      
+l.174 ...e map $\varphi$ is given by $x \mapsto t$
+                                                  , $y \mapsto t^2$, $z \map...
+
+Not a real error.
+
+[181]
+! Preview: Snippet 182 started.
+<-><->
+      
+l.174 ...ap $\varphi$ is given by $x \mapsto t$, $
+                                                  y \mapsto t^2$, $z \mapsto...
+
+Not a real error.
+
+! Preview: Snippet 182 ended.(598293+139537x2064314).
+<-><->
+      
+l.174 ...s given by $x \mapsto t$, $y \mapsto t^2$
+                                                  , $z \mapsto t^3$. Then cl...
+
+Not a real error.
+
+[182]
+! Preview: Snippet 183 started.
+<-><->
+      
+l.174 ...iven by $x \mapsto t$, $y \mapsto t^2$, $
+                                                  z \mapsto t^3$. Then clear...
+
+Not a real error.
+
+! Preview: Snippet 183 ended.(598293+0x2052021).
+<-><->
+      
+l.174 ...psto t$, $y \mapsto t^2$, $z \mapsto t^3$
+                                                  . Then clearly $I \subsete...
+
+Not a real error.
+
+[183]
+! Preview: Snippet 184 started.
+<-><->
+      
+l.174 ...sto t^2$, $z \mapsto t^3$. Then clearly $
+                                                  I \subseteq \ker \varphi$....
+
+Not a real error.
+
+! Preview: Snippet 184 ended.(498346+139537x2876449).
+<-><->
+      
+l.174 .... Then clearly $I \subseteq \ker \varphi$
+                                                  . We must show equality. S...
+
+Not a real error.
+
+[184]
+! Preview: Snippet 185 started.
+<-><->
+      
+l.174 ...phi$. We must show equality. So suppose $
+                                                  \varphi(f)=0$.
+Not a real error.
+
+! Preview: Snippet 185 ended.(538214+179404x2771802).
+<-><->
+      
+l.174 ... show equality. So suppose $\varphi(f)=0$
+                                                  .
+Not a real error.
+
+[185]
+! Preview: Snippet 186 started.
+<-><->
+      
+l.176 First we claim that any $
+                               f \in k[x,y,z]$ can be written as $f=R(x)+S(x...
+
+Not a real error.
+
+! Preview: Snippet 186 ended.(538214+179404x3891418).
+<-><->
+      
+l.176 First we claim that any $f \in k[x,y,z]$
+                                               can be written as $f=R(x)+S(x...
+
+Not a real error.
+
+[186]
+! Preview: Snippet 187 started.
+<-><->
+      
+l.176 ... any $f \in k[x,y,z]$ can be written as $
+                                                  f=R(x)+S(x)y+T(x)z+i(x,y,z...
+
+Not a real error.
+
+! Preview: Snippet 187 ended.(538214+179404x11811520).
+<-><->
+      
+l.176 ... written as $f=R(x)+S(x)y+T(x)z+i(x,y,z)$
+                                                   where $i$ is a polynomial...
+
+Not a real error.
+
+[187]
+! Preview: Snippet 188 started.
+<-><->
+      
+l.176 ... as $f=R(x)+S(x)y+T(x)z+i(x,y,z)$ where $
+                                                  i$ is a polynomial in $I$....
+
+Not a real error.
+
+! Preview: Snippet 188 ended.(473287+0x247229).
+<-><->
+      
+l.176 ...s $f=R(x)+S(x)y+T(x)z+i(x,y,z)$ where $i$
+                                                   is a polynomial in $I$. W...
+
+Not a real error.
+
+[188]
+! Preview: Snippet 189 started.
+<-><->
+      
+l.176 ...+i(x,y,z)$ where $i$ is a polynomial in $
+                                                  I$. We prove this by induc...
+
+Not a real error.
+
+! Preview: Snippet 189 ended.(490372+0x371766).
+<-><->
+      
+l.176 ...(x,y,z)$ where $i$ is a polynomial in $I$
+                                                  . We prove this by inducti...
+
+Not a real error.
+
+[189]
+! Preview: Snippet 190 started.
+<-><->
+      
+l.176 ...l in $I$. We prove this by induction on $
+                                                  \deg f$. If $\deg f = 1$, ...
+
+Not a real error.
+
+! Preview: Snippet 190 ended.(498346+139537x1634577).
+<-><->
+      
+l.176 ...$. We prove this by induction on $\deg f$
+                                                  . If $\deg f = 1$, this is...
+
+Not a real error.
+
+[190]
+! Preview: Snippet 191 started.
+<-><->
+      
+l.176 ...prove this by induction on $\deg f$. If $
+                                                  \deg f = 1$, this is trivi...
+
+Not a real error.
+
+! Preview: Snippet 191 ended.(498346+139537x2950207).
+<-><->
+      
+l.176 ...by induction on $\deg f$. If $\deg f = 1$
+                                                  , this is trivially true. ...
+
+Not a real error.
+
+[191]
+! Preview: Snippet 192 started.
+<-><->
+      
+l.179 \subsection
+                 {Chapter II - Schemes}
+Not a real error.
+
+! Preview: Snippet 192 ended.(542724+152880x23592960).
+<-><->
+      
+l.179 \subsection{Chapter II - Schemes}
+                                       
+Not a real error.
+
+[192
+
+]
+! Preview: Snippet 193 started.
+<-><->
+      
+l.183   \item For any morphism of sheaves $
+                                           \varphi:\FF \to \mathscr G$, show...
+
+Not a real error.
+
+! Preview: Snippet 193 ended.(502333+139537x3485938).
+<-><->
+      
+l.183 ...m of sheaves $\varphi:\FF \to \mathscr G$
+                                                  , show that for each point...
+
+Not a real error.
+
+[193]
+! Preview: Snippet 194 started.
+<-><->
+      
+l.183 ...o \mathscr G$, show that for each point $
+                                                  P$, $(\ker \varphi)_P = \k...
+
+Not a real error.
+
+! Preview: Snippet 194 ended.(490372+0x560391).
+<-><->
+      
+l.183 ...\mathscr G$, show that for each point $P$
+                                                  , $(\ker \varphi)_P = \ker...
+
+Not a real error.
+
+[194]
+! Preview: Snippet 195 started.
+<-><->
+      
+l.183 ...thscr G$, show that for each point $P$, $
+                                                  (\ker \varphi)_P = \ker (\...
+
+Not a real error.
+
+! Preview: Snippet 195 ended.(538214+179404x5975861).
+<-><->
+      
+l.183 ...P$, $(\ker \varphi)_P = \ker (\varphi_P)$
+                                                   and $(\im \varphi)_P =  \...
+
+Not a real error.
+
+[195]
+! Preview: Snippet 196 started.
+<-><->
+      
+l.183 ...\ker \varphi)_P = \ker (\varphi_P)$ and $
+                                                  (\im \varphi)_P =  \im(\va...
+
+Not a real error.
+
+! Preview: Snippet 196 ended.(538214+179404x5652933).
+<-><->
+      
+l.183 ...$ and $(\im \varphi)_P =  \im(\varphi_P)$
+                                                  .
+Not a real error.
+
+[196]
+! Preview: Snippet 197 started.
+<-><->
+      
+l.184 \item Show that $
+                       \varphi$ is injective (resp. surjective) if and only ...
+
+Not a real error.
+
+! Preview: Snippet 197 ended.(308974+139537x469442).
+<-><->
+      
+l.184 \item Show that $\varphi$
+                                is injective (resp. surjective) if and only ...
+
+Not a real error.
+
+[197]
+! Preview: Snippet 198 started.
+<-><->
+      
+l.184 ...d only if the induced map on the stalks $
+                                                  \varphi_P$ is injective (r...
+
+Not a real error.
+
+! Preview: Snippet 198 ended.(308974+139537x932750).
+<-><->
+      
+l.184 ...the induced map on the stalks $\varphi_P$
+                                                   is injective (resp. surje...
+
+Not a real error.
+
+[198]
+! Preview: Snippet 199 started.
+<-><->
+      
+l.184 ...is injective (resp. surjective) for all $
+                                                  P$.
+Not a real error.
+
+! Preview: Snippet 199 ended.(490372+0x560391).
+<-><->
+      
+l.184 ... injective (resp. surjective) for all $P$
+                                                  .
+Not a real error.
+
+[199]
+! Preview: Snippet 200 started.
+<-><->
+      
+l.185 \item Show that a sequence $
+                                  \ldots \FF^{i-1} \xrightarrow{\varphi^{i-1...
+
+Not a real error.
+
+! Preview: Snippet 200 ended.(962266+0x10647295).
+<-><->
+      
+l.185 ...arrow{\varphi^{i}}  \FF^{i+1} \to \ldots$
+                                                   of sheaves and morphisms ...
+
+Not a real error.
+
+[200]
+! Preview: Snippet 201 started.
+<-><->
+      
+l.185 ...phisms is exact if and only if for each $
+                                                  P \in X$, the correspondin...
+
+Not a real error.
+
+! Preview: Snippet 201 ended.(490372+28057x2088315).
+<-><->
+      
+l.185 ...s exact if and only if for each $P \in X$
+                                                  , the corresponding sequen...
+
+Not a real error.
+
+[201]
+! Preview: Snippet 202 started.
+<-><->
+      
+l.191     \item An element of $
+                               (\ker \varphi)_P$ is represented by a pair $(...
+
+Not a real error.
+
+! Preview: Snippet 202 ended.(538214+179404x2569321).
+<-><->
+      
+l.191     \item An element of $(\ker \varphi)_P$
+                                                 is represented by a pair $(...
+
+Not a real error.
+
+[202]
+! Preview: Snippet 203 started.
+<-><->
+      
+l.191 ...er \varphi)_P$ is represented by a pair $
+                                                  (U,f)$ with $f \in \mathsc...
+
+Not a real error.
+
+! Preview: Snippet 203 ended.(538214+179404x1794147).
+<-><->
+      
+l.191 ...rphi)_P$ is represented by a pair $(U,f)$
+                                                   with $f \in \mathscr F(U)...
+
+Not a real error.
+
+[203]
+! Preview: Snippet 204 started.
+<-><->
+      
+l.191 ...$ is represented by a pair $(U,f)$ with $
+                                                  f \in \mathscr F(U)$ satis...
+
+Not a real error.
+
+! Preview: Snippet 204 ended.(538214+179404x3172452).
+<-><->
+      
+l.191 ...a pair $(U,f)$ with $f \in \mathscr F(U)$
+                                                   satisfying $\varphi(U)(f)...
+
+Not a real error.
+
+[204]
+! Preview: Snippet 205 started.
+<-><->
+      
+l.191 ...$ with $f \in \mathscr F(U)$ satisfying $
+                                                  \varphi(U)(f)=0$. We have ...
+
+Not a real error.
+
+! Preview: Snippet 205 ended.(538214+179404x3898165).
+<-><->
+      
+l.191 ...athscr F(U)$ satisfying $\varphi(U)(f)=0$
+                                                  . We have $(U,f) \simeq (V...
+
+Not a real error.
+
+[205]
+! Preview: Snippet 206 started.
+<-><->
+      
+l.191 ...$ satisfying $\varphi(U)(f)=0$. We have $
+                                                  (U,f) \simeq (V,g)$ if the...
+
+Not a real error.
+
+! Preview: Snippet 206 ended.(538214+179404x4454563).
+<-><->
+      
+l.191 ...hi(U)(f)=0$. We have $(U,f) \simeq (V,g)$
+                                                   if there is a neighbourho...
+
+Not a real error.
+
+[206]
+! Preview: Snippet 207 started.
+<-><->
+      
+l.191 ...imeq (V,g)$ if there is a neighbourhood $
+                                                  W$ of $p$ contained in $U ...
+
+Not a real error.
+
+! Preview: Snippet 207 ended.(490372+0x777422).
+<-><->
+      
+l.191 ...eq (V,g)$ if there is a neighbourhood $W$
+                                                   of $p$ contained in $U \c...
+
+Not a real error.
+
+[207]
+! Preview: Snippet 208 started.
+<-><->
+      
+l.191 ...,g)$ if there is a neighbourhood $W$ of $
+                                                  p$ contained in $U \cap V$...
+
+Not a real error.
+
+! Preview: Snippet 208 ended.(308974+139537x361052).
+<-><->
+      
+l.191 ...)$ if there is a neighbourhood $W$ of $p$
+                                                   contained in $U \cap V$ s...
+
+Not a real error.
+
+[208]
+! Preview: Snippet 209 started.
+<-><->
+      
+l.191 ...a neighbourhood $W$ of $p$ contained in $
+                                                  U \cap V$ such that $\rest...
+
+Not a real error.
+
+! Preview: Snippet 209 ended.(490372+0x1943645).
+<-><->
+      
+l.191 ...urhood $W$ of $p$ contained in $U \cap V$
+                                                   such that $\restr{f}{W}=\...
+
+Not a real error.
+
+[209]
+! Preview: Snippet 210 started.
+<-><->
+      
+l.191 ...f $p$ contained in $U \cap V$ such that $
+                                                  \restr{f}{W}=\restr{g}{W}$...
+
+Not a real error.
+
+! Preview: Snippet 210 ended.(609979+283939x3503256).
+<-><->
+      
+l.191 ... V$ such that $\restr{f}{W}=\restr{g}{W}$
+                                                   (then automatically $\var...
+
+Not a real error.
+
+[210]
+! Preview: Snippet 211 started.
+<-><->
+      
+l.191 ...f}{W}=\restr{g}{W}$ (then automatically $
+                                                  \varphi(W)(f)=0$, since $\...
+
+Not a real error.
+
+! Preview: Snippet 211 ended.(538214+179404x4107374).
+<-><->
+      
+l.191 ...W}$ (then automatically $\varphi(W)(f)=0$
+                                                  , since $\varphi(W)=\restr...
+
+Not a real error.
+
+[211]
+! Preview: Snippet 212 started.
+<-><->
+      
+l.191 ... automatically $\varphi(W)(f)=0$, since $
+                                                  \varphi(W)=\restr{\varphi(...
+
+Not a real error.
+
+! Preview: Snippet 212 ended.(609979+283939x5232553).
+<-><->
+      
+l.191 ... since $\varphi(W)=\restr{\varphi(U)}{W}$
+                                                  ).
+Not a real error.
+
+[212]
+! Preview: Snippet 213 started.
+<-><->
+      
+l.193 On the other hand, an element of $
+                                        \ker \varphi_P$ is represented by a ...
+
+Not a real error.
+
+! Preview: Snippet 213 ended.(498346+139537x2011171).
+<-><->
+      
+l.193 ...ther hand, an element of $\ker \varphi_P$
+                                                   is represented by a pair ...
+
+Not a real error.
+
+[213]
+! Preview: Snippet 214 started.
+<-><->
+      
+l.193 ...ker \varphi_P$ is represented by a pair $
+                                                  (U,f)$ satisfying the same...
+
+Not a real error.
+
+! Preview: Snippet 214 ended.(538214+179404x1794147).
+<-><->
+      
+l.193 ...arphi_P$ is represented by a pair $(U,f)$
+                                                   satisfying the same condi...
+
+Not a real error.
+
+[214]
+! Preview: Snippet 215 started.
+<-><->
+      
+l.195 A similar argument works for $
+                                    \im \varphi$. Alternatively, one can sho...
+
+Not a real error.
+
+! Preview: Snippet 215 ended.(479268+139537x1386399).
+<-><->
+      
+l.195 A similar argument works for $\im \varphi$
+                                                . Alternatively, one can sho...
+
+Not a real error.
+
+[215]
+! Preview: Snippet 216 started.
+<-><->
+      
+l.196 \item Suppose $
+                     \varphi:\FF \to \mathscr G$ is injective. Then by defin...
+
+Not a real error.
+
+! Preview: Snippet 216 ended.(502333+139537x3485938).
+<-><->
+      
+l.196 \item Suppose $\varphi:\FF \to \mathscr G$
+                                                 is injective. Then by defin...
+
+Not a real error.
+
+[216]
+! Preview: Snippet 217 started.
+<-><->
+      
+l.196 ...G$ is injective. Then by definition all $
+                                                  \varphi(U):\FF(U) \to \mat...
+
+Not a real error.
+
+! Preview: Snippet 217 ended.(538214+179404x6865027).
+<-><->
+      
+l.196 ...all $\varphi(U):\FF(U) \to \mathscr G(U)$
+                                                   are injective, hence $(\k...
+
+Not a real error.
+
+[217]
+! Preview: Snippet 218 started.
+<-><->
+      
+l.196 ...\to \mathscr G(U)$ are injective, hence $
+                                                  (\ker \varphi)_P=\ker \var...
+
+Not a real error.
+
+! Preview: Snippet 218 ended.(538214+179404x6852942).
+<-><->
+      
+l.196 ...hence $(\ker \varphi)_P=\ker \varphi_P=0$
+                                                  , hence $\varphi_P$ is inj...
+
+Not a real error.
+
+[218]
+! Preview: Snippet 219 started.
+<-><->
+      
+l.196 ...ker \varphi)_P=\ker \varphi_P=0$, hence $
+                                                  \varphi_P$ is injective. S...
+
+Not a real error.
+
+! Preview: Snippet 219 ended.(308974+139537x932750).
+<-><->
+      
+l.196 ...i)_P=\ker \varphi_P=0$, hence $\varphi_P$
+                                                   is injective. Suppose $\v...
+
+Not a real error.
+
+[219]
+! Preview: Snippet 220 started.
+<-><->
+      
+l.196 ...hence $\varphi_P$ is injective. Suppose $
+                                                  \varphi:\FF \to \mathscr G...
+
+Not a real error.
+
+! Preview: Snippet 220 ended.(502333+139537x3485938).
+<-><->
+      
+l.196 ...ive. Suppose $\varphi:\FF \to \mathscr G$
+                                                   is surjective. By definit...
+
+Not a real error.
+
+[220]
+! Preview: Snippet 221 started.
+<-><->
+      
+l.196 ...jective. By definition, this means that $
+                                                  \im \varphi=\mathscr G$, h...
+
+Not a real error.
+
+! Preview: Snippet 221 ended.(502333+139537x2904990).
+<-><->
+      
+l.196 ... this means that $\im \varphi=\mathscr G$
+                                                  , hence $\mathscr G_P = (\...
+
+Not a real error.
+
+[221]
+! Preview: Snippet 222 started.
+<-><->
+      
+l.196 ...ns that $\im \varphi=\mathscr G$, hence $
+                                                  \mathscr G_P = (\im \varph...
+
+Not a real error.
+
+! Preview: Snippet 222 ended.(538214+179404x7071979).
+<-><->
+      
+l.196 ...cr G_P = (\im \varphi)_P = \im \varphi_P$
+                                                  , so the stalks are surjec...
+
+Not a real error.
+
+[222]
+! Preview: Snippet 223 started.
+<-><->
+      
+l.197 \item Exactness means that $
+                                  \ker \varphi^i = \im \varphi^{i-1}$. Takin...
+
+Not a real error.
+
+! Preview: Snippet 223 ended.(607018+139537x5047738).
+<-><->
+      
+l.197 ...that $\ker \varphi^i = \im \varphi^{i-1}$
+                                                  . Taking stalks, gives one...
+
+Not a real error.
+
+[223] [4
+
+
+
+
+]
+! Preview: Snippet 224 started.
+<-><->
+      
+l.203     \item Let $
+                     \varphi:\FF \to \mathscr G$ be a morphism of presheaves...
+
+Not a real error.
+
+! Preview: Snippet 224 ended.(502333+139537x3485938).
+<-><->
+      
+l.203     \item Let $\varphi:\FF \to \mathscr G$
+                                                 be a morphism of presheaves...
+
+Not a real error.
+
+[224]
+! Preview: Snippet 225 started.
+<-><->
+      
+l.203 ...$ be a morphism of presheaves such that $
+                                                  \varphi(U):\FF(U) \to \mat...
+
+Not a real error.
+
+! Preview: Snippet 225 ended.(538214+179404x6865027).
+<-><->
+      
+l.203 ...hat $\varphi(U):\FF(U) \to \mathscr G(U)$
+                                                   is injective for each $U$...
+
+Not a real error.
+
+[225]
+! Preview: Snippet 226 started.
+<-><->
+      
+l.203 ...to \mathscr G(U)$ is injective for each $
+                                                  U$. Show that the induced ...
+
+Not a real error.
+
+! Preview: Snippet 226 ended.(490372+0x568213).
+<-><->
+      
+l.203 ... \mathscr G(U)$ is injective for each $U$
+                                                  . Show that the induced ma...
+
+Not a real error.
+
+[226]
+! Preview: Snippet 227 started.
+<-><->
+      
+l.203 ...for each $U$. Show that the induced map $
+                                                  \varphi^+:\FF^+ \to \maths...
+
+Not a real error.
+
+! Preview: Snippet 227 ended.(611562+139537x4884058).
+<-><->
+      
+l.203 ...ed map $\varphi^+:\FF^+ \to \mathscr G^+$
+                                                   of associated sheaves is ...
+
+Not a real error.
+
+[227]
+! Preview: Snippet 228 started.
+<-><->
+      
+l.204 \item Use part a) to show that if $
+                                         \varphi:\FF \to \mathscr G$ is a mo...
+
+Not a real error.
+
+! Preview: Snippet 228 ended.(502333+139537x3485938).
+<-><->
+      
+l.204 ...show that if $\varphi:\FF \to \mathscr G$
+                                                   is a morphism of sheaves,...
+
+Not a real error.
+
+[228]
+! Preview: Snippet 229 started.
+<-><->
+      
+l.204 ...thscr G$ is a morphism of sheaves, then $
+                                                  \im \varphi$ can be natura...
+
+Not a real error.
+
+! Preview: Snippet 229 ended.(479268+139537x1386399).
+<-><->
+      
+l.204 ...a morphism of sheaves, then $\im \varphi$
+                                                   can be naturally identifi...
+
+Not a real error.
+
+[229]
+! Preview: Snippet 230 started.
+<-><->
+      
+l.204 ...naturally identified with a subsheaf of $
+                                                  \mathscr G$, as mentioned ...
+
+Not a real error.
+
+! Preview: Snippet 230 ended.(502333+0x561771).
+<-><->
+      
+l.204 ...dentified with a subsheaf of $\mathscr G$
+                                                  , as mentioned in the text.
+Not a real error.
+
+[230]
+! Preview: Snippet 231 started.
+<-><->
+      
+l.211 \[
+        
+Not a real error.
+
+<xymatrix 2x2 182>
+! Preview: Snippet 231 ended.(3619935+0x14093266).
+<-><->
+      
+l.216 \]
+        
+Not a real error.
+
+[231]
+! Preview: Snippet 232 started.
+<-><->
+      
+l.217 ...l property of sheafification applied to $
+                                                  \theta \circ \varphi$. Tak...
+
+Not a real error.
+
+! Preview: Snippet 232 ended.(498346+139537x1504004).
+<-><->
+      
+l.217 ...ication applied to $\theta \circ \varphi$
+                                                  . Taking stalks induced th...
+
+Not a real error.
+
+[232]
+! Preview: Snippet 233 started.
+<-><->
+      
+l.218 \item $
+             \im \varphi$ is the sheafification of $(\im \varphi)_{pre}(U)=\...
+
+Not a real error.
+
+! Preview: Snippet 233 ended.(479268+139537x1386399).
+<-><->
+      
+l.218 \item $\im \varphi$
+                          is the sheafification of $(\im \varphi)_{pre}(U)=\...
+
+Not a real error.
+
+[233]
+! Preview: Snippet 234 started.
+<-><->
+      
+l.218 ... $\im \varphi$ is the sheafification of $
+                                                  (\im \varphi)_{pre}(U)=\{U...
+
+Not a real error.
+
+! Preview: Snippet 234 ended.(538214+209587x8864108).
+<-><->
+      
+l.218 ...rphi)_{pre}(U)=\{U \mapsto \varphi(U)\} $
+                                                  .  We have $\im \varphi(U)...
+
+Not a real error.
+
+[234]
+! Preview: Snippet 235 started.
+<-><->
+      
+l.218 ...U)=\{U \mapsto \varphi(U)\} $.  We have $
+                                                  \im \varphi(U) \subset \ma...
+
+Not a real error.
+
+! Preview: Snippet 235 ended.(538214+179404x5157716).
+<-><->
+      
+l.218 ...ve $\im \varphi(U) \subset \mathscr G(U)$
+                                                   for all $U$, hence $\im \...
+
+Not a real error.
+
+[235]
+! Preview: Snippet 236 started.
+<-><->
+      
+l.218 ...arphi(U) \subset \mathscr G(U)$ for all $
+                                                  U$, hence $\im \varphi_P \...
+
+Not a real error.
+
+! Preview: Snippet 236 ended.(490372+0x568213).
+<-><->
+      
+l.218 ...phi(U) \subset \mathscr G(U)$ for all $U$
+                                                  , hence $\im \varphi_P \su...
+
+Not a real error.
+
+[236]
+! Preview: Snippet 237 started.
+<-><->
+      
+l.218 ...ubset \mathscr G(U)$ for all $U$, hence $
+                                                  \im \varphi_P \subset \mat...
+
+Not a real error.
+
+! Preview: Snippet 237 ended.(502333+139537x3707302).
+<-><->
+      
+l.218 ...ence $\im \varphi_P \subset \mathscr G_P$
+                                                   for all $P$, hence $\im \...
+
+Not a real error.
+
+[237]
+! Preview: Snippet 238 started.
+<-><->
+      
+l.218 ...\varphi_P \subset \mathscr G_P$ for all $
+                                                  P$, hence $\im \varphi \to...
+
+Not a real error.
+
+! Preview: Snippet 238 ended.(490372+0x560391).
+<-><->
+      
+l.218 ...arphi_P \subset \mathscr G_P$ for all $P$
+                                                  , hence $\im \varphi \to \...
+
+Not a real error.
+
+[238]
+! Preview: Snippet 239 started.
+<-><->
+      
+l.218 ...subset \mathscr G_P$ for all $P$, hence $
+                                                  \im \varphi \to \mathscr G...
+
+Not a real error.
+
+! Preview: Snippet 239 ended.(502333+139537x3064461).
+<-><->
+      
+l.218 ...l $P$, hence $\im \varphi \to \mathscr G$
+                                                   is injective.
+Not a real error.
+
+[239]
+! Preview: Snippet 240 started.
+<-><->
+      
+l.223 Let $
+           \FF$ be a sheaf on $X$, and let $s \in \FF(U)$ be a section over ...
+
+Not a real error.
+
+! Preview: Snippet 240 ended.(502333+0x740425).
+<-><->
+      
+l.223 Let $\FF$
+                be a sheaf on $X$, and let $s \in \FF(U)$ be a section over ...
+
+Not a real error.
+
+[240]
+! Preview: Snippet 241 started.
+<-><->
+      
+l.223 Let $\FF$ be a sheaf on $
+                               X$, and let $s \in \FF(U)$ be a section over ...
+
+Not a real error.
+
+! Preview: Snippet 241 ended.(490372+0x650840).
+<-><->
+      
+l.223 Let $\FF$ be a sheaf on $X$
+                                 , and let $s \in \FF(U)$ be a section over ...
+
+Not a real error.
+
+[241]
+! Preview: Snippet 242 started.
+<-><->
+      
+l.223 Let $\FF$ be a sheaf on $X$, and let $
+                                            s \in \FF(U)$ be a section over ...
+
+Not a real error.
+
+! Preview: Snippet 242 ended.(538214+179404x3080255).
+<-><->
+      
+l.223 ...be a sheaf on $X$, and let $s \in \FF(U)$
+                                                   be a section over an open...
+
+Not a real error.
+
+[242]
+! Preview: Snippet 243 started.
+<-><->
+      
+l.223 ...n \FF(U)$ be a section over an open set $
+                                                  U$. The \emph{support of $...
+
+Not a real error.
+
+! Preview: Snippet 243 ended.(490372+0x568213).
+<-><->
+      
+l.223 ...\FF(U)$ be a section over an open set $U$
+                                                  . The \emph{support of $s$...
+
+Not a real error.
+
+[243]
+! Preview: Snippet 244 started.
+<-><->
+      
+l.223 ...r an open set $U$. The \emph{support of $
+                                                  s$} denoted $\Supp (s)$, i...
+
+Not a real error.
+
+! Preview: Snippet 244 ended.(308974+0x336383).
+<-><->
+      
+l.223 ...an open set $U$. The \emph{support of $s$
+                                                  } denoted $\Supp (s)$, is ...
+
+Not a real error.
+
+[244]
+! Preview: Snippet 245 started.
+<-><->
+      
+l.223 ... $U$. The \emph{support of $s$} denoted $
+                                                  \Supp (s)$, is defined to ...
+
+Not a real error.
+
+! Preview: Snippet 245 ended.(538214+179404x2489245).
+<-><->
+      
+l.223 ...\emph{support of $s$} denoted $\Supp (s)$
+                                                  , is defined to be the set...
+
+Not a real error.
+
+[245]
+! Preview: Snippet 246 started.
+<-><->
+      
+l.223 ...d $\Supp (s)$, is defined to be the set $
+                                                  \{ P \in U \mid s_P \neq 0...
+
+Not a real error.
+
+! Preview: Snippet 246 ended.(538214+179404x5436638).
+<-><->
+      
+l.223 ...be the set $\{ P \in U \mid s_P \neq 0\}$
+                                                   where $s_P$ denotes the g...
+
+Not a real error.
+
+[246]
+! Preview: Snippet 247 started.
+<-><->
+      
+l.223 ...et $\{ P \in U \mid s_P \neq 0\}$ where $
+                                                  s_P$ denotes the germ of $...
+
+Not a real error.
+
+! Preview: Snippet 247 ended.(308974+111084x799691).
+<-><->
+      
+l.223 ...\{ P \in U \mid s_P \neq 0\}$ where $s_P$
+                                                   denotes the germ of $s$ i...
+
+Not a real error.
+
+[247]
+! Preview: Snippet 248 started.
+<-><->
+      
+l.223 ...eq 0\}$ where $s_P$ denotes the germ of $
+                                                  s$ in the stalk $s_P$. Sho...
+
+Not a real error.
+
+! Preview: Snippet 248 ended.(308974+0x336383).
+<-><->
+      
+l.223 ... 0\}$ where $s_P$ denotes the germ of $s$
+                                                   in the stalk $s_P$. Show ...
+
+Not a real error.
+
+[248]
+! Preview: Snippet 249 started.
+<-><->
+      
+l.223 ...P$ denotes the germ of $s$ in the stalk $
+                                                  s_P$. Show that $\Supp (s)...
+
+Not a real error.
+
+! Preview: Snippet 249 ended.(308974+111084x799691).
+<-><->
+      
+l.223 ...enotes the germ of $s$ in the stalk $s_P$
+                                                  . Show that $\Supp (s)$ is...
+
+Not a real error.
+
+[249]
+! Preview: Snippet 250 started.
+<-><->
+      
+l.223 ...rm of $s$ in the stalk $s_P$. Show that $
+                                                  \Supp (s)$ is a closed sub...
+
+Not a real error.
+
+! Preview: Snippet 250 ended.(538214+179404x2489245).
+<-><->
+      
+l.223 ...in the stalk $s_P$. Show that $\Supp (s)$
+                                                   is a closed subset of $U$...
+
+Not a real error.
+
+[250]
+! Preview: Snippet 251 started.
+<-><->
+      
+l.223 ... that $\Supp (s)$ is a closed subset of $
+                                                  U$. We define the \emph{su...
+
+Not a real error.
+
+! Preview: Snippet 251 ended.(490372+0x568213).
+<-><->
+      
+l.223 ...hat $\Supp (s)$ is a closed subset of $U$
+                                                  . We define the \emph{supp...
+
+Not a real error.
+
+[251]
+! Preview: Snippet 252 started.
+<-><->
+      
+l.223 ...of $U$. We define the \emph{support} of $
+                                                  \FF$ by $\Supp \FF$ to be ...
+
+Not a real error.
+
+! Preview: Snippet 252 ended.(502333+0x740425).
+<-><->
+      
+l.223 ...U$. We define the \emph{support} of $\FF$
+                                                   by $\Supp \FF$ to be $\{P...
+
+Not a real error.
+
+[252]
+! Preview: Snippet 253 started.
+<-><->
+      
+l.223 ...e define the \emph{support} of $\FF$ by $
+                                                  \Supp \FF$ to be $\{P \in ...
+
+Not a real error.
+
+! Preview: Snippet 253 ended.(502333+139537x2454738).
+<-><->
+      
+l.223 ...he \emph{support} of $\FF$ by $\Supp \FF$
+                                                   to be $\{P \in X \mid \FF...
+
+Not a real error.
+
+[253]
+! Preview: Snippet 254 started.
+<-><->
+      
+l.223 ...{support} of $\FF$ by $\Supp \FF$ to be $
+                                                  \{P \in X \mid \FF_P \neq ...
+
+Not a real error.
+
+! Preview: Snippet 254 ended.(538214+179404x5923307).
+<-><->
+      
+l.223 ...F$ to be $\{P \in X \mid \FF_P \neq 0 \}$
+                                                  . It need not be a closed ...
+
+Not a real error.
+
+[254]
+! Preview: Snippet 255 started.
+<-><->
+      
+l.227 Showing that $
+                    \Supp(s)$ is closed is equivalent to showing that the co...
+
+Not a real error.
+
+! Preview: Snippet 255 ended.(538214+179404x2489245).
+<-><->
+      
+l.227 Showing that $\Supp(s)$
+                              is closed is equivalent to showing that the co...
+
+Not a real error.
+
+[255]
+! Preview: Snippet 256 started.
+<-><->
+      
+l.227 ...ing that the complement is open. So let $
+                                                  P \in X \bs \Supp(s)$. The...
+
+Not a real error.
+
+! Preview: Snippet 256 ended.(538214+179404x5055971).
+<-><->
+      
+l.227 ...nt is open. So let $P \in X \bs \Supp(s)$
+                                                  . Then $s_P=0$. But every ...
+
+Not a real error.
+
+[256]
+! Preview: Snippet 257 started.
+<-><->
+      
+l.227 ...en. So let $P \in X \bs \Supp(s)$. Then $
+                                                  s_P=0$. But every germ is ...
+
+Not a real error.
+
+! Preview: Snippet 257 ended.(462465+111084x2115321).
+<-><->
+      
+l.227 ... let $P \in X \bs \Supp(s)$. Then $s_P=0$
+                                                  . But every germ is repres...
+
+Not a real error.
+
+[257]
+! Preview: Snippet 258 started.
+<-><->
+      
+l.227 ...But every germ is represented by a pair $
+                                                  (s,U)$ (with $(s',U') \sim...
+
+Not a real error.
+
+! Preview: Snippet 258 ended.(538214+179404x1781686).
+<-><->
+      
+l.227 ...ery germ is represented by a pair $(s,U)$
+                                                   (with $(s',U') \simeq (s,...
+
+Not a real error.
+
+[258]
+! Preview: Snippet 259 started.
+<-><->
+      
+l.227 ... is represented by a pair $(s,U)$ (with $
+                                                  (s',U') \simeq (s,U)$ if $...
+
+Not a real error.
+
+! Preview: Snippet 259 ended.(551690+179404x4887922).
+<-><->
+      
+l.227 ...pair $(s,U)$ (with $(s',U') \simeq (s,U)$
+                                                   if $\restr{s}{W}=\restr{s...
+
+Not a real error.
+
+[259]
+! Preview: Snippet 260 started.
+<-><->
+      
+l.227 ...$(s,U)$ (with $(s',U') \simeq (s,U)$ if $
+                                                  \restr{s}{W}=\restr{s'}{W}...
+
+Not a real error.
+
+! Preview: Snippet 260 ended.(609979+283939x3563279).
+<-><->
+      
+l.227 ...eq (s,U)$ if $\restr{s}{W}=\restr{s'}{W}$
+                                                   for some open $W \subset ...
+
+Not a real error.
+
+[260]
+! Preview: Snippet 261 started.
+<-><->
+      
+l.227 ...estr{s}{W}=\restr{s'}{W}$ for some open $
+                                                  W \subset U \cap U'$). But...
+
+Not a real error.
+
+! Preview: Snippet 261 ended.(551690+28057x3851883).
+<-><->
+      
+l.227 ...}{W}$ for some open $W \subset U \cap U'$
+                                                  ). But since $s_P=0$, ther...
+
+Not a real error.
+
+[261]
+! Preview: Snippet 262 started.
+<-><->
+      
+l.227 ... open $W \subset U \cap U'$). But since $
+                                                  s_P=0$, there must be some...
+
+Not a real error.
+
+! Preview: Snippet 262 ended.(462465+111084x2115321).
+<-><->
+      
+l.227 ...$W \subset U \cap U'$). But since $s_P=0$
+                                                  , there must be some neigh...
+
+Not a real error.
+
+[262]
+! Preview: Snippet 263 started.
+<-><->
+      
+l.227 ..._P=0$, there must be some neighbourhood $
+                                                  U$ such that $s_P$ is repr...
+
+Not a real error.
+
+! Preview: Snippet 263 ended.(490372+0x568213).
+<-><->
+      
+l.227 ...=0$, there must be some neighbourhood $U$
+                                                   such that $s_P$ is repres...
+
+Not a real error.
+
+[263]
+! Preview: Snippet 264 started.
+<-><->
+      
+l.227 ...ust be some neighbourhood $U$ such that $
+                                                  s_P$ is represented by $s=...
+
+Not a real error.
+
+! Preview: Snippet 264 ended.(308974+111084x799691).
+<-><->
+      
+l.227 ...be some neighbourhood $U$ such that $s_P$
+                                                   is represented by $s=0$, ...
+
+Not a real error.
+
+[264]
+! Preview: Snippet 265 started.
+<-><->
+      
+l.227 ...d $U$ such that $s_P$ is represented by $
+                                                  s=0$, hence $X \bs \Supp(s...
+
+Not a real error.
+
+! Preview: Snippet 265 ended.(462465+0x1652013).
+<-><->
+      
+l.227 ...$ such that $s_P$ is represented by $s=0$
+                                                  , hence $X \bs \Supp(s)$ c...
+
+Not a real error.
+
+[265]
+! Preview: Snippet 266 started.
+<-><->
+      
+l.227 ...at $s_P$ is represented by $s=0$, hence $
+                                                  X \bs \Supp(s)$ can be cov...
+
+Not a real error.
+
+! Preview: Snippet 266 ended.(538214+179404x3618496).
+<-><->
+      
+l.227 ...resented by $s=0$, hence $X \bs \Supp(s)$
+                                                   can be covered by those o...
+
+Not a real error.
+
+[266]
+! Preview: Snippet 267 started.
+<-><->
+      
+l.227 ... \Supp(s)$ can be covered by those open $
+                                                  U$'s.
+Not a real error.
+
+! Preview: Snippet 267 ended.(490372+0x568213).
+<-><->
+      
+l.227 ...Supp(s)$ can be covered by those open $U$
+                                                  's.
+Not a real error.
+
+[267]
+! Preview: Snippet 268 started.
+<-><->
+      
+l.229 To see that $
+                   \Supp \FF$ need not be closed, let $X=\Aa_k^1$ with $k$ a...
+
+Not a real error.
+
+! Preview: Snippet 268 ended.(502333+139537x2454738).
+<-><->
+      
+l.229 To see that $\Supp \FF$
+                              need not be closed, let $X=\Aa_k^1$ with $k$ a...
+
+Not a real error.
+
+[268]
+! Preview: Snippet 269 started.
+<-><->
+      
+l.229 ...hat $\Supp \FF$ need not be closed, let $
+                                                  X=\Aa_k^1$ with $k$ an inf...
+
+Not a real error.
+
+! Preview: Snippet 269 ended.(598293+218487x2462727).
+<-><->
+      
+l.229 ... \FF$ need not be closed, let $X=\Aa_k^1$
+                                                   with $k$ an infinite fiel...
+
+Not a real error.
+
+[269]
+! Preview: Snippet 270 started.
+<-><->
+      
+l.229 ...eed not be closed, let $X=\Aa_k^1$ with $
+                                                  k$ an infinite field. Let ...
+
+Not a real error.
+
+! Preview: Snippet 270 ended.(498346+0x396186).
+<-><->
+      
+l.229 ...d not be closed, let $X=\Aa_k^1$ with $k$
+                                                   an infinite field. Let $\...
+
+Not a real error.
+
+[270]
+! Preview: Snippet 271 started.
+<-><->
+      
+l.229 ...Aa_k^1$ with $k$ an infinite field. Let $
+                                                  \Z$ be the constant sheaf ...
+
+Not a real error.
+
+! Preview: Snippet 271 ended.(494359+0x478414).
+<-><->
+      
+l.229 ...k^1$ with $k$ an infinite field. Let $\Z$
+                                                   be the constant sheaf and...
+
+Not a real error.
+
+[271]
+! Preview: Snippet 272 started.
+<-><->
+      
+l.229 ... Let $\Z$ be the constant sheaf and let $
+                                                  \mathscr L$ be the direct ...
+
+Not a real error.
+
+! Preview: Snippet 272 ended.(502333+0x764711).
+<-><->
+      
+l.229 ...e the constant sheaf and let $\mathscr L$
+                                                   be the direct sum of infi...
+
+Not a real error.
+
+[272]
+! Preview: Snippet 273 started.
+<-><->
+      
+l.229 ...yscraper sheaves, but not everyone. Let $
+                                                  \FF/\mathscr L$ be the quo...
+
+Not a real error.
+
+! Preview: Snippet 273 ended.(538214+179404x1983547).
+<-><->
+      
+l.229 ...s, but not everyone. Let $\FF/\mathscr L$
+                                                   be the quotient. This has...
+
+Not a real error.
+
+[273]
+! Preview: Snippet 274 started.
+<-><->
+      
+l.233 A sheaf $
+               \FF$ on a topological space $X$ is \emph{flasque} (flabby) if...
+
+Not a real error.
+
+! Preview: Snippet 274 ended.(502333+0x740425).
+<-><->
+      
+l.233 A sheaf $\FF$
+                    on a topological space $X$ is \emph{flasque} (flabby) if...
+
+Not a real error.
+
+[274]
+! Preview: Snippet 275 started.
+<-><->
+      
+l.233 A sheaf $\FF$ on a topological space $
+                                            X$ is \emph{flasque} (flabby) if...
+
+Not a real error.
+
+! Preview: Snippet 275 ended.(490372+0x650840).
+<-><->
+      
+l.233 A sheaf $\FF$ on a topological space $X$
+                                               is \emph{flasque} (flabby) if...
+
+Not a real error.
+
+[275]
+! Preview: Snippet 276 started.
+<-><->
+      
+l.233 ...lasque} (flabby) if for every inclusion $
+                                                  U \subseteq V$, the restri...
+
+Not a real error.
+
+! Preview: Snippet 276 ended.(490372+97575x2103115).
+<-><->
+      
+l.233 ...y) if for every inclusion $U \subseteq V$
+                                                  , the restriction map $\FF...
+
+Not a real error.
+
+[276]
+! Preview: Snippet 277 started.
+<-><->
+      
+l.233 ...on $U \subseteq V$, the restriction map $
+                                                  \FF(U) \to \FF(V)$ is surj...
+
+Not a real error.
+
+! Preview: Snippet 277 ended.(538214+179404x4859736).
+<-><->
+      
+l.233 ..., the restriction map $\FF(U) \to \FF(V)$
+                                                   is surjective.
+Not a real error.
+
+[277]
+! Preview: Snippet 278 started.
+<-><->
+      
+l.236 \item If $
+                0 \to \FF' \to \FF \to \FF'' \to 0$ is an exact sequence of ...
+
+Not a real error.
+
+! Preview: Snippet 278 ended.(586074+0x7922886).
+<-><->
+      
+l.236 ...m If $0 \to \FF' \to \FF \to \FF'' \to 0$
+                                                   is an exact sequence of s...
+
+Not a real error.
+
+[278]
+! Preview: Snippet 279 started.
+<-><->
+      
+l.236 ...is an exact sequence of sheaves, and if $
+                                                  \FF'$ is flabby, then for ...
+
+Not a real error.
+
+! Preview: Snippet 279 ended.(586074+0x924290).
+<-><->
+      
+l.236 ... exact sequence of sheaves, and if $\FF'$
+                                                   is flabby, then for any o...
+
+Not a real error.
+
+[279]
+! Preview: Snippet 280 started.
+<-><->
+      
+l.236 ...$\FF'$ is flabby, then for any open set $
+                                                  U$, the sequence
+Not a real error.
+
+! Preview: Snippet 280 ended.(490372+0x568213).
+<-><->
+      
+l.236 ...FF'$ is flabby, then for any open set $U$
+                                                  , the sequence
+Not a real error.
+
+[280]
+! Preview: Snippet 281 started.
+<-><->
+      
+l.237 $
+       $
+Not a real error.
+
+! Preview: Snippet 281 ended.(1070694+0x23592960).
+<-><->
+      
+l.239 $$
+        
+Not a real error.
+
+[281]
+! Preview: Snippet 282 started.
+<-><->
+      
+l.241 \item Same as above, but suppose $
+                                        \FF'$ and $\FF$ are flabby. Show tha...
+
+Not a real error.
+
+! Preview: Snippet 282 ended.(586074+0x924290).
+<-><->
+      
+l.241 \item Same as above, but suppose $\FF'$
+                                              and $\FF$ are flabby. Show tha...
+
+Not a real error.
+
+[282]
+! Preview: Snippet 283 started.
+<-><->
+      
+l.241 ...m Same as above, but suppose $\FF'$ and $
+                                                  \FF$ are flabby. Show that...
+
+Not a real error.
+
+! Preview: Snippet 283 ended.(502333+0x740425).
+<-><->
+      
+l.241 ...me as above, but suppose $\FF'$ and $\FF$
+                                                   are flabby. Show that $\F...
+
+Not a real error.
+
+[283]
+! Preview: Snippet 284 started.
+<-><->
+      
+l.241 ... $\FF'$ and $\FF$ are flabby. Show that $
+                                                  \FF''$ is flabby.
+Not a real error.
+
+! Preview: Snippet 284 ended.(586074+0x1075387).
+<-><->
+      
+l.241 ...$ and $\FF$ are flabby. Show that $\FF''$
+                                                   is flabby.
+Not a real error.
+
+[284]
+! Preview: Snippet 285 started.
+<-><->
+      
+l.242 \item If $
+                f:X \to Y$ is a continous map, and $\FF$ is a flabby sheaf o...
+
+Not a real error.
+
+! Preview: Snippet 285 ended.(498346+139537x3369809).
+<-><->
+      
+l.242 \item If $f:X \to Y$
+                           is a continous map, and $\FF$ is a flabby sheaf o...
+
+Not a real error.
+
+[285]
+! Preview: Snippet 286 started.
+<-><->
+      
+l.242 ... If $f:X \to Y$ is a continous map, and $
+                                                  \FF$ is a flabby sheaf on ...
+
+Not a real error.
+
+! Preview: Snippet 286 ended.(502333+0x740425).
+<-><->
+      
+l.242 ...$f:X \to Y$ is a continous map, and $\FF$
+                                                   is a flabby sheaf on $X$,...
+
+Not a real error.
+
+[286]
+! Preview: Snippet 287 started.
+<-><->
+      
+l.242 ...ous map, and $\FF$ is a flabby sheaf on $
+                                                  X$, then $f_*\FF$ is flabb...
+
+Not a real error.
+
+! Preview: Snippet 287 ended.(490372+0x650840).
+<-><->
+      
+l.242 ...s map, and $\FF$ is a flabby sheaf on $X$
+                                                  , then $f_*\FF$ is flabby ...
+
+Not a real error.
+
+[287]
+! Preview: Snippet 288 started.
+<-><->
+      
+l.242 ...nd $\FF$ is a flabby sheaf on $X$, then $
+                                                  f_*\FF$ is flabby on $Y$.
+Not a real error.
+
+! Preview: Snippet 288 ended.(502333+139537x1522662).
+<-><->
+      
+l.242 ...$ is a flabby sheaf on $X$, then $f_*\FF$
+                                                   is flabby on $Y$.
+Not a real error.
+
+[288]
+! Preview: Snippet 289 started.
+<-><->
+      
+l.242 ...heaf on $X$, then $f_*\FF$ is flabby on $
+                                                  Y$.
+Not a real error.
+
+! Preview: Snippet 289 ended.(490372+0x576089).
+<-><->
+      
+l.242 ...af on $X$, then $f_*\FF$ is flabby on $Y$
+                                                  .
+Not a real error.
+
+[289]
+! Preview: Snippet 290 started.
+<-><->
+      
+l.243 \item Let $
+                 \FF$ be any sheaf on $X$. We define a new sheaf $\mathscr G...
+
+Not a real error.
+
+! Preview: Snippet 290 ended.(502333+0x740425).
+<-><->
+      
+l.243 \item Let $\FF$
+                      be any sheaf on $X$. We define a new sheaf $\mathscr G...
+
+Not a real error.
+
+[290]
+! Preview: Snippet 291 started.
+<-><->
+      
+l.243 \item Let $\FF$ be any sheaf on $
+                                       X$. We define a new sheaf $\mathscr G...
+
+Not a real error.
+
+! Preview: Snippet 291 ended.(490372+0x650840).
+<-><->
+      
+l.243 \item Let $\FF$ be any sheaf on $X$
+                                         . We define a new sheaf $\mathscr G...
+
+Not a real error.
+
+[291]
+! Preview: Snippet 292 started.
+<-><->
+      
+l.243 ...any sheaf on $X$. We define a new sheaf $
+                                                  \mathscr G$, called the \e...
+
+Not a real error.
+
+! Preview: Snippet 292 ended.(502333+0x561771).
+<-><->
+      
+l.243 ...n $X$. We define a new sheaf $\mathscr G$
+                                                  , called the \emph{sheaf o...
+
+Not a real error.
+
+[292]
+! Preview: Snippet 293 started.
+<-><->
+      
+l.243 ...\emph{sheaf of discontinous sections of $
+                                                  \FF$}, as follows: For eac...
+
+Not a real error.
+
+! Preview: Snippet 293 ended.(502333+0x740425).
+<-><->
+      
+l.243 ...h{sheaf of discontinous sections of $\FF$
+                                                  }, as follows: For each op...
+
+Not a real error.
+
+[293]
+! Preview: Snippet 294 started.
+<-><->
+      
+l.243 ...f $\FF$}, as follows: For each open set $
+                                                  U \subset X$, $\mathscr G(...
+
+Not a real error.
+
+! Preview: Snippet 294 ended.(490372+28057x2175873).
+<-><->
+      
+l.243 ... follows: For each open set $U \subset X$
+                                                  , $\mathscr G(U)$ is the s...
+
+Not a real error.
+
+[294]
+! Preview: Snippet 295 started.
+<-><->
+      
+l.243 ...llows: For each open set $U \subset X$, $
+                                                  \mathscr G(U)$ is the set ...
+
+Not a real error.
+
+! Preview: Snippet 295 ended.(538214+179404x1688134).
+<-><->
+      
+l.243 ...h open set $U \subset X$, $\mathscr G(U)$
+                                                   is the set of maps $s:U \...
+
+Not a real error.
+
+[295]
+! Preview: Snippet 296 started.
+<-><->
+      
+l.243 ... X$, $\mathscr G(U)$ is the set of maps $
+                                                  s:U \to \cup_{P \in U} \FF...
+
+Not a real error.
+
+! Preview: Snippet 296 ended.(502333+144180x5688034).
+<-><->
+      
+l.243 ...et of maps $s:U \to \cup_{P \in U} \FF_P$
+                                                  , such that for all $P \in...
+
+Not a real error.
+
+[296]
+! Preview: Snippet 297 started.
+<-><->
+      
+l.243 ...cup_{P \in U} \FF_P$, such that for all $
+                                                  P \in U$, $s(P) \in \FF_P$...
+
+Not a real error.
+
+! Preview: Snippet 297 ended.(490372+28057x2005688).
+<-><->
+      
+l.243 ...in U} \FF_P$, such that for all $P \in U$
+                                                  , $s(P) \in \FF_P$. Show t...
+
+Not a real error.
+
+[297]
+! Preview: Snippet 298 started.
+<-><->
+      
+l.243 ...U} \FF_P$, such that for all $P \in U$, $
+                                                  s(P) \in \FF_P$. Show that...
+
+Not a real error.
+
+! Preview: Snippet 298 ended.(538214+179404x3535741).
+<-><->
+      
+l.243 ... that for all $P \in U$, $s(P) \in \FF_P$
+                                                  . Show that $\mathscr G$ i...
+
+Not a real error.
+
+[298]
+! Preview: Snippet 299 started.
+<-><->
+      
+l.243 ... $P \in U$, $s(P) \in \FF_P$. Show that $
+                                                  \mathscr G$ is a flabby sh...
+
+Not a real error.
+
+! Preview: Snippet 299 ended.(502333+0x561771).
+<-><->
+      
+l.243 ... $s(P) \in \FF_P$. Show that $\mathscr G$
+                                                   is a flabby sheaf, and th...
+
+Not a real error.
+
+[299]
+! Preview: Snippet 300 started.
+<-><->
+      
+l.243 ...re is a natural injective morphism from $
+                                                  \FF$ to $\mathscr G$.
+Not a real error.
+
+! Preview: Snippet 300 ended.(502333+0x740425).
+<-><->
+      
+l.243 ...s a natural injective morphism from $\FF$
+                                                   to $\mathscr G$.
+Not a real error.
+
+[300]
+! Preview: Snippet 301 started.
+<-><->
+      
+l.243 ...atural injective morphism from $\FF$ to $
+                                                  \mathscr G$.
+Not a real error.
+
+! Preview: Snippet 301 ended.(502333+0x561771).
+<-><->
+      
+l.243 ...ctive morphism from $\FF$ to $\mathscr G$
+                                                  .
+Not a real error.
+
+[301] [5
+
+
+
+
+
+]
+! Preview: Snippet 302 started.
+<-><->
+      
+l.249 \item Every open set in $
+                               X$ is irreducible and dense, and dense sets a...
+
+Not a real error.
+
+! Preview: Snippet 302 ended.(490372+0x650840).
+<-><->
+      
+l.249 \item Every open set in $X$
+                                  is irreducible and dense, and dense sets a...
+
+Not a real error.
+
+[302]
+! Preview: Snippet 303 started.
+<-><->
+      
+l.250 \item The sheaf axiom for a sheaf $
+                                         \FF$ is equivalent to the following...
+
+Not a real error.
+
+! Preview: Snippet 303 ended.(502333+0x740425).
+<-><->
+      
+l.250 \item The sheaf axiom for a sheaf $\FF$
+                                              is equivalent to the following...
+
+Not a real error.
+
+[303]
+! Preview: Snippet 304 started.
+<-><->
+      
+l.250 ...nt to the following: for every covering $
+                                                  \{U_i \}$ of $U$, the foll...
+
+Not a real error.
+
+! Preview: Snippet 304 ended.(538214+179404x1430020).
+<-><->
+      
+l.250 ... following: for every covering $\{U_i \}$
+                                                   of $U$, the following seq...
+
+Not a real error.
+
+[304]
+! Preview: Snippet 305 started.
+<-><->
+      
+l.250 ...owing: for every covering $\{U_i \}$ of $
+                                                  U$, the following sequence...
+
+Not a real error.
+
+! Preview: Snippet 305 ended.(490372+0x568213).
+<-><->
+      
+l.250 ...ing: for every covering $\{U_i \}$ of $U$
+                                                  , the following sequence i...
+
+Not a real error.
+
+[305]
+! Preview: Snippet 306 started.
+<-><->
+      
+l.251 $
+       $
+Not a real error.
+
+! Preview: Snippet 306 ended.(1925896+0x23592960).
+<-><->
+      
+l.253 $$
+        
+Not a real error.
+
+[306]
+! Preview: Snippet 307 started.
+<-><->
+      
+l.254 where $
+             U_{ij}= U_i \cap U_j$. The first map sends a section $s$ to the...
+
+Not a real error.
+
+! Preview: Snippet 307 ended.(490372+209587x4212708).
+<-><->
+      
+l.254 where $U_{ij}= U_i \cap U_j$
+                                  . The first map sends a section $s$ to the...
+
+Not a real error.
+
+[307]
+! Preview: Snippet 308 started.
+<-><->
+      
+l.254 ...cap U_j$. The first map sends a section $
+                                                  s$ to the product of all i...
+
+Not a real error.
+
+! Preview: Snippet 308 ended.(308974+0x336383).
+<-><->
+      
+l.254 ...p U_j$. The first map sends a section $s$
+                                                   to the product of all its...
+
+Not a real error.
+
+[308]
+! Preview: Snippet 309 started.
+<-><->
+      
+l.254 ... restrictions, and the second map sends $
+                                                  (s_i) \mapsto (s_i-s_j)_{i...
+
+Not a real error.
+
+! Preview: Snippet 309 ended.(538214+213029x6699406).
+<-><->
+      
+l.254 ...i) \mapsto (s_i-s_j)_{ij \in I \times I}$
+                                                  .
+Not a real error.
+
+[309]
+! Preview: Snippet 310 started.
+<-><->
+      
+l.256 ...the exercise is exact, for small enough $
+                                                  U_i$, the sequence $0 \to ...
+
+Not a real error.
+
+! Preview: Snippet 310 ended.(490372+107642x712400).
+<-><->
+      
+l.256 ...exercise is exact, for small enough $U_i$
+                                                  , the sequence $0 \to \FF'...
+
+Not a real error.
+
+[310]
+! Preview: Snippet 311 started.
+<-><->
+      
+l.256 ...t, for small enough $U_i$, the sequence $
+                                                  0 \to \FF'(U_i) \to \FF(U_...
+
+Not a real error.
+
+! Preview: Snippet 311 ended.(586074+179404x11734536).
+<-><->
+      
+l.256 ...'(U_i) \to \FF(U_i) \to \FF''(U_i) \to 0$
+                                                   is exact (for sheaves, ex...
+
+Not a real error.
+
+[311]
+! Preview: Snippet 312 started.
+<-><->
+      
+l.257 \[
+        
+Not a real error.
+
+<xymatrix 5x5 803>
+! Preview: Snippet 312 ended.(11873637+0x21856097).
+<-><->
+      
+l.265 \]
+        
+Not a real error.
+
+[312]
+! Preview: Snippet 313 started.
+<-><->
+      
+l.266 Hm! If $
+              f$ was surjective, we could apply the snake lemma!! But $f$ is...
+
+Not a real error.
+
+! Preview: Snippet 313 ended.(498346+139537x428580).
+<-><->
+      
+l.266 Hm! If $f$
+                 was surjective, we could apply the snake lemma!! But $f$ is...
+
+Not a real error.
+
+[313]
+! Preview: Snippet 314 started.
+<-><->
+      
+l.266 ...e, we could apply the snake lemma!! But $
+                                                  f$ is not surjective. (......
+
+Not a real error.
+
+! Preview: Snippet 314 ended.(498346+139537x428580).
+<-><->
+      
+l.266 ... we could apply the snake lemma!! But $f$
+                                                   is not surjective. (...) ...
+
+Not a real error.
+
+[314]
+! Preview: Snippet 315 started.
+<-><->
+      
+l.268 \item This is obvious, since $
+                                    f_\ast \FF(V) = \FF(f^{-1}(V))$.
+Not a real error.
+
+! Preview: Snippet 315 ended.(598293+179404x7223673).
+<-><->
+      
+l.268 ...s, since $f_\ast \FF(V) = \FF(f^{-1}(V))$
+                                                  .
+Not a real error.
+
+[315]
+! Preview: Snippet 316 started.
+<-><->
+      
+l.269 \item It is clear that $
+                              \mathscr G$ is a sheaf. If $U \subset V$, let ...
+
+Not a real error.
+
+! Preview: Snippet 316 ended.(502333+0x561771).
+<-><->
+      
+l.269 \item It is clear that $\mathscr G$
+                                          is a sheaf. If $U \subset V$, let ...
+
+Not a real error.
+
+[316]
+! Preview: Snippet 317 started.
+<-><->
+      
+l.269 ... clear that $\mathscr G$ is a sheaf. If $
+                                                  U \subset V$, let $s \in \...
+
+Not a real error.
+
+! Preview: Snippet 317 ended.(490372+28057x2103115).
+<-><->
+      
+l.269 ...$\mathscr G$ is a sheaf. If $U \subset V$
+                                                  , let $s \in \mathscr G(U)...
+
+Not a real error.
+
+[317]
+! Preview: Snippet 318 started.
+<-><->
+      
+l.269 ...cr G$ is a sheaf. If $U \subset V$, let $
+                                                  s \in \mathscr G(U)$ be gi...
+
+Not a real error.
+
+! Preview: Snippet 318 ended.(538214+179404x2901601).
+<-><->
+      
+l.269 ... $U \subset V$, let $s \in \mathscr G(U)$
+                                                   be given. Then define $s'...
+
+Not a real error.
+
+[318]
+! Preview: Snippet 319 started.
+<-><->
+      
+l.269 ...in \mathscr G(U)$ be given. Then define $
+                                                  s' \in G(V)$ as follows: $...
+
+Not a real error.
+
+! Preview: Snippet 319 ended.(551690+179404x3097791).
+<-><->
+      
+l.269 ...G(U)$ be given. Then define $s' \in G(V)$
+                                                   as follows: $s'(P)=s(P)$ ...
+
+Not a real error.
+
+[319]
+! Preview: Snippet 320 started.
+<-><->
+      
+l.269 .... Then define $s' \in G(V)$ as follows: $
+                                                  s'(P)=s(P)$ if $P \in U$ a...
+
+Not a real error.
+
+! Preview: Snippet 320 ended.(551690+179404x4050533).
+<-><->
+      
+l.269 ...ne $s' \in G(V)$ as follows: $s'(P)=s(P)$
+                                                   if $P \in U$ and zero els...
+
+Not a real error.
+
+[320]
+! Preview: Snippet 321 started.
+<-><->
+      
+l.269 ...' \in G(V)$ as follows: $s'(P)=s(P)$ if $
+                                                  P \in U$ and zero elsewher...
+
+Not a real error.
+
+! Preview: Snippet 321 ended.(490372+28057x2005688).
+<-><->
+      
+l.269 ...V)$ as follows: $s'(P)=s(P)$ if $P \in U$
+                                                   and zero elsewhere. This ...
+
+Not a real error.
+
+[321]
+! Preview: Snippet 322 started.
+<-><->
+      
+l.269 ...elsewhere. This element will be sent to $
+                                                  s$.
+Not a real error.
+
+! Preview: Snippet 322 ended.(308974+0x336383).
+<-><->
+      
+l.269 ...sewhere. This element will be sent to $s$
+                                                  .
+Not a real error.
+
+[322]
+! Preview: Snippet 323 started.
+<-><->
+      
+l.271 The injective morphism from $
+                                   \FF$ to $\mathscr G$ is defined as follow...
+
+Not a real error.
+
+! Preview: Snippet 323 ended.(502333+0x740425).
+<-><->
+      
+l.271 The injective morphism from $\FF$
+                                        to $\mathscr G$ is defined as follow...
+
+Not a real error.
+
+[323]
+! Preview: Snippet 324 started.
+<-><->
+      
+l.271 The injective morphism from $\FF$ to $
+                                            \mathscr G$ is defined as follow...
+
+Not a real error.
+
+! Preview: Snippet 324 ended.(502333+0x561771).
+<-><->
+      
+l.271 ...ctive morphism from $\FF$ to $\mathscr G$
+                                                   is defined as follows: se...
+
+Not a real error.
+
+[324]
+! Preview: Snippet 325 started.
+<-><->
+      
+l.271 ...\mathscr G$ is defined as follows: send $
+                                                  s \in \FF(U)$ to the funct...
+
+Not a real error.
+
+! Preview: Snippet 325 ended.(538214+179404x3080255).
+<-><->
+      
+l.271 ...s defined as follows: send $s \in \FF(U)$
+                                                   to the function $s(P)=s_P...
+
+Not a real error.
+
+[325]
+! Preview: Snippet 326 started.
+<-><->
+      
+l.271 ...ws: send $s \in \FF(U)$ to the function $
+                                                  s(P)=s_P$ in $\mathscr G(U)$.
+
+Not a real error.
+
+! Preview: Snippet 326 ended.(538214+179404x3211435).
+<-><->
+      
+l.271 ...$s \in \FF(U)$ to the function $s(P)=s_P$
+                                                   in $\mathscr G(U)$.
+Not a real error.
+
+[326]
+! Preview: Snippet 327 started.
+<-><->
+      
+l.271 ...n \FF(U)$ to the function $s(P)=s_P$ in $
+                                                  \mathscr G(U)$.
+Not a real error.
+
+! Preview: Snippet 327 ended.(538214+179404x1688134).
+<-><->
+      
+l.271 ...he function $s(P)=s_P$ in $\mathscr G(U)$
+                                                  .
+Not a real error.
+
+[327]
+! Preview: Snippet 328 started.
+<-><->
+      
+l.278 Let $
+           A$ be a ring. The following are equivalent:
+Not a real error.
+
+! Preview: Snippet 328 ended.(490372+0x538215).
+<-><->
+      
+l.278 Let $A$
+              be a ring. The following are equivalent:
+Not a real error.
+
+[328]
+! Preview: Snippet 329 started.
+<-><->
+      
+l.280 \item $
+             \Spec A$ is disconnected.
+Not a real error.
+
+! Preview: Snippet 329 ended.(490372+139537x2112990).
+<-><->
+      
+l.280 \item $\Spec A$
+                      is disconnected.
+Not a real error.
+
+[329]
+! Preview: Snippet 330 started.
+<-><->
+      
+l.281 \item There exists nonzero elements $
+                                           e_1,e_2 \in A$ such that $e_1e_2=...
+
+Not a real error.
+
+! Preview: Snippet 330 ended.(490372+139537x3025123).
+<-><->
+      
+l.281 ...e exists nonzero elements $e_1,e_2 \in A$
+                                                   such that $e_1e_2=0$, $e_...
+
+Not a real error.
+
+[330]
+! Preview: Snippet 331 started.
+<-><->
+      
+l.281 ...zero elements $e_1,e_2 \in A$ such that $
+                                                  e_1e_2=0$, $e_1^2=e_1$, $e...
+
+Not a real error.
+
+! Preview: Snippet 331 ended.(462465+107642x2606514).
+<-><->
+      
+l.281 ...ents $e_1,e_2 \in A$ such that $e_1e_2=0$
+                                                  , $e_1^2=e_1$, $e_2^2=e_2$...
+
+Not a real error.
+
+[331]
+! Preview: Snippet 332 started.
+<-><->
+      
+l.281 ...s $e_1,e_2 \in A$ such that $e_1e_2=0$, $
+                                                  e_1^2=e_1$, $e_2^2=e_2$ an...
+
+Not a real error.
+
+! Preview: Snippet 332 ended.(598293+192273x2247704).
+<-><->
+      
+l.281 ... \in A$ such that $e_1e_2=0$, $e_1^2=e_1$
+                                                  , $e_2^2=e_2$ and $e_1+e_2...
+
+Not a real error.
+
+[332]
+! Preview: Snippet 333 started.
+<-><->
+      
+l.281 ...n A$ such that $e_1e_2=0$, $e_1^2=e_1$, $
+                                                  e_2^2=e_2$ and $e_1+e_2=1$...
+
+Not a real error.
+
+! Preview: Snippet 333 ended.(598293+192273x2247704).
+<-><->
+      
+l.281 ...that $e_1e_2=0$, $e_1^2=e_1$, $e_2^2=e_2$
+                                                   and $e_1+e_2=1$ (these ar...
+
+Not a real error.
+
+[333]
+! Preview: Snippet 334 started.
+<-><->
+      
+l.281 ...e_1e_2=0$, $e_1^2=e_1$, $e_2^2=e_2$ and $
+                                                  e_1+e_2=1$ (these are call...
+
+Not a real error.
+
+! Preview: Snippet 334 ended.(462465+107642x3483600).
+<-><->
+      
+l.281 ... $e_1^2=e_1$, $e_2^2=e_2$ and $e_1+e_2=1$
+                                                   (these are called \emph{o...
+
+Not a real error.
+
+[334]
+! Preview: Snippet 335 started.
+<-><->
+      
+l.282 \item $
+             A$ is isomorphic to a direct product $A_1 \times A_2$ of two no...
+
+Not a real error.
+
+! Preview: Snippet 335 ended.(490372+0x538215).
+<-><->
+      
+l.282 \item $A$
+                is isomorphic to a direct product $A_1 \times A_2$ of two no...
+
+Not a real error.
+
+[335]
+! Preview: Snippet 336 started.
+<-><->
+      
+l.282 ...m $A$ is isomorphic to a direct product $
+                                                  A_1 \times A_2$ of two non...
+
+Not a real error.
+
+! Preview: Snippet 336 ended.(490372+107642x2576116).
+<-><->
+      
+l.282 ...phic to a direct product $A_1 \times A_2$
+                                                   of two nonzero rings.
+Not a real error.
+
+[336]
+! Preview: Snippet 337 started.
+<-><->
+      
+l.286 $
+       1 \Rightarrow 3$: Let $U$ be a nonempty connected compontent of $X=\S...
+
+Not a real error.
+
+! Preview: Snippet 337 ended.(462465+0x1833911).
+<-><->
+      
+l.286 $1 \Rightarrow 3$
+                       : Let $U$ be a nonempty connected compontent of $X=\S...
+
+Not a real error.
+
+[337]
+! Preview: Snippet 338 started.
+<-><->
+      
+l.286 $1 \Rightarrow 3$: Let $
+                              U$ be a nonempty connected compontent of $X=\S...
+
+Not a real error.
+
+! Preview: Snippet 338 ended.(490372+0x568213).
+<-><->
+      
+l.286 $1 \Rightarrow 3$: Let $U$
+                                 be a nonempty connected compontent of $X=\S...
+
+Not a real error.
+
+[338]
+! Preview: Snippet 339 started.
+<-><->
+      
+l.286 ...$ be a nonempty connected compontent of $
+                                                  X=\Spec A$. Let $V = X \bs...
+
+Not a real error.
+
+! Preview: Snippet 339 ended.(490372+139537x3720650).
+<-><->
+      
+l.286 ...empty connected compontent of $X=\Spec A$
+                                                  . Let $V = X \bs U$ be its...
+
+Not a real error.
+
+[339]
+! Preview: Snippet 340 started.
+<-><->
+      
+l.286 ...onnected compontent of $X=\Spec A$. Let $
+                                                  V = X \bs U$ be its comple...
+
+Not a real error.
+
+! Preview: Snippet 340 ended.(538214+179404x3112765).
+<-><->
+      
+l.286 ...pontent of $X=\Spec A$. Let $V = X \bs U$
+                                                   be its complement, and le...
+
+Not a real error.
+
+[340]
+! Preview: Snippet 341 started.
+<-><->
+      
+l.286 ...V = X \bs U$ be its complement, and let $
+                                                  i_1:U \to X$ and $i_2=V \t...
+
+Not a real error.
+
+! Preview: Snippet 341 ended.(490372+107642x3491882).
+<-><->
+      
+l.286 ... be its complement, and let $i_1:U \to X$
+                                                   and $i_2=V \to X$ be the ...
+
+Not a real error.
+
+[341]
+! Preview: Snippet 342 started.
+<-><->
+      
+l.286 ...s complement, and let $i_1:U \to X$ and $
+                                                  i_2=V \to X$ be the natura...
+
+Not a real error.
+
+! Preview: Snippet 342 ended.(490372+107642x3860562).
+<-><->
+      
+l.286 ..., and let $i_1:U \to X$ and $i_2=V \to X$
+                                                   be the natural inclusions...
+
+Not a real error.
+
+[342]
+! Preview: Snippet 343 started.
+<-><->
+      
+l.286 ...mes as well: we need to give a morphism $
+                                                  f^\#:\OO_X \to f_\ast \OO_...
+
+Not a real error.
+
+! Preview: Snippet 343 ended.(624507+139537x5594390).
+<-><->
+      
+l.286 ... a morphism $f^\#:\OO_X \to f_\ast \OO_U$
+                                                  . But $f_\ast \OO_U(W)=\OO...
+
+Not a real error.
+
+[343]
+! Preview: Snippet 344 started.
+<-><->
+      
+l.286 ...hism $f^\#:\OO_X \to f_\ast \OO_U$. But $
+                                                  f_\ast \OO_U(W)=\OO_X(W \c...
+
+Not a real error.
+
+! Preview: Snippet 344 ended.(538214+179404x7948049).
+<-><->
+      
+l.286 ...U$. But $f_\ast \OO_U(W)=\OO_X(W \cap U)$
+                                                  , so $f_\ast \OO_U = \rest...
+
+Not a real error.
+
+[344]
+! Preview: Snippet 345 started.
+<-><->
+      
+l.286 ...t $f_\ast \OO_U(W)=\OO_X(W \cap U)$, so $
+                                                  f_\ast \OO_U = \restr{\OO_...
+
+Not a real error.
+
+! Preview: Snippet 345 ended.(609979+283939x4735623).
+<-><->
+      
+l.286 ...U)$, so $f_\ast \OO_U = \restr{\OO_X}{U}$
+                                                  . Hence we just choose $f^...
+
+Not a real error.
+
+[345]
+! Preview: Snippet 346 started.
+<-><->
+      
+l.286 ...\restr{\OO_X}{U}$. Hence we just choose $
+                                                  f^\$:\OO_X \to \OO_U$ to b...
+
+Not a real error.
+
+! Preview: Snippet 346 ended.(653634+139537x4626465).
+<-><->
+      
+l.286 ...nce we just choose $f^\$:\OO_X \to \OO_U$
+                                                   to be the natural map pro...
+
+Not a real error.
+
+[346] [6
+
+
+]
+! Preview: Snippet 347 started.
+<-><->
+      
+l.288 We now have two morphisms $
+                                 i_1:U \to X$ and $i_2:V \to X$ which are cl...
+
+Not a real error.
+
+! Preview: Snippet 347 ended.(490372+107642x3491882).
+<-><->
+      
+l.288 We now have two morphisms $i_1:U \to X$
+                                              and $i_2:V \to X$ which are cl...
+
+Not a real error.
+
+[347]
+! Preview: Snippet 348 started.
+<-><->
+      
+l.288 ...ow have two morphisms $i_1:U \to X$ and $
+                                                  i_2:V \to X$ which are clo...
+
+Not a real error.
+
+! Preview: Snippet 348 ended.(490372+107642x3501751).
+<-><->
+      
+l.288 ...morphisms $i_1:U \to X$ and $i_2:V \to X$
+                                                   which are closed immersio...
+
+Not a real error.
+
+[348]
+! Preview: Snippet 349 started.
+<-><->
+      
+l.288 ...sions, hence the induced ring morphisms $
+                                                  A \to A_1$ and $A \to A_2$...
+
+Not a real error.
+
+! Preview: Snippet 349 ended.(490372+107642x2504021).
+<-><->
+      
+l.288 ...ce the induced ring morphisms $A \to A_1$
+                                                   and $A \to A_2$ are surje...
+
+Not a real error.
+
+[349]
+! Preview: Snippet 350 started.
+<-><->
+      
+l.288 ... induced ring morphisms $A \to A_1$ and $
+                                                  A \to A_2$ are surjective....
+
+Not a real error.
+
+! Preview: Snippet 350 ended.(490372+107642x2504021).
+<-><->
+      
+l.288 ...ing morphisms $A \to A_1$ and $A \to A_2$
+                                                   are surjective. Also, the...
+
+Not a real error.
+
+[350]
+! Preview: Snippet 351 started.
+<-><->
+      
+l.288 ...n the category of affine schemes. Hence $
+                                                  A \simeq A_1 \times A_2$. ...
+
+Not a real error.
+
+! Preview: Snippet 351 ended.(490372+107642x4071151).
+<-><->
+      
+l.288 ... schemes. Hence $A \simeq A_1 \times A_2$
+                                                  .  (a bit clumsy??)
+Not a real error.
+
+[351]
+! Preview: Snippet 352 started.
+<-><->
+      
+l.290 $
+       2 \Rightarrow 3$: Let $\pi_i: A \to A$ be given by multiplication by ...
+
+Not a real error.
+
+! Preview: Snippet 352 ended.(462465+0x1833911).
+<-><->
+      
+l.290 $2 \Rightarrow 3$
+                       : Let $\pi_i: A \to A$ be given by multiplication by ...
+
+Not a real error.
+
+[352]
+! Preview: Snippet 353 started.
+<-><->
+      
+l.290 $2 \Rightarrow 3$: Let $
+                              \pi_i: A \to A$ be given by multiplication by ...
+
+Not a real error.
+
+! Preview: Snippet 353 ended.(490372+107642x3422218).
+<-><->
+      
+l.290 $2 \Rightarrow 3$: Let $\pi_i: A \to A$
+                                              be given by multiplication by ...
+
+Not a real error.
+
+[353]
+! Preview: Snippet 354 started.
+<-><->
+      
+l.290 ... A \to A$ be given by multiplication by $
+                                                  e_i$ and let $A_i$ be its ...
+
+Not a real error.
+
+! Preview: Snippet 354 ended.(308974+107642x556568).
+<-><->
+      
+l.290 ...to A$ be given by multiplication by $e_i$
+                                                   and let $A_i$ be its imag...
+
+Not a real error.
+
+[354]
+! Preview: Snippet 355 started.
+<-><->
+      
+l.290 ...iven by multiplication by $e_i$ and let $
+                                                  A_i$ be its image. Then $\...
+
+Not a real error.
+
+! Preview: Snippet 355 ended.(490372+107642x760641).
+<-><->
+      
+l.290 ... by multiplication by $e_i$ and let $A_i$
+                                                   be its image. Then $\ker ...
+
+Not a real error.
+
+[355]
+! Preview: Snippet 356 started.
+<-><->
+      
+l.290 ... $e_i$ and let $A_i$ be its image. Then $
+                                                  \ker \pi_1 = A_2$, because...
+
+Not a real error.
+
+! Preview: Snippet 356 ended.(498346+107642x3605118).
+<-><->
+      
+l.290 ..._i$ be its image. Then $\ker \pi_1 = A_2$
+                                                  , because  if $e_1f$ then ...
+
+Not a real error.
+
+[356]
+! Preview: Snippet 357 started.
+<-><->
+      
+l.290 ...e. Then $\ker \pi_1 = A_2$, because  if $
+                                                  e_1f$ then $f=e_2f$, so $f...
+
+Not a real error.
+
+! Preview: Snippet 357 ended.(498346+139537x1074022).
+<-><->
+      
+l.290 ...en $\ker \pi_1 = A_2$, because  if $e_1f$
+                                                   then $f=e_2f$, so $f \in ...
+
+Not a real error.
+
+[357]
+! Preview: Snippet 358 started.
+<-><->
+      
+l.290 ...r \pi_1 = A_2$, because  if $e_1f$ then $
+                                                  f=e_2f$, so $f \in A_2$. T...
+
+Not a real error.
+
+! Preview: Snippet 358 ended.(498346+139537x2459422).
+<-><->
+      
+l.290 ... = A_2$, because  if $e_1f$ then $f=e_2f$
+                                                  , so $f \in A_2$. The spli...
+
+Not a real error.
+
+[358]
+! Preview: Snippet 359 started.
+<-><->
+      
+l.290 ...$, because  if $e_1f$ then $f=e_2f$, so $
+                                                  f \in A_2$. The splitting ...
+
+Not a real error.
+
+! Preview: Snippet 359 ended.(498346+139537x2155179).
+<-><->
+      
+l.290 ...  if $e_1f$ then $f=e_2f$, so $f \in A_2$
+                                                  . The splitting maps are t...
+
+Not a real error.
+
+[359]
+! Preview: Snippet 360 started.
+<-><->
+      
+l.292 $
+       3 \Rightarrow 2$: If $A = A_1 \times A_2$, let $e_i=\pi_i(1)$.
+Not a real error.
+
+! Preview: Snippet 360 ended.(462465+0x1833911).
+<-><->
+      
+l.292 $3 \Rightarrow 2$
+                       : If $A = A_1 \times A_2$, let $e_i=\pi_i(1)$.
+Not a real error.
+
+[360]
+! Preview: Snippet 361 started.
+<-><->
+      
+l.292 $3 \Rightarrow 2$: If $
+                             A = A_1 \times A_2$, let $e_i=\pi_i(1)$.
+Not a real error.
+
+! Preview: Snippet 361 ended.(490372+107642x4071151).
+<-><->
+      
+l.292 $3 \Rightarrow 2$: If $A = A_1 \times A_2$
+                                                , let $e_i=\pi_i(1)$.
+Not a real error.
+
+[361]
+! Preview: Snippet 362 started.
+<-><->
+      
+l.292 ...tarrow 2$: If $A = A_1 \times A_2$, let $
+                                                  e_i=\pi_i(1)$.
+Not a real error.
+
+! Preview: Snippet 362 ended.(538214+179404x3061836).
+<-><->
+      
+l.292 ... $A = A_1 \times A_2$, let $e_i=\pi_i(1)$
+                                                  .
+Not a real error.
+
+[362]
+! Preview: Snippet 363 started.
+<-><->
+      
+l.294 $
+       3 \Rightarrow 1$: Similar to the first argument, just opposite.
+Not a real error.
+
+! Preview: Snippet 363 ended.(462465+0x1833911).
+<-><->
+      
+l.294 $3 \Rightarrow 1$
+                       : Similar to the first argument, just opposite.
+Not a real error.
+
+[363]
+! Preview: Snippet 364 started.
+<-><->
+      
+l.299 Let $
+           (X,\OO_X)$ be a locally ringed space and let $f:\mathscr L \to \m...
+
+Not a real error.
+
+! Preview: Snippet 364 ended.(538214+179404x2607392).
+<-><->
+      
+l.299 Let $(X,\OO_X)$
+                      be a locally ringed space and let $f:\mathscr L \to \m...
+
+Not a real error.
+
+[364]
+! Preview: Snippet 365 started.
+<-><->
+      
+l.299 ...O_X)$ be a locally ringed space and let $
+                                                  f:\mathscr L \to \mathscr ...
+
+Not a real error.
+
+! Preview: Snippet 365 ended.(502333+139537x3797520).
+<-><->
+      
+l.299 ...ace and let $f:\mathscr L \to \mathscr M$
+                                                   be a surjective map of in...
+
+Not a real error.
+
+[365]
+! Preview: Snippet 366 started.
+<-><->
+      
+l.299 ...surjective map of invertible sheaves on $
+                                                  X$. Show that $f$ is an is...
+
+Not a real error.
+
+! Preview: Snippet 366 ended.(490372+0x650840).
+<-><->
+      
+l.299 ...rjective map of invertible sheaves on $X$
+                                                  . Show that $f$ is an isom...
+
+Not a real error.
+
+[366]
+! Preview: Snippet 367 started.
+<-><->
+      
+l.299 ...of invertible sheaves on $X$. Show that $
+                                                  f$ is an isomorphism.
+Not a real error.
+
+! Preview: Snippet 367 ended.(498346+139537x428580).
+<-><->
+      
+l.299 ... invertible sheaves on $X$. Show that $f$
+                                                   is an isomorphism.
+Not a real error.
+
+[367]
+! Preview: Snippet 368 started.
+<-><->
+      
+l.302 Since $
+             \mathscr L, \mathscr M$ are invertible, we have isomorphisms $\...
+
+Not a real error.
+
+! Preview: Snippet 368 ended.(502333+139537x1973580).
+<-><->
+      
+l.302 Since $\mathscr L, \mathscr M$
+                                     are invertible, we have isomorphisms $\...
+
+Not a real error.
+
+[368]
+! Preview: Snippet 369 started.
+<-><->
+      
+l.302 ...M$ are invertible, we have isomorphisms $
+                                                  \mathscr L_x \approx \OO_{...
+
+Not a real error.
+
+! Preview: Snippet 369 ended.(502333+213029x3486864).
+<-><->
+      
+l.302 ...orphisms $\mathscr L_x \approx \OO_{X,x}$
+                                                   and $\mathscr M_x \approx...
+
+Not a real error.
+
+[369]
+! Preview: Snippet 370 started.
+<-><->
+      
+l.302 ...ms $\mathscr L_x \approx \OO_{X,x}$ and $
+                                                  \mathscr M_x \approx \OO_{...
+
+Not a real error.
+
+! Preview: Snippet 370 ended.(502333+213029x3635107).
+<-><->
+      
+l.302 ...,x}$ and $\mathscr M_x \approx \OO_{X,x}$
+                                                   for each $x \in X$.
+Not a real error.
+
+[370]
+! Preview: Snippet 371 started.
+<-><->
+      
+l.302 ...mathscr M_x \approx \OO_{X,x}$ for each $
+                                                  x \in X$.
+Not a real error.
+
+! Preview: Snippet 371 ended.(490372+28057x1938063).
+<-><->
+      
+l.302 ...M_x \approx \OO_{X,x}$ for each $x \in X$
+                                                  .
+Not a real error.
+
+[371]
+! Preview: Snippet 372 started.
+<-><->
+      
+l.304 But $
+           \Hom_{\OO_{X,x}}(\OO_{X,x},\OO_{X,x})=\OO_{X,x}$, that is, all ho...
+
+Not a real error.
+
+! Preview: Snippet 372 ended.(538214+284391x9316168).
+<-><->
+      
+l.304 ...OO_{X,x}}(\OO_{X,x},\OO_{X,x})=\OO_{X,x}$
+                                                  , that is, all homomorphis...
+
+Not a real error.
+
+[372]
+! Preview: Snippet 373 started.
+<-><->
+      
+l.304 ...sms are given by multiplication by some $
+                                                  h \in \OO_{X,x}$. But sinc...
+
+Not a real error.
+
+! Preview: Snippet 373 ended.(502333+213029x2847243).
+<-><->
+      
+l.304 ... multiplication by some $h \in \OO_{X,x}$
+                                                  . But since $f$ was surjec...
+
+Not a real error.
+
+[373]
+! Preview: Snippet 374 started.
+<-><->
+      
+l.304 ...on by some $h \in \OO_{X,x}$. But since $
+                                                  f$ was surjective, we conc...
+
+Not a real error.
+
+! Preview: Snippet 374 ended.(498346+139537x428580).
+<-><->
+      
+l.304 ... by some $h \in \OO_{X,x}$. But since $f$
+                                                   was surjective, we conclu...
+
+Not a real error.
+
+[374]
+! Preview: Snippet 375 started.
+<-><->
+      
+l.304 ...ce $f$ was surjective, we conclude that $
+                                                  h$ is outside $\mm_x$, the...
+
+Not a real error.
+
+! Preview: Snippet 375 ended.(498346+0x413462).
+<-><->
+      
+l.304 ... $f$ was surjective, we conclude that $h$
+                                                   is outside $\mm_x$, the m...
+
+Not a real error.
+
+[375]
+! Preview: Snippet 376 started.
+<-><->
+      
+l.304 ...ective, we conclude that $h$ is outside $
+                                                  \mm_x$, the maximal ideal ...
+
+Not a real error.
+
+LaTeX Font Info:    Try loading font information for U+euf on input line 304.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+! Preview: Snippet 376 ended.(341114+107642x896583).
+<-><->
+      
+l.304 ..., we conclude that $h$ is outside $\mm_x$
+                                                  , the maximal ideal of $\O...
+
+Not a real error.
+
+[376]
+! Preview: Snippet 377 started.
+<-><->
+      
+l.304 ...s outside $\mm_x$, the maximal ideal of $
+                                                  \OO_{X,x}$. But then $h$ i...
+
+Not a real error.
+
+! Preview: Snippet 377 ended.(502333+213029x1556697).
+<-><->
+      
+l.304 ...$\mm_x$, the maximal ideal of $\OO_{X,x}$
+                                                  . But then $h$ is a unit, ...
+
+Not a real error.
+
+[377]
+! Preview: Snippet 378 started.
+<-><->
+      
+l.304 ... maximal ideal of $\OO_{X,x}$. But then $
+                                                  h$ is a unit, so $f$ is an...
+
+Not a real error.
+
+! Preview: Snippet 378 ended.(498346+0x413462).
+<-><->
+      
+l.304 ...aximal ideal of $\OO_{X,x}$. But then $h$
+                                                   is a unit, so $f$ is an i...
+
+Not a real error.
+
+[378]
+! Preview: Snippet 379 started.
+<-><->
+      
+l.304 ...$\OO_{X,x}$. But then $h$ is a unit, so $
+                                                  f$ is an isomorphism.
+Not a real error.
+
+! Preview: Snippet 379 ended.(498346+139537x428580).
+<-><->
+      
+l.304 ...OO_{X,x}$. But then $h$ is a unit, so $f$
+                                                   is an isomorphism.
+Not a real error.
+
+[379]
+! Preview: Snippet 380 started.
+<-><->
+      
+l.307 \subsection
+                 {Chapter III - Cohomology}
+Not a real error.
+
+! Preview: Snippet 380 ended.(542724+152880x23592960).
+<-><->
+      
+l.307 \subsection{Chapter III - Cohomology}
+                                           
+Not a real error.
+
+[380
+
+]
+! Preview: Snippet 381 started.
+<-><->
+      
+l.311   \item Let $
+                   X=\Aa_k^1$ be the affine line over an infinite field $k$....
+
+Not a real error.
+
+! Preview: Snippet 381 ended.(598293+218487x2462727).
+<-><->
+      
+l.311   \item Let $X=\Aa_k^1$
+                              be the affine line over an infinite field $k$....
+
+Not a real error.
+
+[381]
+! Preview: Snippet 382 started.
+<-><->
+      
+l.311 ... the affine line over an infinite field $
+                                                  k$. Let $P,Q$ be distinct ...
+
+Not a real error.
+
+! Preview: Snippet 382 ended.(498346+0x396186).
+<-><->
+      
+l.311 ...he affine line over an infinite field $k$
+                                                  . Let $P,Q$ be distinct cl...
+
+Not a real error.
+
+[382]
+! Preview: Snippet 383 started.
+<-><->
+      
+l.311 ...ne line over an infinite field $k$. Let $
+                                                  P,Q$ be distinct closed po...
+
+Not a real error.
+
+! Preview: Snippet 383 ended.(490372+139537x1366912).
+<-><->
+      
+l.311 ...ine over an infinite field $k$. Let $P,Q$
+                                                   be distinct closed points...
+
+Not a real error.
+
+[383]
+! Preview: Snippet 384 started.
+<-><->
+      
+l.311 ... Let $P,Q$ be distinct closed points on $
+                                                  X$ and let $U=X - \{ P,Q\}...
+
+Not a real error.
+
+! Preview: Snippet 384 ended.(490372+0x650840).
+<-><->
+      
+l.311 ...et $P,Q$ be distinct closed points on $X$
+                                                   and let $U=X - \{ P,Q\}$....
+
+Not a real error.
+
+[384]
+! Preview: Snippet 385 started.
+<-><->
+      
+l.311 ...e distinct closed points on $X$ and let $
+                                                  U=X - \{ P,Q\}$. Show that...
+
+Not a real error.
+
+! Preview: Snippet 385 ended.(538214+179404x5137491).
+<-><->
+      
+l.311 ...ed points on $X$ and let $U=X - \{ P,Q\}$
+                                                  . Show that $H^1(X,\Z_U)\n...
+
+Not a real error.
+
+[385]
+! Preview: Snippet 386 started.
+<-><->
+      
+l.311 ...$X$ and let $U=X - \{ P,Q\}$. Show that $
+                                                  H^1(X,\Z_U)\neq 0$.
+Not a real error.
+
+! Preview: Snippet 386 ended.(598293+179404x4713706).
+<-><->
+      
+l.311 ... \{ P,Q\}$. Show that $H^1(X,\Z_U)\neq 0$
+                                                  .
+Not a real error.
+
+[386]
+! Preview: Snippet 387 started.
+<-><->
+      
+l.318 \[
+        
+Not a real error.
+
+! Preview: Snippet 387 ended.(893918+0x16339486).
+<-><->
+      
+l.320 \]
+        
+Not a real error.
+
+[387]
+! Preview: Snippet 388 started.
+<-><->
+      
+l.321 where $
+             Z=P \cup Q$. The last sheaf is equal to the skyscraper sheaf $\...
+
+Not a real error.
+
+! Preview: Snippet 388 ended.(490372+139537x3423082).
+<-><->
+      
+l.321 where $Z=P \cup Q$
+                        . The last sheaf is equal to the skyscraper sheaf $\...
+
+Not a real error.
+
+[388]
+! Preview: Snippet 389 started.
+<-><->
+      
+l.321 ... sheaf is equal to the skyscraper sheaf $
+                                                  \Z_P \oplus \Z_Q$. Since $...
+
+Not a real error.
+
+! Preview: Snippet 389 ended.(494359+213029x2768140).
+<-><->
+      
+l.321 ...o the skyscraper sheaf $\Z_P \oplus \Z_Q$
+                                                  . Since $\Z$ is flabby, we...
+
+Not a real error.
+
+[389]
+! Preview: Snippet 390 started.
+<-><->
+      
+l.321 ...scraper sheaf $\Z_P \oplus \Z_Q$. Since $
+                                                  \Z$ is flabby, we have $H^...
+
+Not a real error.
+
+! Preview: Snippet 390 ended.(494359+0x478414).
+<-><->
+      
+l.321 ...aper sheaf $\Z_P \oplus \Z_Q$. Since $\Z$
+                                                   is flabby, we have $H^1(X...
+
+Not a real error.
+
+[390]
+! Preview: Snippet 391 started.
+<-><->
+      
+l.321 ...us \Z_Q$. Since $\Z$ is flabby, we have $
+                                                  H^1(X,\Z)=0$. Henc
