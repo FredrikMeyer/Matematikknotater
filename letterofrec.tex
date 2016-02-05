@@ -1,0 +1,55 @@
+\documentclass[
+  fontsize=11pt,
+  paper=a4,
+  parskip=half,
+  enlargefirstpage=on,    % More space on first page
+  fromalign=right,        % PLacement of name in letter head
+  fromphone=off,           % Turn on phone number of sender
+  fromrule=aftername,     % Rule after sender name in letter head
+  addrfield=off,           % Adress field for envelope with window
+  backaddress=on,         % Sender address in this window
+  subject=beforeopening,  % Placement of subject
+  locfield=narrow,        % Additional field for sender
+  foldmarks=on,           % Print foldmarks
+]{scrlttr2}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{blindtext}
+\usepackage{hyperref}
+
+\setkomafont{fromname}{\sffamily \LARGE}
+\setkomafont{fromaddress}{\sffamily}%% statt \small
+\setkomafont{pagenumber}{\sffamily}
+\setkomafont{subject}{\bfseries}
+\setkomafont{backaddress}{\mdseries}
+
+\LoadLetterOption{DIN}
+\setkomavar{fromname}{Fredrik Meyer}
+\setkomavar{fromaddress}{University of Oslo \\ Moltke Moes vei 35 \\ Niels Henrik Abels hus \\ 0851 Oslo}
+\setkomavar{fromphone}{+47 90774501}
+\setkomavar{fromemail}{fredrme@math.uio.no}
+\setkomavar{backaddressseparator}{\enspace\textperiodcentered\enspace}
+\setkomavar{signature}{Fredrik Meyer, PhD student.}
+\setkomavar{place}{Oslo}
+\setkomavar{date}{\today}
+\setkomavar{enclseparator}{: }
+
+\begin{document}
+  \begin{letter}{}
+    \setkomavar{subject}{Letter of Recommendation}
+    \opening{To whom it may concern,}
+
+In the academic spring semester of 2015, I was Jan Henrik Wiik's supervisor in the project course MAT2000\footnote{\url{http://www.uio.no/studier/emner/matnat/math/MAT2000/index-eng.html}} at the University of Oslo.
+
+In his project, Jan Henrik had to learn about Gröbner bases for ideals in the polynomial ring $\mathbb Q[x_1,\ldots,x_n]$. He then implemented the Buchberger algorithm in \texttt{Python}, which he then used to solve zero-dimensional systems of polynomials equations.
+
+Jan Henrik was an independent and structured student. He had no trouble working on his own, and learning the required concept and algorithms. I do recommend him for any position that he is applying.
+
+
+\closing{Best regards,}
+
+
+\end{letter}
+\end{document}
