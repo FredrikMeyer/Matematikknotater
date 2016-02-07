@@ -92,7 +92,7 @@ But $\deg f$ and $\deg g$ are relatively prime, and, and we must have $m \leq \d
 Now, if $g$ were reducible in $F(\alpha)[X]$, we would have $[F(\alpha,\beta):F] < \deg f \deg g$. But we don't.
 \end{sol}
 
-
+%%%%%%%%%%%%
 \section{Algebraic Geometry - Hartshorne}
 
 \subsection{Chapter I - Varieties}
@@ -301,6 +301,21 @@ Since $\mathscr L, \mathscr M$ are invertible, we have isomorphisms $\mathscr L_
 But $\Hom_{\OO_{X,x}}(\OO_{X,x},\OO_{X,x})=\OO_{X,x}$, that is, all homomorphisms are given by multiplication by some $h \in \OO_{X,x}$. But since $f$ was surjective, we conclude that $h$ is outside $\mm_x$, the maximal ideal of $\OO_{X,x}$. But then $h$ is a unit, so $f$ is an isomorphism.
 \end{sol}
 
+\begin{exc}[Exercise 7.3]
+Let $\varphi: \PP^n \to \PP^m$ be a morphism. Then
+\begin{enumerate}
+  \item Either $\varphi(\PP^n)=\ast$ or $m \geq n$ and $\dim \varphi(\PP^n)=n$.
+  \item In the second case, $\varphi$ an be obtained as the composition of a $d-$uple embedding $\PP^n \to \PP^n$ for a uniquely determined $d \geq 1$, a linear projection $\PP^N \bs L \to \PP^m$ and an automorphism of $\PP^m$. Also $\varphi$ has finite fibers.
+\end{enumerate}
+\end{exc}
+\begin{sol}
+  a). Since $\varphi$ is a morphism, the base locus of the corresponding linear system must be empty. If $x_i$ are coordinates on $\PP^m$, then the base locus is given by zeros of $\varphi^\ast(x_i)$ (here $x_i$ are interpreted as section of $\OO_{\PP^m}(1)$). If $Z(\varphi^\ast(x_i))= \varnothing$, then we must have $m \geq n$, because by Krull's Hauptidealsatz, the dimension of $Z(\varphi^\ast(x_i))$ is at most $n-m-1$. We want this to be less than $0$, so $n < m+1$, or in other words $n\le m$. If not, the only way $\varphi$ can be a morphism, is if the $\varphI^\ast(x_i)$'s are constant.
+
+  To see that $\dim \varphI(\PP^n)=n$, note that we clearly must have $\le n$. ------
+\end{sol}
+
+
+%%%
 \subsection{Chapter III - Cohomology}
 
 \begin{exc}[Exercise 2.1]
