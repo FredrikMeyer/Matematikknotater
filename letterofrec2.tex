@@ -1,15 +1,24 @@
 \documentclass[UKenglish]{uioletter}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
 \usepackage{babel,textcomp}
-\signature{My name}
-\mytitle{my job title} %% Note! All lowercase
-\ouremail{name@ifi.uio.no}
-\ourweb{www.ifi.uio.no}
+\signature{Fredrik Meyer}
+\mytitle{PhD candidate} %% Note! All lowercase
+\ouremail{fredrme@math.uio.no}
+\ourweb{folk.uio.no/fredrme}
+\ouraddr{math}
 \begin{document}
 \begin{letter}{Name of recipient\\ His or her address\\ 0000 Oslo}
-\opening{Greeting phrase,}
-The actual letter
+\opening{To whom it may concern,}
+
+In the academic spring semester of 2015, I was Jan Henrik Wiik's supervisor in the project course MAT2000\footnote{\url{http://www.uio.no/studier/emner/matnat/math/MAT2000/index-eng.html}} at the University of Oslo.
+
+In his project, Jan Henrik had to learn about Gröbner bases for ideals in the polynomial ring $\mathbb Q[x_1,\ldots,x_n]$. He then implemented the Buchberger algorithm in \texttt{Python}, which he then used to solve zero-dimensional systems of polynomials equations.
+
+Jan Henrik was an independent and structured student. He had no trouble working on his own, and learning the required concept and algorithms. I do recommend him for any position that he is applying.
+
 \closing{Yours sincerely,}
 \end{letter}
 \end{document}
