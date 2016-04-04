@@ -391,6 +391,19 @@ Now we compute $H^1(X,\OO_X)$. Consider a monomial $x^iy^j$ in the target. If bo
 \]
 \end{sol}
 
+\begin{exc}[Exc 7.1]
+Let $X$ be an integral projective scheme of dimension $\ge 1$ over a field $k$, and let $\mathscr L$ be an ample invertible sheaf on $X$. Then $H^0(X, \mathscr L^{-1})=0$.
+\end{exc}
+\begin{sol}
+We prove this by a series of reductions. First suppose (1) that $k$ is algebraically closed. Also (2),replace $X$ by its normalization $\pi: \widetilde X \to X$ (which we denote by $X$ henceforth). Also suppose that $H^n(X, \mathscr L \otimes \omega_X^\circ)=0$. This we can achieve by Prop 5.3, by replacing $\mathscr L$ with some tensor power of itself.
+
+Then $H^0(X,\mathscr L^{-1})=H^n(X, \mathscr L \otimes \omega_X^\circ)=0$ by Serre duality.
+
+Now assume only (1) and (2), and suppose that $H^n(X,\mathscr L^n \otimes \omega_X^\circ)=0$. Then if $s \in H^0(X, \mathscr L^{-1})$, we have that $s^n \in H^0(X, \mathscr L^{-n})=0$. But $X$ is integral, so $s=0$. Hence $H^0(X, \mathscr L^{-1})=0$.
+
+
+\end{sol}
+
 \subsection{Chapter IV - Curves}
 
 \begin{exc}[Exercise 1.1]
