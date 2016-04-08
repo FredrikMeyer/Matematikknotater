@@ -40,8 +40,7 @@ Det finnes også andre måter å se dette på, eksempelvis slik Mike Eastwood fo
 
 \subsection{Embedding Grassmannian}
 
-Grassmannian har en tautologisk linjebunt $\mathscr E$, hvis seksjoner kan skrives som matriser. Fiberen over et punkt $[V]$ i Grassmannian er nettopp det lineære underrommet punktet representerer.
-
+Grassmannian har en tautologisk 
 Da vil $\wedge^k \mathscr E$ være en linjebunt på Grassmannian, og seksjonene vil være utspent av alle minorene. Så dette er linjebunten Plücker-embeddingen svarer til.
 
 \subsection{Topologien til SR-skjemaer}
@@ -90,11 +89,76 @@ som en gradert $T$-modul.
 
 (dette burde implisere at $\pi_\ast \OO_X = \OO_{\PP^2} \oplus \OO_{\PP^2}(-3)$.)
 
+\subsection{Utregninger på $D_4$-singulariteten}
+
+Vi skal blåse opp singulariteten $\{ x^2+y^3+z^3=0 \} \subseteq \Aa^3$.  Oppblåsningen ligger i $\Aa^3_{xyz} \times \PP^2_{abc}$, og har ligninger
+$$
+x^2+y^3+z^3=0, ay=bx, az=cx, bz=cy,
+$$
+hvor $a,b,c$ er homogene koordinater på $\PP^2$. Vi har tre kart å betrakte, og disse er gitt ved å sette $a=1,b=1,c=1$.
+
+Setter vi $a=1$, kan vi eliminere $y$ og $z$, og vi ender opp med ligningen
+$$
+\{x^2+b^3x^3+c^3x^3=0\} \subseteq \Aa^1_x \times \Aa^2_{bc}.
+$$
+
+Denne splitter som $\{x^2 =0\} \cup \{ 1+x(b^3+c^3) = 0\}$. En rask utregning viser at flaten er glatt, og ikke snitter den eksepsjonelle i dette kartet.
+
+Nå setter vi $b=1$, og vi kan eliminere $x$ og $z$. Vi ender opp med ligningen $y^2(a^2+y+c^3y)=0$. Den propre transformen er en singular flate med tre dobbeltpunkter når $a=y=0$ og $c^3=-1$. Dette kan ses ved å gjøre et variabelskifte: vi setter $c'=c+1$, og finner at ligningen nå tar formen
+$$
+a^2+yc(c^2-3c+3)=0.
+$$
+Den siste faktoren er en enhet i $k[[a,y,c]]$, så denne kan ses bort fra i kompletteringen. Dette er ligningen til et rasjonalt dobbeltpunkt, og vi vet at én oppblåsning til holder for å løse opp dette.
+
+I kartet $c=1$, får vi samme resultat, bare med andre koordinater.
+
+$$
+\xymatrix{
+	\widetilde X \ar[r] \ar[d]^\sigma & \Aa^3 \times \PP^2 \ar[dl]^{\pi_1} \\
+	X
+}
+$$
+
+Dermed ser vi at oppblåsningen har tre singulariteter i koordinatene $(0,0,0) \times (0:1:\zeta^i)$, hvor $\zeta^3=-1$ og $i=0,1,2$. Nok en oppblåsning i hver av disse tre singularitetene glatter flaten. De eksepsjonelle krysser på denne måten:
+
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) -- (4,0);
+\draw (1,-1) -- (1,1);
+\draw (2,-1) -- (2,1);
+\draw (3,-1) -- (3,1);
+\end{tikzpicture}
+\end{center}
+
+Den horisontale linjen er den eksepsjonelle fra den første oppblåsningen. De tre andre linjene kommer fra oppblåsningen av dobbeltpunktene. De kan ikke snitte hverandre siden de blir sendt til forskjellige punkter i nedblåsningen.
+
+Lager vi dualgrafen til snittgrafen over, får vi dette bildet (dualgrafen er gitt ved at hjørnene svarer til eksepsjonelle divisorer og kantene svarer til snitt):
+
+\begin{center}
+\begin{tikzpicture}
+\filldraw
+(0,0) circle (2pt)
+(-1,0) circle (2pt) 
+(1,0) circle (2pt)
+(0,1) circle (2pt)
+(0,0) -- (0,1)
+(0,0) -- (-1,0)
+(0,0) -- (1,0);
+\end{tikzpicture}
+\end{center}
+
+Dette er Dynkin-diagrammet $D_4$. 
+
+Vi kan gjøre mer. Alle du Val-singularitetene er rasjonale dobbeltpunkter, så det burde være mulig å finne en parametrisering av $D_4$, det vil si en rasjonal avbildning $\Aa^2 \rmap X$. En måte å gjøre dette på, er å projisere fra $X$ til planet $z=-1$ gjennom det singulære punktet $(0,0,0)$. Dette gir en rasjonal avbildning, siden linjen mellom $(0,0,0)$ og punktet $x \in X$ treffer det singulære punktet dobbelt, og $x$ én gang.
+
+Eksplisitt får vi avbildningen gitt ved
+$$
+\Aa^2 \ni (a,b) \mapsto \left( \frac{a^3}{1-b^3}, \frac{a^2b}{1-b^3}, \frac{-a^2}{1-b^3}\right) \in X.
+$$
+
+Dette er en birasjonal avbildning. Vi ser at hele $b$-aksen avbildes på origo, men for linjene $b\{b^3=1\}$ er ikke avbildnigen definert.
+
+Q: Er det sant at det ikke finnes noen birasjonal surjektiv morfi $\Aa^2 \to X$? 
+
 
 \end{document}
-
-
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: t
-%%% End:
