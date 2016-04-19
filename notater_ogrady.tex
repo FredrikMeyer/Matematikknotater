@@ -1,0 +1,193 @@
+\documentclass[11pt, english]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}   % S P R A A K
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{calc}
+%\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+%\usepackage[a5paper,margin=0.5in]{geometry}
+
+
+\begin{document}
+\title{Hyper-Kähler manifolds}
+\author{Fredrik Meyer}
+\maketitle 
+
+\begin{abstract}
+These are notes from the ``summer school'' at IMPA, Warzaw, held by Kieran O'Grady.
+\end{abstract}
+
+\section{Lecture 1 - Introduction}
+
+We will first motivate the definition of hyper-Kähler by looking at K3 surfaces. 
+
+By definition, a K3 surface is compact Kähler 2-dimensional complex manifold that is simply connected and has trivial canonical bundle ($K_X \simeq \OO_X$).
+
+\begin{example}
+Let $X \subset \PP^3$ be a smooth quartic surface. Then by Lefschetz:
+$$
+\pi_(X,\ast) \xrightarrow{\sim} \pi_1(\PP^3,\ast) = \{1\},
+$$
+so $X$ is simply-connected. By adjunction, we have:
+$$
+K_x \simeq (\restr{K_{\PP^3}}{\X}) \otimes \mathcal N_{X/\PP^3} = \OO_X(-4) \otimes \OO_X(4) = \OO_X.
+$$
+So the last condition is fulfilled also.
+\end{example}
+
+We list some of the know results about K3's:
+
+\begin{enumerate}
+\item Any two K3's are deformation equivalent (Kodaira).
+\item There is a Hodge-theoretic description of the Kähler cone of a K3 (after having chosen one Kähler class).
+\item There is a \emph{Global Torelli Theorem} (Shafarevich & Piateski-Shapiro). Namely, a Hodge structure on $H^2(K3; \C)$ and a lattice structure on $H^2(K3,\Z)$ determines $X$ up to isomorphism.
+\end{enumerate}
+
+We now state the definition of a hyper-Kähler manifold:
+
+A hyper-Kähler manifold $X$ is a compact Kähler manifold $X$, simply connected, such that $H^0(X,\Omega^2,X) = \C \sigma$, where $\sigma$ is \emph{symplectic}, meanig that $T_xX \times T_xX \xrightarrow{\sigma(x)} \C$ is non-degenerate for all $x \in X$.
+
+\begin{remark}
+A HK must have even dimension: the skew-symmetric form $\sigma$ can be represented by a $n\times n$-matrix $A$ that is skew-symmetric with non-zero determinant. Skew-symmety of $A$ means that $A^T = -A$. Hence $\det A = \det A^T = (-1)^n \det A$. This forces $n$ to be even if we want $\det A \neq 0$.
+\end{remark}
+
+In dimension $2$, K3's are hyper-Kähler.
+
+To motivate hyper-Käher manifolds, we state the Beaville-Bogomolov decomposition theorem:
+
+\begin{thm}
+Let $Z$ be a compact Kähler manifold with $c_1(Z)=0$ (what does this mean?) in $H^2(X, \Q)$. Then there exists a finite étale cover $\widetilde Z \to Z$ such that 
+$$
+\widetilde Z = \C^d / \Lambda \times \prod_i X_i  \times \prod_j Y_i
+$$
+where the first factor is a compact torus. The second factor is a product of hyper-Kähler manifolds, and the second is a product of Calabi-Yau manifolds (that is, manifolds with $K_{Y_i} \simeq \OO_{Y_i}$ and $h^0(\Omega_{Y_i}^p)=0$ for all $0 < p < \dim Y_i$).
+\end{thm}
+
+\subsection{First example of a HK}
+
+Now we define some higher-dimensional examples of HK's. Terminology: when we say ``HK variety'', we shall mean a \emph{projective} HK manifold.
+
+Let $S$ be a K3 surface. Then let $S^{(2)}$ be the symmetric square of $S$ (that is, $S \times S/(p,q) \sim (q,p)$). This space comes equipped with two projections, $\pi_1, \pi_2$, and the form $\pi_1^\ast \sigma + \pi_2 ^\ast \sigma \in H^0(\Omega_{S \times S}^2)$ is $\tau$-invariant, hence it descends to a holomorphic 2-form on $S^{(2)}$. 
+
+But the symmetric square is singular along the (image of the) diagonal, where two points come together. In fact, one can see that it locally looks like $\C \times \C /x \sim -x$. The last factor is a quadric cone, hence a single blowup along the diagonal will resolve the singularities in this case.
+
+Let $D$ be the diagonal. We have a diagram
+$$
+\xymatrix{
+	Bl_D(S^2) \ar[d] \ar[r]^{\widetilde \rho} & S^{[2]} \ar[d]^\gamma  \\
+	S^2 \ar[r]^\rho & S^{(2)}
+}
+$$
+
+The top right space $S^{[2]}$ can be thought of in two ways: first, notice that the involution on $S^2$ act on the blowup as well. Hence we can take the quotient of the blowup. This is one description of $S^{[2]}$. Secondly, one can think of $S^{[2]}$ as the blowup of $S^{(2)}$ along the points $2P$ (the image of the diagonal). 
+
+Now $S^{[2]}$ is smooth projective and ``$\pi_1^\ast \sigma + \pi_2^\ast \sigma$'' is symplectic.
+
+Then $H^2(S^{[2]})$ is spanned by this symplectic 2-form. We can show that $S^{[2]}$ is simply-connected as well:
+$$
+\pi_1(S^{[2]} \bs D,\ast) \twoheadrightarrow \pi_1(S^{[2]},\ast).
+$$
+The first group is $\Z/2$, generated by a loop around $D$ (we abuse notation: $D$ denotes the image of the diagonal in $S^{[2]}$), and it is $\Z/2$ because $S^2  \bs D$ is a double cover of $S^{[2]} \bs D$.
+
+We call $S^{[2]}$ the \emph{Hilbert square} of $S$. It is a HK variety of dimension $4$. It can also be realized as the Hilbert scheme parametrizing length 2 subschemes of $S$.
+
+In general,
+$$
+Y^{[n]} := \{  Z \subset Y  \mid l(Z) = n \},
+$$
+is smooth, irreducible of dimension $2n$ (if $Y$ is a surface).
+
+Beauville shows that if $S$ is a K3, then $S^{[n]}$ is always a HK variety of dimension $2n$. Hence we have examples of hyper-Kählers in each even dimension!
+
+If $n\geq 2$, then $b_2(S^{[2]})= 23$, which is $22+1$, the last divisor coming from the blowup. 
+
+\subsection{Second example of a HK}
+
+The analogue of $S^{[2]}$ with $S$ replaced by $A$, an abelian surface.
+
+The space $A^{[2]}$ has a holomorphic symplectic form, but is far from being simply connected. But consider the maps
+$$
+A^{[2]} \xrightarrow{\gamma_2} A^{(2)} \xrightarrow{s_2} A .
+$$
+The first map sends a points $z$ to the sum $\sum_{p \in A} l(\OO_{Z,P} P $. The second map sends $P+Q$ to $(p) + (q) \in A$, where the parenthesis means that we actually consider the sum in the \emph{group} $A$.
+
+Then the composition $s_2 \circ \gamma_2$ is a locally trivial fibration in the étale/analytic topology. It follows that the cohomology group $H^1(A)=\C^4 \hookrightarrow H^1(A^{[2]})$. 
+
+Now look at the fiber $s_2 \circ \gamma_2^{-1}(0)$. This is a smooth Kummer surface $\approx A/ \langle -1 \rangle$. These are K3 surfaces! 
+
+In general we look at the sequence 
+$$
+A^{[n+1]} \xrightarrow{\gamma_{n+1}} A^{(n+1)} \xrightarrow{s_{n+1}} A
+$$
+defined analogously, and we define the \emph{generalized Kummer} to be $Kum^{[n]}(A) := (s_{n+1} \circ \gamma_{n+1})^{-1}(0)$.
+
+Beauville proved that $K^{[n]}$ is a HK variety of dimension $2n$. For $n\geq 2$, we have $b_2(K^{[n]}(A)) = 7 = b_2(A) + 1$, so we do actually have two topologically distinct families.
+
+\subsection{Third example, lines on a cubic 4-fould}
+
+Let $Y \subset \PP^n$ be some algebraic variety. Let $X = F(Y)$ be the set of lines contained in $Y$. It is a closed subset of the Grassmannian $\mathbb G(1,\PP^n)$, which we can think of as embedded via Plücker in $\PP^{\binom{n-1}{2}-1}$.
+
+\begin{thm}
+Let $Y \subset \PP^n$ be a smooth cubic hypersurface. Then $X=F(Y)$ is a smooth connected variety of dimension $2n-6$ and $K_X \simeq \OO_X(5-n)$. 
+\end{thm}
+Since we are interested in HK varieties, we put $n=5$. 
+
+\begin{remark}
+All HK's have trivial canonical bundle: the $n/2$th power of the symplectic form gives a trivialization of $K_X = \Omega^n_X$.
+\end{remark}
+
+We want to look at a incidence correspondence $\mathcal I \subset Y \times X$:
+$$
+\xymatrix{
+&\mathcal I = \{ (y,L) \in Y \times X \mid y \in L \} \ar[dl]^\rho \ar[dr]^\pi \\
+Y && X
+}
+$$
+The fibers of $\rho$ are $\PP^1$s (how to see this?). In general we get a map
+$$
+H^{n-1}(Y) \xrightarrow{c} H^{n-3}(X)
+$$
+given by $\alpha \mapsto \pi_\ast(\rho^\ast \alpha)$. So for $n=5$, we get a map $H^4(Y) \to H^2(X)$. 
+
+Beauville and Donagi showed that if $Y\subset \PP^5$ is a smooth cubic hypersurface, then $X=F(Y)$ is a HK variety of type $K3^{[2]}$. Moreover, the restriction of $c$ to the primitive cohomology
+$$
+H^4(Y)_0 := \{ \alpha \in H^4(Y) \mid \alpha - c_1(\OO_Y(1)) = 0 \}
+$$
+is an isomorphism to $H^2(X)_0$ of Hodge structures.
+
+We get an isomorphism $H^{p,q}(Y)_0 \simeq H^{p-1,q-1}(X)_0)$, and there exists a bilinear symmetric form $\langle, \rangle$ on $H^2(X)_0$ such that
+$$
+\langle c(\alpha), c(\beta) \rangle = - \int_Y \alpha \wedge \beta
+$$
+for all $\alpha, \beta \in H^4(Y)_0$. 
+
+One consequence: if $Y \subset \PP^5$ is very general, then $H^2(X)_0$ has no nonzero integral $(1,1)$-classes. [explanation follows]
+
+Main point: if $Y$ is very general, then $F(Y) \not \simeq S^{[2]}$ (not isomorphic) ($S$ is K3).
+
+Beauville proved however that if $Y$ is a pfaffian cubic
+$$
+\{ (t_0: \cdots : t_5) \in \PP^5 \mid Pf(t_0A_0+\ldots t_5A_5)\},
+$$
+where the $A_i$ are skewsymmetric matrices, then $F(Y) \simeq S^{[2]}$. 
+
+
+
+\section{Lecture 2 - some of the main general resutls}
+\end{document}
+
