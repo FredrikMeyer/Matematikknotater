@@ -47,7 +47,6 @@ so $X$ is simply-connected. By adjunction, we have:
 $$
 K_x \simeq (\restr{K_{\PP^3}}{\X}) \otimes \mathcal N_{X/\PP^3} = \OO_X(-4) \otimes \OO_X(4) = \OO_X.
 $$
-So the last condition is fulfilled also.
 \end{example}
 
 We list some of the know results about K3's:
@@ -55,7 +54,7 @@ We list some of the know results about K3's:
 \begin{enumerate}
 \item Any two K3's are deformation equivalent (Kodaira).
 \item There is a Hodge-theoretic description of the Kähler cone of a K3 (after having chosen one Kähler class).
-\item There is a \emph{Global Torelli Theorem} (Shafarevich & Piateski-Shapiro). Namely, a Hodge structure on $H^2(K3; \C)$ and a lattice structure on $H^2(K3,\Z)$ determines $X$ up to isomorphism.
+\item There is a \emph{Global Torelli Theorem} (Shafarevich and Piateski-Shapiro). Namely, a Hodge structure on $H^2(K3; \C)$ and a lattice structure on $H^2(K3,\Z)$ determines $X$ up to isomorphism.
 \end{enumerate}
 
 We now state the definition of a hyper-Kähler manifold:
@@ -188,6 +187,130 @@ where the $A_i$ are skewsymmetric matrices, then $F(Y) \simeq S^{[2]}$.
 
 
 
-\section{Lecture 2 - some of the main general resutls}
+\section{Lecture 2 - some of the main general results}
+
+The general theory is developed by Bogomolov, Fujiki, Beauville, Verlotsky, Huybrechts and others. Today's lecture have three main ingredients:
+
+\begin{enumerate}
+	\item The deformation theory if HK's are unobstructed.
+	\item BBF (Bogomolov-Beauville-Fujiki) quadratic form on $H^2(HK)$.
+	\item Twistor families of HK's. This leads to the deepest results.
+\end{enumerate}
+
+
+\subsection{Deformations of a HK X}
+
+Let $\sigma$ be the given holomorphic symplectic form on $X$. Contraction with $\sigma$ defines an isomorphism $L_\sigma: \Theta_X \to \Omega_X^1$.  Hence we get isomorphism
+$$
+H^i(L_\sigma):H^i(X, \Theta_X) \xrightarrow{\sim} H^i(X,\Omega_X^1).
+$$
+In particular, $H^0(X, \Theta_X) = H^0(X,\Omega_X^1) = 0$, since $X$ is simply-connected (to see this: by the Hodge decomposition we have $0 = H^1(X; \C) = H^0(X, \Omega_X^1) \oplus H^1(\OO_X)$).
+
+This implies (by general results?) that there exists a universal deformation space of $X$:
+
+$$
+\xymatrix{
+	X \simeq X_0 \ar@{^(->}[r]  \ar[d] & X \ar[d]^\pi \\
+	0 \ar[r] & B
+}
+$$
+
+Then we have $T_0B = H^1(X, \Theta_X) = H^1(X,\Omega_X^1)$. 
+
+\begin{thm}[Bogomolov]
+If $X$ is HK, then $X$ is unobstructed. That is, there exists a universal deformation space $B$ of $X$ with $B$ smooth.
+\end{thm}
+
+\begin{corr}
+$$
+\dim Def(X) = dim B = b_2(X)-2.
+$$
+\end{corr}
+\begin{proof}
+Since $$Def(X)$$ is smooth, we have
+$$
+\dim Def(X) = h^1(X,\Theta_X) = h^1(X, \Omega_X^1) = b_2(X) - h^{2,0}-h^{0,2} = b_2(X) - 2.
+$$
+\end{proof}
+
+\begin{remark}
+This is because the Kodaira-Spencer map $T_0B \xrightarrow{\kappa} H^1(X, \Theta_X)$ is an isomorphism if $B= Def(X)$.
+\end{remark}
+
+\begin{example}
+Let $X = S^{[n]}$ and $n \geq 2$. Then $b_2(X)=23$, hence $\dim Def(X) = 21$. If $X$ is K3, then $dim Def(X) = 20$. 
+\end{example}
+
+\subsection{The BBF quadratic form}
+
+We will study the \emph{local period map}. Again, let $\pi:\mathscr X \to B$ be a family of HK's, with $\pi$ a proper submersion. If $b \in B$, we write $X_b := \pi^{-1}(b)$. 
+
+By choosing $B$ small enough, we can assume that the local system $R^2\pi_\ast \Z$ is trivial: so we can identify $H^2(X_0,\Z) \simeq H^2(X_{b_2},\Z)= \Lambda$ for all $b_2 \in B$ and for a fixed finitely generated torsion free abelian group $\Lambda$ of rank $r$ (i.e $R^2 \pi_\ast \Z \simeq B \times \Lambda$). 
+
+For $b \in B$, we get isomorphisms $p_b:H^2(X_0, \Z) \to \Lambda$. Extension of scalars gives a map $p_b:H^2(X_b,\C) \to \Lambda_\C = \Lambda \otimes_\Z \C$. Note that $H^{2,0}(X_b)$ is contained in the source. 
+
+We are now ready to define the period map:
+$$
+\xymatrix{
+	B \ar[r]^{\mathcal P_\pi} & \PP(\Lambda_\C) \\
+	b \ar@{|->}[r] & p_b(H^{2,0}(X))
+}
+$$
+
+This makes sense, because $H^{2,0}(X)$ is one-dimensional, hence spans a line in $\Lambda_C$. We want to compute $d \mathcal P_\pi(0) = d \mathcal P_\pi$. \footnote{The rest of this section will be quite sketchy, mostly because I didn't understand so much.}
+
+Let $v \in T_0B$. A priori $d\mathcal P_\pi(v) \in \Hom(H^{2,0}(X), F^1 H^2(X)/H^{2,0}(X))$. This follows from Griffiths transversality. Recall $F^1 H^2(X)= H^{2,0}(X) \oplus H^{1,1}(X)$. This last $Hom$ group is equal to $\Hom(H^{2,0}(X), H^{1,1}(X))$. Griffiths in this case tells us that $\langle d \mathcal P_\pi(v), \sigma \rangle = L_sigma(\kappa(v))$. 
+
+We see that (?) the differential of the period map is injective with image $\Hom(H^{2,0}(X), H^{2,1}(X))$. Hence we conclude that the image of the period map is a local analytic hypersurface in $\PP(\Lambda_\C)$. 
+
+We now state the theorem of the existence of the \emph{Bogomolov-Beauville-Fujiki quadratic form}:
+
+\begin{thm}
+There exists a quadratic form (with an associated bilinear form $(,)_X)$)
+$$
+q_X : H^2(X) \to \C
+$$
+which is integral, indivisible\footnote{What does this mean?}, and a $c_X \in \Q_+$ such that
+\begin{equation}
+\label{eq:bbf}
+\int_X \alpha^{2n} = c_X \frac{(2n)!}{n! 2^n} q_X \alpha^n 
+\end{equation}
+for all $\alpha \in H^2(X)$.
+\end{thm}
+
+Why the factor $\frac{(2n)!}{n! 2^n}$? It has to with \eqref{eq:bbf} is equivalent to the assertion
+$$
+\int_X \alpha_1 \wedge \cdots \wedge \alpha_{2n} = c_X \sum_{\tau \in S_n} (\alpha_{\tau(1)}, \alpha_{\tau(2)})_X \cdot \ldots \cdot (\alpha_{\tau(2n-1)}, \alpha_{\tau(2n)})_X,
+$$
+where we sum over permutations ``without stupid repetitions'' (interpret this). 
+
+Now let $X$ be of type $K3^{[n]}$. If $S$ is K3, then $H^2(S^{[n]},\Z) = im \mu_n \oplus \Z \zeta_n$, where $\mu_n$ is the composition
+$$
+H^2(S,\Z) \to H^2(S^{(n)},\Z) \to H^2(S^{[n]},\Z).
+$$
+The first map sends a curve $C$ to the $\{ Z \in S^{[n]} \mid Z \cap C \neq \emptyset \}$. The $\zeta_n$ is the reduced image of the diagonal: one can see that the class of the diagonal in $H^2(S^{[n]},\Z)$ is divisible by two. This is analogous to the fact that the map $Bl_D S^2 \to S^{[2]}$ is $2:1$-ramified along $D$. However, for general $n$, the construction of $S^{[n]}$ by a sequence of blowups and blowdowns is quite complicated. But for dimension reasons, we only need to look at points of $S^{(n)}$ where two points come together.
+
+In this case the BBF quadratic form takes the form (no pun...): On $im \mu_n$ it is defined by $(\mu_n(\alpha),\mu_n(\beta)) = \int_S \alpha \wedge \beta$, and on the other summand we have $q(\zeta_n) = -2(n-1)$. And $c_X = 1$. 
+
+This is useful, for it lets us compute for example the self-intersection of the diagonal:
+
+$$
+\Delta_n \cdot \ldots \cdot \Delta_n = \frac{(2n)!}{n! 2^n} (-8(n-1))^n.
+$$
+
+We sum up some of the things we know in a table:
+\begin{center}
+\begin{tabular}{c | c | c | c | c}
+$X$ & $\dim X$ & $b_2(X)$ & $c_X$ & $H^2(X; \Z)$ \\
+\hline 
+$K3^{[n]}$ & 2n & 23 & 1 & $U^3 \oplus E_8^2 \oplus (-2(n-1))$ \\
+$Kum^{[n]}$ & 2n & 7 & n+1 & $U^3 \oplus (-2(n-1))$ 
+\end{tabular}
+\end{center}
+
+(he goes on to prove the theorem, but I drew a pig instead)
+
+\section{Lecture 3 - more results}
+
 \end{document}
 
