@@ -1,0 +1,86 @@
+\documentclass[11pt, english]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}   % S P R A A K
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{calc}
+%\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+%\usepackage[a5paper,margin=0.5in]{geometry}
+
+
+\begin{document}
+\title{CY 3-folds and sheaf counting}
+\author{Fredrik Meyer}
+\maketitle 
+
+\begin{abstract}
+These are notes from the ``summer school'' at IMPA, Warzaw, held by Balázs Szendrői.
+\end{abstract}
+
+\section{Lecture 1 - Calabi-Yau 3-folds}
+
+We first cover the basics. That is, the definition:
+
+Let $X$ be a smooth projective variety over $\C$. We call $X$ a \emph{strict} Calabi-Yau 3-fold (CY3) if $\omega_X \simeq \OO_X$, and $H^1(X,\OO_X)=0$.
+
+Note that these conditions imply that also $H^2(X,\OO_X) = 0$ by Serre duality. They also imply that $H^0(\Omega_X^1)=0$ by Hodge theory ($H^0(\Omega_X^1$ is the complex dual to $H^1(X,\OO,X)$).
+
+Also note that by Hodge decomposition, this implies that $H^1(X,\Q) = 0$, since $H^1(X,\C) = H^1 (X, \Q) \otimes \C =  H^0(\Omega_X^1) \oplus H^1(\OO_X)$. Note also that $H^2(X,\C) = H^{1,1}(X) = H^1(\Omega^1_X) = \Pic(X) \otimes \C$.
+
+Thus we have two interesting Hodge numbers, namely $h^{11}$ and $h^{12}=h^{21}$ (these two are equal by complex conjugation). 
+
+We also have a intersection form $S^3 H^2(X,\Z) \to \Z$ given by triple intersection of divisors. We also have a Chern class map $c_2:H^2(X, \Z) \to \Z$ given by intersecting with the first Chern class (what is this??).
+
+Now we list some examples of Calabi-Yaus:
+
+\begin{example}
+``Obvious'' ones such as the quintic in $\PP^4$. Also $X_{3,3} \subset \PP^5$, $X_{(3,3)} \subset \PP^2 \times \PP^2$, $X_{(2,4)} \subset \PP^1 \times \PP^3$.
+
+Also the double covering $X \xrightarrow{2:1} \to \PP^3$ branched along a smooth octic surface. 
+\end{example}
+
+\begin{remark}
+Some words about weighted projective spaces. Given non-negative natural numbers $a_0,\ldots,a_n \in \N_{>0}$, we define
+$$
+\PP^n[a_0,\ldots,a_n] := \C^{n+1} \bs \{0\} / \C^\ast(a_0,\ldots,a_n),
+$$
+where the torus act by the prescribed weights. We say that a weighted projective space is \emph{well-formed} if no $n$ of the $n+1$ numbers $a_0,\ldots,a_n$ have a common factor.
+\end{remark}
+
+\begin{example}
+Also hypersurfaces and complete intersections in weighted projective spaces. For example, let $X_8$ be a degree $8$ hypersurface in $\PP[1,1,1,1,4]$. Let the coordinates be $x_1,\ldots,x_4,y$. Then we can complete the square, so that $X_8$ is given by a polynomial of the form $y^2+f_8(x_i)=0$. 
+
+We have a $2:1$ map to $\PP^3$ given by projecting to the first four coordinates. It is ramified exactly over the octic surface $f_8=0$. 
+\end{example}
+
+\begin{example}
+Another class of examples comes from considering hypersurfaces or complete intersections in special toric varieties. Let $\Delta$ be a reflexive polytope. Then the associated toric variety $\PP_\Delta$ is Fano. Then elements of $|\omega_{\PP_\Delta}|$ are Calabi-Yau. But these are often singular. So one has to find a crepant resolution of singularities $X \to \overline X \subset \PP_\Delta$.
+\end{example}
+
+\subsection{Quasiprojective case}
+
+We say that $X$ is a (weak) CY3 if it is quasiprojective with $\omega_X \simeq \OO_X$. Some examples:
+
+\begin{enumerate}
+	\item $X= \Aa^3$.
+	\item Let $G \triangleleft \SL_3(\C)$. This group act on $\Aa^3$. Then $\overline X = \Aa^3/G$ has Gorenstein singularities, and we have a non-unique crepant resolution $X \to \overline X$.
+	\item Let $G=\Z/3(1,1,1)$ be the subgroup of $\SL_3(\C)$ acting by multiplication by a third root of unity. Then $\Aa^3/G$ has a singularity at the origin. Then one can see that a resolution of singularities is given by the total space of $\OO_{\PP^2}(-3)$, the zero section being the exceptional divisor, mapping down to the origin. 
+\end{enumerate}
+
+\end{document}
+

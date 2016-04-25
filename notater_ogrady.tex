@@ -312,5 +312,165 @@ $Kum^{[n]}$ & 2n & 7 & n+1 & $U^3 \oplus (-2(n-1))$
 
 \section{Lecture 3 - more results}
 
-\end{document}
+Recall from last lecture that we had the BBF quadratic form $q_X$ on $H^2(X)$. We denote the associated bilinear form by $(,)_X$. The Fujiki constant is denoted $c_X \in \Q_+$.
 
+They key property is this:
+$$
+\int_X \alpha_1 \wedge \ldots \wedge \alpha_{2n} = c_X \sum_{\tau \in S_n} (\alpha_{\tau(1)}, \alpha_{\tau(2)})_X \cdot \ldots \cdot (\alpha_{\tau(2n-1)}, \alpha_{\tau(2n)})_X
+$$
+And also the property $(\sigma,\overline \sigma) > 0$, which determines $\sigma$ uniquely.
+
+From the properties we can deduce the following list of consequences:
+\begin{enumerate}
+	\item $H^{pq}(X) \perp H^{p',q'}$ unless $p'=2-p$ and $q'=2-q$.  (don't ask me why)
+	\item If $\omega \in H^n(X,\R)$ is a Kähler class (n??), then $(\omega,\omega)_X > 0$.
+	\item The signature of $\restr{q_X}{H^2(X,\R)}$ is $(3,b_2(X)-3)$.
+	\item If $X$ and $Y$ are HK's and $f:X \rmap Y$ is birational, then there exists $I_X \subset X$, $I_Y \subset Y$ of codimension $geq 2$ such that 
+	$$
+(X \bs I_X) \xrightarrow{\sim} (Y \bs I_Y)
+	$$
+	is an isomorphism. Hence $f$ induces an isomorphism on $H^2$ (with integral coefficients). Also $(f^\ast \alpha, f^\ast \beta)_X= ( \alpha, \beta)_Y$. That is, $f^\ast$ is an isometry.
+\end{enumerate}
+
+\subsection{Revisiting the period map}
+
+Again, let $\mathfrak X \to B$ be a family, and assume that we have a trivialization $R^2 \pi_\ast \Z = B_\ast \Lambda$, for a fixed lattice $\Lambda$. Hence for every point $b \in B$, we have an isomorphism $f_b:H^2(X_b, \Z) \to \Lambda = \Z^r$.
+
+Then the period map $\mathcal P: B \to \PP(\Lambda_\C)$ is defined  by sending $b$ to $f_b(H^{2,0}(X_b))$. 
+
+Now, given $\alpha \in \Lambda_\R$, we can ask for which $b \in B$, $f_b^{-1}(\alpha) \in H^{1,1}(X_b, \R)$? Answer: this happens if and only if $\mathcal P_B \in \alpha^\perp$ (then: explanation which I don't understand).
+
+Now assume that $\alpha \in H_\Z^{1,1}(X)$ and that $image(\mathcal P_\B) \subset \alpha^\perp$.
+
+...
+
+\subsection{Back to smooth cubic hypersurfaces}
+
+Back to $Y \subset \PP^5$, a smooth cubic hypersurface. let $X=F_1(Y)$ be the variety of lines on $X$. Then $X$ is HK of type $K3^{[n]}$, and is endowed with the Plücker line bundle $\OO_X(1)$. 
+
+Point: not all small deformations of $F(Y)$ are isomorphic to $F(Y')$, but all small deformations of $F(Y)$ which keeps $c_1(\OO_X(1))$ of type $(1,1)$ \emph{are} isomorphic to $F(Y')$ (for some $Y')$). 
+
+\subsection{Kähler cone}
+
+The Kähler cone is the set
+$$
+K_X = \{ \alpha \in H_\R^{1,1}(X) \mid \text{ $\alpha$ is a Kähler class}\}.
+$$
+
+The set of $\alpha \in H^{1,1}_\R(X)$ such that $q_X(\alpha) > 0$ has two connected components. A choice of Kähler class determines one of these, which we call the \emph{positive cone}.
+
+Huybrechts showed that for \emph{very general} $b \in B$, the Kähler cone is equal to the positive cone. Bayer-Hasset-Tschukul (?) gave a numerical description of $Ample(X)$ for $X$ projective of type $K3^{[n]}$.
+
+Huybrechts showed that if $X,Y$ are birational HK's, then they are in fact deformation equivalent. (!!!)
+
+\subsection{More examples}
+
+Now let $S$ be a projective abelian surface. Let $\mathscr M$ be the moduli space of $\OO_S(1)$-stable shaves on $S$ with fixed rank, $c_1$ and $c_2$ (Chern classes). Then it turns out that $\mathscr M$ is smooth and has a regular symplectic form!
+
+Let $[\mathscr F] \in \mathscr M$. And say $0 \neq \omega \in H^0(K_S)$ is the canonical form on $S$. Then $\Theta_{[\mathscr F]} \mathscr M = H^1(\End \mathscr F))$ (the tangent space). 
+
+We want to define a pairing
+$$
+\Theta_{[\mathscr F]} \mathscr M \times \Theta_{[\mathscr F]} \mathscr M  \to \C
+$$
+by $(\alpha, \beta) \mapsto \int_S \alpha \wedge \tr(\alpha \cup \beta)$. But what is $\tr(\alpha \cup \beta)$? $\alpha \cup \beta \in H^{0,2}(S, \End \mathscr F)$. And we have a trace map from here to $H^{0,2}(S)$. (???)
+
+Now let $S$ be K3. Then we can consider $\mathscr M_v^{st}$, constisting of stable sheaves $\mathscr F$ with Mukai vector $v$ (the Mukai vector is tuple containing rank and Chern classes). If the moduli space is projective (which happens sometimes), then it turns out that it is a HK variety of type $K3^{[n]}$. 
+
+If $S$ is an abelian surface, then we have a map $\mathscr M_v^{st}(S) \to S^\wedge \times S$ given by $\mathscr F \mapsto (\det \mathscr F, \sum c_2(\mathscr F)$. Then it turns out that $f^{-1}(0,0)$ is a HK variety of type $Kum^{[n]}$!
+
+But most choices of $v$ gives noncompact moduli spaces! One can try to compactify, but the compactification is usually singular at the boundary, outside the stable locus. 
+
+However, there exists in a few cases a symplectic desingularization of $\mathfrak M_v(S)$. In the case when $\dim \mathfrak M_v(S)=10$, O'Grady have shown that we get a new deformation class of HK's! If $S=K3$, then these have $b_2=24$, and if $S$ is abelian, we instead look at the fiber at $0$ as before, giving a 6-dimensional HK with $b_2(fiber)=8$. 
+
+\section{More constructrions of HK's}
+
+In this last lecture, we will look at more constructions of HK's. Below is a table of all known deformation classes of HK's:
+
+\begin{center}
+\begin{tabular}{c | c | c | c | c}
+$X$ & $\dim X$ & $b_2(X)$ & $c_X$ & $H^2(X; \Z)$ \\
+\hline 
+$K3^{[n]}$ & 2n & 23 & 1 & $U^3 \oplus E_8^2 \oplus (-2(n-1))$ \\
+$Kum^{[n]}$ & 2n & 7 & n+1 & $U^3 \oplus (-2(n-1))$ \\
+OG6 & 6 & 8 & 4 & $U^3 \oplus (-2)^2$ \\
+OG10 & 10 & 24 & 1 & $U^3 \oplus E_8^2 \oplus A_2$
+\end{tabular}
+\end{center}
+
+Today we will mention some other constructions (but no new deformation classes).
+
+The holy grail of the theory is to describe all deformation classes of HK's. First, let us look at how Kodaira proved that $K3$s form a single deformation class.
+
+There are a few steps. First: Let $X_0$ be a K3. Then by Noethers formula: $2= \chi(\OO_X) = (K^2 + c_2)/12$. It follows that $c_2=24$. This is the topological Euler characteristic. Hence $b_2=22$. The signature of $\langle,\rangle$ on $H^2(X_0,\R)$ is $(3,19)$. We also know that $H^2(X_0,\Z)$ is a unimodular lattice (by Poincaré duality, appearantly). Since $K_X=0$, the intersection form is even. By lattice theory, we conclude that $H^2(X_0,\Z) = U^3 \oplus E_8^2 =\Lambda$.
+
+Hence all  K3's have the same lattice.
+
+Second: one calculates the period map $B \to \PP(\Lambda_\C) = \PP^{21}$. The image is contained in a smooth quadric. Then one proves that there exists a $b \in B$ such that $H_\Z^{1,1}(X_b) = \Z \alpha_b$ with $\alpha_b^2=2$. 
+
+Third: Let $X=X_b$. Then let $\alpha_b = c_1(L)$, where $L$ is a holomorphic line bundle. By Hirzebruch-Riemann-Roch, we have
+$$
+\chi(L) = \chi(\OO_X) + \frac 12 c_1(L)^2 = 2+ \frac 22 = 3.
+$$
+And by Serre duality:
+$$
+3 = h^0(L) - h^1(L) +h^2(L) = h^0(L) -h^1(L) + h^2(L^{-1}). 
+$$
+
+Hence $h^0(L) + h^0(L^{-1}) = 3+ h^1(L)$. So we can assume $L$ has at least three sections. Then one analyses the map $\varphi_L:X \rmap |L|^\vee$. By some argument, $\varphi_L$ is regular with 2-dimensional image. It follows that $\varphi_L$ is a $2:1$ map ramified over a sextic. 
+
+Conclusion: there is a deformation of $X_0$ to $X$, a double cover ramified over a sextic. But the deformation space of such double covers is irreducible! Hence all HK's are deformation equivalent. 
+
+\begin{remark}
+Now he goes on to explain a program of copying Kodaira's profo for a certain type of HK's (``numerical $K3^{[n]}$s''). Then he states a theorem of his:
+\begin{thm}
+There is a rational map $\varphi:X \rmap \PP^5$. One of the following holds:
+
+\begin{enumerate}
+	\item $\varphi$ is regular, 2:1 onto an EPW sextic. These are parametrized by a connected family, and all are of type $K3^{[n]}$.
+	\item $\varphi$ is birational onto its image.
+\end{enumerate}
+\end{thm}
+The \emph{conjecture} is that the second option never occurs.
+\end{remark}
+
+\subsection{EPW sextics and their double covers}
+
+EPW stands for Eisenbud-Popescu-Walter. Let $LG(\Lambda^3 V_6)$ be the set of Lagrangian subspaces of $\Lambda^3 V_6$ (here $V_6$ is a 6-dimensional vector space), and $A$ one such. We say that $A$ is Lagrangian if $\alpha,\beta \in A$ implies that $\alpha \wedge \beta = 0$  
+
+Then we define $Y_A \subset \PP(V_6)$, to be the set of $[v] \in \PP(V_6)$ such that the map $A \ni \alpha \mapsto v \wedge \alpha \in \Lambda^4 V_6$ has nontrivial kernel. 
+
+Then in the generic case, $Y_A$ is a sextic hypersurface (so a 4-fold). The singular locus of $Y_A$ is a smooth surface, and one can show that if $p \in \Sing(Y_A)$, then $(Y_A,p) \simeq (\C^2 \times C,0$, where $C$ is a cone. There is a smooth double cover of $Y_A$ ramified along the singular locus. We denote this cover by $X_A$.
+
+Then:
+
+\begin{thm}
+$X_A$ is a HK of type $K3^{[n]}$. Varying $A$, we get a locally complete family of projective HK's.
+\end{thm}
+
+\subsection{Other explicit examples of HK's}
+
+Here comes some more examples.
+
+Let $\sigma \in \Lambda^3 V_{10}^\vee$ be generic. Then let
+$$
+Y_\sigma = \{ v \in \Gr(6,V_{10}) \mid \restr{\sigma}{\wedge^3 v} = 0 \}.
+$$
+Then $Y_\sigma$ is a HK of type\end{document $K3^{[n]}$, with Plücker polarization with $q(pol)= 22$. 
+
+\subsubsection{Ranestad-Iliev}
+
+Start with $Y \subset \PP^5$, a cubic hypersurface. Then consider the set $VSP(Y,10)$ (``variety of sums of powers''), consisting of $\Lambda \in |\OO_{\PP^5}(3)|$ such that $Y \in \Lambda$ and $\Lambda$ is 10-secant to Veronese of $Y$.
+
+Then $VSP(Y,10)$ is HK of type $K3^{[n]}$. But now the polarization has degree 38.
+
+\subsubsection*{Another one}
+
+Let $Y \subset \PP^5$ be a generic cubic hypersurface. Then look at $M_3(Y)$, the moduli space of twisted cubics contained in $Y$. This is of dimension 10. There exists a map $M_3(Y) \to X(Y)$, where $X(Y)$ is hyper-Kähler of type $K3^{[n]}$ again.
+
+\subsection{More types?}
+
+Note that all the examples found are of type $K3^{[n]}$. It would be a nice challenge to find examples of type $Kum^{[n]}$. 
+
+
+\end{document}
