@@ -156,9 +156,16 @@ $$
 \Aa^2 \ni (a,b) \mapsto \left( \frac{a^3}{1-b^3}, \frac{a^2b}{1-b^3}, \frac{-a^2}{1-b^3}\right) \in X.
 $$
 
-Dette er en birasjonal avbildning. Vi ser at hele $b$-aksen avbildes på origo, men for linjene $b\{b^3=1\}$ er ikke avbildnigen definert.
+Dette er en birasjonal avbildning. Vi ser at hele $b$-aksen avbildes på origo, men for linjene $\{b^3=1\}$ er ikke avbildnigen definert.
 
 Q: Er det sant at det ikke finnes noen birasjonal surjektiv morfi $\Aa^2 \to X$? 
 
+\subsection{Bruke Hurwitz og overdekninger}
+
+Her er et eksempel på bruk av Hurwitz' formel for å regne ut genusen til en kurve. La $X$ være kurven i $\PP^1 \times \PP^1$ gitt ved $(x_0^2+x_1^2)(y_0^2+y_1^2)=x_0x_1y_0y_1$. Betrakt (restriksjonen av) projeksjonen ned på $\PP^1$. Dette gir en surjektiv avbildning $X \to \PP^1$ av grad $2$. Dermed sier Hurwitz at $2g-2=2(0-2)+\deg R$, hvor $R$ er ramifikasjonsdivisoren. Dette er en divisor på $X$ som består av punktene hvor avbildningen ikke er $2:1$. 
+
+Man kan regne ut graden til denne på følgende vis: vi regner lokalt ved å sette $x_0=y_0=1$. Størrelsen på fiberen er gitt ved å løse en andregradsligning i $y_1$, og da er diskriminantlokuset gitt ved diskriminanten til denne ligningen, som er av grad $4$. Dermed får vi at $2g-2=-4+4$, så $g=1$.
+
+Et annet eksempel på bruk av overdekninger er følgende: se på $\PP^3 \times \PP^1$. la $X$ være en generisk medlem i $|\OO_{\PP^3 \times \PP^1}(-2,d)|$, og igjen betrakt projeksjonen ned på $\PP^3$. Dette er en $2:1$-avbildning igjen, og ved essensielt samme formel har vi nå at $\deg K_X = 2 \deg  K_{\PP^3} + d$, hvor $d$ igjen blir graden til ramifikasjonsdivisoren. Med andre ord, ønsker vi at $X$ skal bli Calabi-Yau, må vi velge $d=8$. Dette svarer da til en velkjent Calabi-Yau: en dobbel overdekning av $\PP^3$ ramifisert i en oktikk.
 
 \end{document}
