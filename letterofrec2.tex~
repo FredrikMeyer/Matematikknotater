@@ -1,0 +1,15 @@
+\documentclass[UKenglish]{uioletter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{babel,textcomp}
+\signature{My name}
+\mytitle{my job title} %% Note! All lowercase
+\ouremail{name@ifi.uio.no}
+\ourweb{www.ifi.uio.no}
+\begin{document}
+\begin{letter}{Name of recipient\\ His or her address\\ 0000 Oslo}
+\opening{Greeting phrase,}
+The actual letter
+\closing{Yours sincerely,}
+\end{letter}
+\end{document}

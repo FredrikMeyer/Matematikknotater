@@ -1,0 +1,100 @@
+\documentclass[11pt, norsk]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}   % S P R A A K
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{calc}
+%\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+%\usepackage[a5paper,margin=0.5in]{geometry}
+
+
+\begin{document}
+\title{Notater}
+\author{Fredrik Meyer}
+\maketitle 
+
+\subsection{Tautologisk linjebunt på $\PP^n$}
+
+Vi kan definere en tautologisk linjebunt på $\PP^n$. Dette er en bunt hvis fiber over et punkt $p$ er linjen i $\Aa^{n+1}$ utspent av (de homogene koordinatene til) $p$. La $q \in \langle p \rangle$ bety at $q$ er med i spennet av $p$. Da er
+$$
+\mathscr T := \{ (q,p) \in \Aa^{n+1} \times \PP^n \mid q \in \langle p \rangle \}.
+$$
+Ved å regne overgangsfunksjoner kan en se at $\mathscr T \simeq \OO_{\PP^n}(-1)$.
+
+Det finnes også andre måter å se dette på, eksempelvis slik Mike Eastwood forklarte det på siste forelesning, men det har jeg glemt av nå (!!). 
+
+\subsection{Embedding Grassmannian}
+
+Grassmannian har en tautologisk linjebunt $\mathscr E$, hvis seksjoner kan skrives som matriser. Fiberen over et punkt $[V]$ i Grassmannian er nettopp det lineære underrommet punktet representerer.
+
+Da vil $\wedge^k \mathscr E$ være en linjebunt på Grassmannian, og seksjonene vil være utspent av alle minorene. Så dette er linjebunten Plücker-embeddingen svarer til.
+
+\subsection{Topologien til SR-skjemaer}
+
+La $X=\PP(\Delta)$ være et Stanley-Reisner-skjema. La $f=(f_0,\ldots,f_n)$ være $f$-vektoren, det vil si, antall $f_i$ er antall $i$-dimensjonale fasetter i $\Delta$. Da er $h^i(\PP_\C(\Delta),\C)=f_i$ om $i$ er jevn, og $0$ ellers. Dette er fordi $X$ har strukturen til et CW-kompleks med bare celler i jevne grader.
+
+\subsection{Kotangentkohomologi på en oppblåsning}
+
+La $\pi:\widetilde X \to X$ være oppblåsningen av en glatt flate $X$ i et punkt $P$. La $E \simeq \PP^1$ være den eksepsjonelle divisoren. Vi ønsker å beregne kohomologien $H^i(\Omega_{\widetilde X/k}^1)$ gitt kjennskap til kohomologien til $X$.
+
+Et standard teorem sier at vi har en eksakt sekvens
+$$
+\pi^\ast \Omega^1_{X/k} \to \Omega^1_{\widetilde X/k} \to \Omega^1_{\widetilde X/X} \to 0.
+$$
+
+Påstanden er at denne er venstre-eksakt også. Siden $\widetilde X \bs E \simeq X \bs P$ er den første pilen en isomorfi utenfor $E$ (og dermed er høyre-leddet også null). Om vi er på $Q \in E$, har vi at $\mathscr G = {\pi^\ast \Omega_{X/k}^1}$ er null langs $E$, siden stilken $\mathscr G_Q=\Omega_{f(x)/k}^1$, og kotangentknippet over et punkt er null.
+
+Legg også merke til at $\Omega^1_{\widetilde X/X}=i_\ast \OO_{\PP^1}(-2)$ siden $E \simeq \PP^1$ og knippet er null utenfor $E$ (her er $i:\PP^1 \to \widetilde X$ inklusjonen). Dermed har vi sekvensen
+$$
+0 \to \pi^\ast \Omega^1_{X/k} \to \Omega^1_{\widetilde X/k} \to i_\ast \mathscr O_{\PP^1} (-2) \to 0.
+$$
+
+Vi har også at $H^i(\pi^\ast \Omega^1_{X/k})= H^i(\Omega_{X/k}^1)$ (se beviset for Zariskis hoved-teorem i Hartshorne).
+
+Dermed har vi at $H^0(\Omega_{\widetilde X/k}^1) = H^0(\Omega_{X/k}^1)$. For å regne ut de andre kohomologigruppene trenger vi mer presis informasjon om $X$. Så anta $X= \PP^2$. Da følger det fra Euler-sekvensen at $H^i(\Omega_{X/k}^1)$ er null for $i=0,2$ og $1$ for $i=1$. Dermed følger det at $H^i(\Omega_{\widetilde X/k}^1)$ er null for $i=0,2$ og $2$ for $i=1$.
+
+Så å blåse opp i et punkt øker $H^1$ med én.
+
+\subsection{Dobbel overdekning av $\PP^2$ ramifisert i gitt kurve}
+
+Gitt et homogent polynom $f(x,y,z)$ i $H^0(\PP^2,\OO_{\PP^2}(2n))$, konstruerer vi en flate som er en dobbel overdekning av $\PP^2$, ramifisert i kurven definert ved dette polynomet.
+
+Den naive løsningen funker, men virker upraktisk å jobbe med. Betrakt nullpunktsmengden $X$ til $f-u^2$ i $\PP(1,1,1,n)$. Dette er en veldefinert varietet, siden polynomet er homogent i denne graderingen.  Vi har en avbildning $\pi:X \to \PP^2$ gitt ved $(x:y:z:u) \mapsto (x:y:z)$. Dette er i utgangspunktet kun en rasjonal avbildning, men formen på ligningen viser at avbildningen er veldefinert: for anta at vi blir sendt til ``punktet'' $(0:0:0)$. Da er $x=y=z=0$, som tvinger $u=0$. Men dette er absurd, så avbildningen må være en morfi.
+
+Anta at $P \not \in V(f) \in \PP^2$. Da er $f(P) \neq 0$. Dermed får vi at fiberen $\pi^{-1}(P)$ består av to forskjellige punkter. Om $f(P)=0$, får vi kun ett punkt i fiberen.
+
+Det eneste singulære punktet i $\PP(1,1,1,3)$ er $(0:0:0:1)$, og dette punktet ligger ikke på $X$. Det følger at $X$ er glatt. Faktisk er $\PP(1,1,1,3)$ isomorf med den projective kjeglen over $\nu_3(\PP^2)$ (den tredje Veronese-embeddingen av $\PP^2$).
+
+Legg merke til at avbildnigen $\pi:X \to \PP^2$ er en affin avbildning (i betydningen at $\pi^{-1}(U_i)$ er affin for $i=0,1,2$). Dette impliserer (oppgave III.8.2 i Hartshorne) at $H^i(X,\OO_X) = H^i(\PP^2,\pi_\ast \OO_X)$ for $i \geq 0$. Derfor ønsker vi å regne ut $\pi_\ast \OO_X$.
+
+Vi har at den homogene koordinatringen til $X$ er gitt ved $S = k[x,y,z,u]/(f-u^2)$, med gradene $(1,1,1,3)$. La $T=k[x,y,z]$ være den homogene koordinatringen til $\PP^2$. Da har vi at
+$$
+S = T \oplus u T (-3)
+$$
+som en gradert $T$-modul. 
+
+(dette burde implisere at $\pi_\ast \OO_X = \OO_{\PP^2} \oplus \OO_{\PP^2}(-3)$.)
+
+
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
