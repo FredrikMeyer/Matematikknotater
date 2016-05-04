@@ -1,8 +1,9 @@
-\documentclass[11pt, english]{book}
+%\documentclass[11pt, english]{book}
+\documentclass[]{uiophd}
 %\usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel}   % S P R A A K
+%\usepackage[english]{babel}   % S P R A A K
 % \usepackage{graphicx}    % postscript graphics
 \usepackage{amssymb, amsmath, amsthm} % symboler, osv
 \usepackage{mathrsfs}
@@ -43,10 +44,17 @@ Let $\K$ be the square, with vertices $v_0,v_1,v_2,v_3$. Then the Stanley-Reisne
 Some of the topology of the simplicial complex is encoded in the scheme structure of $\PP(\K)$. In particular, the simplicial (co)homology groups of $\K$ can be computed as the sheaf cohomology of $\PP(\K)$
 
 \begin{lemma}
-Let $H^i(K;\C)$ denote the singular cohomology groups of $\K$. Then there are isomorphisms $H^i(K;\C)=H^i(\PP(\K),\OO_{\PP(\K)})$ for all $i$.
+Let $(K;\C)$ denote the singular cohomology groups of $\K$. Then there are isomorphisms $H^i(K;\C)=H^i(\PP(\K),\OO_{\PP(\K)})$ for all $i$.
 \end{lemma}
 \begin{proof}
 ---------to come-----------
+\end{proof}
+
+\begin{corr}
+We have isomorphisms $H^i(K,\C) \simeq H^{2i}(\PP(\K);\C)$ of singular cohomology groups.
+\end{corr}
+\begin{proof}
+Something about $i$-cells in even dimensions
 \end{proof}
 
 \section{Calabi-Yau basics}
@@ -174,24 +182,154 @@ There is a nice combinatorial description of $dP_6$ as a toric variety associate
 \caption{The fan of $dP_6$.}
 \label{fig:fandp6}
 \end{subfigure}
+\caption{Toric description of $dP_6$.}
 \end{figure}
 
 The polytope is reflexive, implying that the normal fan of $P$ is the face fan over the same polytope. See \figref{fandp6}. From standard toric geometry, it is clear that $dP_6$ is the blowup of $\PP^2$ in the three torus-fixed points. 
 
-\section{The affine cone}
+\section{Divisors and topology}
 
-% singular at one points, deforms, balbabla 
+%% Picard group
+%% cohomology groups
 
-\section{The two smoothings}
+\section{The affine cone and its two smoothings}
 
-%% describe the two smoothings and prove that they are different
+Let $X$ denote the affine cone over $dP_6$. It is an affine variety with an isolated singularity at the origin. One can compute that it has two smoothing components: the union of a plane and a line. They both come from different ways of perturbing the equations of $dP_6$.
+
+\begin{figure}
+\centering 
+\begin{subfigure}{.4 \textwidth}
+  \begin{tikzpicture}[scale=1.4,every node/.style={circle, draw=black, fill=white}, every path/.style={very thick}]
+\coordinate (A) at (0,0);
+\coordinate (B) at (2,0);
+\coordinate (C) at (2,2);	
+\coordinate (D) at (0,2);	
+\coordinate (E) at (1,1);	
+\coordinate (F) at (3,1);	
+\coordinate (G) at (3,3);	
+\coordinate (H) at (1,3);	
+\draw[thick, color=red] (D)  -- (C) -- (B) --(F);  %1
+\draw[thick, color=red, dotted] (H) -- (E);
+\draw[thick, color=red, dotted] (E) -- (F);
+\draw[thick, color=red] (D) -- (H);
+\draw[thick] (D) -- (A) -- (B);
+\draw[thick] (C) -- (G) -- (F);
+\draw[thick] (H) -- (G);
+\draw[thick, dotted] (A) -- (E);
+
+\draw (A) node {$y_0$};
+\draw (B) node {$x_4$};
+\draw (C) node {$x_3$};
+\draw (D) node {$x_2$};
+\draw (E) node {$x_6$};
+\draw (F) node {$x_5$};
+\draw (G) node {$y_0$};
+\draw (H) node {$x_1$};
+\end{tikzpicture}
+  \caption{Equations $dP_6$.}
+  \label{fig:dp6p1}
+ \end{subfigure}
+\begin{subfigure}{.4\textwidth}
+  \begin{tikzpicture}[scale=1.4,every node/.style={circle, draw=black, fill=white}, every path/.style={very thick}]
+\coordinate (A) at (0,0);
+\coordinate (B) at (2,0);
+\coordinate (C) at (2,2);	
+\coordinate (D) at (0,2);	
+\coordinate (E) at (1,1);	
+\coordinate (F) at (3,1);	
+\coordinate (G) at (3,3);	
+\coordinate (H) at (1,3);	
+
+\draw[thick, color=red] (D)  -- (C) -- (B) --(F);  %1
+\draw[thick, color=red, dotted] (H) -- (E);
+\draw[thick, color=red, dotted] (E) -- (F);
+\draw[thick, color=red] (D) -- (H);
+\draw[thick] (D) -- (A) -- (B);
+\draw[thick] (C) -- (G) -- (F);
+\draw[thick] (H) -- (G);
+\draw[thick, dotted] (A) -- (E);
+
+\draw (A) node {$y_0-t$};
+\draw (B) node {$x_4$};
+\draw (C) node {$x_3$};
+\draw (D) node {$x_2$};
+\draw (E) node {$x_6$};
+\draw (F) node {$x_5$};
+\draw (G) node {$y_0$};
+\draw (H) node {$x_1$};
+\end{tikzpicture}
+  \caption{Deforming $C(dP_6)$.}
+  \label{fig:dp6p12}
+  \end{subfigure}
+ \caption{Forms of equations.}
+\end{figure}
+
+Look at \figref{dp6p1}. One can read off the equations of $dP_6$ by taking minors along ``faces'' and long diagonals of this square. This correspond to a hyperplane cut of $\PP^ 1 \times \PP^1 \times \PP^1$ in the Segre embedding. Then the one-dimensional component of the versal deformation of $X$ is obtained by perturbing one of the $y_0$-corners as in \figref{dp6p12}.
+
+It is clear the corresponding deformation is smooth, since it is a hyperplane cut of cone over $\PP^1 \times \PP^1 \times \PP^1$ outside the origin. Call this smoothing $X_1$.
+
+\begin{lemma}
+The smoothing $X_1$ is isomorphic to $\PP^1 \times \PP^1 \times \PP^1 \bs dP_6$.
+\end{lemma}
+\begin{proof}
+Specialize to some $t \neq 0$. Then we can homogenize the equations with respect to $y_1$ to obtain a projective variety in $8$ variables. However, in this form, $y_0-ty_1$ and $y_0$ are linearly independent, hence by a change of variables, we see that this variety is in fact isomorphic to $\PP^1 \times \PP^1 \times \PP^1$ in its Segre embedding.
+
+What we gained by homogenizing is exactly the projective variety given by setting $y_1=0$. But then we get back the equations of $dP_6$ in $\PP^6$.
+\end{proof}
+
+The second smoothing is obtained by deforming the equations of $dP_6$ as a subvariety of $\PP^2 \times \PP^2$. Namely, consider the following matrix:
+
+\begin{equation}
+\label{eq:def2}
+\begin{vmatrix}
+x_1 & y_0 & x_6 \\
+x_2 & x_3 & y_0-t_1 \\
+y_0-t_2 & x_4 & x_5
+\end{vmatrix} \leq 1.
+\end{equation}
+
+
+For $t_1=t_2=0$, we get the cone over $dP_6$, while for generic $t_i$, we get a smooth variety. In fact, we can compute that the discrimant locus (the set of points in $\Aa^2_{t_1,t_2}$ with singular fiber) are the $t_1$-axis, the $t_2$-axis and the line $t_1=t_2$. 
+
+Call (any) smooth fiber $X_2$. 
+
+\begin{lemma}
+The variety $X_2$ is isomorphic to $(\PP^2 \times \PP^2) \cap H \bs dP_6$, where $H$ is a hyperplane in $\PP^8$.
+\end{lemma}
+\begin{proof}
+The technique is the same as in the previous proof. First homogenize the equations \eqref{eq:def2} with respect to $y_1$. If we let $t_{ij}$ ($i,j=0,1,2$) be coordinates of $\PP^8$, then the homogenized variety is $\PP^2 \times \PP^2 \cap \{h = 0\}$, where $h$ is the hyperplane $(t(t_{32}-t_{11})=s(t_{23}-t_{11}$.
+
+Again, what we gained by homogenizing is given by intersecting with $y_1=0$. But this is exactly $dP_6$ again, in the form $\PP^2 \times \PP^2 \cap \{ t_{23}=t_{32}=0 \}$. 
+\end{proof}
+
+We can use what we know about the topology of these spaces to compute homology groups of the two affine smoothings.
+
+\begin{thm}
+The two affine smoothings are topologically different. The homology groups are:
+
+\begin{tabular}{ l || c | c | c | c | c | c | c || c }
+ Group & 0 & 1 & 2 & 3 & 4 & 5 & 6 & Euler-characteristic \\
+\hline
+$H^i(X_1,\Z)$ & 1 & 0 & 2 & 1 & 0 & 0 & 0 & 2 \\
+$H^i(X_2,\Z)$ & 1 & 0 & 1 & 2 & 0 & 0 & 0  & 0
+\end{tabular}
+\end{thm}
+
+\begin{proof}
+Long exact sequence of a pair + Lefschetz duality 
+\end{proof}
+
+\begin{remark}
+In fact, the Andreotti-Frankel theorem \cite{andreotti_affinecw} states the following: if $V$ is any smooth affine variety of complex dimension $n$, then it has the homotopy type of a CW complex of dimension $n$.
+\end{remark}
+
 
 %%%%%%%%%%%%%%%%%%%%%%
 \chapter{A smooth Calabi-Yau}
 
 Consider the hexagon $E_6$. The join $E_6 \ast E_6$ is a $3$-dimensional sphere, and so a smoothing of the corresponding Stanley-Reisner scheme would correspond to a smooth Calabi-Yau manifold. In this chapter I prove that there does indeed exist a smoothing, and I describe some of its properties.
 
-
+Description, singularities, etc.
 
 
 \bibliographystyle{plain}
