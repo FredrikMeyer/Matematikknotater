@@ -1,8 +1,7 @@
 %\documentclass[11pt, english]{book}
 \documentclass[]{uiophd}
-%\usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+\usepackage[utf8x]{inputenc}
 %\usepackage[english]{babel}   % S P R A A K
 % \usepackage{graphicx}    % postscript graphics
 \usepackage{amssymb, amsmath, amsthm} % symboler, osv
@@ -31,7 +30,7 @@
 
 \chapter{Preliminary definitions}
 
-We work over $\C$. 
+We work over $\C$, but some theorems may be stated over a field $k$.
 
 \section{Stanley-Reisner basics}
 
@@ -73,11 +72,67 @@ The classical example of a Calabi-Yau manifold is the quintic threefold in $\PP^
 Let $X$ be the double cover of $\PP^3$ ramified along a smooth octic. The projection map is affine, so the conditions on $H^i(X,\OO_X)$ are fulfilled. To see that the canonical sheaf is trivial, we use the adjunction formula, which says that $K_X= 2 \restr{K_{\PP^3}}{X} + \deg R$, where $R$ is the ramification divisor. Then, since $\omega_{\PP^3}=\OO_{\PP^3}(-4)$, it follows that $K_X=0$.
 \end{example}
 
-If $\K$ is a simplicial sphere, then a smoothing of $\PP(\K)$ will give a Calabi-Yau manifold. 
+If $\K$ is a simplicial sphere, then a smoothing of $\PP(\K)$ will give a Calabi-Yau manifold.
+
 
 ---- ref: bayer-eisenbud graph curves.
 
+The most basic invariants of Calabi-Yau manifolds are their \emph{Hodge numbers $h^{pq}$}. In algebraic geometry these can be defined as the dimensions of the cohomology groups $H^q(X,\Omega^p_X)$. This definition is however not so transparent. On a complex manifold, it is true that $h^{pq}=h^{qp}$, but this is not obvious from our definition. Instead, let us define these groups in complex algebraic geometry terms.
+
+The de Rham complex $(\Omega^\bullet,d)$ refines to a bigraded complex $(\Omega^{\bullet,\bullet},d)$, where a differential form of bidegree $(p,q)$ can be written as 
+$$
+\omega = \sum {f_{IJ}} dz_{i_1} \wedge \ldots \wedge dz_{i_p} \wedge d\overline{z_1}\ldots \wedge d\overline{z_q}.
+$$
+
+The differential $d$ splits as $\partial + \overline \partial$, where $\partial: \Omega^{\bullet,\bullet} \to \Omega^{\bullet+1,\bullet}$, and $\overline \partial: \Omega^{\bullet,\bullet} \to \Omega^{\bullet,\bullet+1}$. The decomposition passes respects cohomology, so we can form the \emph{Dolbeault cohomology groups} $H^{p,q}(X)$. 
+
+With this definition, applying complex conjugation shows that $H^{p,q}=\overline{H^{q,p}}$.
+
+\begin{lemma}
+We have natural isomorphisms $H^{p,q}(X) \simeq H^q(X,\Omega_X^p)$. 
+\end{lemma}
+\begin{proof}
+Use that the de Rham complex is flabby
+\end{proof}
+
+For more details on this and other details from complex geometry, see  \cite{voisin_complexalg}.
+
+The ``Hodge diamond'' is 
+...
+
+\begin{example}
+Let $X$ be a smooth quintic in $\PP^4$. We will compute its Hodge numbers. Let us first compute $H^{1,1}(X)$. We have the following exact sequence
+$$
+0 \to \mathcal I/\mathcal I^2 \to \restr{\Omega_{\PP^4}}{X} \to \Omega_X^1 \to 0
+$$
+Since $\mathcal I/\mathcal I^2 \simeq \OO_X(-5)$, it follows from the long exact sequence of cohomology that $H^1(X,\Omega^1_X) \simeq H^1(X, \restr{\Omega^1_{PP^4}}{X})$. 
+....
+\end{example}
+
 \section{Deformation theory}
+
+Deformation theory is the study how varieties (or other algebraic structures like line bundles, vector bundles, ...) vary in families. 
+
+There is a lot of technical machinery available for the deformation theorist, but for us just a few vector spaces will be of importance.
+
+\begin{defi}
+Let $X$ be a scheme over $k$. Then a \emph{deformation of $X$ over $S$} is a flat morphism $\mathfrak X \to S$ together with an isomorphism $X \simeq \mathfrak X \times_S 0$ for a closed point $0 \in S$:
+$$
+\xymatrix{
+X \simeq X_0 \ar@{^{(}->}[r] \ar[d] &  \mathfrak X \ar[d] \\
+0 \ar[r] & S
+}
+$$
+\end{defi}
+
+Recall that a morphism $f:X \to Y$ is \emph{flat} if the associated morphism $f^{\$}:\OO_Y \to f_\ast \OO_X$ of $\OO_Y$-modules is a flat morphism.
+
+%%% Motivate t1 functors
+
+%% lifting of first order deformations
+
+%% unobstructed problems vs t2 = 0
+
 
 %%%%%%%%%%%%%%%%%%%%
 \chapter{Two topologically distinct smoothings}
