@@ -24,7 +24,7 @@
 \LoadClass[twoside,openright,12pt]{report}
 \IfFileExists{t1zgmj.fd}
   {\RequirePackage[full]{textcomp}
-   \RequirePackage[garamond,expert]{mathdesign}
+%   \RequirePackage[garamond,expert]{mathdesign}
    \RequirePackage[swashQ]{garamondx}}
   {\renewcommand{\rmdefault}{ptm}}
 \IfFileExists{berasans.sty}
