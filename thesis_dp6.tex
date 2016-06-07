@@ -39,7 +39,7 @@ Hence the restriction of $\pi$ to $dP_6$ is an isomorphism onto the hypersurface
 
 Another way to realize blow-ups is this: let $\mathfrak d$ be the linear system of quadrics with assigned basepoints $(1:0:0)$, $(0:1:0)$ and $(0:0:1)$ in $\PP^2$. We can choose a basis given by $x_0x_1,x_0x_2$ and $x_1x_2$. This gives a rational map $\PP^2 \rmap \PP^2$. The closure of the graph of this map is a subvariety of $\PP^2 \times \PP^2$ defined by two bilinear equations. Each of the projections correspond to the blowup.
 
-Explicitly, if we let $y_0,y_1,y_2$ be coordinates on the other $\PP^2$, then the equations are $x_1y_0-x_1y_1=x_1y_1-x_2y_2=0$.
+Explicitly, if we let $y_0,y_1,y_2$ be coordinates on the other $\PP^2$, then the equations are $x_1y_0-x_2y_1=x_1y_0-x_0y_2=0$.
 
 We also have a natural embedding in $\PP^6$ as follows. Denote by $E_1, E_2, E_3$ the exceptional divisors on the blowup. Let $L$ be a line in $\PP^2$. Then the divisor $\pi^\ast 3L - E_1-E_2-E_3$ is ample, and gives an embedding in $\PP^6$ (see \cite[Chapter V, Theorem 4.6]{hartshorne}). A basis for the corresponding linear system is given by all monomials in $\Gamma(\PP^2,\OO_{\PP^2}(3))$ except $x^3,y^3$ and $z^3$. 
 
@@ -112,7 +112,9 @@ Consider the exponential sequence
 0 \to \Z \to \OO_{dP_6} \to \OO_{dP_6}^\ast \to 0.
 \]
 
-Since $dP_6$ is a rational surface, it follows from the long-exact sequence that $H^2(dP_6,\Z) \simeq \Pic(dP_6)$. From the description of $dP_6$ as a blowup, we know from \cite[Chapter V]{hartshorne}, that the Picard group is spanned by the three exceptional divisors, together with the class of the pullback of a hyperplane. 
+Since $dP_6$ is a rational surface, it follows from the long-exact sequence that $H^2(dP_6,\Z) \simeq \Pic(dP_6)$. From the description of $dP_6$ as a blowup, we know from \cite[Chapter V]{hartshorne}, that the Picard group is spanned by the three exceptional divisors, together with the class of the pullback of a hyperplane. Denote these by $E_i$ and $H$, respectively. Then, since the $E_i$ are exceptional divisors, we have $E_i \cdot E_j = -\delta_{ij}$, and also $H^2=1$, since we can compute intersections downstairs.
+
+Consider the embedding of $dP_6$ in $\PP^2 \times \PP^2$ given by the equations $x_1y_0-x_2y_1=x_1y_0-x_0y_2=0$. This is the closure of the graph of a Cremona transformation of $\PP^2$. The three exception divisors in $dP_6$ are given by $\pi_1(P_i)$, where $P_i$ are the three (torus-invariant) blown up points. There are three more interesting lines in $dP_6$: let $L_{ij}$ be the line through $P_i$ and $P_j$ in $\PP^2$. Also denote the proper transform of $L_{ij}$ by $L_{ij}$. These are elements of the Picard group, and hence is a linear combination of the $E_i$ and $H$. Since $L_{ij}$ goes through $P_i$ and $P_j$ once each, we must have $L_{ij} \cdot E_i = 1$. Similarly, $L_{ij} \cdot H=1$. Since $E_i \cdot E_j=-\delta_{ij}$, it follows that $L_{ij}=H-E_i-E_j$. \todo{Make hexagon figure}
 
 %% Picard group
 %% cohomology groups
@@ -240,10 +242,10 @@ Now, what have we gained by homogenizing? The divisor at infinity is $y_1=0$, wh
 \end{proof}
 
 \begin{lemma}
-The cohomology ring of $M=\PP(\mathcal T_{\PP^2})$ is $\Z[x,y]/(x^3,y^2+c_1(E)y+c_2(E))$. In particular, the cohomology of $M$ is given by $(1,0,2,0,2,0,1)$.
+The cohomology ring of $M=\PP(\mathcal T_{\PP^2})$ is $\Z[x,y]/(x^3,y^2+c_1y+c_2)$, where $x$ and $y$ have degree $2$. In particular, the cohomology of $M$ is given by $(1,0,2,0,2,0,1)$.
 \end{lemma}
 \begin{proof}
-This is a consequence of the Leray-Hirsch theorem. See \cite{bott_tu} for a proof.
+The first claim follows from the Leray-Hirch theorem. See \cite[page 270]{bott_tu}. The next claim follows since $x$ and $y$ both have degree $2$.
 \end{proof}
 
 We can use what we know about the topology of these spaces to compute homology groups of the two affine smoothings.
@@ -267,7 +269,7 @@ We will use the Lefschetz duality theorem \cite{spanier_topology}, which in this
 
 The other groups depend upon the explicit form of the maps $H^2(M,\Z) \to H^2(D,\Z)$ and $H^4(M,\Z) \to H^4(D,\Z)$.
 
-By Poincaré duality ((reference)), the induced map corresponds to intersecting the divisors on $M$ with $dP_6$. Computing, we get that map is given by the following matrix:
+By Poincaré duality \todo{Find reference}((reference)), the induced map corresponds to intersecting the divisors on $M$ with $dP_6$. Computing, we get that map is given by the following matrix:
 \[
 H^2(M,\Z) \simeq H_4(M,\Z) \simeq \Z^3 \xrightarrow{
 	\begin{pmatrix}
@@ -283,12 +285,24 @@ This is an injective map, and it follows from the long-exact sequence and the Le
 
 Similarly, the map $H^4(M) \to H^4(dP_6)$ is computed to be given by $(a,b,c) \mapsto a+b+c$, since the three $\PP^1$'s intersect $dP_6$ in a single point. This map has two-dimensional kernel, and we conclude that $H_2(X_1) \simeq H^4(M,dP_6) = \Z^2$, and that $H^1(X_1)=0$.
 
-The computations for $X_2$ are similar but more involved. We first 
+The computations for $X_2$ are similar but more involved. We first note that the Picard group of $M=\PP(\mathcal T_{\PP^2})$ is generated by the pullbacks $F,G$ of the generators of $\Pic(\PP^2_{x_0x_1x_2} \times \PP^2_{y_0y_1y_2})$. Say $F$ is represented by $V(x_0)$ and $G$ is represented by $V(y_0)$\todo{check transversal intersection with dP6}.
+
+Again we compute the intersections of $F$ and $G$ with $dP_6$. Intersecting with $F$ is computed by decomposing the ideal $(x_0,x_1y_0-x_2y_1,x_1y_0-x_0y_2)$ in $k[x_0,x_1,x_2,y_0,y_1,y_2]$ and saturating by $(x_0,x_1,x_2)$ and $(y_0,y_1,y_2)$. This can either be done by hand or by using \texttt{Macaulay2}. Either way, we find that $\restr{F}{dP_6} = E_3+L_{23} + E_2=H$, using the notation from earlier this chapter. Similarly $\restr{G}{dP_6}=L_{23}+L_{12}+E_2=2H-E_1-E_2-E_3$. Hence the map on cohomology is given by the matrix
+
+\[
+H^2(M,\Z) \simeq H_4(M,\Z) \simeq \Z^2 \xrightarrow{
+	\begin{pmatrix}
+	0 & -1 \\
+	0 & -1 \\
+	0 & -1  \\
+	1 & 2 
+	\end{pmatrix}
+} \Z^4 \simeq H_2(dP_6,\Z) \simeq H^2(dP_6,\Z).
+\]
+
+This is an injective map, and as above, we conclude that $H_3(X_2) \simeq H^3(M,dP_6) \simeq \Z^2$, and also that $H_4(X_1)=0$.
 
 
-%%% (X_2)tillukning er PP(PP_2), evt totalrommet til Grassmannian Gr(1,P^2).
-%%% Denne har kohomologi lik P^2 \times P^1.
-%%% Beregn avbildningene.
 \end{proof}
 
 \begin{remark}

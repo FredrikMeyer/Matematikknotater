@@ -94,6 +94,33 @@
   \field{year}{1977}
 \endentry
 
+\entry{harris_alggeo}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Harris}{H.}%
+     {Joe}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer-Verlag}%
+  }
+  \strng{namehash}{HJ1}
+  \strng{fullhash}{HJ1}
+  \field{labelalpha}{Har95}
+  \field{sortinit}{H}
+  \field{isbn}{0-387-97716-3}
+  \field{note}{A first course, Corrected reprint of the 1992 original}
+  \field{pages}{xx+328}
+  \field{series}{Graduate Texts in Mathematics}
+  \field{title}{Algebraic geometry}
+  \field{volume}{133}
+  \list{location}{1}{%
+    {New York}%
+  }
+  \field{year}{1995}
+\endentry
+
 \entry{spanier_topology}{book}{}
   \name{author}{1}{}{%
     {{}%

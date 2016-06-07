@@ -6,3 +6,38 @@
 Consider the hexagon $E_6$. The join $E_6 \ast E_6$ is a $3$-dimensional sphere, and so a smoothing of the corresponding Stanley-Reisner scheme would correspond to a smooth Calabi-Yau manifold. In this chapter I prove that there does indeed exist a smoothing, and I describe some of its properties.
 
 Description, singularities, etc.
+
+\section{Isolated singularities}
+\todo{find better section title}
+
+The smoothing process is done by deforming the ambient space. First, note that $\K= E_6 \ast \E_6 \ast \Delta^0 \ast \Delta^0$, is a $5$-dimensional simplicial sphere, which is the join of two hexagons with interior. The Stanley-Reisner ring of $\K$ is the tensor product $k[E_6 \ast \Delta^0] \otimes_k k[E_6 \ast \Delta^0]$. Each of the factors deform to the affine cone over a del Pezzo surface of degree $6$, the same on as in Chapter 2.
+
+It follows that $\PP(\K)$ deforms to a toric variety $Y_0$, whose defining polytope is the \emph{join} of two hexagons. Since the ideal of $\PP(\K) \subset \PP^{13}$ splits into to groups $I+J$, it is not hard to see that the singular locus of $Y_0$ consists of two disjoint copies of $\dP6$. 
+
+\begin{lemma}
+Let $X_0$ be the intersection of $Y_0$ with two general hyperplanes in $\PP^{13}$. Then $X_0$ is a singular Calabi-Yau variety with $12$ isolated singularities.
+\end{lemma}
+\begin{proof}
+Away from the singular locus of $Y_0$, the intersection is smooth by Bertini.
+
+The singular locus of $Y_0$ is equal to $\dP6 \sqcup \dP6$, hence is of dimension $2$ and degree $12$. Two general hyperplanes will intersect the singular locus in $12$ points. 
+
+Then one form of Bertini's theorem \cite[page 216]{harris_alggeo}, says that all singular points on $X$ comes from those of $Y$. 
+\end{proof}
+
+We can determine the types of the singularities of $X_0$.
+
+\begin{lemma}
+Let $(U,p_i)$ be the germ of $X_0$ at $p_i$. Then $(U,p_i) \simeq (C(\dP6),0)$.
+\end{lemma}
+\begin{proof}
+In each chart, $X_0$ looks like $\Aa^2 \times C(dP_6)$. Let $\Aa^2$ have coordinates $x_2,x_6$ and $C(dP_6)$ have coordinates $z_1,\ldots,z_6,y_1$. Then $X_0$ is the zero set of $I(f,g)$, where $f,g$ are polynomials that are linear in the $z_i,y_1$ and degree $4$ in $x_2$ and $x_6$ (in fact, the Newton polyhedron of $f(x_2,x_6,0,\ldots,0)$ is a hexagon).
+
+Let $p_i=(a_1,a_2,0,\ldots,0)$ be a singular point. By a change of variables, we can translate $p_i$ to the origin. Then $f=x_2u_1+l(z_1,\ldots,z_6,y_1)$ and $g=x_6u_2 + l'(z_1,\ldots,z_6,y_1)$, where $u_1,u_2$ are units around the origin, and $l,l'$ are linear forms in $k[z_1,\ldots,z_6,y_1]$.
+
+Hence for a small enough $U$ (such that $u_1,u_2$ are units restricted to $U$), we can do another change of variables, letting $x_2'=x_2u_1$, and $x_6'=x_6u_2$. This allows us to eliminate $x_2,x_6$ locally from the equations, and we are left with $C(\dP6)$.
+\end{proof}
+
+
+
+\section{Euler characteristic}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.19)  2 JUN 2016 17:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.19)  7 JUN 2016 14:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1450,17 +1450,81 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \c@losn=\count153
 \c@exc=\count154
 \c@sol=\count155
+LaTeX Info: Redefining \dP6 on input line 188.
 )
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/xargs/xargs.sty
+Package: xargs 2008/03/22 v1.1  extended macro definitions  (mpg)
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xkeyval/xkeyval.tex
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xkeyval/xkvutils.tex
+\XKV@toks=\toks56
+\XKV@tempa@toks=\toks57
+)
+\XKV@depth=\count156
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\xargs@max=\count157
+\xargs@toksa=\toks58
+\xargs@toksb=\toks59
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/todonotes/todonotes.sty
+Package: todonotes 2015/07/09 .dtx Todonotes source and documentation.
+Package: todonotes 2012/07/25
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count158
+\calc@Bcount=\count159
+\calc@Adimen=\dimen276
+\calc@Bdimen=\dimen277
+\calc@Askip=\skip50
+\calc@Bskip=\skip51
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count160
+\calc@Cskip=\skip52
+)
+\c@@todonotes@numberoftodonotes=\count161
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/frontendlayer/tikz/libraries/tikzlibraryshadows.code.tex
+File: tikzlibraryshadows.code.tex 2008/01/13 v3.0.1a (rcs-revision 1.3)
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2009/11/15 v3.0.1a (rcs-revision 1.2)
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/libraries/pgflibraryfadings.code.tex
+File: pgflibraryfadings.code.tex 2008/02/07 v3.0.1a (rcs-revision 1.3)
+))))
 (/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
 /csquotes/csquotes.sty
 Package: csquotes 2016/01/31 v5.1g context-sensitive quotations (JAW)
-\csq@reset=\count156
-\csq@gtype=\count157
-\csq@glevel=\count158
-\csq@qlevel=\count159
-\csq@maxlvl=\count160
-\csq@tshold=\count161
-\csq@ltx@everypar=\toks56
+\csq@reset=\count162
+\csq@gtype=\count163
+\csq@glevel=\count164
+\csq@qlevel=\count165
+\csq@maxlvl=\count166
+\csq@tshold=\count167
+\csq@ltx@everypar=\toks60
 
 (/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
 /csquotes/csquotes.def
@@ -1485,131 +1549,127 @@ AB)
 (/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
 /logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count162
+\lrq@indent=\count168
 
 (/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
 /logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
-/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-\c@tabx@nest=\count163
-\c@listtotal=\count164
-\c@listcount=\count165
-\c@liststart=\count166
-\c@liststop=\count167
-\c@citecount=\count168
-\c@citetotal=\count169
-\c@multicitecount=\count170
-\c@multicitetotal=\count171
-\c@instcount=\count172
-\c@maxnames=\count173
-\c@minnames=\count174
-\c@maxitems=\count175
-\c@minitems=\count176
-\c@citecounter=\count177
-\c@savedcitecounter=\count178
-\c@uniquelist=\count179
-\c@uniquename=\count180
-\c@refsection=\count181
-\c@refsegment=\count182
-\c@maxextrayear=\count183
-\c@maxextraalpha=\count184
-\c@abbrvpenalty=\count185
-\c@highnamepenalty=\count186
-\c@lownamepenalty=\count187
-\c@maxparens=\count188
-\c@parenlevel=\count189
-\blx@tempcnta=\count190
-\blx@tempcntb=\count191
-\blx@tempcntc=\count192
-\blx@maxsection=\count193
-\blx@maxsegment=\count194
-\blx@notetype=\count195
-\blx@parenlevel@text=\count196
-\blx@parenlevel@foot=\count197
-\labelnumberwidth=\skip50
-\labelalphawidth=\skip51
-\shorthandwidth=\skip52
-\biblabelsep=\skip53
-\bibitemsep=\skip54
-\bibnamesep=\skip55
-\bibinitsep=\skip56
-\bibparsep=\skip57
-\bibhang=\skip58
+\c@tabx@nest=\count169
+\c@listtotal=\count170
+\c@listcount=\count171
+\c@liststart=\count172
+\c@liststop=\count173
+\c@citecount=\count174
+\c@citetotal=\count175
+\c@multicitecount=\count176
+\c@multicitetotal=\count177
+\c@instcount=\count178
+\c@maxnames=\count179
+\c@minnames=\count180
+\c@maxitems=\count181
+\c@minitems=\count182
+\c@citecounter=\count183
+\c@savedcitecounter=\count184
+\c@uniquelist=\count185
+\c@uniquename=\count186
+\c@refsection=\count187
+\c@refsegment=\count188
+\c@maxextrayear=\count189
+\c@maxextraalpha=\count190
+\c@abbrvpenalty=\count191
+\c@highnamepenalty=\count192
+\c@lownamepenalty=\count193
+\c@maxparens=\count194
+\c@parenlevel=\count195
+\blx@tempcnta=\count196
+\blx@tempcntb=\count197
+\blx@tempcntc=\count198
+\blx@maxsection=\count199
+\blx@maxsegment=\count266
+\blx@notetype=\count267
+\blx@parenlevel@text=\count268
+\blx@parenlevel@foot=\count269
+\labelnumberwidth=\skip53
+\labelalphawidth=\skip54
+\shorthandwidth=\skip55
+\biblabelsep=\skip56
+\bibitemsep=\skip57
+\bibnamesep=\skip58
+\bibinitsep=\skip59
+\bibparsep=\skip60
+\bibhang=\skip61
 \blx@auxin=\read3
 \blx@auxout=\write5
-\c@mincomprange=\count198
-\c@maxcomprange=\count199
-\c@mincompwidth=\count266
-\c@labelname=\count267
-\c@savedlabelname=\count268
-\c@author=\count269
-\c@savedauthor=\count270
-\c@shortauthor=\count271
-\c@savedshortauthor=\count272
-\c@editor=\count273
-\c@savededitor=\count274
-\c@editora=\count275
-\c@savededitora=\count276
-\c@editorb=\count277
-\c@savededitorb=\count278
-\c@editorc=\count279
-\c@savededitorc=\count280
-\c@shorteditor=\count281
-\c@savedshorteditor=\count282
-\c@bookauthor=\count283
-\c@savedbookauthor=\count284
-\c@translator=\count285
-\c@savedtranslator=\count286
-\c@annotator=\count287
-\c@savedannotator=\count288
-\c@commentator=\count289
-\c@savedcommentator=\count290
-\c@introduction=\count291
-\c@savedintroduction=\count292
-\c@foreword=\count293
-\c@savedforeword=\count294
-\c@afterword=\count295
-\c@savedafterword=\count296
-\c@holder=\count297
-\c@savedholder=\count298
-\c@namea=\count299
-\c@savednamea=\count300
-\c@nameb=\count301
-\c@savednameb=\count302
-\c@namec=\count303
-\c@savednamec=\count304
-\c@institution=\count305
-\c@savedinstitution=\count306
-\c@language=\count307
-\c@savedlanguage=\count308
-\c@location=\count309
-\c@savedlocation=\count310
-\c@organization=\count311
-\c@savedorganization=\count312
-\c@origlocation=\count313
-\c@savedoriglocation=\count314
-\c@origpublisher=\count315
-\c@savedorigpublisher=\count316
-\c@pageref=\count317
-\c@savedpageref=\count318
-\c@publisher=\count319
-\c@savedpublisher=\count320
-\c@lista=\count321
-\c@savedlista=\count322
-\c@listb=\count323
-\c@savedlistb=\count324
-\c@listc=\count325
-\c@savedlistc=\count326
-\c@listd=\count327
-\c@savedlistd=\count328
-\c@liste=\count329
-\c@savedliste=\count330
-\c@listf=\count331
-\c@savedlistf=\count332
+\c@mincomprange=\count270
+\c@maxcomprange=\count271
+\c@mincompwidth=\count272
+\c@labelname=\count273
+\c@savedlabelname=\count274
+\c@author=\count275
+\c@savedauthor=\count276
+\c@shortauthor=\count277
+\c@savedshortauthor=\count278
+\c@editor=\count279
+\c@savededitor=\count280
+\c@editora=\count281
+\c@savededitora=\count282
+\c@editorb=\count283
+\c@savededitorb=\count284
+\c@editorc=\count285
+\c@savededitorc=\count286
+\c@shorteditor=\count287
+\c@savedshorteditor=\count288
+\c@bookauthor=\count289
+\c@savedbookauthor=\count290
+\c@translator=\count291
+\c@savedtranslator=\count292
+\c@annotator=\count293
+\c@savedannotator=\count294
+\c@commentator=\count295
+\c@savedcommentator=\count296
+\c@introduction=\count297
+\c@savedintroduction=\count298
+\c@foreword=\count299
+\c@savedforeword=\count300
+\c@afterword=\count301
+\c@savedafterword=\count302
+\c@holder=\count303
+\c@savedholder=\count304
+\c@namea=\count305
+\c@savednamea=\count306
+\c@nameb=\count307
+\c@savednameb=\count308
+\c@namec=\count309
+\c@savednamec=\count310
+\c@institution=\count311
+\c@savedinstitution=\count312
+\c@language=\count313
+\c@savedlanguage=\count314
+\c@location=\count315
+\c@savedlocation=\count316
+\c@organization=\count317
+\c@savedorganization=\count318
+\c@origlocation=\count319
+\c@savedoriglocation=\count320
+\c@origpublisher=\count321
+\c@savedorigpublisher=\count322
+\c@pageref=\count323
+\c@savedpageref=\count324
+\c@publisher=\count325
+\c@savedpublisher=\count326
+\c@lista=\count327
+\c@savedlista=\count328
+\c@listb=\count329
+\c@savedlistb=\count330
+\c@listc=\count331
+\c@savedlistc=\count332
+\c@listd=\count333
+\c@savedlistd=\count334
+\c@liste=\count335
+\c@savedliste=\count336
+\c@listf=\count337
+\c@savedlistf=\count338
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -1623,13 +1683,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 (/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
 /biblatex/biblatex.def
 File: biblatex.def 
-\c@textcitecount=\count333
-\c@textcitetotal=\count334
-\c@textcitemaxnames=\count335
-\c@biburlnumpenalty=\count336
-\c@biburlucpenalty=\count337
-\c@biburllcpenalty=\count338
-\c@smartand=\count339
+\c@textcitecount=\count339
+\c@textcitetotal=\count340
+\c@textcitemaxnames=\count341
+\c@biburlnumpenalty=\count342
+\c@biburlucpenalty=\count343
+\c@biburllcpenalty=\count344
+\c@smartand=\count345
 )
 Package biblatex Info: Trying to load bibliography style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.bbx' found.
@@ -1643,8 +1703,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 (/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
 /biblatex/bbx/standard.bbx
 File: standard.bbx 2015/12/22 v3.2 biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count340
-\c@bbx:relatedtotal=\count341
+\c@bbx:relatedcount=\count346
+\c@bbx:relatedtotal=\count347
 ))
 Package biblatex Info: Trying to load citation style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.cbx' found.
@@ -1696,28 +1756,28 @@ File: english.lbx 2015/12/22 v3.2 biblatex localization (PK/JW/AB)
 (./thesis_dp6.aux) (./thesis_smoothcy.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 33.
 
 (/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
 /base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1757,17 +1817,17 @@ LaTeX Font Info:    ... okay on input line 28.
 (/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/conte
 xt/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count342
-\scratchdimen=\dimen276
+\scratchcounter=\count348
+\scratchdimen=\dimen278
 \scratchbox=\box46
-\nofMPsegments=\count343
-\nofMParguments=\count344
-\everyMPshowfont=\toks57
-\MPscratchCnt=\count345
-\MPscratchDim=\dimen277
-\MPnumerator=\count346
-\makeMPintoPDFobject=\count347
-\everyMPtoPDFconversion=\toks58
+\nofMPsegments=\count349
+\nofMParguments=\count350
+\everyMPshowfont=\toks61
+\MPscratchCnt=\count351
+\MPscratchDim=\dimen279
+\MPnumerator=\count352
+\makeMPintoPDFobject=\count353
+\everyMPtoPDFconversion=\toks62
 )
 (/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
 /oberdiek/epstopdf-base.sty
@@ -1787,34 +1847,34 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@mv@tabular=\count348
-\c@mv@boldtabular=\count349
+\c@mv@tabular=\count354
+\c@mv@boldtabular=\count355
  ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 28.
+LaTeX Font Info:    Try loading font information for U+msa on input line 33.
 
 (/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
 /amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 28.
+LaTeX Font Info:    Try loading font information for U+msb on input line 33.
 
 (/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
 /amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 28.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 33.
 
 (/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
 /jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Package xypdf Info: Line width: 0.47998pt on input line 28.
+Package xypdf Info: Line width: 0.47998pt on input line 33.
 \AtBeginShipoutBox=\box47
-Package hyperref Info: Link coloring OFF on input line 28.
+Package hyperref Info: Link coloring OFF on input line 33.
 
 (/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
 /hyperref/nameref.sty
@@ -1824,11 +1884,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 ic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count350
+\c@section@level=\count356
 )
-LaTeX Info: Redefining \ref on input line 28.
-LaTeX Info: Redefining \pageref on input line 28.
-LaTeX Info: Redefining \nameref on input line 28.
+LaTeX Info: Redefining \ref on input line 33.
+LaTeX Info: Redefining \pageref on input line 33.
+LaTeX Info: Redefining \nameref on input line 33.
  (./thesis.out) (./thesis.out)
 \@outlinefile=\write6
 \openout6 = `thesis.out'.
@@ -1841,8 +1901,8 @@ Package biblatex Info: Data encoding 'ascii' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
  (./thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 28.
-Package biblatex Info: Reference segment=0 on input line 28.
+Package biblatex Info: Reference section=0 on input line 33.
+Package biblatex Info: Reference segment=0 on input line 33.
 
 [1
 
@@ -1891,11 +1951,14 @@ ric form: let $\OML/cmm/m/it/12 y; x[]; [] ; x[]$
 Underfull \vbox (badness 6775) has occurred while \output is active []
 
  [9]
-[10] [11]
-Package hyperref Info: bookmark level for unknown thm defaults to 0 on input li
-ne 252.
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 117.
 
-Overfull \hbox (9.6387pt too wide) in paragraph at lines 264--265
+[10] [11] [12]
+Package hyperref Info: bookmark level for unknown thm defaults to 0 on input li
+ne 254.
+
+Overfull \hbox (9.6387pt too wide) in paragraph at lines 266--267
 []\T1/zgmx/m/n/12 The sin-gu-lar co-ho-mol-ogy of $\OML/cmm/m/it/12 M \OT1/cmr/
 m/n/12 = \U/msb/m/n/12 P[] \OMS/cmsy/m/n/12 ^^B \U/msb/m/n/12 P[] \OMS/cmsy/m/n
 /12 ^^B \U/msb/m/n/12 P[]$ \T1/zgmx/m/n/12 is given by $\OT1/cmr/m/n/12 (1\OML/
@@ -1904,8 +1967,8 @@ t/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 3\OML/cmm/m/it/12 ;
 \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1)$\T1/zgmx/m/n/12 ,
  []
 
-[12]
-Overfull \hbox (2.70068pt too wide) in paragraph at lines 284--285
+[13]
+Overfull \hbox (2.70068pt too wide) in paragraph at lines 286--287
 []\T1/zgmx/m/n/12 Similarly, the map $\OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML
 /cmm/m/it/12 M\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 H[]\OT1/cmr
 /m/n/12 (\OML/cmm/m/it/12 dP[]\OT1/cmr/m/n/12 )$ \T1/zgmx/m/n/12 is com-puted t
@@ -1913,81 +1976,105 @@ o be given by $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a; b; c\OT1/cmr/m/n/12 ) \OMS/
 cmsy/m/n/12 7!
  []
 
+LaTeX Font Info:    Try loading font information for T1+fvm on input line 290.
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/bera/t1fvm.fd
+File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+)
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 10.79993pt on input line 290.
+
+Overfull \hbox (24.5627pt too wide) in paragraph at lines 303--304
+[]\T1/zgmx/m/n/12 This is an in-jec-tive map, and as above, we con-clude that $
+\OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X[]\OT1/cmr/m/n/12 ) \OMS
+/cmsy/m/n/12 ' \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M; dP[]\OT
+1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 '
+ []
+
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
- line 295.
-) [13]
+ line 309.
+) [14]
 \openout2 = `thesis_smoothcy.aux'.
 
- (./thesis_smoothcy.tex [14
-
-
-
-]
+ (./thesis_smoothcy.tex
 Chapter 3.
-) [15] [16
+[15
 
 
-] [17]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
- (./thesis.aux (./thesis_prelims.aux) (./thesis_dp6.aux)
-(./thesis_smoothcy.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 40.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 40.
+
+]) [16] [17
+
+
+] [18
+
+] (./thesis.tdo)
+\tf@tdo=\write7
+\openout7 = `thesis.tdo'.
+
+ [19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
+ (./thesis.aux (./thesis_prelims.aux)
+(./thesis_dp6.aux) (./thesis_smoothcy.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 2DB4A7DC64D61B96A9CCA70AEE870A0F;675.
+(rerunfilecheck)             Checksum: 46371019C2D23CE9CC2F21DF08E37099;811.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29218 strings out of 493033
- 535438 string characters out of 6121489
- 749423 words of memory out of 5000000
- 32059 multiletter control sequences out of 15000+600000
- 87916 words of font info for 111 fonts, out of 8000000 for 9000
+ 30046 strings out of 493033
+ 553665 string characters out of 6121489
+ 922353 words of memory out of 5000000
+ 32832 multiletter control sequences out of 15000+600000
+ 88536 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,13n,82p,3255b,1478s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,13n,104p,3255b,1480s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-local/fonts/
 enc/dvips/garamondx/zgmt1.enc}{/mn/sarpanitu/modules/packages/texlive/2015-uio/
-uio-texmf/texmf-local/fonts/enc/dvips/garamondx/swashQ.enc}</mn/sarpanitu/modul
-es/packages/texlive/2015-uio/uio-texmf/texmf-local/fonts/type1/public/garamondx
-/NewG8-Bol.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf
--local/fonts/type1/public/garamondx/NewG8-Ita.pfb></mn/sarpanitu/modules/packag
-es/texlive/2015-uio/uio-texmf/texmf-local/fonts/type1/public/garamondx/NewG8-Re
-g-SC.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-local
-/fonts/type1/public/garamondx/NewG8-Reg.pfb></mn/sarpanitu/modules/packages/tex
-live/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1
-/public/amsfonts/cmextra/cmex8.pfb></mn/sarpanitu/modules/packages/texlive/2015
--uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></mn/sarpan
-itu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi12.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texm
-f/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></mn/sarpanitu/modules/pa
+uio-texmf/texmf-dist/fonts/enc/dvips/base/8r.enc}{/mn/sarpanitu/modules/package
+s/texlive/2015-uio/uio-texmf/texmf-local/fonts/enc/dvips/garamondx/swashQ.enc}<
+/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-local/fonts/typ
+e1/public/garamondx/NewG8-Bol.pfb></mn/sarpanitu/modules/packages/texlive/2015-
+uio/uio-texmf/texmf-local/fonts/type1/public/garamondx/NewG8-Ita.pfb></mn/sarpa
+nitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-local/fonts/type1/public
+/garamondx/NewG8-Reg-SC.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/ui
+o-texmf/texmf-local/fonts/type1/public/garamondx/NewG8-Reg.pfb></mn/sarpanitu/m
+odules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmex10.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/tex
+mf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></mn/sarpanitu/modules/pa
 ckages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i8.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb></mn/sarpanitu/modules/packages/texlive/
-2015-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></mn/sar
-panitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr6.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-tex
-mf/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></mn/sarpanitu/modules/pa
-ckages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy8.pfb></mn/sarpanitu/modules/packages/texlive
-/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></m
-n/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/
-public/amsfonts/symbols/msam10.pfb></mn/sarpanitu/modules/packages/texlive/2015
--uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></mn/s
+i10.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb></mn/sarpanitu/modules/packages/texliv
+e/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></mn/s
 arpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/pub
-lic/rsfs/rsfs10.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/
-texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></mn/sarpanitu/modules/package
-s/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/xypic/xybsql10.pfb><
-/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type
-1/public/xypic/xybtip10.pfb>
-Output written on thesis.pdf (17 pages, 271001 bytes).
+lic/amsfonts/cm/cmmi8.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-
+texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></mn/sarpanitu/module
+s/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr12.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr6.pfb></mn/sarpanitu/modules/packages/texli
+ve/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></mn/s
+arpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/uio
+-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></mn/sarpanitu/modul
+es/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/e
+uler/eufm10.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texm
+f-dist/fonts/type1/public/bera/fvmr8a.pfb></mn/sarpanitu/modules/packages/texli
+ve/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
+></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/ty
+pe1/public/amsfonts/symbols/msbm10.pfb></mn/sarpanitu/modules/packages/texlive/
+2015-uio/uio-texmf/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></mn/sarpanitu
+/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/xypi
+c/xyatip10.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf
+-dist/fonts/type1/public/xypic/xybsql10.pfb></mn/sarpanitu/modules/packages/tex
+live/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
+Output written on thesis.pdf (19 pages, 289933 bytes).
 PDF statistics:
- 285 PDF objects out of 1000 (max. 8388607)
- 240 compressed objects within 3 object streams
- 66 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 350 PDF objects out of 1000 (max. 8388607)
+ 286 compressed objects within 3 object streams
+ 80 named destinations out of 1000 (max. 500000)
+ 205 words of extra memory for PDF output out of 10000 (max. 10000000)
 

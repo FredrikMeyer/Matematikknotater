@@ -17,6 +17,11 @@
 \usepackage{hyperref}
 \usepackage{mystyle} % stilfilen      
 
+%\usepackage[pdftex,dvipsnames]{xcolor}  % Coloured text etc.
+\usepackage{xargs}  
+\usepackage[prependcaption,shadow,backgroundcolor=white]{todonotes}
+%\newcommandx{\unsure}[2][1=]{\todo[backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+
 \usepackage{csquotes}
 \usepackage[backend=bibtex,bibencoding=ascii, style=alphabetic]{biblatex}
 \addbibresource{bibliografi.bib}
@@ -35,6 +40,10 @@
 \include{thesis_dp6}
 \include{thesis_smoothcy}
 
+
+
 \printbibliography
+
+\listoftodos
 
 \end{document}
