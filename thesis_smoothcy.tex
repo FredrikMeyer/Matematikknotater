@@ -39,5 +39,37 @@ Hence for a small enough $U$ (such that $u_1,u_2$ are units restricted to $U$), 
 \end{proof}
 
 
+\section{Smoothing $X_0$}
 
-\section{Euler characteristic}
+There is a smoothing of $X_0$ to a smooth Calabi-Yau $X$ with Euler characteristic $-72$.
+
+\begin{lemma}
+The toric variety $Y_0$ deforms to a variety $Y$ with singularities of dimension $\leq 1$.
+\end{lemma}
+\begin{proof}
+Consider the family $Y_t$ defined by
+\begin{align*}
+\begin{vmatrix}
+z_1 & z_2 & y_1 - t(2x_6-x_2) \\
+y_1-(x_6-x_2) & z_3 & z_4 \\
+z_6 & y_1 & z_5
+\end{vmatrix} \leq 1.
+&&
+\begin{vmatrix}
+x_1 & x_2 & y_0 - t(2z_6-z_2) \\
+y_0-t(z_6-z_2) & x_3 & x_4 \\
+x_6 & y_0 & x_5
+\end{vmatrix} \leq 1.
+\end{align*}
+Then $Y_0$ is the central fiber, and one can check with computer help that the singular locus is a chain of $\PP^1$'s.
+\end{proof}
+
+Since $X_0$ is a complete intersection in $Y_0$, it deforms as well. By Bertini's theorem $X = X_1$ is smooth. In fact, with the help of a computer we can say a little more:
+
+\begin{prop}
+The smoothing $X$ of $X_0$ has topological Euler characteristic $-72$.
+\end{prop}
+
+\begin{proof}
+Since $\chi(X) = 2\chi(\mathcal T_X) = -2\chi(\Omega_X^1)$, we will show that $\chi(\Omega_X^1)=36$. 
+\end{proof}
