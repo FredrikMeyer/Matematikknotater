@@ -1,0 +1,213 @@
+\documentclass[11pt, english]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}   % S P R A A K
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{calc}
+%\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+\usepackage{booktabs}
+\usepackage{listings}
+\lstset{language=Macaulay2}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Macaulay2,                 % the language of the code
+  otherkeywords={*,...},           % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+%\usepackage[a5paper,margin=0.5in]{geometry}
+
+\begin{document}
+\title{Calculations}
+\author{Fredrik Meyer}
+\maketitle
+
+\tableofcontents 
+
+\section{Computations on dP6}
+\subsection{Finding equations of deformations}
+%fra filen defcdp6.m2
+
+Consider the del Pezzo surface $dP_6$ of degree 6 embedded in $\PP^6$. Its ideal is defined as follows:
+
+\begin{lstlisting}
+restart
+S = QQ[x_1..x_6,y_0]
+I = ideal(x_1*x_3-x_2*y_0,
+    	x_2*x_4-x_3*y_0,
+	x_3*x_5-x_4*y_0,
+	x_4*x_6-x_5*y_0,
+	x_5*x_1-x_6*y_0,
+	x_6*x_2-x_1*y_0,
+	x_1*x_4-y_0^2,
+	x_2*x_5-y_0^2,
+	x_3*x_6-y_0^2)
+\end{lstlisting}
+
+We compute the two deformations of its affine cone using the package \texttt{VersalDeformations}.
+
+\begin{lstlisting}
+(F,R,G,C) = versalDeformation(gens I);
+decompose ideal transpose mingens ideal G
+\end{lstlisting}
+
+The output are four lists of matrices entries in $\Q[\mathbf x] \otimes \Q[t_1,t_2,t_3]$. The list $F$ consists of the equations of the family, and the list $R$ of the relations. The list $G$ gives equations for the base space. We have that $F_0$ is the matrix of generators of $I$, and that $F_i R_i \equiv 0 \pmod{t^{i+1}}$.
+
+The decomposition of \texttt{ideal G} is the following:
+\begin{lstlisting}
+i9 : decompose ideal transpose mingens ideal G
+
+o9 = {ideal(t  - t ), ideal (t  - t , t )}
+             1    3           2    3   1
+
+\end{lstlisting}
+
+Thus the base space splits into two components meeting transversely at the origin, of dimension $2$ and $1$, respectively. By doing a change of variables we can get rid of the linear terms:
+
+\begin{lstlisting}
+T = QQ[x_1..x_6,y_0,t_1,t_2,t_3,s_1,s_2,s_3];
+gsub = sub(sub(ideal mingens ideal G,T), {t_2 => s_2+s_3-s_1, t_1 => s_3, t_3 => s_3-s_1})
+fsub = transpose  sub(sub(sum F,T), {t_2 => s_2+s_3-s_1, t_1 => s_3, t_3 => s_3-s_1})
+\end{lstlisting}
+
+Now the equations are easier:
+
+\begin{lstlisting}
+i13 : decompose gsub
+
+o13 = {ideal(s ), ideal (s , s )}
+              1           3   2
+
+\end{lstlisting}
+
+We can get equations for each of these families by setting $s_1=0$ and $s_3=s_2=0$, respectively:
+\begin{lstlisting}
+i25 : fsub1 = sub(fsub, s_1 => 0)
+
+o25 = {-2} | x_1x_3-x_2y_0                            |
+      {-2} | x_2x_4-x_3y_0+x_3s_2+x_3s_3              |
+      {-2} | x_3x_5-x_4y_0+x_4s_3                     |
+      {-2} | x_4x_6-x_5y_0                            |
+      {-2} | x_1x_5-x_6y_0+x_6s_2+x_6s_3              |
+      {-2} | x_2x_6-x_1y_0+x_1s_3                     |
+      {-2} | x_1x_4-y_0^2+y_0s_2+y_0s_3               |
+      {-2} | x_2x_5-y_0^2+y_0s_2+2y_0s_3-s_2s_3-s_3^2 |
+      {-2} | x_3x_6-y_0^2+y_0s_3                      |
+
+              9       1
+o25 : Matrix T  <--- T
+\end{lstlisting}
+
+And:
+
+\begin{lstlisting}
+i26 : fsub2 = sub(fsub, {s_3 => 0, s_2 => 0})
+
+o26 = {-2} | x_1x_3-x_2y_0        |
+      {-2} | x_2x_4-x_3y_0-x_3s_1 |
+      {-2} | x_3x_5-x_4y_0        |
+      {-2} | x_4x_6-x_5y_0-x_5s_1 |
+      {-2} | x_1x_5-x_6y_0        |
+      {-2} | x_2x_6-x_1y_0-x_1s_1 |
+      {-2} | x_1x_4-y_0^2-y_0s_1  |
+      {-2} | x_2x_5-y_0^2-y_0s_1  |
+      {-2} | x_3x_6-y_0^2-y_0s_1  |
+
+              9       1
+o26 : Matrix T  <--- T
+\end{lstlisting}
+
+\subsection{Intersecting with two special hyperplanes}
+%fra filen defcdp6.m2
+
+Consider $dP_6$ defined as above. Then consider the two hyperplanes
+$$
+h_1 = x_1+x_2+x_3+x_4+x_5+x_6
+$$
+and
+$$
+h_2 = x_1-x_2+x_3-x_4+x_5-x_6.
+$$
+
+We can compute the intersection with $dP_6$ in \texttt{Macaulay2} as follows:
+\begin{lstlisting}
+h1 = x_1+x_2+x_3+x_4+x_5+x_6
+h2 = x_1-x_2+x_3-x_4+x_5-x_6
+
+SS = S[r]/(r^2+3)
+apply(decompose(sub(I + h1 + h2,SS)), j -> ideal mingens sub(j,y_0 => 1))
+\end{lstlisting}
+
+The reason we create a new ring is that we need $\sqrt{-3}$ in order for the ideals to decompose. The results is the following list of ideals:
+
+\begin{enumerate}
+	\item $(x_5-1,x_4+x_6+1,x_3+x_6+1,x_2-1,x_1-x_6,r-2x_6-1)$.
+	\item $(x_5-1,x_4+x_6+1,x_3+x_6+1,x_2-1,x_1-x_6,r+2x_6+1)$.
+	\item $(x_6-1,x_4-x_5,x_3-1,x_2+x_5+1,x_1+x_5+1,r-2x_5-1)$.
+	\item $(x_6-1,x_4-x_5,x_3-1,x_2+x_5+1,x_1+x_5+1,r+2x_5+1)$.
+	\item $(x_5-x_6,x_4-1,x_3+x_6+1,x_2+x_6+1,x_1-1,r-2x_6-1)$.
+	\item $(x_5-x_6,x_4-1,x_3+x_6+1,x_2+x_6+1,x_1-1,r+2x_6+1)$.
+\end{enumerate}
+
+
+From this we can read off the coordinates in $\PP^6$:
+
+\begin{table}[h]
+\centering
+\caption{Table of singular points.}
+\label{singpoints}
+\begin{tabular}{@{}lllllll@{}}
+\toprule
+$x_1$ & $x_2$ & $x_3$ & $x_4$ & $x_5$ & $x_6$ & $y_0$ \\ \midrule
+$\frac{-1+\sqrt{3}}{2}$ & $1$ & $\frac{-1-\sqrt{-3}}{2}$ & $\frac{-1-\sqrt{-3}}{2}$ & $1$& $\frac{-1 + \sqrt{-3}}{2}$  & $1$ \\
+ $\frac{-1+\sqrt{-3}}{2}$& 1 & $\frac{-1+\sqrt{-3}}{2}$ & $\frac{-1+\sqrt{-3}}{2}$ & 1& $\frac{-1-\sqrt{-3}}{2}$ & 1 \\
+ $\frac{-1-\sqrt{-3}}{2}$ & $\frac{-1-\sqrt{-3}}{2}$ & 1  & $\frac{-1+\sqrt{-3}}{2}$  & $\frac{-1+\sqrt{-3}}{2}$ & 1& 1 \\
+$ \frac{-1+\sqrt{-3}}{2}$ & $\frac{-1+\sqrt{-3}}{2}$ & 1  & $\frac{-1-\sqrt{-3}}{2}$ & $\frac{-1-\sqrt{-3}}{2}$ & 1& 1 \\
+1& $\frac{-1-\sqrt{-3}}{2}$ & $\frac{-1-\sqrt{-3}}{2}$ & 1 & $\frac{-1+\sqrt{-3}}{2}$ & $\frac{-1+\sqrt{-3}}{2}$ & 1 \\
+1& $\frac{-1+\sqrt{-3}}{2}$ & $\frac{-1+\sqrt{-3}}{2}$ & 1 & $\frac{-1-\sqrt{-3}}{2}$ & $\frac{-1-\sqrt{-3}}{2}$  & 1 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+Note that the hexagonal group $D_6$ act transitively on the set of singular points.
+
+\end{document}
