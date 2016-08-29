@@ -20,6 +20,8 @@
 \usepackage{hyperref}
 \usepackage{mystyle} % stilfilen      
 \usepackage{booktabs}
+\usepackage{resizegather}
+\setcounter{MaxMatrixCols}{48}
 \usepackage{listings}
 \lstset{language=Macaulay2}
 
@@ -209,5 +211,108 @@ $ \frac{-1+\sqrt{-3}}{2}$ & $\frac{-1+\sqrt{-3}}{2}$ & 1  & $\frac{-1-\sqrt{-3}}
 \end{table}
 
 Note that the hexagonal group $D_6$ act transitively on the set of singular points.
+
+\section{Toric mirrors}
+
+Let $I$ and $I'$ be the ideals of $dP_6$ with a disjoint set of variables. Let $J=I+I'$. Then $Y_0 = \Proj(S/J)$ is a toric variety whose associated polytope $P$ has vertices
+
+\begin{equation}
+\left(
+\begin{array}{rrrrrrrrrrrr}
+0 & 0 & 0 & 0 & 0 & 0 & -2 & 2 & 0 & -2 & 0 & 2 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & -2 & -2 & 2 & 2 \\
+-2 & 2 & 0 & -2 & 0 & 2 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & -2 & -2 & 2 & 2 & 0 & 0 & 0 & 0 & 0 & 0 \\
+-1 & -1 & -1 & -1 & -1 & -1 & 1 & 1 & 1 & 1 & 1 & 1
+\end{array}
+\right)
+\end{equation}
+
+The polytope $P$ is reflexive with $87$ lattice points. We can use the Batyrev-Borisov construction to find a toric mirror candidate to $Y_0$.
+
+The construction actually give two such families. Here's how: start with a reflexive polytope $P \subset M_\R$. A \emph{nef partition} induces a decomposition $V_1,V_2$ of the vertex set of $P^\vee \subset N_\R$, such that $P^\vee = \conv(V_1,V_2)$. Let $Q_i = \conv(V_i)$. Then one forms $Q := Q_1+Q_2 \subset N_\R$. Similarly, we have a dual nef partition, so that we can write $P = P_1 + P_2$.
+
+A nef partition correspond to a complete intersection in $X_P$, and the dual nef partition correspond to a complete intersection in $X_Q$. 
+
+We can find (using SAGE for example) the polytopes $P_1$ and $P_2$. They are given as follows:
+
+\begin{equation}
+P_1 = \conv
+\left(\begin{array}{rrrrrrrrrrrr}
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & -1 & -1 \\
+0 & 0 & 0 & 0 & 0 & 0 & -1 & 0 & 1 & 1 & 0 & -1 \\
+-1 & -1 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+-1 & 0 & 1 & 1 & 0 & -1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1
+\end{array}\right)
+\end{equation}
+and
+\begin{equation}
+P_2 = \conv \left(\begin{array}{rrrrrrrrrrrr}
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & -1 & -1 \\
+0 & 0 & 0 & 0 & 0 & 0 & -1 & 0 & 1 & 1 & 0 & -1 \\
+-1 & -1 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+-1 & 0 & 1 & 1 & 0 & -1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+-1 & -1 & -1 & -1 & -1 & -1 & 0 & 0 & 0 & 0 & 0 & 0
+\end{array}\right)
+\end{equation}
+
+There is a formula for the $Q_i$ given the $P_i$:
+$$
+Q_i = \{ u \in N_\R \mid \langle u,m \rangle \geq -1 \text{ for all } m \in P_i, \langle u,m\rangle \geq 0 \, \forall \, m \in P_j, j\neq i \}
+$$
+
+Then we find that $Q_1$ is given by
+\begin{equation}
+Q_1 = \conv \left(\begin{array}{rrrrrrr}
+0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+-1 & -1 & 0 & 0 & 0 & 1 & 1 \\
+0 & 1 & -1 & 0 & 1 & -1 & 0 \\
+-1 & -1 & -1 & 0 & -1 & -1 & -1
+\end{array}\right)
+\end{equation}
+and
+\begin{equation}
+Q_2 = \conv \left(\begin{array}{rrrrrrr}
+-1 & -1 & 0 & 0 & 0 & 1 & 1 \\
+0 & 1 & -1 & 0 & 1 & -1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 1 & 0 & 1 & 1 & 1
+\end{array}\right)
+\end{equation}
+
+
+The polytope $Q$ has $48$ vertices:
+\begin{gather*}
+  \setlength{\arraycolsep}{.5\arraycolsep}
+  \text{\footnotesize$\displaystyle
+\begin{pmatrix}
+-1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & -1 & -1 & -1 & -1 & -1 & -1 & -1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+-1 & -1 & 0 & 0 & 0 & 1 & 1 & -1 & -1 & 0 & 0 & 0 & 1 & 1 & -1 & -1 & 0 & 0 & 0 & 1 & 1 & -1 & -1 & 0 & 1 & 0 & 1 & 1 & -1 & -1 & 0 & 0 & 0 & 1 & 1 & -1 & -1 & 0 & 0 & 0 & 1 & 1 & -1 & -1 & 0 & 0 & 0 & 1 \\
+0 & 1 & -1 & 0 & 1 & -1 & 0 & 0 & 1 & -1 & 0 & 1 & -1 & 0 & 0 & 1 & -1 & 0 & 1 & -1 & 0 & 0 & 1 & -1 & 0 & 1 & -1 & 0 & 0 & 1 & -1 & 0 & 1 & -1 & 0 & 0 & 1 & -1 & 0 & 1 & -1 & 0 & 0 & 1 & -1 & 0 & 1 & -1 \\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & -1 & -1 & -1 & 0 & -1 & -1 & -1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0
+\end{pmatrix}
+  $}
+\end{gather*}
+
+The polar polytope $Q^\vee$ is given by
+\begin{gather*}
+  \setlength{\arraycolsep}{.5\arraycolsep}
+  \text{\footnotesize$\displaystyle
+\begin{pmatrix}
+-1 & -1 & -1 & -1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 \\
+-1 & -1 & 0 & 0 & -1 & -1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 \\
+0 & 0 & 0 & 0 & 0 & 0 & -1 & -1 & -1 & -1 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & -1 & -1 & 0 & 0 & -1 & -1 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 1 & 0 & 1 & -1 & 0 & -1 & 0 & -1 & 0 & -1 & 0 & -1 & 0 & -1 & 0 & 0 & 1 & 0 & 1 & 0 & 1
+\end{pmatrix}$}
+\end{gather*}
+
+One can use the program \texttt{nef_x} (written by Skarke et al) to compute the Hodge numbers corresponding to the nef partitions $P_1+P_2$ and $Q_1+Q_2$. It turns out that they are $(19,19)$.
+
+Note that $J$ can be degenerated to a more singular toric variety by letting .....
 
 \end{document}
