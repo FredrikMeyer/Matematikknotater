@@ -214,7 +214,17 @@ Note that the hexagonal group $D_6$ act transitively on the set of singular poin
 
 \section{Toric mirrors}
 
-Let $I$ and $I'$ be the ideals of $dP_6$ with a disjoint set of variables. Let $J=I+I'$. Then $Y_0 = \Proj(S/J)$ is a toric variety whose associated polytope $P$ has vertices
+\subsection{First example}
+
+There are two examples of torics we have studied. The first one is this.
+
+Let $I$ and $I'$ be the ideals of $dP_6$ with a disjoint set of variables. Let $J=I+I'$.
+
+\begin{remark}
+This is a deformation of the Stanley-Reisner scheme corresponding to the join of two hexagons and two points.
+\end{remark}
+
+Then $Y_0 = \Proj(S/J)$ is a toric variety whose associated polytope $P$ has vertices the column of the following matrix:
 
 \begin{equation}
 \left(
@@ -299,6 +309,7 @@ The polytope $Q$ has $48$ vertices:
 \end{gather*}
 
 The polar polytope $Q^\vee$ is given by
+
 \begin{gather*}
   \setlength{\arraycolsep}{.5\arraycolsep}
   \text{\footnotesize$\displaystyle
@@ -311,8 +322,171 @@ The polar polytope $Q^\vee$ is given by
 \end{pmatrix}$}
 \end{gather*}
 
-One can use the program \texttt{nef_x} (written by Skarke et al) to compute the Hodge numbers corresponding to the nef partitions $P_1+P_2$ and $Q_1+Q_2$. It turns out that they are $(19,19)$.
+One can use the program \texttt{nef\_x} (written by Skarke et al) to compute the Hodge numbers corresponding to the nef partitions $P_1+P_2$ and $Q_1+Q_2$. It turns out that they are $(19,19)$.
 
-Note that $J$ can be degenerated to a more singular toric variety by letting .....
 
+\subsection{Second example}
+
+Again consider two copies of the homogeneous ideal of $\dP6$. This time, however, embed them by mapping the origins in their polytopes to the same monomial. This is the same as letting $y_0=y_1$ in the previous example, where $y_i$ correspond to the origins of the polytopes. The corresponding polytope is just the product of two hexagons. 
+
+\begin{remark}
+This is a deformation of the Stanley-Reisner scheme corresponding to the join of two hexagons and a point.
+\end{remark}
+
+We get a 4-dimensional toric variety $Y_0'$. Here, running \texttt{nef\_x} gives Hodge numbers $(44,8)$, giving an Euler characteristic of $72$. 
+
+\begin{remark}
+This sounds promising, because earlier I've found a smoothing of this variety with Euler characteristic $-72$.
+\end{remark}
+
+\section{Deformation calculations}
+
+\subsection{Non-standard triangulation}
+\begin{figure}
+\centering
+\begin{subfigure}{.4 \textwidth}
+\begin{tikzpicture}
+
+\draw [very thick, color=blue, fill=green, fill opacity=0.2]
+(2,1) -- (3,1) -- (3,2) -- (2,3) -- (1,3) -- (1,2) -- cycle;
+
+\draw [very thick, color=blue] (2,2) -- (3,2);
+\draw [very thick, color=blue] (2,2) -- (2,3);
+\draw [very thick, color=blue] (2,2) -- (2,1);
+\draw [very thick, color=blue] (2,2) -- (1,2);
+\draw [very thick, color=blue] (2,1) -- (3,2);
+\draw [very thick, color=blue] (1,2) -- (2,3);
+
+
+\draw [fill=black]  (2, 1) circle (0.1);
+\draw [fill=black]  (3, 1) circle (0.1);
+\draw [fill=black]  (3, 2) circle (0.1);
+\draw [fill=black]  (2, 3) circle (0.1);
+\draw [fill=black]  (1, 3) circle (0.1);
+\draw [fill=black]  (1, 2) circle (0.1);
+\draw [fill=black]  (2, 2) circle (0.12);
+\end{tikzpicture}
+\caption{The hexagon in another triangulation.}
+\end{subfigure}
+\begin{subfigure}{.4 \textwidth}
+
+\begin{tikzpicture}
+
+\draw [very thick, color=blue, fill=green, fill opacity=0.2]
+(2,1) -- (3,1) -- (3,2) -- (2,3) -- (1,3) -- (1,2) -- cycle;
+
+\draw [very thick, color=blue] (2,2) -- (3,2);
+\draw [very thick, color=blue] (2,2) -- (2,3);
+\draw [very thick, color=blue] (2,2) -- (2,1);
+\draw [very thick, color=blue] (2,2) -- (1,2);
+\draw [very thick, color=blue] (2,2) -- (3,1);
+\draw [very thick, color=blue] (2,2) -- (1,3);
+
+
+\draw [fill=black]  (2, 1) circle (0.1);
+\draw [fill=black]  (3, 1) circle (0.1);
+\draw [fill=black]  (3, 2) circle (0.1);
+\draw [fill=black]  (2, 3) circle (0.1);
+\draw [fill=black]  (1, 3) circle (0.1);
+\draw [fill=black]  (1, 2) circle (0.1);
+\draw [fill=black]  (2, 2) circle (0.12);
+\end{tikzpicture}
+\caption{The hexagon in the pulling triangulation.}
+\end{subfigure}
+\caption{Two triangulations of the hexagon.}
+\label{fig:hexagon}
+\end{figure}
+
+In \figref{hexagon} are depicted two different triangulations of the hexagon. They correspond to different Gröbner bases of the ideal of $\dP6$. Choosing the left triangulation turns out to give smaller-dimensional $T^2$.
+
+Below are some deformation computations done on the Stanley-Reisner scheme corresponding to the join of two hexagons in this triangulation.
+
+\begin{lstlisting}
+restart
+R1 = QQ[x_1..x_6,y_0]
+R2 = QQ[z_1..z_6,y_1]
+
+loadPackage "SimplicialComplexes"
+loadPackage "VersalDeformations"
+
+S1 = simplicialComplex {x_1*x_2*x_3, x_1*y_0*x_3, x_3*x_4*y_0, x_6*x_1*y_0, x_6*x_4*y_0, x_6*x_5*x_4}
+S2 = simplicialComplex {z_1*z_2*z_3, z_1*y_1*z_3, z_3*z_4*y_1, z_6*z_1*y_1, z_6*z_4*y_1, z_6*z_5*z_4}
+I1 = ideal S1
+I2 = ideal S2
+
+
+R = QQ[first entries vars R1 | first entries vars R2]
+I = sub(I1,R) + sub(I2,R)
+\end{lstlisting}
+
+We first create the rings with the necessary variables, then we define the simplicial complexes by their maximal faces. Finally we create the ideal of the join, which is just the sum of the individual ideals.
+
+We can compute $T^2$:
+
+\begin{lstlisting}
+i11 :  CT^2(0, gens I);
+
+              115       76
+o11 : Matrix R    <--- R
+\end{lstlisting}
+
+It is $76$-dimensional, which is still quite big, but much smaller than if we had used the other triangulation.
+
+We can compute $T^1$:
+
+\begin{lstlisting}
+i13 : T11 = CT^1(0, gens I);
+
+              18       58
+o13 : Matrix R   <--- R
+\end{lstlisting}
+
+This is the module of first-order deformations, which is $58$-dimensional.
+
+Using the \texttt{VersalDeformations} package, we can lift the deformations to second order:
+\begin{lstlisting}
+(f1,r1,g1,c1) = versalDeformation(gens I, T11, CT^2(0, gens I),HighestOrder =>2, Verbose => 10);
+\end{lstlisting}
+
+Then \texttt{ideal sum g1} is the second order terms of the obstruction equations of the versal base space. The ideal is generated by $76$ elements, and by inspection we see that half of them uses only half of the deformation parameters. This makes it easier to compute a decomposition of it. We do it as follows:
+
+\begin{lstlisting}
+loadPackage "Binomials"
+IG = ideal sum g1
+
+IG1 = ideal ((IG_*)_{0..37})
+IG2 = ideal ((IG_*)_{38..75})
+
+T = QQ[t_1..t_27]
+IGT1 = sub(IG1,T)
+kList = BPD IGT1
+
+T2 = QQ[t_28..t_58]
+IGT2 = ideal mingens sub(IG,T2)
+kList2 = BPD IGT2
+\end{lstlisting}
+
+This takes about a minute. We use the package \texttt{Binomials}, which decomposes binomial ideals fast. Finally, we put the decomposed parts in the same ring, and make a list of all the components:
+
+\begin{lstlisting}
+TT = QQ[t_1..t_58]
+kListTT = apply(kList, I -> sub(I,TT))
+kList2TT = apply(kList2, I -> sub(I,TT))
+
+intersect(intersect kListTT, intersect(kList2TT)) ==  IGTT --- long time
+
+comps = apply(toList ((set kListTT) ** (set kList2TT)), S -> ideal mingens (S#0 +S#1));
+max apply(comps, dim) -- answer: 44
+maxComp = select(comps, I -> dim I == 44)
+\end{lstlisting}
+
+We check which component has the maximal dimension, and it turns out that it has dimension $44$. We select that component in the last line. This ideal is generated by a subset of the deformation parameters.
+
+We have been unable to lift this $44$-dimensional family, though. 
+
+By selecting deformation parameters carefully, we can however find a family whose generic fiber is the ideal $J$ above (the sum of two del Pezzo's). This family is $8$-dimensional.
+
+\begin{remark}
+This is very promising, because of the following: we have found a smoothing of the singular Calabi-Yau inside $Y_0$, of which we computed the Euler characteristic to be $-72$. This fits well with the Batyrev-Borisov calculations above: if the Hodge numbers are $(8,44)$, we have potentially found an open subset of the moduli space of complex structures of this smoothing. The $8$-dimensional subfamily could correspond to the space of complex structures on the mirror.
+\end{remark}
 \end{document}
