@@ -489,4 +489,36 @@ By selecting deformation parameters carefully, we can however find a family whos
 \begin{remark}
 This is very promising, because of the following: we have found a smoothing of the singular Calabi-Yau inside $Y_0$, of which we computed the Euler characteristic to be $-72$. This fits well with the Batyrev-Borisov calculations above: if the Hodge numbers are $(8,44)$, we have potentially found an open subset of the moduli space of complex structures of this smoothing. The $8$-dimensional subfamily could correspond to the space of complex structures on the mirror.
 \end{remark}
+
+\section{Singularities}
+
+\subsection{Of the toric hypersurface}
+
+Again consider the join of two hexagons, joined with a single vertex. This is a 4-dimensional simplicial complex, which deforms to the toric variety with polytope with vertices $(v,0)$ and $(0,v)$, where $v$ are vertices of the hexagon. This is the same toric variety as in ``Second example'' above.
+
+If \texttt{JJ} is the ideal of this toric variety, the following code will compute its singularities. 
+
+\begin{lstlisting}
+singlist = {}
+for i from 1 to 6 do {
+    sz = sub(JJ, z_i => 1);
+    sx = sub(JJ, x_i => 1);
+    singz = radical ideal mingens ideal singularLocus  minimalPresentation sz;
+    singx = radical ideal mingens ideal singularLocus  minimalPresentation sx;
+    singsx = (decompose singx);
+    singsz = (decompose singz);
+    sings = singsx | singsz;
+    invz = sz.cache.minimalPresentationMap;
+    invx = sx.cache.minimalPresentationMap;
+    singlist = singlist | apply(singsx, I -> homogenize(preimage(invx, singx),x_i)) | apply(singsz, I -> homogenize(preimage(invz, singz),z_i));
+    }
+sings = intersect singlist
+\end{lstlisting}
+
+$X_P$ have $48$ curves as singularities. Hence a general hyperplane section will have $48$ isolated singularities.
+
+\begin{remark}
+Local calculations hint that these should be nodal singularities, but I don't immediately know how to see this.
+\end{remark}
+
 \end{document}
