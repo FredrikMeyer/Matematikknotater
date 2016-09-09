@@ -2122,7 +2122,7 @@ Let $V$ be an affine variety.
 \begin{enumerate}[a]
   \item $R$ is by definition a quotient of a polynomial ring over a field $k$. Then the inverse image $\pi^{-1}(I)$ is an ideal in $k[x_1,\ldots,x_n]$ (for some $n$). By Hilbert's theorem, the ideal is finitely generated, by $\overline{f_i}$, say. The images generate $I$.
   \item $W$ is defined by some ideal $I=\langle f_1,\ldots,f_r \rangle$. Then I claim that $V \bs W = \cup V_{f_i}$. For suppose $p \in V_{f_i}$. Then $(1/f_i)(p)$ is defined, so we cannot have $p \in W$, since $f_i(p)=0$ if $p \in W$.
-  \item Let $\{ U_i \}$ be an open cover of $V$. By b), every $U_i$ has the form $\cup V_{f_{ji}}$ for some $f_{ji}$. Then $V = \cup V_{f_ij}$. We build a finite cover inductively. Start with the $U_1$ containing $V_{f_11}$. 
+  \item Let $\{ U_i \}$ be an open cover of $V$. By b), every $U_i$ has the form $\cup V_{f_{ji}}$ for some $f_{ji}$. Then $V = \cup V_{f_ij}$. The complement is the empty set, which is defined by the ideal $(1)$, but also by the ideal $I(f_{ij})$. Hence we can choose a finite number of $f_{ij}$ that generate the unit ideal (by a)). Then the corresponding $U_i$'s is our finite covering.
 \end{enumerate}
 \end{sol}
 

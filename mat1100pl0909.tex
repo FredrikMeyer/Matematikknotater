@@ -1,0 +1,102 @@
+\documentclass[11pt, norsk]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[norsk]{babel}   % S P R A A K
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{calc}
+%\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+%\usepackage[a5paper,margin=0.5in]{geometry}
+
+\begin{document}
+\title{Løsningsforslag noen oppgaver}
+\author{Fredrik Meyer}
+\maketitle
+
+\begin{oppg}[3.3.7]
+Bruk de Moivre's formel til å uttryke $\sin 4\theta$ og $\cos 4 \theta$ ved hjelp av $\sin \theta$ og $\cos \theta$.
+\end{oppg}
+\begin{losn}
+Husk at de Moivre's formel sier at
+\[
+(\cos \theta + i \sin \theta)^n = \cos (n \theta) + i \sin (n \theta).
+\]
+Vi setter $n=4$, og får 
+\[
+(\cos \theta + i \sin \theta)^4 = \cos (4 \theta) + i \sin (4 \theta).
+\]
+Strategien er nå å gange ut parentesene og deretter sammenligne realdeler og imaginærdeler. En grei strategi er å først regne ut $(\cos \theta + i \sin \theta)^2$, og deretter gange dette med seg selv.
+
+Vi får
+\begin{align}
+\label{eq:coscos}
+(\cos \theta + i \sin \theta)^2 &= (\cos^2 \theta - \sin^2 \theta) +  i( 2\cos \theta \sin \theta).
+\end{align}
+Vi ganger dette med seg selv og får:
+
+\begin{align*}
+((\cos^2 \theta - \sin^2 \theta) +  i( 2\cos \theta \sin \theta))^2 &= (\cos^2 \theta - \sin^2 \theta)^2 -4 \cos \theta^2 \sin^2\theta + 2i(4 \cos^3 \theta \sin \theta - 4 \cos \theta \sin^2 \theta) \\
+&= \cos^4 \theta - 6 \cos^2 \theta \sin^2 \theta + \sin^4 \theta + i (4\cos^3 \theta \sin \theta - 4 \cos \theta \sin^2 \theta)
+\end{align*}
+
+Sammenligner vi realdeler og imaginærdeler i \eqref{eq:coscos}, ser vi at
+\[
+\cos 4 \theta = \cos^4 \theta - 6 \cos^2 \theta \sin^2 \theta + \sin ^4 \theta,
+\]
+og 
+\[
+\sin 4 \theta = 4\cos^3 \theta \sin \theta - 4 \cos \theta \sin^2 \theta.
+\]
+
+\end{losn}
+
+
+\begin{oppg}[3.3.8]
+Regn ut $(1+i)^{804}$ og $(\sqrt 3 - 1)^{173}$.
+\end{oppg}
+\begin{losn}
+Her lønner det seg å skrive om på polarform. Vi har at 
+\[
+1+i = \sqrt 2 e^{i \pi/4}
+\]
+og 
+\[
+-1+\sqrt{3} = 2 e^{-\pi i/6}.
+\]
+Dermed er
+\[
+(1+i)^{804} = \sqrt{2}^{804} \left(e^{i \pi/4} \right)^{804} = 2^{402} e^{201 \pi i} = -2^{402},
+\]
+siden $e^{\pi n}$ er $-1$ om $n$ er odde.
+
+Den andre er hakket verre. Her har vi at
+\[
+(\sqrt{3}-i)^{173} = 2^{173} e^{\pi 173 i /6}.
+\]
+
+Her er trikset å bruke delealgoritmen til å skrive $173=28 \cdot 6 + 5$. Dermed er
+\[
+2^{173} e^{\pi 173 i /6} = 2^{173} e^{\pi(28 +5/6)i} = 2^{173} e^{\pi 5i/6}.
+\]
+Dette er lik
+\[
+2^{173}\left( - \frac{sqrt 3}{2} + i \frac 12 \right) = 2^{172}(-\sqrt 3 +i).
+\]
+
+\end{losn}
+
+\end{document}
