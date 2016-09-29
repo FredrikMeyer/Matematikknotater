@@ -1,0 +1,88 @@
+\documentclass[11pt, english]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}   % S P R A A K
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{calc}
+%\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+
+%\usepackage[a5paper,margin=0.5in]{geometry}
+
+\begin{document}
+\title{List of objects}
+\author{Fredrik Meyer}
+\maketitle
+
+\tableofcontents 
+
+\section{List of objects}
+
+\subsection{Stanley-Reisner sphere $X_{00}$}
+\label{sec:x00}
+
+Let $E_6$ be a hexagon, and let $S$ be the join of two hexagons. This is a simplicial 3-sphere with $12$ vertices. The variables are named $x_1,\ldots,x_6$ and $z_1,\ldots,z_6$.
+
+\subsection{Stanley-Reisner ball $Y_{00}$}
+\label{sec:y00}
+
+Let $S$ be the Stanley-Reisner sphere from Section \ref{sec:x00}. Add two variables $y_0$ and $y_1$ to get a $5$-dimensional variety. This is the join of two (filled) hexagons.
+
+\subsection{Toric variety $Y_0$}
+\label{sec:y0}
+
+The Stanley-Reisner scheme $Y_{00}$ deforms to the toric variety with polytope $P$, where $P$ is the polytope with vertices 
+\[
+\setcounter{MaxMatrixCols}{20}
+\begin{pmatrix}
+2 & 2 & 0 & -2 & -2 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 2 & 2 & 0  & -2 & -2 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0  &  0 &  0 & 2 & 2 & 0 &-2 & -2 & 0 \\
+0 & 0 & 0 & 0  &  0 &  0 & 0 & 2 & 2 & 0 & -2 & -2 \\
+1 & 1 & 1 & 1  & 1 &   1 & -1 & -1 & -1 & -1 & -1 & -1
+\end{pmatrix}.
+\]
+
+The toric variety is a deformation of $Y_{00}$ in Section \ref{sec:y00}, by a result of Sturmfels, since the simplicial complex associated to it is a triangulation of the corresponding polytope. 
+
+The polytope $P$ is reflexive.
+
+\subsection{Singular Calabi-Yau $X_0$}
+\label{sec:x0}
+
+This is a complete intersection of two anticanonical hypersurfaces in $Y_0$. By general results, it is a Calabi-Yau. It has 12 singular points, each looking like $C(dP_6)$.
+
+\subsection{Cone over del Pezzo}
+\label{sec:cdp6}
+
+The cone over the del Pezzo surface of degree $6$ has two smoothings.
+
+\subsection{Smoother toric $Y$}
+\label{sec:y}
+
+The toric variety \ref{sec:y0} deforms to a variety with one-dimensional singularities.
+
+\begin{remark}
+I suspect that it actually smooths, but I haven't been able to prove it yet. Should be feasible.
+\end{remark}
+
+\subsection{Smooth Calabi-Yau $X$}
+
+Since $Y$ have low-dimensional singualarities, two applications of Bertini shows that $X_0$ smooths. I have computed it to have Euler characteristic $-72$.
+
+Problem: find which deformation is induced on the singularities of $X_0$. 
+
+\end{document}

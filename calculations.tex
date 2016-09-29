@@ -213,12 +213,15 @@ $ \frac{-1+\sqrt{-3}}{2}$ & $\frac{-1+\sqrt{-3}}{2}$ & 1  & $\frac{-1-\sqrt{-3}}
 Note that the hexagonal group $D_6$ act transitively on the set of singular points.
 
 \subsection{Intersecting with another set of hyperplanes}
+\label{sec:delpezzoz2}
 
-Note that the group $\Z_2 \X \Z_2$ act on $dP_6$ by reflecting the triangulation in \figref{trianghexagon} (in fact $\Z_2 \x \Z_2$ is a subgroup of $D_6$).
+Note that the group $\Z_2 \X \Z_2$ act on $dP_6$ by reflecting the triangulation in \figref{trianghexagon} (in fact $\Z_2 \x \Z_2$ is a subgroup of $D_6$). $\Z_2 \X \Z_2$ is the full symmetry group of the triangulation in the figure.
+
 
 \section{Toric mirrors}
 
 \subsection{First example}
+\label{sec:toric5}
 
 There are two examples of torics we have studied. The first one is this.
 
@@ -526,5 +529,39 @@ $X_P$ have $48$ curves as singularities. Hence a general hyperplane section will
 Local calculations hint that these should be nodal singularities, but I don't immediately know how to see this.
 \end{remark}
 
+\section{Calabi-Yaus}
+
+\subsection{Singular in a 5-dimensional toric}
+
+Let $Y_0$ be the toric variety from \label{sec:toric5} embedded in $\P^{13}$ by (a subset of) the anticanonical system (use only the vertices and the origin). It is the join of two del Pezzo surfaces. The singular locus is the disjoint union of these del Pezzo surfaces. If we intersect $Y_0$ with two generic sections of the anticanonical bundle (in other words: two generic sections of $\OO_{Y_0}(1)$), we get a Calabi-Yau with isolated singularities.
+
+In fact, local calculations on separate del Pezzos show that we don't need the hyperplanes to be generic. We'd like to have a Calabi-Yau on which a group act, so we want invariant hyperplanes. From Section \label{sec:delpezzoz2}, we know that $\Z_2 \X \Z_2$ act on each del Pezzo on $Y_0$. Hence we have a action of $\Z_2^5$ on $Y_0$, given by permuting each factor, and exchanging the factors.
+
+\begin{remark}
+We also have an action of $D_6 \times D_6 \times \Z_2$ on $Y_0$, but since we want the action to descend to the Calabi-Yau, we'd like invariant hyperplanes. However, this group is too big - there is only one invariant hyperplane with respect to this group (the hyperplane with all coefficients equal).
+\end{remark}
+
+There is a 3-dimensional vector space of invariant hyperplanes from $\OO_{Y_0}(1)$. We choose two of them:
+\[
+x_1+x_2+x_3+x_4+x_5+x_6+y_0+z_1+z_2+z_3+z_4+z_+5+z_6+y_1 = 0
+\]
+and
+\[
+x_1+x_2+2x_3+x_4+x_5+2x_6+y_0+z_1+z_2+2z_3+z_4+z_+5+2z_6+y_1 = 0.
+\]
+Local calculations show that this choice of hyperplanes give isolated singularities. They are all of the form $C(dP_6)$ and there are 12 of them. They come in two orbits under the group action: $4$ with a $\Z_2$ stabilizer, and $8$ with trivial stabilizer. The four with nontrivial stabilizer have coordinates
+\begin{align*}
+&\, (x_1:x_2:x_3:x_4:x_5:x_6:y_0:z_1:z_2:z_3:z_4:z_5:z_6:z_1)  \\
+&= (0:0:0:1:-1:0:0:0:0:0:0:0:0:0), \\
+&= (1:-1:0:0:0:0:0:0:0:0:0:0:0:0), \\
+&= (0:0:0:0:0:0:0:0:0:0:1:-1:0:0), \\
+&= (0:0:0:0:0:0:0:1:-1:0:0:0:0:0).
+\end{align*}
+
+The other $8$ have all nonzero coefficients with irrational coordinates. The exact coordinates can be computed symbolically in Mathematica for example.
+
+The action have two fixed points that are not already singularities. The point $P_1$ with all cordinates equal to one is fixed. Also, the point $P_2$ with the first seven coordinates equal to $\lambda \neq 1,0$, and the last seven equal to $1$, is also fixed.
+
+There are several points with nontrivial stabilizer [[find all of these]].
 
 \end{document}
