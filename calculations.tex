@@ -564,4 +564,28 @@ The action have two fixed points that are not already singularities. The point $
 
 There are several points with nontrivial stabilizer [[find all of these]].
 
+\section{Conceptual description}
+
+Let $E$ be a rank $3$ vector space, and let $\PP^{17}=\PP(E \otimes E \oplus E \otimes E)$, thought of as the set of $3\times 3$ block matrices. Let $M$ be the set of block matrices having rank two. $M$ decomposes as $M=M' \cup M_1 \cup M_2$, where $M_i$ are the sets of block matrices where one the blocks is zero, and the other has rank $2$. $M'$ is the subset of matrices where both blocks have rank exactly $1$. The dimensions are $9$, $4$, $4$.
+
+The singular locus of (the closure of) $M'$ is the set of matrices $(0,B)$ and $(A,0)$, where $A,B$ have rank $1$.
+
+If we intersect $M$ with a general $12$-plane (of codimension $6$), we therefore get a smooth Calabi-Yau $X$.
+
+Let $S_3$ act on $E$ by permutations of a chosen basis. Then it act on $E \otimes E$ as well. The group $D_6 \simeq S_3 \times \Z_2$ act on the sum $E \otimes E \oplus E \otimes E$ by exchanging factors.
+
+We choose a plane $H \simeq \PP^{11} \subset \PP^{17}$ such that $G$ act on it. There are several ways to do this. One way is to start with a generic $v_1 \otimes v_2 + v_3+v_4$ and let $G$ on this tensor. Since $G$ has order $12$, we get $12$ vectors (matrices) which span a $\PP^{11}$.
+
+To get coordinates, let $x_i$ be coordinates on $\PP^{11}$. Let $A = \sum_{i=1}^{12} A_i x_i$. Then $X$ is defined by the $2\x 2$-minors of this block matrix.
+
+\subsection{Map to $(\PP^2)^{\times 4}$}
+
+There is a map from $M' \backslash \Sing (M)$ to $(\PP^2)^4$ given by sending a pair of rank $1$ matrices $(A,B)$ to the tensor $v_1 \otimes v_2 \otimes v_3 \otimes v_4$, where $v_1 \otimes v_2 = A$ and $v_3 \otimes v_4=B$. The map has $\Aa^1 \bs pt$-fibers: the inverse image of a point is the line between $A$ and $B$: $\{ tA + s B\}_{(t:s) \in \Aa \bs 0}$. Let $\pi$ be this map.
+
+Since $X$ doesnt intersect the singular locus of $M$, we get a map $\pi:X \to (\PP^2)^4$ by restriction. For generic choice of $\PP^{11}$, this map is injective. [[this should give us the Hodge numbers of X]]
+
+\subsection{The invariant subfamily}
+
+[[the invariant subfamily]]
+
 \end{document}

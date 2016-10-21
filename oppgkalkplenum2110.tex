@@ -1,0 +1,98 @@
+\documentclass[11pt, norsk]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[norsk]{babel}   % S P R A A K
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.13}
+\usetikzlibrary{calc}
+%\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+\usepackage{booktabs}
+\usepackage{resizegather}
+
+\begin{document}
+\title{Et løsningsforslag}
+\author{Fredrik Meyer}
+\maketitle
+
+Husk at et kritisk punkt til en funksjon $f:[a,b] \to \R$ er et punkt $c \in \R$ som er et lokalt maksimum eller minimum for $f(x)$. Dette skjer når enten $c$ er et av endepunktene til $[a,b]$ eller når $f'(c)=0$ eller når $f$ ikke er deriverbar i $c$.
+
+\begin{oppg}[Oppgave 6.4.1e]
+La $f(x) = x+3x^{2/3}$ på intervallet $[-\frac 12, 1$. Finn de kritiske punktene til $f(x)$ og bestem maksimum og minimumspunkter.
+\end{oppg}
+\begin{losn}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+
+\node at (0,0.5) {$x=0$};
+\draw (-2,0) -- (4,0);
+\draw (0,0) -- (0,-1);
+\draw (-2,-1) -- (4,-1);
+\draw [fill=white] (0, -1) circle (0.1);
+\node at (-3,-1) {$f(x)$};
+\draw[dashed](-2,-1.5) -- (-0.1,-1.5);
+\draw(0.1,-1.5) -- (4,-1.5);
+\node at(-3,-1.5) {$f'(x)$};
+\node at (0,-1.5) {$\times$};
+
+\end{tikzpicture}
+\caption{Fortegnslinjer for $f(x)=x+3x^{2/3}$.}
+\label{fig:flinje}
+\end{figure}
+ 
+
+Selv om oppgaven ikke spør om, er det ofte en god ide å finne nullpunktene til en funksjon først, slik at vi kan få et bedre bilde av hvordan den ser ut. Så vi starter med å finne nullpunktene.
+
+Anta at $x$ er et nullpunkt. Da er $f(x)=x+3x^{2/3}=0$. Først ser vi at hvis $x=0$, så har vi et nullpunkt. Anta så at $x \neq 0$. Da kan vi dele på $x$, og vi får at $1+3x^{-1/3}=0$. Dette omformer vi til $3x^{-1/3}=-1 \Leftrightarrow 1/x = -1/27 \Leftarrow x=-27$. Funksjonen har altså to nullpunkter, men det ene er langt utenfor intervallet. Se \figref{flinje}.
+
+Deriverer vi funksjonen får vi $f'(x) = 1+2x^{-1/3}$. Krever vi at denne skal være null, finner vi at $x=-8$. Dette er utenfor definisjonsområdet, så den deriverte har ingen nullpunkter i $[-\frac 12,1]$. Derimot har vi et problem når $x=0$. I $x=0$ er ikke $f'(x)$ kontinuerlig, så $x=0$ er et kritisk punkt. Den deriverte har ingen nullpunkter på intervallet, men vi vet ennå ikke om hvor den er positiv eller negativ. For å finne dette ut kan vi sette inn for to verdier på begge sider av $x=0$. Setter vi inn $x=-\frac 12$ får vi $f'(-frac 12)=1-2^{4/3} < 0$. Setter vi inn for $x=1$, får vi $f'(1)=1+2=3$. Dermed er den deriverte negativ for $x < 0$ og positiv for $x > 0$. 
+
+Fra figuren er det nå lett å finne maksimum og minimumspunktene til $f$. Siden $f(x)$ er positiv for alle $x \neq 0$, må $x=0$ være det eneste nullpunktet. Siden funksjonen synker for negative $x$ og øker for positive $x$, er begge endepunktene lokale maksima. For $x=-frac 12$ er $f(-frac 12) \approx 1.39$. For $x=1$ har vi $f(1) = 1+2=3$, som er større. Dermed er $3$ maksimumverdien for $f(x)$ og $0$ er minimumverdien.
+
+Se \figref{plott} for et plott av $f(x)$.
+
+\begin{figure}
+\centering
+\begin{subfigure}{.4 \textwidth}
+\begin{tikzpicture}[scale=.65]
+    \begin{axis}[  axis x line=center,
+  axis y line=center]
+       \addplot[blue,domain=-0.5:1, samples=200]{x+abs(x)^(2/3)};
+    \end{axis}
+\end{tikzpicture}
+\caption{Et plott av $f(x)$.}
+\label{fig:plott}
+\end{subfigure}
+\begin{subfigure}{.4 \textwidth}
+
+\begin{tikzpicture}[scale=.65]
+   \begin{axis}[  axis x line=center,
+  axis y line=center,xmin=-0.5,
+  xmax=1,
+  ymin=-2,
+  ymax=5]
+       \addplot[blue,domain=-0.5:1, samples=200]{1+x/abs(x) * abs(x)^(-1/3)};
+    \end{axis}
+
+\end{tikzpicture}
+\caption{Plott av $f'(x)$.}
+\end{subfigure}
+\end{figure}
+\end{losn}
+
+\end{document}
