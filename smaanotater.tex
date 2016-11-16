@@ -176,4 +176,24 @@ Den rasjonale avbildningen $\pi_L$ er ikke definert for punkter på $L$. Restrik
 
 Linjene $L_{ij}$ mellom disse fire punktene i $v_2(\PP^2)$ svarer til kvadrikker i $\PP^2$. Hvert par av linjer snitter i $1$ punkt hver. 
 
+\subsection{Rasjonal avbildning $\PP^2 \rmap \PP^1 \times \PP^1$}
+
+Det er best å tenke på oppblåsninger som insidenskorrespondanser. Oppblåsningen av $\PP^2$ i to punkter $P_1, P_2$ er dermed gitt som
+$$
+B = \{ (p,L,L') \mid p \in L, p \in L', P_1 \in L, P_2 \in L' \}.
+$$
+
+For hver $P_i$ har vi en $\PP^1$ av linjer gjennom den. Så om vi skriver $\PP_i^1$ for linjene gjennom $P_i$, kan vi skrive
+$$
+B = \{ (p,L,L') \mid p \in L, p \in L'\} \subset \PP^2 \times \PP_1^1 \times \PP_2^1.
+$$
+
+Oppblåsningen $B$ har tre minus én-kurver. Inversbildet av hver $P_i$ er en $\PP^1$ med selvsnitt $-1$, så da får vi to stykker. Vi får enda en ved å la $L_{P_1P_2}$ være inversbildet av linjen gjennom gjennom $P_1$ og $P_2$. Vi får en avbildningen til $\PP^1 \times \PP^1$ ved å blåse ned denne linjen. 
+
+Vi kan se på denne avbildningen som $P \mapsto L_{PP_1} \times L_{PP_2}$. For hvert generisk punkt $P$ i $\PP^2$ finnes et unikt linjepar gjennom $P$ og $P_1$ og $P_2$, så dette er en birasjonal avbildning. Den er ikke definert for $P=P_1,P_2$. Linjen $L_{P_1P_2}$ ligger i begge $\PP^1$-faktorene, så fiberen er en hel linje, og det er akkurat linjen vi blåste ned.
+
+Om $P_1=(1:0:0)$ og $P_2=(0:1:0)$, kan denne avbildningen skrives i koordinater som $(x:y:z) \mapsto (y:z) \times (x:z)$. 
+
+Vi har også en avbildning fra $\PP^1 \times \PP^1$ til $\PP^2$ gitt slik: la $Q \simeq \PP^1 \times \PP^1 \subset \PP^3$ være en kvadrisk flate. Velg et plan $\PP^2 \simeq H$ og et punkt $Q$ utenfor $H$. La $\pi:Q \to H$ være projeksjonen fra $P$ til $H$: med andre ord $P \mapsto L_{PQ} \cap H$. Denne avbildningen blåser ned de to ruleringene gjennom $H$. Så vi kan tenke på dette som en invers til avbildningen over.
+
 \end{document}
