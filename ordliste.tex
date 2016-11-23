@@ -799,12 +799,12 @@ where $i:Y \to \PP^4$ is the inclusion. Note that $\mathscr I = \OO_\PP(-5)$. Th
 $$
 \cdots \to H^i(\PP, \mathscr I) \to H^i(\PP,\OO_\PP) \to H^i(Y,\OO_Y) \to H^{i+1}(\PP,\mathscr I) \to \cdots
 $$
-Note that $H^{i+1}(\PP,\mathscr I) = 0$ for $i \neq 3$ and $1$ for $i=3$. Also $H^i(\PP,\OO_\PP)=0$ unless $i=0$ in which case it is $1$. Thus we get that $H^i(Y,\OO,Y)$ is $k$ for $i=0$, for $i=1,2$ it is $0$, and for $i=3$ it is $k$. For higher $i$ it is zero by Grothendieck vanishing.
+Note that $H^{i+1}(\PP,\mathscr I) = 0$ for $i \neq 3$ and $1$ for $i=3$. Also $H^i(\PP,\OO_\PP)=0$ unless $i=0$ in which case it is $1$. Thus we get that $H^i(Y,\OO_Y)$ is $k$ for $i=0$, for $i=1,2$ it is $0$, and for $i=3$ it is $k$. For higher $i$ it is zero by Grothendieck vanishing.
 
 The adjunction formula relates the canonical bundles as follows: if $\omega_\PP$ is the canonical bundle on $\PP$, then $\omega_Y = i^\ast \omega_\PP \otimes_{\OO_{\PP}} \det(\mathscr I/\mathscr I^2)^\vee$. The ideal sheaf is already a line bundle, so taking the determinant does not change anything. Now
 \begin{align*}
-(\mathscr I/\mathscr I^2)^\vee &= \Hom_Y(\mathscr I/\mathscr I^2,\OO_Y) \\
-&= \Hom_\PP(\mathscr I,\OO_Y)=\Hom_\PP(\OO_\PP(-5),\OO_Y)=\OO_Y(5).
+(\mathscr I/\mathscr I^2)^\vee &= \Shom_Y(\mathscr I/\mathscr I^2,\OO_Y) \\
+&= \Shom_\PP(\mathscr I,\OO_Y)=\Shom_\PP(\OO_\PP(-5),\OO_Y)=\OO_Y(5).
 \end{align*}
 It follows that $\omega_Y = \OO_Y(-5) \otimes \OO_Y(5)=\OO_Y$. Thus the canonical bundle is trivial and we conclude that $Y$ is Calabi-Yau.
 
@@ -816,14 +816,18 @@ which gives us the long exact sequence:
 $$
 \cdots \to H^i(\mathscr I/\mathscr I^2) \to H^i(\Omega_\PP \otimes \OO_Y) \to H^i(\Omega_Y) \to H^{i+1}(\mathscr I/\mathscr I^2) \to \cdots 
 $$
-We first compute the cohomology of $\mathscr I/\mathscr I^2$. We use the short exact sequence
+Since $\mathscr I/\mathscr I^2 =\OO_Y(-5)$, we can compute its cohomology by twisting the ideal sequence:
 \begin{equation}
 \label{normaleq}
-0 \to \OO_\PP(-10) \to \OO_\PP(-5) \to \mathscr I / \mathscr I^2 \to 0.
+0 \to \OO_\PP(-10) \to \OO_\PP(-5) \to \mathscr I/\mathscr I^2 \to 0
 \end{equation}
-we have $H^i(\PP,\OO_\PP(-10))=0$ for $i=0,1,2,3$, and for $i=4$ we have $H^4(\PP,\OO_\PP(-10))=H^0(\PP,\OO_\PP(5))=k^{126}$. Similarly $H^i(\PP,\OO_\PP(-5))=0$ for $i=0,1,2,3$ and $H^4(\PP,\OO_\PP(-5))=H^0(\PP,\OO_\PP)=k$. We conclude that $h^i(Y,\mathscr I/\mathscr I^2) = 0$ for $i=0,1,2$ and $125$ for $i=3$.
+It follows from the cohomology of $\PP^4$ that $h^i(\mathscr I/\mathscr I^2)=0$ for $i=0,1,2$. But for $i=3$ we get the sequence
+$$
+0 \to H^3(Y,OO_Y(-5)) \to H^4(\PP,\OO_\PP(-10)) \to H^4(\PP,\OO_\PP(-5)) \to 0.
+$$
+By adjunction it follows that $h^3(\mathscr I/\mathscr I^2)=126-1=125$. 
 
-In particular $H^1(\Omega_Y) \simeq H^1(\Omega_\PP \otimes \OO_Y)$. We have the Euler sequence:
+It follows from these calculations and the conormal sequence that $H^1(\Omega_Y) \simeq H^1(\Omega_\PP \otimes \OO_Y)$. We have the Euler sequence:
 $$
 0 \to \Omega_\PP \to \OO_\PP(-1)^{\oplus 5} \to \OO_\PP \to 0
 $$
@@ -833,9 +837,27 @@ $$
 $$
 from which it easily follows that $H^1(Y,\Omega_\PP \otimes \OO_Y) \simeq H^0(\OO_Y) = k$. We conclude that $h^{11}=1$. 
 
-Now we compute $h^{12} = \dim_k H^1(Y,\Omega_Y^2)$. This is equal to $H^2(Y, \Omega_Y)$ by Serre duality. Again we use the conormal sequence. From the Euler sequence we get that $H^2(Y, \Omega_\PP \otimes \OO_Y)=0$. We also get that $h^3(Y,\Omega_\PP \otimes \OO_Y)=24$. NOW $H^3(\Omega_Y)=0$ (WHY??), and it follows from the above computations that $h^{12}=125-24=101$.
+Now we compute $h^{12} = \dim_k H^1(Y,\Omega_Y^2)$. This is equal to $H^2(Y, \Omega_Y)$ by Serre duality. Again we use the conormal sequence. From the Euler sequence we get that $H^2(Y, \Omega_\PP \otimes \OO_Y)=0$. We also get that $h^3(Y,\Omega_\PP \otimes \OO_Y)=24$. By complex conjugation, we have that $h^{pq}=h^{qp}$, so that $H^3(\Omega_Y)=H^1(\Omega^3)=H^1(\omega_Y)=H^1(\OO_Y)=0$. We conclude that
+\[
+h^{12} = h^3(\mathscr I/\mathscr I^2) -h^3(\Omega_\PP \otimes \OO_Y) = 125-24=101.
+\]
 
 This example is extremely important in mirror symmetry.
+
+\subsection{A non-flat morphism}
+
+Let $A = k[x]$ and $B=k[x,y]/(xy)$. Let $f:A \to B$ be the inclusion $x \mapsto x$. This corresponds the projection of union of the $x$ and $y$ axis to the $x$-axis. I claim that $B$ is not a flat $A$-module. For, start with the exact sequence
+\[
+0 \to \langle x \rangle \to A \to A/\langle x \rangle k \to 0.
+\]
+
+Tensor this sequence with $B$:
+
+\[
+0 \to \langle x \rangle \otimes B \to A \otimes_A B = B \to k \otimes B \to 0.
+\]
+
+Then take $x \otimes y \in \langle x \rangle \otimes B$. This element is mapped to $xy=0 \in B$. I claim that this is non-zero, hence the map is non-injective, proving non-flatness. Note that $B$ has a basis as a $k$-vector space given by the powers $\{ x^i, y^j \}$, where $i,j = 0,1,2,\ldots$. Hence $\langle x  \rangle \otimes B$ has a basis as a $k$-vector space by $x^k \otimes y^l$. Hence the expression of $x \otimes y$ as a pure tensor is unique, so that it cannot be zero. 
 
 \bibliographystyle{plain}
 \bibliography{bibliografi}

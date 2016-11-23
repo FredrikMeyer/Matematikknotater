@@ -566,7 +566,7 @@ There are several points with nontrivial stabilizer [[find all of these]].
 
 \section{Conceptual description}
 
-Let $E$ be a rank $3$ vector space, and let $\PP^{17}=\PP(E \otimes E \oplus E \otimes E)$, thought of as the set of $3\times 3$ block matrices. Let $M$ be the set of block matrices having rank two. $M$ decomposes as $M=M' \cup M_1 \cup M_2$, where $M_i$ are the sets of block matrices where one the blocks is zero, and the other has rank $2$. $M'$ is the subset of matrices where both blocks have rank exactly $1$. The dimensions are $9$, $4$, $4$.
+Let $E$ be a rank $3$ vector space, and let $\PP^{17}=\PP(E \otimes E \oplus E \otimes E)$, thought of as the set of $3\times 3$ block matrices. Let $M$ be the set of block matrices having rank two. $M$ decomposes as $M=M' \cup M_1 \cup M_2$, where $M_i$ are the sets of block matrices where one of the blocks is zero, and the other has rank $2$. $M'$ is the subset of matrices where both blocks have rank exactly $1$. The dimensions are $9$, $4$, $4$.
 
 The singular locus of (the closure of) $M'$ is the set of matrices $(0,B)$ and $(A,0)$, where $A,B$ have rank $1$.
 
@@ -574,9 +574,23 @@ If we intersect $M$ with a general $12$-plane (of codimension $6$), we therefore
 
 Let $S_3$ act on $E$ by permutations of a chosen basis. Then it act on $E \otimes E$ as well. The group $D_6 \simeq S_3 \times \Z_2$ act on the sum $E \otimes E \oplus E \otimes E$ by exchanging factors.
 
-We choose a plane $H \simeq \PP^{11} \subset \PP^{17}$ such that $G$ act on it. There are several ways to do this. One way is to start with a generic $v_1 \otimes v_2 + v_3+v_4$ and let $G$ on this tensor. Since $G$ has order $12$, we get $12$ vectors (matrices) which span a $\PP^{11}$.
+We choose a plane $H \simeq \PP^{11} \subset \PP^{17}$ such that $G$ act on it. There are several ways to do this. One way is to start with a generic $v_1 \otimes v_2 + v_3 \otimes v_4$ and let $G$ on this tensor. Since $G$ has order $12$, we get $12$ vectors (matrices) which span a $\PP^{11}$.
 
 To get coordinates, let $x_i$ be coordinates on $\PP^{11}$. Let $A = \sum_{i=1}^{12} A_i x_i$. Then $X$ is defined by the $2\x 2$-minors of this block matrix.
+
+\subsection{Elliptic fibration}
+
+We have a map $\pi:M \bs \Sing(M) \PP^2 \times \PP^2$ defined as follows: generic elements of $M$ can be described as being on the line between a pair of rank $1$ matrices $A$ and $B$. Write such an element as $A+\lambda B$. Rank $1$ matrices are parametrized by $\PP^2 \times \PP^2$, hence this family have dimension $4+1+4=9$, which fits nicely. The map is defined by sending $A+\lambda B$ to $A$.
+
+We can restrict this map to $X=M \cap H$ to get a morphism $\pi:X \to \PP^2 \times \PP^2$. 
+
+What are its fibers? Suppose $A=\pi(A+\lambda B)$. Then any other element in the fiber can be written as $A+\lambda ' B'$, where $\lambda, \lambda' \in \C^\ast$, and $B,B'$ are rank $1$ matrices. 
+
+Both of the elements are in $H$. Then $(A+\lamba B) - (A+lambda' B')=\lambda B - \lambda' B'$ is also in $H$. This element is not in $X$ however, since $X$ does not intersect the singular locus of $M$. But it is in the rank $2$ locus of the second block matrix: the rank $2$ locus of $B$ is $7$-dimensional, hence intersects $H$ in a curve. In fact an elliptic curve, since it is given by the determinant of $B$. Hence, let $B,B'$ be any two points in the rank $2$ locus of $B$. Then $A+B$ and $A+B'$ are both in the fiber over $A$.
+
+This means that the map $X \to \PP^2 \times \PP^2$ has elliptic curves as fibers, hence the image must be $2$-dimensional. I think I can show that the image is $dP_6$. So that we have a map $X \to dP_6$ which is an elliptic fibration.
+
+Projecting onto the other factor instead, we get a map $X \to dP_6 \times dP_6$ which by a similar analysis is injective. Hence $X$ is a hypersurface in $dP_6 \times dP_6$. 
 
 \subsection{Map to $(\PP^2)^{\times 4}$}
 
