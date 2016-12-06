@@ -1,0 +1,18 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Computations on dP6}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Finding equations of deformations}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Intersecting with two special hyperplanes}{4}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Intersecting with another set of hyperplanes}{4}{subsection.1.3}
+\contentsline {section}{\numberline {2}Toric mirrors}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}First example}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Second example}{7}{subsection.2.2}
+\contentsline {section}{\numberline {3}Deformation calculations}{8}{section.3}
+\contentsline {subsection}{\numberline {3.1}Non-standard triangulation}{8}{subsection.3.1}
+\contentsline {section}{\numberline {4}Singularities}{10}{section.4}
+\contentsline {subsection}{\numberline {4.1}Of the toric hypersurface}{10}{subsection.4.1}
+\contentsline {section}{\numberline {5}Calabi-Yaus}{11}{section.5}
+\contentsline {subsection}{\numberline {5.1}Singular in a 5-dimensional toric}{11}{subsection.5.1}
+\contentsline {section}{\numberline {6}Conceptual description}{12}{section.6}
+\contentsline {subsection}{\numberline {6.1}Elliptic fibration}{13}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Map to $(\mathbb {P}^2)^{\times 4}$}{14}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}The invariant subfamily}{14}{subsection.6.3}

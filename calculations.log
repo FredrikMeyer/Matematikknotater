@@ -1,0 +1,1209 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.19)  14 NOV 2016 16:04
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**\input calculations.tex
+(./calculations.tex
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/ucs/utf8x.def
+File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
+))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/ucs/ucs.sty
+Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/ucs/data/uni-global.def
+File: uni-global.def 2013/05/13 UCS: Unicode global data
+)
+\uc@secondtry=\count87
+\uc@combtoks=\toks16
+\uc@combtoksb=\toks17
+\uc@temptokena=\toks18
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/babel/babel.sty
+Package: babel 2016/01/08 3.9n The Babel package
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/babel/babel.def
+File: babel.def 2016/01/08 3.9n Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks19
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks20
+\ex@=\dimen104
+))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen105
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen106
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks21
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks22
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks23
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks25
+\thm@bodyfont=\toks26
+\thm@headfont=\toks27
+\thm@notefont=\toks28
+\thm@headpunct=\toks29
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks30
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (/uio/hume/student-u57/fredrme/latexpakker/thmtools/thmtools.sty
+Package: thmtools 2012/05/04 v63
+\thmt@toks=\toks31
+\c@thmt@dummyctr=\count101
+
+(/uio/hume/student-u57/fredrme/latexpakker/thmtools/thm-patch.sty
+Package: thm-patch 2012/05/04 v63
+
+(/uio/hume/student-u57/fredrme/latexpakker/thmtools/parseargs.sty
+Package: parseargs 2012/05/04 v63
+\@parsespec=\toks32
+))
+(/uio/hume/student-u57/fredrme/latexpakker/thmtools/thm-kv.sty
+Package: thm-kv 2012/05/04 v63
+Package thm-kv Info: Theorem names will be uppercased on input line 40.
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks33
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+))
+Package thm-kv Info: kvsetkeys patch (v1.16 or later) on input line 156.
+)
+(/uio/hume/student-u57/fredrme/latexpakker/thmtools/thm-autoref.sty
+Package: thm-autoref 2012/05/04 v63
+
+(/uio/hume/student-u57/fredrme/latexpakker/thmtools/aliasctr.sty
+Package: aliasctr 2012/05/04 v63
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/carlisle/remreset.sty)))
+(/uio/hume/student-u57/fredrme/latexpakker/thmtools/thm-listof.sty
+Package: thm-listof 2012/05/04 v63
+)
+(/uio/hume/student-u57/fredrme/latexpakker/thmtools/thm-restate.sty
+Package: thm-restate 2012/05/04 v63
+)
+(/uio/hume/student-u57/fredrme/latexpakker/thmtools/thm-amsthm.sty
+Package: thm-amsthm 2012/05/04 v63
+\thmt@style@headstyle=\toks34
+))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks35
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count102
+\float@exts=\toks36
+\float@box=\box28
+\@float@everytoks=\toks37
+\@floatcapt=\box29
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/pgf/frontendlayer/tikz.sty
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/pgf/basiclayer/pgf.sty
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/pgf/utilities/pgfrcs.sty
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks38
+\pgfutil@tempdima=\dimen113
+\pgfutil@tempdimb=\dimen114
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/utilities/pgfutil-common-lists.tex))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box30
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+))
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/pgf/basiclayer/pgfcore.sty
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 95.
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count103
+))
+\Gin@req@height=\dimen115
+\Gin@req@width=\dimen116
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/pgf/systemlayer/pgfsys.sty
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks39
+\pgfkeys@temptoks=\toks40
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks41
+))
+\pgf@x=\dimen117
+\pgf@y=\dimen118
+\pgf@xa=\dimen119
+\pgf@ya=\dimen120
+\pgf@xb=\dimen121
+\pgf@yb=\dimen122
+\pgf@xc=\dimen123
+\pgf@yc=\dimen124
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count104
+\c@pgf@countb=\count105
+\c@pgf@countc=\count106
+\c@pgf@countd=\count107
+\t@pgf@toka=\toks42
+\t@pgf@tokb=\toks43
+\t@pgf@tokc=\toks44
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count108
+\pgfsyssoftpath@bigbuffer@items=\count109
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/math/pgfmath.code.tex
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/math/pgfmathcalc.code.tex
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/math/pgfmathutil.code.tex)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen125
+\pgfmath@count=\count110
+\pgfmath@box=\box31
+\pgfmath@toks=\toks45
+\pgfmath@stack@operand=\toks46
+\pgfmath@stack@operation=\toks47
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/math/pgfmathfunctions.code.tex
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/math/pgfmathfunctions.basic.code.tex)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/math/pgfmathfunctions.trigonometric.code.tex)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/math/pgfmathfunctions.random.code.tex)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/math/pgfmathfunctions.comparison.code.tex)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/math/pgfmathfunctions.base.code.tex)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/math/pgfmathfunctions.round.code.tex)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/math/pgfmathfunctions.misc.code.tex)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex)))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count111
+))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen126
+\pgf@picmaxx=\dimen127
+\pgf@picminy=\dimen128
+\pgf@picmaxy=\dimen129
+\pgf@pathminx=\dimen130
+\pgf@pathmaxx=\dimen131
+\pgf@pathminy=\dimen132
+\pgf@pathmaxy=\dimen133
+\pgf@xx=\dimen134
+\pgf@xy=\dimen135
+\pgf@yx=\dimen136
+\pgf@yy=\dimen137
+\pgf@zx=\dimen138
+\pgf@zy=\dimen139
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen140
+\pgf@path@lasty=\dimen141
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
+\pgf@shorten@end@additional=\dimen142
+\pgf@shorten@start@additional=\dimen143
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
+\pgfpic=\box32
+\pgf@hbox=\box33
+\pgf@layerbox@main=\box34
+\pgf@picture@serial@count=\count112
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
+\pgflinewidth=\dimen144
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
+\pgf@pt@x=\dimen145
+\pgf@pt@y=\dimen146
+\pgf@pt@temp=\dimen147
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
+\pgfarrowsep=\dimen148
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen149
+\pgf@sys@shading@range@num=\count113
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+\pgfexternal@startupbox=\box35
+))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box36
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen150
+\pgf@nodesepend=\dimen151
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/pgf/utilities/pgffor.sty
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/pgf/utilities/pgfkeys.sty
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/utilities/pgfkeys.code.tex))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/pgf/math/pgfmath.sty
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/math/pgfmath.code.tex))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen152
+\pgffor@skip=\dimen153
+\pgffor@stack=\toks48
+\pgffor@toks=\toks49
+))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count114
+\pgfplotmarksize=\dimen154
+)
+\tikz@lastx=\dimen155
+\tikz@lasty=\dimen156
+\tikz@lastxsaved=\dimen157
+\tikz@lastysaved=\dimen158
+\tikzleveldistance=\dimen159
+\tikzsiblingdistance=\dimen160
+\tikz@figbox=\box37
+\tikz@figbox@bg=\box38
+\tikz@tempbox=\box39
+\tikz@tempbox@bg=\box40
+\tikztreelevel=\count115
+\tikznumberofchildren=\count116
+\tikznumberofcurrentchild=\count117
+\tikz@fig@count=\count118
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count119
+\pgfmatrixcurrentcolumn=\count120
+\pgf@matrix@numberofcolumns=\count121
+)
+\tikz@expandcount=\count122
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/tikz-cd/tikz-cd.sty
+Package: tikz-cd 2014/10/30 v0.9e Commutative diagrams with tikz
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/tikz-cd/tikzlibrarycd.code.tex
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2013/07/12 v3.0.1a (rcs-revision 1.4)
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/frontendlayer/tikz/libraries/tikzlibraryquotes.code.tex
+File: tikzlibraryquotes.code.tex 2014/03/21 v3.0.1a (rcs-revision 1.4)
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2015/05/13 v3.0.1a (rcs-revision 1.13)
+\pgfarrowinset=\dimen161
+\pgfarrowlength=\dimen162
+\pgfarrowwidth=\dimen163
+\pgfarrowlinewidth=\dimen164
+)))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.9)
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/caption/subcaption.sty
+Package: subcaption 2016/02/02 v1.1-136 Sub-captions (AR)
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/caption/caption.sty
+Package: caption 2016/02/02 v3.3-136 Customizing captions (AR)
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/caption/caption3.sty
+Package: caption3 2016/02/02 v1.7-136 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen165
+\captionmargin@=\dimen166
+\captionwidth=\dimen167
+\caption@tempdima=\dimen168
+\caption@indent=\dimen169
+\caption@parindent=\dimen170
+\caption@hangindent=\dimen171
+)
+\c@ContinuedFloat=\count123
+Package caption Info: float package is loaded.
+)
+\c@subfigure=\count124
+\c@subtable=\count125
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xy.sty
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xy.tex Bootstrap'ing: catcodes, docmode,
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xyrecat.tex)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xyidioms.tex)
+
+ Xy-pic version 3.8.9 <2013/10/06>
+ Copyright (c) 1991-2013 by Kristoffer H. Rose <krisrose@tug.org> and others
+ Xy-pic is free software: see the User's Guide for details.
+
+Loading kernel: messages; fonts; allocations: state,
+\X@c=\dimen172
+\Y@c=\dimen173
+\U@c=\dimen174
+\D@c=\dimen175
+\L@c=\dimen176
+\R@c=\dimen177
+\Edge@c=\toks50
+\X@p=\dimen178
+\Y@p=\dimen179
+\U@p=\dimen180
+\D@p=\dimen181
+\L@p=\dimen182
+\R@p=\dimen183
+\Edge@p=\toks51
+\X@origin=\dimen184
+\Y@origin=\dimen185
+\X@xbase=\dimen186
+\Y@xbase=\dimen187
+\X@ybase=\dimen188
+\Y@ybase=\dimen189
+\X@min=\dimen190
+\Y@min=\dimen191
+\X@max=\dimen192
+\Y@max=\dimen193
+\lastobjectbox@=\box41
+\zerodotbox@=\box42
+\almostz@=\dimen194
+ direction,
+\d@X=\dimen195
+\d@Y=\dimen196
+\K@=\count126
+\KK@=\count127
+\Direction=\count128
+\K@dXdY=\dimen197
+\K@dYdX=\dimen198
+\xyread@=\read2
+\xywrite@=\write4
+\csp@=\count129
+\quotPTK@=\dimen199
+
+utility macros; pictures: \xy, positions,
+\swaptoks@@=\toks52
+\connectobjectbox@@=\box43
+ objects,
+\styletoks@=\toks53
+ decorations;
+kernel objects: directionals, circles, text; options; algorithms: directions,
+edges, connections;  Xy-pic loaded)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package: xy 2013/10/06 Xy-pic version 3.8.9
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xyall.tex  Xy-pic option: All features v.3.8
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xycurve.tex  Xy-pic option: Curve and Spline extension v.3.12 curve,
+\crv@cnt@=\count130
+\crvpts@=\toks54
+\splinebox@=\box44
+\splineval@=\dimen256
+\splinedepth@=\dimen257
+\splinetol@=\dimen258
+\splinelength@=\dimen259
+
+circles,
+\L@=\dimen260
+ loaded)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xyframe.tex  Xy-pic option: Frame and Bracket extension v.3.14 loaded)
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xycmtip.tex  Xy-pic option: Computer Modern tip extension v.3.7
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xytips.tex  Xy-pic option: More Tips extension v.3.11 loaded) loaded)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xyline.tex  Xy-pic option: Line styles extension v.3.10
+\xylinethick@=\dimen261
+ loaded)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xyrotate.tex  Xy-pic option: Rotate and Scale extension v.3.8 loaded)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xycolor.tex  Xy-pic option: Colour extension v.3.11 loaded)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xymatrix.tex  Xy-pic option: Matrix feature v.3.14
+\Row=\count131
+\Col=\count132
+\queue@=\toks55
+\queue@@=\toks56
+\qcount@=\count133
+\qcount@@=\count134
+\matrixsize@=\count135
+ loaded)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xyarrow.tex  Xy-pic option: Arrow and Path feature v.3.9 path, \ar,
+loaded)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xygraph.tex  Xy-pic option: Graph feature v.3.11 loaded) loaded)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xypdf.tex  Xy-pic option: PDF driver v.1.7
+Xy-pic pdf driver: `color' extension support
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xypdf-co.tex loaded) Xy-pic pdf driver: `curve' extension support
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xypdf-cu.tex loaded) Xy-pic pdf driver: `frame' extension support
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xypdf-fr.tex loaded) Xy-pic pdf driver: `line' extension support
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xypdf-li.tex loaded) Xy-pic pdf driver: `rotate' extension support
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/xypic/xypdf-ro.tex loaded) loaded))
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen262
+\WF@size=\dimen263
+\c@WF@wrappedlines=\count136
+\WF@box=\box45
+\WF@everypar=\toks57
+Package: wrapfig 2003/01/31  v 3.6
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package hobsub Info: Skipping package `etexcmds' (already loaded).
+Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen264
+\Hy@linkcounter=\count137
+\Hy@pagecounter=\count138
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count139
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count140
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen265
+\Fld@menulength=\count141
+\Field@Width=\dimen266
+\Fld@charsize=\dimen267
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count142
+\c@Item=\count143
+\c@Hfootnote=\count144
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count145
+\c@bookmark@seq@number=\count146
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip49
+) (./mystyle.sty
+\c@thm=\count147
+\c@oppg=\count148
+\c@losn=\count149
+\c@exc=\count150
+\c@sol=\count151
+LaTeX Info: Redefining \dP6 on input line 189.
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen268
+\lightrulewidth=\dimen269
+\cmidrulewidth=\dimen270
+\belowrulesep=\dimen271
+\belowbottomsep=\dimen272
+\aboverulesep=\dimen273
+\abovetopsep=\dimen274
+\cmidrulesep=\dimen275
+\cmidrulekern=\dimen276
+\defaultaddspace=\dimen277
+\@cmidla=\count152
+\@cmidlb=\count153
+\@aboverulesep=\dimen278
+\@belowrulesep=\dimen279
+\@thisruleclass=\count154
+\@lastruleclass=\count155
+\@thisrulewidth=\dimen280
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/oberdiek/resizegather.sty
+Package: resizegather 2010/03/01 v1.2 Resize overly large equations (HO)
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/listings/listings.sty
+\lst@mode=\count156
+\lst@gtempboxa=\box46
+\lst@token=\toks58
+\lst@length=\count157
+\lst@currlwidth=\dimen281
+\lst@column=\count158
+\lst@pos=\count159
+\lst@lostspace=\dimen282
+\lst@width=\dimen283
+\lst@newlines=\count160
+\lst@lineno=\count161
+\lst@maxwidth=\dimen284
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count162
+\lst@skipnumbers=\count163
+\lst@framebox=\box47
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+ (./lstlang0.sty
+File: lstlang0.sty 2016/01/02 listings language file
+) (./calculations.aux
+
+LaTeX Warning: Label `sec:toric5' multiply defined.
+
+
+LaTeX Warning: Label `sec:delpezzoz2' multiply defined.
+
+)
+\openout1 = `calculations.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/ucs/ucsencs.def
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
+) ABD: EveryShipout initializing macros
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/conte
+xt/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count164
+\scratchdimen=\dimen285
+\scratchbox=\box48
+\nofMPsegments=\count165
+\nofMParguments=\count166
+\everyMPshowfont=\toks59
+\MPscratchCnt=\count167
+\MPscratchDim=\dimen286
+\MPnumerator=\count168
+\makeMPintoPDFobject=\count169
+\everyMPtoPDFconversion=\toks60
+)
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 62.
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 62.
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 62.
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+Package xypdf Info: Line width: 0.43799pt on input line 62.
+\AtBeginShipoutBox=\box49
+Package hyperref Info: Link coloring OFF on input line 62.
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/gener
+ic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count170
+)
+LaTeX Info: Redefining \ref on input line 62.
+LaTeX Info: Redefining \pageref on input line 62.
+LaTeX Info: Redefining \nameref on input line 62.
+ (./calculations.out) (./calculations.out)
+\@outlinefile=\write5
+\openout5 = `calculations.out'.
+
+\c@lstlisting=\count171
+
+(./calculations.toc)
+\tf@toc=\write6
+\openout6 = `calculations.toc'.
+
+ [1
+
+{/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-var/fonts/map/
+pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 78.
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 78.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 89.
+
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+) [2] [3]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4]
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
+ line 231.
+ [5]
+(/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/tex/latex
+/ucs/data/uni-0.def
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+) [6]
+
+Package resizegather Warning: Equation line 1 is too large by 415.35056pt
+(resizegather)                in environment `gather*' on input line 316.
+
+[7] [8] [9] [10] [11] [12]
+! Undefined control sequence.
+l.589 ... the elements are in $H$. Then $(A+\lamba
+                                                   B) - (A+lambda' B')=\lamb...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\times' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 595.
+
+[13] [14]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 605.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 605.
+ (./calculations.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 605.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 605.
+Package rerunfilecheck Info: File `calculations.out' has not changed.
+(rerunfilecheck)             Checksum: 1B161FED973F985583E0072C7AED494A;1143.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 605.
+ ) 
+Here is how much of TeX's memory you used:
+ 26313 strings out of 493033
+ 473691 string characters out of 6121489
+ 877555 words of memory out of 5000000
+ 29145 multiletter control sequences out of 15000+600000
+ 25777 words of font info for 81 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 56i,18n,82p,3268b,2714s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/e
+nc/dvips/cm-super/cm-super-t1.enc}</mn/sarpanitu/modules/packages/texlive/2015-
+uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></mn/sarpani
+tu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmex10.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf
+/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></mn/sarpanitu/module
+s/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi10.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi8.pfb></mn/sarpanitu/modules/packages/tex
+live/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></m
+n/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr12.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/u
+io-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></mn/sarpanitu/modu
+les/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr8.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr9.pfb></mn/sarpanitu/modules/packages/texl
+ive/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></m
+n/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy8.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/u
+io-texmf/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></mn/sarpanitu/mod
+ules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msbm10.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/
+texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></mn/sarpanitu/modules/packages/t
+exlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb><
+/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type
+1/public/cm-super/sfbx1200.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio
+/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></mn/sarpanitu/m
+odules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-sup
+er/sfrm0600.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texm
+f-dist/fonts/type1/public/cm-super/sfrm0900.pfb></mn/sarpanitu/modules/packages
+/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb
+></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/ty
+pe1/public/cm-super/sfrm1095.pfb></mn/sarpanitu/modules/packages/texlive/2015-u
+io/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></mn/sarpanitu
+/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-s
+uper/sfrm1728.pfb></mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/te
+xmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></mn/sarpanitu/modules/packag
+es/texlive/2015-uio/uio-texmf/texmf-dist/fonts/type1/public/cm-super/sftt1095.p
+fb>
+Output written on calculations.pdf (14 pages, 402212 bytes).
+PDF statistics:
+ 457 PDF objects out of 1000 (max. 8388607)
+ 410 compressed objects within 5 object streams
+ 184 named destinations out of 1000 (max. 500000)
+ 149 words of extra memory for PDF output out of 10000 (max. 10000000)
+

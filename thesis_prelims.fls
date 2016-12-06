@@ -1,0 +1,9 @@
+PWD /uio/hume/student-u57/fredrme/notater/Matematikknotater
+INPUT /mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf.cnf
+INPUT /mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/web2c/texmf.cnf
+INPUT /mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT thesis_prelims.tex
+OUTPUT thesis_prelims.log
+INPUT /mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT /mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm

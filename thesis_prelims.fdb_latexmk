@@ -1,0 +1,13 @@
+# Fdb version 3
+["pdflatex"] 1466507898 "thesis_prelims.tex" "thesis_prelims.pdf" "thesis_prelims" 1466507899
+  "/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
+  "/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
+  "/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-dist/web2c/texmf.cnf" 1445297872 31985 3b2aa1e4e73426e2011ec5231ac92e0f ""
+  "/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf-var/web2c/pdftex/pdflatex.fmt" 1455876864 3871659 0ee1d6f4b5a6389f8fa07fc0111c408a ""
+  "/mn/sarpanitu/modules/packages/texlive/2015-uio/uio-texmf/texmf.cnf" 1455876672 496 01ab80fa0036a81d2df86fb0ac70c709 ""
+  "thesis_prelims.aux" 1466502251 5871 ff71b9ff7951d7f794db4c7e7957a6d8 ""
+  "thesis_prelims.tex" 1466507898 5123 67f6a73eb1a199ce0d6c6838d965fac8 ""
+  (generated)
+  "thesis_prelims.pdf"
+  "thesis_prelims.log"
