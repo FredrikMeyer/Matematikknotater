@@ -18,13 +18,12 @@
 \usepackage[all]{xy}   % for comm.diagram
 \usepackage{wrapfig} % for float right
 \usepackage{hyperref}
-\usepackage{mystyle} % stilfilen      
+\usepackage{../mystyle} % stilfilen      
 \usepackage{booktabs}
 \usepackage{resizegather}
 \setcounter{MaxMatrixCols}{48}
 \usepackage{listings}
 \lstset{language=Macaulay2}
-
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
@@ -580,17 +579,10 @@ To get coordinates, let $x_i$ be coordinates on $\PP^{11}$. Let $A = \sum_{i=1}
 
 \subsection{Elliptic fibration}
 
-We have a map $\pi:M \bs \Sing(M) \PP^2 \times \PP^2$ defined as follows: generic elements of $M$ can be described as being on the line between a pair of rank $1$ matrices $A$ and $B$. Write such an element as $A+\lambda B$. Rank $1$ matrices are parametrized by $\PP^2 \times \PP^2$, hence this family have dimension $4+1+4=9$, which fits nicely. The map is defined by sending $A+\lambda B$ to $A$.
+We have a map $\pi:M \bs \Sing(M) \to \PP^2 \times \PP^2$ defined as follows: generic elements of $M$ can be debscribed as being on the line between a pair of rank $1$ matrices $A$ and $B$. Write such an element as $A+\lambda B$. Rank $1$ matrices are parametrized by $\PP^2 \times \PP^2$, hence this family have dimension $4+1+4=9$, which fits nicely. The map is defined by sending $A+\lambda B$ to $A$.
 
 We can restrict this map to $X=M \cap H$ to get a morphism $\pi:X \to \PP^2 \times \PP^2$. 
 
-What are its fibers? Suppose $A=\pi(A+\lambda B)$. Then any other element in the fiber can be written as $A+\lambda ' B'$, where $\lambda, \lambda' \in \C^\ast$, and $B,B'$ are rank $1$ matrices. 
-
-Both of the elements are in $H$. Then $(A+\lamba B) - (A+lambda' B')=\lambda B - \lambda' B'$ is also in $H$. This element is not in $X$ however, since $X$ does not intersect the singular locus of $M$. But it is in the rank $2$ locus of the second block matrix: the rank $2$ locus of $B$ is $7$-dimensional, hence intersects $H$ in a curve. In fact an elliptic curve, since it is given by the determinant of $B$. Hence, let $B,B'$ be any two points in the rank $2$ locus of $B$. Then $A+B$ and $A+B'$ are both in the fiber over $A$.
-
-This means that the map $X \to \PP^2 \times \PP^2$ has elliptic curves as fibers, hence the image must be $2$-dimensional. I think I can show that the image is $dP_6$. So that we have a map $X \to dP_6$ which is an elliptic fibration.
-
-Projecting onto the other factor instead, we get a map $X \to dP_6 \times dP_6$ which by a similar analysis is injective. Hence $X$ is a hypersurface in $dP_6 \times dP_6$. 
 
 \subsection{Map to $(\PP^2)^{\times 4}$}
 

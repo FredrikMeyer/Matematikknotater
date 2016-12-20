@@ -1,0 +1,76 @@
+\documentclass[11pt, english]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}   % S P R A A K
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{calc}
+%\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{../mystyle} % stilfilen      
+\usepackage{booktabs}
+\usepackage{resizegather}
+\setcounter{MaxMatrixCols}{48}
+
+\begin{document}
+\title{Embedding of \lh{$X$}{X}}
+\author{Fredrik Meyer}
+\maketitle
+
+
+\section{Embedding in \lh{$\left(\PP^2\right)^4$}{p2}}
+
+Let $H=\PP^{11}$ be spanned by twelve generic block matrices of the form
+\begin{equation}
+\label{eq:block}
+\begin{pmatrix}
+A & 0 \\
+0 & B
+\end{pmatrix},
+\end{equation}
+where $A,B$ er $3 \times 3$-matrices. This is a linear subspace in $\PP^{17}=\PP(E \otimes E \oplus E \otimes E)$, where $E$ is a 3-dimensional vector space.
+
+
+Let $X$ be as before [[add explanation]]
+
+We have a map $\pi_1: X \to \PP^2 \times \PP^2$ defined by sending a block matrix to its first block.
+
+\begin{prop}
+The map $\pi_1:X \to \PP^2 \times \PP^2$ is a morphism.
+\end{prop}
+\begin{proof}
+$X$ can be desribed as $H \cap M$, where $M$ is the join of two disjoint copies of $\PP^2 \times \PP^2$. The singular locus is the set of block matrices where $A$ or $B$ is zero in \eqref{eq:block}. This is a set of dimension $4$. Intersecting with a general $\PP^{11}$ (which is of codimension $6$) kills off the singular locus, and also the indeterminacy locus of the map $(A,B) \mapsto A$, so that we indeed get a morphism.
+\end{proof}
+
+
+By eliminating variables, the matrices $A,B$ can be written as
+\[
+A =
+\begin{pmatrix}
+l_1 & x_1 & x_2 \\
+x_3 & l_2 & x_5 \\
+x_6 & x_7 & l_3
+\end{pmatrix} \text{ and }
+B = 
+\begin{pmatrix}
+l_4 & x_{10} & x_{11} \\
+x_{12} & l_5 & x_{14} \\
+x_{15} & x_{16} & l_6
+\end{pmatrix},
+\]
+where the $l_i$ are general linear forms in the $x_i$ appearing in the matrices. Thus the fiber $\pi^{-1}(A)$ is
+
+
+
+\end{document}
