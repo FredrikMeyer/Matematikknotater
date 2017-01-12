@@ -1,0 +1,61 @@
+\documentclass[a4paper]{memoir}
+
+\usepackage{style}      % Custom style
+\usepackage{kantlipsum} % Dummy text
+
+\title{Working Title}
+\author
+{
+    First Author
+    \and
+    Second Author
+}
+
+\includeonly
+{
+    sections/abstract,
+    sections/acknowledgements,
+    sections/introduction,
+    sections/chapter2,
+    sections/chapter3,
+    sections/chapter4,
+    sections/appendixA,
+    sections/appendixB,
+}
+
+\begin{document}
+
+    \frontmatter        % Folios in Roman numerals, unnumbered chapters.
+
+    \begin{titlingpage}
+        \maketitle
+    \end{titlingpage}
+
+    \include{sections/abstract}
+    \include{sections/acknowledgements}
+
+    \tableofcontents    % Or \tableofcontents*
+    \listoffigures
+    \listoftables
+
+    \mainmatter         % Folios in Arabic numerals, numbered chapters.
+
+    \include{sections/introduction}
+
+    \part{The First Part}
+
+    \include{sections/chapter2}
+    \include{sections/chapter3}
+    \include{sections/chapter4}
+
+    \appendix           % "Chapter" is renamed "Appendix"
+    \appendixpage       % Short for \part*{Appendices}
+
+    \include{sections/appendixA}
+    \include{sections/appendixB}
+
+    \backmatter         % Folios in Arabic numerals, unnumbered chapters.
+
+    \printbibliography
+
+\end{document}
