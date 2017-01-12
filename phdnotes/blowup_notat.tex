@@ -1,0 +1,54 @@
+\documentclass[11pt, english]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}   % S P R A A K
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{calc}
+%\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{mystyle} % stilfilen      
+\usepackage{booktabs}
+\usepackage{resizegather}
+\setcounter{MaxMatrixCols}{48}
+
+\begin{document}
+\title{Resolution of joins}
+\author{Fredrik Meyer}
+\maketitle
+
+\section{Blowing up \texorpdfstring{$\PP^{17}$}{P17} in two disjoint linear subspaces}
+
+Let $\PP^{17}$ have coordinates $x_0,\ldots,x_{17}$. Let $H_1$ be the $\PP^8$ defined by $x_9=x_{10}=\ldots=x_{17}=0$. Let $H_2$ be the complementary linear subspace defined by $x_0=x_1=\ldots=x_8=0$.
+
+Let $N$ be the blowup of $\PP^{17}$ in the union of $H_1$ and $H_2$. Then $N$ is the subset of $\PP^{17} \times \PP^8_{y_i} \times \PP^8_{z_i}$ defined by the $2 \times 2$-minors of
+\[
+\begin{pmatrix}
+x_0 & x_1 & x_2 & x_3 & x_4 & x_5 & x_6 & x_7 & x_8 \\
+y_0 & y_1 & y_2 & y_3 & y_4 & y_5 & y_6 & y_7 & y_8
+\end{pmatrix}
+\]
+and of 
+\[
+\begin{pmatrix}
+x_0 & x_1 & x_2 & x_3 & x_4 & x_5 & x_6 & x_7 & x_8 \\
+z_0 & z_1 & z_2 & z_3 & z_4 & z_5 & z_6 & z_7 & z_8
+\end{pmatrix}.
+\]
+We have a projection $Y \to \PP^8 \times \PP^8$. Let $\PP^{8,8}$ denote $\PP^8 \times \PP^8$. Then $Y$ is a  $\PP^1$-bundle over $\PP^{8,8}$. It is not hard to see that the corresponding locally free rank $2$ vector bundle is $\mathscr E = \OO_{\PP^{8,8}}(1,0) \oplus \OO_{\PP^{8,8}}(0,1)$. Hence $Y = \PP(\mathscr E)$. 
+
+
+
+
+\end{document}

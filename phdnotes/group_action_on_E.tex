@@ -1,0 +1,44 @@
+\documentclass[11pt, english]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}   % S P R A A K
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{enumerate}  % lister $  
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{calc}
+%\usepackage{tikz-3dplot}
+\usepackage{subcaption}
+\usepackage[all]{xy}   % for comm.diagram
+\usepackage{wrapfig} % for float right
+\usepackage{hyperref}
+\usepackage{../mystyle} % stilfilen      
+\usepackage{booktabs}
+\usepackage{resizegather}
+\setcounter{MaxMatrixCols}{48}
+
+\begin{document}
+\title{Group action on $X$}
+\author{Fredrik Meyer}
+\maketitle
+
+Let $E=k^3$. Form $V = (E \otimes E)^{\oplus 2}$. The group $S_3$ act on $E$ by $e_i \mapsto e_{\sigma(i)}$. We get an induced action on $E \otimes E$. We have a $\Z_2$-action on $V$ given by switching factors. This gives us a $D_6 \simeq S_3 \times \Z_2$-action on $V$.
+
+Inside $\PP(V)$ we have the Calabi-Yau variety $X$, given by $M \cap H$, where $H$ is a generic codimension $6$ linear subspace, and $M$ is the zero set of the $2 \times 2$-minors of two matrices with entries in $E \otimes E$.
+
+If we choose $H$ such that $G=\dP6$ act on $H$, we get an action on $X$. Our goal is to choose $H$ such that $X$ is nonsingular and have a $\dP6$-action.
+
+\begin{lemma}
+One such invariant hyperplane is given by the span of
+$$
+f_{ij}^\alpha = e_i^\alpha \otimes e_j^\alpha + t e_{-i-j}^{\alpha+1} \otimes e_{-i-j}^{\alpha+1},
+$$
+where $i \neq j \in \Z_3$ and $\alpha \in \Z_2$. 
+\end{lemma}
+\end{document}

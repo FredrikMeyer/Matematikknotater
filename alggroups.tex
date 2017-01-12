@@ -8,7 +8,7 @@
 \usepackage{mathrsfs}
 \usepackage{url}
 \usepackage{thmtools}
-\usepackage{enumerate}  % lister $  
+\usepackage{enumerate}  % lister $
 \usepackage{float}
 \usepackage{tikz}
 \usepackage{tikz-cd}
@@ -18,7 +18,7 @@
 \usepackage[all]{xy}   % for comm.diagram
 \usepackage{wrapfig} % for float right
 \usepackage{hyperref}
-\usepackage{mystyle} % stilfilen      
+\usepackage{mystyle} % stilfilen
 
 \usepackage[a5paper,margin=0.5in]{geometry}
 
@@ -27,10 +27,10 @@
 \begin{document}
 \title{Algebraic groups and moduli theory}
 \author{Fredrik Meyer}
-\maketitle 
+\maketitle
 
 \abstract{
-These are notes from the course Algebraic Geometry III. We work over a field of characteristic zero. We start by doing some basic representation theory. Then we introduce algebraic groups. Then we study representations of algebraic groups. Finally we apply this to moduli problems. 
+These are notes from the course Algebraic Geometry III. We work over a field of characteristic zero. We start by doing some basic representation theory. Then we introduce algebraic groups. Then we study representations of algebraic groups. Finally we apply this to moduli problems.
 }
 
 \section{Introduction and motivation}
@@ -52,14 +52,14 @@ We end this section with a collection of examples of what can happen and what ca
 \begin{example}
 Consider the representation of $\Z_n$ on $\SL_2(\C)$ given by
 $$
-\Z_n \ni [m] \mapsto 
+\Z_n \ni [m] \mapsto
 \begin{pmatrix}
   \zeta_n & 0 \\ 0 & \zeta_n^{-1}
 \end{pmatrix} \in \SL_2(\C),
 $$
 where $\zeta_n$ is an n'th root of unity. The action on the coordinate ring $\C[x,y]$ is given by $x \mapsto \zeta_n x$ and $y \mapsto \zeta_n^{-1}y$. Thus the action on a monomial is given by $x^ay^b \mapsto \zeta_n^{a-b}x^a y^b$. This monomial is invariant if and only if $a \equiv b \pmod{n}$.
 
-Let us plot these monomials for $n=3$: 
+Let us plot these monomials for $n=3$:
 \begin{center}
 \begin{tikzpicture}
  \draw[step=0.5cm, very thin] (0,0) grid (4.4,4.4);
@@ -70,7 +70,7 @@ Let us plot these monomials for $n=3$:
   \foreach \y in {0,3,6} {
     \fill ({0.5*\x},{\y*0.5}) circle (2pt);
     \fill ({0.5*\x+0.5},{\y*0.5+0.5}) circle (2pt);
-} 
+}
 \end{tikzpicture}
 \end{center}
 
@@ -82,7 +82,7 @@ The  map $\C^2 \to \Spec \C[x,y]^{\Z_n}$ is of degree $n$, since the field exten
 \begin{example}
   Let $G = \C^\ast$ and let $X = \C^n$. Consider the representation
 $$
-\C^\ast \ni \lambda \mapsto 
+\C^\ast \ni \lambda \mapsto
 \begin{pmatrix}
   \lambda & 0 & \\
 0 & \ddots &0 \\
@@ -92,7 +92,7 @@ $$
 
 We have an induced action on the coordinate ring, sending $x_i$ to $\lambda x_i$. But the only invariants are the constants! Thus the ``quotient'' is just the constant map $\C^n \to \{p\}$. This is not what we want.
 
-Let us analyze the orbits of $G$. If $x \in \C^n$ is non-zero, then the orbit $G \cdot x$ is the line spanned by $x$ minus the origin. If $x=\vec 0$, then the orbit is just the origin. Thus most orbits are not closed, and we notice that the origin is in the closure of all orbits. 
+Let us analyze the orbits of $G$. If $x \in \C^n$ is non-zero, then the orbit $G \cdot x$ is the line spanned by $x$ minus the origin. If $x=\vec 0$, then the orbit is just the origin. Thus most orbits are not closed, and we notice that the origin is in the closure of all orbits.
 
 This suggests a possible solution. If we instead consider $\C^n \bs \{ 0\}$, the orbits are disjoint and closed in the subspace topology.
 \end{example}
@@ -100,7 +100,7 @@ This suggests a possible solution. If we instead consider $\C^n \bs \{ 0\}$, the
 \begin{example}
 Let again $G = \C^\ast$, but consider now the representation given by
 $$
-\C^\ast \ni \lambda \mapsto 
+\C^\ast \ni \lambda \mapsto
 \begingroup
 \renewcommand*{\arraystretch}{0.8}
 \begin{pmatrix}
@@ -111,7 +111,7 @@ $$
 \end{pmatrix}  \in \GL_2(\C).
 \endgroup
 $$
-The action extends to the coordinate ring $R= \C[x,y,z,w]$, and the invariants are $R^G=\C[xz,xw,yz,yw]$. Then $R^G \approx \C[t_1,t_2,t_3,t_4]/(t_1t_4-t_2t_3)$. This is a hypersurface in $\C^4$. 
+The action extends to the coordinate ring $R= \C[x,y,z,w]$, and the invariants are $R^G=\C[xz,xw,yz,yw]$. Then $R^G \approx \C[t_1,t_2,t_3,t_4]/(t_1t_4-t_2t_3)$. This is a hypersurface in $\C^4$.
 
 We have a commutative diagram:
 \[
@@ -129,7 +129,7 @@ An even more serious problem is that $R^G$ might not be finitely generated. It i
 
 It turns out that the ``magic'' property we want of an algebraic group is that it is ``linearly reductive'' - a technical property implying that $R^G$ is finitely-generated.
 
-The plan ahead is as follows. The next section will talk loosely about representation theory in general in order for the reader to get a feel for the subject. Section 3 will be about algebraic groups and some examples. Section 4 is longer and is about representations of algebraic groups. This is the technical section where linear reductivity is introduced. 
+The plan ahead is as follows. The next section will talk loosely about representation theory in general in order for the reader to get a feel for the subject. Section 3 will be about algebraic groups and some examples. Section 4 is longer and is about representations of algebraic groups. This is the technical section where linear reductivity is introduced.
 
 
 \section{Representation theory in general}
@@ -141,7 +141,7 @@ The \emph{trivial representation} is given by sending every $g \in G$ to the ide
 \end{example}
 
 \begin{example}
-Suppose $G$ is a finite group. Then there is an embedding $G \hookrightarrow S_n$, and every element of $S_n$ can be represented by permutation matrices (that is, matrices $M_g$ such that $Me_i=e_{g(i)}$ for all $g \in G$). This defines a representation of $G$ in $k^n$. 
+Suppose $G$ is a finite group. Then there is an embedding $G \hookrightarrow S_n$, and every element of $S_n$ can be represented by permutation matrices (that is, matrices $M_g$ such that $Me_i=e_{g(i)}$ for all $g \in G$). This defines a representation of $G$ in $k^n$.
 \end{example}
 
 \begin{example}
@@ -209,11 +209,11 @@ If $G=\Gr_a=(\Aa^1,+)=\Spec k[X]$, then $\mu_A(X)=X \otimes 1 + 1 \otimes X$. Th
 \end{example}
 
 \begin{example}
- Let $A=k[s]$ be the polynomial ring in one variable. This is the coordinate ring of $\Aa_k^1$. We can define 
+ Let $A=k[s]$ be the polynomial ring in one variable. This is the coordinate ring of $\Aa_k^1$. We can define
 $$
 \mu(s) = s \otimes 1 + 1 \otimes s.
 $$
-Also, $\epsilon(s)=0$, and $\iota(s)=-s$. 
+Also, $\epsilon(s)=0$, and $\iota(s)=-s$.
 \end{example}
 
 
@@ -241,7 +241,7 @@ R \otimes_k A \ar[r]_{\id_R \otimes \mu_A} & R \otimes _k A \otimes_k A
 
 \section{Representations of algebraic groups}
 
-Let $G = \Spec A$ be an affine algebraic group over a field $k$. 
+Let $G = \Spec A$ be an affine algebraic group over a field $k$.
 
 \begin{defi}
  An \emph{algebraic representation of $G$} is a pair $(V,\mu_V)$ consisting of a $k$-vector space $V$ and a $k$-linear map $\mu_V: V \to V \otimes_k A$ satisfying the following two conditions:
@@ -280,7 +280,7 @@ We often drop the subcript from $\mu_V$ unless confusion may arise. The same com
 Let $\mu:V \to V \otimes A$ be a representation of $G = \Spec A$. Then:
 \begin{enumerate}
 \item A vector $x \in V$ is said to be \emph{$G$-invariant} if $\mu(x) = x \otimes 1$.
-\item A subspace $U \subset V$ is called a \emph{subrepresentation} if $\mu(U) \subseteq U \otimes A$. 
+\item A subspace $U \subset V$ is called a \emph{subrepresentation} if $\mu(U) \subseteq U \otimes A$.
 \end{enumerate}
 \end{defi}
 
@@ -290,7 +290,7 @@ Every representation $V$ of $G$ is locally finite-dimensional. Precisely: every 
 \end{prop}
 
 \begin{proof}
-Write $\mu(x)$ as a finite sum $\sum_i x_i \otimes f_i$ for $x_i \in V$ and linearly independent $f_i \in A$. This we can always do, by definition of tensor product and bilinearity. Let $U$ be the subspace of $V$ spanned by the vectors $x_i$. 
+Write $\mu(x)$ as a finite sum $\sum_i x_i \otimes f_i$ for $x_i \in V$ and linearly independent $f_i \in A$. This we can always do, by definition of tensor product and bilinearity. Let $U$ be the subspace of $V$ spanned by the vectors $x_i$.
 
 Now, by the commutativity of the diagram \eqref{eq:algrep1} it follows that $$ x = \sum_i \epsilon(f_i) x_i. $$
 
@@ -304,11 +304,11 @@ Because each term of the right-hand-side is contained in $U \otimes A \otimes A$
 Thus $x$ is contained in the finite-dimensional representation $\restr{\mu_V}{U}:U \to U \otimes A$.
 \end{proof}
 
-We can classify representations of $\Gr_m$ easily. They are all direct sums of ``weight $m$''-representations, that is, representations of the form $$V \to V \otimes k[t, t^{-1}], v \mapsto v \otimes t^m.$$ 
+We can classify representations of $\Gr_m$ easily. They are all direct sums of ``weight $m$''-representations, that is, representations of the form $$V \to V \otimes k[t, t^{-1}], v \mapsto v \otimes t^m.$$
 
 \begin{prop}
 \label{propgm}
- Every representation $V$ of $\Gr_m$ is a direct sum $V = \oplus_{m \in \Z} V_{(m)}$, where each $V_{(m)}$ is a subrepresentation of weight $m$. 
+ Every representation $V$ of $\Gr_m$ is a direct sum $V = \oplus_{m \in \Z} V_{(m)}$, where each $V_{(m)}$ is a subrepresentation of weight $m$.
 \end{prop}
 
 \begin{proof}
@@ -362,7 +362,7 @@ Let $G=\Spec A$ be an affine algebraic group. A $1$-dimensional character of $G$
 
 \begin{lemma}
 \label{chargl}
-The characters of the general linear group $\GL(n) = \Spec k[x_{ij}, \det X]$ are precisely the integer powers of the determinant $(\det X)^n$ for $n \in Z$.   
+The characters of the general linear group $\GL(n) = \Spec k[x_{ij}, \det X]$ are precisely the integer powers of the determinant $(\det X)^n$ for $n \in Z$.
 \end{lemma}
 \begin{proof}
 Characters are in particular invertible elements of the coordinate ring. The only invertible elements of $\Gamma(\GL(n),\OO_{\GL(n)})$ are scalar multiples of integer powers of the determinant. But the only $\lambda$ for which $\lambda( \det X)^n$ is a character is when $\lambda=1$, by the first equation in the definition of character.
@@ -430,7 +430,7 @@ We give an isomorphism between the first and the third module. We begin first by
 \begin{tikzcd}
 {}& k \arrow{dr} \arrow{dl} & \\
 \OO_{X,p} \arrow{dr} \arrow{rr}{f} & & k[\epsilon] \arrow{dl} \\
- & k  
+ & k
 \end{tikzcd}
 \]
 Thus $\lambda(f)(x) = x \pmod {\mm_p}  = x(p)$. Thus the ``constant part'' of $f$ is determined by default. Furhermore, since $f$ is an algebra morphism, we must have that
@@ -439,7 +439,7 @@ Thus $\lambda(f)(x) = x \pmod {\mm_p}  = x(p)$. Thus the ``constant part'' of $f
 f(x)f(y) &= (x(p)+\epsilon \delta(f)(x))(y(p)+\epsilon \delta(f)(y)) \\
 &= x(p)y(p) + \epsilon \left( x(p) \delta(f)(y) + y(p) \delta(f)(x)\right).
 \end{align*}
-Thus we see that the function $\delta(f):\OO_{X,p} \to k$ is a derivation. We thus have a $k$-linear map $\Hom_{k-alg}(\OO_{X,p},k[\epsilon]) \to \Der_k(\OO_{X,p},k)$ by $f \mapsto \delta(f)$. The inverse map is given by the function $D \mapsto {(x \mapsto x(p) + \epsilon D(x))}$. 
+Thus we see that the function $\delta(f):\OO_{X,p} \to k$ is a derivation. We thus have a $k$-linear map $\Hom_{k-alg}(\OO_{X,p},k[\epsilon]) \to \Der_k(\OO_{X,p},k)$ by $f \mapsto \delta(f)$. The inverse map is given by the function $D \mapsto {(x \mapsto x(p) + \epsilon D(x))}$.
 \end{proof}
 
 \begin{remark}
@@ -518,7 +518,7 @@ A \xrightarrow{\mu_A} A \otimes_k A \xrightarrow{\epsilon \otimes \id} k \otimes
 The composition is equal to $\epsilon \star \alpha$, but by Part 2 of Definition \ref{defalggrp}, it is also equal to $\alpha$.
 \end{proof}
 
-It follows from coassociativity that $\star$ is associative (easy diagram chase). This makes $\mathcal H(G)$ into an associative algebra over $k$, called the \emph{distribution algebra} of the algebraic group $G$. 
+It follows from coassociativity that $\star$ is associative (easy diagram chase). This makes $\mathcal H(G)$ into an associative algebra over $k$, called the \emph{distribution algebra} of the algebraic group $G$.
 
 \begin{prop}
  The distribution algebra $\HH(G)$ is a Lie algebra with bracket
@@ -531,9 +531,9 @@ Same proof as in the matrix case.
 \end{proof}
 
 \begin{example}
-Let $G = \Gr_m$, the multiplicative group. The derivations are just scalar multiples of $E=\restr{\dd{}{t}}{e}$. 
+Let $G = \Gr_m$, the multiplicative group. The derivations are just scalar multiples of $E=\restr{\dd{}{t}}{e}$.
 
-I claim that the distribution algebra $\HH(G)$ is generated by $E$ as an algebra. That is, distributions of degree $n$ are precisely scalar multiples of $E \star E \cdots  \star E$. Since $k[t,t^{-1}]_d= \langle t^{d} \rangle_k$, it is clear that the set of distrubutions of degree exactly $n$ is one-dimensional. Hence they are multiples of $E^{\star n}$. 
+I claim that the distribution algebra $\HH(G)$ is generated by $E$ as an algebra. That is, distributions of degree $n$ are precisely scalar multiples of $E \star E \cdots  \star E$. Since $k[t,t^{-1}]_d= \langle t^{d} \rangle_k$, it is clear that the set of distrubutions of degree exactly $n$ is one-dimensional. Hence they are multiples of $E^{\star n}$.
 \end{example}
 
 
@@ -551,7 +551,7 @@ Thus $V$ is a (non-commutative) $\HH(G)$-module (if $\alpha:A \to k$ is a distri
 
 Consider the action of $G$ on itself by conjugation: $G \times G \to G$, $(g,h) \mapsto  ghg^{-1}$. Since $e \in G$ is fixed under conjugation, this induces an action on each quotient $A/\mm^n$, and on its dual space. It follows that $\HH(G)$ becomes a linear representation of $G$.
 
-Given a representation $\rho:G \to \GL(V)$, the space $\End V$ also becomes a linear representation by mapping $g \in G$ to $(T \mapsto \rho(g) T \rho(g)^{-1}) \in \GL(\End(V))$. 
+Given a representation $\rho:G \to \GL(V)$, the space $\End V$ also becomes a linear representation by mapping $g \in G$ to $(T \mapsto \rho(g) T \rho(g)^{-1}) \in \GL(\End(V))$.
 
 \begin{lemma}
 \label{homog}
@@ -570,7 +570,7 @@ In particular, the Lie space $\g \subset \HH(G)$ is a subrepresentation of $\HH(
 
 \subsubsection{The Casimir operator}
 
-Let $\kappa: \g \times \g \to k$ be an inner product on the Lie algebra $\g$ of $G$. That is, $\kappa$ is a symmetric and nondegenerate bilinear form on $\g$. We will assume that $\kappa$ is invariant under the adjoint representation $\mathrm{Ad}: G \to \GL(\g)$. This just means that for $X,Y \in \g$, we have $\kappa(g \cdot X,g \cdot Y)=\kappa(X,Y)$. 
+Let $\kappa: \g \times \g \to k$ be an inner product on the Lie algebra $\g$ of $G$. That is, $\kappa$ is a symmetric and nondegenerate bilinear form on $\g$. We will assume that $\kappa$ is invariant under the adjoint representation $\mathrm{Ad}: G \to \GL(\g)$. This just means that for $X,Y \in \g$, we have $\kappa(g \cdot X,g \cdot Y)=\kappa(X,Y)$.
 
 \begin{defi}[The Casimir element]
 
@@ -593,7 +593,7 @@ and
 $$
 Y_i' = \sum_{j=1}^N a_{ij}' X_j',
 $$
-for some matrices $A=(a_{ij})$ and $A'=(a_{ij}')$ satisfying $A^TA'=I$. To see this, compute $\kappa(Y_i,Y_j')$. 
+for some matrices $A=(a_{ij})$ and $A'=(a_{ij}')$ satisfying $A^TA'=I$. To see this, compute $\kappa(Y_i,Y_j')$.
 
 Then:
 \begin{align*}
@@ -610,23 +610,23 @@ This can also be seen as follows: the non-degenerate form $\kappa$ gives a \emph
 Recall that $\mathrm{Ad}(g):\GL(\g) \to \GL(\g)$ is the endomorphism of $\GL(\mathfrak g)$ given by $v \mapsto dc_g(v)$ where $c_g$ is conjugation by $g$. Since the inner product $\kappa$ is assumed to be $G$-invariant, the sets
 $$
 \{ \mathrm{Ad}(g)(X_1),\ldots, \mathrm{Ad}(g)(X_n) \}
-$$ 
-and 
+$$
+and
 $$
 \{ \mathrm{Ad}(g)(X_1'),\ldots, \mathrm{Ad}(g)(X_n') \}
-$$ 
+$$
 are again dual bases. We deduce from this and the previous proposition that:
 \begin{corr}
 The Casimir element $\Omega \in \HH(G)$ is invariant under the action of $G$ on the distribution algebra $\HH(G)$.
 \end{corr}
 
-Now let $\rho: G \to \GL(V)$ be any representation of $G$. This is an $\HH(G)$-module via $\tilde \rho:\HH(G) \to \End V$ from Equation \ref{tilde}. In particular, the Casimir element determined an endomorphism of $V$, $\tilde \rho (\Omega): V \to V$, called the \emph{Casimir operator}. 
+Now let $\rho: G \to \GL(V)$ be any representation of $G$. This is an $\HH(G)$-module via $\tilde \rho:\HH(G) \to \End V$ from Equation \ref{tilde}. In particular, the Casimir element determined an endomorphism of $V$, $\tilde \rho (\Omega): V \to V$, called the \emph{Casimir operator}.
 
 By the Corollary and Lemma \ref{homog}  $\tilde \rho(\Omega)$ is invariant under the conjugation action of $G$ on $\End V$. Moreover, since $\g$ kills the $G$-invariant $V^G \subset V$, so does the Casimir operator [[ HVA MENES HER??]]. We conclude:
 
 \begin{corr}
 \label{korrker}
-The Casimir operator is a $G$-endomorphism of each representation $V$ of $G$ and 
+The Casimir operator is a $G$-endomorphism of each representation $V$ of $G$ and
 $$
 V^G \subset \ker ( \tilde \rho(\Omega)).
 $$
@@ -662,7 +662,7 @@ The following are equivalent:
 \begin{proof}
 $i) \Rightarrow ii)$ is trivial. For $ii) \Rightarrow iii)$, apply $ii)$ to the quotient map $V \to V/U$. Then $V^G \to (V/U)^G$ is surjective. This implies that for every nonzero $\bar v \in (V/U)^G$, there exists a $G$-invariant $v \in \pi^{-1}(v)=U+\bar v$.
 
-$iii) \Rightarrow i)$ is hardest. Suppose $\phi:V \to W$ is an epimorphism of representations (not necessarily finite-dimensional). Suppose $\phi(v)=w \in W^G$ for some $v \in V$. 
+$iii) \Rightarrow i)$ is hardest. Suppose $\phi:V \to W$ is an epimorphism of representations (not necessarily finite-dimensional). Suppose $\phi(v)=w \in W^G$ for some $v \in V$.
 
 By Proposition \ref{propfinite} there exists a finite-dimensional subrepresentation $V_0 \subseteq V$ containing $v$. Now $v \in V_0$ is $G$-invariant modulo $U_0 := V_0 \cap \ker \phi$ (since $V/\ker \phi \simeq W$ as $G$-representations), so by $iii)$, there exists a $G$-invariant vector $v' \in V_0$ such that $v'-v \in U_0$. But $\phi(v')=w$, so $\phi^G:V^G \to W^G$ is surjective.
 \end{proof}
@@ -699,7 +699,7 @@ The classical example of a group that is not linearly reductive is the affine li
 This is a representation by the rules of matrix multiplication. Algebraically, this as follows: let $x,y$ be a basis for $V$. Then we define a $k$-linear map $V \to V \otimes_k k[t]$ by $x \mapsto x \otimes 1$ and $y \mapsto x \otimes t + y \otimes 1$. This extends to a representation of $k[V]=k[x,y]$ in the obvious way. Then we can define an epimorphism of representations by sending $k[x,y] \to k[x,y]/(x) \simeq k[y]$. Taking invariants, we get that $k[x,y]^{\Gr_a} = k[x]$ but $k[y]^{\Gr_a}=k[y]$, but the map sends $x$ to $0$, so is not surjective.
 \end{example}
 
-The main aim of this section is to prove that $\SL_n$ is linearly reductive. From this it will follow that also $\GL_n$ is linearly reductive, because it fits into an exact sequence 
+The main aim of this section is to prove that $\SL_n$ is linearly reductive. From this it will follow that also $\GL_n$ is linearly reductive, because it fits into an exact sequence
 $$
 1 \to k^\ast \to \GL_n \to \SL_n \to 1
 $$
@@ -709,7 +709,7 @@ Let $U$ be a finite-dimensional vector space. The Lie algebra of $\GL(U)$ is can
 $$
 \kappa:\End(U) \times \End(U) \to k, \qquad (f,g) \mapsto \tr(fg).
 $$
-Write $\kappa(f) := \kappa(f,f)$. 
+Write $\kappa(f) := \kappa(f,f)$.
 
 \begin{lemma}
 The inner product $\kappa$ is invariant under the adjoint action of $\GL(U)$. In other words:
@@ -726,35 +726,35 @@ g \cdot (v \otimes w) \mapsto \lambda(g^{-1}gv)\lambda(v).
 $$
 \end{proof}
 
-The Lie algebra $\mathfrak{sl}(U)$ of $\SL(U)$ is the sub Lie-algebra of $\g(U)$ given by the traceless matrices. 
+The Lie algebra $\mathfrak{sl}(U)$ of $\SL(U)$ is the sub Lie-algebra of $\g(U)$ given by the traceless matrices.
 
 \begin{lemma}
-The inner product $\kappa$ is non-degenerate when restricted to $\mathfrak{sl}(U)$, and invariant under the adjoint action. 
+The inner product $\kappa$ is non-degenerate when restricted to $\mathfrak{sl}(U)$, and invariant under the adjoint action.
 \end{lemma}
 \begin{proof}
-$\kappa$ is non-degenerate on $\End(U)$ and $\mathfrak{sl}(U)$ is the orthogonal complement of the identity element $I_U$. Thus every element $v \in \End(U)$ can be written uniquely as $s+j$ with $s \in \mathfrak{sl}(U)$ and $j$ a multiple of $I_U$. Suppose $\kappa(s,s')$ is zero for all $s' \in \mathfrak{sl}(U)$. Since $\kappa$ is non-degenerate on $\End U$, this implies that $s$ is a multiple of the identity element. But $s$ was assumed to be traceless, so $s$ is zero. 
+$\kappa$ is non-degenerate on $\End(U)$ and $\mathfrak{sl}(U)$ is the orthogonal complement of the identity element $I_U$. Thus every element $v \in \End(U)$ can be written uniquely as $s+j$ with $s \in \mathfrak{sl}(U)$ and $j$ a multiple of $I_U$. Suppose $\kappa(s,s')$ is zero for all $s' \in \mathfrak{sl}(U)$. Since $\kappa$ is non-degenerate on $\End U$, this implies that $s$ is a multiple of the identity element. But $s$ was assumed to be traceless, so $s$ is zero.
 \end{proof}
 
 \begin{example}
-The Casimir element of $\SL(2)$ is 
+The Casimir element of $\SL(2)$ is
 \[
 \Omega = e \star f + f \star e + \frac 12 h \star h
 \]
 where $e,f,h$ are
 \begin{align*}
-  e = 
+  e =
   \begin{pmatrix}
-    0 & 1 \\ 0 & 0 
+    0 & 1 \\ 0 & 0
   \end{pmatrix} &
 f = \begin{pmatrix}
-0 & 0 \\ 1 & 0 
-\end{pmatrix} & 
-h = 
+0 & 0 \\ 1 & 0
+\end{pmatrix} &
+h =
 \begin{pmatrix}
   1 & 0 \\ 0 & -1
 \end{pmatrix}.
 \end{align*}
-This is so because $e,f$ are dual with respect to $\kappa$, and $h$ have dual $\frac 12 h$ since $\tr(h^2)=2$. 
+This is so because $e,f$ are dual with respect to $\kappa$, and $h$ have dual $\frac 12 h$ since $\tr(h^2)=2$.
 \end{example}
 
 \begin{prop}
@@ -762,7 +762,7 @@ This is so because $e,f$ are dual with respect to $\kappa$, and $h$ have dual $\
   \begin{enumerate}
   \item The representation is trival (that is, $\rho(g)=\id_V$ for all $g$).
 \item $\tilde \rho (\Omega)=0$.
-\item $\tr \rho(\Omega) = 0$. 
+\item $\tr \rho(\Omega) = 0$.
   \end{enumerate}
 \end{prop}
 \begin{proof}
@@ -772,7 +772,7 @@ Let $T \subset \SL(n)$ be the torus subgroup of diagonal matrices and $\mathfrak
 $$
 V = \bigoplus_{\chi \in X(T)} V_\chi.
 $$
-Each $\chi:T \to \Gr_m$ corresponds to a linear form $\bar \chi: \mathfrak h \to k$ with integer coefficients\footnote{Note that since $char k=0$, the integer are naturally embedded in $k$.}. To see this, note that a homomorphism $T \to \Gr_m$ is given by $(t_1,\cdots,t_n) \mapsto t^{\sum t_i\lambda_i}$ for some $\lambda_i$. 
+Each $\chi:T \to \Gr_m$ corresponds to a linear form $\bar \chi: \mathfrak h \to k$ with integer coefficients\footnote{Note that since $char k=0$, the integer are naturally embedded in $k$.}. To see this, note that a homomorphism $T \to \Gr_m$ is given by $(t_1,\cdots,t_n) \mapsto t^{\sum t_i\lambda_i}$ for some $\lambda_i$.
 
 For each $ h \in \mathfrak h$ we have:
 \[
@@ -780,7 +780,7 @@ For each $ h \in \mathfrak h$ we have:
 \]
 Thus if $\tr \tilde \rho (h)=0$ for all $h \in \mathfrak h$, we must have $\dim V_\chi=0$ for all $\chi \neq 1$. In other words, $V$ is the trivial representation of the torus $T$, or equivalently, $\rho(t)(v)=v$ for all $t \in T \subseteq \SL(n)$.  The same argument works for any subgroup conjugate to $T$, so that $V$ is the trivial representation for the subset of all diagonalizable matrices. But these are dense in $\SL(n)$, so $V$ is trival as a representation of $\SL(n)$ as well.
 
-Thus the proposition is proved if we can show that $\tr \tilde \rho (\Omega)=0$ implies that $\tr \tilde \rho(h)=0$ for all $h \in \mathfrak h$. 
+Thus the proposition is proved if we can show that $\tr \tilde \rho (\Omega)=0$ implies that $\tr \tilde \rho(h)=0$ for all $h \in \mathfrak h$.
 
 We will do this for $\SL(2)$. In this case $\mathfrak h$ is spanned by the single matrix $h$ from Example 4.30. The Casimir operator [SKJØNNER IKKE!!!!]
 \end{proof}
@@ -809,7 +809,7 @@ $$
 $$
 is also surjective. Therefore there exists invariant polynomials $h_1',\ldots,h_N' \in S^G$ such that $h= \sum_{i=1}^N h_i' f_i$. But all of the $f_i$ have $\deg f_i > 0$, we must have $\deg h_i' < \deg h$. By the inductive hypothesis, we have $h_i' \in k[f_1,\ldots,f_N]$, and thus $h \in k[f_1,\cdots,f_N]$ also.
 \end{proof}
- 
+
 Suppose now that $G$ acts on a finitely generated $k$-algebra $R$. It follows easily from Hilbert's theorem that also $R^G$ is finitely-generated when $G$ is reductive.
 
 \begin{lemma}
@@ -830,7 +830,7 @@ Start by choosing generators $r_1,\ldots,r_N$ of $R$ as in the lemma. Then we ha
 
 \section{The construction of quotient varieties}
 
-In this chapter we will actually construct some objects we will call quotients. 
+In this chapter we will actually construct some objects we will call quotients.
 
 \subsection{Affine quotients}
 
@@ -844,7 +844,7 @@ Let $G = \C^\ast$ act on $k^2$ by $t \cdot (x,y) = (tx,t^{-1} y)$. We have three
 \end{enumerate}
 The action on the coordinate ring is given by $x \mapsto \lambda^{-1}x$ and $y \mapsto \lambda x$. Thus the only invariant is the monomial $xy$. We thus get a projection map $\phi:\Aa^2 \to \Aa^1$ given by $(x,y)=xy$.
 
-This ``quotient map'' separates the third type of orbits, but cannot distinguish between the orbits 1. and 2, all of which map to zero. 
+This ``quotient map'' separates the third type of orbits, but cannot distinguish between the orbits 1. and 2, all of which map to zero.
 \end{example}
 
 \begin{thm}
@@ -885,7 +885,7 @@ The set of such orbits can contain at most one closed set by the previous coroll
 For the second part...
 \end{proof}
 
-Consider again the map $\phi:X \to \Aa^n$, $x \mapsto (f_1(x),\ldots,f_n(x))$, where the $f_i$ are the generators of $R^G$. 
+Consider again the map $\phi:X \to \Aa^n$, $x \mapsto (f_1(x),\ldots,f_n(x))$, where the $f_i$ are the generators of $R^G$.
 
 \begin{prop}
 The image $\phi(X) \subset \Aa^n$ is closed.
@@ -895,7 +895,7 @@ The image $\phi(X) \subset \Aa^n$ is closed.
 \[
 \pi: R \oplus \cdots \oplus R \to R, \qquad (b_1,\ldots,b_n) \mapsto \sum b_i(f_i-a_i).
 \]
-This is a homomorphism of $G$-representations. The induced map has image $\mm_a \subset R^G$, corresponding to the point $(a_1,\cdots, a_n)$. This implies that $\pi$ cannot be surjective. Therefore its image is contained in some maximal ideal $\mm \subset R$ (a priori not a unique ideal). But $\mm\cap R^G$ is maximal in $R^G$ and therefore coincides with $\mm_a$. 
+This is a homomorphism of $G$-representations. The induced map has image $\mm_a \subset R^G$, corresponding to the point $(a_1,\cdots, a_n)$. This implies that $\pi$ cannot be surjective. Therefore its image is contained in some maximal ideal $\mm \subset R$ (a priori not a unique ideal). But $\mm\cap R^G$ is maximal in $R^G$ and therefore coincides with $\mm_a$.
 
 Thus $a \in \ol{\phi(X)}$ is the image of the point corresponding to $\mm$.
 \end{proof}
@@ -959,7 +959,7 @@ We have $X^s=X$ if and only if all points have finite stabilizer.
 
 Being stable is an open condition. Equivalently, $Z$ is a closed set:
 \begin{proof}
-Consider the map 
+Consider the map
 \[
 s:G \times X \to X \times X, \qquad (g,x) \mapsto (gx,x).
 \]
@@ -967,7 +967,7 @@ Then let $\widetilde{Z}$ be $s^{-1}(\Delta)$, where $\Delta$ is the diagonal. Th
 \[
 \pi:\widetilde{Z} \to X, \qquad (g,x) \mapsto x.
 \]
-The fiber $\pi^{-1}(x)$ is canonically isomorphic to $\Stab(x)$. Now it is well-known that the dimension of the fibers is an upper semicontinous function, so it follows that the positive-dimensional locus $Z$ is a closed set. See for example Chapter 11 in Vakil. Chapter I.6.3 in Shafarevich, or EGA IV 13.1.3. 
+The fiber $\pi^{-1}(x)$ is canonically isomorphic to $\Stab(x)$. Now it is well-known that the dimension of the fibers is an upper semicontinous function, so it follows that the positive-dimensional locus $Z$ is a closed set. See for example Chapter 11 in Vakil. Chapter I.6.3 in Shafarevich, or EGA IV 13.1.3.
 \end{proof}
 
 It follows at once that...
@@ -979,7 +979,7 @@ It follows at once that...
  Suppose that a linearly reductive group $G$ acts on an affine variety $X$, and suppose that $x \in X$ is a stable point for this actin. Then for any $y \in X \bs Gx$, there exists an invariant function $f \in k[X] ^G$ such that $f(x) \neq f(y)$.
 \end{thm}
 \begin{proof}
- We apply Theorem 5.2: suppose there does not exist a function separating $x$ and $y$. Then by the theorem, the closures $\ol{Gx}$ and $\ol{Gy}$ intersect in a common point. Since $x$ is stable $Gx$ is closed, and this implies $Gx \subset \ol{Gy}$. Now, $\dim Gx=\dim G$ since $x$ have finite stabilizer, and so $\dim Gx \geq \dim \ol{Gy}$, hence $Gx=Gy$, contrary to $y \in X \bs Gx$. 
+ We apply Theorem 5.2: suppose there does not exist a function separating $x$ and $y$. Then by the theorem, the closures $\ol{Gx}$ and $\ol{Gy}$ intersect in a common point. Since $x$ is stable $Gx$ is closed, and this implies $Gx \subset \ol{Gy}$. Now, $\dim Gx=\dim G$ since $x$ have finite stabilizer, and so $\dim Gx \geq \dim \ol{Gy}$, hence $Gx=Gy$, contrary to $y \in X \bs Gx$.
 \end{proof}
 
 For future reference, here are a few definitions.
@@ -987,7 +987,7 @@ For future reference, here are a few definitions.
 \begin{defi}
  Let $X$ be a scheme and $G$ an (affine) algebraic group, with $G$ acting on $X$. Then a \emph{categorial quotient} is a morphism $\pi:X \to Y$ such that
  \begin{enumerate}
- \item $\pi$ is $G$-equivariant with $G$ acting trivially on $Y$. In other words: $\pi(gx)=\pi(x)$ for all $g,x$. Or: 
+ \item $\pi$ is $G$-equivariant with $G$ acting trivially on $Y$. In other words: $\pi(gx)=\pi(x)$ for all $g,x$. Or:
 \[
 \xymatrix{
 G \times X \ar[d]_{\pi_2} \ar[r]^\mu & X \times Y \ar[d]^\pi \\
@@ -1010,7 +1010,7 @@ Clearly a categorial quotient is unique if it exists. In fact, $\Spec R^G$ is an
 A \emph{good categorial quotient} is a map $\pi:X \to Y$ such that:
 \begin{enumerate}
 \item If $U \subset Y$ is open, then $\OO_Y(U) \to \OO_X(\pi^{-1}(U))$ induces an isomorphism $\OO_Y(U) \xrightarrow{\sim} \OO_X(\pi^{-1}(U))^G$.
-\item If $W \subset X$ is closed and $G$-invariant, then $\pi(W)$ is closed in $Y$. 
+\item If $W \subset X$ is closed and $G$-invariant, then $\pi(W)$ is closed in $Y$.
 \item If $W_1,W_2$ are closed, disjoint and $G$-invariant, then $\pi(W_1) \cap \pi(W_2) = \emptyset$.
 \end{enumerate}
 \end{defi}
@@ -1035,7 +1035,7 @@ Let $X \to X /\!/ G$ be a good categorical quotient. Then the following are equi
   \item All orbits are closed.
 \item If $x, y \in X$ have $\pi(x)=\pi(y)$ then $Gx=Gy$.
 \item $\pi$ induces a bijection between $G$-orbits and closed points of $X /\!/ G$.
-\item The image of $G \times X \to X \times X$, $(g,x) \mapsto (gx,x)$ is isomorphic to $X \times_{X /\!/ G} X$. 
+\item The image of $G \times X \to X \times X$, $(g,x) \mapsto (gx,x)$ is isomorphic to $X \times_{X /\!/ G} X$.
   \end{enumerate}
 \end{prop}
 
@@ -1057,7 +1057,7 @@ in ``multiindex'' notation. Note that there are $\binom{n+d}{d}$ values of $I$. 
 
 The group $\GL(n+1)$ acts on $\vnd$ on the right by $f(x) \mapsto f(gx)$.
 \begin{remark}
-  This is really a right action. Recall that a group action is a \emph{right action} if $f \cdot (gh) = (f \cdot g) \cdot h$. 
+  This is really a right action. Recall that a group action is a \emph{right action} if $f \cdot (gh) = (f \cdot g) \cdot h$.
 
 In fact, we have $$(f \cdot (gh))(x) = f(ghx) = (f \cdot g)(hx) = ((f \cdot g) \cdot h)(x),$$
 so this is really a right action.
@@ -1094,7 +1094,7 @@ This $g$ acts on $x$ by sending it to $g_{11}x_0+g_{12}x_1$. Thus it can be comp
 &+  (a_{20} {g}_{12}^{2}+a_{11} {g}_{12} {g}_{22}+a_{02} {g}_{22}^{2})x_1^2.
 \end{align*}
 Wee see that the $\xi_I(g)$ are linear combinations of polynomials in $g_{ij}$, so we can write the transformation in matrix form:
-$$ \xi(g) = 
+$$ \xi(g) =
 \bgroup\begin{pmatrix}{g}_{11}^{2}&
       2 {g}_{11} {g}_{12}&
       {g}_{12}^{2}\\
@@ -1128,7 +1128,7 @@ G = G0 | G1 | G2
 The last computation, $G$, is the matrix $\xi(g)$ above. To get \LaTeX code, type \verb|tex G| and copy.
 \end{example}
 \begin{example}[Conics in the plane, $d=2$, $n=3$]
-To get a sense of how complicated things get with a slight increase in dimension, this is how $\xi(g)$ looks in the case of conics in $\PP^2$. 
+To get a sense of how complicated things get with a slight increase in dimension, this is how $\xi(g)$ looks in the case of conics in $\PP^2$.
 \[
 \bgroup\begin{pmatrix}{g}_{11}^{2}&
       2 {g}_{11} {g}_{12}&
@@ -1168,14 +1168,14 @@ To get a sense of how complicated things get with a slight increase in dimension
       {g}_{33}^{2}\\
       \end{pmatrix}\egroup
 \]
-There is some symmetry in the equations, but for modern mathematicians, these equations are very scary. At least to handle with bare hands.  
+There is some symmetry in the equations, but for modern mathematicians, these equations are very scary. At least to handle with bare hands.
 \end{example}
 
 \begin{defi}
  If a homogeneous polynomial $F$ satisfies $F(xg)=F(x)$ for all $g \in \SL(n+1)$ (in other words, if it is $\SL(n+1)$-invariant for the right action of $\SL(n+1)$), then we call it a \emph{classical invariant}.
 \end{defi}
 
-Let $H_{nd} := \PP V_{nd}$. This is the Hilbert scheme of hypersurfaces of degree $d$ in $\PP^n$. 
+Let $H_{nd} := \PP V_{nd}$. This is the Hilbert scheme of hypersurfaces of degree $d$ in $\PP^n$.
 
 \begin{prop}
  For a homogeneous polynomial $F \in \bigoplus_i H^i(H_{n,d}, \OO_{H_{n,d}}(i))=k[\vnd]$, the following are equivalent:
@@ -1201,7 +1201,7 @@ We will define the \emph{discriminant}, but we need some discussion first. Let $
 \]
 If these have no solutions in $\PP^n$, then we say that $X$ is \emph{smooth}.
 
-Denote by $H_{n,d}^{sing} \subset H_{n,d}$ the subset of singular hypersurfaces $X \subset \PP^n$. Consider the set 
+Denote by $H_{n,d}^{sing} \subset H_{n,d}$ the subset of singular hypersurfaces $X \subset \PP^n$. Consider the set
 \[
 Z := \{ (p,X) \mid  p \in \PP^n \text{ is a singular point on } X \subset \PP^n \}.
 \]
@@ -1212,7 +1212,7 @@ This is an algebraic variety given by the $n+1$ equations
 In particular, $Z$ is closed. Let $\psi:Z \to \PP^n$ and $\varphi: Z \to H_{n,d}$ be the projections. By definition, the image of $\varphi$ is $H_{n,d}^{sing}$. On the other hand $\varphi^{-1}(p)$ is the set of all hypersurfaces that are singular at $p$, and in $H_{n,d}$, this is defined by $n+1$ linear equations (the equation above is linear in the $a_I$). Thus
 \begin{align*}
   \dim Z &= \dim \PP^n  + \dim \phi^{-1}(p) \\
-&\geq n + \dim H_{n,d} - (n+1) \\ 
+&\geq n + \dim H_{n,d} - (n+1) \\
 &= \dim H_{n,d} - 1.
 \end{align*}
 
@@ -1221,7 +1221,7 @@ In fact, equality holds. The reason is this: first of all, the image of $\varphi
 Thus $H_{n,d}^{sing}$ is itself a hypersurface, so it is defined by a unique (up to scalar)  homogeneous polynomial.
 
 \begin{defi}
- The defining equation of $H_{n,d}^{sing}$ is called the \emph{discriminant} of forms of degree $d$ on $\PP^n$. 
+ The defining equation of $H_{n,d}^{sing}$ is called the \emph{discriminant} of forms of degree $d$ on $\PP^n$.
 \end{defi}
 
 Clearly $H_{n,d}^{sing}$ is invariant under $\GL(n+1)$, so:
@@ -1235,7 +1235,7 @@ We continue on Example 5.17. The hypersurface $X$ is singular if and only if
   \dd{F}{x_0} &= 2a_{20}x_0 + a_{11}x_1 = 0 \\
 \dd{F}{x_1} &= a_{11}x_0 + 2a_{02} x_1 = 0
 \end{align*}
-But this is a linear equation, having a non-trivial solution if and only if the determinant $4a_{20}a_{02}-a_{11}^2$ is zero. 
+But this is a linear equation, having a non-trivial solution if and only if the determinant $4a_{20}a_{02}-a_{11}^2$ is zero.
 
 This should remind everyone of the abc-formula from early childhood.
 \end{example}
@@ -1257,7 +1257,7 @@ We are thus led to ask for the existence of $U/\GL_d$. It turns out that this ob
 
 Suppose we are in the situation of an reductive algebraic group $G$  acting on a projective variety $X$. Assume further that $G$ is a subgroup of $\SL(n+1,\C)$.
 
-The construction of GIT quotient: the group acts on each $H^0(X,\OO_X(r))$. Then we simply define $X/G$ to be 
+The construction of GIT quotient: the group acts on each $H^0(X,\OO_X(r))$. Then we simply define $X/G$ to be
 $$
 \Proj\left(\bigoplus_r H^0(X,\OO_X(r))^G\right).
 $$
@@ -1271,7 +1271,7 @@ $\oplus_r H^0(X,\OO_X(r))^G$ is finitely generated.
 \begin{defi}
 A point $x \in X$ is \emph{semistable} if there exists an $s \in H^0(X,\OO_x(r))^G$ with $r > 0$ such that $s(x) \neq 0$.
 \end{defi}
-Point which are not semistable are \emph{unstable}. 
+Point which are not semistable are \emph{unstable}.
 
 \begin{defi}
 A semistable point $x  \in X$ is \emph{stable} if $\oplus_r H^0(X,\OO_x(r))^G$ separates orbits near $x$ and the stabiliser of $x$ is finite.
@@ -1279,6 +1279,6 @@ A semistable point $x  \in X$ is \emph{stable} if $\oplus_r H^0(X,\OO_x(r))^G$ s
 By ``separates orbits near $x$'' we mean the following: given any $v \in T_xX \bs T_x(G.x)$ there is another element in $H^0(X,\OO_x(r))^G$ whose derivative with respect to $v$ is nonzero.
 
 \bibliographystyle{plain}
-\bibliography{bibliografi} 
+\bibliography{bibliografi}
 
 \end{document}
