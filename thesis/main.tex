@@ -1,6 +1,9 @@
 \documentclass[a4paper]{memoir}
 
 \usepackage{style}      % Custom style
+
+\bibliography{bibliography} %% in order for sublime to find bib refs 
+
 \usepackage{kantlipsum} % Dummy text
 
 \title{Components of the Hilbert scheme in $\P^{11}$}
@@ -9,17 +12,17 @@
     Fredrik Meyer
 }
 
-\includeonly
-{
-    sections/abstract,
-    sections/acknowledgements,
-    sections/introduction,
-    sections/chapter2,
-    sections/chapter3,
-    sections/chapter4,
-    sections/appendixA,
-    sections/appendixB,
-}
+% \includeonly
+% {
+% %   sections/abstract,
+% %   sections/acknowledgements,
+% %   sections/introduction,
+%    sections/preliminaries,
+% %   sections/cp2_triangulation,
+% %   sections/two_smoothings,
+%    sections/constructions,
+% %   sections/mirrorymmetry
+% }
 
 \begin{document}
 
@@ -43,9 +46,10 @@
 
     % \part{The First Part}
     \include{sections/preliminaries}
-    \include{sections/chapter2}
-    \include{sections/chapter3}
-    \include{sections/chapter4}
+    \include{sections/cp2_triangulation}
+    \include{sections/two_smoothings}
+    \include{sections/constructions}
+    \include{sections/mirrorsymmetry}
 
     \appendix           % "Chapter" is renamed "Appendix"
     \appendixpage       % Short for \part*{Appendices}

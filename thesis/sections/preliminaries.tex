@@ -1,4 +1,24 @@
 \chapter{Preliminaries}
 \label{sec:prelims}
 
-fff
+\begin{enumerate}
+	\item Stanley-Reisner schemes
+	\item Toric geometry notation
+\end{enumerate}
+
+\section{Smoothings of Stanley--Reisner schemes}
+
+Because many properties of varieties are easier read off their degenerations, it is an interesting problem to study smoothings of Stanley--Reisner-schemes, which are highly singular.
+
+\begin{lemma}
+\label{lemma:srcohom}
+If $\K$ is a simplicial complex, then $H^i(\K;k) \simeq H^i(\P(\K),\OO_{\P(\K)})$.
+\end{lemma}
+\todo{Find a good proof for this. A reference could be \cite{eisenbud_graphcurves}}
+
+\begin{lemma}
+If $\K$ is a 3-dimensional simplicial sphere, then a smoothing of $X_0=\P(\K)$ will be Calabi--Yau.
+\end{lemma}
+\begin{proof}
+Since $\K$ is a sphere, it follows from \ref{lemma:srcohom} that $H^i(X_0,\OO_X)=k$ for $i=0,3$, and zero for $i \neq 0,3$. It also \todo{How does triviality of the canonical sheaf follow?}
+\end{proof}
