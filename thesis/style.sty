@@ -196,6 +196,10 @@
 %% Sheaves
 \newcommand{\OO}{\mathscr{O}}
 
+%% Functors
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\Spec}{Spec}
+
 
 %% Vectors 
 \renewcommand{\a}{\mathbf{a}}
@@ -217,8 +221,20 @@
 \newcommand{\matlab}{\textsc{Matlab}\xspace}
 
 \newcommand{\CY}{Calabi--Yau\xspace}
+\newcommand{\MM}{\texttt{Macaulay2}\xspace}
+
 \DeclareMathOperator{\dP6}{dP_6}
+\DeclareMathOperator{\rank}{\mathrm{rank}}
+\DeclareMathOperator{\sing}{\mathrm{Sing}}
 \newcommand{\K}{\mathcal{K}}
+
+\newcommand\restr[2]{{% we make the whole thing an ordinary symbol
+  \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+  #1 % the function
+  \vphantom{\big|} % pretend it's a little taller at normal size
+  \right|_{#2} % this is the delimiter
+  }}
+
 
 
 \endinput
