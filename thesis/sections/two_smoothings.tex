@@ -1,8 +1,39 @@
-\chapter{The two smoothings of \texorpdfstring{$C(\dP6)$}{C(DP6)}}
+\chapter{The two smoothings of \texorpdfstring{$C(\dP6)$}{C(dP6)}}
 %\chapter[The two smoothings of $\C(\dP6)$][The two smoothings of C(dP6)]{The two smoothings of $\boldsymbol{C(\dP6)}$}
+
+\section{The del Pezzo surface \texorpdfstring{$\dP6$}{dP6}}
 \label{sec:twosmoothings}
 
 Denote by $\dP6$ the blow-up of $\P^2$ in three generic points.  These points can be chosen to be the coordinate points $(1:0:0),(0:1:0)$ and $(0:0:1)$. The torus action on $\P^2$ extends to an action on $\dP6$, so it is a toric variety.
+
+\todo{picture of its fan/polytope}
+
+There are several ways to describe the equations of $\dP6$, and we describe them here. Since $\dP6$ is the blowup of $\P^2$ in three points, we can blow them up separately. Let $x_0,x_1,x_2$ be coordinates of $\P^2$. Then the blowup of $\P^2$ in the point $(1:0:0)$ can be realized as the closed subscheme of $\P^2 \times \P^1$ given by the equation $r_0x_1-r_1x_2=0$, where $r_0,r_1$ are coordinates on $\P^1$. We can repeat this procedure on the two other points $(0:1:0)$ and $(0:0:1)$ to obtain similar equations. Collecting these, we see that $\dP6$ is given by the matrix equation
+\[
+M\vec x = 
+\begin{pmatrix}
+0 & r_0 & -r_1 \\
+s_1 & 0 & -s_0 \\
+-t_0 & t_1 & 0
+\end{pmatrix}
+\begin{pmatrix}
+x_0 \\ y_0 \\ z_0
+\end{pmatrix}= 0.
+\]
+in $\P^2 \times \P^1 \times \P^1 \times \P^1$. Note now that the matrix cannot have rank $1$ or lower. Consider the projection onto forgetting the $\P^2$-factor:
+$$
+\pi:\P^2 \times \P^1 \times \P^1 \times \P^1 \to \P^1 \times \P^1 \times \P^1.
+$$
+
+This means that the restriction of $\pi$ to $\dP6$ is an isomorphism onto the hypersurface given by $\det M=0$ in $\P^1 \times \P^1 \times \P^1$.
+
+On the other hand, blowups can also be realized as closures of graphs of rational maps. Let $\varphi: \P^2 \rmap \P^2$ be the Cremona transformation given by $(x_0:x_1:x_2) \mapsto \left( \frac 1{x_0}: \frac 1{x_1}:\frac 1{x_2} \right)$. Then, in coordinates $(a_i,b_i)$ on $\P^2 \times \P^2$, the equations $a_0b_0=a_1b_1=a_2b_2$ hold. Hence $\dP6$ can also be realized as the intersection of two $(1,1)$-divisors in $\P^2 \times \P^2$. 
+
+Hence, using the Segre embedding, $\dP6$ lives naturally in both ${\left( \P^1 \right)}^3 \hookrightarrow \P^7$ and $\P^2 \times \P^2 \hookrightarrow \P^8$. 
+
+\section{The cone over \texorpdfstring{\dP6}{dP6} and its two smoothings}
+
+The singularity $C(\dP6)$ is one of the most studies singularities with an obstructed deformation space, see for example \cite{altmann_versaldeformation}.
 
 \begin{enumerate}
 	\item Introduce $\dP6$
@@ -11,3 +42,4 @@ Denote by $\dP6$ the blow-up of $\P^2$ in three generic points.  These points ca
 	\item They are topologically different
 	\item Their cohomology groups
 \end{enumerate}
+
