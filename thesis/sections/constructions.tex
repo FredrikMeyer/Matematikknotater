@@ -1,6 +1,14 @@
 \chapter{Construction of \CY's}
 \label{sec:constructions}
 
+In this chapter I describe the construction of three topologically different smoothings of a singular Calabi-Yau manifold. They (should) correspond to different components of the Hilbert scheme of threefolds with Hilbert polynomial $p(t)=6t^3+6$ in $\P^{11}$. 
+
+We first describe a degenerate \CY in the form of a Stanley-Reisner scheme $\P(\K)$, which has a quite large symmetry group. There is a natural deformation to a $X_0$, which is a hypersurface inside toric variety, with isolated singularities.
+
+We show that $X_0$ has several topologically distinct smoothings, which should lie on different components of the Hilbert scheme in $\P^{11}$.
+
+\section{A degenerated Calabi-Yau}
+
 Let $E_6$ be the hexagon as a simplicial complex. We form the associated Stanley--Reisner scheme $\P(E_6)$. It is a degenerated elliptic curve in $\P^5$.
 
 \begin{lemma}
@@ -12,16 +20,18 @@ We want to count the dimension of $S_t=S_{E_6}(t)$. Any monomial in $S_k$ has su
 In the other case, it has the form $x_i^ax_{i+1}^b$, with $a+b=t$ and $a,b \neq 0$. Counting, there are $6(t-1)$ of these monomials. In total, the dimension is $6+6(t-1)=6t$.
 \end{proof}
 \begin{remark}
-Alternatively, we could note that $\P(E_6)$ smooths to an elliptic curve of degree $6$. Since Hilbert polynomials are constant in flat families, it follows from Riemann--Roch that $h(t)=\deg \OO_{\P(E_6)}(t)-1+1=6t$.
+Alternatively, we could note that $\P(E_6)$ smooths to an elliptic curve of degree $6$. Since Hilbert polynomials are constant in flat families, it follows from Riemann--Roch that $h(t)=\deg \OO_{\P(E_6)}(6t)-1+1=6t$.
 \end{remark}
 
-Note that the Hilbert polynomial only differ from the Hilbert function for $t=0$. Let $\K$ be the simplicial complex $E_6 \ast E_6$. It is a triangulation of the 3-sphere.
+Note that the Hilbert polynomial only differ from the Hilbert function for $t=0$.
+
+We now introduce the central fiber in the discussions onward. Let $\K$ be the simplicial complex $E_6 \ast E_6$. It is a triangulation of the $3$-sphere.
 
 \begin{lemma}
 The Hilbert polynomial of $\P(\K)$ is $h(t)=6t^3+6$.
 \end{lemma}
 \begin{proof}
-The homogeneous coordinate ring $S=\oplus_{t \geq 0} S_t$ of $\P(\K)$ is the twofold tensor product of $\P(E_6)$. It follows from the previous lemma that
+The homogeneous coordinate ring $S=\oplus_{t \geq 0} S_t$ of $\P(\K)$ is the twofold graded tensor product of $\P(E_6)$. It follows from the previous lemma that
 \[
 \dim S_t = \sum_{i+j=k, ij \neq 0} 36ij + 12k,
 \]
@@ -30,9 +40,16 @@ where the last term is a correction term because $h(t) \neq 1$. It is now a rout
 
 It is the deformations of $\P(\K)$ that we will study in this thesis. \todo{Something about choosing another triangulation, making T2 smaller}
 
-\section{Toric deformations}
+Either by using \MM or by using the more conceptual description of the $T^i$ modules from \cite{deforming_christophersen}, we can compute: 
 
-\begin{figure}
+\begin{lemma}
+The dimensions of $T^1(\K)$ and $T^2(\K)$ are $84$ and $72$, respectively.
+\end{lemma}
+
+
+\section{A natural toric deformation}
+
+\begin{figure}[b]
 \centering
 \begin{tikzpicture}
   \draw (0, 0) grid (4, 4);  
@@ -50,25 +67,32 @@ It is the deformations of $\P(\K)$ that we will study in this thesis. \todo{Some
 \label{fig:hexagon}
 \end{figure}
 
-By starring $E_6$ with a vertex, we get a triangulation of the disk. Denote by $\nabla$, the hexagon in  \cref{fig:hexagon}. By Theorem 8.3 and Corollary 8.9 in \cite{sturmfels}, there is a one-one correspondence between unimodular regular triangulations of $\nabla$ and the square-free initial ideals of the toric ideal of $\P(\nabla)$. 
+Consider \cref{fig:hexagon}. It is the $2$-dimensional polytope associated to the del Pezzo surface of degree $6$, whose boundary is exactly the simplicial complex $E_6$. The fan over this polytope correspond to a unimodular regular triangulation of its boundary, and it follows by \cref{eq:unimodular_triangs}, that $\dP6$ degenerates to the Stanley-Reisner ring $\P(E_6 \ast \{pt\})$, where $\{ pt \}$ correspond to the origin. This is an embedded deformation inside $\P^6$.
 
-This means that $E_6 \ast \{ pt \}$ smooths to the del Pezzo surface of degree $6$, and also that $\P(E_6)$ smooths to an anticanonical section of $\dP6$. 
+Now form the join of two copies of $\dP6$, to get a new variety $Y$. By \cref{lemma:join}, this is a $2+2+1=5$-dimensional toric variety with singular locus consisting of two copies of $\dP6$. Since the coordinate ring is just the tensor product of two copies of $S(\dP6)$, it follows that $Y$ degenerates to $\P(E_6 \ast \{pt\} \ast E_6 \ast \{ pt \})=\P(\K \ast \Delta^1)$, whose simplicial complex is the simplicial join of two hexagons. 
 
-\todo{Talk about the join of two del pezzos}
+Since $\P(\K)$ is a complete intersection inside $\P(\K \ast \Delta^1)$,  it follows that $\P(\K)$ deforms to the intersection of two generic hyperplanes inside $Y$. Denote this deformation by $X_0$. Since $Y$ has singular locus of dimension $2$ and degree $6+6=12$, it follows by Bertini's theorem that $X_0$ has twelve isolated singularities $p_i$.
 
-$X_0$.
+\begin{lemma}
+Let $(U,p_i)$ be the germ of $X_0$ at $p_i$. Then $(U,p_i) \simeq (C(\dP6),0)$.
+\end{lemma}
+\begin{proof}
+\todo{do this proof}
+\end{proof}
+
+\todo{Hva mer å si? Nevne eksistens av krepant resolusjon? (19,19)?}
 
 \section[Smoothings of X0]{Smoothings of $X_0$}
 
-We will exploit the fact that the cone over $\dP6$ have two smoothings two produce two smoothings of $X_0$.
+We will exploit the fact that the cone over $\dP6$ have two different smoothings two produce three different smoothings of $X_0$. They all come from writing the equations in different formats.
 
-\subsection{The first construction}
+\subsection{The block matrix construction}
 
-Let $E$ be a 3-dimensional vector space. Let $\{e_1,e_2,e_3\}$ be a basis for $E$. Then $S_3$ act on $E$ by $e_i \mapsto e_{\sigma(i)}$. It also act on $(E \otimes E)^{\oplus 2}\simeq k^{18}$. There is a $\Z_2$-action switching the factors. Let $\P=\P(k^{18})$. Then $S_3 \times \Z_2\simeq D_6$ act on $\P$. 
+Let $E$ be a 3-dimensional vector space. Let $\{e_1,e_2,e_3\}$ be a basis for $E$. Then we can form the vector space $V= (E \otimes E) \oplus (E \otimes E)$, which has dimension $18$. Let $\P^{17}=\P(V)$.
 
-The elements of $\P^{17}$ are pairs of $3 \times 3$-matrices, not both zero. Let $M$ be the closure of the set of pairs $(A,B)$ where $\rank A = \rank B = 1$. 
+The elements of $\P^{17}$ can be seen as pairs of $3 \times 3$-matrices, not both zero. Let $M$ be the closure of the set of pairs $(A,B)$ where $\rank A = \rank B = 1$.  
 
-If $\P^{17}$ have coordinates $x_1,\ldots,x_{18}$, let $M_1, M_2$ be generic matrices:
+If $\P^{17}$ have coordinates $x_1,\ldots,x_{18}$, let $M_1, M_2$ be the matrices
 \[
 M_1 = \begin{pmatrix}
 x_1 & x_2 & x_3 \\
@@ -83,17 +107,18 @@ x_{16} & x_{16} & x_{17}
 \end{pmatrix}.
 \]
 
-Then $M$ is defined by the zeroes of the $2 \times 2$-minors of $M_1$ and $M_2$. Note that $M$ is the projective join of two copies of $\mathbb P^2 \times \mathbb P^2 \hookrightarrow \mathbb P^8$. 
+Then $M$ is defined by the zeroes of the $2 \times 2$-minors of $M_1$ and $M_2$. Note that $M$ is the projective join of two copies of $\mathbb P^2 \times \mathbb P^2 \hookrightarrow \mathbb P^8$. Since the join of two Fano varieties is Fano, it follows that $M$ is a Fano variety with anticanonical sheaf equal to $\OO_{M}(6)$ \todo{do this!!}.
 
 The variety $M$ is $9$-dimensional: the affine cone over $M$, $C(M)$, is equal to $C(\mathbb P^2 \times \P^2) \times C(\mathbb P^2 \times \P^2)$. This variety has dimension $5+5=10$, hence its projectivization $M$ is $9$-dimensional. 
 
 The singular locus of $M$ consists of the pairs $(0,B)$, and $(A,0)$, where $\rank A= \rank B = 1$, hence $\dim \sing M = 4$. By Bertini's theorem, intersecting $M$ with a codimension $6$ hyperplane gives a smooth variety $X_1$.
 
-Note that by putting $x_1=x_5=x_6$ and $x_{10}=x_{14}=x_{17}$, we get the join of two del Pezzos, so we see that $X_1$ deforms to $X_0$ \todo{consistent notation}. It follows that $X_1$ is a smooth Calabi-Yau.
+Note that by putting $x_1=x_5=x_6$ and $x_{10}=x_{14}=x_{17}$, we get the join of two del Pezzos, so we see that $X_1$ deforms to $X_0$. It follows that $X_1$ is a smooth Calabi-Yau.
 
+A \MM computation give us some information about the geometry of $X_1$.
 \begin{proposition}
-\label{prop:x1euler}
-$X_1$ has topological Euler characteristic $-72$. 
+\label{prop:x1euler} 
+$X_1$ has topological Euler characteristic $-72$.
 \end{proposition}
 \begin{proof}
 This is a computation in \MM. Since computing the whole cotangent sheaf of $X_1$ is impossible with current computer technology, we make use of standard exact sequences. Let $\mathscr I$ be the ideal sheaf of $M$ in $\P^{17}$. First off, we have the exact sequence
@@ -115,15 +140,18 @@ Hence $\chi(\Omega_X^1) = -36+72 = 36$.
 It follows that the topological Euler characteristic is $\chi_X = -2\chi(\Omega_X^1)=-72$.
 \end{proof}
 
-\subsection{The second construction}
+\todo{heuristic moduli computation?}
 
-Let $E$ be a $2$-dimensional vector space with basis $\{e_1,e_2\}$. Let $\P=\P\left((E \otimes E \otimes E)^{\oplus 2}\right)$. Then $\P=\P^{15}$. There is an action of $S_3$ on $E \otimes E \otimes E$ given by permuting the tensor factors. Combining this with a $\Z_2$ switching $A$ and $B$, we get a $S_3 \times \Z \simeq D_6$-action on $\P$. 
+%%%%%%%%%%%%
+\subsection{The three-tensor construction}
+
+Now let $F$ be a $2$-dimensional vector space with basis $\{f_1,f_2\}$. Then we can form the vector space $V = ((F \otimes F \otimes F)^{\oplus 2})$. Let $\P^{15}=\P(V)$.
 
 The elements of $\P$ are pairs $(A,B)$ of $2 \times 2 \times 2$-tensors, not both zero. 
 
-Let $N$ be the closure of set of pairs $(A,B)$ where both $A$ and $B$ have tensor rank $1$\footnote{An element of $E^\otimes 3$ have rank $1$ if it is a pure tensor. It has rank $k$ if it can be written as a sum of $k$ pure tensors.}. A pure $2 \times 2 \times 2$-tensor can be visualized as a box in $\Z^3$ of unit volume. Let the variables on $\P$ be $a_{ijk}$ and $b_{ijk}$ for $i,j,k=0,1$. See the diagram in \vref{fig:222tensor}.
+Let $N$ be the closure of set of pairs $(A,B)$ where both $A$ and $B$ have tensor rank $1$\footnote{An element of $F^\otimes 3$ have rank $1$ if it is a pure tensor. It has rank $k$ if it can be written as a sum of $k$ pure tensors.}. A pure $2 \times 2 \times 2$-tensor can be visualized as a box in $\Z^3$ of unit volume. Let the variables on $\P^{15}$ be $a_{ijk}$ and $b_{ijk}$ for $i,j,k=0,1$. See the diagram in \vref{fig:222tensor}.
 
-\begin{figure}
+\begin{figure}[t]
 \centering
 \begin{tikzpicture}
 \draw (0,0) -- (3,0) -- (3,3) -- (0,3) -- cycle;
@@ -146,9 +174,9 @@ Let $N$ be the closure of set of pairs $(A,B)$ where both $A$ and $B$ have tenso
 \label{fig:222tensor}
 \end{figure}
 
-The equations of the set of rank $1$ tensors are obtained as the ''minors'' along the $6$ sides together with the minors along the $4$ long diagonals, giving a total of $9$ binomial equations. 
+The equations of the set of rank $1$ tensors are obtained as the ``minors'' along the $6$ sides together with the minors along with the $3$ long diagonals, giving a total of $9$ binomial equations. 
 
-Note that $N$ is the projective join of two copies of $\P^1 \times \P^1 \times \P^1$.
+Note that $N$ is the projective join of two copies of $\P^1 \times \P^1 \times \P^1$. As above, it follows that $N$ is a singular Fano variety with anticanonical sheaf equal to $\OO_N(4)$. 
 
 The singular locus of $N$ consists of the pairs $(A,0)$ and $(0,B)$ where both $A,B$ have rank $1$. Hence the singular locus is of dimension $3$.
 
@@ -160,3 +188,61 @@ The topological Euler characteristic of $X_2$ is $-48$.
 \begin{proof}
 The proof is identical to the proof of \cref{prop:x1euler}.
 \end{proof}
+
+\subsection{The mixed smoothing}
+
+In the above cases, we formed the join of equal varieties. In tha above notation, let $V=(E \otimes E) \oplus (F \otimes F \otimes F)$. Then let $\P^{16}=\P(V)$.
+
+Now let $W$ be the set of ``mixed'' rank $1$ tensors. In a way similar to above, we find that $W$ is a singular Fano toric variety of dimension $8$. The singular locus is of dimension $4$, so a $5$-fold complete intersection is again a smooth Calabi-Yau variety $X_3$.
+
+\begin{proposition}
+The Euler characteristic of $X_3$ is $-60$.
+\end{proposition}
+\begin{proof}
+The proof is identical to the proofs above.
+\end{proof}
+
+
+%%%%%%%%%%%%%%%
+\section{Invariant \CY's}
+
+By choosing non-generic hyperplanes in the construction of $X_1$ and $X_2$, there will be natural group actions on them.
+
+Denote by $D_6$ the dihedral group of order $12$, the symmetries of a hexagon. It is generated by a rotation $\rho$ of order $6$, together with a reflection $\sigma$, subject to $\sigma \rho \sigma = \rho^{-1}$. There is an isomorphism $D_6 \simeq S_3 \times \Z_2$ given by the inclusion $S_3 = \langle \rho^2, \sigma \rangle \hookrightarrow D_6$. 
+
+\begin{lemma}
+There are $D_6$-actions on both $M$ and $N$.
+\end{lemma}
+\begin{proof}
+Recall that $M$ is the join of two copies of $\P^2 \times \P^2$ embedded in $\P^8$. We can think of $M$ as the rank $1+1$ block matrices in $\P(E \otimes E \oplus E \otimes E)$, where $E$ is a $3$-dimensional vector space. Choosing a basis $\{e_1,e_2,e_3\}$ for $E$, we have a natural $S_3$ action on $E$ given by $e_i \mapsto e_{\sigma(i)}$. This action extends to $E \otimes E$. 
+
+Switching the direct summands of ${\left(E \otimes E\right)}^{\oplus 2}$, gives us a $\Z_2$-action. In total we now have a $S_3 \times \Z_2$-action, which by the above remark is a $D_6$-action. Note that since the action was defined on $E$, rank is preserved, so that we indeed have an action on $M$.
+
+Similarly, $N$ is the rank $1+1$ tensors in ${\left(E \otimes E \otimes E \right)}^{\oplus 2}$, where now $E$ is a $2$-dimensional vector space. 
+\end{proof}
+
+\todo{Torus actions}
+
+By choosing invariant hyperplanes, the group actions on the ambient spaces descend to the \CY's. We first consider the case when the ambient space was the join of two copies of $\P^2 \times \P^2$, which was denoted by $M$ above.
+
+Denote a unit matrix in the first factor of $(E \otimes E) \oplus (E \otimes E)$ by $e_{ij}^0$, and denote a unit matrix in the second factor by $e_{ij}^1$, where $0,1$ are taken modulo $2$. 
+
+In this case, one such invariant hyperplane is given by the span of
+$$
+f_{ij}^\alpha = e_{ij}^\alpha + t e_{-i-j,-i-j}^{\alpha+1} \in E\otimes E \oplus E \otimes E,
+$$
+where $i \neq j \in \Z_3$ and $\alpha \in \Z_2$. Denote the intersection between $M$ and $H$ by $X_{H_t}$. A \MM computation shows the following:
+
+\begin{proposition}
+The symmetric variety $X_{H_t}$ have $24$ isolated singularities for $t \neq 0,1$, and they come in two orbits under the $D_6$-action.
+
+For $t=1$, it has $36$ isolated singularities.
+\todo{Check \emph{which} singularities these are, also: fix points}
+\end{proposition}
+
+\section{Euler characteristic heuristics}
+
+\begin{enumerate}
+	\item By a naive count, things make sense
+\end{enumerate}
+

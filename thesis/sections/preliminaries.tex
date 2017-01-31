@@ -6,6 +6,23 @@
 	\item Toric geometry notation
 \end{enumerate}
 
+\todo{joins}
+
+Given two projective varieties $X \subset \P^N$ and $Y \subset \P^N$, one can for their \emph{projective join}. It is the closure of the union of the set of lines connecting points from $X$ and $Y$. Denote the join of $X$ and $Y$ by $X \ast Y$. 
+
+\begin{lemma}
+\label{lemma:join}
+Suppose $X$ and $Y$ are smooth and lie in disjoint linear subspaces, and $\dim X=a$ and $\dim Y=b$. Then their join, $X \ast Y$ have dimension $a+b+1$. The singular locus is of dimension $\max\{a,b\}$ and consist of the disjoint union of $X$ and $Y$.
+\end{lemma}
+\begin{proof}
+Denote the homogeneous coordinate rings of $X$ and $Y$ by $S(X)$ and $S(Y)$, respectively. I first claim that the homogeneous coordinate ring of $X \ast Y$ is the graded tensor product of $S(X)$ and $S(Y)$. 
+
+For suppose $X \subset \P^n$ and $Y \subset \P^m$ with $\P^n \cap \P^m = \emptyset$. Then $I_X=J_X+H_X$, where $H_X$ are linear equations defining $\P^n$, and similarly $I_Y = J_Y+H_Y$, with $H_X + H_Y=\mm$. Hence $S(X)$ is isomorphic to a graded ring without any variables occuring in the equations of $Y$ (and the same statement for $S(Y)$). Call these ring for $S_X$ and $S_Y$, respectively. Then the claim is that $X \ast Y$ has coordinate ring $S_X \otimes_k S_Y$. Even more concretely, if $x_0,\ldots,x_n$ are coordinates on $\P^n$, and $y_0,\ldots,y_n$ are coordinates on $\P^m$, then the claim is that $S(X \ast Y)=k[x_0,\ldots,x_n,y_0,\ldots,y_n]/(J_X+J_Y)$. For suppose $P$ is a point in $\P^{n+m+1}$ such that $\restr{J_X+J_Y}{P}=0$. Then $P$ has to be of the form $tP_1 + sP_2$ with $P_1$ and $P_2$ satisfying the equations of $X$ and $Y$. Hence $P$ lies on a line between $X$ and $Y$.
+
+\todo{finn velformulert forklaring på sing lokus}
+\todo{svæææært klønete bevis}
+\end{proof}
+
 \section{Deformation theory}
 
 Given a scheme $X_0$ over $\C$, a \emph{family of deformations} of $X_0$ is a flat morphism $\pi:\mathscr X \to (S,0)$ with $S$ connected such that $\pi^{-1}(0)=X_0$. If $S$ is the spectrum of an artinian $\C$-algebra, then $\pi$ is an \emph{infinitesimal deformation}. If $S=\Spec \C[\epsilon]/\epsilon^2$, then  $\pi$ is a \emph{first order deformation}. A \emph{smoothing of $X_0$} is a deformation such that the general fiber is smooth.
@@ -30,9 +47,6 @@ Let $M$ be a lattice (by which we mean a free abelian group of finite rank). Let
 
 By Theorem 8.3 and Corollary 8.9 in \cite{sturmfels}, there is a one-one correspondence between unimodular regular triangulations of $\nabla$ and the square-free initial ideals of the toric ideal of $\P(\nabla)$. 
 
-\section{Toric geometry}
-\label{sec:toricgeometry}
-
 \todo{fill in as needed}
 
 \section{Smoothings of Stanley--Reisner schemes}
@@ -51,3 +65,21 @@ If $\K$ is a 3-dimensional simplicial sphere, then a smoothing of $X_0=\P(\K)$ w
 \begin{proof}
 Since $\K$ is a sphere, it follows from \ref{lemma:srcohom} that $H^i(X_0,\OO_X)=k$ for $i=0,3$, and zero for $i \neq 0,3$. It also \todo{How does triviality of the canonical sheaf follow?}
 \end{proof}
+
+\todo{something about polyhedral complexes and face rings?}
+
+\section{Toric geometry and toric degenerations}
+\label{sec:toricgeometry}
+
+\todo{join of reflexive polytopes is reflexive!}
+
+\begin{proposition}
+\label{eq:unimodular_triangs}
+There is a 1--1 correspondence between regular unimodular triangulations of polytopes and squarefree monomial ideals.
+\end{proposition}
+
+By Theorem 8.3 and Corollary 8.9 in \cite{sturmfels}......
+
+Thus, if we can find a polytope whose boundary has a regular unimodular triangulation, we know that the associated Stanley-Reisner ring has at least one deformation. 
+
+\todo{reflexive polytopes, mirror symmetry, anticanonical sections}
