@@ -1,0 +1,152 @@
+\documentclass[11pt, english]{article} 
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}   % S P R A A K
+
+
+% \usepackage{graphicx}    % postscript graphics
+\usepackage{amssymb, amsmath, amsthm, amssymb} % symboler, osv
+\usepackage[poly,matrix]{xy}   % for comm.diagram
+\usepackage{url}
+\usepackage{thmtools}
+\usepackage{mystyle} % stilfilen
+\usepackage{enumerate}  % lister $
+\usepackage{float}
+\usepackage{tikz}
+
+\title{A study of a variety}
+\author{Fredrik Meyer}
+\date{}
+\begin{document}  
+\maketitle
+\section{The variety $X$}
+
+Let $X \subseteq \mathbb{P}^5$ be defined by the ideal $I=(x_0x_2x_4-x_1x_3x_5)$. It is a singular 4-fold, and the singular locus is a union of $9$ lines. One sees easily that the ideal of the singular locus of $X$ is 
+\[
+I(\Sing X)=  (x_2x_4,x_0x_4,x_0x_2,x_3x_5,x_1x_5,x_1x_3)
+\]
+If one draws the the $2$-skeleton of the associated simplicial complex, one gets the complete bipartite graph $K_{3,3}$:
+
+\[
+\xymatrix{
+0\bullet \ar@{-}[rr] \ar@{-}[rrd] \ar@{-}[rrdd] & & \bullet 1 \\
+2\bullet \ar@{-}[rr] \ar@{-}[rru] \ar@{-}[rrd]& & \bullet 3  \\
+4\bullet \ar@{-}[rr] \ar@{-}[rru] \ar@{-}[rruu]& & \bullet 5
+}
+\]
+There are no $3$-cycles, so the associated simplicial complex cannot be $2$-dimensional. In particular, we can identify the singular locus from this drawing: The numbers $0-5$ correspond to the ``standard points'' of $\PP^5$, i.e. the points $(1:0:0:0:0:0),\dotsc,(0:0:0:0:0:1)$. So one of the lines in $\Sing X$ is the line $[01]$, that is, all points of the form $(\lambda:\mu:0:0:0:0)$. One sees that each line in $\Sing X$ meet intersect four other lines, in two points.
+
+Note that the generators of the ideal of the singular locus give rise to a birational map $\PP^5 \rmap X$, and we could blow up $X$ on the singular locus, to try to desingularize $X$. However, there may be other ways to remove the singularities.
+
+In particular, consider the graph below:
+\[
+\xymatrix{
+0\bullet \ar@{-}[rr]  \ar@{-}[rrdd] & & \bullet 1 \\
+2\bullet \ar@{-}[rr] \ar@{-}[rru] & & \bullet 3  \\
+4\bullet \ar@{-}[rr] \ar@{-}[rru]& & \bullet 5
+}
+\]
+
+This is a cycle, so it may better be drawn as
+\[
+\xymatrix{
+ & 0\bullet \ar@{-}[r] & \bullet 1 \ar@{-}[dr]  & \\
+5\ar@{-}[ur]\bullet  & & & \bullet 2 \ar@{-}[dl] \\
+ & 4\bullet \ar@{-}[ul]  &\bullet 3 \ar@{-}[l] & 
+}
+\]
+This give rise to a rational map $\varphi:\PP^5 \rmap X$ given by
+\[
+(z_{01}:z_{12}:\cdots:z_{50}) \mapsto (x_0x_1,x_1x_2,x_2x_3,x_3x_4,x_4x_5,x_0x_5)
+\]
+
+Its base locus, $B$, lies inside $\Sing X$. The inverse images of the lines $[01],[12],\dotsc, [50]$, are $\PP^3$'s. In particular, they have codimension $2$ in $\PP^5$. However, this map is dominant, and we want a map from a projective space of the same dimension. So the first drawing is actually better: It gives rive to a map $\psi: \PP^2 \times \PP^2 \rmap X$ defined by
+\[
+(x_0:x_2:x_4,x_1:x_3:x_5) \mapsto (x_0x_1,x_1x_2,x_2x_3,x_3x_4,x_4x_5,x_0x_5)
+\]
+the same formula. Now the inverse images are better: Let $[ij]$ be the line between the exceptional points $P_i,P_j$. Then its inverse image is .........
+
+\begin{center}
+\begin{tabular}{l | l | c}
+Line & Inverse image & $\dim \psi^{-1}([\text{line}])$\\
+\hline
+$[01]$ & $(\lambda x_0^2 : \lambda ^2: \mu x_0^2, 0 : 1:0)$ & 2 \\
+
+
+\end{tabular}
+\end{center}
+
+\begin{prop}
+The variety $X$ is naturally isomorphic to the projective spectrum of the semi group ring
+\[
+S = k[x_0x_1,x_1x_2,x_2x_3,x_3x_4,x_4x_5,x_5x_0].
+\]
+That is, $X= \Proj(S)$. This gives a coordinate-independent description of $X$.
+\end{prop}
+\begin{proof}
+The kernel of the homomorphism
+\[
+k[y_1,\cdots,y_6] \to k[x_0,\cdots,x_6]
+\]
+sending $y_i$ to $x_ix_{i+1}$ (modulo $6$), is precisely $I=(x_0x_2x_4-x_1x_3x_5)$. 
+\end{proof}
+
+Observation: In the same manner, we can identify $\PP^2 \times \PP^2$ with
+\[
+\Proj(k[x_0x_1,x_0x_3,x_0x_5,\cdots,x_4x_1,x_4x_3,x_4x_5])
+\]
+This mean that we have a rational morphism $\psi:\PP^2 \to \PP^2 \rmap X$.
+
+\begin{prop}
+The variety $X$ is a Pfaffian hypersurface. In particular, it is given as det radical of the determinant of the $6 \times 6$-matrix
+\[
+\begin{pmatrix}0&
+     {x}_{0}&    0&    0&     0&     {-{x}_{5}}\\
+     {-{x}_{0}}&     0&     {x}_{3}&     0&     0&     0\\
+     0&     {-{x}_{3}}&     0&     {x}_{4}&     0&     0\\
+     0&     0&     {-{x}_{4}}&     0&     {x}_{1}&     0\\
+     0&     0&     0&     {-{x}_{1}}&     0&     {x}_{2}\\
+     {x}_{5}&     0&     0&     0&     {-{x}_{2}}&     0\\
+     \end{pmatrix}
+\]
+\end{prop}
+
+\section{The Fano variety $F_1(X)$}
+
+The variety of lines contained in $X$ is the Fano variety $F_1(X)$, lying inside the Grassmannian $\Gr(2,6)$. It is reducible and consists of $15$ irreducible components. Nine of them are copies of $\Gr(2,4)$, and the six others are varieties defined by binomials, i.e. toric varieties. 
+
+Using the map from the previous section and noting that it is linear, we get a map into the Fano variety:
+\begin{align*}
+\Xi:(\PP^2)^\vee \times \PP^2 &\rmap F_1(X) \subseteq \Gr(2,6) \\
+\ell \times p &\mapsto \ell_p := [\psi(x,p),\psi(y,p)]_{x,y \in \ell}
+\end{align*}
+
+Here $\psi$ is the map below:
+\begin{align*}
+\psi: \PP^2 \times \PP^2 &\rmap X \\
+(x,y,z) \times(a,b,c) &\mapsto (ay,by,bz,cz,cx,ax)
+\end{align*}
+
+The map can be visualized with the following figure:
+\[
+\xymatrix{
+x\bullet \ar@{-}[rr]^5 \ar@{-}[rrdd]^4 & & \bullet a \\
+y\bullet \ar@{-}[rr]_0 \ar@{-}[rru]^1  & & \bullet b  \\
+z\bullet \ar@{-}[rr]_2 \ar@{-}[rru]_3  & & \bullet c
+}
+\]
+
+To get the Plücker coordinates of the map, one forms the $2 \times 6$-matrix having as rows the value of $\psi$ at two generic points, and then one takes maximal minors. These are the Plücker coordinates. Since the image of $\psi$ lies inside $X$, the image of $\Xi$ lies inside $F_1(X)$.
+
+
+
+The nine other components are isomorphic to $\Gr(2,4)$. They occur when one odd and one even coordinate is zero. 
+
+\section{Connection to algebraic statistics}
+
+The ideal $I$ is an example of an ideal arising from permutation matrices. For details, see \cite[page 56]{cox_toric} and \cite[page 148]{sturmfels}.
+
+\bibliographystyle{plain}
+\bibliography{bibliografi}
+
+\end{document}
