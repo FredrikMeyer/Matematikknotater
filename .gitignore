@@ -8,6 +8,9 @@
 *.toc
 *.fmt
 
+dagbok.tex
+dagbok.pdf
+
 # Temporary/backup files
 *~
 \#*#
