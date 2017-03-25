@@ -15,6 +15,10 @@
 \RequirePackage[utf8]{inputenx}
 \RequirePackage[T1]{fontenc}
 
+%%% moved further up b.c.o. lst
+\RequirePackage[dvipsnames,
+                svgnames,
+                cmyk]{xcolor}     % Pre-defined colors
 
 %% Fonts and typography
 \RequirePackage{lmodern}           % Latin Modern
@@ -23,7 +27,7 @@
 \RequirePackage[final]{microtype}  % Improved typography
 \RequirePackage{siunitx}           % Typesetting units
 \RequirePackage{listings}          % Typesetting code
-\lstset{basicstyle = \ttfamily, frame = tb}
+\lstset{basicstyle = \ttfamily,frame = tb}
 \RequirePackage{url}               % Typesetting URLs
 \urlstyle{sf}
 
@@ -39,17 +43,14 @@
 \RequirePackage{stmaryrd}   % Brackets
 
 
+
 %% Graphics
-\RequirePackage[dvipsnames,
-                svgnames,
-                cmyk]{xcolor}     % Pre-defined colors
 \RequirePackage{graphicx}         % Tool for importing images
 \graphicspath{{figures/}}
-\RequirePackage{tikz}             % Drawing tool
-\usetikzlibrary{calc}
+\RequirePackage{tikz,tikz-cd}             % Drawing tool
+\usetikzlibrary{calc,matrix,arrows,decorations.pathmorphing}
 \usetikzlibrary{intersections}
 \usetikzlibrary{decorations.markings}
-
 \newsubfloat{figure}
 
 
@@ -58,7 +59,7 @@
 \RequirePackage[color       = LightGray,
                 bordercolor = LightGray,
                 textsize    = footnotesize,
-                figwidth    = 0.98\textwidth]{todonotes} % Marginal notes
+                figwidth    = 0.98\textwidth]{todonotes} % Marginal notes                
 
 
 %% Miscellaneous
@@ -115,8 +116,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MEMOIR SETTINGS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% A4 paper
-\pageaiv
-\stockaiv
+%\pageaiv
+%\stockaiv
+%% Layout
+\setstocksize{240mm}{170mm}
+\settrimmedsize{240mm}{170mm}{*}
+\settrims{0mm}{0mm}
+\setlrmarginsandblock{20mm}{30mm}{*}
+\setulmarginsandblock{30mm}{30mm}{*}
+\checkandfixthelayout
 
 
 %% Title page
@@ -239,7 +247,7 @@
 \renewcommand{\a}{\mathbf{a}}
 \renewcommand{\b}{\mathbf{b}}
 \renewcommand{\c}{\mathbf{c}}
-\renewcommand{\v}{\mathbf{v}}
+%\renewcommand{\v}{\mathbf{v}}
 \newcommand{\x}{\mathbf{x}}
 \newcommand{\y}{\mathbf{y}}
 \newcommand{\0}{\mathbf{0}}
@@ -258,10 +266,22 @@
 \newcommand{\MM}{\texttt{Macaulay2}\xspace}
 
 \DeclareMathOperator{\dP6}{dP_6}
-\DeclareMathOperator{\rank}{\mathrm{rank}}
-\DeclareMathOperator{\sing}{\mathrm{Sing}}
-\DeclareMathOperator{\Pic}{\mathrm{Pic}}
+\DeclareMathOperator{\Gr}{\mathbb{G}}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Sing}{Sing}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Def}{{Def}}
+\DeclareMathOperator{\EmbDef}{{EmbDef}}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\supp}{{supp}}
+\DeclareMathOperator{\Cl}{Cl}
 \newcommand{\K}{\mathcal{K}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\lk}{\mathrm{lk}}
 \newcommand{\mm}{\mathfrak{m}}
 
 \newcommand\restr[2]{{% we make the whole thing an ordinary symbol

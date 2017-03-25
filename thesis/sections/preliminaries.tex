@@ -1,48 +1,225 @@
 \chapter{Preliminaries}
 \label{sec:prelims}
 
-\begin{enumerate}
-	\item Stanley-Reisner schemes
-	\item Toric geometry notation
-\end{enumerate}
+In this chapter we introduce the consistent notation and results which will be used later.
+
+
 \section{Notation}
 
-We write $k$ for a field (which is almost always assumed to be $\C$). If $X$ is a projective variety, we write $S(X)$ for its homogeneous coordinate ring (if the embedding is implicit). 
+We write $k$ for a field, which is almost always assumed to be $\C$. If $X$ is a projective variety, we write $S(X)$ for its homogeneous coordinate ring (if the embedding is implicit). All schemes are noetherian.
 
 \section{Projective geometry constructions}
-\todo{joins}
 
-Given two projective varieties $X \subset \P^N$ and $Y \subset \P^N$, one can define \emph{projective join $X \ast Y$}. It is the closure of the union of the set of lines connecting points from $X$ and $Y$.
+There are many ways to define the join of two projective varieties $X$ and $Y$. We will define it in a particularly general way, as described by Altman and Kleiman in \cite{altman_joins}. Then we will specialize to our situation.
 
-\begin{lemma}
+Fix a base scheme $S$. Let $\mathscr C$ be the category of graded, quasi-coherent $\OO_S$-algebras, generated in degree $1$. The tensor product of two $\OO_S$-algebras $\mathscr R$ and $\mathscr S$  is naturally graded: the degree $d$ part is given by
+\[
+(\mathscr R \otimes_{\OO_S} \mathscr S)_d = \bigoplus_{p+q=d} \mathscr R_p \otimes \mathscr S_q.
+\]
+Then we define the \emph{join} of the graded $\OO_S$-algebras to be
+\[
+X \ast Y = \Proj (\mathscr R \otimes_{\OO_S} \mathscr S).
+\]
+If $X$ and $Y$ are projective varieties over $S$, they come with graded $\OO_S$-algebras $\mathscr R = \Sym \OO_X(1)$ and $\mathscr S = \Sym \OO_Y(1)$. Then we define their join to be $\Proj$ of these algebras. 
+
+\begin{example}
+Let $X=\P(E)$ and $Y=\P(F)$, where $E,F$ are quasi-coherent $\OO_S$-modules. Then we have the equality $\P(E) \ast \P(F) = \P(E \oplus F)$, because of the linear algebra fact $\Sym(E) \otimes \Sym(F) = \Sym(E \oplus F)$.
+\end{example}
+
+The algebra $\mathscr R \otimes_{\OO_S} \mathscr S$ contains the ideal $\mathscr R \otimes \mathscr S_+$. The associated subscheme is denoted by $V_X$, and is isomorphic to $X = \Proj \mathscr R$. We define $V_Y$ similarly.
+
+There is a geometric definition of the join, as described in setion (C11) in \cite{altman_joins}. Let $E,F$ be quasi-coherent $\OO_S$-modules\footnote{In our case, $S=\Spec k$ almost always. So $E,F$ are just vector spaces.}. Suppose $X,Y$ are subschemes of $\P(E)$ and $\P(F)$. Then $X\ast Y$ is a closed subscheme of $\P(E \oplus F)$. Identify $X$ and $Y$ with their fundamental subschemes in $X \ast Y$. Then it is not difficult to see that $X \ast Y$ is the (closure of the) locus of points lying on the lines of $\P(E \oplus F)$ determined by pairs of points of $X$ and $Y$. 
+
+For a graded $\OO_S$-algebra $\mathscr R$ there are two natural homomorphisms. We have the \emph{structure map} $\rho: \OO_S \to \mathscr R$, and the \emph{augmentation map} $\epsilon: \mathscr R \to \OO_S$, sending everything in positive degree to zero. Clearly $\epsilon \circ \rho = \id_S$.
+
+
+
+\begin{proposition}
 \label{lemma:join}
-Suppose $X$ and $Y$ are smooth and lie in disjoint linear subspaces, and $\dim X=a$ and $\dim Y=b$. Then their join, $X \ast Y$ have dimension $a+b+1$. The singular locus is of dimension $\max\{a,b\}$ and consist of the disjoint union of $X$ and $Y$.
-\end{lemma}
+Suppose $X/k \subset \P^n$ and $Y/k \subset \P^m$ are smooth projective schemes. Then their join, $X \ast Y$ have dimension $\dim X+\dim Y+1$. The singular locus is of dimension $\max\{a,b\}$ and consist of the disjoint union of $X$ and $Y$.
+\end{proposition}
 \begin{proof}
-Denote the homogeneous coordinate rings of $X$ and $Y$ by $S(X)$ and $S(Y)$, respectively. I first claim that the homogeneous coordinate ring of $X \ast Y$ is the graded tensor product of $S(X)$ and $S(Y)$. 
+Let $\mathscr R = \oplus_{d \geq 0} \OO_X(d)$ and $\mathscr S = \oplus_{d \geq 0} \OO_Y(d)$ be the homogeneous coordinate rings of $X$ and $Y$. Then $X \ast Y \subset \P^{n+m+1}$. 
 
-For suppose $X \subset \P^n$ and $Y \subset \P^m$ with $\P^n \cap \P^m = \emptyset$. Then $I_X=J_X+H_X$, where $H_X$ are linear equations defining $\P^n$, and similarly $I_Y = J_Y+H_Y$, with $H_X + H_Y=\mm$. Hence $S(X)$ is isomorphic to a graded ring without any variables occuring in the equations of $Y$ (and the same statement for $S(Y)$). Call these ring for $S_X$ and $S_Y$, respectively. Then the claim is that $X \ast Y$ has coordinate ring $S_X \otimes_k S_Y$. Even more concretely, if $x_0,\ldots,x_n$ are coordinates on $\P^n$, and $y_0,\ldots,y_n$ are coordinates on $\P^m$, then the claim is that $S(X \ast Y)=k[x_0,\ldots,x_n,y_0,\ldots,y_n]/(J_X+J_Y)$. For suppose $P$ is a point in $\P^{n+m+1}$ such that $\restr{J_X+J_Y}{P}=0$. Then $P$ has to be of the form $tP_1 + sP_2$ with $P_1$ and $P_2$ satisfying the equations of $X$ and $Y$. Hence $P$ lies on a line between $X$ and $Y$.
+Denote by $C(X \ast Y)$ the scheme $\Spec (\mathscr R \otimes \mathscr S)$, the affine cone over $X \ast Y$. 
 
-\todo{finn velformulert forklaring på sing lokus}
-\todo{svæææært klønete bevis}
+The singular locus of $C(X \ast Y) = C(X) \times C(Y)$ is equal to $\Sing C(X) \times C(Y) \bigcup C(X) \times \Sing C(Y)$. Since $X$ and $Y$ are smooth, the only singular point on the affine cones are the origins. Hence
+$$
+\Sing(C(X \ast Y)) = 0 \times \Sing(C(Y)) \cup \Sing(C(X)) \times 0.
+$$
+Projectivising, we find that $\Sing(X \ast Y) = \Sing Y \sqcup \Sing X$, since $(0,\ldots,0)$ is the only common point of the affine cones. 
 \end{proof}
 
-%%%%%%
+Recall that a scheme $X$ is \emph{Gorenstein} if it has a dualizing sheaf. It is \emph{Cohen--Macaulay} if the dualizing sheaf is a line bundle. If $S$ is the homogeneous coordinate ring of a projective Gorenstein variety $X \subset \P^n$, the canonical sheaf can be computed as the sheaf associated to the graded module $\Ext^{\codim X}(S,S(-n-1))$.
+
+If $X$ and $Y$ are two Gorenstein schemes, then their join is also Gorenstein. Furthermore, we can compute the canonical sheaf in terms of the canonical sheaves of $X$ and $Y$.
+
+\begin{proposition}
+Let $X=\Proj \mathscr R$ and $Y=\Proj \mathscr S$ be Gorenstein projective schemes with dualizing sheaves $\omega_X, \omega_Y$, respectively (here $\mathscr R,\mathscr S$ are sheaves of graded $\mathscr O_S$-algebras). Then $X \ast Y$ is Gorenstein with  dualizing sheaf $\omega_X \otimes_{S} \omega_Y$.
+\end{proposition}
+\begin{proof}
+The question is local on $S$, so we may assume that $R$ and $S$ are homogeneous coordinate rings. Then the statement follows from Theorem 4.2 in \cite{herzog_canonical}, where the authors prove that the canonical module of a tensor product is the tensor product of the canonical modules.
+\end{proof}
+
+\begin{remark}
+\label{remark:canonical}
+If $X$ and $Y$ are Gorenstein projective schemes, the resolution of the structure sheaf is symmetrical. It follows that $\omega_X=\OO_X(-n)$ for some $n \geq 0$. If $\omega_Y=\OO_Y(-m)$, it follows from the above proposition that $\omega_{X \ast Y}(-m-n)$.
+\end{remark}
+
+%%%%%
+\section{Calabi--Yau manifolds and mirror symmetry} % (fold)
+\label{sec:calabi_yau}
+
+Parts of this thesis will be concerned with the construction of Calabi--Yau manifolds. For us, a Calabi-Yau manifold will be a irreducible complex projective variety $X$ such that $\omega_X \simeq \OO_X$ and $H^i(X,\OO_X)=0$ for $i=1,\ldots,\dim X-1$. We usually have $\dim X=3$. Be ware that the literature often requires \CY manifolds to be smooth.
+
+Mathematically, \CY varieties are interesting because they are among the varities having Kodaira dimension zero. This means that they have trivial canonical models, making them harder to study. Before the 90's \todo{check} there were not many explicit constructions of \CY varieties, but after the advent of toric geometry and the construction of Batyrev in \cite{batyrev_mirrorsymmetry}, thousands of new examples were found, all of which was anticanonical sections of Fano toric varieties.
+
+Let $\Omega_X$ be the sheaf of holomorphic one-forms on $X$, and assume that $\dim X =3$. Then we can form the \emph{Hodge diamond} of $X$, which is a format of writing the dimensions $h^{ij}$ of the cohomology groups $H^j(X,\Omega_X^i)$.
+\[
+\begin{array}[c]{ccccccc}
+&&& h^{00} \\  
+ &         & h^{01} & & h^{10}  \\
+&	h^{02} && h^{11}  && h^{20}  \\
+h^{03} && h^{12} && h^{21} && h^{30} \\
+&	h^{13} && h^{22}  && h^{31}  \\
+ &         & h^{23} & & h^{32}  \\
+ &&& h^{33} 
+\end{array}
+\]
+Because of the \CY condition, we have that $h^{j0}=0$ for $0 < j < 3$, and also that $h^{00}=h^{0d}=1$. It follows by Serre duality (see \cite[Corollary 7.7, Chapter III]{hartshorne}) that $h^{ij}=h^{3-i,3-j}$. Note that this amounts to a horizontal symmetry of the Hodge diamond. Since $X$ was assumed to be a complex manifold, it follows that $h^{ij}=h^{ji}$ by complex conjugation\footnote{This follows by the $\bar \delta$-Poincaré lemma.}. This amounts to vertical symmetry of the Hodge diamond. It follows that for 3-dimensional \CY varieties, the Hodge diamond simplifies to
+\[
+\begin{array}[c]{ccccccc}
+&&& 1 \\  
+ &         & 0 & & 0  \\
+&	0 && h^{11}  && 0  \\
+1 && h^{12} && h^{12} && 1 \\
+&	0 && h^{11}  && 0  \\
+ &         & 0 & & 0  \\
+ &&& 1 
+\end{array}.
+\]
+The \emph{Hodge decomposition} theorem states that the singular cohomology groups decomposes as
+$$
+H^k(X,\C) = \bigoplus_{i+j=k}^{\dim X} H^i(\Omega_X^j).
+$$
+The \emph{topological Euler characteristic} is defined as
+$$
+\chi(X) = \sum_{k=0}^{2 \dim X} \dim_\C H^k(X, \C).
+$$
+For 3-dimensional \CY varieties, it follows from the above discussion that $\chi(X)$ can be computed as $2(h^{11} - h^{12})$. 
+
+\begin{example}
+The canonical example of a \CY variety is the quintic in $\P^4$. Let $X=V(f)$ be defined by a general element in $H^0(\P^4,\OO_{\P^4}(5))$. Then $X$ is smooth, and by adjunction formula we have $\omega_X = \restr{\omega_{\P^4}}{X} \otimes \OO_X(5)=\OO_X(-5) \otimes \OO_X(5) = \OO_X$, so the canonical bundle is trivial. By the ideal sheaf sequence, we find that $H^i(X,\OO_X) \simeq H^i(X,\OO_{\P^4}(-5))$, which by \cite[Theorem 5.1, Chapter III]{hartshorne} implies the required vanishing of the structure sheaf cohomology groups.
+
+The Euler characteristic can be computed as the degree of the top Chern class of $X$. If $Y$ is a degree $d$ hypersurface in $\P^n$, the following formula holds:
+$$
+c_{n-1}(T_X) = h^{n-1} \left( \binom{n+1}{n-1} - d \binom{n+1}{n-2} + d^2 \binom{n+1}{n-3} + \ldots\right).
+$$
+Putting $n=4$ and $d=5$, we find that $\chi(X)=-200$. To compute $h^{11}$, we see first from the conormal sequence that $H^1(\Omega_Y^1) \simeq H^1(\restr{\Omega_{\P^4}^1}{Y})$. Now it follows easily from the restricted Euler sequence that $h^{11}=1$, and since $\chi(X)=2(h^{11}-h^{12})$ it follows that $h^{12}=101$.
+\end{example}
+
+In general it is very hard to compute the Hodge numbers of Calabi--Yau varieties, with the exception of hypersurfaces in four-dimensional toric varieties. Often the best one can hope for is the topological Euler characteristic $\chi(X)$, which is much easier to compute.
+
+After the invention of string theory, \CY varieties caught the attention of physicists. They discovered a duality between different \CY 3-manifolds $X$ and $X^\circ$ such that their Hodge numbers satisfy $h^{11}(X) = h^{12}(X^\circ)$ and $h^{12}(X)=h^{11}(X^\circ)$ (in particular $\chi(X) = - \chi(X^\circ)$). This a conjectural correspondence between the complex moduli space of $X$ (which have tangent space $H^1(X,\Omega_X^2$), and the Kähler moduli space of $\omega^\circ$, the Kähler class on $X^\circ$.
+
+This correspondence is called \emph{mirror symmetry}.
+
+The last chapter of this thesis is concerned about the construction of new examples of Calabi--Yau manifold. They are all complete intersections in toric varieties \todo{but they do *not* correspond to Minkowski decompoistions?}.
+
+\begin{itemize}
+	\item Fano -> \CY
+\end{itemize}
+
+% section calabi_yau (end)
+
+%%%%%%%%%
+%%%%%%%%%
 \section{Toric geometry} % (fold)
 \label{sec:toric_geometry}
 
-A toric variety is an irreducible and normal variety containing the torus $(\C^\ast)^n$  as a dense subset, such that the action of the torus on itself extends to an action on the variety.
+A toric variety is an irreducible and normal variety containing the torus $T=(\C^\ast)^n$  as a dense subset, such that the action of the torus on itself extends to an action on the variety.
+
+We fix some notation that will be used throughout. Details and proofs can be found in \cite{cox_toric,fulton_toric}. Each toric variety comes with two dual lattices. The \emph{lattice of 1-parameter subgroups $N$} and the \emph{character lattice $M$}. A one-parameter subgroup is a morphism $\lambda:\C ^\ast \to T$ that is a group homomorphism. The set of one-parameter subgroups is a lattice isomorphic to $\Z^n$, and we denote it by $N$. A \emph{character} is a morphism $\chi:T \to \C^\ast$ that is a group homomorphism. The set of characters is a lattice $M$ isomorphic to $\Z^n$ which is naturally dual to $N$.
+
+Let $V$ be a $\R$-vector space. Let $V^\vee$ be the dual vector space. A \emph{convex polyhedral cone} is a subset $\sigma$ of $V$ of the form
+$$
+\sigma = \{ r_1 v_1 + \ldots + r_s v_s \mid r_i \geq 0 \text{ for all } i \},
+$$
+where the $v_i$ is a finite set of vectors in $V$ and the $r_i$ are real numbers. A \emph{rational polyhedral cone} is a cone such that the vectors $v_i$ can be taken to have rational coordinates.
+
+The \emph{dual cone $\sigma^\vee$} lives in $V^\vee$, and is defined as the set of functionals that are positive on $\sigma$:
+$$
+\sigma^\vee = \{ u \in V^\vee \mid \langle u,v\rangle \geq 0, v \in \sigma \}.
+$$
+Cones have two descriptions: either as the positive hull of a finite set of vectors (as above), or implicitly, as the intersection of finitely many half-spaces. If $u_i$ generate $\sigma^\vee$, then it is true that
+$$
+\sigma = \{ v \in V \mid \langle u_i,v \rangle \geq 0 \text{ for all } i \}.
+$$
+The vectors $u_i$ are the inner normal vectors of the facets of $\sigma$.
+
+A \emph{(commutative) semigroup} is a set $S$ with a commutative binary operation $S \times S \to S$, together with an identiy element $0 \in S$. Given a cone $\sigma \subset N$, we can form a semigroup $S=\sigma^\vee \cap M \subset M$. Given a semigroup $S$, we can form the \emph{semigroup algebra} $\C[S]$: it is the algebra generated by the elements of $S$, with multiplicative structure inherited from $S$. We then define $U_\sigma$ as $\Spec \C[\sigma^\vee \cap M]$, and call it the \emph{affine toric variety associated to $\sigma$}. 
+
+\begin{example}
+Let $\sigma=\langle (1,0), (1,2) \rangle \subset \R^2$. Then $\sigma^\vee = \langle (2,-1),(1,0),(0,1) \rangle \subset \R^2$. Then $\C[\sigma^\vee \cap M] = \C[x,y,x^2/y]$, where we have identified $x$ and $y$ with the standard basis of $\R^2$. This ring is isomorphic to $\C[a,b,c]/(a^2-bc)$.
+\todo{illustration}
+\end{example}
+
+General toric varities are described using collections of cones called \emph{fans}. A set $\Sigma$ of cones is called a \emph{fan} if it closed under intersections and faces of cones: if $\sigma, \sigma' \in \Sigma$, then we should also have $\sigma \cap \sigma' \in \Sigma$, and if $\sigma' \subset \sigma$ is a face with $\sigma \in \Sigma$, then $\sigma' \in \Sigma$ also. Thus, given a fan $\Sigma$, we get a collection of affine toric varieties $U_\sigma$ for each cone $\sigma \in \Sigma$. We have inclusions $U_{\sigma \cap \sigma'} \subset U_\sigma$, and using these inclusions one glue to get a separated toric variety. If the fan is \emph{complete} (meaning that the union of its cones is equal to $N$), it follows that the corresponding toric variety is complete. 
+
+\begin{example}
+\todo{fan of P2 and its coordinate rings}
+\end{example}
+
+Projective toric varieties can be constructed from lattice polytopes. We describe the procedure here. Let $\Delta$ be a lattice polytope in $M \simeq \Z^n$. Let $M' = M \oplus \Z$, and embed $\Delta$ in $M'$ by sending $v$ to $(v,1)$. Let $C(\Delta)$ be the cone over $\Delta$ in $M'$. Then $\C[C(\Delta) \cap M']$ is a $\Z$-graded algebra. We let $X_\Delta$ be the associated projective variety. 
+
+\begin{itemize}
+	\item Construction of CY varities in toric varities.
+\end{itemize}
+
+\subsection{Divisors and Picard groups of toric varieties}
+
+Recall that a \emph{Weil divisor} is a formal linear combination of codimension $1$ subvarieties of a scheme $X$ (satisfying condition ``star'' in Hartshorne). The group of Weil divisors modulo linear equivalence is the \emph{class group} of $X$, and is denoted by $\Cl(X)$. The group of line bundles modulo isomorpism is the \emph{Picard group} of $X$, and is denoted by $\Pic(X)$. The two groups coincide for smooth varieties. They are in general very hard to compute, but for toric varieties the computation is exceptionally easy, relying only on structure of the rays in the fan $\Sigma$ defining the toric variety.
+
+For completeness, we describe the divisors on toric varities. The description will be used in \cref{chap:smoothings}, where we work out the geometry of the two smoothings of the affine cone over the del Pezzo surface of degree $6$.
+
+Let $X$ be a smooth toric variety, and let $\Sigma(1)$ denote the set of one-dimensional cones (called \emph{rays}) in the fan $\Sigma$ defining $X$. For each ray $\rho$, let $u_\rho \in N$ denote the primitive ray generator of $\rho$. Then one can show that the torus-invariant divisors on $X$ are in one to one correspondence with the rays $\rho \in \Sigma(1)$. Furthermore, every divisor on $X$ is linearly equivalent to a torus-invariant divisor. Using these two facts, one can prove the following:
+
+There is an exact sequence:
+\[
+\begin{tikzcd}
+0 \arrow{r} &  M \arrow{r}{C} & \Z^{\Sigma(1)}\arrow{r} & \Pic(X)   \arrow{r} & 0,
+\end{tikzcd}
+\]
+where the rows of the matrix $C$ are the vectors $u_{\rho}$. See \cite{cox_toric}, Chapter 4, for a proof.
+
+There is also a description of the Cartier divisors on $X$ in terms of \emph{support functions} on $N$: a support function is a function $\varphi:|\Sigma| \to \R$ such that the restriction $\restr{\varphi}{\sigma}$ of $\varphi$ to each cone in $\Sigma$ is linear. A support function is \emph{integral with respect to $N$} if $\varphi(|\Sigma| \cap N) \subset \Z$. This means that for each cone $\sigma$, there is an $m_\sigma \in M$, such that $\varphi(v)=\langle v, m_\sigma \rangle$ if $v \in \sigma$.
+
+The set of support functions is an abelian group under addition, and by Theorem 4.2.12 in \cite{cox_toric}, there is an isomorphism between the group of integral support functions on $\Sigma$ and the torus invariant Cartier divisors on $X$.
+
+\todo{describe support functions}
 
 % section toric_geometry (end)
 
-\section{Deformation theory}
+\section{Deformation theory and the Hilbert scheme}
 
-Given a scheme $X_0$ over $\C$, a \emph{family of deformations} of $X_0$ is a flat morphism $\pi:\mathscr X \to (S,0)$ with $S$ connected such that $\pi^{-1}(0)=X_0$. If $S$ is the spectrum of an artinian $\C$-algebra, then $\pi$ is an \emph{infinitesimal deformation}. If $S=\Spec \C[\epsilon]/\epsilon^2$, then  $\pi$ is a \emph{first order deformation}. A \emph{smoothing of $X_0$} is a deformation such that the general fiber is smooth.
+Given a scheme $X_0$ over $\C$, a \emph{family of deformations} of $X_0$ is a flat morphism $\pi:\mathscr X \to (S,0)$ with $S$ connected such that $\pi^{-1}(0)=X_0$. If $S$ is the spectrum of an artinian $\C$-algebra, then $\pi$ is an \emph{infinitesimal deformation}. If $S=\Spec \C[\epsilon]/\epsilon^2$, then  $\pi$ is a \emph{first order deformation}. An \emph{embedded deformation} is a deformation such that the total space is contained in $S \times \P^M$ for some $M$. A \emph{smoothing of $X_0$} is a deformation such that the general fiber is smooth. A reference for deformation theory is the book by Hartshorne \cite{hartshorne_deformations}.
+
+Let $\Def(X,S)$ denote the space of all deformations of the projective scheme $X \subset \P^n$ over the base scheme $S$, and let $\EmbDef(X,S)$ denote the space of all embedded deformations of $X$ over $S$. There is a natural forgetful map $\EmbDef(X,S) \to \Def(X,S)$. The tangent space of $\EmbDef(X,S)$ at the point corresponding to $X$ is given by $H^0(X,\mathcal N_{X/\P^n})$, and the tangent space of $\Def(X)$ is by definition given by $\Def(X)=\Def(k[\epsilon])=T^1$ \todo{write this in a good way}
+
+
+
+\begin{itemize}
+	\item Normal sheaf classifies embedded deformations
+	\item $T^1$ ()
+\end{itemize}
+
+
+\todo{relation to moduli spaces and singularity theory}
 
 %%%%%%%%%%%%%%%%%
 \section{Stanley--Reisner schemes}
 
-Stanley--Reisner schemes are certain degenerate projective schemes modelled on simplicial complexes. We first recall some notation.  Let $[n]$ denote the set of numbers $\{0,\ldots,n \}$. The power set of $[n]$ is called the \emph{$n$-simplex} and denoted by $\Delta_n$. A \emph{simplical complex} is a subset $\K \subseteq \Delta_n$ (for some $n$), such that if $f \in \K$ and $g \subseteq f$, then $g \in \K$. The subsets of $\K$ of cardinality one are called the \emph{vertices} of $\K$. The subsets of $\K$ are called \emph{faces}. A good reference is Stanley's green book \cite{stanley_green}.
+Stanley--Reisner schemes are certain degenerate projective schemes modelled on simplicial complexes. We first recall some notation.  Let $[n]$ denote the set of numbers $\{0,\ldots,n \}$. The power set of $[n]$ is called the \emph{$n$-simplex} and denoted by $\Delta_n$. A \emph{simplical complex} is a subset $\K \subseteq \Delta_n$ (for some $n$), such that if $f \in \K$ and $g \subseteq f$, then $g \in \K$. The subsets of $\K$ of cardinality one are called the \emph{vertices} of $\K$. The subsets of $\K$ are called \emph{faces}. The \emph{dimension} of a face $f$ is equal to $|f| - 1$. A good reference is Stanley's green book \cite{stanley_green}.
 
 Let $k$ be a field, and let $P_\K$ be the polynomial ring over $k$ with variables indexed by the vertices of $\K$. Then the \emph{face ring} or \emph{Stanley--Reisner ring} of $\K$ is the quotient ring $A_\K = P_\K/I_\K$, where $I_\K$ is the ideal generated by monomials corresponding to non-faces of $\K$. 
 
@@ -52,37 +229,77 @@ Let $\K$ be the triangle with vertices $\{ v_1,v_2,v_3\}$. Its maximal faces are
 
 The ideal $I_\K$ is graded since it is defined by monomials. This leads us to define the \emph{Stanley--Reisner scheme} $\P(\K)$ as $\Proj A_\K$. 
 
+The \emph{join} of two simplicial complexes $\K$ and $\K'$ is defined as
+$$
+\K \ast \K' \stackrel{\Delta}{=} \{ f \sqcup g \mid f \in \K, g \in \K' \},
+$$
+where $\sqcup$ denotes the disjoint union. Note that $\P(\K \ast \K') = \P(\K) \ast \P(\K')$, where the second star means the join of two projective varieties.
+
+If $f \subset \K$ is a face, the \emph{link of $f$ in $\K$} is the simplicial complex defined by
+$$
+\lk(f,\K) \stackrel{\Delta}{=} \{ g \in \K \mid f \cap g = \emptyset, f \cup g \in \K \}.
+$$
+If $D_+(x_f) \subset \P(\K)$ denotes the distinguished open set corresponding to the monomial $x^f$, we have that $D_+(x_f) = \A(\lk(f,\K)) \times (k^\ast)^{\dim f}$. 
+
+Every simplicial complex has a \emph{geometric realization}, which as a set is defined as follows:
+$$
+|\K| \stackrel{\Delta}{=}  \{ \alpha: [n] \to [0,1] \mid \supp(\alpha) \in \K, \sum_{i=1}^n \alpha(i) = 1 \}.
+$$
+This is an example of a piecewise linear manifold, or a PL-manifold for short. For more on PL-manifolds or combinatorial topology, we refer the reader to \cite{glaser_combtop,spanier_topology,hudson_pl}.
+
+We will need the following result of Christophersen (\cite[Theorem 4.6]{deforming_christophersen}):
+
+\begin{theorem}
+\label{thm:t1dims}
+If $\K$ is a simplicial manifold, and $\mathbf c = \mathbf a - \mathbf b$ (with disjoint supports $a$ and $b$), then
+$$
+\dim_k T_{A_\K,\mathbf c}^1 = \begin{cases}
+1 & \text{ if } a  \in \K \text{ and } b \in \mathcal B(\lk(a,\K)) \\
+0 & \text{ otherwise.}
+\end{cases}
+$$
+\end{theorem}
+Here $\mathcal B(\K)$ is defined as follows:
+\begin{definition}
+The set $\mathcal B(\K)$ is the set of $b \subset \K$ with $|b| \geq 2$ such that
+\begin{enumerate}
+	\item $\K = L \ast \partial b$, wehere $|L|$ is a $(n-|b|+1)$-sphere, if $b \not \in \K$.
+	\item $\K = L \ast \partial b \cup \partial L \ast \bar{b}$ where $|L|$ is a $(n-|b|+1)$-ball, if $b \in \K$.
+\end{enumerate}
+\end{definition}
+
+\todo{fill in as needed}
+
+\section{Smoothings of Stanley--Reisner schemes}
+
+Because many properties of varieties are easier read off their degenerations, it is an interesting problem to study smoothings of Stanley--Reisner-schemes, which are highly singular. Below are the two main lemmas motivating the study of triangulations in deformation theory.
+
+\begin{lemma}
+\label{lemma:srcohom}
+If $\K$ is a simplicial complex, then $H^i(\K;k) \simeq H^i(\P(\K),\OO_{\P(\K)})$.
+\end{lemma}
+The lemma is essentially due to Hochster, and is proved (in a different form) in Stanley's book \cite{stanley_green}. This is true essentially because the \v{C}ech complex computing the simplicial cohomology and the \v{C}ech complex computing sheaf cohomology look exactly the same.
+
+\begin{lemma}
+If $\K$ is a 3-dimensional simplicial sphere, then a smoothing of $X_0=\P(\K)$ will be Calabi--Yau.
+\end{lemma}
+\begin{proof}
+Let $\pi:\mathscr X \to S$ be a smoothing. Since $\K$ is a sphere, it follows from \ref{lemma:srcohom} that $H^i(X_0,\OO_{X_0})=k$ for $i=0,3$, and zero for $i \neq 0,3$. The triviality of the canonical bundle is proved in Theorem 6.1 in \cite{eisenbud_graphcurves}. Since $H^1(\K;K)=H^2(\K;K)=0$, it follows from the semicontinuity theorem (Theorem 12.8 in Chapter III in \cite{hartshorne}) that $H^i(X_t,\OO_{X_t})=0$ for all $t \in S$. Similarly, if $\omega_0$ all nearby fibers must have trivial canonical bundle as well.
+\end{proof}
+
+\todo{something about polyhedral complexes and face rings?}
+
+\section{Toric geometry and toric degenerations}
+
 There is a correspondence between certain degenerations of toric varieties and so-called unimodular triangulations. \todo{define these}
 
 Let $M$ be a lattice (by which we mean a free abelian group of finite rank). Let $\nabla \subset M_\Q = M \otimes_\Z \Q$ be a lattice polytope, and let $S_\nabla$ be the semigroup in $M \times \Z$ generated by the elements $(u,1) \in \nabla \cap M$. Then we define $\P(\nabla)=\Proj \C[S_\nabla]$, and call it the \emph{toric variety associated to $\nabla$}. 
 
 By Theorem 8.3 and Corollary 8.9 in \cite{sturmfels}, there is a one-one correspondence between unimodular regular triangulations of $\nabla$ and the square-free initial ideals of the toric ideal of $\P(\nabla)$. 
 
-\todo{fill in as needed}
-
-\section{Smoothings of Stanley--Reisner schemes}
-
-Because many properties of varieties are easier read off their degenerations, it is an interesting problem to study smoothings of Stanley--Reisner-schemes, which are highly singular.
-
-\begin{lemma}
-\label{lemma:srcohom}
-If $\K$ is a simplicial complex, then $H^i(\K;k) \simeq H^i(\P(\K),\OO_{\P(\K)})$.
-\end{lemma}
-\todo{Find a good proof for this. A reference could be \cite{eisenbud_graphcurves}}
-
-\begin{lemma}
-If $\K$ is a 3-dimensional simplicial sphere, then a smoothing of $X_0=\P(\K)$ will be Calabi--Yau.
-\end{lemma}
-\begin{proof}
-Since $\K$ is a sphere, it follows from \ref{lemma:srcohom} that $H^i(X_0,\OO_X)=k$ for $i=0,3$, and zero for $i \neq 0,3$. It also \todo{How does triviality of the canonical sheaf follow?}
-\end{proof}
-
-\todo{something about polyhedral complexes and face rings?}
-
-\section{Toric geometry and toric degenerations}
 \label{sec:toricgeometry}
 
-\todo{join of reflexive polytopes is reflexive!}
+\todo{join of reflexive polytopes is reflexive!?}
 
 \begin{proposition}
 \label{eq:unimodular_triangs}

@@ -1,4 +1,5 @@
 \chapter{The two smoothings of \texorpdfstring{$C(\dP6)$}{C(dP6)}}
+\label{chap:smoothings}
 %\chapter[The two smoothings of $\C(\dP6)$][The two smoothings of C(dP6)]{The two smoothings of $\boldsymbol{C(\dP6)}$}
 
 In this chapter we study the toric singularity that is the cone over the del Pezzo surface of degree $6$. it has two topologically different smoothings, which we haven't seen studied in some detail before. 
@@ -6,7 +7,9 @@ In this chapter we study the toric singularity that is the cone over the del Pez
 \section{The del Pezzo surface \texorpdfstring{$\dP6$}{dP6}}
 \label{sec:twosmoothings}
 
-Denote by $\dP6$ the blow-up of $\P^2$ in three generic points.  These points can be chosen to be the coordinate points $(1:0:0),(0:1:0)$ and $(0:0:1)$. The torus action on $\P^2$ extends to an action on $\dP6$, so it is a toric variety.
+We start this chapter by talking about the del Pezzo surface in some generality. 
+
+Denote by $\dP6$ the blow-up of $\P^2$ in three non-collinear points.  These points can be chosen to be the coordinate points $(1:0:0),(0:1:0)$ and $(0:0:1)$. Since the coordinate points are invariant under the natural torus action on $\P^2$, it follows that the $\dP6$ is a toric variety.
 
 \begin{figure}[b]
 \centering 
@@ -54,13 +57,13 @@ Denote by $\dP6$ the blow-up of $\P^2$ in three generic points.  These points ca
 \caption{Toric description of $dP_6$.}
 \end{figure}
 
-As a toric variety, it can be described as the toric variety corresponding to the polytope in \cref{fig:hexagon_dp6}. Its fan is depicted in \cref{fig:fandp6}. One can read off the Picard group of $\dP6$ from the fan, using the exact sequence
-$$
-0 \to \Z \xrightarrow{A} \Z^6 \to \Pic(\dP6) \to 0,
-$$
-where the matrix $A$ contain the primitive ray generators of the fan. This is Theorem 4.2.1 in \cite{cox_toric}. The cokernel is $\Pic(\dP6)=\Z^4$, which can also be seen directly from the description of $\dP6$ as a blowup.
+As a toric variety, it can be described as toric variety of the planar hexagon depicted in \cref{fig:hexagon_dp6}. The normal fan is in \cref{fig:fandp6}
 
-There are several ways to describe the equations of $\dP6$. Since $\dP6$ is the blowup of $\P^2$ in three points, we can blow them up separately. Let $x_0,x_1,x_2$ be coordinates of $\P^2$. Then the blowup of $\P^2$ in the point $(1:0:0)$ can be realized as the closed subscheme of $\P^2 \times \P^1$ given by the equation $r_0x_1-r_1x_2=0$, where $r_0,r_1$ are coordinates on $\P^1$. We can repeat this procedure on the two other points $(0:1:0)$ and $(0:0:1)$ to obtain similar equations. Collecting these, we see that $\dP6$ is given by the matrix equation
+We will spend some time describing the different embeddings of $\dP6$. Different embeddings give rise to different smoothings of the affine cones.
+
+\subsection{Embedding in $\P^1 \times \P^1 \times P^1$}
+
+Since $\dP6$ is the blowup of $\P^2$ in three points, we can blow them up separately. Let $x_0,x_1,x_2$ be coordinates of $\P^2$. Then the blowup of $\P^2$ in the point $(1:0:0)$ can be realized as the closed subscheme of $\P^2 \times \P^1$ given by the equation $r_0x_1-r_1x_2=0$, where $r_0,r_1$ are coordinates on $\P^1$. We can repeat this procedure on the two other points $(0:1:0)$ and $(0:0:1)$ to obtain similar equations. Collecting these, we see that $\dP6$ is given by the matrix equation
 \[
 M\vec x = 
 \begin{pmatrix}
@@ -72,14 +75,78 @@ s_1 & 0 & -s_0 \\
 x_0 \\ y_0 \\ z_0
 \end{pmatrix}= 0.
 \]
-in $\P^2 \times \P^1 \times \P^1 \times \P^1$. Consider the projection forgetting the $\P^2$-factor:
+in $\P^2 \times \P^1 \times \P^1 \times \P^1$. Since $\vec x$ is non-zero, it follows that we must have $\det M = 0$. It is not difficult to see that $M$ cannot have rank $1$ or lower, because that would force some of the $\P^1$-coordinates to be zero. Consider the projection forgetting the $\P^2$-factor:
 $$
 \pi:\P^2 \times \P^1 \times \P^1 \times \P^1 \to \P^1 \times \P^1 \times \P^1.
 $$
 
- Note that the matrix cannot have rank $1$ or lower.  This means that the restriction of $\pi$ to $\dP6$ is an isomorphism onto the hypersurface given by $\det M=0$ in $\P^1 \times \P^1 \times \P^1$.
+Consider the hypersurface $\det M = 0$ in $\P^1 \times \P^1 \times \P^1$. Any solution to this equation gives a unique solution to the equation $M \vec x = 0$, meaning that the restriction of $\pi$ to $\dP6$ is an isomorphism onto the hypersurface $\det M=0$.
+
+It is also interesting to see how this embedding arises from a toric perspective using polytopes. Since $\P^1$ is the toric variety associated with the interval $[-1,1]$, it follows that $M = \P^1 \times \P^1 \times \P^1$ is the toric variety associated with the cube $\Delta = [-1,1]^3 \subset M_\R = \R^3$. The inclusion of $\dP6$ in $M$ induces a surjection of coordinate rings $\C[M] \to \C[\dP6]$. This correspond to the fact that there is a lattice projection of the cube onto the hexagon. See \cref{fig:cube_projection}.
+
+\begin{figure}[b]
+\centering 
+\begin{tikzpicture}  
+
+\def \eps{1.8};
+
+\coordinate (A) at (+2,-2);
+\coordinate (B) at (2,0);
+\coordinate (C) at (0,0);
+\coordinate (D) at (0,-2);
+
+\coordinate (X) at (2-\eps,-2+\eps);
+\coordinate (Y) at (2-\eps,0+\eps);
+\coordinate (Z) at (0-\eps,0+\eps);
+\coordinate (W) at (0-\eps,-2+\eps);
+
+\draw % [very thick, color=blue, fill=green, fill opacity=0.2]
+(A) -- (B) -- (C) -- (D) -- cycle;
+
+\draw %[very thick, color=blue, fill=green, fill opacity=0.2]
+(X) -- (Y) -- (Z) -- (W) -- cycle;
+
+\draw %[very thick, color=blue, fill=green, fill opacity=0.2]
+(B) -- (Y) -- (Z) -- (C) -- cycle;
+
+\draw %[very thick, color=blue, fill=green, fill opacity=0.2]
+(C) -- (Z) -- (W) -- (D) -- cycle;
+
+\draw% [very thick, color=blue, fill=green, fill opacity=0.2]
+(W) -- (D) -- (A) -- (X) -- cycle;
+
+\coordinate (AA) at (+7,-2);
+\coordinate (BB) at (7,0);
+\coordinate (CC) at (5,0);
+\coordinate (DD) at (5,-2);
+\def \eps{2};
+\coordinate (XX) at (7-\eps,-2+\eps);
+\coordinate (YY) at (7-\eps,0+\eps);
+\coordinate (ZZ) at (5-\eps,0+\eps);
+\coordinate (WW) at (5-\eps,-2+\eps);
+
+\draw % [very thick, color=blue, fill=green, fill opacity=0.2]
+(AA) -- (BB) -- (CC) -- (DD) -- cycle;
+\draw %[very thick, color=blue, fill=green, fill opacity=0.2]
+(XX) -- (YY) -- (ZZ) -- (WW) -- cycle;
+\draw %[very thick, color=blue, fill=green, fill opacity=0.2]
+(BB) -- (YY) -- (ZZ) -- (CC) -- cycle;
+\draw %[very thick, color=blue, fill=green, fill opacity=0.2]
+(CC) -- (ZZ) -- (WW) -- (DD) -- cycle;
+\draw% [very thick, color=blue, fill=green, fill opacity=0.2]
+(WW) -- (DD) -- (AA) -- (XX) -- cycle;
+
+\end{tikzpicture}
+%\caption{The hexagon.}
+\caption{The projection of a cube onto a hexagon.}
+\label{fig:cube_projection}
+\end{figure}
+
+\subsection{Embedding in $\P^2 \times \P^2$}
 
 On the other hand, blowups can also be realized as closures of graphs of rational maps. Let $\varphi: \P^2 \rmap \P^2$ be the Cremona transformation given by $(x_0:x_1:x_2) \mapsto \left( \frac 1{x_0}: \frac 1{x_1}:\frac 1{x_2} \right)$. Then, in coordinates $(a_0:a_1:a_2) \times(b_0:b_1:b_2)$ on $\P^2 \times \P^2$, the equations $a_0b_0=a_1b_1=a_2b_2$ hold \label{eq:dp6_inp2p2}. These are the equations of the blowup along the indeterminacy locus of the rational map $\varphi$. The indeterminacy locus is exactly the three coordinate points. Hence $\dP6$ can also be realized as the intersection of two $(1,1)$-divisors in $\P^2 \times \P^2$. 
+
+There is also in this case a description in terms of polytopes. The polytope associated with $\P^2 \times \P^2$ is $\Delta^2 \times \Delta^2$, the product of two two-simplices. Also in this case, there is a projection onto a hexagon in $\R^2$. \todo{visualize somehow?}
 
 Hence, using the Segre embedding, $\dP6$ lives naturally in both ${\left( \P^1 \right)}^3 \hookrightarrow \P^7$ and $\P^2 \times \P^2 \hookrightarrow \P^8$. 
 
@@ -95,15 +162,15 @@ Since $\P({\OO_{\P^2}(1)}^3)=\P^2$,  $\P(\mathcal T_{\P^2})$ can be realized as 
 
 \section{The cone over \texorpdfstring{$\dP6$}{dP6} and its two smoothings}
 
-The singularity $Z=C(\dP6)$ is one of the most studied singularities with an obstructed deformation space, In the paper \cite{altmann_versaldeformation}, Altmann describe a method to study the versal deformations of isolated affine Gorenstein toric singularities using only the combinatorial data of the toric variety. He shows that different components of the base space correspond to different ways of writing the defining polytope as a Minkowski sum of other polytopes.
+The singularity $Z=C(\dP6)$ is one of the most studied singularities with an obstructed deformation space, In the paper \cite{altmann_versaldeformation}, Klaus Altmann describe a method to study the versal deformations of isolated affine Gorenstein toric singularities using only the combinatorial data of the toric variety. He shows that different components of the base space correspond to different ways of writing the defining polytope as a Minkowski sum of other polytopes.
 
 See the illustation in [[TO COME]].
 
 \todo{illustration of $\dP6$ as a minkowski sum of different things}
 
-Let $A=A(Z)$ denote the affine coordinate ring of $C(\dP6)$. It has a natural $\Z$-grading. From Altmann's article, or by using \MM, it is possible to compute that $\dim T^1(A)=3$, and that $\dim T^2(A)=2$. The versal base space decomposes into a union of a line and a plane.
+Let $A=A(Z)$ denote the affine coordinate ring of $C(\dP6)$. It has a natural $\Z$-grading. From Altmann's article, or by using \MM, ones computes that $\dim T^1(A)=3$, and that $\dim T^2(A)=2$. The versal base space decomposes into a union of a line and a plane.
 
-For well-behaved singularities, often one can describe all of its deformations by writing up a ``format'' of the equations. For example, for codimension three Gorenstein projective schemes, there is a structure theorem for the whole resolution, involving pfaffians. For codimension $4$, there is no such result, though there have been some research in this direction \todo{cite Reid}.
+For well-behaved singularities, one can often describe all of its deformations by writing up a ``format'' of the equations. For example, for codimension three Gorenstein projective schemes, there is a structure theorem for the whole resolution, involving Pfaffians. For codimension $4$, there is no such result, though there have been some research in this direction, see for example \cite{reid_codimension}, where Miles Reid discusses a very general structure theorem for codimension $4$ projective schemes.
 
 It is worthwhile to note that both smoothings of $Z$ arise by ``sweeping out the cone'': if $X$ is a projective variety in $\P^n$, and $Y$ is equal to $X \cap H$, where $H$ is a section of $\OO_{\P^n}(1)$, then the affine cone over $Y$ deforms to a general hyperplane section of the affine cone over $X$. See the introduction of \cite{stevens_deformations} for more details.
 
@@ -206,6 +273,29 @@ The first claim follows from the Leray-Hirch theorem. See \cite[page 270]{bott_t
 
 We can use what we know about the topology of these spaces to compute homology groups of the two affine smoothings.
 
+We first need a prelimenary lemma from toric geometry, which we state and prove in general form, because we could not find a proper reference.
+
+\begin{lemma}
+Let $Y \xhookrightarrow{i} X$ be an closed immersion of smooth toric varieties, corresponding to a map of fans $\Sigma_1 \xrightarrow{A} \Sigma_2$. Let $M_1$ and $M_2$ be the corresponding character lattices. Then we have a commutative diagram:
+\[
+\begin{tikzcd}
+0 \arrow{r} &  M_2 \arrow{r}{} \arrow{d}{A^T} & \Z^{\Sigma_2(1)} \arrow{d}{C^T} \arrow{r} & \Pic(X)  \arrow{d}{i^\ast} \arrow{r} & 0\\
+0 \arrow{r} &  M_1 \arrow{r}{} & \Z^{\Sigma_1(1)} \arrow{r} & \Pic(Y) \arrow{r} & 0
+\end{tikzcd}
+\]
+Where in addition $i^\ast : \Pic(X) \to \Pic(Y)$ is the map of Picard groups induced by the closed embedding.
+\end{lemma}
+\begin{proof}
+The vertical rows are well-known. See for example Theorem 4.1.3 in \cite{cox_toric}.
+
+The matrix $C^T$ is defined as follows: each primitive ray generator of cones in $\Sigma_1(1)$ thought of as lying in $N_2$ via the embedding $A$ has a unique description as a linear combination of rays in $\Sigma_2(1)$ lying in the same minimal cone. Let the columns of $C$ be the coefficients of this linear combination. Then, by definition, the first square commutes.
+
+It follows that there is an induced map of Picard groups. We must show that the induced map is exactly the one induced by the closed embedding. To see this, we use Proposition 6.2.7 in \cite{cox_toric}, where a description of this map is given in terms of convex functions on $N$.
+\end{proof}
+
+This lemma let us compute explicitly what the induced map of Picard groups is using only the toric data.
+
+
 \begin{theorem}
 The two affine smoothings are topologically different. The homology groups are:
 \begin{center}
@@ -257,16 +347,9 @@ H^2(M,\Z) \simeq H_4(M,\Z) \simeq \Z^2 \xrightarrow{
 \]
 
 This is an injective map, and as above, we conclude that $H_3(X_2) \simeq H^3(M,\dP6) \simeq \Z^2$, and also that $H_4(X_1)=0$.
-
-
 \end{proof}
 
 \begin{remark}
 In fact, the Andreotti-Frankel theorem \cite{andreotti_affinecw} states the following: if $V$ is any smooth affine variety of complex dimension $n$, then it has the homotopy type of a CW complex of real dimension $n$. Thus it should be no surprise that $H^j(X_i)=0$ for $j > 3$.
 \end{remark}
  
-
-\begin{enumerate}
-	\item Talk about 9-16-resolutions
-\end{enumerate}
-
