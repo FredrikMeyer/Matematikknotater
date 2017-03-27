@@ -1,34 +1,4 @@
 
-By Bertini's theorem, intersecting $M$ with a codimension $6$ hyperplane gives a smooth variety $X_1$.
-
-Note that by putting $x_1=x_5=x_6$ and $x_{10}=x_{14}=x_{17}$, we get the join of two del Pezzos, so we see that $X_1$ deforms to $X_0$, which is a singular Calabi--Yau variety. It follows that $X_1$ is a smooth Calabi--Yau. This also follows from the adjunction formula: $\omega_{X_1} = \omega_M \otimes \wedge^6 \OO_X(1) = \OO_X$.
-
-A \MM computation give us some information about the geometry of $X_1$.
-
-\begin{proposition}
-\label{prop:x1euler} 
-$X_1$ has topological Euler characteristic $-72$.
-\end{proposition}
-\begin{proof}
-This is a computation in \MM. Since computing the whole cotangent sheaf of $X_1$ is impossible with current computer technology, we make use of standard exact sequences. Let $\mathscr I$ be the ideal sheaf of $M$ in $\P^{17}$. First off, we have the exact sequence
-$$
-0 \to \restr{\mathscr I/\mathscr I^2}{X} \to \restr{\Omega_\P^1}{X_1} \to \restr{\Omega_M^1}{X_1} \to 0.
-$$
-The \MM command \texttt{eulers} computes the Euler characteristics of generic linear sections of a sheaf $\mathscr F$. Using this command, we find that $\chi(\restr{\mathscr I/\mathscr I^2}{X_1})=-180$. Using the exact sequence
-$$
-0 \to \restr{\Omega_\P^1}{X_1} \to \OO_{X_1}(-1)^{18} \to \OO_{X_1} \to 0,
-$$
-we find that the Euler characteristic of $\restr{\Omega_\P^1}{X_1}$ is $-216=12\cdot 18$. It follows from the first exact sequence that $\restr{\Omega_M^1}{X_1}$ has Euler characteristic $-36$.
-
-Since $X_1$ is a complete intersection in $M$, the conormal sequence looks like
-$$
-0 \to \OO_{X_1}(-1)^6 \to \restr{\Omega_M}{X_1}  \to \Omega_{X_1}^1 \to 0.
-$$
-Hence $\chi(\Omega_X^1) = -36+72 = 36$.
-
-It follows that the topological Euler characteristic is $\chi_{X_1} = -2\chi(\Omega_{X_1}^1)=-72$.
-\end{proof}
-
 I have not been able to compute the Hodge nubmers of $X_1$. However, counting parameters, we can give a conjectural size of $H^1(X,\mathcal T_{X_1})$, which is the space of complex structures on $X_1$:
 
 $X_1$ lies in a family parametrized by planes containing twelve $3 \times 3$ block matrices (spanning the $\P^{11}$), giving $12 \cdot 18=216$ parameters. Conjugation by invertible $3 \times 3$ block matrices produce isomorphic varieties, reducing the amount of parameters by $3^2 + 3^2=18$. Furthermore, rotation in $\P^{11}$ reduces the dimension by $H^0(\P^{11},\mathcal T)=12^2-1=143$. In total, we have $216-18-143=55$ complex parameters. Since the Euler characteristic is $-72$, heuristically, the Hodge numbers should be $(19,55)$. 
