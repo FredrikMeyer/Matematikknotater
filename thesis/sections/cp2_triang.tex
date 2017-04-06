@@ -68,7 +68,7 @@ Before we go on to describe the triangulations, we recall some basic facts about
 
 We can decompose $\C \P^2$ into three four-dimensional closed balls $B_j$, whose pairwise intersections are solid tori $\Pi_{ij}$, and whose triple intersection is a two-dimensional torus $T$. The closed balls $B_0$ is defined as 
 $$
-B_0 = \{ [x_0:x_1:x_2] \mid x_0\overline{x_0} \geq x_1 \overline{x_1}, \,  x_0\overline{x_0} \geq x_2\overline{x_2} \},
+B_0 = \{ [x_0:x_1:x_2] \in \C \P ^2 \mid x_0\overline{x_0} \geq x_1 \overline{x_1}, \,  x_0\overline{x_0} \geq x_2\overline{x_2} \},
 $$
 and similarly for $B_1$ and $B_2$. This is sometimes called the \emph{equilibrium decomposition} of the complex projective plane.
 
@@ -99,7 +99,18 @@ A very interesting triangulation $\mathcal T$ of $\C\P^2$ is found in \cite{cp2_
  with $\nu \in V_4 \backslash \{ e \}$ and $1 \leq b_a \leq 3$ ($a=1,2,3,4$) such that $b_{\nu(a)} \neq b_a$ for $a=1,2,3,4$.
  \end{definition}
 
- See \cref{sec:compute_gaifullin} for a SAGE \cite{sagemath} script for computing the maximal facets of $\mathcal T$. 
+See \cref{sec:compute_gaifullin} for a SAGE \cite{sagemath} script for computing the maximal facets of $\mathcal T$.
+
+The triangulation $\mathcal T$ is the union over the cones over three $3$-spheres $S_j$ (the cone over $S_j$ is the ball $B_j$ in the definition of an equlibrium triangulation). Each $S_j$ is a very simple $3$-sphere. It is the join of two hexagons (recall that $S^1 \ast S^1 \approx S^3$).
+
+We compute some deformation-theoretic invariants of $\P(\mathcal T)$, the Stanley--Reisner scheme associated to $\mathcal T$.
+
+\begin{lemma}
+We have that $\dim_\C = T^1_{A(\mathcal T),0}=90$ and $\dim_\C = T^2_{A(\mathcal T),0}=306$. The normal sheaf has $\mathcal N_{\P(\mathcal T)/\P^{14}}$ has $300$ global sections.
+\end{lemma}
+The proof is a computation in \MM. We remark that since $\P(\mathcal T)$ is not Cohen--Macaulay, some standard comparison theorems does not hold. In our case we only have an inclusion $T^i_{A(\mathcal T)} \hookrightarrow T^1_{\P(\mathcal T)}$ (see the article of Kleppe \cite{kleppe_deformations} and Theorem 3.9).
+
+\subsection{Kühnel's 9-vertex triangulation}
 
 
 

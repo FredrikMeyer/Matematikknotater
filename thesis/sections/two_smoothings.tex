@@ -13,45 +13,12 @@ Denote by $\dP6$ the blow-up of $\P^2$ in three non-collinear points.  These poi
 
 \begin{figure}[b]
 \centering 
-\subbottom[The hexagon corresponding to $\dP6$.]{%
-\begin{tikzpicture}
-  \draw (0, 0) grid (4, 4);  
- 
-\draw [very thick, color=blue, fill=green, fill opacity=0.2]
-(2,1) -- (3,1) -- (3,2) -- (2,3) -- (1,3) -- (1,2) -- cycle;
-
-\draw [fill=black]  (2, 1) circle (0.1);
-\draw [fill=black]  (3, 1) circle (0.1);
-\draw [fill=black]  (3, 2) circle (0.1);
-\draw [fill=black]  (2, 3) circle (0.1);
-\draw [fill=black]  (1, 3) circle (0.1);
-\draw [fill=black]  (1, 2) circle (0.1);
-\draw [fill=black]  (2, 2) circle (0.12);
-\end{tikzpicture}
-%\caption{The hexagon.}
+\subbottom[The hexagon corresponding to $\dP6$.]{
+\includestandalone{./figures/hexagon}
 \label{fig:hexagon_dp6}
 }
 \subbottom[The fan over the polar polytope.]{%
-\begin{tikzpicture}
-  \draw (0, 0) grid (4, 4);  
-%\draw [very thick, fill=green, fill opacity=0.2]
-%(1,1) -- (2,1) -- (3,2) -- (3,3) -- (2,3) -- (1,2) -- cycle;
-\draw [thick,fill=green, fill opacity=0.2] (2,2) -- (4,2) -- (4,4) -- cycle;
-\draw [thick,fill=green, fill opacity=0.4] (2,2) -- (4,4) -- (2,4) -- cycle;
-\draw [thick,fill=green, fill opacity=0.2] (2,2) -- (2,4) -- (0,4) -- (0,2) -- cycle;
-\draw [thick,fill=green, fill opacity=0.4] (2,2) -- (0,2) -- (0,0) -- cycle;
-\draw [thick,fill=green, fill opacity=0.2] (2,2) -- (0,0) -- (2,0) -- cycle;
-\draw [thick,fill=green, fill opacity=0.4] (2,2) -- (2,0) -- (4,0) -- (4,2) -- cycle;
-
-\draw [fill=black]  (1, 1) circle (0.1);
-\draw [fill=black]  (2, 1) circle (0.1);
-\draw [fill=black]  (3, 2) circle (0.1);
-\draw [fill=black]  (3, 3) circle (0.1);
-\draw [fill=black]  (2, 3) circle (0.1);
-\draw [fill=black]  (1, 2) circle (0.1);
-%\draw [fill=black]  (2, 2) circle (0.1);
-\end{tikzpicture}
-%\caption{The fan of $dP_6$.}
+\includestandalone{./figures/fandp6}
 \label{fig:fandp6}
 }
 \caption{Toric description of $dP_6$.}
@@ -61,7 +28,7 @@ As a toric variety, it can be described as toric variety of the planar hexagon d
 
 We will spend some time describing the different embeddings of $\dP6$. Different embeddings give rise to different smoothings of the affine cones.
 
-\subsection{Embedding in $\P^1 \times \P^1 \times P^1$}
+\subsection{Embedding in $\P^1 \times \P^1 \times \P^1$}
 
 Since $\dP6$ is the blowup of $\P^2$ in three points, we can blow them up separately. Let $x_0,x_1,x_2$ be coordinates of $\P^2$. Then the blowup of $\P^2$ in the point $(1:0:0)$ can be realized as the closed subscheme of $\P^2 \times \P^1$ given by the equation $r_0x_1-r_1x_2=0$, where $r_0,r_1$ are coordinates on $\P^1$. We can repeat this procedure on the two other points $(0:1:0)$ and $(0:0:1)$ to obtain similar equations. Collecting these, we see that $\dP6$ is given by the matrix equation
 \[
@@ -80,63 +47,13 @@ $$
 \pi:\P^2 \times \P^1 \times \P^1 \times \P^1 \to \P^1 \times \P^1 \times \P^1.
 $$
 
-Consider the hypersurface $\det M = 0$ in $\P^1 \times \P^1 \times \P^1$. Any solution to this equation gives a unique solution to the equation $M \vec x = 0$, meaning that the restriction of $\pi$ to $\dP6$ is an isomorphism onto the hypersurface $\det M=0$.
+Consider the hypersurface $\det M = 0$ in $\P^1 \times \P^1 \times \P^1$. Any solution to this equation gives a unique solution to the equation $M \vec x = 0$, meaning that the restriction of $\pi$ to $\dP6$ is an isomorphism onto the hypersurface $\det M=r_0s_0t_0-r_1s_1t_1=0$. 
 
-It is also interesting to see how this embedding arises from a toric perspective using polytopes. Since $\P^1$ is the toric variety associated with the interval $[-1,1]$, it follows that $M = \P^1 \times \P^1 \times \P^1$ is the toric variety associated with the cube $\Delta = [-1,1]^3 \subset M_\R = \R^3$. The inclusion of $\dP6$ in $M$ induces a surjection of coordinate rings $\C[M] \to \C[\dP6]$. This correspond to the fact that there is a lattice projection of the cube onto the hexagon. See \cref{fig:cube_projection}.
+It is also interesting to see how this embedding arises from a toric perspective using polytopes. Since $\P^1$ is the toric variety associated with the interval $[-1,1] \subset \R$, it follows that $M = \P^1 \times \P^1 \times \P^1$ is the toric variety associated with the cube $\Delta = [-1,1]^3 \subset M_\R = \R^3$. The inclusion of $\dP6$ in $M$ induces a surjection of coordinate rings $\C[M] \to \C[\dP6]$. This correspond to the fact that there is a lattice projection of the cube onto the hexagon. See \cref{fig:cube_projection}.
 
-\begin{figure}[b]
+\begin{figure}[t]
 \centering 
-\begin{tikzpicture}  
-
-\def \eps{1.8};
-
-\coordinate (A) at (+2,-2);
-\coordinate (B) at (2,0);
-\coordinate (C) at (0,0);
-\coordinate (D) at (0,-2);
-
-\coordinate (X) at (2-\eps,-2+\eps);
-\coordinate (Y) at (2-\eps,0+\eps);
-\coordinate (Z) at (0-\eps,0+\eps);
-\coordinate (W) at (0-\eps,-2+\eps);
-
-\draw % [very thick, color=blue, fill=green, fill opacity=0.2]
-(A) -- (B) -- (C) -- (D) -- cycle;
-
-\draw %[very thick, color=blue, fill=green, fill opacity=0.2]
-(X) -- (Y) -- (Z) -- (W) -- cycle;
-
-\draw %[very thick, color=blue, fill=green, fill opacity=0.2]
-(B) -- (Y) -- (Z) -- (C) -- cycle;
-
-\draw %[very thick, color=blue, fill=green, fill opacity=0.2]
-(C) -- (Z) -- (W) -- (D) -- cycle;
-
-\draw% [very thick, color=blue, fill=green, fill opacity=0.2]
-(W) -- (D) -- (A) -- (X) -- cycle;
-
-\coordinate (AA) at (+7,-2);
-\coordinate (BB) at (7,0);
-\coordinate (CC) at (5,0);
-\coordinate (DD) at (5,-2);
-\def \eps{2};
-\coordinate (XX) at (7-\eps,-2+\eps);
-\coordinate (YY) at (7-\eps,0+\eps);
-\coordinate (ZZ) at (5-\eps,0+\eps);
-\coordinate (WW) at (5-\eps,-2+\eps);
-
-\draw % [very thick, color=blue, fill=green, fill opacity=0.2]
-(AA) -- (BB) -- (CC) -- (DD) -- cycle;
-\draw %[very thick, color=blue, fill=green, fill opacity=0.2]
-(XX) -- (YY) -- (ZZ) -- (WW) -- cycle;
-\draw %[very thick, color=blue, fill=green, fill opacity=0.2]
-(BB) -- (YY) -- (ZZ) -- (CC) -- cycle;
-\draw %[very thick, color=blue, fill=green, fill opacity=0.2]
-(CC) -- (ZZ) -- (WW) -- (DD) -- cycle;
-\draw% [very thick, color=blue, fill=green, fill opacity=0.2]
-(WW) -- (DD) -- (AA) -- (XX) -- cycle;
-
-\end{tikzpicture}
+\includestandalone{./figures/projection_cube_hexagon}
 %\caption{The hexagon.}
 \caption{The projection of a cube onto a hexagon.}
 \label{fig:cube_projection}
@@ -186,23 +103,7 @@ where $\leq 1$, means taking all $2 \times 2$-minors.
 
 \begin{figure}[t]
 \centering
-\begin{tikzpicture}
-\draw (0,0) -- (3,0) -- (3,3) -- (0,3) -- cycle;
-\draw (0.5,0.5) -- (2.5,0.5) -- (2.5,2.5) -- (0.5,2.5) -- cycle;
-\draw (0,0) -- (0.5,0.5);
-\draw (3,0) -- (2.5,0.5);
-\draw (3,3) -- (2.5,2.5);
-\draw (0,3) -- (0.5,2.5);
-\node[below left] at (0,0) {$a_{000}$};
-\node[below right] at (3,0) {$a_{100}$};
-\node[above right] at (3,3) {$a_{110}$};
-\node[above left] at (0,3) {$a_{010}$};
-
-\node[above right] at (0.5,0.5) {$a_{001}$};
-\node[above left] at (2.5,0.5) {$a_{101}$};
-\node[below left] at (2.5,2.5) {$a_{111}$};
-\node[below right] at (0.5,2.5) {$a_{011}$};
-\end{tikzpicture}
+\includestandalone{./figures/222tensor}
 \caption{A $2 \times 2 \times 2$-tensor.}
 \label{fig:p1p1p1_equations}
 \end{figure}
