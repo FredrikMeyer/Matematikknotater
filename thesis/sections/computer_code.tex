@@ -29,7 +29,7 @@ The method works by computing the singular locus in each affine chart, taking th
 
 It is especially fast when computing the singular locus of toric varieties with low-dimensional singularities.
 
-The following code finds the singular locus of the projectice cone $\overline(C(\P^2 \times \P^2)) \subset \P^9$.
+The following code finds the singular locus of the projectice cone $C(\P^2 \times \P^2) \subset \P^9$.
 
 \begin{lstlisting}[language=Macaulay2]
 R = QQ[x_0..x_8,x_9]
@@ -70,7 +70,7 @@ for some constants $a_j$. Now $g \cdot f_1 = f_1(\lambda_1 x _1 ,\ldots, \lambda
 It follows that to find the subgroup of $G$ acting on $X$, we have to find the $\lambda \in G$ such that the $f_i$ are simultaneous eigenvectors for them.
 
 \begin{example}
-Let  $X$ be defined by $f = x_0x_1x_2x_3x_4+\sum_{i=0}^5 x_i^5$ in $\P^4$. Then for $\C^4$ to act on it, we must have $\lambda_0\lambda_1\lambda_2\lambda_3\lambda_4=\lambda_0^5=\ldots=\lambda_4^5$. By stting $\lambda_0=1$, we see that all the $\lambda_i$ are the fifth roots of unity. Hence the subgroup acting on $H$ is the subgroup of $\Z/5^5/Z_5$ given by $\{ (a_0,\ldots,a_5) \mid \sum a_i = 0 \}$.
+Let  $X$ be defined by $f = x_0x_1x_2x_3x_4+\sum_{i=0}^5 x_i^5$ in $\P^4$. Then for $\C^4$ to act on it, we must have $\lambda_0\lambda_1\lambda_2\lambda_3\lambda_4=\lambda_0^5=\ldots=\lambda_4^5$. By stting $\lambda_0=1$, we see that all the $\lambda_i$ are the fifth roots of unity. Hence the subgroup acting on $H$ is the subgroup of $(\Z/5)^5/\Z_5$ given by $\{ (a_0,\ldots,a_5) \mid \sum a_i = 0 \}$.
 \end{example}
 
 The following code find the subtoruses of $G$ acting on $X$ in this way, by equating terms in the polynomials defining $X$.

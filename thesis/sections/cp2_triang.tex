@@ -74,16 +74,13 @@ and similarly for $B_1$ and $B_2$. This is sometimes called the \emph{equilibriu
 
 A triangulation of $\C \P^2$ is \emph{equilibrium} if the closed balls, the solid tori, and the torus $T$ are subcomplexes of the triangulation. Several of the triangulation below are equilibrium.
 
-\begin{enumerate}
-	\item Kühnels 9-vertex
-	\item The equilibrium triangulation (10 vertices)
-	\item Bagci/Datta
-	\item 15-vertex triang
-\end{enumerate}
+\todo{
+Bagci/Datta
+}
 
 \subsection{The 15-vertex triangulation}
 
-A very interesting triangulation $\mathcal T$ of $\C\P^2$ is found in \cite{cp2_15_chess}. The author describes a triangulation of $\C \P^2$ using $15$ vertices. One reason it is interesting is that it the corresponding Stanley--Reisner scheme $\P(\mathcal T)$ has the same Hilbert-polynomial as $F_1(X)$, the Fano variety of lines on a cubic hypersurface. This means that they live in the \emph{same} Hilbert scheme, and one could naively hope that they live in the same component as well.
+A very interesting triangulation $\mathcal T$ of $\C\P^2$ is found in \cite{cp2_15_chess}. The author describes a triangulation of $\C \P^2$ using $15$ vertices. One reason it is interesting is that it the corresponding Stanley--Reisner scheme $\P(\mathcal T)$ has the same Hilbert-polynomial as $F_1(X)$, the Fano variety of lines on a cubic hypersurface. This means that they live in the \emph{same} Hilbert scheme, and one could naively hope that they live in the same component as well, meaning that there exists a degeneration of $F_1(X)$ to $\P(\mathcal T)$.
 
  We will spend some time describing this tringulation, since parts of it inspired our the construction of the Calabi--Yau's in the last chapter. We cite the definition ad verbatim from \cite{cp2_15_chess}. 
 
@@ -101,25 +98,100 @@ A very interesting triangulation $\mathcal T$ of $\C\P^2$ is found in \cite{cp2_
 
 See \cref{sec:compute_gaifullin} for a SAGE \cite{sagemath} script for computing the maximal facets of $\mathcal T$.
 
-The triangulation $\mathcal T$ is the union over the cones over three $3$-spheres $S_j$ (the cone over $S_j$ is the ball $B_j$ in the definition of an equlibrium triangulation). Each $S_j$ is a very simple $3$-sphere. It is the join of two hexagons (recall that $S^1 \ast S^1 \approx S^3$).
+The triangulation $\mathcal T$ is the union over the cones over three $3$-spheres $S_j$ (the cone over $S_j$ is the ball $B_j$ in the definition of an equlibrium triangulation). Each $S_j$ is a very simple $3$-sphere. It is the join of two hexagons (recall that $S^1 \ast S^1 \approx S^3$). The f-vector is $(15,90,240,270,108)$.
+
+It is the Stanley--Reisner-scheme of $S_j$ and some if its deformations that is studied in Chapter 4, leading to constructions of some new Calabi--Yau manifolds. 
 
 We compute some deformation-theoretic invariants of $\P(\mathcal T)$, the Stanley--Reisner scheme associated to $\mathcal T$.
 
-\begin{lemma}
-We have that $\dim_\C = T^1_{A(\mathcal T),0}=90$ and $\dim_\C = T^2_{A(\mathcal T),0}=306$. The normal sheaf has $\mathcal N_{\P(\mathcal T)/\P^{14}}$ has $300$ global sections.
-\end{lemma}
-The proof is a computation in \MM. We remark that since $\P(\mathcal T)$ is not Cohen--Macaulay, some standard comparison theorems does not hold. In our case we only have an inclusion $T^i_{A(\mathcal T)} \hookrightarrow T^1_{\P(\mathcal T)}$ (see the article of Kleppe \cite{kleppe_deformations} and Theorem 3.9).
+\begin{proposition}
+We have that $\dim_\C  T^1_{A(\mathcal T),0}=90$ and $\dim_\C T^2_{A(\mathcal T),0}=306$. The normal sheaf has $\mathcal N_{\P(\mathcal T)/\P^{14}}$ has $300$ global sections.
+\end{proposition}
+
+The proof is a computation in \MM. We remark that since $\P(\mathcal T)$ is not Cohen--Macaulay, some standard comparison theorems does not hold. In our case we only have an inclusion $T^1_{A(\mathcal T)} \hookrightarrow T^1_{\P(\mathcal T)}$ (see the article of Kleppe \cite{kleppe_deformations} and Theorem 3.9). This means that there might be deformations of $\P(\mathcal T)$ that are not induced from the ambient projective space. 
+
+Because of the high number of parameters, we have not been able to say anything meaningful regarding the deformations of $\P(\mathcal T)$. However, it is possible to deform $\P(\mathcal T)$ into the union of three toric varieties, each being deformations of the Stanley--Reisner scheme $\P(B_j)$. This is not surprising, since $B_j$ is a triangulation of a the normal polyhedron of the corresponding toric variety. This deformation reduces the number of components of $\P(\mathcal T)$ from $108$ to $3$.
+
+It is not clear however if this union of toric varieties can be further deformed.
 
 \subsection{Kühnel's 9-vertex triangulation}
 
+The minimal triangulation $\mathcal T_9$ of $\C \P^2$ is a 9-vertex triangulation with f-vector $(9,36,84,90,36)$. This means that the associated Stanley--Reisner scheme $\P(\mathcal T_9)$ lives in $\P^8$ and is of degree $36$. The automorphism group of $\mathcal T_9$ is a group of order $54$, and it can be realized as a semidirect product $(\Z_3 \times \Z_3) \ltimes \Z_3 \ltimes \Z_2$. For a very readable account of the construction and motivation of this triangulation, consult \cite{kuhnel_9vertex}.
 
+The ideal has a resolution of the form (in \MM format):
+
+\begin{verbatim}
+             0  1  2  3  4 5 6
+      total: 1 36 90 84 37 9 1
+          0: 1  .  .  .  . . .
+          1: .  .  .  .  . . .
+          2: .  .  .  .  . . .
+          3: . 36 90 84 36 9 1
+          4: .  .  .  .  . . .
+          5: .  .  .  .  1 . .
+\end{verbatim}
+
+This means that the ideal of $\P(\mathcal T_9)$ is generated by $36$ cubic monomials, and there are $90$ relations between them, lying in $\OO_{\P(\mathcal T_9)}(-5)$, et cetera. Since the resolution is not symmetric, we see immediately that $\P(\mathcal T_9)$ is not Gorenstein.
+
+\begin{proposition}
+We have that $\dim_\C  T^1_{A(\mathcal T_9),0}=21$ and $\dim_\C = T^2_{A(\mathcal T_9),0}=126$. The normal sheaf has $\mathcal N_{\P(\mathcal T_9)/\P^{8}}$ has $93$ global sections.
+\end{proposition}
+
+We can compute the action of the automorphism group on $T^1$. Using SAGE, we find that the $21$ deformation parameters split into two orbits, one of size $3$ and one of size $18$.
+
+We have not been able to lift any first-order deformation of $\P(\mathcal T_9)$ to a family over $\Spec \C[t]$. 
+
+\subsection{The minimal equilibrium triangulation}
+
+In \cite{banchoff_equilibrium}, the authors construct a $10$ vertex equilibrium triangulation $\mathcal T_{10}$  of $\C \P^2$. They start with the minimal $7$-vertex triangulation of the torus, and then they construct $\mathcal T_{10}$ by taking cones over unions of the tori.
+
+The automorphism group is order $42$, and comes from the symmetries of the torus. 
+
+The Betti table of the resolution of the ideal of $\P(\mathcal T_{10})$ is the following:
+\begin{verbatim}
+             0  1   2   3   4  5  6 7
+      total: 1 38 128 177 123 46 10 1
+          0: 1  .   .   .   .  .  . .
+          1: .  3   2   .   .  .  . .
+          2: .  .   .   .   .  .  . .
+          3: . 35 126 175 120 45 10 1
+          4: .  .   .   2   3  .  . .
+          5: .  .   .   .   .  1  . .
+\end{verbatim}
+
+Again we see that the ideal is not Gorenstein.
+
+\begin{proposition}
+We have that $\dim_\C  T^1_{A(\mathcal T_{10}),0}=42$ and $\dim_\C = T^2_{A(\mathcal T_{10}),0}=105$. The normal sheaf has $\mathcal N_{\P(\mathcal T_{10})/\P^{8}}$ has $132$ global sections.
+\end{proposition}
+
+In fact, it is possible to lift the versal family of deformation parameters to an honest family over $\Spec \C[t_1,\cdots,t_{42}]$, using the \texttt{VersalDeformations} package. Surprisingly, even though the $T^2$ module is big, there are no obstructions in the family. However, the generic member of this family is reducible (verified in \MM for ``random'' values of the deformation parameters), implying that $\P(\mathcal T_{10})$ is not smoothable.
+
+The automorphism group act transitively on the natural basis of $T^1$, so that $\dim_\C {T^1_{A(\mathcal T_{10}),0}}^G=1$. 
+
+\subsection{The Bagchi--Datta triangulation}
+
+There is another $10$-vertex triangulation $\mathcal T_{BD}$ of $\C \P^2$, which is obtained as a $\Z/2$-quotient of a triangulation of $S^2 \times S^2$. It is described in \cite{bagchi_datta}. The automorphism group is the alternating group $A_4$. The f-vector is $(10,45,110,120,48)$.
+
+The triangulation is bistellarly equivalent to both the 9-vertex triangulation and the 10-vertex triangulation above.
+
+\begin{proposition}
+We have that $\dim_\C  T^1_{A(\mathcal T_{BD}),0}=41$ and $\dim_\C = T^2_{A(\mathcal T_{BD}),0}=180$. The normal sheaf has $\mathcal N_{\P(\mathcal T_{BD})/\P^{8}}$ has $131$ global sections.
+\end{proposition}
+
+We have not been able to find any meaningful lifting of the first-order deformations here either.
 
 \section{Naïve attempt to degenerate}
 
 On the other hand, degenerating the ideal of $F_1(X) \subset \P^N$ to a square-free monomial ideal should give a triangulation of $\C \P^2$. Since $F_1(X)$ sits inside $\Gr(1,5)$, and there are many known degenerations of $\Gr(1,5)$, we hoped that maybe $F_1(X)$ would generate inside $\Gr(1,5)$. Unfortunaly, we did not succed, mainly because we could not see any structure in the ideal of $F_1(X)$.
 
-\begin{enumerate}
-	\item Conversely, a smoothing of a triangulation of $\C \P^2$ would give a potentially new hyper-Kähler family.
-	\item Results: computed $F_1(X)$ for some hypersurfaces, both pfaffian and non-pfaffian.
-	\item Also looked at deformations of a specific 15-vertex triangulation of $\C \P^2$. It deforms to the union of three toric varieties (which are cones over joins of del Pezzo surfaces). Probably not smoothable. $T^2$ is very big.
-\end{enumerate}
+
+It was possible to explicitly compute $F_1(X)$ for some hypersurfaces, both pfaffian and non-pfaffian. However, the ideals were too complicated and the Gröbner bases too big to find any initial ideals with only squarefree generators.
+
+\section{Conclusion} % (fold)
+
+It would be interesting to study other triangulations of $\C \P^2$. One way to proceed would be to start with existing triangulations, and analyze which parts of it correspond to non-zero elements of the $T^2$ module. Then one can do bistellar flips away from these combinations, ideally obtaining triangulations corresponding to unobstructed Stanley--Reisner schemes.
+
+This is an interesting and very hard question. Even with an unobstructed triangulation, it is not clear how to proceed to smooth it in a computationally feasible way. Already with Gröbner bases with ~$50$ elements (for deformations of the 15-vertex triangulation, they had around $70$ elements), computations take far too long (and consumes too much memory) to be feasible to work with.
+
+Without the presence of any good parallell processing Gröbner basis algorithms (which would allow the use of clustered super--computers), there is need for either patience or smarter solutions to computational algebra problems.
