@@ -8,8 +8,7 @@
 *.toc
 *.fmt
 
-dagbok.tex
-dagbok.pdf
+dagbok.*
 
 # Temporary/backup files
 *~
