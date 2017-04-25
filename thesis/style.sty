@@ -54,7 +54,6 @@
 \usetikzlibrary{decorations.markings}
 \newsubfloat{figure}
 
-
 %% Organising tools
 \RequirePackage[notref, notcite]{showkeys}               % Labels in margin
 \RequirePackage[color       = LightGray,
@@ -200,7 +199,7 @@
 \declaretheorem[style = plain,      sibling = theorem]{observation}
 \declaretheorem[style = plain,      sibling = theorem]{conjecture}
 \declaretheorem[style = definition, sibling = theorem]{definition}
-\declaretheorem[style = definition, sibling = theorem]{example}
+\declaretheorem[style = definition, sibling = theorem, qed=$\heartsuit$]{example}
 \declaretheorem[style = definition, sibling = theorem]{notation}
 \declaretheorem[style = remark,     sibling = theorem]{remark}
 \crefname{observation}{Observation}{Observations}

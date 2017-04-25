@@ -200,10 +200,8 @@ This information let us calculate the Euler characteristics of the smoothings. N
 It follows that the two smoothing components correspond to topologically different smoothings, since the Euler characteristic is a topological invariant.
 \end{proof}
 
-%This can explain the obstructedness of the deformations of $X_0$ in \cref{sec:constructions}.
-
 \begin{lemma}
-The cohomology ring of $\P(\mathcal T_{\P^2})$ is $\Z[x,y]/(x^3,y^2+c_1y+c_2)$, where $x$ and $y$ have degree $2$. In particular, the cohomology of $\P(\mathcal T_{\P^2})$ is given by $(1,0,2,0,2,0,1)$.
+The cohomology ring of $\P(\mathcal T_{\P^2})$ is $\Z[x,y]/(x^3,y^2+3y+3)$, where $x$ and $y$ have degree $2$. In particular, the cohomology of $\P(\mathcal T_{\P^2})$ is given by $(1,0,2,0,2,0,1)$.
 \end{lemma}
 \begin{proof}
 The first claim follows from the Leray-Hirch theorem. See \cite[page 270]{bott_tu}. The next claim follows since $x$ and $y$ both have degree $2$.
@@ -236,7 +234,7 @@ It follows that there is an induced map of Picard groups. We must show that the 
 
 \begin{example}
 \label{example:p1p1p1}
-Let us see how we can use the Lemma to find an explicit form of the induced map of the inclusion $\dP6 \to \P^1 \times \P^1 \times \P^1$. We use the matrix $A$ from \cref{eq:A}. The rows of $R_1$ are the coordinates of the primitive ray generators of the fan of $\P^1 \times \P^1 \P^1$, and also the vertices of the octahedron in \cref{fig:octahedron_hexagon}.
+Let us see how we can use the Lemma to find an explicit form of the induced map of the inclusion $\dP6 \to \P^1 \times \P^1 \times \P^1$. We use the matrix $A$ from \cref{eq:A}. The rows of $R_1$ are the coordinates of the primitive ray generators of the fan of $\P^1 \times \P^1 \times  \P^1$, and also the vertices of the octahedron in \cref{fig:octahedron_hexagon}.
 
 The rows in $R_2$ are the coordinates of the hexagon in \cref{fig:hexagon_dp6}.
 
@@ -278,13 +276,49 @@ Q = \begin{pmatrix}
 We will use this information below in the proof of the next theorem.
 \end{example}
 
+\begin{example}
+\label{example:p2p2}
+Now we consider the embedding $\dP6 \hookrightarrow \P^2 \times \P^2$. On the level of coordinate rings, it is induced by a projection of polytopes $\Delta^2 \times \Delta^2 \to H$ (where $H$ denotes the hexagon in \cref{fig:hexagon}).
+
+The anticanonical polytope of $\P^2$ is the convex hull of the points $v_1=(-1,2)$, $v_2=(-1,-1)$ and $v_3=(2,-1$). Then the anticanonical polytope of $\P^2 \times \P^2$ is the convex hull of the $9$ vertices $v_{ij} \stackrel{\Delta}{=} v_i \times v_j \in \R^4$.
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.7]{./figures/grafDD.pdf}
+  \caption{The edge graph of $\Delta \times \Delta$. The red vertices are the diagonal vertices $v_{ii}$.}
+  \label{fig:edgegraphDD}
+\end{figure}
+
+We want a projection sending the vertices $v_{ii}$ ($i=1,2,3$) to the origin in $\R^2$. In \cref{fig:edgegraphDD}, we have visualized the edge graph of $\Delta^2 \times \Delta^2$. The three vertices that are sent to zero are marked in red.
+
+By demanding that $v_{12} \mapsto (1,0)$ and $v_{23} \mapsto (0,1)$, together with $v_{ii} \mapsto (0,0)$, we get a system of $8$ linear equations, corresponding to a unique map $\R^4 \to \R^2$ with the required properties. We get:
+
+\[
+A'^T =  \frac 13
+\begin{pmatrix}
+0 & 1 & 0 & -1 \\
+-1 & 0 & 1 & 0
+\end{pmatrix}.
+\]
+The image generates a sublattice $\frac 13 \Z^2 \subset \Z^2$. Replace $A'$ by $A \stackrel{\Delta}{=} 3A'$, and consider only the sublattice.
+
+The images of the rays of the fan of $\dP6$ under $A^T$ are exacty the $6$ rays of the fan of $\P^2 \times \P^2$. This means that the map $C^T$ in the Lemma is the identity matrix $I_6$, and we have a diagram
+\[
+\begin{tikzcd}
+0 \arrow{r} &  \Z^4 \arrow{r}{R_1} \arrow{d}{A^T} & \Z^6 \arrow{d}{I_6} \arrow{r} & \Pic(\P^2 \times \P^2)=\Z^2  \arrow{d}{i^\ast} \arrow{r} & 0\\
+0 \arrow{r} &  \Z^2 \arrow{r}{R_2} & \Z^{6} \arrow{r} & \Pic(\dP6)=\Z^4 \arrow{r} & 0
+\end{tikzcd}
+\]
+It now follows from the snake lemma that $i^\ast$ is injective.
+\end{example}
+
 This lemma let us compute explicitly what the induced map of Picard groups is using only the toric data.
 
 \begin{theorem}
 The two affine smoothings are topologically different. The homology groups are:
 \begin{center}
-\begin{tabular}{ l | c  c  c  c  c  c  c | c }
- Group & 0 & 1 & 2 & 3 & 4 & 5 & 6 & Euler-characteristic \\
+\begin{tabular}{ l | >{$}c<{$}  >{$}c<{$}  >{$}c<{$}  >{$}c<{$}  >{$}c<{$}  >{$}c<{$}  >{$}c<{$} | >{$}c<{$} }
+ Group & 1 & 1 & 2 & 3 & 4 & 5 & 6 & Euler characteristic \\
 \hline
 $H^i(X_1,\Z)$ & 1 & 0 & 2 & 1 & 0 & 0 & 0 & 2 \\
 $H^i(X_2,\Z)$ & 1 & 0 & 1 & 2 & 0 & 0 & 0  & 0
@@ -345,22 +379,20 @@ The other groups depend upon the explicit form of the maps $H^2(M;\Z) \to H^2(\d
 
 The map $H^2(M;\Z) \to H^2(\dP6;\Z)$ can be identified with the map $i^\ast \colon \Pic(M) \to \Pic(\dP6)$ induced by the inclusion. This map was computed in \cref{example:p1p1p1}. It is an ijective map with torsion-free cokernel, and it follows from the long-exact sequence and the Lefschetz theorem that $H_3(X_1;\Z) \simeq H^3(M,dP_6; \Z) \simeq \Z$, and also that $H_4(X_1;\Z)=0$.
 
-
-%%%%
-Similarly, the map $H^4(M) \to H^4(dP_6)$ is computed to be given by $(a,b,c) \mapsto a+b+c$, since the three $\P^1$'s intersect $\dP6$ in a single point. This map has two-dimensional kernel, and we conclude that $H_2(X_1) \simeq H^4(M,\dP6) = \Z^2$, and that $H^1(X_1)=0$.
+To compute the map $H^4(M;\Z) \to H^4(\dP6;\Z)$, note that $H^4(M;\Z)$ is Poincaré dual to $H_ 2(M;\Z)$, and this group is generated by $\P^1 \times \{pt\} \times \{ pt\}$ (and permutations). Also, $H^4(\dP6;\Z) \simeq H_0(\dP6,\Z)=\Z$. In this description, pullback corresponds to intersection, and one sees that the map is given by $(a,b,c) \mapsto a+b+c$, since the three $\P^1$'s intersect $\dP6$ in a single point each. This map has two-dimensional kernel, and we conclude that $H_2(X_1;\Z) \simeq H^4(M,\dP6;\Z) = \Z^2$, and that $H^1(X_1;\Z)=0$.
 
 The computations for $X_2$ are similar but more involved. We first note that the Picard group of $M=\P(\mathcal T_{\P^2})$ is generated by the pullbacks $F,G$ of the generators of $\Pic(\P^2_{x_0x_1x_2} \times \P^2_{y_0y_1y_2})$. Say $F$ is represented by $V(x_0)$ and $G$ is represented by $V(y_0)$\todo{check transversal intersection with dP6}.
 
-Again we compute the intersections of $F$ and $G$ with $dP_6$. Intersecting with $F$ is computed by decomposing the ideal $(x_0,x_1y_0-x_2y_1,x_1y_0-x_0y_2)$ in $k[x_0,x_1,x_2,y_0,y_1,y_2]$ and saturating by $(x_0,x_1,x_2)$ and $(y_0,y_1,y_2)$. This can either be done by hand or by using \texttt{Macaulay2}. Either way, we find that $\restr{F}{dP_6} = E_3+L_{23} + E_2=H$, using the notation from earlier this chapter. Similarly $\restr{G}{dP_6}=L_{23}+L_{12}+E_2=2H-E_1-E_2-E_3$. Hence the map on cohomology is given by the matrix
+Again we compute the intersections of $F$ and $G$ with $dP_6$. Intersecting with $F$ is computed by decomposing the ideal $(x_0,x_1y_0-x_2y_1,x_1y_0-x_0y_2)$ in $k[x_0,x_1,x_2,y_0,y_1,y_2]$ and saturating by $(x_0,x_1,x_2)$ and $(y_0,y_1,y_2)$. This can either be done by hand or by using \MM. Either way, we find that $\restr{F}{dP_6} = E_3+L_{23} + E_2=H$, using the notation from earlier this chapter. Similarly $\restr{G}{dP_6}=L_{23}+L_{12}+E_2=2H-E_1-E_2-E_3$. Hence the map on cohomology is given by the matrix
 
 \[
 H^2(M,\Z) \simeq H_4(M,\Z) \simeq \Z^2 \xrightarrow{
-	\begin{pmatrix}
+	\begin{pmatrix*}[r]
 	0 & -1 \\
 	0 & -1 \\
 	0 & -1  \\
 	1 & 2 
-	\end{pmatrix}
+	\end{pmatrix*}
 } \Z^4 \simeq H_2(\dP6,\Z) \simeq H^2(\dP6,\Z).
 \]
 
