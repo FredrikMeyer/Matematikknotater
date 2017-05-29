@@ -13,14 +13,17 @@ Denote by $\dP6$ the blow-up of $\P^2$ in three non-collinear points.  These poi
 
 \begin{figure}[b]
 \centering 
+\hspace*{\fill}%
 \subbottom[The hexagon corresponding to $\dP6$.]{
 \includestandalone{./figures/hexagon}
 \label{fig:hexagon_dp6}
 }
+\hspace*{\fill}%
 \subbottom[The fan over the polar polytope.]{%
 \includestandalone{./figures/fandp6}
 \label{fig:fandp6}
 }
+\hspace*{\fill}%
 \caption{Toric description of $dP_6$.}
 \end{figure}
 
@@ -111,9 +114,7 @@ See the illustation in \cref{fig:minkowski_decompositions} for a decomposition o
 \label{fig:minkowski_decompositions}
 \end{figure}
 
-Let $A=A(Z)$ denote the affine coordinate ring of $C(\dP6)$. It has a natural $\Z$-grading. From Altmann's article, or by using \MM, ones computes that $\dim T^1(A)=3$, and that $\dim T^2(A)=2$. The versal base space decomposes into a union of a line and a plane.
-
-%For well-behaved singularities, one can often describe all of its deformations by writing up a ``format'' of the equations. For example, for codimension three Gorenstein projective schemes, there is a structure theorem for the whole resolution, involving Pfaffians. For codimension $4$, there is not such a clean result, though there have been some research in this direction, see for example \cite{reid_codimension}, where Miles Reid discusses a very general structure theorem for codimension $4$ projective schemes.
+Let $A=A(Z)$ denote the affine coordinate ring of $C(\dP6)$. It has a natural $\Z$-grading. From Altmann's article, or by using \MM, ones computes that $\dim T^1(A)=3$, and that $\dim T^2(A)=2$. The versal base space decomposes into a union of a line and a plane. Both components are smoothing components, which are topologically different. We will prove this by computing their singular cohomology groups below.
 
 It is worthwhile to note that both smoothings of $Z$ arise by ``sweeping out the cone'': if $X$ is a projective variety in $\P^n$, and $Y$ is equal to $X \cap H$, where $H$ is a section of $\OO_{\P^n}(1)$, then the affine cone over $Y$ deforms to a general hyperplane section of the affine cone over $X$. See the introduction of \cite{stevens_deformations} for more details.
 
@@ -130,7 +131,7 @@ x_5 & x_6 & y
 \end{equation}
 where $\leq 1$, means taking all $2 \times 2$-minors.
 
-On the other hand, $\dP6$ can be realized as a subvariety of $\P^1 \times \P^1 \times \P^1$ as well. The equations can be described as follows: draw a cube, and let each vertex correspond to a variable. Then the equations of $\P^1 \times \P^1 \times \P^1$ in its Segre embedding are given by taking all ``minors'' along all sides of the cube together with the three long diagonals. See \cref{fig:p1p1p1_equations}. To get $\dP6$, one identifies two opposite corners. Thus in total there are $8-1=7$ variables, just as above. 
+On the other hand, $\dP6$ can be realized as a subvariety of $\P^1 \times \P^1 \times \P^1$ as well. The equations can be described as follows: draw a cube, and let each vertex correspond to a variable. Then the equations of $\P^1 \times \P^1 \times \P^1$ in its Segre embedding are given by taking all ``minors'' along all sides of the cube together with the three long diagonals. See \cref{fig:p1p1p1_equations}, in which we look at the cube from the front face. To get $\dP6$, one identifies two opposite corners, corresponding to the equation $a_{000}=a_{111}$ inside $\P^1 \times \P^1 \times \P^1$. Thus in total there are $8-1=7$ variables, just as above. 
 
 \begin{figure}[b]
 \centering
@@ -156,7 +157,7 @@ For $t_1=t_2=0$, we get the cone over $\dP6$, while for generic $t_i$, we get a 
 Call (any) smooth fiber $X_2$. 
 
 \begin{lemma}
-Let $M=\P(\mathcal T_ {\P^2})$ be the projective bundle associated to the tangent sheaf on $\P^2$. Then the smoothing $X_2$ is isomorphic to $M \bs \dP6$. 
+Let $M=\P(\mathcal T_ {\P^2})$ be the projective space bundle associated to the tangent sheaf on $\P^2$. Then the smoothing $X_2$ is isomorphic to $M \bs \dP6$. 
 \end{lemma}
 \begin{proof}
 First homogenize the equations \eqref{eq:def2} with respect to $y_1$. Call the homogenized variety $N$. Put $y_0'=y_0$, $y_1' = y_0-ty_1$ and $y_2'=y_0-t_2y_1$. Then we have the relation
@@ -187,15 +188,15 @@ The smoothing $X_1$ is isomorpic to $\P^1 \times \P^1 \times \P^1 \bs \dP6$.
 The proof is identical to the previous proof.
 \end{proof}
 
-The following fact is well-known.
+The following fact is well-known, and follows from the above two lemmas.
 
 \begin{proposition}
 The two smoothings are topologically different.
 \end{proposition}
 \begin{proof}
-Observe that $\mathcal T(\P^2)$ is homotopy equivalent to $\P^1 \times \P^2$ \todo{source?}. It follows that its Euler characteristic, which is invariant under homotopy, is equal to $2 \times 3=6$.
+The Euler characteristic of $\P(\mathscr T_{\P^2})$ is $6$, which follows from the next lemma.
 
-This information let us calculate the Euler characteristics of the smoothings. Note that $\chi(\P^1)=2$ and $\chi(\mathcal T(\P^2))=6$. By additivity of the Euler characteristics we have $\chi(X_1)=2$ and $\chi(X_2)=0$, since $\chi(\dP6)=6$.
+This let us calculate the Euler characteristics of the smoothings. Note that $\chi(\P^1)=2$. By the Künneth formula, the Euler characteristic is multiplicative on products, so that $\chi(\P^1 \times \P^1 \times \P^1)=8$. By additivity of the Euler characteristics we have $\chi(X_1)=2$ and $\chi(X_2)=0$, since $\chi(\dP6)=6$.
 
 It follows that the two smoothing components correspond to topologically different smoothings, since the Euler characteristic is a topological invariant.
 \end{proof}
@@ -288,7 +289,7 @@ The anticanonical polytope of $\P^2$ is the convex hull of the points $v_1=(-1,2
   \caption{The edge graph of $\Delta \times \Delta$. The red vertices are the diagonal vertices $v_{ii}$.}
   \label{fig:edgegraphDD}
 \end{figure}
-
+  \todo{make nicer figure}
 We want a projection sending the vertices $v_{ii}$ ($i=1,2,3$) to the origin in $\R^2$. In \cref{fig:edgegraphDD}, we have visualized the edge graph of $\Delta^2 \times \Delta^2$. The three vertices that are sent to zero are marked in red.
 
 By demanding that $v_{12} \mapsto (1,0)$ and $v_{23} \mapsto (0,1)$, together with $v_{ii} \mapsto (0,0)$, we get a system of $8$ linear equations, corresponding to a unique map $\R^4 \to \R^2$ with the required properties. We get:
@@ -309,7 +310,7 @@ The images of the rays of the fan of $\dP6$ under $A^T$ are exacty the $6$ rays 
 0 \arrow{r} &  \Z^2 \arrow{r}{R_2} & \Z^{6} \arrow{r} & \Pic(\dP6)=\Z^4 \arrow{r} & 0
 \end{tikzcd}
 \]
-It now follows from the snake lemma that $i^\ast$ is injective.
+It now follows from the snake lemma that $i^\ast$ is injective with zero cokernel.
 \end{example}
 
 This lemma let us compute explicitly what the induced map of Picard groups is using only the toric data.
@@ -317,7 +318,7 @@ This lemma let us compute explicitly what the induced map of Picard groups is us
 \begin{theorem}
 The two affine smoothings are topologically different. The homology groups are:
 \begin{center}
-\begin{tabular}{ l | >{$}c<{$}  >{$}c<{$}  >{$}c<{$}  >{$}c<{$}  >{$}c<{$}  >{$}c<{$}  >{$}c<{$} | >{$}c<{$} }
+\begin{tabular}{ l | >{$}c<{$}  >{$}c<{$}  >{$}c<{$}  >{$}c<{$}  >{$}c<{$}  >{$}c<{$}  >{$}c<{$} | c }
  Group & 1 & 1 & 2 & 3 & 4 & 5 & 6 & Euler characteristic \\
 \hline
 $H^i(X_1,\Z)$ & 1 & 0 & 2 & 1 & 0 & 0 & 0 & 2 \\
@@ -329,7 +330,7 @@ $H^i(X_2,\Z)$ & 1 & 0 & 1 & 2 & 0 & 0 & 0  & 0
 \begin{proof}
 The singular cohomology of $M=\P^1 \times \P^1 \times \P^1$ is given by $(1,0,3,0,3,0,1)$, which can be computed by the Künneth formula (see \cite{hatcher_topology}, page 275). The cohomology of $\dP6$ is given by $(1,0,4,0,1)$.
 
-We will use the Lefschetz duality theorem \cite{spanier_topology}, which in this case says that $H_q(M \bs dP_6; \Z) \simeq H^{6-q}(M,dP_6;\Z)$. The long exact sequence of the pair $(M,\dP6)$ (Hatcher, page 200) takes the form:
+We will use the Lefschetz duality theorem \cite{spanier_topology}, which in this case says that $H_q(M \bs dP_6; \Z) \simeq H^{6-q}(M,dP_6;\Z)$. The long exact sequence of the pair $(M,\dP6)$ (\cite{hatcher_topology}, page 200) takes the form:
 
 \begin{center}
 \begin{tikzpicture}[descr/.style={fill=white,inner sep=1.5pt}]
@@ -377,29 +378,29 @@ From the exactness of the sequence, we immediately find $H^0(X_1;\Z)=\Z$. Also, 
 
 The other groups depend upon the explicit form of the maps $H^2(M;\Z) \to H^2(\dP6;\Z)$ and $H^4(M;\Z) \to H^4(\dP6,\Z)$.
 
-The map $H^2(M;\Z) \to H^2(\dP6;\Z)$ can be identified with the map $i^\ast \colon \Pic(M) \to \Pic(\dP6)$ induced by the inclusion. This map was computed in \cref{example:p1p1p1}. It is an ijective map with torsion-free cokernel, and it follows from the long-exact sequence and the Lefschetz theorem that $H_3(X_1;\Z) \simeq H^3(M,dP_6; \Z) \simeq \Z$, and also that $H_4(X_1;\Z)=0$.
+The map $H^2(M;\Z) \to H^2(\dP6;\Z)$ can be identified with the map $i^\ast \colon \Pic(M) \to \Pic(\dP6)$ induced by the inclusion. This map was computed in \cref{example:p1p1p1}. It is an injective map with torsion-free cokernel, and it follows from the long-exact sequence and the Lefschetz theorem that $H_3(X_1;\Z) \simeq H^3(M,dP_6; \Z) \simeq \Z$, and also that $H_4(X_1;\Z)=0$.
 
-To compute the map $H^4(M;\Z) \to H^4(\dP6;\Z)$, note that $H^4(M;\Z)$ is Poincaré dual to $H_ 2(M;\Z)$, and this group is generated by $\P^1 \times \{pt\} \times \{ pt\}$ (and permutations). Also, $H^4(\dP6;\Z) \simeq H_0(\dP6,\Z)=\Z$. In this description, pullback corresponds to intersection, and one sees that the map is given by $(a,b,c) \mapsto a+b+c$, since the three $\P^1$'s intersect $\dP6$ in a single point each. This map has two-dimensional kernel, and we conclude that $H_2(X_1;\Z) \simeq H^4(M,\dP6;\Z) = \Z^2$, and that $H^1(X_1;\Z)=0$.
+To compute the map $H^4(M;\Z) \to H^4(\dP6;\Z)$, note that $H^4(M;\Z)$ is Poincaré dual to $H_ 2(M;\Z)$, and this group is generated by $\P^1 \times \{pt\} \times \{ pt\}$ (and permutations)\footnote{I thank the math.stackexchange user \emph{nefertiti} for this argument.}. Also, $H^4(\dP6;\Z) \simeq H_0(\dP6,\Z)=\Z$. In this description, pullback corresponds to intersection, and one sees that the map is given by $(a,b,c) \mapsto a+b+c$, since the three $\P^1$'s intersect $\dP6$ in a single point each. This map has two-dimensional kernel, and we conclude that $H_2(X_1;\Z) \simeq H^4(M,\dP6;\Z) = \Z^2$, and that $H^1(X_1;\Z)=0$.
 
-The computations for $X_2$ are similar but more involved. We first note that the Picard group of $M=\P(\mathcal T_{\P^2})$ is generated by the pullbacks $F,G$ of the generators of $\Pic(\P^2_{x_0x_1x_2} \times \P^2_{y_0y_1y_2})$. Say $F$ is represented by $V(x_0)$ and $G$ is represented by $V(y_0)$\todo{check transversal intersection with dP6}.
+The computations for $X_2$ are similar. We first note that the Picard group of $M=\P(\mathcal T_{\P^2})$ is generated by the pullbacks $F,G$ of the generators of $\Pic(\P^2_{x_0x_1x_2} \times \P^2_{y_0y_1y_2})$. Say $F$ is represented by $V(x_0)$ and $G$ is represented by $V(y_0)$.
 
 Again we compute the intersections of $F$ and $G$ with $dP_6$. Intersecting with $F$ is computed by decomposing the ideal $(x_0,x_1y_0-x_2y_1,x_1y_0-x_0y_2)$ in $k[x_0,x_1,x_2,y_0,y_1,y_2]$ and saturating by $(x_0,x_1,x_2)$ and $(y_0,y_1,y_2)$. This can either be done by hand or by using \MM. Either way, we find that $\restr{F}{dP_6} = E_3+L_{23} + E_2=H$, using the notation from earlier this chapter. Similarly $\restr{G}{dP_6}=L_{23}+L_{12}+E_2=2H-E_1-E_2-E_3$. Hence the map on cohomology is given by the matrix
 
 \[
-H^2(M,\Z) \simeq H_4(M,\Z) \simeq \Z^2 \xrightarrow{
+H^2(M;\Z) \simeq H_4(M;\Z) \simeq \Z^2 \xrightarrow{
 	\begin{pmatrix*}[r]
 	0 & -1 \\
 	0 & -1 \\
 	0 & -1  \\
 	1 & 2 
 	\end{pmatrix*}
-} \Z^4 \simeq H_2(\dP6,\Z) \simeq H^2(\dP6,\Z).
+} \Z^4 \simeq H_2(\dP6;\Z) \simeq H^2(\dP6;\Z).
 \]
 
-This is an injective map, and as above, we conclude that $H_3(X_2) \simeq H^3(M,\dP6) \simeq \Z^2$, and also that $H_4(X_1)=0$.
+This is an injective map, and as above, we conclude that $H_3(X_2;\Z) \simeq H^3(M,\dP6;\Z) \simeq \Z^2$, and also that $H_4(X_1;\Z)=0$.
 \end{proof}
 
 \begin{remark}
-In fact, the Andreotti-Frankel theorem \cite{andreotti_affinecw} states the following: if $V$ is any smooth affine variety of complex dimension $n$, then it has the homotopy type of a CW complex of real dimension $n$. Thus it should be no surprise that $H^j(X_i)=0$ for $j > 3$.
+In fact, the Andreotti-Frankel theorem \cite{andreotti_affinecw} states the following: if $V$ is any smooth affine variety of complex dimension $n$, then it has the homotopy type of a CW complex of real dimension $n$. Thus it comes for free that $H^j(X_i,\Z)=0$ for $j > 3$.
 \end{remark}
  

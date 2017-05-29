@@ -56,10 +56,10 @@
 
 %% Organising tools
 \RequirePackage[notref, notcite]{showkeys}               % Labels in margin
-\RequirePackage[color       = LightGray,
+\usepackage[    color       = LightGray,
                 bordercolor = LightGray,
                 textsize    = footnotesize,
-                figwidth    = 0.98\textwidth]{todonotes} % Marginal notes                
+                figwidth    = 0.98\textwidth]{todonotes} % Marginal notes                /disable
 
 
 %% Miscellaneous
@@ -67,6 +67,7 @@
 \RequirePackage{textcomp}       % Extra symbols
 \RequirePackage{multirow}       % Rows spanning multiple lines in tables
 \RequirePackage{tablefootnote}  % Footnotes for tables
+\usepackage{longtable} %%% lang tabell
 
 
 %% Bibliography
@@ -85,9 +86,9 @@
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
 
-\lstset{ %
+\lstset{
   backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
-  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  basicstyle=\footnotesize\ttfamily,        % the size of the fonts that are used for the code
   breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
   breaklines=true,                 % sets automatic line breaking
   captionpos=b,                    % sets the caption-position to bottom
@@ -274,12 +275,14 @@
 \DeclareMathOperator{\EmbDef}{{EmbDef}}
 \DeclareMathOperator{\Ext}{Ext}
 \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Der}{Der}
 \DeclareMathOperator{\Sym}{Sym}
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\codim}{codim}
 \DeclareMathOperator{\supp}{{supp}}
 \DeclareMathOperator{\Cl}{Cl}
 \DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\Bl}{Bl}
 \newcommand{\K}{\mathcal{K}}
 \newcommand{\id}{\mathrm{id}}
 \newcommand{\lk}{\mathrm{lk}}

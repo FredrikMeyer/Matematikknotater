@@ -16,70 +16,61 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/fredrikmeyer/Dropbox/matematikknotater/phdnotes/calculations.tex",
+			"file": "sections/constructions.tex",
 			"settings":
 			{
-				"buffer_size": 26967,
+				"buffer_size": 40957,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "Package Control Messages\n========================\n\nLaTeXTools\n----------\n\n  LaTeXTools Plugin version 3.12.15 (2016-01-14) changelog:\n  \n  Bugfixes:\n  - Fixed a bug which caused bibtex not to be run when using the Harvard package (#1007)\n\n  LaTeXTools Plugin version 3.12.14 (2016-01-10) changelog:\n  \n  Bugfixes:\n  - Fixed a bug, which disabled some builders and debug information (#1004)\n  - Improved math preview inside displaymath environment (#996)\n\n  LaTeXTools Plugin version 3.12.13 (2016-01-06) changelog:\n  \n  Bugfixes:\n  - Fixed a bug, which disabled the build command (#994)\n\n  LaTeXTools Plugin version 3.12.12 (2016-01-06) changelog:\n  \n  Bugfixes:\n  - Fix forward search in Okular 1.0 (#989)\n  - Fix an issue that caused SumatraPDF to crash (#937)\n  - Fix an issue that broke latexmk on windows (#861)\n  - Improve clarity of equation previews (#982)\n  - More intelligent handling of window visible when using the command viewer on Windows (#986)\n",
+			"file": "sections/two_smoothings.tex",
 			"settings":
 			{
-				"buffer_size": 961,
-				"line_ending": "Unix",
-				"name": "Package Control Messages",
-				"read_only": true,
-				"scratch": true
-			}
-		},
-		{
-			"file": "main.tex",
-			"settings":
-			{
-				"buffer_size": 1249,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/fredrikmeyer/Dropbox/matematikknotater/phdnotes/blowup_notat.tex",
-			"settings":
-			{
-				"buffer_size": 1917,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/fredrikmeyer/Dropbox/matematikknotater/phdnotes/embedding_X.tex",
-			"settings":
-			{
-				"buffer_size": 2291,
+				"buffer_size": 24187,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/fredrikmeyer/Dropbox/matematikknotater/phdnotes/group_action_on_E.tex",
+			"file": "sections/preliminaries.tex",
 			"settings":
 			{
-				"buffer_size": 1717,
+				"buffer_size": 28607,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/fredrikmeyer/Dropbox/matematikknotater/mystyle.sty",
+			"file": "bibliography.bib",
 			"settings":
 			{
-				"buffer_size": 6179,
+				"buffer_size": 25745,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "figures/fanp2.tex",
+			"settings":
+			{
+				"buffer_size": 304,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/computer_code.tex",
+			"settings":
+			{
+				"buffer_size": 8994,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
 	],
-	"build_system": "",
+	"build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
 	"build_system_choices":
 	[
 		[
@@ -150,10 +141,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 87.0,
-		"last_filter": "git push",
+		"height": 227.0,
+		"last_filter": "git add",
 		"selected_items":
 		[
+			[
+				"git add",
+				"Git: Add All"
+			],
 			[
 				"git push",
 				"Git: Push"
@@ -161,10 +156,6 @@
 			[
 				"git comm",
 				"Git: Commit"
-			],
-			[
-				"git add",
-				"Git: Add Current File"
 			],
 			[
 				"pack",
@@ -179,7 +170,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 449.0
+		"width": 458.0
 	},
 	"console":
 	{
@@ -200,12 +191,47 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/fredrikmeyer/Dropbox/matematikknotater"
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/figures",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/sections"
 	],
 	"file_history":
 	[
-		"/Users/fredrikmeyer/Dropbox/matematikknotater/_region_.pdf",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/sections/abstract.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/style.sty",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/figures/minkowskisum.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/main.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/sections/spheres8.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/bibliography.bib",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/sections/preliminaries.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/sections/introduction.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/sections/two_smoothings.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/sections/cp2_triang.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/figures/222tensor.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/figures/octahedron_hexagon.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/sections/computer_code.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/sections/constructions.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/figures/hexagon.tex",
+		"/Users/fredrikmeyer/Library/Application Support/Sublime Text 3/Cache/LaTeXTools/preview_math/f3e31b99d1245f1d3f0d5a18ba8cc771.png.err",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/figures/fandp6.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/figures/projection_cube_hexagon.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/sections/midleretidig",
+		"/Users/fredrikmeyer/Library/Application Support/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/sections/acknowledgements.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/sections/mirrorsymmetry.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/fano.tex",
+		"/Users/fredrikmeyer/Desktop/SOPP.TXT",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/mystyle.sty",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/sections/cp2_triangulation.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/computer_code.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/thesis.sublime-project",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/phdnotes/group_action_on_E.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/preliminaries.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/sections/introduction",
 		"/Users/fredrikmeyer/Dropbox/matematikknotater/phdnotes/embedding_X.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/phdnotes/blowup_notat.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/phdnotes/calculations.tex",
+		"/Users/fredrikmeyer/Dropbox/matematikknotater/_region_.pdf",
 		"/Users/fredrikmeyer/Dropbox/matematikknotater/phdnotes/embedding_X.m2",
 		"/Users/fredrikmeyer/Dropbox/matematikknotater/lstlang0.sty",
 		"/Users/fredrikmeyer/Dropbox/matematikknotater/calculations.tex",
@@ -223,7 +249,6 @@
 		"/Users/fredrikmeyer/Dropbox/Programmering/addtwonumbers/Solution.java",
 		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis.tex",
 		"/Users/fredrikmeyer/Dropbox/matematikknotater/defX.tex",
-		"/Users/fredrikmeyer/Library/Application Support/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
 		"/Users/fredrikmeyer/Dropbox/matematikknotater/1140zorn.tex"
 	],
 	"find":
@@ -242,6 +267,53 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"the dimens",
+			"hodge nu",
+			"draft",
+			"based on",
+			"\\n",
+			"}",
+			"{",
+			"table",
+			"todo",
+			"ecompos",
+			"todo",
+			"hva med",
+			"cor",
+			"roup",
+			"footnote",
+			"injective",
+			"vertices of",
+			"toric des",
+			"invariant",
+			"corresponding",
+			"\\n",
+			"denote by ",
+			"projec",
+			"previe",
+			"latexmk",
+			"\\OT1/lmr/m/n/10",
+			"OT1",
+			"euler",
+			"vertices",
+			"ref",
+			"mirror",
+			"todo",
+			"then",
+			"\\v",
+			"find ",
+			"good re",
+			"HARTS",
+			"\\Gr",
+			"\\GR",
+			"exploit",
+			"to",
+			"calabi",
+			"beau",
+			"FIGU",
+			"christophers",
+			"WHICH",
+			"bib",
 			"both ",
 			"in A",
 			"y",
@@ -254,9 +326,13 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"",
+			"]",
+			"[",
+			"",
 			"z",
 			"y"
 		],
@@ -274,29 +350,27 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/fredrikmeyer/Dropbox/matematikknotater/phdnotes/calculations.tex",
+					"file": "sections/constructions.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 26967,
+						"buffer_size": 40957,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								507,
-								507
+								20425,
+								20425
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 8430.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -304,29 +378,27 @@
 				},
 				{
 					"buffer": 1,
+					"file": "sections/two_smoothings.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 961,
+						"buffer_size": 24187,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								961,
-								961
+								16633,
+								16633
 							]
 						],
 						"settings":
 						{
-							"auto_indent": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_width": 2,
-							"word_wrap": true
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 7167.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -334,19 +406,105 @@
 				},
 				{
 					"buffer": 2,
-					"file": "main.tex",
+					"file": "sections/preliminaries.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1249,
+						"buffer_size": 28607,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								188,
-								188
+								21705,
+								21705
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 7476.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "bibliography.bib",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 25745,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								25250,
+								25250
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXTools/BibLaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 13543.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "figures/fanp2.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 304,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								169,
+								169
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "sections/computer_code.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8994,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								580,
+								580
 							]
 						],
 						"settings":
@@ -359,118 +517,6 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/Users/fredrikmeyer/Dropbox/matematikknotater/phdnotes/blowup_notat.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1917,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								831,
-								845
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/Users/fredrikmeyer/Dropbox/matematikknotater/phdnotes/embedding_X.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2291,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								816,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/Users/fredrikmeyer/Dropbox/matematikknotater/phdnotes/group_action_on_E.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1717,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1717,
-								1717
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 180.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/Users/fredrikmeyer/Dropbox/matematikknotater/mystyle.sty",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6179,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6177,
-								6177
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/TeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2645.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 5,
 					"type": "text"
 				}
@@ -479,7 +525,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 25.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -522,9 +568,9 @@
 	},
 	"output.latextools":
 	{
-		"height": 133.0
+		"height": 218.0
 	},
-	"pinned_build_system": "",
+	"pinned_build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
 	"project": "thesis.sublime-project",
 	"replace":
 	{
