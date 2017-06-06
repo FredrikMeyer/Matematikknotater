@@ -3,7 +3,78 @@
 
 \ProvidesPackage{style}[2016/06/30 Custom LaTeX style]
 
-
+\newcommand{\MONTH}
+{
+    \ifcase\the\month
+    \or January
+    \or February
+    \or March
+    \or April
+    \or May
+    \or June
+    \or July
+    \or August
+    \or September
+    \or October
+    \or November
+    \or December
+    \fi
+}
+ 
+\newcommand{\uiotitle}
+{
+    \begin{titlingpage}
+        \calccentering{\unitlength}
+        \begin{adjustwidth*}{\unitlength}{-\unitlength}
+            {
+                \centering
+                \vspace*{-12 mm}
+                \includegraphics[width = \textwidth]{mnphd-logo}
+                \vfill
+                {
+                    \huge
+                    \bfseries
+                    \MakeUppercase
+                    \theauthor
+                    \vskip \onelineskip
+                }
+                \parbox{\textwidth}{\hrulefill}
+                {
+                    \vskip -0.5\onelineskip
+                    \Huge
+                    \sffamily
+                    \bfseries
+                    \thetitle
+                    \vskip 0.5\onelineskip
+                }
+                \parbox{\textwidth}{\hrulefill}
+                \vfill
+                {
+                    \LARGE
+                    Thesis submitted for the degree of Philosophiae~Doctor
+                    \vskip 1.5 em
+                    \Large
+                    Department of Mathematics
+                }
+                \vfill
+            }
+            \hspace*{6 mm} % 6mm
+            \includegraphics[width = 2.6 cm]{mnphd-apollon}
+            \vbox to 2.6 cm
+            {
+                \vfill
+                \hsize = \dimexpr\textwidth-5.15cm\relax
+                \hfill
+                \LARGE 
+                \sffamily 
+                \bfseries
+                \MONTH~\the\year
+                \vfill
+            }
+            \vspace{-6 mm}
+        \end{adjustwidth*}
+    \end{titlingpage}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
