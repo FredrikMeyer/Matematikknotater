@@ -12,28 +12,28 @@ Furthermore, in the last section, we propose mirror candidates for two of the co
 %%%%%%
 \section{The special fiber}
 
-Let $E_6$ be the hexagon as a simplicial complex. The associated Stanley--Reisner scheme $\P(E_6)$ is a degenerated elliptic curve in $\P^5$. If $\P^5$ have coordinates $x_0,\ldots,x_5$, the equations of $\P(E_6)$ are $x_ix_{i+2}=x_ix_{i+3}=0$, where $i$ is taken modulo $6$. This gives a total of $9$ quadratic generators.
+Let $E_6$ be the hexagon as a simplicial complex. The associated Stanley--Reisner scheme $\P(E_6)$ is a degenerated elliptic curve in $\P^5$. If $\P^5$ have coordinates $x_0,\ldots,x_5$, the equations of $\P(E_6)$ are $x_ix_{i+2}=x_ix_{i+3}=0$, where $i$ is taken modulo $6$. This gives a total of $9$ quadratic equations.
 
 \begin{lemma}
 The Hilbert polynomial of $\P(E_6)$ is $h(t)=6t$.
 \end{lemma}
 \begin{proof}
-We want to count the dimension of $S_t=S_{E_6}(t)$. Any monomial in $S_k$ has support on the simplicial complex $E_6$, so its support is either a vertex or an edge. In the first case, the monomial has the form $x_i^t$, so there are six of these.
+We want to count the dimension of $S_{X_0}$ in degree $t$. Any monomial in $S_{X_0}$ has support on the simplicial complex $E_6$, so its support is either a vertex or an edge. In the first case, the monomial has the form $x_i^t$, so there are six of these.
 
 In the other case, it has the form $x_i^ax_{i+1}^b$, with $a+b=t$ and $a,b \neq 0$. Counting, there are $6(t-1)$ of these monomials. In total, the dimension is $6+6(t-1)=6t$.
 \end{proof}
 \begin{remark}
-Alternatively, we could note that $\P(E_6)$ smooths to an elliptic curve of degree $6$. Since Hilbert polynomials are constant in flat families, it follows from Riemann--Roch that $h(t)=\deg \OO_{\P(E_6)}(6t)-1+1=6t$.
+Alternatively, we could note that $\P(E_6)$ smooths to an elliptic curve of degree $6$. Since Hilbert polynomials are constant in flat families, it follows from the Riemann--Roch theorem that $h(t)=\deg \OO_{\P(E_6)}(6t)-1+1=6t$.
 \end{remark}
 
-Note that the Hilbert polynomial only differ from the Hilbert function for $t=0$, since $h(0)=0$, while $\dim_\C S_0=1$. 
+Note that the Hilbert polynomial only differ from the Hilbert function for $t=0$, since $h(0)=0$, while $\dim_\C {S_{X_0}}_0=1$. 
 
 We now introduce the central fiber in the discussions onward. Let $\K$ be the simplicial complex $E_6 \ast E_6$. It is a triangulation of the $3$-sphere. The maximal faces are unions of maximal faces from each factor.
 
 Denote the  vertices of the left $E_6$ with $x_1,\ldots,x_6$, and the vertices of the right $E_6$ with $z_1,\ldots,z_6$. Then the maximal faces of $\K$ are of the form $x_ix_{i+i}z_jz_{j+1}$, where $i,j \in \Z_6$. The number of $i$-faces follows are easy to compute:
 
 \begin{lemma}
-The $f$-vector of $\K$ is $(1,12,48,36)$. 
+The $f$-vector of $\K$ is $(12,48,36)$. 
 \end{lemma}
 \begin{proof}
 There are $12$ vertices, and $6 \times 6=36$ maximal facets. Since $\K$ is a 3-sphere, it follows that $12-f_1+36=\chi(S^3)=0$ that $f_1=48$.\footnote{Here we used that in a cell complex, the Euler characteristic is also the alternating sum of the number of cells in each dimension. This is Theorem 2.44 in \cite{hatcher_topology}.}
@@ -43,7 +43,7 @@ There are $12$ vertices, and $6 \times 6=36$ maximal facets. Since $\K$ is a 3-s
 The Hilbert polynomial of $\P(\K)$ is $h(t)=6t^3+6$.
 \end{lemma}
 \begin{proof}
-The homogeneous coordinate ring $S=\oplus_{t \geq 0} S_t$ of $\P(\K)$ is the graded tensor product of $\P(E_6)$ with itself. It follows from the previous lemma that
+The homogeneous coordinate ring $S_{\P(\K)}= \bigoplus_{t \geq 0} S_t$ of $\P(\K)$ is the graded tensor product of $S_{\P(E_6)}$ with itself. It follows from the previous lemma that
 \[
 \dim S_t = \sum_{i+j=k, ij \neq 0} 36ij + 12k,
 \]
@@ -60,7 +60,7 @@ All these invariants can be read off from the Hilbert polynomial.
 Either by using \MM or by using the more conceptual description of the $T^i$-modules from \cite{deforming_christophersen}, we can compute: 
 
 \begin{proposition}
-The dimensions of $T^1(A_\K)_0$ and $T^2(A_\K)_0$ are $84$ and $72$, respectively.
+The dimensions of $T^1(S_{\P(\K)}/k,S_{\P(\K)})_0$ and $T^2(S_{\P(\K)}/k,S_{\P(\K)})_0$ are $84$ and $72$, respectively.
 \end{proposition}
 \begin{proof}
 We will prove this using the techniques and notation from \cite{deforming_christophersen}. Our goal is to compute the degree zero part of $T^1_{A_\K}$. We will do this using \cref{thm:t1dims}.
@@ -180,7 +180,7 @@ $X_1$ is a smooth Calabi--Yau variety with $\chi(X_1)=-72$.
 \begin{proof}
 The singularities of $M$ are of dimension $4$. By Bertini's theorem, intersecting $M$ with a codimension $6$ hyperplane gives a smooth variety $X_1$.
 
-That $X_1$ has trivial canonical bundle, follows from \cref{prop:anticanonicalsection}.
+That $X_1$ is Calabi--Yau follows from \cref{prop:anticanonicalsection}.
 
 To find the topological Euler characteristic, we compute in \MM. Computing the whole cotangent sheaf of $X_1$ is infeasible with current computer technology\footnote{An external computer has been trying to compute this sheaf for several months now without terminating.}, we make use of standard exact sequences. Let $\mathscr I$ be the ideal sheaf of $M$ in $\P^{17}$. First off, we have the exact sequence
 $$
@@ -248,7 +248,7 @@ I have not been able to rigorously compute the Hodge nubmers of $X_1$. However, 
 
 After about a week of computation on a modern desktop computer, the answer turns out to be $\dim_{\mathbb F_p} (T^1(S_{X_1}/\mathbb F_p,S_{X_1}))_0 = 39$ for several large primes $p$.
 
-This is plausible because of the following heuristic moduli count: $X_1$ is parametrized by the Grassmannian $\mathbb Gr(12,(E \otimes E)^{\oplus 2} )$, which has dimension $(18-12)\cdot 12 = 72$. Each $E$-factor is acted upon by $\GL(E)$. There are four of these factors, so we have an action of $\prod^4 \GL(E)$ on the Grassmannian. There is a torus subgroup $(\C^ast)^4$ acting by $(v \otimes w, r \otimes s) \mapsto (t_1t_2 v \otimes w, t_3t_4 r \otimes s)$ on $\P^{17}$. Elements of $(\C^\ast)^4$ satisfying $t_1t_2=t_3t_4$ act trivially, forming a isotropy subgroup $K$.  Hence we have an action of the quotient group $G \stackrel \Delta = \left(\prod_{i=1}^4 \GL(4)\right)/K$ on the Grassmannian. This quotient group hasa dimension $9 \cdot 4 - 3 = 33$.
+This is plausible because of the following heuristic moduli count: $X_1$ is parametrized by the Grassmannian $\mathbb Gr(12,(E \otimes E)^{\oplus 2} )$, which has dimension $(18-12)\cdot 12 = 72$. Each $E$-factor is acted upon by $\GL(E)$. There are four of these factors, so we have an action of $\prod^4 \GL(E)$ on the Grassmannian. There is a torus subgroup $(\C^\ast)^4$ acting by $(v \otimes w, r \otimes s) \mapsto (t_1t_2 v \otimes w, t_3t_4 r \otimes s)$ on $\P^{17}$. Elements of $(\C^\ast)^4$ satisfying $t_1t_2=t_3t_4$ act trivially, forming a isotropy subgroup $K$.  Hence we have an action of the quotient group $G \stackrel \Delta = \left(\prod_{i=1}^4 \GL(4)\right)/K$ on the Grassmannian. This quotient group hasa dimension $9 \cdot 4 - 3 = 33$.
 
 We form the quotient $\mathbb G(12,(E \otimes E)^{\oplus 2})/G$, which have dimension $72-33=39$.
 
@@ -391,21 +391,6 @@ In \cite{candelas_newcy}, the authors study \CY complete intersections admitting
 \end{remark}
 
 %%%%%%%%%%%%%%%
-\section{The mirror construction Ansatz} % (fold)
-\label{sec:the_mirror_construction_ansatz}
-
-In many cases of interest, given a construction of a Calabi--Yau manifold, the following Ansatz produces a mirror.
-
-Let $\K$ be a simplicial complex, with associated Stanley--Reisner scheme $X_0$. Let $G$ be the automorphism group of $\K$. Then $G$ induces an action on $T_{X_0}^1$ in the following way: each element of $T_{X_0}^1$ can be represented by a $\phi \in \Hom(I/I^2,A)$, and then $g \cdot \phi$ is given by $(g \cdot \phi)(f) = g \cdot \phi(g^{-1} \cdot f)$, the contragredient action.
-
-There is an action of $T_n=(\C^\ast)^{n+1}/\C^\ast$ on $\P^n$, and since $I_{X_0}$ is generated by monomials, the action restricts to an action on $X_0$ as well.
-
-Given a smoothing family with general fiber $X$ and special fiber $X_0$, we can consider a subfamily with only isolated singularities on which $G$ act.  Let $H \subset T_n$ be the subgroup of the torus acting on this family. Then the mirror candidate to $X$ is given by a crepant resolution of $Y_t=X_t/H$.
-
-Though it is often overlooked (or stated in another language) in the literature, even the mirror construction of the famous quintic arises this way. Briefly, the quintic Calabi--Yau is given by the zero locus of a general quintic in $H^0(\P^4,\OO_{\P^4}(5))$. The special quintic given by $f=x_0x_1x_2x_3x_4$ is the Stanley--Reisner scheme corresponding to the 3-simplex. The automorphism group is $S_5$, and an invariant $1$-parameter family is given by $f_t=\sum_{i=0}^4 x_i^5 + t x_0 x_1x_2x_3x_4$. The fiber at $t=\infty$ is the Stanley--Reisner scheme.
-
-There is a $H \stackrel \Delta = (\Z/5)^5/\Z^5$-action on $X_t = Z(f_t)$ given by coordinate-wise multiplication by fifth roots of unity. The general element of the family $X_t$ is smooth, so the only singularities of the quotient $Y_t=X_t/H$ comes from points with non-trivial stabilizer. These can be resolved by methods from toric geometry. For details, see for example the first chapter of Ingrid Fausk's thesis \cite{fausk_thesis}.
-
 
 \section{Invariant \CY's and a mirror construction}
 

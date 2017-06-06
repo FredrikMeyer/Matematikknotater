@@ -1,10 +1,12 @@
 \chapter{Relation to triangulations of \texorpdfstring{$\C\P^2$}{CP2}}
 \label{sec:cp2triangs}
 
-This chapter will not contain any new results of any signifance, but is rather a report on an idea which led to the deliberations in the next chapters.
+This chapter will not contain any new results of any significance, but is rather a report on an idea which branched off to the explorations in the next two chapters.
 
 We explain an interesting connection between the topological space $\C \P^2$ and degenerations of hyper-Kähler manifolds.
 
+%%%%%%%%%%%
+%%%%%%%%%%%
 \section{Hyper-Kähler manifolds} % (fold)
 \label{sec:hyper_kähler_manifolds}
 
@@ -28,7 +30,7 @@ Only a few explicit families of hyper-Kähler manifolds are known. Below we sket
 
 \subsection{The Hilbert square $S^{[2]}$}
 
-Let $S$ be a K3-surface with symplectic form $\sigma$, and let $S^{(2)}$ be its symmetric square: $S \times S / \{ (p,q) \sim (q,p) \}$. Let $\pi_i:S \times S \to S$ be the two projections ($i=1,2$). Then the 2-form $\pi_1^\ast \sigma + \pi_2^\ast \sigma$ is $\Z/2$-invariant, hence it decends to a 2-form  $\tau$ on $S^{(2)}$.
+Let $S$ be a K3-surface with symplectic form $\sigma$, and let $S^{(2)}$ be its symmetric square: $S \times S / \{ (p,q) \sim (q,p) \}$. Let $\pi_i:S \times S \to S$ be the two projections ($i=1,2$). Then the 2-form $\pi_1^\ast \sigma + \pi_2^\ast \sigma$ is $\Z/2$-invariant, hence it descends to a 2-form  $\tau$ on $S^{(2)}$.
 
 The space $S^{(2)}$ is singular along the diagonal: locally it is isomorphic to $\C^2 \times \C^2 /(x \sim -x)$. The last factor is a quadric cone, so a single blowup along the diagonal will resolve the singularities. The form $\tau$ lifts to a non-degenerate form on the blowup $\Bl_\Delta S^{(2)}$, which we denote by $S^{[2]}$. It can be shown that it is in fact a hyper-Kähler variety of dimension $4$. The resulting space is denoted by $S^{[2]}$, and is called the \emph{Hilbert square of $S$}, or the \emph{Hilbert scheme of two points on $S$}. It parametrizes length two subschemes of $S$.
 
@@ -40,6 +42,7 @@ There is another construction of hyper-Kähler varieties that is interesting to 
 
 In the article \cite{beauville_donagi_fano}, Beauville and Donagi shows that $F(X)$ is deformation equivalent to $S^{[2]}$ for some K3 surface $S$. They also show that if $X$ is a \emph{pfaffian} hypersurface, then $F(X)$ is actually \emph{isomorphic} to $S^{[2]}$ for some K3 surface $S$. Furthermore, the family $\{ F(X) \}$  obtained this way is 19-dimensional, and is a hypersurface in the deformation space of $S^{[2]}$.
 
+For more details on hyper-Kähler manifolds and their constructions, we recommend the lecture notes \cite{lehn_symplectic}.
 %%%%%%%%%%
 \section{Connection to the complex projective plane}
 
@@ -177,7 +180,7 @@ Again we see that the ideal is not Gorenstein.
 We have that $\dim_\C  T^1_{A(\mathcal T_{10}),0}=42$ and $\dim_\C = T^2_{A(\mathcal T_{10}),0}=105$. The normal sheaf has $\mathcal N_{\P(\mathcal T_{10})/\P^{8}}$ has $132$ global sections.
 \end{proposition}
 
-In fact, it is possible to lift the versal family of deformation parameters to an honest family over $\Spec \C[t_1,\cdots,t_{42}]$, using the \texttt{VersalDeformations} package. Surprisingly, even though the $T^2$ module is big, there are no obstructions in the family. However, the generic member of this family is reducible (verified in \MM for ``random'' values of the deformation parameters), implying that $\P(\mathcal T_{10})$ is not smoothable.
+In fact, it is possible to lift the versal family of deformation parameters to an honest family over $\Spec \C[t_1,\cdots,t_{42}]$, using the \texttt{VersalDeformations} package. Surprisingly, even though the $T^2$ module is big, there are no obstructions in the family (in the sense that the base space is smooth). However, the generic member of this family is reducible (verified in \MM for ``random'' values of the deformation parameters), implying that $\P(\mathcal T_{10})$ is not smoothable.
 
 The automorphism group act transitively on the natural basis of $T^1$, so that $\dim_\C {T^1_{A(\mathcal T_{10}),0}}^G=1$. 
 
