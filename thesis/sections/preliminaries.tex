@@ -32,7 +32,7 @@ The algebra $\mathscr R \otimes_{\OO_S} \mathscr S$ contains the ideal $\mathscr
 
 There is a geometric definition of the join, as described in section (C11) in \cite{altman_joins}. Let $E,F$ be quasi-coherent $\OO_S$-modules\footnote{In our case, $S=\Spec k$ almost always. So $E,F$ are just vector spaces.}. Suppose $X$ and $Y$ are subschemes of $\P(E)$ and $\P(F)$. Then $X\ast Y$ is a closed subscheme of $\P(E \oplus F)$. Identify $X$ and $Y$ with their fundamental subschemes in $X \ast Y$. Then it is not difficult to see that $X \ast Y$ is the (closure of the) locus of points lying on the lines of $\P(E \oplus F)$ determined by pairs of points of $X$ and $Y$. 
 
-For a graded $\OO_S$-algebra $\mathscr R$ there are two natural homomorphisms. We have the \emph{structure map} $\rho: \OO_S \to \mathscr R$, and the \emph{augmentation map} $\epsilon: \mathscr R \to \OO_S$, sending everything in positive degree to zero. Clearly $\epsilon \circ \rho = \id_S$.
+%For a graded $\OO_S$-algebra $\mathscr R$ there are two natural homomorphisms. We have the \emph{structure map} $\rho: \OO_S \to \mathscr R$, and the \emph{augmentation map} $\epsilon: \mathscr R \to \OO_S$, sending everything in positive degree to zero. Clearly $\epsilon \circ \rho = \id_S$.
 
 
 \begin{proposition}
@@ -40,29 +40,33 @@ For a graded $\OO_S$-algebra $\mathscr R$ there are two natural homomorphisms. W
 Suppose $X/k \subset \P^n$ and $Y/k \subset \P^m$ are smooth projective schemes. Then their join, $X \ast Y$ have dimension $\dim X+\dim Y+1$. The singular locus is of dimension $\max\{a,b\}$ and consist of the disjoint union of $X$ and $Y$.
 \end{proposition}
 \begin{proof}
-Let $\mathscr R = \bigoplus_{d \geq 0} \OO_X(d)$ and $\mathscr S = \bigoplus_{d \geq 0} \OO_Y(d)$ be the homogeneous coordinate rings of $X$ and $Y$. Then $X \ast Y \subset \P^{n+m+1}$. 
+Let $S_X = \bigoplus_{d \geq 0} \OO_X(d)$ and $S_Y = \bigoplus_{d \geq 0} \OO_Y(d)$ be the homogeneous coordinate rings of $X$ and $Y$. Then $X \ast Y \subset \P^{n+m+1}$. 
 
-Denote by $C(X \ast Y)$ the scheme $\Spec (\mathscr R \otimes \mathscr S)$, the affine cone over $X \ast Y$. 
+Denote by $C(X \ast Y)$ the scheme $\Spec (S_X \otimes_k S_Y)$, the affine cone over $X \ast Y$. 
 
-The singular locus of $C(X \ast Y) = C(X) \times C(Y)$ is equal to $\Sing C(X) \times C(Y) \bigcup C(X) \times \Sing C(Y)$. Since $X$ and $Y$ are smooth, the only singular point on the affine cones are the origins. Hence
+The singular locus of $C(X \ast Y) = C(X) \times C(Y)$ is equal to
+\[
+\Sing C(X) \times C(Y) \bigcup C(X) \times \Sing C(Y).
+\]
+Since $X$ and $Y$ are smooth, the only singular point on the affine cones are the origins. Hence
 $$
 \Sing\left(C(X \ast Y)\right) = 0 \times \Sing(C(Y)) \bigcup \Sing(C(X)) \times 0.
 $$
 
-Projectivising, we find that $\Sing(X \ast Y) = \Sing Y \sqcup \Sing X$, since $(0,\ldots,0)$ is the only common point of the affine cones. 
+Projectivizing, we find that $\Sing(X \ast Y) = \Sing Y \sqcup \Sing X$, since $(0,\ldots,0)$ is the only common point of the affine cones. 
 \end{proof}
 
 Recall that a scheme $X$ is \emph{Cohen--Macaulay} if all its local rings $\OO_{X,x}$ are Cohen-Macaulay. This means that depth and codimension agree everywhere on $X$. One implication of Cohen--Macaulay-ness is that $X$ will have a dualizing sheaf $\omega_X$. If the dualizing sheaf is a line bundle, then we say that $X$ is \emph{Gorenstein}.
 
-If the homogeneous coordinate ring of a projective variety $X$ is a Gorenstein ring, we say that $X$ is \emph{arithmetically Gorenstein}. In that case, the canonical sheaf can be computed as the sheaf associated to the graded module $\Ext^{\codim X}(S_X,S_X(-\dim X-1))=S_X(-d)$, for some $d$.
+If the homogeneous coordinate ring of a projective variety $X$ is a Gorenstein ring, we say that $X$ is \emph{arithmetically Gorenstein}. In that case, the canonical sheaf can be computed as the sheaf associated to the graded module $\Ext^{\codim X}(S_X,S_X(-\dim N-1))=S_X(-d)$, for some $d$, where $N$ is the dimension of the linear system.
 
 If $X$ and $Y$ are two arithmetically Gorenstein schemes, then their join is also arithmetically Gorenstein. Furthermore, we can compute the canonical sheaf in terms of the canonical sheaves of $X$ and $Y$.
 
 \begin{proposition}
-Let $X=\Proj \mathscr R$ and $Y=\Proj \mathscr S$ be arithmetically Gorenstein projective schemes with dualizing sheaves $\omega_X, \omega_Y$, respectively (here $\mathscr R,\mathscr S$ are sheaves of graded $\mathscr O_S$-algebras). Then $X \ast Y$ is arithmetically Gorenstein with dualizing sheaf $\omega_X \otimes_{S} \omega_Y$.
+Let $X=\Proj R$ and $Y=\Proj S$ be arithmetically Gorenstein projective schemes with dualizing sheaves $\omega_X, \omega_Y$, respectively (here $R, S$ are graded $k$-algebras). Then $X \ast Y$ is arithmetically Gorenstein with dualizing sheaf $\omega_X \otimes_k \omega_Y$.
 \end{proposition}
 \begin{proof}
-The question is local on $S$, so we may assume that $\mathscr R$ and $\mathscr S$ are homogeneous coordinate rings. Then the statement follows from Theorem 4.2 in \cite{herzog_canonical}, where the authors prove that the canonical module of a tensor product is the tensor product of the canonical modules.
+The statement follows from Theorem 4.2 in \cite{herzog_canonical}, where the authors prove that the canonical module of a tensor product is the tensor product of the canonical modules.
 \end{proof}
 
 \begin{remark}
@@ -75,11 +79,17 @@ If $X$ and $Y$ are arithmetically Gorenstein projective schemes, the resolution 
 \section{Calabi--Yau manifolds and mirror symmetry} % (fold)
 \label{sec:calabi_yau}
 
-Parts of this thesis will be concerned with the construction of new Calabi--Yau manifolds. For us, a Calabi--Yau manifold will be a irreducible complex projective variety $X$ such that $\omega_X \simeq \OO_X$ and $H^i(X,\OO_X)=0$ for $i=1,\ldots,\dim X-1$. We will always have $\dim X=3$. Be ware that the literature often requires \CY manifolds to be smooth, or to have only certain kinds of singularities.
+Parts of this thesis will be concerned with the construction of new Calabi--Yau manifolds.
 
-Mathematically, \CY varieties are interesting because they are among the varieties having Kodaira dimension zero. This means that they have trivial canonical models, making them harder to study. Before the 90's there were only sporadic constructions of \CY varieties, but after the advent of toric geometry and the construction of Batyrev in \cite{batyrev_mirrorsymmetry}, thousands of new examples were found, all of which was anticanonical sections of Fano toric varieties. 
+\begin{definition}
+A Calabi--Yau manifold will be an irreducible complex projective variety $X$ such that $\omega_X \simeq \OO_X$ and $H^i(X,\OO_X)=0$ for $i=1,\ldots,\dim X-1$.
+\end{definition}
 
-Let $\Omega_X^1$ be the sheaf of holomorphic one-forms on $X$, and assume that $\dim X =3$. Then we can form the \emph{Hodge diamond} of $X$, which is a format of writing the dimensions $h^{ij}$ of the cohomology groups $H^j(X,\Omega_X^i)$. Here $\Omega_X^i$ is by definition the wedge product $\wedge^i \Omega_X^1$. 
+We will always have $\dim X=3$. Be ware that the literature often requires \CY manifolds to be smooth, or to have only certain kinds of singularities.
+
+Mathematically, \CY varieties are interesting because they are among the varieties having Kodaira dimension zero. This means that they have trivial canonical models, making them harder to study. Before the 90's there were only sporadic constructions of \CY varieties, but after the advent of toric geometry and the construction of Batyrev in \cite{batyrev_mirrorsymmetry}, thousands of new examples were found, all of which were anticanonical sections in Fano toric varieties. 
+
+Let $\Omega_X^1$ be the sheaf of holomorphic one-forms on $X$, and assume that $\dim X =3$. Let $h^{ij}$ denote the dimension of $H^j(X,\Omega_X^i)$. Here $\Omega_X^i$ is by definition the wedge product $\wedge^i \Omega_X^1$.  Then we can form the \emph{Hodge diamond} of $X$:
 
 \[
 \begin{array}[c]{ccccccc}
@@ -93,7 +103,7 @@ h^{03} && h^{12} && h^{21} && h^{30} \\
 \end{array}
 \]
 
-Because of the \CY condition, we have that $h^{j0}=0$ for $0 < j < 3$, and also that $h^{00}=h^{0d}=1$. It follows by Serre duality (see \cite[Corollary 7.7, Chapter III]{hartshorne}) that $h^{ij}=h^{3-i,3-j}$. Note that this amounts to a horizontal symmetry of the Hodge diamond. Since $X$ was assumed to be a complex manifold, it follows that $h^{ij}=h^{ji}$ by complex conjugation\footnote{This follows from the $\bar \delta$-Poincaré lemma.}. This amounts to vertical symmetry of the Hodge diamond. It follows that for 3-dimensional \CY varieties, the Hodge diamond simplifies to
+Because of the \CY condition, we have that $h^{j0}=0$ for $0 < j < 3$, and also that $h^{00}=h^{0d}=1$. It follows by Serre duality (see \cite[Corollary 7.7, Chapter III]{hartshorne}) that $h^{ij}=h^{3-i,3-j}$. Note that this amounts to a horizontal symmetry of the Hodge diamond. Since $X$ was assumed to be a complex manifold, it follows that $h^{ij}=h^{ji}$ by complex conjugation. This amounts to vertical symmetry of the Hodge diamond. It follows that for 3-dimensional \CY varieties, the Hodge diamond simplifies to
 \[
 \begin{array}[c]{ccccccc}
 &&& 1 \\  
@@ -126,16 +136,16 @@ The Euler characteristic can be computed as the degree of the top Chern class of
 $$
 c_{n-1}(T_X) = h^{n-1} \left( \binom{n+1}{n-1} - d \binom{n+1}{n-2} + d^2 \binom{n+1}{n-3} + \ldots\right),
 $$
-where $h$ is the class of a hyperplane. Putting $n=4$ and $d=5$, we find that $\chi(X)=-200$. To compute $h^{11}$, we see first from the conormal sequence that $H^1(X,\Omega_X^1) \simeq H^1(X,\restr{\Omega_{\P^4}^1}{X})$. Now it follows easily from the restricted Euler sequence that $h^{11}=1$, and since $\chi(X)=2(h^{11}-h^{12})$ it follows that $h^{12}=101$.
+where $h$ is the class of a hyperplane. Putting $n=4$ and $d=5$, we find that $\chi(X)=-200$. To compute $h^{11}$, we see first from the conormal sequence that $H^1(X,\Omega_X^1) \simeq H^1(X,\restr{\Omega_{\P^4}^1}{X})$. Now it follows easily from the restricted Euler sequence that $h^{11}=1$, and since $\chi(X)=2(h^{11}-h^{12})$ we find that $h^{12}=101$.
 \end{example}
 
 In general it is very hard to compute the Hodge numbers of Calabi--Yau varieties, with the exception of hypersurfaces in four-dimensional toric varieties. Often the best one can hope for is the topological Euler characteristic $\chi(X)$, which is much easier to compute.
 
-Recall that a variety is \emph{Fano} if the anticanonical sheaf gives an embedding into projective space. Given a Fano variety, one can construct a \CY variety: 
+Recall that a variety is \emph{Fano} if the anticanonical line bundle $\omega_Y^{-1}$ gives an embedding into projective space. Given a Fano variety, one can construct a \CY variety: 
 
 \begin{proposition}
 \label{prop:anticanonicalsection}
-Let $Y \subset \P^N$ be an $n$-dimensional Fano variety with $\omega_Y=\OO_Y(-k)$. Suppose $n > 1$, and $n - k \geq 2$. Then a general section $X$ of $\OO_Y(1)^{\oplus k}$ is an $n-k$-dimensional Calabi--Yau variety.
+Let $Y \subset \P^N$ be an $n$-dimensional Fano variety with $\omega_Y=\OO_Y(-k)$. Suppose $n > 1$. Then a general section $X$ of ${\OO_Y(1)}^{\oplus k}$ is an $n-k$-dimensional Calabi--Yau variety.
 \end{proposition}
 \begin{proof}
 This follows from the adjunction formula, which says that
@@ -148,9 +158,9 @@ Recall that the structure cohomology groups $H^i(Y,\OO_Y)=0$ for $ i> 0$ when $Y
 \[
 0 \to \OO_Y(-k) \to {\OO_Y(-k+1)}^{\oplus \binom {k}{k-1}} \to \ldots \to {\OO_Y}^{\oplus k}(-1) \to \mathcal I_X \to 0.
 \]
-Now note that all terms $\OO_Y(-j)$ with $0 < j < k$ are cohomologically trivial, in the sense that $H^\ast(Y,\OO_Y(-j))=0$. An easy induction argument then shows that $H^p(Y,\mathcal I_X) \simeq H^{p+k-1}(Y,\OO_Y(-k))$.
+Now note that all terms $\OO_Y(-j)$ with $0 < j < k$ are cohomologically trivial, in the sense that $H^\ast(Y,\OO_Y(-j))=0$. An induction argument then shows that $H^p(Y,\mathcal I_X) \simeq H^{p+k-1}(Y,\OO_Y(-k))$ for all $p$.
 
-Now consider the ideal sheaf sequence
+Consider the ideal sheaf sequence
 \[
 0 \to \mathcal I_X \to \OO_Y \to \OO_X  \to 0.
 \]
@@ -165,9 +175,9 @@ Now assume $i > 0$. Then we find that $H^i(X,\OO_X) \simeq H^{i+1}(Y,\mathcal I_
 \[
 H^i(X,\OO_X) = 
 \begin{cases}
-k & \text{ i = 0} \\
-0 & \text{ i < n-k} \\
-k & \text{ i =n-k } 
+k &  i = 0 \\
+0 & i < n-k \\
+k & i =n-k
 \end{cases}
 \]
 Since $X$ has dimension $n-k$, we have now proved that $X$ is Calabi--Yau, since we have checked the triviality of the canonical sheaf and the vanishing of the middle cohomology groups.
@@ -177,13 +187,13 @@ The last chapter of this thesis is concerned about the construction of new examp
 
 \subsection{Mirror symmetry}
 
-After the invention of string theory in the late 60's, \CY varieties caught the attention of theoretical physicists. They predict that space-time is really $10$-dimensional, and locally looks like $\R^4 \times X$, where $M$ is a \CY manifold, of complex dimension $3$. They discovered a duality between different \CY 3-manifolds $X$ and $X^\circ$ such that their Hodge numbers satisfy $h^{11}(X) = h^{12}(X^\circ)$ and $h^{12}(X)=h^{11}(X^\circ)$ (in particular $\chi(X) = - \chi(X^\circ)$). This a conjectural correspondence between the complex moduli space of $X$ (which have tangent space $H^1(X,\Omega_X^2$), and the Kähler moduli space of $\omega^\circ$, the Kähler class on $X^\circ$. These two manifolds, though mathematically different, are thought to give rise to equivalent physical theories. This correspondence is called \emph{mirror symmetry}.
+After the invention of string theory in the late 60's, \CY varieties caught the attention of theoretical physicists. They predict that space-time is really $10$-dimensional, and locally looks like $\R^4 \times X$, where $X$ is a \CY manifold, of complex dimension $3$. They discovered a duality between different \CY 3-manifolds $X$ and $X^\circ$ such that their Hodge numbers satisfy $h^{11}(X) = h^{12}(X^\circ)$ and $h^{12}(X)=h^{11}(X^\circ)$ (in particular $\chi(X) = - \chi(X^\circ)$). This a conjectural correspondence between the complex moduli space of $X$ (which have tangent space $H^1(X,\Omega_X^2$), and the Kähler moduli space of $\omega^\circ$, the Kähler class on $X^\circ$. These two manifolds, though mathematically different, are thought to give rise to equivalent physical theories. This correspondence is called \emph{mirror symmetry}.
 
-In the 90's, Candelas et al. constructed the mirror of the general quintic \cite{candelas_string}. They calculate certain Hodge theoretic invariants on the mirror, and use them to count \emph{rational curves} on the quintic. This greatly surprised the mathematical community, and led to the invention of Gromov--Witten-invariants and homological mirror symmetry.
+In the 90's, Candelas et al. constructed the mirror of the general quintic \cite{candelas_string}. They calculate certain Hodge theoretic invariants on the mirror, and use them to count \emph{rational curves} of all degrees on the quintic. This greatly surprised the mathematical community, and led to the invention of Gromov--Witten-invariants and homological mirror symmetry.
 
 Mirror symmetry is a fascinating and notoriously technical topic. There are several good introductions, depending upon taste and technical proficiency. Two of the most comprehensive introductions are \cite{mirrorsymmetry,mirrorsymmetry_vafa}.
 
-Constructing mirrors of Calabi--Yau manifolds have become a small industry in the mathematics community. In the last chapter of this thesis, I propose mirror candidates for two of my Calabi--Yau constructions. 
+Explicitly constructing mirrors of Calabi--Yau manifolds have become a small industry in the mathematics community. In the last chapter of this thesis, I propose mirror candidates for two of my Calabi--Yau constructions. 
 
 %%%%%%%%%%%
 \subsection{The mirror construction Ansatz} % (fold)
@@ -201,7 +211,7 @@ Though it is often overlooked (or stated differently) in the literature, even th
 
 There is a $H \stackrel \Delta = (\Z/5)^5/\Z^5$-action on $X_t = Z(f_t)$ given by coordinate-wise multiplication by fifth roots of unity. Thus $H$ is a subgroup of $T_5$. The general element of the family $X_t$ is smooth, so the only singularities of the quotient $Y_t=X_t/H$ comes from points with non-trivial stabilizer. These can be resolved by methods from toric geometry. For details, see for example the first chapter of Ingrid Fausk's thesis \cite{fausk_thesis}.
 
-In the last chapter of this thesis, we use this Ansatz to produce mirror candidates for two of our Calabi--Yau constructions. An Euler-characteristic computation makes the construction plausible.
+In the last chapter of this thesis, we use this Ansatz to produce mirror candidates for two of our Calabi--Yau constructions.
 
 
 % section calabi_yau (end)
@@ -211,9 +221,9 @@ In the last chapter of this thesis, we use this Ansatz to produce mirror candida
 \section{Toric geometry} % (fold)
 \label{sec:toric_geometry}
 
-A toric variety is an irreducible and normal variety containing the torus $T=(\C^\ast)^n$  as a dense subset, such that the action of the torus on itself extends to an action on the variety.
+A toric variety is an irreducible and normal variety containing the torus ${T=(\C^\ast)^n}$  as a dense subset, such that the action of the torus on itself extends to an action on the variety.
 
-We fix some notation that will be used throughout. Details and proofs can be found in \cite{cox_toric,fulton_toric}. Each toric variety comes with two dual lattices. The \emph{lattice of 1-parameter subgroups $N$} and the \emph{character lattice $M$}. A one-parameter subgroup is a morphism $\lambda:\C ^\ast \to T$ that is a group homomorphism. The set of one-parameter subgroups is a lattice isomorphic to $\Z^n$, and we denote it by $N$. A \emph{character} is a morphism $\chi:T \to \C^\ast$ that is a group homomorphism. The set of characters is a lattice $M$ isomorphic to $\Z^n$ which is naturally dual to $N$.
+We fix some notation that will be used throughout. Details and proofs can be found in \cite{cox_toric,fulton_toric}. Each toric variety comes with two dual lattices. The \emph{lattice of 1-parameter subgroups $N$} and the \emph{character lattice $M$}. A one-parameter subgroup is a morphism $\lambda:\C ^\ast \to T$ that is a group homomorphism. The set of one-parameter subgroups is a lattice isomorphic to $\Z^n$. A \emph{character} is a morphism $\chi:T \to \C^\ast$ that is a group homomorphism. The set of characters is a lattice $M$ isomorphic to $\Z^n$ which is naturally dual to $N$.
 
 Let $V$ be a $\R$-vector space. Let $V^\vee$ be the dual vector space. A \emph{convex polyhedral cone} is a subset $\sigma$ of $V$ of the form
 $$
@@ -241,7 +251,7 @@ Let $\sigma=\langle (1,0), (1,2) \rangle \subset \R^2$. Then
 Then $\C[\sigma^\vee \cap M] = \C[x,y,x^2/y]$, where we have identified $x$ and $y$ with the standard basis of $\R^2$. This ring is isomorphic to $\C[a,b,c]/(a^2-bc)$, which is a quadric cone.
 \end{example}
 
-General toric varities are described using collections of cones called \emph{fans}. A set $\Sigma$ of cones is called a \emph{fan} if it closed under intersections and faces of cones: if $\sigma, \sigma' \in \Sigma$, then we also have $\sigma \cap \sigma' \in \Sigma$, and if $\sigma' \subset \sigma$ is a face with $\sigma \in \Sigma$, then $\sigma' \in \Sigma$ also. Thus, given a fan $\Sigma$, we get a collection of affine toric varieties $U_\sigma$ for each cone $\sigma \in \Sigma$. We have inclusions $U_{\sigma \cap \sigma'} \subset U_\sigma$, and using these inclusions we glue to get a separated toric variety. If the fan is \emph{complete} (meaning that the union of its cones is equal to $N$), the corresponding toric variety is complete. 
+General toric varities are described using collections of cones called \emph{fans}. A set $\Sigma$ of cones is called a \emph{fan} if it closed under intersections and faces of cones: if $\sigma, \sigma' \in \Sigma$, then we also have $\sigma \cap \sigma' \in \Sigma$, and if $\sigma' \subset \sigma$ is a face with $\sigma \in \Sigma$, then $\sigma' \in \Sigma$ also. Thus, given a fan $\Sigma$, we get a collection of affine toric varieties $U_\sigma$ for each cone $\sigma \in \Sigma$. We have inclusions $U_{\sigma \cap \sigma'} \subset U_\sigma$, and using these inclusions we glue to get a separated toric variety. If the fan is \emph{complete} (meaning that the union of its cones is equal to $N$), the corresponding toric variety is complete. A toric variety is smooth if and only if all of its cones are smooth, and we say that a cone is smooth if its ray is part of a $\Z$-basis for $N$.
 
 \begin{example}
 Consider \cref{fig:p2fan}. This is the fan corresponding to the toric variety $\P^2$. The dual cones $\sigma_i^\vee$ give rise to algebras $\C[x,y]$, $\C[\frac 1x, \frac yx]$ and $\C[\frac xy, \frac 1y]$.
@@ -251,7 +261,7 @@ Consider \cref{fig:p2fan}. This is the fan corresponding to the toric variety $\
 \caption{The fan corresponding to the toric variety $\P^2$.}
 \label{fig:p2fan}
 \end{figure}
-These glue to form $\P^2$. More complicated fans give rise to exponents in the monomial generators.
+The spectra of these glue to form $\P^2$. More complicated fans give rise to exponents in the monomial generators.
 \end{example}
 
 Projective toric varieties can be constructed from lattice polytopes. We describe the procedure here. Let $\Delta$ be a lattice polytope in $M \simeq \Z^n$. Let $M' = M \oplus \Z$, and embed $\Delta$ in $M'$ by sending $v$ to $(v,1)$. Let $C(\Delta)$ be the cone over $\Delta$ in $M'$. Then $\C[C(\Delta) \cap M']$ is a $\Z$-graded algebra. We let $X_\Delta \stackrel \Delta = \Proj \C[C(\Delta) \cap M']$ be the associated projective variety.
@@ -262,7 +272,7 @@ If $\Delta$ is a \emph{normal polytope}, the projective variety $X_\Delta$ is a 
 
 Recall that a \emph{Weil divisor} is a formal linear combination of codimension $1$ subvarieties of a scheme $X$ (satisfying the ``star'' condition in Hartshorne). The group of Weil divisors modulo linear equivalence is the \emph{class group} of $X$, and is denoted by $\Cl(X)$. The group of line bundles modulo isomorpism is the \emph{Picard group} of $X$, and is denoted by $\Pic(X)$. The two groups coincide for smooth varieties. They are in general very hard to compute, but for toric varieties the computation is exceptionally easy, relying only on structure of the rays in the fan $\Sigma$ defining the toric variety.
 
-For completeness, we describe the divisors on toric varities. The description will be used in \cref{chap:smoothings}, where we work out the geometry of the two smoothings of the affine cone over the del Pezzo surface of degree $6$.
+We describe the divisors on toric varities. The description will be used in \cref{chap:smoothings}, where we work out the geometry of the two smoothings of the affine cone over the del Pezzo surface of degree $6$.
 
 Let $X$ be a smooth toric variety, and let $\Sigma(1)$ denote the set of one-dimensional cones (called \emph{rays}) in the fan $\Sigma$ defining $X$. For each ray $\rho$, let $u_\rho \in N$ denote the primitive ray generator of $\rho$. Then one can show that the torus-invariant divisors on $X$ are in one to one correspondence with the rays $\rho \in \Sigma(1)$. Furthermore, every divisor on $X$ is linearly equivalent to a torus-invariant divisor. Using these two facts, one can prove the following:
 
@@ -453,7 +463,6 @@ Let $[n]$ denote the set of numbers $\{0,\ldots,n \}$. The power set of $[n]$ is
 
 \begin{definition}
 A \emph{simplical complex} is a subset $\K \subseteq \Delta_n$ (for some $n$), such that if $f \in \K$ and $g \subseteq f$, then $g \in \K$. The subsets of $\K$ of cardinality one are called the \emph{vertices} of $\K$. The subsets of codimension one are called {facets} of $\K$. The subsets of $\K$ are called \emph{faces}. The \emph{dimension} of a face $f$ is equal to $|f| - 1$. 
-\end{definition}
 
 It is often conventient to organize the number of faces of various dimensions in the \emph{f-vector}. It is a tuple $(f_1,f_2,\ldots,f_d)$, where $f_i$ is the number of $i$-dimensional faces of $\K$.
 

@@ -79,7 +79,12 @@ The following code find the subtori of $G$ acting on $X$ in this way, by equatin
 
 \begin{lstlisting}[language=Macaulay2]
 loadPackage "Binomials"
-torus = ideal apply(flatten apply(apply(apply(flatten entries gens IX, monomials), v ->  flatten entries v), j -> subsets(j,2)),    s -> s_0-s_1)
+torus = ideal apply(flatten apply(
+                  apply(
+                      apply(flatten entries gens IX, monomials),
+                          v ->  flatten entries v), 
+                              j -> subsets(j,2)),
+                                  s -> s_0-s_1)
 toruskomps = BPD torus
 toruskomps = select(toruskomps, I -> dim I == 1)
 \end{lstlisting}
