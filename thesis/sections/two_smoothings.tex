@@ -1,8 +1,7 @@
 \chapter{The two smoothings of \texorpdfstring{$C(\dP6)$}{C(dP6)}}
 \label{chap:smoothings}
-%\chapter[The two smoothings of $\C(\dP6)$][The two smoothings of C(dP6)]{The two smoothings of $\boldsymbol{C(\dP6)}$}
 
-In this chapter we study the toric singularity that is the cone over the del Pezzo surface of degree $6$. it has two topologically different smoothings, which we haven't seen studied in some detail before. 
+In this chapter we study the toric singularity that is the cone over the del Pezzo surface of degree $6$. It has two topologically different smoothings, which we haven't seen studied in some detail before. 
 
 \section{The del Pezzo surface \texorpdfstring{$\dP6$}{dP6}}
 \label{sec:twosmoothings}
@@ -52,7 +51,7 @@ $$
 
 Consider the hypersurface $\det M = 0$ in $\P^1 \times \P^1 \times \P^1$. Any solution to this equation gives a unique solution to the equation $M \vec x = 0$, meaning that the restriction of $\pi$ to $\dP6$ is an isomorphism onto the hypersurface $\det M=r_0s_0t_0-r_1s_1t_1=0$. 
 
-It is also interesting to see how this embedding arises from a toric perspective using polytopes. Since $\P^1$ is the toric variety associated with the interval $[-1,1] \subset \R$, it follows that $M = \P^1 \times \P^1 \times \P^1$ is the toric variety associated with the cube $\Delta = [-1,1]^3 \subset M_\R = \R^3$. The inclusion of $\dP6$ in $M$ induces a surjection of coordinate rings $\C[M] \to \C[\dP6]$. This correspond to the fact that there is a lattice projection of the cube onto the hexagon. See \cref{fig:cube_projection}.
+It is also interesting to see how this embedding arises from a toric perspective using polytopes. Since $\P^1$ is the toric variety associated with the interval $[-1,1] \subset \R$, it follows that $M = \P^1 \times \P^1 \times \P^1$ is the toric variety associated with the cube $\Delta = [-1,1]^3 \subset M_\R = \R^3$. The inclusion of $\dP6$ in $M$ induces a surjection of coordinate rings $\C[M] \to \C[\dP6]$. This corresponds to the fact that there is a lattice projection of the cube onto the hexagon. See \cref{fig:cube_projection}.
 
 \begin{figure}
 \centering 
@@ -82,7 +81,7 @@ A =
 \end{pmatrix}.
 \end{equation}
 
-Note that there are essentialy four embeddings of the hexagon into the octahedron, because each embedding is given by choosing a line through opposite faces (the line spanned by the normal vector of the hexagon), and there are $8$ faces, hence $4$ lines through opposite faces.
+Note that there are essentialy four embeddings of the hexagon into the octahedron, because each embedding is given by choosing a line through opposite faces of the cube (the line spanned by the normal vector of the hexagon), and there are $8$ faces, hence $4$ lines through opposite faces.
 
 \subsection{Embedding in $\P^2 \times \P^2$}
 
@@ -120,7 +119,7 @@ See the illustation in \cref{fig:minkowski_decompositions} for a decomposition o
 \label{fig:minkowski_decompositions}
 \end{figure}
 
-Let $A=A(Z)$ denote the affine coordinate ring of $C(\dP6)$. It has a natural $\Z$-grading. From Altmann's article, or by using \MM, ones computes that $\dim T^1(A)=3$, and that $\dim T^2(A)=2$. The versal base space decomposes into a union of a line and a plane. Both components are smoothing components, which are topologically different. We will prove this by computing their singular cohomology groups below.
+Let $S_Z$ denote the affine coordinate ring of $C(\dP6)$. It has a natural $\Z$-grading. From Altmann's article, or by using \MM, ones computes that $\dim_k T^1(S_Z/k,S_Z)=3$, and that $\dim T^2(S_Z/k, S_Z)=2$. The versal base space decomposes into a union of a line and a plane. Both components are smoothing components.
 
 It is worthwhile to note that both smoothings of $Z$ arise by ``sweeping out the cone'': if $X$ is a projective variety in $\P^n$, and $Y$ is equal to $X \cap H$, where $H$ is a section of $\OO_{\P^n}(1)$, then the affine cone over $Y$ deforms to a general hyperplane section of the affine cone over $X$. See the introduction of \cite{stevens_deformations} for more details.
 
@@ -183,7 +182,7 @@ Hence we see that $M$ is isomorphic to the total space of the Grassmannian of li
 What have we gained by homogenizing? The divisor at infinity is $y_1=0$, which is a $\dP6$ again. In our new coordinates this is equivalent to $y_1'=y_2'=y_0'$. Hence in the coordinates of $\P^2 \times \P^2$, $\dP6$ is given by the two equations $x_1y_0-x_2y_1=x_1y_0-x_0y_2=0$. 
 \end{proof}
 
-The other smoothing is the obtained by replacing one of the corners of the cube in \cref{fig:p1p1p1_equations} with $a_{000}'=a_{000}+t$, obtaining a one-parameter smoothing. The total space is now the affine cone over $\P^1 \times \P^1 \times \P^1$. 
+The other smoothing is obtained by replacing one of the corners of the cube in \cref{fig:p1p1p1_equations} with $a_{000}'=a_{000}+t$. The total space is now the affine cone over $\P^1 \times \P^1 \times \P^1$. 
 
 Call this smoothing $X_1.$
 
@@ -202,7 +201,7 @@ The two smoothings are topologically different.
 \begin{proof}
 The Euler characteristic of $\P(\mathcal T_{\P^2})$ is $6$, which follows from the next lemma.
 
-This let us calculate the Euler characteristics of the smoothings. Note that $\chi(\P^1)=2$. By the Künneth formula, the Euler characteristic is multiplicative on products, so that $\chi(\P^1 \times \P^1 \times \P^1)=8$. By additivity of the Euler characteristics we have $\chi(X_1)=2$ and $\chi(X_2)=0$, since $\chi(\dP6)=6$.
+This let us calculate the Euler characteristics of the smoothings. Note that $\chi(\P^1)=2$. By the Künneth formula, the Euler characteristic is multiplicative on products, so that $\chi(\P^1 \times \P^1 \times \P^1)=8$. By additivity of Euler characteristics we have $\chi(X_1)=2$ and $\chi(X_2)=0$, since $\chi(\dP6)=6$.
 
 It follows that the two smoothing components correspond to topologically different smoothings, since the Euler characteristic is a topological invariant.
 \end{proof}
@@ -309,7 +308,7 @@ A'^T =  \frac 13
 \]
 The image generates a sublattice $\frac 13 \Z^2 \subset \Z^2$. Replace $A'$ by $A \stackrel{\Delta}{=} 3A'$, and consider only the sublattice.
 
-The images of the rays of the fan of $\dP6$ under $A^T$ are exacty the $6$ rays of the fan of $\P^2 \times \P^2$. This means that the map $C^T$ in the Lemma is the identity matrix $I_6$, and we have a diagram
+The images of the rays of the fan of $\dP6$ under $A^T$ are exactly the $6$ rays of the fan of $\P^2 \times \P^2$. This means that the map $C^T$ in the Lemma is the identity matrix $I_6$, and we have a diagram
 \[
 \begin{tikzcd}
 0 \arrow{r} &  \Z^4 \arrow{r}{R_1} \arrow{d}{A^T} & \Z^6 \arrow{d}{I_6} \arrow{r} & \Pic(\P^2 \times \P^2)=\Z^2  \arrow{d}{i^\ast} \arrow{r} & 0\\
@@ -325,7 +324,7 @@ This lemma let us compute explicitly what the induced map of Picard groups is us
 The two affine smoothings are topologically different. The homology groups are:
 \begin{center}
 \begin{tabular}{ l | >{$}c<{$}  >{$}c<{$}  >{$}c<{$}  >{$}c<{$}  >{$}c<{$}  >{$}c<{$}  >{$}c<{$} | c }
- Group & 1 & 1 & 2 & 3 & 4 & 5 & 6 & Euler characteristic \\
+ Group & 1 & 1 & 2 & 3 & 4 & 5 & 6 & Euler-characteristic \\
 \hline
 $H^i(X_1,\Z)$ & 1 & 0 & 2 & 1 & 0 & 0 & 0 & 2 \\
 $H^i(X_2,\Z)$ & 1 & 0 & 1 & 2 & 0 & 0 & 0  & 0
@@ -407,6 +406,6 @@ This is an injective map, and as above, we conclude that $H_3(X_2;\Z) \simeq H^3
 \end{proof}
 
 \begin{remark}
-In fact, the Andreotti-Frankel theorem \cite{andreotti_affinecw} states the following: if $V$ is any smooth affine variety of complex dimension $n$, then it has the homotopy type of a CW complex of real dimension $n$. Thus it comes for free that $H^j(X_i,\Z)=0$ for $j > 3$.
+In fact, the Andreotti--Frankel theorem \cite{andreotti_affinecw} states the following: if $V$ is any smooth affine variety of complex dimension $n$, then it has the homotopy type of a CW complex of real dimension $n$. Thus it comes for free that $H^j(X_i,\Z)=0$ for $j > 3$.
 \end{remark}
  

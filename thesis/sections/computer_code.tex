@@ -1,11 +1,13 @@
 \chapter{Computer code}
 \label{sec:computercode}
 
-Extensive use of computer software such as \MM \cite{M2} and SAGE \cite{sagemath} has been invaluable during my work. In this Appendix I collect some computer code for reproducing some of my calculations.
+Extensive use of computer software such as \MM \cite{M2} and SAGE \cite{sagemath} has been invaluable during my work. Especially the \MM package \texttt{VersalDeformations} \cite{ilten_versaldeformations} has been useful for experiments (lifting deformations to higher order, looking at base spaces, etc.).
+
+In this Appendix I collect some computer code for reproducing some of my calculations.
 
 \section{Computing the singular locus}
 
-In some cases, equations simplify significantly in affine charts. Therefore, using the naive command \texttt{singularLocus} in \MM often takes unnecessarily long time (and sometimes the computations never finish), as it computes the minors of a very large Jacobian matrix. Restricting to each affine chart, we can use the command \texttt{minimalPresentation} to eliminate variables to produce a new ring isomorphic to the first one, but with fewer equations.
+In some cases, equations simplify significantly in affine charts. Therefore, using the naive command \texttt{singularLocus} in \MM often takes unnecessarily long time (and sometimes the computations never finish), as it computes the minors of a very large Jacobian. Restricting to each affine chart, we can use the command \texttt{minimalPresentation} to eliminate variables to produce a new ring isomorphic to the first one, but with fewer equations.
 
 The following code produces a list of the components of the singular locus of the projective scheme with ideal $I$.
 
@@ -40,7 +42,7 @@ time fastSingularities I
 time radical ideal singularLocus I
 \end{lstlisting}
 
-Our function performs significantly faster. On a modern Mac, the times are 1.14 seconds versus 4.31 seconds, respectively.
+Our function performs significantly faster. On a modern MacBook Pro, the times are 1.14 seconds versus 4.31 seconds, respectively.
 
 Here is a more involved example. Let $Y'$ be four-dimensional toric variety from Chapter 4. It is defined by the $2 \times 2$-minors two matrices. In \MM we can define it as follows:
 \begin{lstlisting}[language=Macaulay2]
@@ -54,7 +56,7 @@ Here the performance difference is even more impressive. Our function computes t
 
 \section{Torus action}
 
-The following lines checks if a projective scheme with ideal sheaf \texttt{IX} admits an action of a subtorus of $G=(\C^\ast)^n \subset \P^n$. To check this, we check if the equations are still valid after a torus action. Since $G$ is abelian, it act on functions by $\lambda \cdot f(x_1,\ldots,x_n)=f(\lambda_1 x_1, \ldots, \lambda_n x_n)$. 
+The following lines checks if a projective scheme with ideal sheaf \texttt{IX} admits an action of a subtorus of $G=(\C^\ast)^n \subset \P^n$. To check this, we check if the equations are still valid after a torus action. Since $G$ is abelian, it act on functions by $\lambda \cdot f(x_0,\ldots,x_n)=f(\lambda_0 x_1, \ldots, \lambda_n x_n)$. 
 
 
 \begin{lemma}

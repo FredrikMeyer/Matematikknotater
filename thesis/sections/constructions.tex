@@ -3,16 +3,16 @@
 
 In this chapter I describe the construction of three topologically different smoothings of a singular Calabi-Yau manifold. They correspond to different components of the Hilbert scheme of threefolds in $\P^{11}$ with Hilbert polynomial $p(t)=6t^3+6$. 
 
-We first describe a degenerate \CY in the form of a Stanley--Reisner scheme $\P(\K)$, which has a quite large symmetry group. There is a natural deformation to a $X_Y$, which is a subvariety of a toric variety $Y$, with isolated singularities.
+We first describe a degenerate \CY $X_0$ in the form of a Stanley--Reisner scheme $\P(\K)$, which has a quite large symmetry group.
 
-We show that $X_Y$ has several topologically distinct smoothings, which lie on different components of the Hilbert scheme in $\P^{11}$.
+We show that $X_0$ has several topologically distinct smoothings, which lie on different components of the Hilbert scheme in $\P^{11}$.
 
 Furthermore, in the last section, we propose mirror candidates for two of the constructions, based on orbifolding.
 
 %%%%%%
 \section{The special fiber}
 
-Let $E_6$ be the hexagon as a simplicial complex. The associated Stanley--Reisner scheme $\P(E_6)$ is a degenerated elliptic curve in $\P^5$. If $\P^5$ have coordinates $x_0,\ldots,x_5$, the equations of $\P(E_6)$ are $x_ix_{i+2}=x_ix_{i+3}=0$, where $i$ is taken modulo $6$. This gives a total of $9$ quadratic equations.
+Let $E_6$ be the hexagon as a simplicial complex. The associated Stanley--Reisner scheme $\P(E_6)$ is a degenerate elliptic curve in $\P^5$. If $\P^5$ have coordinates $x_0,\ldots,x_5$, the equations of $\P(E_6)$ are $x_ix_{i+2}=x_ix_{i+3}=0$, where $i$ is taken modulo $6$. This gives a total of $9$ quadratic equations.
 
 \begin{lemma}
 The Hilbert polynomial of $\P(E_6)$ is $h(t)=6t$.
@@ -26,17 +26,17 @@ In the other case, it has the form $x_i^ax_{i+1}^b$, with $a+b=t$ and $a,b \neq 
 Alternatively, we could note that $\P(E_6)$ smooths to an elliptic curve of degree $6$. Since Hilbert polynomials are constant in flat families, it follows from the Riemann--Roch theorem that $h(t)=\deg \OO_{\P(E_6)}(6t)-1+1=6t$.
 \end{remark}
 
-Note that the Hilbert polynomial only differ from the Hilbert function for $t=0$, since $h(0)=0$, while $\dim_\C {S_{X_0}}_0=1$. 
+Note that the Hilbert polynomial only differ from the Hilbert function for $t=0$, since $h(0)=0$, while $\dim_\C {(S_{X_0})}_0=1$. 
 
 We now introduce the central fiber in the discussions onward. Let $\K$ be the simplicial complex $E_6 \ast E_6$. It is a triangulation of the $3$-sphere. The maximal faces are unions of maximal faces from each factor.
 
-Denote the  vertices of the left $E_6$ with $x_1,\ldots,x_6$, and the vertices of the right $E_6$ with $z_1,\ldots,z_6$. Then the maximal faces of $\K$ are of the form $x_ix_{i+i}z_jz_{j+1}$, where $i,j \in \Z_6$. The number of $i$-faces follows are easy to compute:
+Denote the  vertices of the left $E_6$ with $x_1,\ldots,x_6$, and the vertices of the right $E_6$ with $z_1,\ldots,z_6$. Then the maximal faces of $\K$ are of the form $x_ix_{i+i}z_jz_{j+1}$, where $i,j \in \Z_6$. The number of $i$-faces are easy to compute:
 
 \begin{lemma}
 The $f$-vector of $\K$ is $(12,48,36)$. 
 \end{lemma}
 \begin{proof}
-There are $12$ vertices, and $6 \times 6=36$ maximal facets. Since $\K$ is a 3-sphere, it follows that $12-f_1+36=\chi(S^3)=0$ that $f_1=48$.\footnote{Here we used that in a cell complex, the Euler characteristic is also the alternating sum of the number of cells in each dimension. This is Theorem 2.44 in \cite{hatcher_topology}.}
+There are $12$ vertices, and $6 \times 6=36$ maximal facets. Since $\K$ is a 3-sphere, it follows that $12-f_1+36=\chi(S^3)=0$ so that $f_1=48$.\footnote{Here we used that in a cell complex, the Euler characteristic is also the alternating sum of the number of cells in each dimension. This is Theorem 2.44 in \cite{hatcher_topology}.}
 \end{proof}
 
 \begin{lemma}
@@ -57,7 +57,7 @@ Any smoothing of $\P(\K)$ satisfy $|H|=12$, $c_2 \cdot H = 72$, and $H^3=36$.
 All these invariants can be read off from the Hilbert polynomial.
 \end{proof}
 
-Either by using \MM or by using the more conceptual description of the $T^i$-modules from \cite{deforming_christophersen}, we can compute: 
+Either by using \MM or by using the more combinatorial description of the $T^i$-modules from \cite{deforming_christophersen}, we can compute: 
 
 \begin{proposition}
 The dimensions of $T^1(S_{\P(\K)}/k,S_{\P(\K)})_0$ and $T^2(S_{\P(\K)}/k,S_{\P(\K)})_0$ are $84$ and $72$, respectively.
@@ -75,12 +75,12 @@ Thus, in total, $T^1_{A_\K}$ have $\C$-dimension $84$.
 
 We now compute $T^2_{A_\K}$. The contributions come from choosing $\mathbf a=x_i^2$ and $\mathbf a=x_ix_{i+1}$, respectively. If $|a|=1$ (as in the first case), the results from Christophersen's article imply that $L_b := \cap_{b' \subset b} \lk(b',\lk(x_i,\K))$ must have more than one connected component (the contribution comes from $\widetilde H^0(L_b,\C)$). This is the case if $b$ consist of two opposite vertices in the suspended circle. In total there are $2 \cdot 6 \cdot 3=36$ contributions of this form. 
 
-If $|a|=2$, the contributing links are hexagons, and in this case the contributions come from $b$ such that $L_b=\emptyset$. Again consisthoosing $b$ to consist of opposite vertices of the hexagon, we find three pairs $b$ with $L_b=\emptyset$ for each hexagon. Thus in total there are $2 \cdot 6 \cdot 3=36$ contributions of this form.
+If $|a|=2$, the contributing links are hexagons, and in this case the contributions come from $b$ such that $L_b=\emptyset$. Again choosing $b$ to consist of opposite vertices of the hexagon, we find three pairs $b$ with $L_b=\emptyset$ for each hexagon. Thus in total there are $2 \cdot 6 \cdot 3=36$ contributions of this form.
 
 In sum, $T^2_{A_\K}$ is $36+36$-dimensional.
 \end{proof}
 
-The automorphism group of $\K$ is $D_6 \times D_6 \times \Z_2$, and of order $12 \cdot 12 \cdot 2=288$. It is not difficult to see that the induced action on $T_{X_0}^1$ have two orbits under $\Aut(\K)$, corresponding to first order deformations of the form $x_ix_{i-2}+t x_{i+1}z_j$ and $x_{i-1}x_{i+1}+tx_i^2$, respectively. 
+The automorphism group of $\K$ is $D_6 \times D_6 \times \Z_2$, and of order $12 \cdot 12 \cdot 2=288$. It is not difficult to see that the induced action on the basis of $T^1(S_{X_0}/k,S_{X_0})$ have two orbits under $\Aut(\K)$, corresponding to first order deformations of the form $x_ix_{i-2}+t x_{i+1}z_j$ and $x_{i-1}x_{i+1}+tx_i^2$, respectively. 
 
 %%%%%%%%%%%%%%%%
 \section{A natural toric deformation}
@@ -92,7 +92,7 @@ The automorphism group of $\K$ is $D_6 \times D_6 \times \Z_2$, and of order $12
 \label{fig:hexagon}
 \end{figure}
 
-Consider \cref{fig:hexagon}. It is the $2$-dimensional polytope associated to the del Pezzo surface of degree $6$. The fan over this polytope correspond to a unimodular regular triangulation of the polytope, and it follows by \cref{eq:unimodular_triangs}, that $\dP6$ degenerates to the Stanley--Reisner scheme $\P(E_6 \ast \{pt\})$, where $\{ pt \}$ correspond to the origin. This is an embedded deformation inside $\P^6$.
+Consider \cref{fig:hexagon}. It is the $2$-dimensional polytope associated to the del Pezzo surface of degree $6$. The fan over this polytope correspond to a unimodular regular triangulation of the polytope, and it follows by \cref{eq:unimodular_triangs}, that $\dP6$ degenerates to the Stanley--Reisner scheme $\P(E_6 \ast \{pt\})$, where $\{ pt \}$ correspond to the origin. This is an embedded deformation inside $\P^6$. \todo{forklar bedre}
 
 Concretely, the equations of $\dP6$ are given by $x_ix_{i+2}-yx_{i+1}=x_ix_{i+3}-y^2=0$. The degeneration to $\P(E_6 \ast \{ pt \})$ is given by setting the second terms to zero.
 
@@ -206,7 +206,7 @@ It follows that the topological Euler characteristic is $\chi(X_1) \stackrel \De
 
 \begin{remark}
 \label{remark_X1}
-We can give explicit equations for a flat family with special fiber $X_Y$ and general fiber $X_1$. Let $y=h_1(x_1,\ldots,x_{12})$ and $y_1=h_2(x_1,\ldots,x_{12})$ be the generic linear forms in $\P^{13}$ defining $X_Y$ as a subscheme of $Y$. Let $g_i$ (for $i=1,\ldots,6$) be generic linear forms in $\P^{11}$. Then such a flat family is defined by the $2 \times 2$-minors of the two matrices below:
+We can give explicit equations for a flat family with special fiber $X_Y$ and general fiber $X_1$. Let $y_0=h_1(x_1,\ldots,x_{12})$ and $y_1=h_2(x_1,\ldots,x_{12})$ be the generic linear forms in $\P^{13}$ defining $X_Y$ as a subscheme of $Y$. Let $g_i$ (for $i=1,\ldots,6$) be generic linear forms in $\P^{11}$. Then such a flat family is defined by the $2 \times 2$-minors of the two matrices below:
 
 \[
 A_1 = \begin{pmatrix}
@@ -240,19 +240,19 @@ is the join of $\dP6$ with itself. Since $X_Y \subset \dP6 \ast \dP6$, we see th
 \end{remark}
 
 \begin{remark}
-Since $X_1$ avoids the fundamental subscheme $V_1 \cup V_2$, the inverse image $\pi^{-1}(X_1) \subset \widetilde{\P^{17}}$ is isomorphic to $X_1$. Thus we can realize $X_1$ as a subvariety of a \emph{smooth} variety. Unfortunaly, $X_1$ is cut out by non-ample divisors in $\widetilde{\P^{17}}$.
-\end{remark}
-
-\begin{remark}
 I have not been able to rigorously compute the Hodge nubmers of $X_1$. However, over several finite fields I have computed the dimension of the degree zero part of the $T^1$ module in \MM. By \cref{prop:t1h1}, we have that $(T^1(S_{X_1}/k,S_{X_1}))_0 = H^1(X_1,\Omega^2_X)$. This module can be computed in \MM.
 
 After about a week of computation on a modern desktop computer, the answer turns out to be $\dim_{\mathbb F_p} (T^1(S_{X_1}/\mathbb F_p,S_{X_1}))_0 = 39$ for several large primes $p$.
 
-This is plausible because of the following heuristic moduli count: $X_1$ is parametrized by the Grassmannian $\mathbb Gr(12,(E \otimes E)^{\oplus 2} )$, which has dimension $(18-12)\cdot 12 = 72$. Each $E$-factor is acted upon by $\GL(E)$. There are four of these factors, so we have an action of $\prod^4 \GL(E)$ on the Grassmannian. There is a torus subgroup $(\C^\ast)^4$ acting by $(v \otimes w, r \otimes s) \mapsto (t_1t_2 v \otimes w, t_3t_4 r \otimes s)$ on $\P^{17}$. Elements of $(\C^\ast)^4$ satisfying $t_1t_2=t_3t_4$ act trivially, forming a isotropy subgroup $K$.  Hence we have an action of the quotient group $G \stackrel \Delta = \left(\prod_{i=1}^4 \GL(4)\right)/K$ on the Grassmannian. This quotient group hasa dimension $9 \cdot 4 - 3 = 33$.
+This is plausible because of the following heuristic moduli count: $X_1$ is parametrized by the Grassmannian $\mathbb Gr(12,(E \otimes E)^{\oplus 2} )$, which has dimension $(18-12)\cdot 12 = 72$. Each $E$-factor is acted upon by $\GL(E)$. There are four of these factors, so we have an action of $\prod^4 \GL(E)$ on the Grassmannian. There is a torus subgroup $(\C^\ast)^4$ acting by $(v \otimes w, r \otimes s) \mapsto (t_1t_2 v \otimes w, t_3t_4 r \otimes s)$ on $\P^{17}$. Elements of $(\C^\ast)^4$ satisfying $t_1t_2=t_3t_4$ act trivially, forming a isotropy subgroup $K$.  Hence we have an action of the quotient group $G \stackrel \Delta = \left(\prod_{i=1}^4 \GL(4)\right)/K$ on the Grassmannian. This quotient group has dimension $9 \cdot 4 - 3 = 33$.
 
-We form the quotient $\mathbb G(12,(E \otimes E)^{\oplus 2})/G$, which have dimension $72-33=39$.
+We form the quotient space $\mathbb G(12,(E \otimes E)^{\oplus 2})/G$, which have dimension $72-33=39$.
 
-If this is true, then $X_1$ has Hodge numbers $h^{11}=3$ and $h^{12}=39$. It is not clear which other divisors there are besides the hyperplane divisor.
+If this is true, then $X_1$ has Hodge numbers $h^{11}=3$ and $h^{12}=39$, since we have computed the Euler characteristic. It is not clear which other divisors there are besides the hyperplane divisor.
+\end{remark}
+
+\begin{remark}
+Since $X_1$ avoids the fundamental subscheme $V_1 \cup V_2$, the inverse image $\pi^{-1}(X_1) \subset \widetilde{\P^{17}}$ is isomorphic to $X_1$. Thus we can realize $X_1$ as a subvariety of a \emph{smooth} variety. Unfortunaly, $X_1$ is cut out by non-ample divisors in $\widetilde{\P^{17}}$.
 \end{remark}
 
 %%%%%%%%%%%%
@@ -285,7 +285,7 @@ A pure $2 \times 2 \times 2$-tensor can be visualized as a cube with vertices $a
 
 The equations of the set of rank $1$ tensors in $\P(F \otimes F \otimes F)$ are obtained as the ``minors'' along the $6$ sides of the cube, together with the minors along with the $3$ long diagonals, giving a total of $9$ binomial equations. We write this symbolically as $[a_{ijk}] \leq 1$. 
 
-Hence the equations for $N$ are given by $[a_{ijk}] \leq 1$, together with $[b_{ijk}] \leq 1$. Since these are equations in a disjoint set of variables, it is clear that $N=(\P^1 \times \P^1 \times \P^1)^{\ast 2}$.
+Hence the equations for $N$ are given by $[a_{ijk}] \leq 1$, together with $[b_{ijk}] \leq 1$. Since these are equations in a disjoint set of variables, it is clear that $N=\left(\P^1 \times \P^1 \times \P^1\right)^{\ast 2}$.
 
 The claim about the singular locus and the canonical sheaf follow as in the proof of \cref{prop:m}.
 \end{proof}
@@ -293,7 +293,8 @@ The claim about the singular locus and the canonical sheaf follow as in the proo
 Let $X_2$ be the intersection of $N$ with a general $\P^{11}$.
 
 \begin{proposition}
-The topological Euler characteristic of $X_2$ is $-48$.
+\label{prop:x2}
+$X_2$ is a smooth Calabi--Yau variety with $\chi(X_2)=-48$.
 \end{proposition}
 \begin{proof}
 The proof is identical to the proof of \cref{prop:x1}.
@@ -302,7 +303,7 @@ The proof is identical to the proof of \cref{prop:x1}.
 \begin{remark}
 A heuristic moduli count works also in this case.
 
-$X_2$ lies in a $12$-plane in $\P((F \otimes F \otimes F)^{\oplus 2})$. Such planes are parametrized by $\Gr(12,16)$, the Grassmannian of $12$-planes in $k^{16}$. This space is $12 \cdot (16-12)=48$-dimensional. There is an action of the group $\prod_{i=1}^6 \GL(F)$ on $(F \otimes F \otimes F)^{\oplus 2}$. There is also in this case a torus subgroup acting trivially. Namely, the elements satisfying $t_1t_2t_3=t_4t_5t_6$. Call this subgroup $K$. Thus we really have an action of the group $\left(\prod_{i=1}^6 \GL(F)\right)/K$, which have dimension $6 \cdot 4 - 5 = 19$. Thus in total we have $48-19=29$ moduli parameters.
+$X_2$ lies in a $\P^{11}$ in $\P((F \otimes F \otimes F)^{\oplus 2})$. Such planes are parametrized by $\Gr(12,16)$, the Grassmannian of $12$-planes in $k^{16}$. This space is $12 \cdot (16-12)=48$-dimensional. There is an action of the group $\prod_{i=1}^6 \GL(F)$ on $(F \otimes F \otimes F)^{\oplus 2}$. There is also in this case a torus subgroup acting trivially. Namely, the elements satisfying $t_1t_2t_3=t_4t_5t_6$. Call this subgroup $K$. Thus we really have an action of the group $\left(\prod_{i=1}^6 \GL(F)\right)/K$, which have dimension $6 \cdot 4 - 5 = 19$. Thus in total we have $48-19=29$ moduli parameters.
 
 Since we know the Euler characteristic, we predict the Hodge numbers to be $(h^{11},h^{12})=(5,29)$.
 \end{remark}
@@ -314,14 +315,15 @@ In the above cases, we formed the join of equal varieties. We mix things up: let
 Now let $W$ be the set of ``mixed'' rank $1$ tensors. In a way similar to above, we find that $W$ is a singular Fano toric variety of dimension $8$. The singular locus is of dimension $4$, so a $5$-fold complete intersection is again a smooth Calabi-Yau variety $X_3$.
 
 \begin{proposition}
-The Euler characteristic of $X_3$ is $-60$.
+\label{prop:x3}
+$X_3$ is a smooth Calabi--Yau variety with $\chi(X_3)=-60$.
 \end{proposition}
 \begin{proof}
 The proof is identical to the proofs above.
 \end{proof}
 
 \begin{remark}
-We again give a heuristic moduli count. The Grassmannian in this case is $60$-dimensional. The group acting on it is $\prod^2 \GL(E) \times \prod^3 \GL(F)$. Here the trivially acting torus subgroup will be those satisfying $t_1t_2=t_3t_4t_5$. It follows the the parameter space is $60-(18+12-4)=34$-dimensional.
+We again give a heuristic moduli count. The Grassmannian in this case is $60$-dimensional. The group acting on it is $\prod^2_{i=1} \GL(E) \times \prod^3_{i=1} \GL(F)$. Here the trivially acting torus subgroup will be those satisfying $t_1t_2=t_3t_4t_5$. It follows the the parameter space is $60-(18+12-4)=34$-dimensional.
 
 Hence we predict the Hodge numbers to be $(h^{11},h^{12})=(4,34)$.
 \end{remark}
@@ -408,7 +410,7 @@ Furthermore, there is a $\Z/2$-action switching the $E \otimes E$-factors. Call 
 
 All these groups commute up to a scalar, so we get a $\Z/3 \times \Z/2 \times \Z/2$-action on $\P(E \otimes E \oplus E \otimes E)$. Let $G$ be the abelian group generated by $g$ and $\sigma$. Let $G'$ be the group generated by $g, \sigma$ and $\tau$. 
 
-For the $G$-action to restrict to $X_1=M \cap H$, we must choose $H$ to be invariant under the group action. Here we describe a family of $G$-invariant $\P^11$'s: denote a unit matrix in the first factor of $(E \otimes E) \oplus (E \otimes E)$ by $e_{ij}^0$, and denote a unit matrix in the second factor by $e_{ij}^1$, where $0,1$ are taken modulo $2$. 
+For the $G$-action to restrict to $X_1=M \cap H$, we must choose $H$ to be invariant under the group action. Here we describe a family of $G$-invariant $\P^{11}$'s: denote a unit matrix in the first factor of $(E \otimes E) \oplus (E \otimes E)$ by $e_{ij}^0$, and denote a unit matrix in the second factor by $e_{ij}^1$, where $0,1$ are taken modulo $2$. 
 
 Now consider the $H_t=\P^{11}$ spanned by the following matrices:
 $$
@@ -448,12 +450,15 @@ Let $X_1^\circ$ be a minimal resolution of $\widetilde{X_{H_t}}/(\Z/3)$. Such a 
 \end{theorem}
 \begin{proof}
 The existence of this kind of quotient singularity is proved in Roan's article \cite{roan_minres}. Furthermore, in his article \cite{roan_euler}, he proves a formula for the Euler characteristic of such resolutions (let $V=\widetilde{X_{H_t}})$:
+
 \[
 \chi\left(\widetilde{V/(\Z/3)} \right) = \frac{1}{3} \sum_{g,h \in \Z/3}  \chi(V^g \cap V^h).
 \]
+
 For $(g,h) \neq (e,e)$, $\chi(V^g \cap V^h)$ is just the finite set of of fixed points. There are $24$ of these. For $(g,h)=(e,e)$, $\chi(V^e \cap V^e)=\chi(V)$ is the Euler characteristic of the resolution of $X_{H_t}$, which is $24$.
 
 In sum, we find
+
 $$
 \chi(X_1^\circ) = \frac 13 \left(24 + 8 \cdot 24\right)=72.
 $$
@@ -483,22 +488,19 @@ For $t_{i,j,k}=1$ for all $i,j,k$ the variety $X_{K_t} \stackrel \Delta =  N \ca
 There exists a mirror candidate for $X_2$ as well. More precisely, there exists a \CY desingularization $X_2^\circ $of the quotient $\widetilde {X_{K_t}}/H$ in such a way that the Hodge numbers satisfy $\chi(X_2) = -\chi(X_2^\circ) = -48$.
 \end{proposition}
 
+%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+\subsection{Comment about $X_3$}
 
----
-Denote by $D_6$ the dihedral group of order $12$, the symmetries of a hexagon. It is generated by a rotation $\rho$ of order $6$, together with a reflection $\sigma$, subject to $\sigma \rho \sigma = \rho^{-1}$. There is an isomorphism $D_6 \simeq S_3 \times \Z_2$: $S_3$ is identified with $\langle \rho^2, \sigma \rangle$ and $\Z_2$ is identied with $\rho^3$.
+The same mirror construction does not work for $X_3$, at least not directly. In the case of $X_1$ and $X_2$, there were natural torus actions on $E$ and $F$,  respectively. This action extendend to $\P\left(\left( E \otimes E\right)^{\oplus 2}\right)$ and $\P\left(\left(F \otimes F \otimes F\right)^{\otimes 2}\right)$, and we intersected with invariant $\P^{11}$s to get special Calabi--Yaus.
 
-\begin{lemma}
-There are $D_6$-actions on both $M$ and $N$.
-\end{lemma}
-\begin{proof}
-Switching the direct summands of ${\left(E \otimes E\right)}^{\oplus 2}$, gives us a $\Z_2$-action. In total we now have a $S_3 \times \Z_2$-action, which by the above remark is a $D_6$-action. Note that since the action was defined on $E$, the rank of elements of $E \otimes E$ is preserved, so that we indeed have an action on $M$.
+In the case of $X_3$, there is no natural torus action on the ambient projective space coming from the join factors, so the same construction does not apply.
 
-Similarly, $N$ is the rank $1+1$ tensors in ${\left(E \otimes E \otimes E \right)}^{\oplus 2}$, where now $E$ is a $2$-dimensional vector space. 
-\end{proof}
+%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
 
-\section{Conclusion} % (fold)
-
-In this final chapter we constructed several smooth Calabi--Yau manifolds. Three of them, $X_1,X_2$ and $X_3$ lie in the same flat family (over a necessarily reducible base space). They are all smoothing of $X_Y$, a complete intersection in a 5-dimensional toric variety $Y$. This $X_Y$ has a maximally crepant resolution of singularities which is a smooth Calabi--Yau.
+In this final chapter we constructed several smooth Calabi--Yau manifolds. Three of them, $X_1,X_2$ and $X_3$ lie in the same flat family (over a necessarily reducible base space). They are all smoothings of $X_Y$, a complete intersection in a 5-dimensional toric variety $Y$. This $X_Y$ has a maximally crepant resolution of singularities which is a smooth Calabi--Yau.
 
 We constructed mirror candidates and finite group quotiens of $X_1$ and $X_2$.
 
@@ -519,9 +521,9 @@ There are many connections to works by others in the literature. We discuss a fe
 
 	We have a morphism $\pi:X_1 \to \P^2 \times \P^2 \times \P^2 \times \P^2$ defined by $(v \otimes w, r \otimes s) \mapsto v \otimes w \otimes r \otimes s$. The morphism is generically $1-1$. I have not been able to see what the image is (or if the morphism is an isomorphism).
 
-	The same situation occurs with $X_2$. Here there is a morphism $\pi:X_2 \to (\P^1)^{\times 6}$. I don't know what the image is. Also here there should be a connection with $X_{8,44}$, since $X_{8,44}$ also can be realized as a complete intersection in $(\P^1)^{\times 6}$. See the introduction of \cite{braun_smallhodgenumbers}.
+	The same situation occurs with $X_2$. Here there is a morphism ${\pi:X_2 \to (\P^1)^{\times 6}}$. I don't know what the image is. Also here there should be a connection with $X_{8,44}$, since $X_{8,44}$ also can be realized as a complete intersection in $(\P^1)^{\times 6}$. See the introduction of \cite{braun_smallhodgenumbers}.
 
-	\item It would also be interesting to find proofs of the Euler characteristics being $-72,-60$ and $-48$ and the Hodge numbers not involving computer calculations.
+	\item It would also be interesting to find proofs of the Euler characteristics being $-72,-60$ and $-48$ not involving computer calculations. In all cases the Grassmannian parametrizing the $X_i$ have dimension $72$, $60$, and $48$. 
 
 	\item Assuming that my calculation of the Hodge numbers of the $X_i$ are correct, what are representatives of the generators of $\Pic X_i$? (being $\Z^3$, $\Z^5$ and $\Z^4$, respectively)
 

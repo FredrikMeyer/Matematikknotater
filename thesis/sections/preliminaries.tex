@@ -199,7 +199,7 @@ Explicitly constructing mirrors of Calabi--Yau manifolds have become a small ind
 \subsection{The mirror construction Ansatz} % (fold)
 \label{sec:the_mirror_construction_ansatz}
 
-In many cases of interest, given a construction of a Calabi--Yau manifold, the following Ansatz produces a mirror. \todo{Spør Jan: er dette Janko Bohms konstruksjon i forkledning?}
+In many cases of interest, given a construction of a Calabi--Yau manifold, the following Ansatz produces a mirror.
 
 Let $\K$ be a simplicial complex, with associated Stanley--Reisner scheme $X_0$. Let $G$ be the automorphism group (or a subgroup of the automorphism group) of $\K$. Then $G$ induces an action on $T^1_{X_0} \stackrel \Delta = T^1(S_{X_0}/k,S_{X_0})$ in the following way: each element of $T_{X_0}^1$ can be represented by a $\phi \in \Hom(I/I^2,A)$, and then $g \cdot \phi$ is given by $(g \cdot \phi)(f) = g \cdot \phi(g^{-1} \cdot f)$.
 
@@ -226,9 +226,11 @@ A toric variety is an irreducible and normal variety containing the torus ${T=(\
 We fix some notation that will be used throughout. Details and proofs can be found in \cite{cox_toric,fulton_toric}. Each toric variety comes with two dual lattices. The \emph{lattice of 1-parameter subgroups $N$} and the \emph{character lattice $M$}. A one-parameter subgroup is a morphism $\lambda:\C ^\ast \to T$ that is a group homomorphism. The set of one-parameter subgroups is a lattice isomorphic to $\Z^n$. A \emph{character} is a morphism $\chi:T \to \C^\ast$ that is a group homomorphism. The set of characters is a lattice $M$ isomorphic to $\Z^n$ which is naturally dual to $N$.
 
 Let $V$ be a $\R$-vector space. Let $V^\vee$ be the dual vector space. A \emph{convex polyhedral cone} is a subset $\sigma$ of $V$ of the form
+
 $$
 \sigma = \{ r_1 v_1 + \ldots + r_s v_s \mid r_i \geq 0 \text{ for all } i \},
 $$
+
 where the $v_i$ is a finite set of vectors in $V$ and the $r_i$ are real numbers. A \emph{rational polyhedral cone} is a cone such that the vectors $v_i$ can be taken to have rational coordinates.
 
 The \emph{dual cone $\sigma^\vee$} lives in $V^\vee$, and is defined as the set of functionals that are positive on $\sigma$:
@@ -364,7 +366,7 @@ If $X$ is a projective variety and $S_X$ its homogeneous coordinate ring, let $U
 Let $X/k$ be a smooth projective Calabi--Yau variety, and let $S_X$ be its homogeneous coordinate ring. Then we have an isomorphism
 $$
 T^1(S_X/k,S_X)_0  \simeq H^1(X, \mathcal T_X),
-$$a
+$$
 where $\mathcal T_X$ is the tangent sheaf of $X$.
 \end{proposition}
 \begin{proof}
@@ -463,6 +465,7 @@ Let $[n]$ denote the set of numbers $\{0,\ldots,n \}$. The power set of $[n]$ is
 
 \begin{definition}
 A \emph{simplical complex} is a subset $\K \subseteq \Delta_n$ (for some $n$), such that if $f \in \K$ and $g \subseteq f$, then $g \in \K$. The subsets of $\K$ of cardinality one are called the \emph{vertices} of $\K$. The subsets of codimension one are called {facets} of $\K$. The subsets of $\K$ are called \emph{faces}. The \emph{dimension} of a face $f$ is equal to $|f| - 1$. 
+\end{definition}
 
 It is often conventient to organize the number of faces of various dimensions in the \emph{f-vector}. It is a tuple $(f_1,f_2,\ldots,f_d)$, where $f_i$ is the number of $i$-dimensional faces of $\K$.
 
