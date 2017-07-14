@@ -79,7 +79,7 @@ The dimensions of the groups $H^i(X,\OO_X)$ are constant in flat families. Since
 
 \section{Attempt to smooth triangulations}
 
-If $\K$ is a triangulation of $\C \P^2$ and $\P(\K)$ is the associated Stanley--Reisner-scheme, a smoothing of $\P(\K)$ will give a hyper-Kähler variety. Using this idea, and the \MM package \texttt{VersalDeformations} (by Nathan Ilten, see \cite{ilten_versaldeformations}), we tried to find potentially new hyper-Kähler varieties. Unfortunaly, it looks like all the triangulations we experimented with were non-smoothable.
+If $\K$ is a triangulation of $\C \P^2$ and $\P(\K)$ is the associated Stanley--Reisner-scheme, a smoothing of $\P(\K)$ will give a hyper-Kähler variety. Using this idea, and the \MM package \texttt{VersalDeformations} (by Nathan Ilten, see \cite{ilten_versaldeformations}), we tried to find potentially new hyper-Kähler varieties. Unfortunaly, it looks like all the triangulations we experimented with were not smoothable.
 
 In the next four subsections we describe four different triangulations of $\C \P^2$, their ideal structure, and compute some of their deformation theoretic invariants. In all cases we conclude that the corresponding Stanley--Reisner scheme is probably not smoothable.
 
@@ -131,6 +131,7 @@ Because of the high number of parameters, we have not been able to say anything 
 
 It is not clear however if this union of toric varieties can be further deformed.
 
+%%%%%%%%%%
 \subsection{Kühnel's 9-vertex triangulation}
 
 The minimal triangulation $\mathcal T_9$ of $\C \P^2$ is a 9-vertex triangulation with f-vector $(9,36,84,90,36)$. This means that the associated Stanley--Reisner scheme $\P(\mathcal T_9)$ lives in $\P^8$ and is of degree $36$. The automorphism group of $\mathcal T_9$ is a group of order $54$, and it can be realized as a semidirect product $(\Z_3 \times \Z_3) \ltimes \Z_3 \ltimes \Z_2$. For a very readable account of the construction and motivation of this triangulation, consult \cite{kuhnel_9vertex}.
@@ -184,10 +185,11 @@ Again we see that the ideal is not Gorenstein.
 We have that $\dim_\C  {T^1(S_{\P(\mathcal T)}/k, S_{\P(\mathcal T)})}_0=42$ and $\dim_\C = {T^2(S_{\P(\mathcal T)}/k, S_{\P(\mathcal T)})}_0=105$. The normal sheaf $\mathcal N_{\P(\mathcal T_{10})/\P^{8}}$ has $132$ global sections.
 \end{proposition}
 
-In fact, it is possible to lift the versal family of deformation parameters to an honest family over $\Spec \C[t_1,\cdots,t_{42}]$, using the \texttt{VersalDeformations} package. Surprisingly, even though the $T^2$ module is big, there are no obstructions in the family (in the sense that the base space is smooth). However, the generic member of this family is reducible (verified in \MM for ``random'' values of the deformation parameters), implying that $\P(\mathcal T_{10})$ is not smoothable.
+In fact, it is possible to lift the versal family of deformation parameters to an honest family over $\Spec \C[t_1,\cdots,t_{42}]$, using the \texttt{VersalDeformations} package. Surprisingly, even though the $T^2$ module is big, there are no obstructions in the family (in the sense that the base space is $\A^{42}$). However, the generic member of this family is reducible (verified in \MM for ``random'' values of the deformation parameters), implying that $\P(\mathcal T_{10})$ is not smoothable.
 
 The automorphism group act transitively on the natural basis of $T^1$, so that $\dim_\C {{T^1(S_{\P(\mathcal T)}/k, S_{\P(\mathcal T)})}_0}^G=1$. 
 
+%%%%%%%%%%%%%%%%%%%
 \subsection{The Bagchi--Datta triangulation}
 
 There is another $10$-vertex triangulation $\mathcal T_{BD}$ of $\C \P^2$, which is obtained as a $\Z/2$-quotient of a triangulation of $S^2 \times S^2$. It is described in \cite{bagchi_datta}. The automorphism group is the alternating group $A_4$. The f-vector is $(10,45,110,120,48)$.

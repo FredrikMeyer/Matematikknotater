@@ -5,7 +5,7 @@ In this chapter I describe the construction of three topologically different smo
 
 We first describe a degenerate \CY $X_0$ in the form of a Stanley--Reisner scheme $\P(\K)$, which has a quite large symmetry group.
 
-We show that $X_0$ has several topologically distinct smoothings, which lie on different components of the Hilbert scheme in $\P^{11}$.
+We show that $X_0$ has several topologically distinct smoothings $X_i$ (${i=1,2,3}$), which lie on different components of the Hilbert scheme in $\P^{11}$.
 
 Furthermore, in the last section, we propose mirror candidates for two of the constructions, based on orbifolding.
 
@@ -18,7 +18,7 @@ Let $E_6$ be the hexagon as a simplicial complex. The associated Stanley--Reisne
 The Hilbert polynomial of $\P(E_6)$ is $h(t)=6t$.
 \end{lemma}
 \begin{proof}
-We want to count the dimension of $S_{X_0}$ in degree $t$. Any monomial in $S_{X_0}$ has support on the simplicial complex $E_6$, so its support is either a vertex or an edge. In the first case, the monomial has the form $x_i^t$, so there are six of these.
+We want to count the dimension of $S_{\P(E_6)}$ in degree $t$. Any monomial in $S_{\P(E_6)}$ has support on the simplicial complex $E_6$, so its support is either a vertex or an edge. In the first case, the monomial has the form $x_i^t$, so there are six of these.
 
 In the other case, it has the form $x_i^ax_{i+1}^b$, with $a+b=t$ and $a,b \neq 0$. Counting, there are $6(t-1)$ of these monomials. In total, the dimension is $6+6(t-1)=6t$.
 \end{proof}
@@ -26,11 +26,11 @@ In the other case, it has the form $x_i^ax_{i+1}^b$, with $a+b=t$ and $a,b \neq 
 Alternatively, we could note that $\P(E_6)$ smooths to an elliptic curve of degree $6$. Since Hilbert polynomials are constant in flat families, it follows from the Riemann--Roch theorem that $h(t)=\deg \OO_{\P(E_6)}(6t)-1+1=6t$.
 \end{remark}
 
-Note that the Hilbert polynomial only differ from the Hilbert function for $t=0$, since $h(0)=0$, while $\dim_\C {(S_{X_0})}_0=1$. 
+Note that the Hilbert polynomial only differ from the Hilbert function for $t=0$, since $h(0)=0$, while $\dim_\C {(S_{\P(E_6)})}_0=1$. 
 
-We now introduce the central fiber in the discussions onward. Let $\K$ be the simplicial complex $E_6 \ast E_6$. It is a triangulation of the $3$-sphere. The maximal faces are unions of maximal faces from each factor.
+We now introduce the central fiber in the discussions onward. Let $\K$ be the simplicial complex $E_6 \ast E_6$. It is a triangulation of the $3$-sphere.
 
-Denote the  vertices of the left $E_6$ with $x_1,\ldots,x_6$, and the vertices of the right $E_6$ with $z_1,\ldots,z_6$. Then the maximal faces of $\K$ are of the form $x_ix_{i+i}z_jz_{j+1}$, where $i,j \in \Z_6$. The number of $i$-faces are easy to compute:
+Denote the  vertices of the left $E_6$ by $x_1,\ldots,x_6$, and the vertices of the right $E_6$ by $z_1,\ldots,z_6$. Then the maximal faces of $\K$ are of the form $x_ix_{i+i}z_jz_{j+1}$, where $i,j \in \Z_6$. The number of $i$-faces are easy to compute:
 
 \begin{lemma}
 The $f$-vector of $\K$ is $(12,48,36)$. 
@@ -92,9 +92,7 @@ The automorphism group of $\K$ is $D_6 \times D_6 \times \Z_2$, and of order $12
 \label{fig:hexagon}
 \end{figure}
 
-Consider \cref{fig:hexagon}. It is the $2$-dimensional polytope associated to the del Pezzo surface of degree $6$. The fan over this polytope correspond to a unimodular regular triangulation of the polytope, and it follows by \cref{eq:unimodular_triangs}, that $\dP6$ degenerates to the Stanley--Reisner scheme $\P(E_6 \ast \{pt\})$, where $\{ pt \}$ correspond to the origin. This is an embedded deformation inside $\P^6$. \todo{forklar bedre}
-
-Concretely, the equations of $\dP6$ are given by $x_ix_{i+2}-yx_{i+1}=x_ix_{i+3}-y^2=0$. The degeneration to $\P(E_6 \ast \{ pt \})$ is given by setting the second terms to zero.
+Consider \cref{fig:hexagon}. It is the $2$-dimensional polytope associated to the del Pezzo surface of degree $6$. The fan over this polytope correspond to a unimodular regular triangulation of the polytope, and it follows by Theorem 8.3 in \cite{sturmfels}, that $\dP6$ degenerates to the Stanley--Reisner scheme $\P(E_6 \ast \{pt\})$, where $\{ pt \}$ correspond to the origin. Concretely, the equations of $\dP6$ are given by $x_ix_{i+2}-yx_{i+1}=x_ix_{i+3}-y^2=0$ inside $\P^6$. The degeneration to $\P(E_6 \ast \{ pt \})$ is given by setting the second terms to zero.
 
 Now form the join of two copies of $\dP6$, to get a new variety $Y \subset \P^{13}$. By \cref{lemma:join}, this is a $2+2+1=5$-dimensional toric variety with singular locus consisting of two copies of $\dP6$. Since the coordinate ring is just the tensor product of two copies of $S(\dP6)$, it follows that $Y$ degenerates to $\P(E_6 \ast \{pt\} \ast E_6 \ast \{ pt \})=\P(\K \ast \Delta^1)$.
 
@@ -393,7 +391,7 @@ In \cite{candelas_newcy}, the authors study \CY complete intersections admitting
 \end{remark}
 
 %%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%%
 \section{Invariant \CY's and a mirror construction}
 
 In this section, I will explain natural group actions on the $X_i$'s constructed above. Using the mirror construction Ansatz from above, we propose mirror candidates for $X_1$ and $X_2$.
@@ -413,19 +411,20 @@ All these groups commute up to a scalar, so we get a $\Z/3 \times \Z/2 \times \Z
 For the $G$-action to restrict to $X_1=M \cap H$, we must choose $H$ to be invariant under the group action. Here we describe a family of $G$-invariant $\P^{11}$'s: denote a unit matrix in the first factor of $(E \otimes E) \oplus (E \otimes E)$ by $e_{ij}^0$, and denote a unit matrix in the second factor by $e_{ij}^1$, where $0,1$ are taken modulo $2$. 
 
 Now consider the $H_t=\P^{11}$ spanned by the following matrices:
-$$
+\begin{equation}
+\label{eq:fija}
 f_{ij}^\alpha = e_{ij}^\alpha + t_{i-j}^\alpha e_{-i-j,-i-j}^{\alpha+1} \in E \otimes E \oplus E \otimes E,
-$$
+\end{equation}
 
 where $i \neq j \in \Z_3$ and $\alpha \in \Z_2$, and $t_{i+j}^\alpha$ is a parameter. Note that $g \cdot f_{ij}^\alpha = \omega^{i+j} f_{ij}^\alpha$, so that $H$ is spanned by eigenvectors of the $\Z/3$-action. This gives us a $4$-parameter family of $G$-invariant planes. However, multiplying all the $t_{i-j}^\alpha$ by the same number yield isomorphic families, so we really have a $3$-parameter family.
 
-Denote the intersection between $M$ and $H$ by $X_{H_t}$. Denote by $P_i$ the coordinate points $(0:\ldots:1:\ldots:0)$. Then $\Z/3$ act without fixed points outside these points (this can be computed in \MM). A \MM computation also shows that for $t_i \neq 1,0$, the family has $48$ isolated singularities: the $P_i$, and $36$ other points, which come in two orbits under the group action. \todo{which group?} These are all double points, which can be verified by local computations.
+Denote the intersection between $M$ and $H$ by $X_{H_t}$. Denote by $P_i$ the coordinate points $(0:\ldots:1:\ldots:0)$. Then $\Z/3$ act without fixed points outside these points (this can be computed in \MM). A \MM computation also shows that for $t_i \neq 1,0$, the family has $48$ isolated singularities: the $P_i$, and $36$ other points, which come in two orbits under the $G$-action. These are all double points, which can be verified by local computations.
 
 \begin{lemma}
 There exists a minimal resolution of $X_{H_t}$ ($t \neq 0,1$), respecting the group action by $G$, leaving the dualizing sheaf trivial.
 \end{lemma}
 \begin{proof}
-Analytically, a small resolution is a local operation. The singularities come in $3$ \todo{check!!!} orbits under the action, so it is enough to do the resolution on one singularity in each orbit.
+Analytically, a small resolution is a local operation. The singularities come in $3$ orbits under the action, so it is enough to do the resolution on one singularity in each orbit.
 
 Since the singularity is small, the change happen in codimension $2$. The holomorphic $3$-form on $X_{H_t}$ extends holomorphically to all of the resolution by Hartog's theorem.
 \end{proof}
@@ -436,7 +435,17 @@ After resolving the double points as above, the action of $g$ has $24$ fixed poi
 Furhermore, the resolution has Euler characteristic $24$.
 \end{lemma}
 \begin{proof}
-\todo{explain existence as in Rødland}
+To see that the $g$-action has two fixed points on the $\P^1$s coming from the initial fix points, we find local equations of $X_{H_t}$. This is done in \MM. By writing the equations of $X_{H_t}$ as $x_iu+g=0$, where $u$ is a unit locally around each fixed point, we can eliminate the variable $x_i$ locally. Doing this repeatedly, we end up with a single local equation for $X_{H_t}$: (we're now looking in the chart where $x_1 \neq 0$)
+\[
+x_{10}x_{11}-x_8x_{12} + (\text{higher order terms}).
+\]
+The coordinates of the corresponding $\P^1$ are given by (up to flops):
+\[
+[z_0:z_1] = [x_{10}:x_8] = [x_{11}:x_{12}].
+\]
+The action of $g$ on the $x_i$ are given by $g \cdot x_8 = \omega^2 x_8$, $g \cdot x_{10} = x_{10}$, $g \cdot x_{11} = \omega^2 x_{11}$ and $g \cdot x_{12} = x_{12}$. This makes $ g \cdot [z_0:z_1] = [z_0:\omega^2 z_1]$, which has two fixed points (the points $[1:0]$ and $[0:1]$).
+
+Similar local equations are given in the eleven other charts.
 
 The Euler characteristic of a small resolution is given by $\chi(\widetilde{X_{H_t}}) = \chi(X_t) + 2s$, where $s$ is the number of double points, and $X_t$ is a smooth member of a smooth smoothing family of $X_{H_t}$ (which we know exists by construction, and is $X_1$ from above). There are $48$ double points, so it follows that the Euler characteristic is $-72+2 \cdot 48 = 24$.
 \end{proof}
@@ -476,10 +485,14 @@ Recall that $F$ is a $2$-dimensional vector space with basis $f_0, f_1$. There i
 
 Furhermore, there is another $\Z/2$-action given by $f_i \mapsto f_{i+1}$ (indices taken modulo $2$).
 
-Using the same notation as in the previous section, define $K_t$ to be $\P^{11}$ spanned by the following matrices:
-\[
+Using the same notation as in the previous section, define $K_t$ to be $\P^{11}$ 
+spanned by the following matrices:
+
+\begin{equation}
+\label{eq:gijk}
 g_{ijk}^\alpha = e_{ijk}^\alpha + t_{i,j,k} e_{i+j+k,i+j+k,i+j+k}^{\alpha+1}
-\]
+\end{equation}
+
 for $(i,j,k)\neq (0,0,0),(1,1,1)$ and $\alpha=0,1$. Thus these matrices span a $\P^{11}$. Then, as above, the $g_{ijk}^\alpha$ are eigenvectors for the $\Z/2$-action.
 
 For $t_{i,j,k}=1$ for all $i,j,k$ the variety $X_{K_t} \stackrel \Delta =  N \cap K_t$ has $36$ double points. Using the same arguments as in the previous section, it follows that a small resolution of $X_{K_1}$ has Euler-characteristic $24$ as well. Again, using Roan's formula, we find that a small resolution of the quotient $X_{K_1}$ has Euler-characteristic $+48$. Thus we have a mirror candidate for $X_2$ as well.

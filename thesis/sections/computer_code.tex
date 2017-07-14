@@ -3,7 +3,7 @@
 
 Extensive use of computer software such as \MM \cite{M2} and SAGE \cite{sagemath} has been invaluable during my work. Especially the \MM package \texttt{VersalDeformations} \cite{ilten_versaldeformations} has been useful for experiments (lifting deformations to higher order, looking at base spaces, etc.).
 
-In this Appendix I collect some computer code for reproducing some of my calculations.
+In this Appendix I collect some computer code for reproducing some of my calculations. Not everything is reproduced here. For all my code, consult my GitHub account at \url{https://github.com/FredrikMeyer/m2files}.
 
 \section{Computing the singular locus}
 
@@ -265,5 +265,52 @@ generateX2 = () -> (
 Constructing $X_3$ in \MM is entirely similar to the above two constructions, so we omit the code.
 
 \begin{remark}
-Using a finite field is essential. Without a limit on the size of the coefficients, the amount of necesserary computer RAM is way beyond current technology.
+Using a finite field when computing $T^1$ is essential. Without a limit on the size of the coefficients, the amount of necesserary computer RAM is way beyond current technology.
 \end{remark}
+
+\section{Constructing the invariant subfamilies}
+
+Below is \MM code for constructing the invariant Calabi--Yau families described in Chapter 4.
+
+\subsection{Code for $X_{H_t}$}
+
+\begin{lstlisting}[caption=Code for $X_{H_t}$, language=Macaulay2]
+Z = QQ[x_1..x_12]
+
+pars = {2,3,5}
+fija = (i,j,a) -> (
+    Eij  := (id_(Z^3))_{i} * transpose (id_(Z^3))_{j};
+    Eij' :=  (id_(Z^3))_{(-i-j) % 3} * transpose (id_(Z^3))_{(-i-j) % 3};
+    if (a == 0) then (
+      Eij | pars#((i-j)%3) * Eij'
+      )
+    else (
+      pars#((i-j)%3) * Eij' | Eij
+      )
+    )
+
+MG = x_1*fija(0,1,0) + x_2*fija(0,2,0) + x_3*fija(1,0,0) + 
+     x_4*fija(1,2,0) + x_5*fija(2,0,0) + x_6*fija(2,1,0) +
+     x_7*fija(0,1,1) + x_8*fija(0,2,1) + x_9*fija(1,0,1) +
+     x_10*fija(1,2,1)+ x_11*fija(2,0,1)+ x_12*fija(2,1,1)
+
+IX = minors(2,MG_{0..2}) + minors(2,MG_{3..5})
+\end{lstlisting}
+
+The function \texttt{fija} takes as inputs the indices in the definition of $f_{ij}^\alpha$ in \cref{eq:fija}. The list \texttt{pars} are parameters. Only if the parameters are all equal to $1$ do the variety obtain more singularities.
+
+\subsection{Code for $X_{K_t}$}
+{}
+For the invariant subfamily of the $X_2$-family, the code is shorter (but uglier). We manually entered the equations of the invariant $2 \times 2 \times 2$-tensors $g_{ijk}^\alpha$ from \cref{eq:gijk}, and then computed the $2 \times 2 \times 2$-minors.
+
+\begin{lstlisting}[caption=Code for $X_{K_t}$, language=Macaulay2]
+pars = {2,3,5}
+L1 = {{{pars#0 * x_7 + pars#1 * x_8 + pars#2 * x_10,x_1},
+      {x_2,x_3}},{{x_4,x_5},
+      {x_6,pars#2 *x_9 + pars#1 * x_11 + pars#0 * x_12}}}
+L2 = {{{pars#0 * x_1 + pars#1 * x_2 + pars#2 * x_4,x_7},
+      {x_8,x_9}},{{x_10,x_11},
+      {x_12,pars#2 *x_3 + pars#1 * x_5 + pars#0 * x_6}}}
+
+IX = (minors222tensor L1) + (minors222tensor L2)
+\end{lstlisting}
