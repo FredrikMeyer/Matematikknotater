@@ -1,15 +1,16 @@
 \chapter{Preliminaries}
 \label{sec:prelims}
 
-In this chapter we introduce the consistent notation and results which will be used later. Some of the material in this chapter plays the role of motivation more than preliminary results.
+In this chapter we introduce the notation and results which will be used later. Some of the material in this chapter plays the role of motivation more than preliminary results.
 
 %%%%%
 %%%%%
 \section{The join of projective varieties}
 
-There are many ways to define the join of two projective varieties $X$ and $Y$. We will define it in a particularly general way, as described by Altman and Kleiman in \cite{altman_joins}. Then we will specialize to our situation.
+There are many ways to define the join of two projective varieties $X$ and $Y$. We will define it in a particularly general and beautiful  way, as described by Altman and Kleiman in \cite{altman_joins}. Then we will specialize to our situation.
 
 Fix a base scheme $S$. Let $\mathscr C$ be the category of graded, quasi-coherent $\OO_S$-algebras, generated in degree $1$. The tensor product of two $\OO_S$-algebras $\mathscr R$ and $\mathscr S$  is naturally graded: the degree $d$ part is given by
+
 \[
 (\mathscr R \otimes_{\OO_S} \mathscr S)_d = \bigoplus_{p+q=d} \mathscr R_p \otimes \mathscr S_q.
 \]
@@ -25,12 +26,12 @@ If $X$ and $Y$ are projective varieties over $S$, they come with graded $\OO_S$-
 The join construction is a contravariant functor in two variables from the category of graded $\OO_S$-algebras and surjective maps to the category of projective varieties.
 
 \begin{example}
-Let $X=\P(E)$ and $Y=\P(F)$, where $E,F$ are quasi-coherent $\OO_S$-modules. Then we have the equality $\P(E) \ast \P(F) = \P(E \oplus F)$, because of the linear algebra fact $\Sym(E) \otimes \Sym(F) = \Sym(E \oplus F)$.
+Let $X=\P(E)$ and $Y=\P(F)$, where $E,F$ are quasi-coherent $\OO_S$-modules. Then we have the equality $\P(E) \ast \P(F) = \P(E \oplus F)$, because of the linear algebra fact that $\Sym(E) \otimes \Sym(F) = \Sym(E \oplus F)$.
 \end{example}
 
-The algebra $\mathscr R \otimes_{\OO_S} \mathscr S$ contains the ideal $\mathscr R \otimes \mathscr S_+$. The associated subscheme is denoted by $V_X$, and is isomorphic to $X = \Proj \mathscr R$. We define $V_Y$ similarly. We call $V_X$ and $V_Y$ the \emph{fundamental subschemes} of $X \ast Y$.
+The algebra $\mathscr R \otimes_{\OO_S} \mathscr S$ contains the ideal $\mathscr R \otimes \mathscr S_+$. The associated subscheme is denoted by $V_X$, and it is isomorphic to $X = \Proj \mathscr R$. We define $V_Y$ similarly. We call $V_X$ and $V_Y$ the \emph{fundamental subschemes} of $X \ast Y$.
 
-There is a geometric definition of the join, as described in section (C11) in \cite{altman_joins}. Let $E,F$ be quasi-coherent $\OO_S$-modules\footnote{In our case, $S=\Spec k$ almost always. So $E,F$ are just vector spaces.}. Suppose $X$ and $Y$ are subschemes of $\P(E)$ and $\P(F)$. Then $X\ast Y$ is a closed subscheme of $\P(E \oplus F)$. Identify $X$ and $Y$ with their fundamental subschemes in $X \ast Y$. Then it is not difficult to see that $X \ast Y$ is the (closure of the) locus of points lying on the lines of $\P(E \oplus F)$ determined by pairs of points of $X$ and $Y$. 
+There is a geometric definition of the join, as described in section (C11) in \cite{altman_joins}. Let $E,F$ be quasi-coherent $\OO_S$-modules\footnote{In our case, $S=\Spec k$  always. So $E,F$ are just vector spaces.}. Suppose $X$ and $Y$ are subschemes of $\P(E)$ and $\P(F)$. Then $X\ast Y$ is a closed subscheme of $\P(E \oplus F)$. Identify $X$ and $Y$ with their fundamental subschemes in $X \ast Y$. Then it is not difficult to see that $X \ast Y$ is the (closure of the) locus of points lying on the lines of $\P(E \oplus F)$ determined by pairs of points of $X$ and $Y$. 
 
 %For a graded $\OO_S$-algebra $\mathscr R$ there are two natural homomorphisms. We have the \emph{structure map} $\rho: \OO_S \to \mathscr R$, and the \emph{augmentation map} $\epsilon: \mathscr R \to \OO_S$, sending everything in positive degree to zero. Clearly $\epsilon \circ \rho = \id_S$.
 
@@ -40,15 +41,16 @@ There is a geometric definition of the join, as described in section (C11) in \c
 Suppose $X/k \subset \P^n$ and $Y/k \subset \P^m$ are smooth projective schemes. Then their join, $X \ast Y$ have dimension $\dim X+\dim Y+1$. The singular locus is of dimension $\max\{a,b\}$ and consist of the disjoint union of $X$ and $Y$.
 \end{proposition}
 \begin{proof}
-Let $S_X = \bigoplus_{d \geq 0} \OO_X(d)$ and $S_Y = \bigoplus_{d \geq 0} \OO_Y(d)$ be the homogeneous coordinate rings of $X$ and $Y$. Then $X \ast Y \subset \P^{n+m+1}$. 
+Let $S_X = \bigoplus_{d \geq 0} H^0(X,\OO_X(d))$ and $S_Y = \bigoplus_{d \geq 0} H^0(Y,\OO_Y(d))$ be the homogeneous coordinate rings of $X$ and $Y$. Then $X \ast Y \subset \P^{n+m+1}$. 
 
-Denote by $C(X \ast Y)$ the scheme $\Spec (S_X \otimes_k S_Y)$, the affine cone over $X \ast Y$. 
+Denote by $C(X \ast Y)$ the scheme $\Spec (S_X \otimes_k S_Y)$, which is the affine cone over $X \ast Y$. It is a general fact that if $A$, $B$ are two algebraic varieties, then the singular locus of the product is equal to the union $\Sing A \times B \cup A \times \Sing(B)$. It follows that the singular locus of $C(X \ast Y) = C(X) \times C(Y)$ is equal to
 
-The singular locus of $C(X \ast Y) = C(X) \times C(Y)$ is equal to
 \[
 \Sing C(X) \times C(Y) \bigcup C(X) \times \Sing C(Y).
 \]
+
 Since $X$ and $Y$ are smooth, the only singular point on the affine cones are the origins. Hence
+
 $$
 \Sing\left(C(X \ast Y)\right) = 0 \times \Sing(C(Y)) \bigcup \Sing(C(X)) \times 0.
 $$
@@ -56,15 +58,20 @@ $$
 Projectivizing, we find that $\Sing(X \ast Y) = \Sing Y \sqcup \Sing X$, since $(0,\ldots,0)$ is the only common point of the affine cones. 
 \end{proof}
 
-Recall that a scheme $X$ is \emph{Cohen--Macaulay} if all its local rings $\OO_{X,x}$ are Cohen-Macaulay. This means that depth and codimension agree everywhere on $X$. One implication of Cohen--Macaulay-ness is that $X$ will have a dualizing sheaf $\omega_X$. If the dualizing sheaf is a line bundle, then we say that $X$ is \emph{Gorenstein}.
+Recall that a scheme $X$ is \emph{Cohen--Macaulay} if all its local rings $\OO_{X,x}$ are Cohen--Macaulay. This means that depth and codimension agree everywhere on $X$. One implication of being Cohen--Macaulay is that $X$ will have a dualizing sheaf $\omega_X$. If the dualizing sheaf is a line bundle, then we say that $X$ is \emph{Gorenstein}.
 
-If the homogeneous coordinate ring of a projective variety $X$ is a Gorenstein ring, we say that $X$ is \emph{arithmetically Gorenstein}. In that case, the canonical sheaf can be computed as the sheaf associated to the graded module $\Ext^{\codim X}(S_X,S_X(-\dim N-1))=S_X(-d)$, for some $d$, where $N$ is the dimension of the linear system.
+If the homogeneous coordinate ring of a projective variety $X$ is a Gorenstein ring, we say that $X$ is \emph{arithmetically Gorenstein}. In that case, the canonical sheaf can be computed as the sheaf associated to the graded module
+
+$$\Ext^{\codim X}(S_X,S_X(-\dim N-1))=S_X(-d),$$
+
+for some $d$, where $N$ is the dimension of the projective space. The number $d$ is the degree of the anticanonical embedding.
 
 If $X$ and $Y$ are two arithmetically Gorenstein schemes, then their join is also arithmetically Gorenstein. Furthermore, we can compute the canonical sheaf in terms of the canonical sheaves of $X$ and $Y$.
 
 \begin{proposition}
 Let $X=\Proj R$ and $Y=\Proj S$ be arithmetically Gorenstein projective schemes with dualizing sheaves $\omega_X, \omega_Y$, respectively (here $R, S$ are graded $k$-algebras). Then $X \ast Y$ is arithmetically Gorenstein with dualizing sheaf $\omega_X \otimes_k \omega_Y$.
 \end{proposition}
+
 \begin{proof}
 The statement follows from Theorem 4.2 in \cite{herzog_canonical}, where the authors prove that the canonical module of a tensor product is the tensor product of the canonical modules.
 \end{proof}
@@ -73,148 +80,6 @@ The statement follows from Theorem 4.2 in \cite{herzog_canonical}, where the aut
 \label{remark:canonical}
 If $X$ and $Y$ are arithmetically Gorenstein projective schemes, the resolution of the structure sheaf is symmetrical. It follows that $\omega_X=\OO_X(-n)$ for some $n \geq 0$. If $\omega_Y=\OO_Y(-m)$, it follows from the above proposition that $\omega_{X \ast Y}(-m-n)$.
 \end{remark}
-
-%%%%%%%%%%
-%%%%%%%%%%
-\section{Calabi--Yau manifolds and mirror symmetry} % (fold)
-\label{sec:calabi_yau}
-
-Parts of this thesis will be concerned with the construction of new Calabi--Yau manifolds.
-
-\begin{definition}
-A Calabi--Yau manifold will be an irreducible complex projective variety $X$ such that $\omega_X \simeq \OO_X$ and $H^i(X,\OO_X)=0$ for $i=1,\ldots,\dim X-1$.
-\end{definition}
-
-We will always have $\dim X=3$. Be ware that the literature often requires \CY manifolds to be smooth, or to have only certain kinds of singularities.
-
-Mathematically, \CY varieties are interesting because they are among the varieties having Kodaira dimension zero. This means that they have trivial canonical models, making them harder to study. Before the 90's there were only sporadic constructions of \CY varieties, but after the advent of toric geometry and the construction of Batyrev in \cite{batyrev_mirrorsymmetry}, thousands of new examples were found, all of which were anticanonical sections in Fano toric varieties. 
-
-Let $\Omega_X^1$ be the sheaf of holomorphic one-forms on $X$, and assume that $\dim X =3$. Let $h^{ij}$ denote the dimension of $H^j(X,\Omega_X^i)$. Here $\Omega_X^i$ is by definition the wedge product $\wedge^i \Omega_X^1$.  Then we can form the \emph{Hodge diamond} of $X$:
-
-\[
-\begin{array}[c]{ccccccc}
-&&& h^{00} \\  
- &         & h^{01} & & h^{10}  \\
-&	h^{02} && h^{11}  && h^{20}  \\
-h^{03} && h^{12} && h^{21} && h^{30} \\
-&	h^{13} && h^{22}  && h^{31}  \\
- &         & h^{23} & & h^{32}  \\
- &&& h^{33} 
-\end{array}
-\]
-
-Because of the \CY condition, we have that $h^{j0}=0$ for $0 < j < 3$, and also that $h^{00}=h^{0d}=1$. It follows by Serre duality (see \cite[Corollary 7.7, Chapter III]{hartshorne}) that $h^{ij}=h^{3-i,3-j}$. Note that this amounts to a horizontal symmetry of the Hodge diamond. Since $X$ was assumed to be a complex manifold, it follows that $h^{ij}=h^{ji}$ by complex conjugation. This amounts to vertical symmetry of the Hodge diamond. It follows that for 3-dimensional \CY varieties, the Hodge diamond simplifies to
-\[
-\begin{array}[c]{ccccccc}
-&&& 1 \\  
- &         & 0 & & 0  \\
-&	0 && h^{11}  && 0  \\
-1 && h^{12} && h^{12} && 1 \\
-&	0 && h^{11}  && 0  \\
- &         & 0 & & 0  \\
- &&& 1 
-\end{array}.
-\]
-The \emph{Hodge decomposition} theorem \cite[page 142]{voison_cg} states that the singular cohomology groups decomposes as
-$$
-H^k(X,\C) = \bigoplus_{i+j=k}^{\dim X} H^i(X,\Omega_X^j).
-$$
-The \emph{topological Euler characteristic} is defined as
-$$
-\chi(X) = \sum_{k=0}^{2 \dim X}\left(-1\right)^k \dim_\C H^k(X, \C).
-$$
-For 3-dimensional \CY varieties, it follows from the above discussion that $\chi(X)$ can be computed as $2(h^{11} - h^{12})$. 
-
-\begin{example}
-The canonical example of a \CY variety is the quintic in $\P^4$. Let $X=V(f)$ be the zero locus of a general element in $H^0\left(\P^4,\OO_{\P^4}(5)\right)$. Then $X$ is smooth, and by adjunction formula we have 
-\[
-\omega_X = \restr{\omega_{\P^4}}{X} \otimes \OO_X(5)=\OO_X(-5) \otimes \OO_X(5) = \OO_X,
-\]
-so the canonical bundle is trivial. By the ideal sheaf sequence, we find that $H^i(X,\OO_X) \simeq H^i\left(X,\OO_{\P^4}(-5)\right)$, which by \cite[Theorem 5.1, Chapter III]{hartshorne} implies the required vanishing of the structure sheaf cohomology groups.
-
-The Euler characteristic can be computed as the degree of the top Chern class of $X$. If $Y$ is a degree $d$ hypersurface in $\P^n$, the following formula holds:
-$$
-c_{n-1}(T_X) = h^{n-1} \left( \binom{n+1}{n-1} - d \binom{n+1}{n-2} + d^2 \binom{n+1}{n-3} + \ldots\right),
-$$
-where $h$ is the class of a hyperplane. Putting $n=4$ and $d=5$, we find that $\chi(X)=-200$. To compute $h^{11}$, we see first from the conormal sequence that $H^1(X,\Omega_X^1) \simeq H^1(X,\restr{\Omega_{\P^4}^1}{X})$. Now it follows easily from the restricted Euler sequence that $h^{11}=1$, and since $\chi(X)=2(h^{11}-h^{12})$ we find that $h^{12}=101$.
-\end{example}
-
-In general it is very hard to compute the Hodge numbers of Calabi--Yau varieties, with the exception of hypersurfaces in four-dimensional toric varieties. Often the best one can hope for is the topological Euler characteristic $\chi(X)$, which is much easier to compute.
-
-Recall that a variety is \emph{Fano} if the anticanonical line bundle $\omega_Y^{-1}$ gives an embedding into projective space. Given a Fano variety, one can construct a \CY variety: 
-
-\begin{proposition}
-\label{prop:anticanonicalsection}
-Let $Y \subset \P^N$ be an $n$-dimensional Fano variety with $\omega_Y=\OO_Y(-k)$. Suppose $n > 1$. Then a general section $X$ of ${\OO_Y(1)}^{\oplus k}$ is an $n-k$-dimensional Calabi--Yau variety.
-\end{proposition}
-\begin{proof}
-This follows from the adjunction formula, which says that
-$$
-\omega_X = \omega_Y \otimes \bigwedge^k (\mathcal I_X /\mathcal I_X^2)^\vee.
-$$
-A general section of ${\OO_Y(1)}^{\oplus k}$ is a complete intersection, and the normal bundle is then equal to ${\OO_X(1)}^{\oplus k}$. It is then true that $\wedge^k {\OO_X(1)}^{\oplus k} = \OO_X(k)$, from which the triviality of the canonical bundle follows.
-
-Recall that the structure cohomology groups $H^i(Y,\OO_Y)=0$ for $ i> 0$ when $Y$ is a Fano variety. That the cohomology groups $H^i(X,\OO_X)$ are zero for $i=1,\ldots,n-k$ can be seen as follows. The structure sheaf $\OO_X$ has a Koszul resolution of the form
-\[
-0 \to \OO_Y(-k) \to {\OO_Y(-k+1)}^{\oplus \binom {k}{k-1}} \to \ldots \to {\OO_Y}^{\oplus k}(-1) \to \mathcal I_X \to 0.
-\]
-Now note that all terms $\OO_Y(-j)$ with $0 < j < k$ are cohomologically trivial, in the sense that $H^\ast(Y,\OO_Y(-j))=0$. An induction argument then shows that $H^p(Y,\mathcal I_X) \simeq H^{p+k-1}(Y,\OO_Y(-k))$ for all $p$.
-
-Consider the ideal sheaf sequence
-\[
-0 \to \mathcal I_X \to \OO_Y \to \OO_X  \to 0.
-\]
-
-The beginning of the associated long exact sequence is 
-\[
-0 \to H^0(Y,\mathcal I_X) \to H^0(Y,\OO_Y) \to H^0(X,\OO_X) \to H^1(Y,\mathcal I_X)
-\]
-The first group is equal to $H^{k-1}(Y,\OO_Y(-k)) \stackrel{\text{Serre}}{\simeq} H^{n-k+1}(Y,\OO_Y)=0$ (for $k > 0$).  The right term is equal to $H^{k}(Y,\OO_Y(-k))  \stackrel{\text{Serre}}{\simeq} H^{n-k}(Y,\OO_Y)=0$. 
-
-Now assume $i > 0$. Then we find that $H^i(X,\OO_X) \simeq H^{i+1}(Y,\mathcal I_X)$. From the observation above, this group is non-zero only when $n-k-i=0$. Thus
-\[
-H^i(X,\OO_X) = 
-\begin{cases}
-k &  i = 0 \\
-0 & i < n-k \\
-k & i =n-k
-\end{cases}
-\]
-Since $X$ has dimension $n-k$, we have now proved that $X$ is Calabi--Yau, since we have checked the triviality of the canonical sheaf and the vanishing of the middle cohomology groups.
-\end{proof}
-
-The last chapter of this thesis is concerned about the construction of new examples of Calabi--Yau manifolds. They are complete intersections in different (singular) Fano toric varieties.
-
-\subsection{Mirror symmetry}
-
-After the invention of string theory in the late 60's, \CY varieties caught the attention of theoretical physicists. They predict that space-time is really $10$-dimensional, and locally looks like $\R^4 \times X$, where $X$ is a \CY manifold, of complex dimension $3$. They discovered a duality between different \CY 3-manifolds $X$ and $X^\circ$ such that their Hodge numbers satisfy $h^{11}(X) = h^{12}(X^\circ)$ and $h^{12}(X)=h^{11}(X^\circ)$ (in particular $\chi(X) = - \chi(X^\circ)$). This a conjectural correspondence between the complex moduli space of $X$ (which have tangent space $H^1(X,\Omega_X^2$), and the Kähler moduli space of $\omega^\circ$, the Kähler class on $X^\circ$. These two manifolds, though mathematically different, are thought to give rise to equivalent physical theories. This correspondence is called \emph{mirror symmetry}.
-
-In the 90's, Candelas et al. constructed the mirror of the general quintic \cite{candelas_string}. They calculate certain Hodge theoretic invariants on the mirror, and use them to count \emph{rational curves} of all degrees on the quintic. This greatly surprised the mathematical community, and led to the invention of Gromov--Witten-invariants and homological mirror symmetry.
-
-Mirror symmetry is a fascinating and notoriously technical topic. There are several good introductions, depending upon taste and technical proficiency. Two of the most comprehensive introductions are \cite{mirrorsymmetry,mirrorsymmetry_vafa}.
-
-Explicitly constructing mirrors of Calabi--Yau manifolds have become a small industry in the mathematics community. In the last chapter of this thesis, I propose mirror candidates for two of my Calabi--Yau constructions. 
-
-%%%%%%%%%%%
-\subsection{The mirror construction Ansatz} % (fold)
-\label{sec:the_mirror_construction_ansatz}
-
-In many cases of interest, given a construction of a Calabi--Yau manifold, the following Ansatz produces a mirror.
-
-Let $\K$ be a simplicial complex, with associated Stanley--Reisner scheme $X_0$. Let $G$ be the automorphism group (or a subgroup of the automorphism group) of $\K$. Then $G$ induces an action on $T^1_{X_0} \stackrel \Delta = T^1(S_{X_0}/k,S_{X_0})$ in the following way: each element of $T_{X_0}^1$ can be represented by a $\phi \in \Hom(I/I^2,A)$, and then $g \cdot \phi$ is given by $(g \cdot \phi)(f) = g \cdot \phi(g^{-1} \cdot f)$.
-
-There is an action of $T_n=(\C^\ast)^{n+1}/\C^\ast$ on $\P^n$, and since $I_{X_0}$ is generated by monomials, the action restricts to an action on $X_0$ as well.
-
-Given a smoothing family with general fiber $X$ and special fiber $X_0$, we can consider a subfamily with only isolated singularities on which $G$ act.  Let $H \subset T_n$ be the subgroup of the torus acting on this family. Then the mirror candidate to $X$ is given by a crepant resolution of $Y_t=X_t/H$.
-
-Though it is often overlooked (or stated differently) in the literature, even the mirror construction of the famous quintic arises this way. Briefly, the quintic Calabi--Yau is given by the zero locus of a general element in $H^0(\P^4,\OO_{\P^4}(5))$. The special quintic given by $f=x_0x_1x_2x_3x_4$ is the Stanley--Reisner scheme associated to the $3$-simplex. The automorphism group is $S_5$, and an invariant $1$-parameter family is given by $f_t=\sum_{i=0}^4 x_i^5 + t x_0 x_1x_2x_3x_4$. The fiber at $t=\infty$ is the Stanley--Reisner scheme.
-
-There is a $H \stackrel \Delta = (\Z/5)^5/\Z^5$-action on $X_t = Z(f_t)$ given by coordinate-wise multiplication by fifth roots of unity. Thus $H$ is a subgroup of $T_5$. The general element of the family $X_t$ is smooth, so the only singularities of the quotient $Y_t=X_t/H$ comes from points with non-trivial stabilizer. These can be resolved by methods from toric geometry. For details, see for example the first chapter of Ingrid Fausk's thesis \cite{fausk_thesis}.
-
-In the last chapter of this thesis, we use this Ansatz to produce mirror candidates for two of our Calabi--Yau constructions.
-
-
-% section calabi_yau (end)
 
 %%%%%%%%%
 %%%%%%%%%
@@ -595,3 +460,168 @@ The theorem is useful in that it says that certain faces of a simplicial complex
 % By Theorem 8.3 and Corollary 8.9 in \cite{sturmfels}......
 
 % Thus, if we can find a polytope whose boundary has a regular unimodular triangulation, we know that the associated Stanley-Reisner ring has at least one deformation. 
+
+%%%%%%%%%%
+%%%%%%%%%%
+\section{Calabi--Yau manifolds and mirror symmetry} % (fold)
+\label{sec:calabi_yau}
+
+The main contribution of this thesis is concerned with the construction of new Calabi--Yau manifolds. In this chapter we define what they are, and give examples on how to construct them.
+
+\begin{definition}
+A \emph{Calabi--Yau manifold} is an irreducible complex projective variety $X$ such that $\omega_X \simeq \OO_X$ and $H^i(X,\OO_X)=0$ for $i=1,\ldots,\dim X-1$.
+\end{definition}
+
+We will always have $\dim X=3$. Be ware that the literature often requires \CY manifolds to be smooth, or to have only certain kinds of singularities.
+
+Mathematically, \CY varieties are interesting because they are among the varieties having Kodaira dimension zero. This means that they have trivial canonical models, making them harder to study.
+
+Before the 90's there were only sporadic constructions of \CY varieties, but after the advent of toric geometry and the construction of Batyrev in \cite{batyrev_mirrorsymmetry}, thousands of new examples were found, all of which were anticanonical sections in Fano toric varieties. 
+
+Let $\Omega_X^1$ be the sheaf of holomorphic one-forms on $X$, and assume that $\dim X =3$. Let $h^{ij}$ denote the dimension of $H^j(X,\Omega_X^i)$. Here $\Omega_X^i$ is by definition the wedge product $\wedge^i \Omega_X^1$.  Then we can form the \emph{Hodge diamond} of $X$:
+
+\[
+\begin{array}[c]{ccccccc}
+&&&               h^{00} \\  
+ &         & h^{01} & & h^{10}  \\
+&	h^{02} && h^{11}  && h^{20}  \\
+   h^{03} && h^{12} && h^{21} && h^{30} \\
+&	h^{13} && h^{22}  && h^{31}  \\
+ &         & h^{23} & & h^{32}  \\
+                &&& h^{33} 
+\end{array}
+\]
+
+Because of the \CY condition, we have that $h^{j0}=0$ for $0 < j < 3$, and also that $h^{00}=h^{0d}=1$. It follows by Serre duality (see \cite[Corollary 7.7, Chapter III]{hartshorne}) that $h^{ij}=h^{3-i,3-j}$. Note that this amounts to a horizontal symmetry of the Hodge diamond. Since $X$ was assumed to be a complex manifold, it follows that $h^{ij}=h^{ji}$ by complex conjugation. This amounts to vertical symmetry of the Hodge diamond. It follows that for 3-dimensional \CY varieties, the Hodge diamond simplifies to
+
+\[
+\begin{array}[c]{ccccccc}
+&&& 1 \\  
+ &         & 0 & & 0  \\
+&	0 && h^{11}  && 0  \\
+1 && h^{12} && h^{12} && 1 \\
+&	0 && h^{11}  && 0  \\
+ &         & 0 & & 0  \\
+ &&& 1 
+\end{array}.
+\]
+
+The \emph{Hodge decomposition} theorem \cite[page 142]{voison_cg} states that the singular cohomology groups decomposes as
+
+$$
+H^k(X,\C) = \bigoplus_{i+j=k}^{\dim X} H^i(X,\Omega_X^j).
+$$
+
+The \emph{topological Euler characteristic} is defined as
+
+$$
+\chi(X) = \sum_{k=0}^{2 \dim X}\left(-1\right)^k \dim_\C H^k(X, \C).
+$$
+
+For 3-dimensional \CY varieties, it follows from the above discussion that $\chi(X)$ can be computed as $2(h^{11} - h^{12})$. 
+
+\begin{example}
+The canonical example of a \CY variety is the quintic in $\P^4$. Let $X=V(f)$ be the zero locus of a general element in $H^0\left(\P^4,\OO_{\P^4}(5)\right)$. Then $X$ is a smooth threefold, and by adjunction formula we have 
+
+\[
+\omega_X = \restr{\omega_{\P^4}}{X} \otimes \det {\left( (f)/(f)^2 \right)}^\vee = \restr{\omega_{\P^4}}{X} \otimes \OO_X(5)=\OO_X(-5) \otimes \OO_X(5) = \OO_X,
+\]
+so the canonical bundle is trivial. By the ideal sheaf sequence, we find that $H^i(X,\OO_X) \simeq H^i\left(X,\OO_{\P^4}(-5)\right)$, for $i \geq 0$, which by \cite[Theorem 5.1, Chapter III]{hartshorne} implies the required vanishing of the structure sheaf cohomology groups.
+
+The Euler characteristic can be computed as the degree of the top Chern class of $X$. If $Y$ is a degree $d$ hypersurface in $\P^n$, the following formula holds:
+
+$$
+c_{n-1}(T_X) = h^{n-1} \left( \binom{n+1}{n-1} - d \binom{n+1}{n-2} + d^2 \binom{n+1}{n-3} + \ldots\right),
+$$
+where $h$ is the class of a hyperplane. Putting $n=4$ and $d=5$, we find that $\chi(X)=-200$.
+
+To compute $h^{11}$, we consider the conormal sequence:
+
+\[
+0 \to \OO_X(-5) \to \Omega_{\P^4}^1 \to \Omega_X^1 \to 0.
+\]
+
+Then we see that $H^1(X,\Omega_X^1) \simeq H^1(X,\restr{\Omega_{\P^4}^1}{X})$. Finally, consider the restricted Euler sequence:
+
+\[
+0 \to \restr{\Omega_{\P^4}^1}{X} \to \OO_X(-1)^5  \to \OO_X \to 0.
+\]
+
+By considering the associated long exact sequence, we see easily that $h^{11}=1$, and since $\chi(X)=2(h^{11}-h^{12})$ we find that $h^{12}=101$.
+\end{example}
+
+In general it is very hard to compute the Hodge numbers of Calabi--Yau varieties, with the exception of hypersurfaces in four-dimensional toric varieties. Often the best one can hope for is the topological Euler characteristic $\chi(X)$, which is much easier to compute.
+
+Recall that a variety is \emph{Fano} if the anticanonical line bundle $\omega_Y^{-1}$ gives an embedding into projective space. Given a Fano variety, one can construct a \CY variety: 
+
+\begin{proposition}
+\label{prop:anticanonicalsection}
+Let $Y \subset \P^N$ be an $n$-dimensional Fano variety with $\omega_Y=\OO_Y(-k)$. Suppose $n > 1$. Then a general section $X$ of ${\OO_Y(1)}^{\oplus k}$ is an $n-k$-dimensional Calabi--Yau variety.
+\end{proposition}
+\begin{proof}
+That the canonical bundle is trivial follows from the adjunction formula, which says that
+
+$$
+\omega_X = \omega_Y \otimes \bigwedge^k (\mathcal I_X /\mathcal I_X^2)^\vee.
+$$
+
+A general section of ${\OO_Y(1)}^{\oplus k}$ is a complete intersection, and the normal bundle is then equal to ${\OO_X(1)}^{\oplus k}$. It is then true that $\wedge^k {\OO_X(1)}^{\oplus k} = \OO_X(k)$, from which the triviality of the canonical bundle follows.
+
+Recall that the structure cohomology groups $H^i(Y,\OO_Y)=0$ for $ i> 0$ when $Y$ is a Fano variety. That the cohomology groups $H^i(X,\OO_X)$ are zero for $i=1,\ldots,n-k$ can be seen as follows. The structure sheaf $\OO_X$ has a Koszul resolution of the form
+\[
+0 \to \OO_Y(-k) \to {\OO_Y(-k+1)}^{\oplus \binom {k}{k-1}} \to \ldots \to {\OO_Y}^{\oplus k}(-1) \to \mathcal I_X \to 0.
+\]
+Now note that all terms $\OO_Y(-j)$ with $0 < j < k$ are cohomologically trivial, in the sense that $H^\ast(Y,\OO_Y(-j))=0$. An induction argument then shows that $H^p(Y,\mathcal I_X) \simeq H^{p+k-1}(Y,\OO_Y(-k))$ for all $p$.
+
+Consider the ideal sheaf sequence
+\[
+0 \to \mathcal I_X \to \OO_Y \to \OO_X  \to 0.
+\]
+
+The beginning of the associated long exact sequence is 
+\[
+0 \to H^0(Y,\mathcal I_X) \to H^0(Y,\OO_Y) \to H^0(X,\OO_X) \to H^1(Y,\mathcal I_X)
+\]
+The first group is equal to $H^{k-1}(Y,\OO_Y(-k)) \stackrel{\text{Serre}}{\simeq} H^{n-k+1}(Y,\OO_Y)=0$ (for $k > 0$).  The right term is equal to $H^{k}(Y,\OO_Y(-k))  \stackrel{\text{Serre}}{\simeq} H^{n-k}(Y,\OO_Y)=0$. 
+
+Now assume $i > 0$. Then we find that $H^i(X,\OO_X) \simeq H^{i+1}(Y,\mathcal I_X)$. From the observation above, this group is non-zero only when $n-k-i=0$. Thus
+\[
+H^i(X,\OO_X) = 
+\begin{cases}
+k &  i = 0 \\
+0 & i < n-k \\
+k & i =n-k
+\end{cases}
+\]
+Since $X$ has dimension $n-k$, we have now proved that $X$ is Calabi--Yau, since we have checked the triviality of the canonical sheaf and the vanishing of the middle cohomology groups.
+\end{proof}
+
+The last chapter of this thesis is concerned about the construction of new examples of Calabi--Yau manifolds. They are complete intersections in different (singular) Fano toric varieties.
+
+\subsection{Mirror symmetry}
+
+After the invention of string theory in the late 60's, \CY varieties caught the attention of theoretical physicists. They predict that space-time is really $10$-dimensional, and locally looks like $\R^4 \times X$, where $X$ is a \CY manifold, of complex dimension $3$. They discovered a duality between different \CY 3-manifolds $X$ and $X^\circ$ such that their Hodge numbers satisfy $h^{11}(X) = h^{12}(X^\circ)$ and $h^{12}(X)=h^{11}(X^\circ)$ (in particular $\chi(X) = - \chi(X^\circ)$). This a conjectural correspondence between the complex moduli space of $X$ (which have tangent space $H^1(X,\Omega_X^2$), and the Kähler moduli space of $\omega^\circ$, the Kähler class on $X^\circ$. These two manifolds, though mathematically different, are thought to give rise to equivalent physical theories. This correspondence is called \emph{mirror symmetry}.
+
+In the 90's, Candelas et al. constructed the mirror of the general quintic \cite{candelas_string}. They calculate certain Hodge theoretic invariants on the mirror, and use them to count \emph{rational curves} of all degrees on the quintic. This greatly surprised the mathematical community, and led to the invention of Gromov--Witten-invariants and homological mirror symmetry.
+
+Mirror symmetry is a fascinating and notoriously technical topic. There are several good introductions, depending upon taste and technical proficiency. Two of the most comprehensive introductions are \cite{mirrorsymmetry,mirrorsymmetry_vafa}.
+
+Explicitly constructing mirrors of Calabi--Yau manifolds have become a small industry in the mathematics community. In the last chapter of this thesis, I propose mirror candidates for two of my Calabi--Yau constructions. 
+
+%%%%%%%%%%%
+\subsection{The mirror construction Ansatz} % (fold)
+\label{sec:the_mirror_construction_ansatz}
+
+In many cases of interest, given a construction of a Calabi--Yau manifold, the following Ansatz produces a mirror.
+
+Let $\K$ be a simplicial complex, with associated Stanley--Reisner scheme $X_0$. Let $G$ be the automorphism group (or a subgroup of the automorphism group) of $\K$. Then $G$ induces an action on $T^1_{X_0} \stackrel \Delta = T^1(S_{X_0}/k,S_{X_0})$ in the following way: each element of $T_{X_0}^1$ can be represented by a $\phi \in \Hom(I/I^2,A)$, and then $g \cdot \phi$ is given by $(g \cdot \phi)(f) = g \cdot \phi(g^{-1} \cdot f)$.
+
+There is an action of $T_n=(\C^\ast)^{n+1}/\C^\ast$ on $\P^n$, and since $I_{X_0}$ is generated by monomials, the action restricts to an action on $X_0$ as well.
+
+Given a smoothing family with general fiber $X$ and special fiber $X_0$, we can consider a subfamily with only isolated singularities on which $G$ act.  Let $H \subset T_n$ be the subgroup of the torus acting on this family. Then the mirror candidate to $X$ is given by a crepant resolution of $Y_t=X_t/H$.
+
+Though it is often overlooked (or stated differently) in the literature, even the mirror construction of the famous quintic arises this way. Briefly, the quintic Calabi--Yau is given by the zero locus of a general element in $H^0(\P^4,\OO_{\P^4}(5))$. The special quintic given by $f=x_0x_1x_2x_3x_4$ is the Stanley--Reisner scheme associated to the $3$-simplex. The automorphism group is $S_5$, and an invariant $1$-parameter family is given by $f_t=\sum_{i=0}^4 x_i^5 + t x_0 x_1x_2x_3x_4$. The fiber at $t=\infty$ is the Stanley--Reisner scheme.
+
+There is a $H \stackrel \Delta = (\Z/5)^5/\Z^5$-action on $X_t = Z(f_t)$ given by coordinate-wise multiplication by fifth roots of unity. Thus $H$ is a subgroup of $T_5$. The general element of the family $X_t$ is smooth, so the only singularities of the quotient $Y_t=X_t/H$ comes from points with non-trivial stabilizer. These can be resolved by methods from toric geometry. For details, see for example the first chapter of Ingrid Fausk's thesis \cite{fausk_thesis}.
+
+In the last chapter of this thesis, we use this Ansatz to produce mirror candidates for two of our Calabi--Yau constructions.
