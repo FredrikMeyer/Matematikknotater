@@ -190,26 +190,37 @@ There is also a description of the Cartier divisors on $X$ in terms of \emph{sup
 
 The set of support functions is an abelian group under addition, and by Theorem 4.2.12 in \cite{cox_toric}, there is an isomorphism between the group of integral support functions on $\Sigma$ and the torus invariant Cartier divisors on $X$.
 
-\todo{describe support functions}
+Here is how one associates a support function to a divisor on a toric variety $Y$ (we assume that the fan of the toric variety is full-dimensional and complete). Let $D=\sum a_\rho D_\rho$ be a Cartier divisor on $Y$. For each maximal cone $\sigma \in \Sigma(n)$, one can show that there is an $m_\sigma \in M$ such that
+
+\[
+\langle m_\sigma , u_\rho \rangle = -a_\rho
+\]
+for all $\rho \in \sigma(1)$. The collection $\{ m_\sigma \}_{\sigma \in \Sigma(n)}\}$ is called the \emph{Cartier data} of $D$.
+
+Given Cartier data of a divisor, we can define a convex function by the rule $u \mapsto \varphi_D(u)=\langle m_\sigma, u\rangle$ if $ u\in \sigma$. 
+
+%%% hva mer trengs?
+
 
 %%%%%%%%%%
 % section toric_geometry (end)
 %%%%%%%%%%
 \section{Deformation theory and the Hilbert scheme}
 
-Deformation theory is the infinetesimal study of algebro-geometric objects in families. Examples of such objects can be families of schemes, families of projective schemes (respecting the embedding), families of vector bundles, and so on.
+Deformation theory is the infinetesimal study of algebro-geometric objects varying in families. Examples of such objects can be families of schemes, families of projective schemes (respecting the embedding), families of vector bundles, and so on.
 
-In this section I will review some notation and motivation from deformation theory. Although results from deformation theory are not central in thesis, many of the methods and objects have roots from or connections with deformation theory. 
-A reference for deformation theory is the book by Hartshorne \cite{hartshorne_deformations}. For a leisurely popular account, the article \cite{mazur_deformations} is a nice read.
+In this section I will review some notation and motivation from deformation theory. Although results from deformation theory are not central in thesis, many of the methods and objects have roots from or connections with deformation theory. A reference for deformation theory is the book by Hartshorne \cite{hartshorne_deformations}. For a leisurely popular account connecting deformation theory to other parts of mathematics, the article \cite{mazur_deformations} is a nice read.
 
-Given a scheme $X_0$ over $\C$, a \emph{family of deformations} of $X_0$ is a flat morphism $\pi:\mathscr X \to (S,0)$ with $S$ connected such that $\pi^{-1}(0)=X_0$. If $S$ is the spectrum of an artinian $\C$-algebra, then $\pi$ is an \emph{infinitesimal deformation}. If $S=\Spec \C[\epsilon]/\epsilon^2$, then  $\pi$ is a \emph{first order deformation}. An \emph{embedded deformation} of an embedded scheme $X_0 \subset \P^n$ is a deformation $\pi:\mathscr X \to (S,0)$ with $\mathscr X \subset \P^n \times S$ such that $\pi$ is the restriction of the projection $\pi:\P^n \times S \to S$. A deformation is \emph{trivial} if it is isomorphic to the projection $X_0 \times S \to S$.
+\begin{definition}
+Given a scheme $X_0$ over $\C$, a \emph{family of deformations} of $X_0$ is a flat morphism $\pi:\mathscr X \to (S,0)$ with $S$ connected such that $\pi^{-1}(0)=X_0$. If $S$ is the spectrum of an artinian $\C$-algebra, then $\pi$ is an \emph{infinitesimal deformation}. If $S=\Spec \C[\epsilon]/\epsilon^2$, then  $\pi$ is a \emph{first order deformation}. An \emph{embedded deformation} of an embedded scheme $X_0 \subset \P^n$ is a deformation $\pi:\mathscr X \to (S,0)$ with $\mathscr X \subset \P^n \times S$ such that $\pi$ is the restriction of the projection $\pi:\P^n \times S \to S$. A deformation is \emph{trivial} if it is isomorphic to the projection $X_0 \times S \to S$.  
 
-A \emph{smoothing of $X_0$} is a deformation such that the general fiber is smooth.
+A \emph{smoothing} of $X_0$ is a deformation of $X_0$ over a curve, such that the general fiber is smooth.
+\end{definition}
 
-The set of embedded deformations and the set of abstract deformations have interpretations in terms of ``familiar'' objects (see \cite{hartshorne_deformations} for proofs):
+The sets of first-order embedded deformations have interpretations in terms of ``familiar'' objects. See the first chapter of \cite{hartshorne_deformations} for proofs.
 
 \begin{proposition}
-The set of all first order embedded deformations of a projective scheme $X$ is in one--one correspondence with the group $H^0(X,\mathcal N_{X/\P^n})$, where $\mathcal N_{X/\P^n}$ is the normal sheaf of $X$ in $\P^n$.\footnote{Recall that this is by definition $\mathcal Hom(\mathcal I/\mathcal I^2, \OO_X)$, where $\mathcal I$ is the ideal sheaf of $X$.}
+The set of all first order embedded deformations of a projective scheme $X$ is in one--one correspondence with the group $H^0(X,\mathcal N_{X/\P^n})$, where $\mathcal N_{X/\P^n}$ is the normal sheaf of $X$ in $\P^n$.\footnote{Recall that this is by definition $\mathcal Hom_{\OO_X}(\mathcal I/\mathcal I^2, \OO_X)$, where $\mathcal I$ is the ideal sheaf of $X$.}
 \end{proposition}
 
 \begin{proposition}
@@ -259,7 +270,7 @@ We list a few of the important properties of the $T^i$-functors here:
 	\item If $B$ and $M$ are graded, then $T^i(B/A,M)$ are graded as well. 
 \end{itemize}
 
-If $X$ is a projective variety and $S_X$ its homogeneous coordinate ring, let $U_X$ denote $\Spec S_X$. Then the deformation theory of the affine cone and $X$ itself is closely related. This is studied for example in Schlessinger's article \cite{schlessinger_rigid}, from which the following useful result can be proved:
+If $X$ is a projective variety and $S_X$ its homogeneous coordinate ring, let $U_X$ denote $\Spec S_X$. Then the deformation theory of the affine cone and $X$ itself is closely related. This is studied for example in Schlessinger's article \cite{schlessinger_rigid}, from which the following useful result can be deduced:
 
 \begin{proposition}
 \label{prop:t1h1}
@@ -267,32 +278,35 @@ Let $X/k$ be a smooth projective Calabi--Yau variety, and let $S_X$ be its homog
 $$
 T^1(S_X/k,S_X)_0  \simeq H^1(X, \mathcal T_X),
 $$
-where $\mathcal T_X$ is the tangent sheaf of $X$.
+where $\mathcal T_X$ is the tangent sheaf of $X$, and the subscript denotes the degree zero part of the module.
 \end{proposition}
+
 \begin{proof}
 This is a combination of Theorem 2.5 and Corollary 2.6 in \cite{t1_ref}, using the fact that $X$ is Calabi--Yau and smooth.
 \end{proof}
 
-This result makes computing Hodge numbers of projective smooth Calabi--Yau's relatively easy.
+This result makes computing Hodge numbers of projective smooth Calabi--Yau's amenable to computer calculations.
 
 We include a somewhat lengthy example of how to compute the $T^i$ modules for a relatively simple ring.
 
 \begin{example}
 Let $B=k[x,y]/(x^2,xy,y^2)$ be the coordinate ring of the double point in $\A^2$. We want to compute $T^i(B/k,B)$ for $i=0,1,2$. 
 
-We have that $T^0(B/k,B) = \Der_k(B,B)$, and this can be identified with the kernel of the map (see Proposition 3.10 in \cite{hartshorne_deformations})
+We have that $T^0(B/k,B) = \Der_k(B,B)$, and this can be identified with the kernel of the map
 $$
 \Hom(\Omega_{k[x,y]/k},B) \xrightarrow{\varphi} \Hom(I/I^2,B).
 $$
-The map $\varphi$ can be identified with the transpose of the Jacobian matrix of $I$. The module to the left is free, generated by $\frac{\partial}{\partial x}$ and $\frac{\partial}{\partial y}$. Up to scalars, $\varphi$ is given by 
+
+See Proposition 3.10 in \cite{hartshorne_deformations}. The map $\varphi$ can be identified with the transpose of the Jacobian matrix of $I$. The module to the left is free, generated by $\frac{\partial}{\partial x}$ and $\frac{\partial}{\partial y}$. Up to scalars, $\varphi$ is given by 
 \[
 \varphi = \begin{pmatrix}
 x & 0 \\ y & x \\ 0 & y
 \end{pmatrix}.
 \]
+
 Thus $T^0(B/k,B)$ is equal to the set of $(f,g) \in R^2$ annihilated by the ideal $\mathfrak m = (x,y)$ in $B$. But since $R$ is $k[x,y]/\mathfrak m^2$, this is equal to $\mathfrak m \oplus \mathfrak m$. Thus $\dim_k \Der_k(B,B) = 4$, corresponding to the fact that a fat point can move by moving its support and also by moving its ``tangent arrow''.
 
-We can use the exact sequence \eqref{eq:t1seq} to compute $T^1(B/k,B)$. We see that $T^1(B/k,B)$ is the cokernel of $\varphi$. We must first identify $\Hom(I/I^2,B)$.
+We can use the exact sequence \eqref{eq:t1seq} to compute $T^1(B/k,B)$. We see that $T^1(B/k,B)$ is the cokernel of $\varphi$. We must first identify $\Hom_B(I/I^2,B)$.
 
 To compute this module, we start with a free resolution of $I$ over $P=k[x,y]$:
 \[
@@ -324,7 +338,7 @@ y^2 & xy & 0 \\
 The image of $d_1$ is isomorphic to $R^2$. Using this isomorphism, $Q/F_0$ fits into an exact sequence
 \[
 R^3 \xrightarrow{
-	M = \begin{pmatrix}
+	\begin{pmatrix}
 	x & y & 0 \\ 0 & x & y
 	\end{pmatrix}
 } R^2 \to Q/F_0 \to 0.
@@ -340,19 +354,16 @@ Applying $\Hom_B(-,B)$ is left-exact, so we get an exact sequence:
 
 It follows that $\Hom_B(Q/F_0,B)= \mathfrak m \oplus \mathfrak m$.  The image of $d_1^\vee \otimes B$ kills off three of the four generators, so that $T^2(B/k,B)$ is a $4-3=1$-dimensional vector space over $k$. This reflects the fact that the fat point correspond to a singular point in its Hilbert scheme.
 
-As we can see, already for this small example, there is a lot of computation involved. Especially the computation of a free resolution is resource demanding when the ideal have more generators. Therefore computer algebra software is essential when doing experiments in deformation theory.
+As we can see, already for this small example, there is a lot of computation involved. Especially the computation of a free resolution is resource demanding when the ideal have more generators. Therefore computer algebra software is invaluable when doing experiments in deformation theory.
 \end{example}
 
 \subsection{A few words about Hilbert schemes}
 
-The \emph{Hilbert scheme} $\mathscr H_{P(t)}$ parametrizes projective schemes with a given Hilbert polynomial $P(t)$. The proof of its existence is non-trivial, and given first by Grothendieck in \cite{MR1611822}. The proof was later simplified by Mumford \cite{MR0209285}. However, it is often just as easy to work with the functorial description of the Hilbert scheme -- namely with the functor it represents rather than the scheme itself.
+The \emph{Hilbert scheme} $\mathscr H_{P(t)}$ parametrizes projective schemes with a given Hilbert polynomial $P(t)$. The proof of its existence is non-trivial, and was first given by Grothendieck in \cite{MR1611822}. The proof was later simplified by Mumford \cite{MR0209285}. It is often just as easy to work with the functorial description of the Hilbert scheme -- namely with the functor it represents rather than the scheme itself.
 
 The functor that the Hilbert scheme represents is the following: $h_{P(t)}(S)$ is the set set of all flat families $\mathscr X \subset S \times \P^n  \to S$ where the fibers have Hilbert polynomial $P(t)$. With this definition, it is not difficult to show for example that the tangent space of $\mathscr H_{P(t)}$ at a point corresponding to a scheme $X$ is given by $H^0(X,\mathscr N_{X/\P^n})$, where $\mathcal N_{X/\P^n}$ is the normal sheaf of $X$. Thus for a ``generic'' scheme, the dimension of the component on the Hilbert scheme on which it lies, is given by $h^0(X,\mathcal N_{X/\P^n})$.
 
 Note that two different points on $\mathscr H_{P(t)}$ might represent isomorphic schemes. Two schemes are different if they occupy different points in $\P^n$. Allowing deformations outside $\P^n$ corresponds to applying the forgetful functor $\Def(X,S) \to \Def(X)$.
-
-
-\todo{obstruction theory, lifting of equations?}
 
 
 %%%%%%%%%%%%%%%%%
@@ -403,10 +414,10 @@ If $D_+(x_f) \subset \P(\K)$ denotes the distinguished open set corresponding to
 
 Every simplicial complex has a \emph{geometric realization}, which as a set is defined as follows:
 $$
-|\K| \stackrel{\Delta}{=}  \{ \alpha: [n] \to [0,1] \mid \supp(\alpha) \in \K, \sum_{i=1}^n \alpha(i) = 1 \}.
+|\K| \stackrel{\Delta}{=} \left\{ \alpha: [n] \to [0,1] \mid \supp(\alpha) \in \K, \sum_{i=1}^n \alpha(i) = 1 \right\}.
 $$
 
-This is an example of a piecewise linear manifold, or a PL-manifold for short. For more on PL-manifolds or combinatorial topology, we refer the reader to one of \cite{glaser_combtop,spanier_topology,hudson_pl}.
+This is an example of a piecewise linear manifold. For more on piecewise linear manifolds and combinatorial topology, we refer the reader to one of \cite{glaser_combtop,spanier_topology,hudson_pl}.
 
 Motivated by this, we single out a class of simplicial complexes:
 
