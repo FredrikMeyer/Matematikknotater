@@ -19,7 +19,7 @@
 			"file": "main.tex",
 			"settings":
 			{
-				"buffer_size": 1453,
+				"buffer_size": 1446,
 				"line_ending": "Unix"
 			}
 		},
@@ -27,7 +27,7 @@
 			"file": "sections/two_smoothings.tex",
 			"settings":
 			{
-				"buffer_size": 24325,
+				"buffer_size": 28798,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -104,10 +104,22 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 87.0,
-		"last_filter": "git push",
+		"height": 392.0,
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"Build With: LaTeX - PdfLaTeX"
+			],
+			[
+				"latex",
+				"Build With: LaTeX"
+			],
+			[
+				"paca",
+				"Package Control: Install Package"
+			],
 			[
 				"git push",
 				"Git: Push"
@@ -133,7 +145,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 458.0
+		"width": 620.0
 	},
 	"console":
 	{
@@ -154,11 +166,12 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis",
-		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/sections"
+		"/uio/hume/student-u57/fredrme/notater/Matematikknotater/thesis"
 	],
 	"file_history":
 	[
+		"/uio/hume/student-u57/fredrme/.config/sublime-text-3/Packages/User/LaTeXTools.sublime-settings",
+		"/uio/hume/student-u57/fredrme/.config/sublime-text-3/Packages/LaTeXTools/LaTeXTools.sublime-settings",
 		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/thesis.sublime-project",
 		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/thesis.sublime-workspace",
 		"/Users/fredrikmeyer/Dropbox/matematikknotater/thesis/style.sty",
@@ -236,6 +249,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			")$",
+			"to",
+			"  ",
+			"Proposition",
+			"toric",
+			"According",
+			"Hom",
 			"mirror",
 			"X_1",
 			"Let $",
@@ -327,7 +347,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -336,28 +356,29 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1453,
+						"buffer_size": 1446,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								282,
-								282
+								299,
+								299
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
 							"tab_size": 4,
+							"touched": 1501068215.91,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 20.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -366,26 +387,27 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 24325,
+						"buffer_size": 28798,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								35,
-								35
+								28465,
+								28465
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"touched": 1501074650.13
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 9833.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
