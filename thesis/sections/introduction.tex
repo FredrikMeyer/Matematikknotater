@@ -1,17 +1,45 @@
 \chapter{Introduction}
 \label{sec:intro}
 
-The work leading up to this thesis started with a naïve idea.
+The work leading up to this thesis started with a naïve idea concerning smoothings of certain Stanley--Reisner schemes. Stanley--Reisner schemes are highly singular projective schemes, whose components are all projective spaces. They are constructed from simplicial complexes, in such a way that the components correspond to the maximal facets of the simplicial complex. 
 
- concerning smoothings of certain Stanley--Reisner schemes. Stanley--Reisner schemes are certain combinatorially defined highly singular projective schemes. The input data is a finite simplicial complex, and the output is a scheme defined by square-free monomials. If the simplicial complex is homeomorphic to $S^1$, then a smoothing of the Stanley--Reisner scheme yields an elliptic curve. Similarly, if the simplicial complex is a sphere, a smoothing of the Stanley--Reisner scheme will give a K3 surface.
+If the simplicial complex is homeomorphic to $S^1$, a circle, then a smoothing of the Stanley--Reisner scheme yields an elliptic curve. Similarly, if the simplicial complex is a sphere, a smoothing of the Stanley--Reisner scheme will give a K3 surface. Many properties of the simplicial complex correspond to properties of the Stanley--Reisner scheme and its smoothings. 
 
-The mentioned naïve idea was this: what if the simplicial complex is a triangulated $\C \P^2$? A smoothing of the associated Stanley--Reisner scheme would then give us a hyper-Kähler variety, as we explain in Chapter 2. This would be interesting, since there are very few known families of hyper-Kähler varieties.
+The mentioned naïve idea was this: what if the simplicial complex is a triangulated $\C \P^2$? A smoothing of the associated Stanley--Reisner scheme would then give us an (algebraic) hyper-Kähler variety, as we explain in Chapter 2. This would be interesting, since there are very few known families of hyper-Kähler varieties.
 
-Unfortunaly, given a triangulation of $\C \P^2$ with relatively few vertices, finding a smoothing of the Stanley--Reisner scheme turned out to be too difficult. However, one particular triangulation of $\C \P^2$ led us to study the problems in the next two chapters. This triangulation, found by Gaifullin \cite{cp2_15_chess}, is the union over three $4$-balls, all of which are suspensions over joins of hexagons. Leaving the idea of studying triangulations of $\C \P^2$, we began studying the triangulations of the $3$-sphere of which it was a union.
+Unfortunaly, given a triangulation of $\C \P^2$ with few vertices, a smoothing of the Stanley--Reisner scheme turned out to be too difficult to find. Even the existence of smoothings are in most cases unclear. However, one particular triangulation of $\C \P^2$ led us to study the problems in the next two chapters. This triangulation, found by Gaifullin \cite{cp2_15_chess}, is the union of three $4$-balls, all of which are suspensions over joins of hexagons. Leaving the idea of studying triangulations of $\C \P^2$, we began studying the triangulations of the $3$-sphere.
 
-The join of two hexagons is a triangulated $3$-sphere. A smoothing of the associated Stanley--Reisner scheme $X_0$ is a Calabi--Yau variety. Finding new Calabi--Yau varieties has become a small industry, which we did not hesitate to join. This decision turned out to be profitable. The scheme $X_0$ deforms to several interesting varieties, and several of them are smooth. There are many connections to the physics literature, and to works by other mathematicians.
+The join of two hexagons is a triangulated $3$-sphere. A smoothing of the associated Stanley--Reisner scheme $X_0$ is a Calabi--Yau variety. Finding new Calabi--Yau varieties has become a small industry, which we did not hesitate to join. This decision turned out to be profitable. The scheme $X_0$ deforms to several interesting varieties, and several of them are smooth. One of them, which I have denoted by $X_Y$ is a singular Calabi--Yau variety, whose singularities are all locally-analytically cones over del Pezzo-surfaces. This discovery motivates the third chapter, in which I study this singularity, and two of its smoothings. I prove that they are topologically different, and calculate their Betti numbers.
 
-I found that the Stanley--Reisner scheme $X_0$ smooths to \emph{three} topologically different Calabi--Yau manifolds, which to my knowledge has not been described in the literature. Furthermore, by using the technique of orbifolding, I produce mirror candidates for two of them.
+I construct three smoothings of $X_0$. To define them, recall the definition of \emph{join} of two algebraic varieties. It is the closure of the union of all lines between them. Let $M$ the join of two copies of $\P^2 \times \P^2$ (embedded in disjoint projective spaces). Let $N$ be the join of two copies of $\P^1 \times \P^1 \times \P^1$, and let $W$ be the join of $\P^2 \times \P^2$ and $\P^1 \times \P^1 \times \P^1$. Define $X_1$ to be $M$ intersected by a codimension $6$ hyperplane. Let $X_2$ be $N$ intersected by a codimension $4$ hyperplane, nad let $X_3$ be $W$ intersected by a codimension $5$ hyperplane. 
+
+I show that $X_i$ ($i=1,2,3$) are all smooth Calabi--Yau's, and that they are deformations of $X_0$. They have Euler characteristics $-72$, $-48$, and $-60$, respectively. 
+
+There are many connections to the physics literature, and to works by other mathematicians. Here I explain some of them.
+
+In \cite{kapustka_delpezzo}, the author compiles a list of smooth \CY varieties with $\Pic X = \Z$. One of the elements of the list is a Calabi--Yau in $\P^{11}$ with the same Hilbert polynomial as our $X_1$, and with the Euler characteristic. This Calabi--Yau was however only conjectured to exist, based on the conjecture that to every differential equation of ``Calabi--Yau type'', there should exist a one parameter family of smooth Calabi--Yau varieties having that equation as its Picard--Fuchs-equation. A list of such equations have been computed by van Straten in \cite{monodromy_straten}.
+
+All of these equations have been made searchable in the online database \cite{cy_database}. Entering the invariants $H^3=36$, $H \cdot c_2 = 72$ and $|H|=12$, yield exactly three matches, corresponding to Calabi--Yau varities with Euler characteristics $-72$, $-60$ and $-48$, respectively. These numbers are exactly the Euler characteristics of our $X_i$ ($i=1,2,3$).
+
+Furthermore, their differential operators are Hadamard products, $c \ast c$, $a \ast a$ and $a \ast c$, which according to van Straten (personal communication) is ``mirror dual'' to join.
+
+This seems like a perfect match, confirming the existence predicted by the conjecture. The only problem is that our varieties seem to have $h^{11} > 1$.
+
+Several questions arise: can our $X_i$ still correspond to these equations, without having $h^{11}=1$? If not, what is their connection to the conjecture?
+
+Furthermore, the Calabi--Yau with Hodge numbers $(44,8)$ in \cref{sec:degenjoin} seem to have some connection with our $X_1$. Its mirror dual $X_{8,44}$ is a complete intersection in $\P^2 \times \P^2 \times \P^2 \times \P^2$, while $X_1$ is a complete intersection in $(\P^2 \times \P^2) \ast (\P^2 \times \P^2)$ with the same Euler characteristic. There seem to be some kind of duality going on, which is unfortunaly not described (to my knowledge) in the literature.
+
+We have a morphism $\pi:X_1 \to \P^2 \times \P^2 \times \P^2 \times \P^2$ defined by $(v \otimes w, r \otimes s) \mapsto v \otimes w \otimes r \otimes s$. The morphism is generically $1-1$. I have not been able to see what the image is (or if the morphism is an isomorphism).
+
+The same situation occurs with $X_2$. Here there is a morphism ${\pi:X_2 \to (\P^1)^{\times 6}}$. I don't know what the image is. Also here there should be a connection with $X_{8,44}$, since $X_{8,44}$ also can be realized as a complete intersection in $(\P^1)^{\times 6}$. See the introduction of \cite{braun_smallhodgenumbers}.
+
+\hfill \break
+
+Finally, there is the phenomenon of \emph{mirror symmetry}, which is a sort of duality between different Calabi--Yau manifolds. Producing mirror candidates of Calabi--Yau manifolds is a hard problem, and there are many ways to do this. One heuristic which often works is this: suppose you have a family $\pi: \mathscr X \to S$ of Calabi--Yau manifolds, and that some central fiber has a large automorphism group. One can consider the (often singular) sub-family invariant under this group. It is then often the case that a resolution of singularities of an invariant fiber is a mirror to the general fiber of $\pi$. This technique is called \emph{orbifolding}.
+
+By using the technique of orbifolding, I produce mirror candidates for $X_1$ and $X_2$.
+
+\hfill \break
 
 The organization of the thesis is as follows:
 
