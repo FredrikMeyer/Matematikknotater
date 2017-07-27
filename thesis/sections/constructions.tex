@@ -23,7 +23,7 @@ We want to count the dimension of $S_{\P(E_6)}$ in degree $t$. Any monomial in $
 In the other case, it has the form $x_i^ax_{i+1}^b$, with $a+b=t$ and $a,b \neq 0$. Counting, there are $6(t-1)$ of these monomials. In total, the dimension is $6+6(t-1)=6t$.
 \end{proof}
 \begin{remark}
-Alternatively, we could note that $\P(E_6)$ smooths to an elliptic curve of degree $6$. Since Hilbert polynomials are constant in flat families, it follows from the Riemann--Roch theorem that $h(t)=\deg \OO_{\P(E_6)}(6t)-1+1=6t$.
+Alternatively, we could note that $\P(E_6)$ smooths to an elliptic curve of degree $6$. Since Hilbert polynomials are constant in flat families, it follows from the Riemann--Roch theorem that \[h(t)=\deg \OO_{\P(E_6)}(6t)-1+1=6t.\]
 \end{remark}
 
 Note that the Hilbert polynomial only differ from the Hilbert function for $t=0$, since $h(0)=0$, while $\dim_\C {(S_{\P(E_6)})}_0=1$. 
@@ -60,7 +60,11 @@ All these invariants can be read off from the Hilbert polynomial.
 Either by using \MM or by using the more combinatorial description of the $T^i$-modules from \cite{deforming_christophersen}, we can compute: 
 
 \begin{proposition}
-The dimensions of $T^1(S_{\P(\K)}/k,S_{\P(\K)})_0$ and $T^2(S_{\P(\K)}/k,S_{\P(\K)})_0$ are $84$ and $72$, respectively.
+We have that
+\begin{align*}
+\dim_k T^1(S_{\P(\K)}/k,S_{\P(\K)})_0 &= 84 \\
+\dim_k T^2(S_{\P(\K)}/k,S_{\P(\K)})_0 &= 72. \\
+\end{align*}
 \end{proposition}
 \begin{proof}
 We will prove this using the techniques and notation from \cite{deforming_christophersen}. Our goal is to compute the degree zero part of $T^1_{A_\K}$. We will do this using \cref{thm:t1dims}.
@@ -511,34 +515,23 @@ In the case of $X_3$, there is no natural torus action on the ambient projective
 
 %%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%
-\section{Conclusion}
+\section{Conclusion and further questions}
 
-In this final chapter we constructed several smooth Calabi--Yau manifolds. Three of them, $X_1,X_2$ and $X_3$ lie in the same flat family (over a necessarily reducible base space). They are all smoothings of $X_Y$, a complete intersection in a 5-dimensional toric variety $Y$. This $X_Y$ has a maximally crepant resolution of singularities which is a smooth Calabi--Yau.
+In this final chapter we constructed several smooth Calabi--Yau manifolds. Three of them, $X_1,X_2$ and $X_3$ lie in the same flat family. They are all smoothings of $X_Y$, a complete intersection in a 5-dimensional toric variety $Y$. This $X_Y$ has a maximally crepant resolution of singularities which is a smooth Calabi--Yau. We constructed mirror candidates and finite group quotiens of $X_1$ and $X_2$.
 
-We constructed mirror candidates and finite group quotiens of $X_1$ and $X_2$.
+We end with a few open questions that we would like to see answered in the future.
 
-There are many connections to works by others in the literature. We discuss a few connections below, which we hope to see explained in the future.
 
-\begin{enumerate}
-	% \item In \cite{kapustka_delpezzo}, the author compiles a list of smooth \CY varieties with $\Pic X = \Z$. One of the elements of the list is a Calabi--Yau in $\P^{11}$ with the same Hilbert polynomial as our $X_1$, and with the Euler characteristic. This Calabi--Yau was however only conjectured to exist, based on the conjecture that to every differential equation of ``Calabi--Yau type'', there should exist a one parameter family of smooth Calabi--Yau varieties having that equation as its Picard--Fuchs-equation. A list of such equations have been computed by van Straten in \cite{monodromy_straten}.
+The Calabi--Yau with Hodge numbers $(44,8)$ in \cref{sec:degenjoin} seem to have some connection with our $X_1$. Its mirror dual $X_{8,44}$ is a complete intersection in $\P^2 \times \P^2 \times \P^2 \times \P^2$, while $X_1$ is a complete intersection in $(\P^2 \times \P^2) \ast (\P^2 \times \P^2)$ with the same Euler characteristic. There seem to be some kind of duality going on, which is unfortunaly not described (to my knowledge) in the literature.
 
-	% All of these equations have been made searchable in the online database \cite{cy_database}. Entering the invariants $H^3=36$, $H \cdot c_2 = 72$ and $|H|=12$, yield exactly three matches, corresponding to Calabi--Yau varities with Euler characteristics $-72$, $-60$ and $-48$, respectively. These numbers are exactly the Euler characteristics of our $X_i$ ($i=1,2,3$).
+We have a morphism $\pi:X_1 \to \P^2 \times \P^2 \times \P^2 \times \P^2$ defined by $(v \otimes w, r \otimes s) \mapsto v \otimes w \otimes r \otimes s$. The morphism is generically $1-1$. I have not been able to see what the image is (or if the morphism is an isomorphism).
 
-	% Furthermore, their differential operators are Hadamard products, $c \ast c$, $a \ast a$ and $a \ast c$, which according to van Straten (personal communication) is ``mirror dual'' to join.
+The same situation occurs with $X_2$. Here there is a morphism ${\pi:X_2 \to (\P^1)^{\times 6}}$. I don't know what the image is. Also here there should be a connection with $X_{8,44}$, since $X_{8,44}$ also can be realized as a complete intersection in $(\P^1)^{\times 6}$. See the introduction of \cite{braun_smallhodgenumbers}.
 
-	% This seems like a perfect match, confirming the existence predicted by the conjecture. The only problem is that our varieties seem to have $h^{11} > 1$.
+We have a morphism $\pi:X_1 \to \P^2 \times \P^2 \times \P^2 \times \P^2$ defined by $(v \otimes w, r \otimes s) \mapsto v \otimes w \otimes r \otimes s$. The morphism is generically $1-1$. I have not been able to see what the image is (or if the morphism is an isomorphism).
 
-	% Several questions arise: can our $X_i$ still correspond to these equations, without having $h^{11}=1$? If not, what is their connection to the conjecture?
+It would also be interesting to find proofs of the Euler characteristics being $-72,-60$ and $-48$ not involving computer calculations. In all cases the Grassmannian parametrizing the $X_i$ have dimension $72$, $60$, and $48$. 
 
-	% \item The Calabi--Yau with Hodge numbers $(44,8)$ in \cref{sec:degenjoin} seem to have some connection with our $X_1$. Its mirror dual $X_{8,44}$ is a complete intersection in $\P^2 \times \P^2 \times \P^2 \times \P^2$, while $X_1$ is a complete intersection in $(\P^2 \times \P^2) \ast (\P^2 \times \P^2)$ with the same Euler characteristic. There seem to be some kind of duality going on, which is unfortunaly not described (to my knowledge) in the literature.
+Assuming that my calculation of the Hodge numbers of the $X_i$ are correct, what are representatives of the generators of $\Pic X_i$? (being $\Z^3$, $\Z^5$ and $\Z^4$, respectively)
 
-	% We have a morphism $\pi:X_1 \to \P^2 \times \P^2 \times \P^2 \times \P^2$ defined by $(v \otimes w, r \otimes s) \mapsto v \otimes w \otimes r \otimes s$. The morphism is generically $1-1$. I have not been able to see what the image is (or if the morphism is an isomorphism).
-
-	% The same situation occurs with $X_2$. Here there is a morphism ${\pi:X_2 \to (\P^1)^{\times 6}}$. I don't know what the image is. Also here there should be a connection with $X_{8,44}$, since $X_{8,44}$ also can be realized as a complete intersection in $(\P^1)^{\times 6}$. See the introduction of \cite{braun_smallhodgenumbers}.
-
-	\item It would also be interesting to find proofs of the Euler characteristics being $-72,-60$ and $-48$ not involving computer calculations. In all cases the Grassmannian parametrizing the $X_i$ have dimension $72$, $60$, and $48$. 
-
-	\item Assuming that my calculation of the Hodge numbers of the $X_i$ are correct, what are representatives of the generators of $\Pic X_i$? (being $\Z^3$, $\Z^5$ and $\Z^4$, respectively)
-
-	\item Can my construction via joins be generalized to produce other (potentially new) Calabi--Yau varieties?
-\end{enumerate}
+Can my construction via joins be generalized to produce other (potentially new) Calabi--Yau varieties?
