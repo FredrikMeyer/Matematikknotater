@@ -1,9 +1,9 @@
 \chapter{Triangulations of spheres}
 \label{sec:spheres8}
 
-In the article \cite{grunbaum_enumeration}, Grünbaum enumerates simplicial $4$-polytopes with $7$ and $8$ vertices. There are $5$ combinatorial types of triangulations of the $4$-sphere with $7$ vertices, and there are $37$ combinatorial types of triangulations with $8$ vertices.
+In the article \cite{grunbaum_enumeration}, Grünbaum enumerates all simplicial $4$-polytopes with $7$ and $8$ vertices. There are $5$ combinatorial types of triangulations of the $4$-sphere with $7$ vertices, and there are $37$ combinatorial types of triangulations with $8$ vertices.
 
-In her thesis \cite{fausk_thesis}, Ingrid Fausk considered the polytopes with $7$ vertices, and their associated Stanley--Reisner schemes. She showed that four out of the five possible triangulations of $4$-spheres with seven vertices admit a smoothing. These smoothings correspond to \CY varieties with Hodge numbers $(1,73)$, $(1,73)$, $(1,61)$ and $(1,50)$, respectively. The last one is Rødland's construction.
+In her thesis \cite{fausk_thesis}, Ingrid Fausk considered the polytopes with $7$ vertices, and their associated Stanley--Reisner schemes. She showed that four out of the five possible Stanley--Reisner schemes of triangulations of $4$-spheres with seven vertices admit a smoothing. These smoothings correspond to \CY varieties with Hodge numbers $(1,73)$, $(1,73)$, $(1,61)$ and $(1,50)$, respectively. The last one is Rødland's construction.
 
 In this Appendix, we perform deformation theoretic calculations on the $37$ triangulations with $8$ vertices. Unfortunaly, most of them appear to be non-smoothable, at least with naïve techniques.
 
@@ -15,9 +15,9 @@ In \cite{kapustka_delpezzo}, the author compiles a list of smooth Calabi--Yau va
 
 We manually entered the maximal facets from each triangulation $P_i^8$ (in Grünbaum's notation) into \MM. Then we used Nathan Ilten's package \cite{ilten_versaldeformations} to compute their first order deformations and the obstruction spaces, $T^1$ and $T^2$, respectively.
 
-Those with $T^2=0$ are perhaps the most interesting, as they correspond to smooth points on the Hilbert scheme. Having $T^2=0$ means that all first-order deformations lift to a second-order deformation. In many cases this implies that it lifts automatically to an honest family over $\Spec \C[t_1,\ldots,t_N]$ (where $N=\dim T^1$).
+Those with $T^2=0$ are perhaps the most interesting, as they correspond to smooth points on the Hilbert scheme. Having $T^2=0$ means that all first-order deformations lift to a second-order deformation. In many cases this implies that it lifts automatically to an honest family over $\Spec \C[t_1,\ldots,t_N]$ (where $N=\dim_k T^1$).
 
-However, even in obstructed cases, we might have power series solutions, meaning that lifting the equations one step at a time will never terminate.
+However, even in non-obstructed cases, we might have power series solutions, meaning that lifting the equations one step at a time will never terminate.
 
 Then we compute the $T^i$ modules for the other triangulations. We also compute their automorphism groups, using SAGE.
 
@@ -72,4 +72,4 @@ $\mathcal M$& 20 & 56 & 53 & 27 & S_3
 \end{longtable}
 \end{center}
 
-%\todo{Regne ut $(T^1)^G$ og $(T^2)^G$}
+The notation $X_{112}$ and $X_{2222}$ means a complete intersection of degrees $1,1,2$ (resp. $2,2,2,2$) in $X$.
